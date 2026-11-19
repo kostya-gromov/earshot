@@ -16,6 +16,12 @@ import {
 } from './panel/probe';
 import { scrollThrough } from './panel/overlap';
 
+// Each case walks the whole panel twice, by pointer and by keyboard. With motion on that took
+// about 20 s on a laptop (2026-11-19), two thirds of the default 30 s, and eight cases ran out
+// of time on a GitHub runner with no invariant broken. The checks are unchanged; the time is not
+// the subject of these tests.
+test.describe.configure({ timeout: 90_000 });
+
 // The properties a rule's panel keeps while it is used, on every pattern page, at every width,
 // by pointer and by keyboard, with motion and without (see panel/probe.ts). A change to the
 // panel that breaks one of them does not pass; a design review starts by running this file.
