@@ -1,0 +1,66 @@
+.cap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2em;
+  height: 1.9em;
+  padding: 0 0.5em;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1;
+  color: var(--ink-2);
+  background: var(--panel-2);
+  border: 1px solid var(--line-strong);
+  border-bottom-width: 2px;
+  border-radius: var(--radius-sm);
+  transition:
+    transform var(--dur-micro) var(--ease-out),
+    color var(--dur-micro) var(--ease-out),
+    border-color var(--dur-micro) var(--ease-out);
+}
+
+.cap svg {
+  font-size: 1.15em;
+}
+
+.cap[data-size='sm'] {
+  font-size: var(--text-2xs);
+}
+
+/* Pressed reads as keyboard activity, so it takes the focus colour. */
+/* The text stays ink: focus blue on the tinted cap falls under 4.5:1 in the light theme. */
+.cap[data-pressed] {
+  color: var(--ink);
+  border-color: var(--focus);
+  border-bottom-width: 1px;
+  transform: translateY(1px);
+  background: var(--focus-soft);
+}
+
+.combo {
+  display: inline-flex;
+  align-items: center;
+  font: inherit;
+}
+
+.part {
+  display: inline-flex;
+  align-items: center;
+}
+
+.plus {
+  margin-inline: 0.3em;
+  color: var(--ink-3);
+  font-size: var(--text-xs);
+}
+
+@media (forced-colors: active) {
+  .cap {
+    border-color: CanvasText;
+  }
+
+  .cap[data-pressed] {
+    border-color: Highlight;
+    color: Highlight;
+  }
+}

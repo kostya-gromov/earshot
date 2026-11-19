@@ -1,0 +1,186 @@
+/* Pattern glyphs. Drawn still on the site (a [data-done] ancestor selects the resting frame,
+   below); the keyframes describe each pattern's keyboard story and are kept with the drawing. */
+.stroke {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 1.2;
+}
+
+.focus {
+  fill: none;
+  stroke: var(--focus);
+  stroke-width: 1.6;
+}
+
+/* Input with chips: focus to the neighbour chip and back, Backspace removes, focus moves on. */
+.chipRing {
+  animation: chip-ring 6s var(--ease-out) infinite;
+}
+
+.leaving {
+  transform-origin: 204px 85px;
+  animation: chip-leave 6s var(--ease-out) infinite;
+}
+
+@keyframes chip-ring {
+  0%,
+  22% {
+    transform: translateX(0);
+  }
+  28%,
+  46% {
+    transform: translateX(-72px);
+  }
+  52%,
+  62% {
+    transform: translateX(0);
+  }
+  70%,
+  92% {
+    transform: translateX(-72px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes chip-leave {
+  0%,
+  62% {
+    opacity: 1;
+    transform: none;
+  }
+  68%,
+  94% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* Combobox and menu: the popup opens and closes. */
+.popup {
+  transform-origin: 160px 70px;
+  animation: popup 6s var(--ease-out) infinite;
+}
+
+@keyframes popup {
+  0%,
+  6% {
+    opacity: 0;
+    transform: scaleY(0.9);
+  }
+  12%,
+  84% {
+    opacity: 1;
+    transform: none;
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: scaleY(0.9);
+  }
+}
+
+/* Combobox: focus stays in the input; only the active option moves (virtual focus, APG). */
+.active {
+  fill: var(--line);
+  stroke: var(--ink-3);
+  stroke-width: 1.2;
+  animation: active-row 6s var(--ease-out) infinite;
+}
+
+@keyframes active-row {
+  0%,
+  26% {
+    transform: translateY(0);
+  }
+  32%,
+  50% {
+    transform: translateY(23px);
+  }
+  56%,
+  100% {
+    transform: translateY(46px);
+  }
+}
+
+/* Menu button: focus moves into the menu, down its items, and back to the button on Escape. */
+.buttonRing {
+  animation: button-ring 6s var(--ease-out) infinite;
+}
+
+.itemRing {
+  animation: item-ring 6s var(--ease-out) infinite;
+}
+
+@keyframes button-ring {
+  0%,
+  12% {
+    opacity: 1;
+  }
+  16%,
+  84% {
+    opacity: 0;
+  }
+  90%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes item-ring {
+  0%,
+  12% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  16%,
+  34% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  40%,
+  58% {
+    opacity: 1;
+    transform: translateY(22px);
+  }
+  64%,
+  82% {
+    opacity: 1;
+    transform: translateY(44px);
+  }
+  86%,
+  100% {
+    opacity: 0;
+    transform: translateY(44px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leaving,
+  .chipRing,
+  .popup,
+  .active,
+  .buttonRing,
+  .itemRing {
+    animation: none;
+  }
+
+  .itemRing {
+    opacity: 0;
+  }
+}
+
+/* The resting frame, the same one reduced motion shows: what the site draws. */
+[data-done] .leaving,
+[data-done] .chipRing,
+[data-done] .popup,
+[data-done] .active,
+[data-done] .buttonRing,
+[data-done] .itemRing {
+  animation: none;
+}
+
+[data-done] .itemRing {
+  opacity: 0;
+}

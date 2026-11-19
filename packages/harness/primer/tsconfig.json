@@ -1,0 +1,13 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    // Vite bundles the page, so it resolves like a bundler rather than like Node.
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": ["es2023", "dom", "dom.iterable"],
+    "jsx": "react-jsx",
+    "types": ["node", "vite/client"]
+  },
+  // Each system has its own React version, so each page type-checks with its own copy.
+  "include": ["src", "vite.config.ts", "../shared"]
+}

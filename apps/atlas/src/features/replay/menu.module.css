@@ -1,0 +1,85 @@
+/* The menu button replay: the button, drawn from the recording, over the list styles the
+   combobox replay already has (blue = focus and the active item). */
+.button {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: calc(var(--row-h) + 8px);
+  padding: 0 10px;
+  border-radius: var(--radius-md);
+  background: var(--well);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+  font-size: var(--row-font);
+  color: var(--ink);
+}
+
+/* Keyboard focus is on the button: the same ring the other replays draw. */
+.button[data-target] {
+  box-shadow:
+    0 0 0 2px var(--focus),
+    0 0 0 6px var(--focus-soft);
+}
+
+:global([data-size='sm']) > * > .button[data-target] {
+  box-shadow: 0 0 0 2px var(--focus);
+}
+
+/* What the tree says about the button: a fact in words, monospace like every recorded token. */
+.state {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  color: var(--ink-3);
+}
+
+/* Not in the tree: the button is still on screen, so it stays drawn, dashed like every part
+   that is known from the recording and not exposed. */
+.button[data-state='hidden'] {
+  background: none;
+  box-shadow: none;
+  outline: 1px dashed var(--line-strong);
+  outline-offset: -1px;
+}
+
+.disabledMark {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: var(--ink-3);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+}
+
+/* The page's own line. Quiet until an item's handler has written to it. */
+.effect {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  color: var(--ink-3);
+}
+
+.effect[data-ran] {
+  color: var(--ink);
+}
+
+@media (forced-colors: active) {
+  .button {
+    box-shadow: none;
+    outline: 1px solid CanvasText;
+    outline-offset: -1px;
+  }
+
+  .button[data-target],
+  :global([data-size='sm']) > * > .button[data-target] {
+    box-shadow: none;
+    outline: 2px solid Highlight;
+    outline-offset: 1px;
+  }
+
+  .disabledMark {
+    stroke: CanvasText;
+  }
+}

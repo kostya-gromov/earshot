@@ -1,0 +1,189 @@
+.tabs {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+.list {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.tab {
+  display: grid;
+  gap: var(--space-1);
+  text-align: start;
+  font: inherit;
+  color: var(--ink-2);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  transition:
+    color var(--dur-micro) var(--ease-out),
+    background-color var(--dur-micro) var(--ease-out),
+    border-color var(--dur-micro) var(--ease-out);
+}
+
+.tab:hover {
+  color: var(--ink);
+}
+
+.tab[aria-selected='true'] {
+  color: var(--ink);
+  background: var(--panel-2);
+  border-color: var(--line-2);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.description {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/*
+ * The lens switch (For design / For code): two tabs on a hairline, the selected one underlined
+ * in ink, like the rule tabs. Not boxed cards: the page is built from rows and hairlines (design
+ * review 2026-11-11). Ink, not blue: selection is not focus.
+ */
+.tabs[data-variant='lens'] {
+  gap: var(--space-7);
+}
+
+.tabs[data-variant='lens'] > .bar {
+  display: block;
+}
+
+.tabs[data-variant='lens'] > .bar > .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-7);
+  border-bottom: 1px solid var(--line);
+}
+
+.tabs[data-variant='lens'] > .bar > .list > .tab {
+  align-items: start;
+  gap: 4px;
+  padding: var(--space-3) 0 var(--space-4);
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--ink-3);
+  box-shadow: inset 0 -2px 0 transparent;
+  transition:
+    box-shadow var(--dur-micro) var(--ease-out),
+    color var(--dur-micro) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .tabs[data-variant='lens'] > .bar > .list > .tab:hover {
+    color: var(--ink);
+  }
+}
+
+.tabs[data-variant='lens'] > .bar > .list > .tab[aria-selected='true'] {
+  color: var(--ink);
+  box-shadow: inset 0 -2px 0 var(--ink);
+}
+
+.tabs[data-variant='lens'] > .bar > .list > .tab > .label {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.tabs[data-variant='lens'] > .bar > .list > .tab > .description {
+  font-size: var(--text-sm);
+}
+
+.tabs[data-variant='lens'] > .body > .panel:focus-visible {
+  outline-offset: 8px;
+}
+
+/* File tabs in a code well: mono names, a bar over the code, notes beside it. */
+.tabs[data-variant='files'] {
+  gap: 0;
+}
+
+.tabs[data-variant='files'] > .bar {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tabs[data-variant='files'] > .bar > .list {
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.tabs[data-variant='files'] > .bar > .list > .tab {
+  min-height: 28px;
+  align-content: center;
+  padding: 0 10px;
+  border: 0;
+  color: var(--ink-3);
+  font: var(--text-xs) / 1 var(--font-mono);
+}
+
+.tabs[data-variant='files'] > .bar > .list > .tab > .label {
+  font: inherit;
+}
+
+.tabs[data-variant='files'] > .bar > .list > .tab[aria-selected='true'] {
+  background: var(--panel);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+}
+
+.tabs[data-variant='files'] > .body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  /*
+   * A whole number of code lines (the file's top padding, then 25 lines at the code's line
+   * height), so the bottom edge falls between two lines and never through one.
+   */
+  height: calc(14px + 25 * 1.7 * var(--text-xs));
+}
+
+.tabs[data-variant='files'] > .body > .panel {
+  min-height: 0;
+  overflow: auto;
+  border-radius: 0;
+}
+
+.tabs[data-variant='files'] > .body > .panel:focus-visible {
+  outline-offset: -2px;
+}
+
+@media (max-width: 860px) {
+  .tabs[data-variant='files'] > .body {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .tabs[data-variant='files'] > .body > .panel {
+    height: calc(14px + 19 * 1.7 * var(--text-xs));
+  }
+}
+
+.panel {
+  border-radius: var(--radius-md);
+}
+
+@media (forced-colors: active) {
+  .tab[aria-selected='true'] {
+    border-color: Highlight;
+    outline: 1px solid Highlight;
+  }
+}

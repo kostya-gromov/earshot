@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- The Atlas mark (ui/brand-mark): the Tab key, its stop in the focus colour. Token values of
+       the light theme, and of the dark theme where the browser's own chrome is dark. -->
+  <style>
+    .key { fill: oklch(0.2 0.015 260); }
+    .arrow { stroke: oklch(0.985 0.003 250); }
+    .stop { stroke: oklch(0.72 0.16 255); }
+    path { fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    @media (prefers-color-scheme: dark) {
+      .key { fill: oklch(0.96 0.005 265); }
+      .arrow { stroke: oklch(0.15 0.012 265); }
+      .stop { stroke: oklch(0.53 0.2 260); }
+    }
+  </style>
+  <rect class="key" x="2" y="2" width="20" height="20" rx="6" />
+  <path class="arrow" d="M6.6 12h7M10.7 8.7 14 12l-3.3 3.3" />
+  <path class="stop" d="M17.3 8v8" />
+</svg>

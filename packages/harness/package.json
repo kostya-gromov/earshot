@@ -1,0 +1,11 @@
+{
+  "name": "@earshot/harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Builds every system's harness page into dist/ for the engine (ADR 0005).",
+  "scripts": {
+    "build": "pnpm --filter \"@earshot/harness-*\" build",
+    "typecheck": "tsc -p tsconfig.json"
+  }
+}

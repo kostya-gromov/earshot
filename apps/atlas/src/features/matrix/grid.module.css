@@ -1,0 +1,172 @@
+/* The replay grid (design sketch F): lanes on hairlines, the reference first. */
+.replay {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.scenarios {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-self: start;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--radius-md);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+}
+
+.scenarios button {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--ink-3);
+  font: var(--text-sm) var(--font-sans);
+  cursor: pointer;
+}
+
+.scenarios button:hover {
+  color: var(--ink);
+}
+
+.scenarios button[aria-pressed='true'] {
+  background: var(--panel-2);
+  color: var(--ink);
+}
+
+.keys {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.keyRow {
+  display: flex;
+  gap: 6px;
+}
+
+.keyRow [data-done] {
+  opacity: 0.45;
+}
+
+/* As tall as the keycaps beside it, so the row reads as one line; never under 24 px, the
+   minimum target size (WCAG 2.5.8). */
+.pause {
+  height: calc(1.9 * var(--text-xs));
+  min-height: 24px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  box-shadow: inset 0 0 0 1px var(--line-2);
+  color: var(--ink-2);
+  font: var(--text-xs) var(--font-sans);
+  cursor: pointer;
+}
+
+/*
+ * One row for up to four lanes on a wide screen, two by two for four on a medium one: every row
+ * is full, so no cell is left showing the hairline colour behind it. One column on narrow screens.
+ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns, 3), minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border-block: 1px solid var(--line);
+}
+
+/*
+ * Each cell's four parts (name, field, what was said, verdict) sit on the grid's own rows, so
+ * they line up across systems: the eye compares along a row, and a verdict one line lower than
+ * its neighbours reads as a difference that is not there. The reference is marked by its place
+ * and name only: blue means keyboard focus, so it is not used to tint a card.
+ */
+.cell {
+  min-width: 0;
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  row-gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--canvas);
+}
+
+.name {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.name span {
+  font: 400 var(--text-2xs) var(--font-mono);
+  color: var(--ink-3);
+}
+
+.said {
+  display: grid;
+  font-size: var(--text-sm);
+}
+
+/* Hidden steps keep their height but leave the accessibility tree (visibility, not opacity). */
+.saidStep {
+  grid-area: 1 / 1;
+  display: grid;
+  align-content: start;
+  gap: 2px;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 120ms ease-in,
+    visibility 0s linear 120ms;
+}
+
+.saidStep[data-current] {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 180ms var(--ease-out) 60ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .saidStep,
+  .saidStep[data-current] {
+    transition: opacity 100ms linear;
+  }
+}
+
+.what {
+  color: var(--ink-3);
+}
+
+/* Upright: italic is the voice of what was said, and here nothing was. */
+.silent {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.verdict {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--line);
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+.grid[data-lanes='4'] .cell {
+  padding-inline: var(--space-4);
+}
+
+/* Four lanes need about 280 px each; below that they go two by two. */
+@media (max-width: 1100px) {
+  .grid[data-lanes='4'] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .grid,
+  .grid[data-lanes='4'] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

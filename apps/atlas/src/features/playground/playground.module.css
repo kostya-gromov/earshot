@@ -1,0 +1,624 @@
+/* The one raised surface; a hairline that lights up while focus is inside. */
+.playground {
+  border-radius: var(--radius-xl);
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--panel), var(--panel)) padding-box,
+    linear-gradient(160deg, var(--edge-hi), var(--edge-lo) 40%, var(--edge-focus)) border-box;
+  box-shadow:
+    inset 0 1px 0 var(--inner-hi),
+    0 1px 2px var(--shadow-color),
+    0 30px 80px -30px var(--shadow-color);
+  transition: box-shadow 300ms var(--ease-out);
+}
+
+.playground:focus-within {
+  box-shadow:
+    inset 0 1px 0 var(--inner-hi),
+    0 30px 80px -30px var(--shadow-color),
+    0 0 0 1px color-mix(in oklch, var(--focus) 28%, transparent),
+    0 0 70px -12px color-mix(in oklch, var(--focus) 30%, transparent);
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  padding: 12px 14px 12px 20px;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--text-sm);
+}
+
+.title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.hint {
+  color: var(--ink-3);
+}
+
+.note:not(:empty) {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--focus-soft);
+  font-size: var(--text-xs);
+}
+
+.actions {
+  margin-inline-start: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.button,
+.quietButton {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: var(--radius-sm);
+  font: 500 var(--text-sm) / 1 var(--font-sans);
+  cursor: pointer;
+  /* One line always: at 390 px two buttons side by side broke their labels in two. */
+  white-space: nowrap;
+  transition:
+    transform var(--dur-micro) var(--ease-out),
+    background-color 120ms var(--ease-out),
+    border-color 120ms var(--ease-out),
+    color 120ms var(--ease-out);
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  margin-inline-end: 6px;
+}
+
+.button {
+  border: 1px solid var(--line-2);
+  background: color-mix(in srgb, var(--panel-2) 70%, transparent);
+  color: var(--ink);
+}
+
+.quietButton {
+  border: 1px solid transparent;
+  background: none;
+  color: var(--ink-2);
+}
+
+/* "Replay in playground" in an evidence card: the same button at the card's text size. */
+.smallButton {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--panel);
+  color: var(--ink);
+  font: 500 var(--text-xs) / 1 var(--font-sans);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    transform var(--dur-micro) var(--ease-out),
+    background-color 120ms var(--ease-out);
+}
+
+/* Hover answers in neutral greys: blue is keyboard focus and nothing else. */
+@media (hover: hover) {
+  .button:hover,
+  .smallButton:hover {
+    background: var(--panel-2);
+    border-color: var(--line-strong);
+  }
+
+  .quietButton:hover {
+    background: color-mix(in srgb, var(--panel-2) 70%, transparent);
+    color: var(--ink);
+  }
+
+  .stage :global([role='option']:hover:not([aria-selected='true'])) {
+    background: var(--panel-2);
+  }
+
+  /*
+   * The menu button answers the pointer as the list does. Weaker than focus, and never the same:
+   * the focused item keeps the reference's blue tint and its 2 px outline, the item under the
+   * pointer gets a grey fill and no outline (the page's own requirement "Show which item has
+   * focus"). A disabled item does not answer: nothing would happen on a click.
+   */
+  .stage :global(.menu-button__button:hover),
+  .stage :global([role='menuitem']:hover:not(:focus):not([aria-disabled='true'])) {
+    background: var(--panel-2);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stage :global([role='option']),
+  .stage :global([role='menuitem']),
+  .stage :global(.menu-button__button) {
+    transition: background-color 120ms var(--ease-out);
+  }
+}
+
+/* Micro motion is off under reduced motion, the card's focus glow included. */
+@media (prefers-reduced-motion: reduce) {
+  .playground,
+  .button,
+  .quietButton,
+  .smallButton {
+    transition: none;
+  }
+}
+
+.button:active,
+.smallButton:active,
+.quietButton:active {
+  transform: scale(0.97);
+}
+
+.stage {
+  padding: 20px 24px 10px;
+  /*
+   * The reference styles itself from three host variables (chip-field.css): its surface
+   * (--panel, inherited from the site), a border at 3:1 or more, and the focus colour.
+   */
+  --line-2: var(--line-strong);
+  --key: var(--focus);
+}
+
+/* The reference's mount: the glow and leaving chips are positioned against it. */
+.stage > div {
+  position: relative;
+}
+
+/*
+ * A soft light that travels to whatever has focus. It adds to the reference's own focus outline,
+ * which stays as it is (WCAG 2.4.7); this only shows where focus came from.
+ */
+.focusGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow:
+    0 0 0 4px color-mix(in oklch, var(--focus) 18%, transparent),
+    0 0 26px color-mix(in oklch, var(--focus) 45%, transparent);
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    width 420ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    height 420ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity var(--dur-micro) var(--ease-out);
+}
+
+.focusGlow[data-visible='true'] {
+  opacity: 1;
+}
+
+/* A removed chip, drawn once more where it was, so it can leave instead of vanishing. */
+.chipGhost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .focusGlow {
+    transition: opacity 100ms ease;
+  }
+}
+
+@media (forced-colors: active) {
+  .focusGlow {
+    display: none;
+  }
+}
+
+.stage :global(.chip-field__box) {
+  min-height: 48px;
+  border-radius: 12px;
+  background: var(--well);
+}
+
+/*
+ * The chips are drawn by the reference's module, after the markup is on screen. Until it is
+ * ready, the box keeps the height the three starting chips will need at this width, so they do
+ * not push the page down when they arrive (CLS). Widths measured on the built page, 2026-11-11;
+ * they change if the starting people or the chip font do (design-review/2026-11-11/box-sweep.mjs).
+ */
+.stage :global(.chip-field) {
+  /* Positioned as well: the suggestions list below is placed against this grid's rows. */
+  position: relative;
+  container-type: inline-size;
+}
+
+@container (max-width: 556px) {
+  .stage :global(.chip-field:not([data-ready]) .chip-field__box) {
+    min-height: 71px;
+  }
+}
+
+@container (max-width: 430px) {
+  .stage :global(.chip-field:not([data-ready]) .chip-field__box) {
+    min-height: 107px;
+  }
+}
+
+@container (max-width: 273px) {
+  .stage :global(.chip-field:not([data-ready]) .chip-field__box) {
+    min-height: 132px;
+  }
+}
+
+/*
+ * The reference's live region is visible text and empty until it speaks. Its line is kept, so a
+ * message arriving long after a key press never pushes the panel below it (CLS).
+ */
+.stage :global(.chip-field__status) {
+  min-block-size: 1lh;
+  margin-top: 4px;
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+}
+
+/*
+ * The suggestions open over what is below the field, not in the flow: in the flow they pushed
+ * "You would hear" and the whole page down by 157 px on the first letter typed and pulled it back
+ * on Enter (design review 2026-11-13). Placed by Atlas; the reference's own code is unchanged.
+ * The field is a grid and already a containing block (container-type above). Out of the flow,
+ * the list is given the grid row right under the box (label, box, then this row), so it opens
+ * there and not at the top of the field.
+ */
+.stage :global(.chip-field__popup) {
+  position: absolute;
+  grid-row: 3;
+  grid-column: 1;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 3;
+  background: var(--panel);
+  box-shadow: 0 12px 32px -12px var(--shadow-color);
+}
+
+.stage :global(.chip-field__label),
+.stage :global(.chip-field__help) {
+  color: var(--ink-2);
+  opacity: 1;
+}
+
+/*
+ * On Atlas, blue means keyboard focus and nothing else (CLAUDE.md 11), so the reference's
+ * coloured avatars are shown neutral here. The inline colour needs !important to be overridden;
+ * the reference code itself is unchanged.
+ */
+.stage :global(.chip__avatar) {
+  background: var(--panel-2) !important;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+
+/*
+ * Combobox. Its list opens over room kept for it under the field: all six measured options fit,
+ * so an open list never covers "You would hear" and never moves the page. The reference places
+ * the list itself; Atlas only gives it the site's surface.
+ */
+.stage :global(.combobox) {
+  /* The reference places its list at the bottom edge of this box, so the room goes under it. */
+  margin-block-end: var(--list-room, 0px);
+}
+
+/*
+ * Menu button. Its menu opens over room kept for it under the button: the four measured items
+ * fit, so an open menu never covers what follows and never moves the page. The reference places
+ * the menu itself.
+ */
+.stage :global(.menu-button) {
+  margin-block-end: 176px;
+}
+
+/* The open menu lies over the page: the same surface and lift the combobox's list gets. */
+.stage :global(.menu-button__menu) {
+  z-index: 3;
+  background: var(--panel);
+  box-shadow: 0 12px 32px -12px var(--shadow-color);
+}
+
+/*
+ * What the last action was, written by the item's own handler: plain text, not speech. On the
+ * button's row, where focus has just returned, so an action that ran is seen where the person
+ * is looking; and beside the reference, not under it, so the page does not move for the frame
+ * in which a restarted reference has no line yet (design review 2026-11-16).
+ */
+.stage > div:has(> :global([data-last-action])) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: 16px;
+}
+
+.stage :global([data-last-action]) {
+  margin: 0;
+  /* Level with the button's text: the reference's button is 40 px tall with a 1 px border. */
+  line-height: 42px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  transition: color 160ms var(--ease-out);
+}
+
+/* An action has run: the line says so in full ink. Neutral, since nothing here matched a rule. */
+.stage :global([data-last-action][data-ran]) {
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage :global([data-last-action]) {
+    transition: none;
+  }
+}
+
+.stage :global(.combobox__label) {
+  color: var(--ink-2);
+}
+
+.stage :global(.combobox__input) {
+  min-block-size: 48px;
+  padding-inline: 12px;
+  border-radius: 12px;
+  background: var(--well);
+}
+
+.stage :global(.combobox__popup) {
+  z-index: 3;
+  background: var(--panel);
+  box-shadow: 0 12px 32px -12px var(--shadow-color);
+}
+
+/*
+ * Beside "You would hear" the list has room of its own. Under 901 px there is no such room: it
+ * cost a third of the card (design review 2026-11-15), so the list opens over the top of
+ * "You would hear", as the chips suggestions do, and the spoken lines below stay clear.
+ */
+@media (min-width: 901px) {
+  .playground[data-layout='beside'] {
+    /* The list with all six options (the browser test checks it fits). */
+    --list-room: 240px;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+
+  .playground[data-layout='beside'] .bar {
+    grid-column: 1 / -1;
+  }
+
+  .playground[data-layout='beside'] .stage {
+    padding-block-end: 20px;
+  }
+
+  .playground[data-layout='beside'] .listen {
+    margin-top: 0;
+    border-top: 0;
+    border-inline-start: 1px solid var(--line);
+    border-radius: 0 0 var(--radius-xl) 0;
+    grid-template-columns: 1fr;
+    /* The lines end level with the row of keys under the field: cause and effect on one line. */
+    align-content: space-between;
+  }
+
+  /* Left: what you press, the field and under it the keys. Right: only what you would hear. */
+  .playground[data-layout='beside'] .stage {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .playground[data-layout='beside'] .keysPanel {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .playground[data-layout='beside'] .listen {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+  }
+}
+
+/* The keys you press, under the field. */
+.keysPanel {
+  padding: 0 24px 18px;
+}
+
+.keysPanel .trail {
+  margin-top: 0;
+}
+
+.listen {
+  display: grid;
+  /* Compact on purpose: the rule that lights up under the playground has to stay in view on a
+     900 px tall screen (design review 2026-11-13). */
+  grid-template-columns: 220px 1fr;
+  gap: var(--space-5);
+  padding: 16px 24px 18px;
+  margin-top: 8px;
+  border-top: 1px solid var(--line);
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  background: linear-gradient(180deg, var(--heard-soft), transparent 70%);
+}
+
+.listenLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.listenLabel::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--heard);
+  box-shadow: 0 0 10px var(--heard);
+}
+
+.listenNote {
+  margin-top: 6px;
+  font-size: var(--text-xs);
+  line-height: 1.45;
+  color: var(--ink-3);
+}
+
+.legend {
+  display: grid;
+  gap: 4px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+}
+
+.legend li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.legendFocus,
+.legendHeard {
+  width: 24px;
+  font: italic var(--text-sm) / 1 var(--font-voice);
+}
+
+/* Both samples are speech, so both are violet; the bar is what tells an announcement apart. */
+.legendFocus,
+.legendHeard {
+  color: var(--heard);
+}
+
+/* The same bar as an announcement line, so the legend survives forced colours. */
+.legendHeard {
+  border-inline-start: 2px solid currentColor;
+  padding-inline-start: 4px;
+}
+
+/* Room for one row of keys; a longer trail wraps inside the height the transcript already gives. */
+.trail {
+  --cap: calc(1.9 * var(--text-xs));
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: 4px;
+  min-block-size: var(--cap);
+  margin-top: 10px;
+}
+
+/*
+ * A fixed height: room for two past lines and the newest one.
+ * Lines arrive at the bottom and older ones leave under a fade at the top, so speech never makes
+ * the panel, or the page under it, grow.
+ */
+.transcriptWrap {
+  --past-line: calc(1.25 * var(--speech-md) + 6px);
+  --newest-line: calc(1.25 * var(--speech-lg));
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  block-size: calc(2 * var(--past-line) + var(--newest-line) + 2.5rem);
+}
+
+.transcript {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, transparent, #000 2.25rem);
+}
+
+/* The way in, shown where the first line will be. Not speech, so not in the voice's typeface. */
+.prompt {
+  grid-row: 1;
+  /* At the bottom of the empty transcript: the first line takes this place. */
+  align-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-base);
+  line-height: 22px;
+  color: var(--ink-2);
+}
+
+/* After a key the model has nothing to say for: the same words as under every recording. */
+.silent {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+/* The newest line comes into focus the way speech arrives: soft, then clear. */
+@media (prefers-reduced-motion: no-preference) {
+  .transcript > :last-child {
+    animation: speak 420ms var(--ease-out) both;
+  }
+}
+
+@keyframes speak {
+  from {
+    filter: blur(6px);
+    transform: translateY(6px);
+  }
+}
+
+@media (max-width: 900px) {
+  .listen {
+    grid-template-columns: 1fr;
+  }
+
+  .trail {
+    min-block-size: var(--cap);
+  }
+}
+
+@media (max-width: 560px) {
+  .stage,
+  .listen,
+  .keysPanel {
+    padding-inline: var(--space-4);
+  }
+
+  .transcriptWrap {
+    block-size: calc(2 * var(--past-line) + var(--newest-line) + 1rem);
+  }
+
+  .transcript {
+    mask-image: linear-gradient(to bottom, transparent, #000 1rem);
+  }
+
+  .hint {
+    display: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .playground,
+  .button {
+    border: 1px solid CanvasText;
+  }
+
+  /* The dot before "You would hear" is a background, which forced colours remove. */
+  .listenLabel::before {
+    forced-color-adjust: none;
+    background: CanvasText;
+    box-shadow: none;
+  }
+}

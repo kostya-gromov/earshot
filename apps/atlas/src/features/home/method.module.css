@@ -1,0 +1,657 @@
+/*
+ * The method as three steps down the page, each on the page's split: what the step is on the
+ * left, what it has produced so far on the right (totals counted from the measurement files).
+ * Nothing here is a raised or boxed surface: numbers and rows sit on hairlines.
+ */
+.steps {
+  display: grid;
+  margin: var(--space-8) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: var(--split);
+  column-gap: var(--split-gap);
+  row-gap: var(--space-5);
+  align-items: start;
+  padding-block: var(--space-7);
+  border-top: 1px solid var(--line);
+}
+
+.step:first-child {
+  border-top-color: var(--line-2);
+}
+
+.step:last-child {
+  padding-bottom: 0;
+}
+
+/* The step's left column: what it is, and for step 1 also what it has produced so far. */
+.side {
+  display: grid;
+  align-content: start;
+  gap: var(--space-6);
+}
+
+.say {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+}
+
+/*
+ * Step 1's count, drawing and meters, under its title. The three steps then read as one series:
+ * a large count, a line drawing of what the step is about, and counted rows with a meter.
+ */
+.ruleAside {
+  display: grid;
+  gap: var(--space-5);
+  max-width: 360px;
+}
+
+/*
+ * A step with its output beside it: the count leads the right column, as in the wide steps, and
+ * the list follows under it; the left column spans both rows and holds the title, the drawing
+ * and the meters.
+ */
+.step[data-beside] {
+  grid-template-rows: auto 1fr;
+  row-gap: var(--space-7);
+}
+
+.step[data-beside] > .side {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.step[data-beside] > .lead {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.step[data-beside] > .plate {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.ruleFigure {
+  margin: 0;
+}
+
+.ruleFigure svg {
+  max-width: 360px;
+}
+
+.ruleFigure figcaption {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+/* How many pages the two groups hold together: pages, not rules. */
+.citedTotal {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.citedTotal strong {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+/* Within one standard: the pages a rule applies, and the pages it only relates to. */
+.citedSub {
+  padding-block: var(--space-3) var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.cited + .citedSub {
+  padding-top: var(--space-4);
+}
+
+.ruleAside .row {
+  align-items: baseline;
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-4);
+}
+
+.ruleAside .value {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  line-height: 1;
+  letter-spacing: var(--tracking-heading);
+  font-weight: 560;
+}
+
+/* A group of cited pages: the standard, and how many of its pages the rules cite. */
+.citedHead {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.citedHead span {
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+.plate section + section {
+  margin-top: var(--space-5);
+}
+
+.stepLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--ink-2);
+}
+
+.stepLabel span {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px var(--line-2);
+  font-size: var(--text-2xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+/* A wide step: its title and text on the left, its count on the right, its output under both. */
+.step[data-wide] {
+  row-gap: var(--space-7);
+}
+
+.step[data-wide] .show {
+  grid-column: 1 / -1;
+}
+
+/* The step's one large thing: its count, standing on the title's baseline. The title and the
+   counts under the figures are smaller, so one element carries the scale (design review
+   2026-11-14). */
+.lead {
+  align-self: start;
+  display: grid;
+  gap: var(--space-3);
+  max-width: 36ch;
+  /* The title's baseline, less the height of the numeral above its own. */
+  margin-top: calc(74px - 0.82 * var(--text-display-sm));
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+.lead strong {
+  font-size: var(--text-display-sm);
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  font-weight: 560;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+.say h3 {
+  font-size: var(--text-xl);
+  line-height: 1.12;
+  letter-spacing: var(--tracking-heading);
+  font-weight: 560;
+  text-wrap: balance;
+}
+
+.text {
+  max-width: 44ch;
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+.plate {
+  display: grid;
+  align-content: start;
+  gap: var(--space-5);
+}
+
+.lede {
+  font-size: var(--text-base);
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+.lede strong {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+/* A cited page: which standard and criterion, then the page by name, linked to its source. */
+.cited {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cited li {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  align-items: baseline;
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--line);
+}
+
+.citedLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.cited a {
+  font-size: var(--text-sm);
+  color: var(--ink);
+  text-decoration-color: var(--line-2);
+  text-underline-offset: 3px;
+  text-wrap: pretty;
+  transition: text-decoration-color var(--dur-micro) var(--ease-out);
+}
+
+.cited a:hover {
+  text-decoration-color: currentcolor;
+}
+
+.note {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+/* A list and the note under it read as one. */
+.plate .cited + .note {
+  margin-top: calc(-1 * var(--space-5));
+}
+
+.rows {
+  display: grid;
+  margin: 0;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 40px;
+  border-top: 1px solid var(--line);
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+.row dd,
+.row .value {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+/* A row with a meter: the value as a share of the step's number, under the label. */
+.row[data-tone] {
+  min-height: 48px;
+  padding-bottom: 10px;
+  --tone: var(--ink-3);
+}
+
+.row[data-tone='focus'] {
+  --tone: var(--focus);
+}
+
+.row[data-tone='heard'] {
+  --tone: var(--heard);
+}
+
+.row[data-tone='match'] {
+  --tone: var(--match);
+}
+
+.row[data-tone]::before,
+.row[data-tone]::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.row[data-tone]::before {
+  right: 0;
+  background: var(--line);
+}
+
+.row[data-tone]::after {
+  /* Never thinner than the bar is tall, so a small share is still a mark. */
+  width: max(calc(var(--share) * 100%), 3px);
+  background: var(--tone);
+  transform-origin: left;
+}
+
+.row[data-empty]::after {
+  display: none;
+}
+
+/* The three things recorded in a step: a drawing of each, over how often it was seen. */
+.channels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6) var(--split-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.channels li {
+  display: grid;
+  align-content: end;
+  gap: var(--space-5);
+}
+
+/* A drawing fills its column: it is the step's subject, not an icon beside a number. */
+.channels svg {
+  max-width: 360px;
+}
+
+.channels .row {
+  align-items: baseline;
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-4);
+}
+
+.channels .value {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  line-height: 1;
+  letter-spacing: var(--tracking-heading);
+  font-weight: 560;
+}
+
+/* Every verdict as one bar, divided by outcome in the order of the legend under it. */
+.stack {
+  display: flex;
+  gap: 3px;
+  height: 20px;
+  transform-origin: left;
+}
+
+.stack span {
+  min-width: 4px;
+  border-radius: 4px;
+  background: var(--line-2);
+}
+
+.stack span[data-verdict='follows'] {
+  background: var(--match);
+}
+
+.stack span[data-verdict='differs'] {
+  background: var(--ink-3);
+}
+
+.stack span[data-verdict='inconclusive'] {
+  background: var(--line-strong);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-7);
+  margin: calc(-1 * var(--space-2)) 0 0;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* A badge is centred on its count whatever its own height, so the four sit on one line. */
+.legend dt {
+  display: flex;
+  align-items: center;
+}
+
+/* What the verdicts add up to, said in the page's own voice: it is a result, not a footnote. */
+.finding {
+  max-width: 60ch;
+  font-size: var(--text-base);
+  line-height: 23px;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.legend dd {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 560;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+.source {
+  margin-top: var(--space-7);
+  max-width: var(--measure);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+.source a {
+  color: var(--ink-2);
+  text-underline-offset: 3px;
+}
+
+/*
+ * Arrival, once, when a step's numbers are first seen (ui/arrival sets the state; without it
+ * nothing below applies). Only the drawings fade in, briefly, and the meters fill to their
+ * values; no text ever waits, the counts and links included (design review 2026-11-14). Under reduced motion the state is never set.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .show[data-state='waiting'] :is(.channels, .ruleFigure) svg {
+    opacity: 0;
+  }
+
+  .show[data-state='seen'] :is(.channels, .ruleFigure) svg {
+    animation: appear 300ms var(--ease-out) both;
+  }
+
+  .show[data-state='waiting'] .row[data-tone]::after {
+    transform: scaleX(0);
+  }
+
+  .show[data-state='seen'] .row[data-tone]::after {
+    animation: fill 400ms var(--ease-out) both;
+    animation-delay: calc(var(--row) * 40ms);
+  }
+
+  .show[data-state='waiting'] .stack {
+    transform: scaleX(0);
+  }
+
+  .show[data-state='seen'] .stack {
+    animation: fill 400ms var(--ease-out) both;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+/* Beside a long list the left column stays in view, so the count and drawing explain the list. */
+/* Not in a window shorter than the column: a pinned column taller than the window hides its end. */
+@media (min-width: 861px) and (min-height: 760px) {
+  .side[data-sticky] {
+    position: sticky;
+    top: calc(var(--header-cover) + var(--space-6));
+  }
+}
+
+@media (max-width: 860px) {
+  .step {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* One column, in reading order: title, count, drawing, levels, list. */
+  .step[data-beside] {
+    grid-template-rows: none;
+  }
+
+  .step[data-beside] > .side {
+    display: contents;
+  }
+
+  .step[data-beside] .say {
+    order: 1;
+  }
+
+  .step[data-beside] > .lead {
+    order: 2;
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .step[data-beside] .ruleAside {
+    order: 3;
+  }
+
+  .step[data-beside] > .plate {
+    order: 4;
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .ruleFigure svg {
+    max-width: 240px;
+  }
+
+  .step,
+  .step[data-wide] {
+    row-gap: var(--space-5);
+    padding-block: var(--space-6);
+  }
+
+  /* One column: the count follows the text, with nothing beside it to line up with. */
+  .lead {
+    margin-top: 0;
+  }
+
+  .channels svg {
+    margin-inline: 0;
+  }
+
+  .channels .value {
+    font-size: var(--text-lg);
+  }
+
+  /* One column: each drawing sits small beside its count instead of above it. */
+  .channels {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-2);
+  }
+
+  .channels li {
+    grid-template-columns: 140px minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-4);
+  }
+}
+
+@media (forced-colors: active) {
+  /* The track is a hairline under a thicker fill: GrayText is a bright green in dark contrast
+     themes and read as the measured part. */
+  .row[data-tone]::before {
+    bottom: 9px;
+    height: 1px;
+    forced-color-adjust: none;
+    background: CanvasText;
+  }
+
+  .row[data-tone]::after {
+    forced-color-adjust: none;
+    background: CanvasText;
+  }
+
+  /* Only Follows is filled; the rest are outlines, told apart by the labelled counts below.
+     The attribute selector is needed to outrank the per-verdict fills above. */
+  .stack span,
+  .stack span[data-verdict] {
+    forced-color-adjust: none;
+    border: 1px solid CanvasText;
+    background: Canvas;
+  }
+
+  .stack span[data-verdict='follows'] {
+    background: CanvasText;
+  }
+}
+
+/* Step 1 on a wide screen. As one list in the right column, seventeen cited pages ran some
+   600 px past the column beside them, and the list grows with every pattern (design review
+   2026-11-16). So the short list, WCAG, stays under the count in the right column, and the long
+   one, APG, goes under the step across its whole width, in two columns. The left column then
+   has nothing long beside it and does not stay at the top: kept there, it travelled over the
+   list below. Last in the file, to come after the rule that makes it stay. */
+@media (min-width: 1200px) {
+  .step[data-beside] {
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .step[data-beside] > .side {
+    grid-row: 1 / span 3;
+  }
+
+  .step[data-beside] > .side[data-sticky] {
+    position: static;
+  }
+
+  /* The plate's own box goes: its three parts are placed in the step's grid. */
+  .step[data-beside] > .sources {
+    display: contents;
+  }
+
+  .sources > .citedTotal,
+  .sources > section:first-of-type {
+    grid-column: 2;
+  }
+
+  .sources > section:last-of-type {
+    grid-column: 1 / -1;
+    margin-top: var(--space-5);
+  }
+
+  .sources > section:last-of-type .cited {
+    grid-template-columns: var(--split);
+    column-gap: var(--split-gap);
+  }
+}

@@ -1,0 +1,366 @@
+/* The combobox replay: a schematic of the recorded tree (blue = focus and the active option). */
+.wrap {
+  display: grid;
+  /* Wider than the ring's halo, so the halo never crosses the list's border. */
+  gap: 8px;
+  min-width: 0;
+  /* A schematic, not a form: on a phone a full-width row would pull the two marks far apart. */
+  max-width: 260px;
+  --row-h: 30px;
+  --row-font: var(--text-sm);
+}
+
+.wrap[data-size='sm'] {
+  --row-h: 26px;
+  --row-font: var(--text-xs);
+}
+
+/* The field and, where focus goes there in this recording, the next control of the page. */
+.fieldRow {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 0;
+}
+
+.field {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  height: calc(var(--row-h) + 8px);
+  padding: 0 10px;
+  border-radius: var(--radius-md);
+  background: var(--well);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+  font-size: var(--row-font);
+  color: var(--ink);
+}
+
+/* Keyboard focus is in the field: the same ring the chips replay draws. */
+.field[data-focus='combobox'] {
+  box-shadow:
+    0 0 0 2px var(--focus),
+    0 0 0 6px var(--focus-soft);
+}
+
+/* In a strip of steps the ring is on every frame: without its halo it stops outweighing what
+   changes from one frame to the next (design review 2026-11-14). */
+.wrap[data-size='sm'] .field[data-focus='combobox'] {
+  box-shadow: 0 0 0 2px var(--focus);
+}
+
+.value {
+  white-space: pre;
+}
+
+/* A control of the combobox that takes focus (the button that opens the list), at the field's
+   right end. Dashed: drawn from the recording, not a button on this page. */
+.stub {
+  flex: none;
+  width: calc(var(--row-h) - 8px);
+  height: calc(var(--row-h) - 8px);
+  margin-left: auto;
+  border-radius: var(--radius-xs);
+  border: 1px dashed var(--line-strong);
+}
+
+/* The next control on the recorded page, named as the recording names it. */
+.next {
+  flex: none;
+  display: grid;
+  place-items: center;
+  padding: 0 10px;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--line-strong);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+/* Where focus is now: the same ring the field wears, halo included where the field has one. */
+.stub[data-target],
+.next[data-target] {
+  border-style: solid;
+  border-color: transparent;
+  box-shadow:
+    0 0 0 2px var(--focus),
+    0 0 0 6px var(--focus-soft);
+  color: var(--ink);
+}
+
+.wrap[data-size='sm'] .stub[data-target],
+.wrap[data-size='sm'] .next[data-target] {
+  box-shadow: 0 0 0 2px var(--focus);
+}
+
+.caret {
+  width: 1.5px;
+  height: 55%;
+  margin-left: 1px;
+  background: var(--ink-2);
+  opacity: 0;
+}
+
+.field[data-focus='combobox'] .caret {
+  opacity: 1;
+}
+
+/* Holds the height of the recording's longest list, when the caller says how long that is. */
+.listSlot {
+  display: grid;
+  align-content: start;
+  min-height: calc(var(--rows, 0) * var(--row-h) + (min(var(--rows, 0), 1) * 8px));
+}
+
+.list {
+  position: relative;
+  display: grid;
+
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  border-radius: var(--radius-md);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+}
+
+/* Three columns: the active mark, the name, the selected mark. The marks never share a cell, so
+   an option that is both active and selected shows both, side by side with its name. */
+.option {
+  position: relative;
+  display: grid;
+  grid-template-columns: 14px minmax(0, 1fr) 16px;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--row-h);
+  padding: 0 6px;
+  border-radius: var(--radius-sm);
+  font-size: var(--row-font);
+  color: var(--ink-2);
+}
+
+/* The active row's name; its tint and mark are the bar below, which travels between rows. */
+.option[data-active] {
+  color: var(--ink);
+  font-weight: 550;
+}
+
+/*
+ * The active option: the focus tint with the mark, one bar for the whole list. A step that moves
+ * the active option moves the bar (Functional motion: it explains the change). Only transform
+ * and opacity are animated; under reduced motion the bar is simply where it belongs.
+ */
+.bar {
+  position: absolute;
+  inset: 4px 4px auto;
+  height: var(--row-h);
+  display: flex;
+  align-items: center;
+  padding-left: 9px;
+  border-radius: var(--radius-sm);
+  background: var(--focus-soft);
+  transform: translateY(calc(var(--active) * var(--row-h)));
+  transition: transform 150ms var(--ease-out);
+}
+
+/* DOM focus on the option itself, where a system moves it there. */
+.option[data-focus] {
+  box-shadow:
+    0 0 0 2px var(--focus),
+    0 0 0 5px var(--focus-soft);
+}
+
+.optionName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.markSlot {
+  display: grid;
+  place-items: center;
+}
+
+.activeMark {
+  width: 8px;
+  height: 10px;
+  fill: var(--focus);
+}
+
+.selectedMark {
+  width: 12px;
+  height: 10px;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.noList {
+  display: grid;
+  place-items: center;
+  min-height: calc(var(--row-h) + 8px);
+  margin: 0;
+  border-radius: var(--radius-md);
+  /* Dashed: where a list would be, drawn in the replay, not a control on this page. */
+  border: 1px dashed var(--line-strong);
+  font-size: var(--text-2xs);
+  color: var(--ink-3);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* A sample of each kind of spoken line: serif italic, and the bar a live region message carries. */
+.legendSpeech {
+  font-family: var(--font-voice);
+  font-style: italic;
+  font-size: var(--text-sm);
+  color: var(--heard);
+}
+
+.legendSpeech[data-source='announcement'] {
+  padding-left: 6px;
+  border-left: 2px solid var(--heard);
+}
+
+.recording {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.start {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.frames {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-5) var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.frame {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 24px;
+  margin: 0;
+}
+
+/* The step's place in the recording, for a row that wraps. */
+.number {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  color: var(--ink-3);
+}
+
+.typed {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+}
+
+.what,
+.silent,
+.inserted {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+.silent,
+.inserted {
+  color: var(--ink-3);
+}
+
+/* In a replay that is stepped through, a list that appears fades in over the room already kept
+   for it: nothing else moves. A strip of still frames, and a page as it loads, do not fade. */
+.wrap[data-live] .list {
+  transition: opacity 150ms var(--ease-out);
+
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar,
+  .wrap[data-live] .list {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  /* An outline, not a border: a border would make the list 2 px taller than the room kept for it,
+     and the words under it would move each time it opens (design review 2026-11-14). */
+  .field,
+  .list {
+    box-shadow: none;
+    outline: 1px solid CanvasText;
+    outline-offset: -1px;
+  }
+
+  .bar {
+    background: none;
+  }
+
+  .stub,
+  .next {
+    border-color: CanvasText;
+  }
+
+  .stub[data-target],
+  .next[data-target],
+  .wrap[data-size='sm'] .stub[data-target],
+  .wrap[data-size='sm'] .next[data-target],
+  .field[data-focus='combobox'],
+  .wrap[data-size='sm'] .field[data-focus='combobox'],
+  .option[data-focus] {
+    box-shadow: none;
+    outline: 2px solid Highlight;
+    outline-offset: 1px;
+  }
+
+  .activeMark {
+    fill: CanvasText;
+  }
+
+  .selectedMark {
+    stroke: CanvasText;
+  }
+
+  .caret {
+    background: CanvasText;
+  }
+
+  .legendSpeech {
+    color: CanvasText;
+    border-color: CanvasText;
+  }
+}

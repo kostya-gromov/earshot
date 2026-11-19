@@ -1,0 +1,29 @@
+.intro {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: baseline;
+  margin-bottom: var(--space-4);
+}
+
+* + .intro {
+  margin-top: var(--space-7);
+}
+
+.intro h3 {
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+.intro p {
+  max-width: var(--measure);
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+@media (max-width: 760px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+}

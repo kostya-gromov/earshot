@@ -1,0 +1,3074 @@
+{
+  "schemaVersion": 1,
+  "pattern": "input-with-chips",
+  "target": {
+    "system": "React Aria",
+    "systemVersion": {
+      "version": "1.22.1",
+      "source": "react-aria-components installed in packages/harness (pnpm-lock.yaml)"
+    },
+    "url": "packages/harness/react-aria/index.html",
+    "adapter": "react-aria",
+    "adapterVersion": 2,
+    "itemsFoundBy": "Rows in the grid \"Selected people\"."
+  },
+  "provenance": {
+    "status": "measured",
+    "engineVersion": "0.16.4",
+    "browser": "chromium 156.0.8078.4",
+    "os": "darwin",
+    "measuredAt": "2026-11-17T13:06:25.100Z",
+    "runs": 3,
+    "consistent": true
+  },
+  "scenarios": [
+    {
+      "id": "chip-tab",
+      "rules": [
+        "chip-stop"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed, then focus moved to the last chip",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria1781189169-_r_3_ > div:nth-child(2) > div#react-aria1781189169-_r_d_ > div#react-aria1781189169-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria1781189169-_r_d_ > div#react-aria1781189169-_r_d_-HiroshiMatsui > div:nth-child(1) > button#react-aria1781189169-_r_u_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria5951380907-_r_3_ > div:nth-child(2) > div#react-aria5951380907-_r_d_ > div#react-aria5951380907-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria5951380907-_r_d_ > div#react-aria5951380907-_r_d_-HiroshiMatsui > div:nth-child(1) > button#react-aria5951380907-_r_u_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria240498282-_r_3_ > div:nth-child(2) > div#react-aria240498282-_r_d_ > div#react-aria240498282-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria240498282-_r_d_ > div#react-aria240498282-_r_d_-HiroshiMatsui > div:nth-child(1) > button#react-aria240498282-_r_u_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chip-shift-tab",
+      "rules": [
+        "chip-stop"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed, then focus moved to the last chip",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria9684178686-_r_3_ > div:nth-child(2) > div#react-aria9684178686-_r_d_ > div#react-aria9684178686-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria9684178686-_r_4_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria1083715076-_r_3_ > div:nth-child(2) > div#react-aria1083715076-_r_d_ > div#react-aria1083715076-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1083715076-_r_4_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria3556169818-_r_3_ > div:nth-child(2) > div#react-aria3556169818-_r_d_ > div#react-aria3556169818-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3556169818-_r_4_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chip-arrows",
+      "rules": [
+        "chip-arrows"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed, then focus moved to the last chip",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria387969512-_r_3_ > div:nth-child(2) > div#react-aria387969512-_r_d_ > div#react-aria387969512-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Greg Fisher",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria387969512-_r_3_ > div:nth-child(2) > div#react-aria387969512-_r_d_ > div#react-aria387969512-_r_d_-GregFisher",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 411,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, row, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Greg Fisher",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria387969512-_r_3_ > div:nth-child(2) > div#react-aria387969512-_r_d_ > div#react-aria387969512-_r_d_-GregFisher",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria387969512-_r_3_ > div:nth-child(2) > div#react-aria387969512-_r_d_ > div#react-aria387969512-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, row, 3 of 3"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria6228721404-_r_3_ > div:nth-child(2) > div#react-aria6228721404-_r_d_ > div#react-aria6228721404-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Greg Fisher",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria6228721404-_r_3_ > div:nth-child(2) > div#react-aria6228721404-_r_d_ > div#react-aria6228721404-_r_d_-GregFisher",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, row, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Greg Fisher",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria6228721404-_r_3_ > div:nth-child(2) > div#react-aria6228721404-_r_d_ > div#react-aria6228721404-_r_d_-GregFisher",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria6228721404-_r_3_ > div:nth-child(2) > div#react-aria6228721404-_r_d_ > div#react-aria6228721404-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, row, 3 of 3"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria5634635209-_r_3_ > div:nth-child(2) > div#react-aria5634635209-_r_d_ > div#react-aria5634635209-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Greg Fisher",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria5634635209-_r_3_ > div:nth-child(2) > div#react-aria5634635209-_r_d_ > div#react-aria5634635209-_r_d_-GregFisher",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, row, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Greg Fisher",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria5634635209-_r_3_ > div:nth-child(2) > div#react-aria5634635209-_r_d_ > div#react-aria5634635209-_r_d_-GregFisher",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria5634635209-_r_3_ > div:nth-child(2) > div#react-aria5634635209-_r_d_ > div#react-aria5634635209-_r_d_-HiroshiMatsui",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, row, 3 of 3"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tab-out",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7698584206-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria7698584206-_r_3_ > div:nth-child(2) > div#react-aria7698584206-_r_d_ > div#react-aria7698584206-_r_d_-IreneOh",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "Irene Oh, row, 1 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria7698584206-_r_3_ > div:nth-child(2) > div#react-aria7698584206-_r_d_ > div#react-aria7698584206-_r_d_-IreneOh",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7698584206-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5071685158-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria5071685158-_r_3_ > div:nth-child(2) > div#react-aria5071685158-_r_d_ > div#react-aria5071685158-_r_d_-IreneOh",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "speech": [
+                "Irene Oh, row, 1 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria5071685158-_r_3_ > div:nth-child(2) > div#react-aria5071685158-_r_d_ > div#react-aria5071685158-_r_d_-IreneOh",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5071685158-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3739706966-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria3739706966-_r_3_ > div:nth-child(2) > div#react-aria3739706966-_r_d_ > div#react-aria3739706966-_r_d_-IreneOh",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": [
+                "Irene Oh, row, 1 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria3739706966-_r_3_ > div:nth-child(2) > div#react-aria3739706966-_r_d_ > div#react-aria3739706966-_r_d_-IreneOh",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3739706966-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shift-tab-out",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1553598009-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8022727261-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6716255239-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tab-from-chip",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4042602978-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4042602978-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4042602978-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria4042602978-_r_3_ > div:nth-child(2) > div#react-aria4042602978-_r_d_ > div#react-aria4042602978-_r_d_-IreneOh",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": [
+                "Irene Oh, row, 1 of 3"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8816524167-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8816524167-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8816524167-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria8816524167-_r_3_ > div:nth-child(2) > div#react-aria8816524167-_r_d_ > div#react-aria8816524167-_r_d_-IreneOh",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 411,
+                "quiet": true
+              },
+              "speech": [
+                "Irene Oh, row, 1 of 3"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8980725345-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8980725345-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8980725345-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria8980725345-_r_3_ > div:nth-child(2) > div#react-aria8980725345-_r_d_ > div#react-aria8980725345-_r_d_-IreneOh",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "speech": [
+                "Irene Oh, row, 1 of 3"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backspace-twice",
+      "rules": [
+        "bsp",
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria845273576-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria845273576-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria845273576-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria845273576-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3720191464-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3720191464-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3720191464-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3720191464-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 417,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1259996071-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1259996071-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1259996071-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1259996071-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arrows",
+      "rules": [
+        "arrows"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 411,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 417,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delete-focused",
+      "rules": [
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4630319144-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4630319144-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4630319144-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4630319144-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria2287210170-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria2287210170-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria2287210170-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria2287210170-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5496297519-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5496297519-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5496297519-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5496297519-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remove-click",
+      "rules": [
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Remove Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4545947263-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(2) > div#react-aria4545947263-_r_3_ > div:nth-child(2) > div#react-aria4545947263-_r_d_ > div#react-aria4545947263-_r_d_-HiroshiMatsui",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "row",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "gridcell",
+                    "name": "Greg Fisher Remove Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 440,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, row, 2 of 2"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Remove Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3108704532-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(2) > div#react-aria3108704532-_r_3_ > div:nth-child(2) > div#react-aria3108704532-_r_d_ > div#react-aria3108704532-_r_d_-HiroshiMatsui",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "row",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "gridcell",
+                    "name": "Greg Fisher Remove Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 436,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, row, 2 of 2"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Remove Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7603621259-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(2) > div#react-aria7603621259-_r_3_ > div:nth-child(2) > div#react-aria7603621259-_r_d_ > div#react-aria7603621259-_r_d_-HiroshiMatsui",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "row",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "gridcell",
+                    "name": "Greg Fisher Remove Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 437,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, row, 2 of 2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "verdicts": {
+    "chip-stop": {
+      "verdict": "differs",
+      "summary": "Tab stops on a control inside the chip",
+      "reason": "[chip-tab] From chip 3, Tab moved focus to button \"Remove Hiroshi Matsui\" inside the same chip: a second Tab stop within the chips. Follows in: [chip-shift-tab] From chip 3, Shift+Tab left the chips for combobox \"To\".",
+      "basis": [
+        {
+          "scenario": "chip-tab",
+          "verdict": "differs",
+          "summary": "Tab stops on a control inside the chip"
+        },
+        {
+          "scenario": "chip-shift-tab",
+          "verdict": "follows",
+          "summary": "Shift+Tab leaves the chips"
+        }
+      ]
+    },
+    "chip-arrows": {
+      "verdict": "follows",
+      "summary": "Arrows move between chips",
+      "reason": "[chip-arrows] From chip 3, Left Arrow moved to chip 2 and Right Arrow back to chip 3.",
+      "basis": [
+        {
+          "scenario": "chip-arrows",
+          "verdict": "follows",
+          "summary": "Arrows move between chips"
+        }
+      ]
+    },
+    "tab": {
+      "verdict": "differs",
+      "summary": "Tab stops on row inside the field",
+      "reason": "[tab-out] Tab moved focus to row \"Irene Oh\" inside the component. Follows in: [shift-tab-out] Shift+Tab left the component in one step. Not judged: [tab-from-chip] ArrowLeft did not focus a chip, so Tab from a chip could not be tested.",
+      "basis": [
+        {
+          "scenario": "tab-out",
+          "verdict": "differs",
+          "summary": "Tab stops on row inside the field"
+        },
+        {
+          "scenario": "shift-tab-out",
+          "verdict": "follows",
+          "summary": "Leaves the field in one step"
+        },
+        {
+          "scenario": "tab-from-chip",
+          "verdict": "inconclusive",
+          "summary": "No chip to Tab from"
+        }
+      ]
+    },
+    "arrows": {
+      "verdict": "differs",
+      "summary": "Left Arrow does not reach a chip",
+      "reason": "[arrows] After step 1 (ArrowLeft), focus was on combobox \"To\", not on chip 3. Nothing was announced.",
+      "basis": [
+        {
+          "scenario": "arrows",
+          "verdict": "differs",
+          "summary": "Left Arrow does not reach a chip"
+        }
+      ]
+    },
+    "bsp": {
+      "verdict": "differs",
+      "summary": "First Backspace does not focus the last chip",
+      "reason": "[backspace-twice] The first Backspace did not focus the last chip.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "differs",
+          "summary": "First Backspace does not focus the last chip"
+        }
+      ]
+    },
+    "keep-focus": {
+      "verdict": "follows",
+      "summary": "Focus stays in the field",
+      "reason": "[remove-click] After the removal, focus stayed in the field. Not judged: [backspace-twice] Step 2 removed nothing, so there was no removal to judge. [delete-focused] Step 2 removed nothing, so there was no removal to judge.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "inconclusive",
+          "summary": "Nothing removed to judge"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "inconclusive",
+          "summary": "Nothing removed to judge"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "follows",
+          "summary": "Focus stays in the field"
+        }
+      ]
+    },
+    "say": {
+      "verdict": "differs",
+      "summary": "Removal is not announced",
+      "reason": "[remove-click] A live region entered the page in this step already holding \"Irene OhGreg FisherHiroshi Matsui\". The same text appeared after Tab in [tab-out], with no removal. So it is not counted as an announcement of the removal. Not judged: [backspace-twice] Step 2 removed nothing, so there was no removal to judge. [delete-focused] Step 2 removed nothing, so there was no removal to judge.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "inconclusive",
+          "summary": "Nothing removed to judge"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "inconclusive",
+          "summary": "Nothing removed to judge"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "differs",
+          "summary": "Removal is not announced"
+        }
+      ]
+    },
+    "count": {
+      "verdict": "inconclusive",
+      "summary": "Nothing removed; removal not announced",
+      "reason": "[backspace-twice] Step 2 removed nothing, so there was no removal to judge. [delete-focused] Step 2 removed nothing, so there was no removal to judge. [remove-click] The removal was not announced, so there is no count to judge. \"Announce the removal\" covers it.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "inconclusive",
+          "summary": "Nothing removed"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "inconclusive",
+          "summary": "Nothing removed"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "inconclusive",
+          "summary": "Removal not announced"
+        }
+      ]
+    }
+  }
+}

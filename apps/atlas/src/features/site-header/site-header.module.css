@@ -1,0 +1,103 @@
+.header {
+  /* Sticky, so the menu is in reach mid-page; the menu's panel is placed against it. */
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  box-sizing: border-box;
+  block-size: var(--header-height);
+  /* Across the column's gutters too, so nothing shows beside it as the page passes under. */
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
+  border-bottom: 1px solid transparent;
+}
+
+/* The ground and the hairline only once the page has moved under the header: at the top, and
+   on a page with nothing to scroll, the page's own backdrop shows through and there is nothing
+   to divide. A state of the scroll position, not an animation: the range is two pixels. */
+@supports (animation-timeline: scroll()) {
+  .header {
+    animation: header-ground linear both;
+    animation-timeline: scroll();
+    animation-range: 0 2px;
+  }
+}
+
+/* Where the scroll position cannot be read, the header always has its ground and line. */
+@supports not (animation-timeline: scroll()) {
+  .header {
+    background: var(--canvas);
+    border-bottom-color: var(--line);
+  }
+}
+
+@keyframes header-ground {
+  to {
+    background-color: var(--canvas);
+    border-bottom-color: var(--line);
+  }
+}
+
+@media (max-height: 500px) {
+  .header {
+    position: relative;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  /* The focus outline follows this radius, as every other control's ring follows its corners. */
+  border-radius: var(--radius-sm);
+}
+
+.crumbs ol {
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.crumbs li + li::before {
+  content: '/';
+  margin-inline-end: 6px;
+  color: var(--ink-3);
+}
+
+.crumbs a {
+  text-decoration: none;
+}
+
+.crumbs [aria-current] {
+  color: var(--ink-2);
+}
+
+.end {
+  margin-inline-start: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+@media (max-width: 560px) {
+  .header {
+    gap: var(--space-3);
+  }
+
+  .end {
+    gap: 6px;
+  }
+
+  .crumbs {
+    display: none;
+  }
+}

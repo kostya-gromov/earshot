@@ -1,0 +1,289 @@
+/*
+ * The three things the engine records, as line drawings in the page's greys. The only colours
+ * are the meanings they show: blue for focus, violet for what is heard. Each is an illustration
+ * (apps/atlas/CLAUDE.md, Motion): it plays one short run when first seen and again when pointed
+ * at, always to the end, and comes back to the drawing it started from.
+ */
+.figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.figure path,
+.figure ellipse {
+  fill: none;
+  stroke-width: 1.25;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Faces are filled with the page, so a nearer shape hides the one behind it. */
+.figure .top {
+  fill: var(--canvas);
+  stroke: var(--ink-2);
+}
+
+.figure .side {
+  fill: var(--canvas);
+  stroke: var(--ink-ghost);
+}
+
+.figure .mark,
+.figure .surface path {
+  stroke: var(--ink-3);
+}
+
+.figure .ring {
+  stroke: var(--focus);
+  stroke-width: 2;
+}
+
+.figure .branch {
+  stroke: var(--ink-ghost);
+}
+
+.node {
+  fill: var(--canvas);
+  stroke: var(--ink-ghost);
+  vector-effect: non-scaling-stroke;
+}
+
+.figure .wave,
+.figure .pulse {
+  stroke: var(--heard);
+}
+
+.figure .wave {
+  opacity: calc(0.9 - var(--wave) * 0.3);
+}
+
+.figure .pulse {
+  opacity: 0;
+}
+
+/* The rule figure: what a rule is made from. Greys only; it shows neither focus nor speech. */
+.figure .connector {
+  stroke: var(--ink-ghost);
+}
+
+/* The passage a rule cites, and the rule's own first line: the same weight, so they pair. */
+.figure .passage {
+  stroke: var(--ink);
+  stroke-width: 1.75;
+}
+
+.carried {
+  fill: var(--ink);
+  opacity: 0;
+}
+
+.label {
+  fill: var(--ink-3);
+  font: 500 7px / 1 var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+/* A smaller drawing on a phone: the labels grow in the drawing's units to stay the same size. */
+@media (max-width: 860px) {
+  .label {
+    font-size: 10.5px;
+  }
+}
+
+/* A run is started by figure-stage.tsx with data-play; under reduced motion nothing plays. */
+@media (prefers-reduced-motion: no-preference) {
+  /* Focus: a step, a pause, a step, a pause, and back. Focus moves in steps, it does not glide. */
+  [data-play] .ring {
+    animation: step 1220ms var(--ease-out) both;
+  }
+
+  /* The tree: the layers part and the surface clears, they hold, and they close. */
+  [data-play] .layerLow {
+    animation: part-low 1600ms var(--ease-out) both;
+  }
+
+  [data-play] .layerTop {
+    animation: part-top 1600ms var(--ease-out) both;
+  }
+
+  [data-play] .layerTop :is(.top, .side) {
+    animation: clear 1600ms var(--ease-out) both;
+  }
+
+  [data-play] .surface {
+    animation: dim 1600ms var(--ease-out) both;
+  }
+
+  [data-play] .branch {
+    animation: trace 1600ms var(--ease-out) both;
+  }
+
+  [data-play] .node {
+    animation: fill 1600ms var(--ease-out) both;
+  }
+
+  /* The rule: a mark leaves each cited passage, reaches the card, and the card lifts once.
+     Transform and opacity only. */
+  [data-play] .carried {
+    animation: carry 1400ms linear both;
+  }
+
+  [data-play] .ruleCard {
+    animation: receive 1400ms linear both;
+  }
+
+  /* Announcements: a new ring goes out over each resting one, the nearest first. */
+  [data-play] .pulse {
+    animation: speak 1080ms var(--ease-out) both;
+    animation-delay: calc(var(--wave) * 160ms);
+  }
+}
+
+/* Each hop takes about 120 ms and is followed by a hold: focus jumps, it does not glide. */
+@keyframes step {
+  10%,
+  43% {
+    transform: translate(32.9px, 19px);
+  }
+
+  53%,
+  88% {
+    transform: translate(65.8px, 38px);
+  }
+
+  98%,
+  100% {
+    transform: none;
+  }
+}
+
+/* The marks travel first, at an even pace; only when they arrive does the card answer. */
+@keyframes carry {
+  from {
+    opacity: 0;
+    transform: none;
+    animation-timing-function: linear;
+  }
+
+  8% {
+    opacity: 1;
+    transform: none;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(var(--dx), var(--dy));
+  }
+
+  58%,
+  to {
+    opacity: 0;
+    transform: translate(var(--dx), var(--dy));
+  }
+}
+
+@keyframes receive {
+  from,
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  64%,
+  78% {
+    transform: translateY(-5px);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes part-low {
+  31%,
+  69% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes part-top {
+  31%,
+  69% {
+    transform: translateY(-24px);
+  }
+}
+
+@keyframes clear {
+  31%,
+  69% {
+    fill-opacity: 0;
+  }
+}
+
+@keyframes dim {
+  31%,
+  69% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes trace {
+  31%,
+  69% {
+    stroke: var(--ink);
+  }
+}
+
+@keyframes fill {
+  31%,
+  69% {
+    fill: var(--ink);
+    stroke: var(--ink);
+  }
+}
+
+@keyframes speak {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+@media (forced-colors: active) {
+  .figure .top,
+  .figure .side,
+  .figure .mark,
+  .figure .branch,
+  .figure .surface path {
+    fill: Canvas;
+    stroke: CanvasText;
+  }
+
+  .figure .ring,
+  .figure .wave {
+    stroke: Highlight;
+  }
+
+  .figure .connector,
+  .figure .passage {
+    stroke: CanvasText;
+  }
+
+  .carried,
+  .label {
+    fill: CanvasText;
+  }
+}

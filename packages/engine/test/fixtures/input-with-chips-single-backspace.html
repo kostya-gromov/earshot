@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Broken input with chips fixture</title>
+  </head>
+  <body>
+    <main>
+      <div id="mount"></div>
+      <label for="subject">Subject</label>
+      <input id="subject" />
+    </main>
+    <script type="module">
+      import { createChipField } from '/packages/reference/input-with-chips/chip-field.js';
+
+      const mount = document.getElementById('mount');
+      mount.innerHTML = await (
+        await fetch('/packages/reference/input-with-chips/chip-field.html')
+      ).text();
+      const root = mount.querySelector('[data-chip-field]');
+      createChipField(root, {
+        initial: ['Irene Oh', 'Greg Fisher', 'Hiroshi Matsui'],
+      });
+
+      const input = root.querySelector('[role="combobox"]');
+      input.addEventListener(
+        'keydown',
+        (event) => {
+          if (event.key !== 'Backspace' || input.value !== '') return;
+          root.querySelector('[aria-label^="Remove "]:last-of-type')?.click();
+        },
+        { capture: true },
+      );
+      root.dataset.ready = 'true';
+    </script>
+  </body>
+</html>

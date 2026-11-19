@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["es2023", "dom", "dom.iterable"]
+  },
+  "include": [
+    "input-with-chips",
+    "combobox",
+    "menu-button",
+    "scripts",
+    "test",
+    "playwright.config.ts"
+  ]
+}

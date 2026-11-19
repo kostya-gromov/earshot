@@ -1,0 +1,35 @@
+{
+  "name": "earshot",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "pnpm -r typecheck",
+    "test": "vitest run",
+    "test:e2e": "pnpm --filter @earshot/reference test:e2e && pnpm --filter @earshot/atlas test:e2e",
+    "validate": "node packages/contracts/scripts/validate-data.ts",
+    "engine": "node packages/engine/src/cli/main.ts",
+    "design": "node packages/reference/scripts/serve.ts --port 4174 --root . --home /docs/design/d0/",
+    "check": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test && pnpm validate",
+    "build:atlas": "pnpm --filter @earshot/atlas build",
+    "check:panel": "pnpm build:atlas && pnpm --filter @earshot/atlas exec playwright test --project=chromium panel-invariants",
+    "sources:snapshot": "node packages/contracts/scripts/sources/sources.ts snapshot",
+    "sources:check": "node packages/contracts/scripts/sources/sources.ts check"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.2",
+    "eslint": "10.14.0",
+    "globals": "17.13.0",
+    "prettier": "3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1",
+    "vitest": "5.0.5"
+  }
+}

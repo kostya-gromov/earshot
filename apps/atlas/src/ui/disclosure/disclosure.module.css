@@ -1,0 +1,182 @@
+.disclosure {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.disclosure[data-layout='in-parent-grid'] {
+  display: contents;
+}
+
+.button {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  transition: background-color var(--dur-micro) var(--ease-out);
+}
+
+.button:hover {
+  background: var(--panel-2);
+}
+
+/* Plain: no box, the tone of secondary text; the focus ring is the site's own. */
+.disclosure[data-tone='plain'] .button {
+  padding: var(--space-1) 0;
+  border: 0;
+  background: none;
+  font-weight: 400;
+  color: var(--ink-2);
+  text-align: start;
+  /* Inline, so the chevron follows the last word when the label wraps to a second line. */
+  display: inline;
+}
+
+.disclosure[data-tone='plain'] .chevron {
+  display: inline-block;
+  vertical-align: middle;
+  margin-inline-start: var(--space-2);
+}
+
+.disclosure[data-tone='plain'] .button:hover {
+  background: none;
+  color: var(--ink);
+}
+
+/* Row: a full-width row between hairlines, as a table's row reads (design review 2026-11-18:
+   three boxed pills of three widths stood among hairline tables). */
+.disclosure[data-tone='row'] {
+  gap: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.disclosure[data-tone='row'] .button {
+  justify-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  min-height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-size: var(--text-base);
+  text-align: start;
+}
+
+.disclosure[data-tone='row'] .button:hover {
+  background: none;
+}
+
+.disclosure[data-tone='row'] .button:hover .chevron {
+  color: var(--ink);
+}
+
+.disclosure[data-tone='row'] .chevron {
+  color: var(--ink-3);
+  transition: color var(--dur-micro) var(--ease-out);
+}
+
+.disclosure[data-tone='row'] > :not(.button) {
+  padding-bottom: var(--space-5);
+}
+
+.chevron {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--dur-micro) var(--ease-out);
+}
+
+.button[aria-expanded='true'] .chevron {
+  transform: rotate(180deg);
+}
+
+.content {
+  background: var(--well);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.bare:not([hidden]) {
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .content:not([hidden]),
+  .bare:not([hidden]) {
+    animation: reveal var(--dur-functional) var(--ease-out);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+/*
+ * A plain disclosure sits in a list: what is below it travels as it opens and closes, instead of
+ * jumping by the height of the fold. The height is animated by the browser from 0fr to 1fr, with
+ * no script measuring anything; closing is a little quicker than opening. Hidden from sight and
+ * from assistive technology while closed (visibility, with `inert` on the element).
+ */
+.region {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    grid-template-rows 140ms var(--ease-out),
+    opacity 140ms var(--ease-out),
+    visibility 0s 140ms;
+}
+
+.region[data-open] {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  opacity: 1;
+  transition:
+    grid-template-rows 180ms var(--ease-out),
+    opacity 180ms var(--ease-out),
+    visibility 0s;
+}
+
+.regionInner {
+  min-height: 0;
+  overflow: hidden;
+  /* Room for the focus rings of what is inside, which the clipping would otherwise cut. */
+  margin: -4px;
+  padding: 4px;
+}
+
+/* The gap between button and region belongs to an open region only. */
+.disclosure[data-tone='plain'] {
+  gap: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .region,
+  .region[data-open] {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .button {
+    border-color: ButtonText;
+  }
+}

@@ -1,0 +1,36 @@
+node_modules/
+.pnpm-store/
+
+# build output
+.next/
+out/
+dist/
+
+# test and engine artifacts (traces can be large; see CLAUDE.md 8.7)
+artifacts/
+test-results/
+playwright-report/
+blob-report/
+*.trace.zip
+coverage/
+
+# Eval transcripts and diffs (evals/README.md): large, local only. Summaries are committed.
+evals/results/*/raw/
+
+.DS_Store
+.env
+.env.*
+
+# Atlas build output and generated Next.js types
+apps/atlas/out/
+apps/atlas/next-env.d.ts
+apps/atlas/test-results/
+apps/atlas/playwright-report/
+
+# design review captures (screenshots, videos, metrics); the checklist stays tracked
+design-review/**/*.png
+design-review/**/*.webm
+design-review/**/*.json
+
+# W3C page snapshots for `pnpm sources:check`: written locally, not redistributed.
+docs/sources/

@@ -1,0 +1,181 @@
+.ruleset {
+  padding-top: var(--space-7);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.count {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.count span {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.rules {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rule {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+/* A line draws in from the left while the rule is exercised: blue for keys, violet for "say". */
+.rule::before {
+  content: '';
+  position: absolute;
+  inset: -1px 0 auto;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--focus);
+  box-shadow: 0 0 14px var(--focus);
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+  transition:
+    transform var(--dur-signature) var(--ease-out),
+    opacity var(--dur-signature) ease;
+}
+
+.rule[data-lit]::before {
+  transform: scaleX(1);
+  opacity: 1;
+  transition-duration: var(--dur-functional), 80ms;
+}
+
+.rule[data-heard]::before {
+  background: var(--heard);
+  box-shadow: 0 0 14px var(--heard);
+}
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.heard {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--heard-soft);
+  color: var(--heard);
+  font: italic var(--text-sm) / 1.4 var(--font-voice);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: 8px;
+  font-size: var(--text-base);
+  line-height: 1.4;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+
+.tick {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  border-radius: 50%;
+  border: 1.5px dashed var(--line-strong);
+  transition: background var(--dur-functional) ease;
+}
+
+.tick svg {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  visibility: hidden;
+}
+
+/* The filled tick says "done"; the word stays for screen readers only. */
+.step[data-done] .tick {
+  border: 0;
+  background: var(--ink);
+  color: var(--canvas);
+}
+
+.step[data-done] .tick svg {
+  visibility: visible;
+}
+
+.step[data-done] .task {
+  color: var(--ink-3);
+}
+
+.link {
+  margin-top: auto;
+  padding-top: var(--space-3);
+  padding-inline-start: 24px;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  transition: color 120ms var(--ease-out);
+}
+
+@media (hover: hover) {
+  .link:hover {
+    color: var(--ink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .rules {
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--space-6);
+  }
+}
+
+@media (max-width: 560px) {
+  .rules {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-5);
+  }
+}
+
+@media (forced-colors: active) {
+  .rule[data-lit]::before {
+    background: Highlight;
+    forced-color-adjust: none;
+  }
+
+  .step[data-done] .tick {
+    forced-color-adjust: none;
+    background: CanvasText;
+    color: Canvas;
+  }
+}

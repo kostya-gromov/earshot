@@ -1,0 +1,30 @@
+.wrap {
+  max-width: calc(var(--page) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+  /*
+   * The opening scene bleeds past the column. Clip, not hidden: no scroll container, so sticky
+   * children keep working.
+   */
+  overflow-x: clip;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding-bottom: var(--space-9);
+}
+
+/* Sections divided by hairlines, with room around each (design sketch E). */
+.page > section + section {
+  margin-top: clamp(var(--space-7), 9vw, var(--space-9));
+  padding-top: clamp(var(--space-7), 9vw, var(--space-9));
+  border-top: 1px solid var(--line);
+}
+
+/* The honesty band closes the page as a qualifier, not a chapter: closer, and its own hairline. */
+.page > section:last-child {
+  margin-top: var(--space-8);
+  padding-top: 0;
+  border-top: 0;
+}

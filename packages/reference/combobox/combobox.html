@@ -1,0 +1,20 @@
+<div class="combobox" data-combobox>
+  <label class="combobox__label" for="fruit-input">Fruit</label>
+
+  <input
+    id="fruit-input"
+    class="combobox__input"
+    type="text"
+    role="combobox"
+    aria-expanded="false"
+    aria-controls="fruit-listbox"
+    aria-autocomplete="list"
+    autocomplete="off"
+  />
+
+  <!-- Hidden while closed, so it is out of the accessibility tree. Filled by combobox.js -->
+  <ul id="fruit-listbox" class="combobox__popup" role="listbox" aria-label="Fruit" hidden></ul>
+
+  <!-- Live region exists from the start, so announcements aren't missed -->
+  <div class="combobox__status" role="status"></div>
+</div>

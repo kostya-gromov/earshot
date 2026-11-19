@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    // Next.js bundles the app, so it resolves like a bundler rather than like Node.
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": ["es2023", "dom", "dom.iterable"],
+    "jsx": "preserve",
+    "types": [],
+    "plugins": [{ "name": "next" }],
+    "paths": { "@/*": ["./src/*"] }
+  },
+  "include": [
+    "next-env.d.ts",
+    "src",
+    "test",
+    ".next/types/**/*.ts",
+    "next.config.ts",
+    "scripts",
+    "playwright.config.ts"
+  ]
+}

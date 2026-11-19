@@ -1,0 +1,251 @@
+/* The button and its panel: the panel hangs from the button's end. */
+.root {
+  position: relative;
+}
+
+/* The same control as the search beside it, so the header reads as one row. */
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 12px 0 10px;
+  font: var(--text-sm) / 1 var(--font-sans);
+  color: var(--ink-2);
+  background: color-mix(in oklch, var(--panel) 60%, transparent);
+  /* A control boundary at 3:1 (WCAG 1.4.11). */
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.trigger:hover,
+.trigger[aria-expanded='true'] {
+  color: var(--ink);
+}
+
+.trigger[aria-expanded='true'] {
+  background: var(--panel-2);
+}
+
+.trigger svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+/* The menu: a panel of text, the one raised surface while it is shown. No boxes inside it:
+   two short columns and a line of the site's pages. */
+.panel {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 8px);
+  right: 0;
+  width: max-content;
+  max-width: calc(100vw - 2 * var(--gutter));
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 64px -16px var(--shadow-color);
+  animation: enter var(--dur-micro) var(--ease-out);
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+.columns {
+  display: grid;
+  /* Wide enough for the longest aliases and the bottom row's links on one line each (design
+     review 2026-11-19: at 300 px "Multi-select" and "Overflow menu" were cut with "..."). An
+     alias that is longer still wraps rather than being cut. */
+  grid-template-columns: 332px 248px;
+}
+
+.columns[data-single] {
+  grid-template-columns: 332px;
+}
+
+.column {
+  display: grid;
+  align-content: start;
+  gap: var(--space-1);
+  padding: 18px 10px 14px;
+}
+
+.column + .column {
+  border-left: 1px solid var(--line);
+}
+
+.column ul,
+.footLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.column ul {
+  display: grid;
+  gap: 2px;
+}
+
+.kicker {
+  margin: 0;
+  padding: 0 10px var(--space-2);
+  font: var(--group-label-font);
+  color: var(--group-label-color);
+}
+
+.pattern {
+  display: grid;
+  gap: 2px;
+  padding: var(--space-2) 10px;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+.patternName {
+  font-size: var(--text-base);
+  font-weight: 550;
+  letter-spacing: -0.01em;
+}
+
+.patternNote {
+  overflow: hidden;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+/* Where the reader is: a fill, not the focus colour, which is the keyboard's. */
+.pattern[aria-current] {
+  background: var(--panel-2);
+}
+
+.pattern[aria-current] .patternNote {
+  color: var(--ink-2);
+}
+
+.pattern:hover:not([aria-current]) {
+  background: color-mix(in oklch, var(--panel-2) 55%, transparent);
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+/* The section the reader is in: a short bar before it and full ink. */
+.section::before {
+  content: '';
+  flex: none;
+  width: 2px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.section[aria-current] {
+  color: var(--ink);
+}
+
+.section[aria-current]::before {
+  background: currentColor;
+}
+
+.section:hover,
+.foot a:hover {
+  color: var(--ink);
+}
+
+/* The site's pages, and the theme: a setting chosen once, kept out of the header. */
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-5);
+  padding: var(--space-3) 20px;
+  border-top: 1px solid var(--line);
+  /* The columns set the panel's width, not this row: with the theme in it, it widened the
+     panel by 260 px on a page of one column (design review 2026-11-19). It wraps instead. */
+  contain: inline-size;
+}
+
+.foot a {
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+  text-decoration: none;
+  border-radius: var(--radius-xs);
+}
+
+/* Phones: the button is its icon alone, so the header fits one row (the label is clipped, not
+   removed: it stays the button's name), and the panel is as wide as the window, one column. */
+@media (max-width: 620px) {
+  .root {
+    position: static;
+  }
+
+  /* Under the header, across its width: the header is what it is placed against here. */
+  .panel {
+    top: calc(100% - 6px);
+    right: 0;
+    left: 0;
+    width: auto;
+    max-width: none;
+  }
+
+  .columns,
+  .columns[data-single] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .column + .column {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 560px) {
+  .trigger {
+    justify-content: center;
+    min-width: 34px;
+    padding: 0;
+  }
+
+  .trigger span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+/* Forced colours take the fill away: the page the reader is on keeps a line of its own. */
+@media (forced-colors: active) {
+  .pattern[aria-current]:not(:focus-visible) {
+    outline: 1px solid CanvasText;
+    outline-offset: -1px;
+  }
+}

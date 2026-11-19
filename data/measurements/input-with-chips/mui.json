@@ -1,0 +1,3107 @@
+{
+  "schemaVersion": 1,
+  "pattern": "input-with-chips",
+  "target": {
+    "system": "MUI",
+    "systemVersion": {
+      "version": "9.5.0",
+      "source": "@mui/material installed in packages/harness (pnpm-lock.yaml)"
+    },
+    "url": "packages/harness/mui/index.html",
+    "adapter": "mui",
+    "adapterVersion": 2,
+    "itemsFoundBy": "Elements with role=\"button\" and MUI's data-item-index marker."
+  },
+  "provenance": {
+    "status": "measured",
+    "engineVersion": "0.16.4",
+    "browser": "chromium 156.0.8078.4",
+    "os": "darwin",
+    "measuredAt": "2026-11-17T13:05:50.859Z",
+    "runs": 3,
+    "consistent": true
+  },
+  "scenarios": [
+    {
+      "id": "chip-tab",
+      "rules": [
+        "chip-stop"
+      ],
+      "initialState": "3 chips, empty input focused, menu closed, then focus moved to the last chip",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 411,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chip-shift-tab",
+      "rules": [
+        "chip-stop"
+      ],
+      "initialState": "3 chips, empty input focused, menu closed, then focus moved to the last chip",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chip-arrows",
+      "rules": [
+        "chip-arrows"
+      ],
+      "initialState": "3 chips, empty input focused, menu closed, then focus moved to the last chip",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tab-out",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 chips, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 417,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shift-tab-out",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 chips, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tab-from-chip",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 chips, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Clear"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backspace-twice",
+      "rules": [
+        "bsp",
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 chips, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "1 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "1 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "1 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arrows",
+      "rules": [
+        "arrows"
+      ],
+      "initialState": "3 chips, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 417,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 411,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Greg Fisher",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delete-focused",
+      "rules": [
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 chips, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Hiroshi Matsui",
+                "description": "Press Backspace or Delete to remove",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remove-click",
+      "rules": [
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 chips, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": null,
+                  "name": ""
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": null,
+                  "name": ""
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": null,
+                  "name": ""
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "3 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "2 selected. From the start of the input, press Left Arrow to focus the selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#tags-standard",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "verdicts": {
+    "chip-stop": {
+      "verdict": "follows",
+      "summary": "The chips are one Tab stop",
+      "reason": "[chip-tab] From chip 3, Tab left the chips for textbox \"Subject\". [chip-shift-tab] From chip 3, Shift+Tab left the chips for textbox \"From\".",
+      "basis": [
+        {
+          "scenario": "chip-tab",
+          "verdict": "follows",
+          "summary": "Tab leaves the chips"
+        },
+        {
+          "scenario": "chip-shift-tab",
+          "verdict": "follows",
+          "summary": "Shift+Tab leaves the chips"
+        }
+      ]
+    },
+    "chip-arrows": {
+      "verdict": "follows",
+      "summary": "Arrows move between chips",
+      "reason": "[chip-arrows] From chip 3, Left Arrow moved to chip 2 and Right Arrow back to chip 3.",
+      "basis": [
+        {
+          "scenario": "chip-arrows",
+          "verdict": "follows",
+          "summary": "Arrows move between chips"
+        }
+      ]
+    },
+    "tab": {
+      "verdict": "follows",
+      "summary": "Leaves the field in one step",
+      "reason": "[tab-out] Tab left the component in one step. [shift-tab-out] Shift+Tab left the component in one step. [tab-from-chip] Tab left the component in one step.",
+      "basis": [
+        {
+          "scenario": "tab-out",
+          "verdict": "follows",
+          "summary": "Leaves the field in one step"
+        },
+        {
+          "scenario": "shift-tab-out",
+          "verdict": "follows",
+          "summary": "Leaves the field in one step"
+        },
+        {
+          "scenario": "tab-from-chip",
+          "verdict": "follows",
+          "summary": "Leaves the field in one step"
+        }
+      ]
+    },
+    "arrows": {
+      "verdict": "follows",
+      "summary": "Moves through chips and back to the input",
+      "reason": "[arrows] Arrow keys moved through chips and returned to input.",
+      "basis": [
+        {
+          "scenario": "arrows",
+          "verdict": "follows",
+          "summary": "Moves through chips and back to the input"
+        }
+      ]
+    },
+    "bsp": {
+      "verdict": "differs",
+      "summary": "First Backspace removes a chip",
+      "reason": "[backspace-twice] The first Backspace removed a chip immediately.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "differs",
+          "summary": "First Backspace removes a chip"
+        }
+      ]
+    },
+    "keep-focus": {
+      "verdict": "follows",
+      "summary": "Focus stays in the field",
+      "reason": "[backspace-twice] After the removal, focus stayed in the field. [delete-focused] After the removal, focus stayed in the field. [remove-click] After the removal, focus stayed in the field.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "follows",
+          "summary": "Focus stays in the field"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "follows",
+          "summary": "Focus stays in the field"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "follows",
+          "summary": "Focus stays in the field"
+        }
+      ]
+    },
+    "say": {
+      "verdict": "differs",
+      "summary": "Removal is not announced",
+      "reason": "[backspace-twice] The removal was not announced. [delete-focused] The removal was not announced. [remove-click] The removal was not announced.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "differs",
+          "summary": "Removal is not announced"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "differs",
+          "summary": "Removal is not announced"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "differs",
+          "summary": "Removal is not announced"
+        }
+      ]
+    },
+    "count": {
+      "verdict": "inconclusive",
+      "summary": "Removal not announced",
+      "reason": "[backspace-twice] The removal was not announced, so there is no count to judge. \"Announce the removal\" covers it. [delete-focused] The removal was not announced, so there is no count to judge. \"Announce the removal\" covers it. [remove-click] The removal was not announced, so there is no count to judge. \"Announce the removal\" covers it.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "inconclusive",
+          "summary": "Removal not announced"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "inconclusive",
+          "summary": "Removal not announced"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "inconclusive",
+          "summary": "Removal not announced"
+        }
+      ]
+    }
+  }
+}

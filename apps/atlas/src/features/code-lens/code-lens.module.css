@@ -1,0 +1,205 @@
+/* For code (D1a): a code well with file tabs and notes, then the contract. */
+.well {
+  border-radius: var(--radius-lg);
+  background: var(--well);
+  box-shadow: inset 0 0 0 1px var(--line);
+  overflow: hidden;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  margin-inline-start: auto;
+}
+
+.button,
+.quietButton {
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: var(--radius-sm);
+  font: 500 var(--text-xs) / 1 var(--font-sans);
+  cursor: pointer;
+}
+
+.button {
+  border: 1px solid var(--line-strong);
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.quietButton {
+  border: 1px solid transparent;
+  background: none;
+  color: var(--ink-2);
+}
+
+.code :global(pre) {
+  margin: 0;
+  padding: 14px 0;
+  background: none;
+  font: var(--text-xs) / 1.7 var(--font-mono);
+  font-variant-ligatures: none;
+  tab-size: 2;
+  counter-reset: line;
+}
+
+/*
+ * Shiki emits both themes as variables; light-dark() follows the page theme. Tokens in the base
+ * colour inherit it from pre; the others carry a shared class (data/compact-tokens.ts).
+ */
+.code :global(pre) {
+  color: light-dark(var(--shiki-light), var(--shiki-dark));
+}
+
+.code :global(.line) {
+  display: inline-block;
+  min-width: 100%;
+  padding-inline: 16px 20px;
+  counter-increment: line;
+}
+
+.code :global(.line)::before {
+  content: counter(line);
+  display: inline-block;
+  width: 3ch;
+  margin-inline-end: 16px;
+  text-align: end;
+  color: var(--ink-3);
+}
+
+.code :global(.line[data-marked]) {
+  background: var(--focus-soft);
+  box-shadow: inset 2px 0 0 var(--focus);
+}
+
+.notes {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  margin: 0;
+  padding: 10px;
+  overflow: auto;
+  list-style: none;
+  border-inline-start: 1px solid var(--line);
+}
+
+/*
+ * The column scrolls when there are more notes than the code is tall. An edge fades only when it
+ * hides something: the bottom until the end of the list, the top once the list is scrolled. A
+ * note cut by an edge then reads as "more this way", and an edge with nothing behind it is plain.
+ * No fade while a note has keyboard focus: its focus ring is never dimmed. A mouse click keeps
+ * the fade (design review 2026-11-15: picking a note is what this column is for).
+ */
+/* Not in forced colours: a mask would dim text the user asked to see at full contrast. */
+@media (forced-colors: none) {
+  .notes[data-more-below]:not(:has(:focus-visible)) {
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 40px), transparent);
+  }
+
+  .notes[data-more-above]:not(:has(:focus-visible)) {
+    mask-image: linear-gradient(to bottom, transparent, #000 28px);
+  }
+
+  .notes[data-more-above][data-more-below]:not(:has(:focus-visible)) {
+    mask-image: linear-gradient(
+      to bottom,
+      transparent,
+      #000 28px,
+      #000 calc(100% - 40px),
+      transparent
+    );
+  }
+}
+
+.notes button {
+  display: grid;
+  gap: 2px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--ink-2);
+  text-align: start;
+  font: var(--text-sm) / 1.45 var(--font-sans);
+  cursor: pointer;
+}
+
+.notes b {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.notes small {
+  font: var(--text-2xs) / 1.4 var(--font-mono);
+  color: var(--ink-3);
+}
+
+.notes [aria-pressed='true'] {
+  background: var(--panel);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+}
+
+.contract {
+  margin: 0;
+  padding: 18px 20px;
+  overflow: auto;
+  border-radius: var(--radius-lg);
+  background: var(--well);
+  box-shadow: inset 0 0 0 1px var(--line);
+  font: var(--text-xs) / 1.85 var(--font-mono);
+  font-variant-ligatures: none;
+  color: var(--ink-2);
+}
+
+.contract [data-kind='comment'] {
+  color: var(--ink-3);
+}
+
+.contract [data-kind='focus'] {
+  color: var(--focus);
+}
+
+.contract [data-kind='heard'] {
+  color: var(--heard);
+}
+
+/*
+ * On a phone a step does not fit on one line, and what it led to was off screen with nothing to
+ * say the block scrolls (design review 2026-11-15). The outcome goes under its action, indented.
+ */
+@media (max-width: 600px) {
+  .contract {
+    white-space: pre-wrap;
+  }
+
+  .contract [data-kind='action'] {
+    display: block;
+  }
+
+  .contract [data-kind='action'] + span::before {
+    content: '    ';
+  }
+}
+
+@media (max-width: 860px) {
+  .notes {
+    border-inline-start: 0;
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (forced-colors: active) {
+  .well,
+  .contract {
+    border: 1px solid CanvasText;
+  }
+
+  .code :global(.line[data-marked]) {
+    outline: 1px solid Highlight;
+  }
+
+  .notes [aria-pressed='true'] {
+    outline: 2px solid Highlight;
+  }
+}

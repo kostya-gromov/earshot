@@ -1,0 +1,438 @@
+/* Evidence (D1a): a sunken well with hairline rows, not a grid of cards. */
+.panel {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.well {
+  border-radius: var(--radius-lg);
+  background: var(--well);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: var(--space-6);
+  padding: 20px;
+  scroll-margin-block: var(--space-8);
+}
+
+.item + .item {
+  border-top: 1px solid var(--line);
+}
+
+.item:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+  border-radius: var(--radius-lg);
+}
+
+.meta {
+  min-width: 0;
+}
+
+.who {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+}
+
+.who h4 {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+.component {
+  margin-top: 2px;
+  font: var(--text-2xs) / 1.5 var(--font-mono);
+  color: var(--ink-3);
+}
+
+.note {
+  margin-top: var(--space-3);
+  padding-inline-start: 10px;
+  border-inline-start: 2px solid var(--line-2);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.outcome {
+  margin-block: var(--space-3);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.outcome b {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.switch {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3);
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.switch button {
+  min-height: 26px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--ink-2);
+  font: 500 var(--text-2xs) / 1 var(--font-mono);
+  cursor: pointer;
+}
+
+.switch [aria-pressed='true'] {
+  background: var(--panel-2);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+}
+
+/* One muted line, wrapping only when it must: where the numbers come from, not a block to read. */
+.provenance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 6px;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+  font: var(--text-2xs) / 1.6 var(--font-sans);
+  color: var(--ink-3);
+}
+
+/* After, not before: a wrapped line ends on a separator instead of starting with one. */
+.provenance li:not(:last-child)::after {
+  content: '·' / '';
+  margin-inline-start: 6px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 14px;
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+}
+
+.actions a {
+  color: var(--ink-2);
+}
+
+.failure {
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+.planned {
+  padding: 14px 20px;
+  border-top: 1px solid var(--line);
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+}
+
+.planned span {
+  margin-inline-end: 8px;
+  color: var(--ink-3);
+}
+
+/*
+ * "Why systems differ": one titled block of rows on hairlines. Not boxed cards: the page has one
+ * raised surface, the playground.
+ */
+.tradeGroup {
+  display: grid;
+}
+
+.tradeHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 12px;
+  padding-bottom: var(--space-5);
+}
+
+.tradeHead h4 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: var(--tracking-heading);
+}
+
+.tradeHead p {
+  flex-basis: 100%;
+  max-width: var(--measure);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+/* One trade-off: who does it on the left, the alternative and its terms on the right. */
+.trade {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 2fr);
+  gap: var(--space-3) var(--space-6);
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+
+.trade:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 6px;
+  border-radius: var(--radius-sm);
+}
+
+.who {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.who b {
+  display: block;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.who span,
+.whoNone {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.tradeNote {
+  grid-column: 1 / -1;
+  max-width: var(--measure);
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+.tradeBody {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+}
+
+.tradeBody h5 {
+  margin: 0;
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+/* What to know about the component on every rule: open, readable, with how we know it. */
+.observations {
+  display: grid;
+  gap: var(--space-2);
+  max-width: var(--measure);
+}
+
+.observationsTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.observations ul {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding-inline-start: var(--space-4);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+/* The source of one note, on its own line under it, in the size of the provenance line. */
+.observedAs {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+/* A variant's own provenance, under the note that cites it: the same quiet line as the label. */
+.variantProvenance {
+  display: block;
+  text-wrap: pretty;
+  margin-top: 2px;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+/* The link names one thing: it does not break in the middle. */
+.variantProvenance a {
+  white-space: nowrap;
+}
+
+.observationsBasis {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.versionReason {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  overflow-wrap: anywhere;
+}
+
+.modelHow {
+  max-width: 72ch;
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+.modelBasis {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.draft {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+/* Label beside value. Sans, not mono: mono is for keys, code and tokens. */
+.tradeTerms {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: var(--space-2) var(--space-5);
+  margin: 0;
+}
+
+.tradeTerms > div {
+  display: contents;
+}
+
+.tradeTerms dt {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.tradeTerms dd {
+  margin: 0;
+  max-width: 62ch;
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+@media (max-width: 760px) {
+  .item,
+  .trade {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    gap: var(--space-4);
+    padding: 16px;
+  }
+}
+
+@media (forced-colors: active) {
+  .well {
+    border: 1px solid CanvasText;
+  }
+
+  .switch [aria-pressed='true'] {
+    outline: 2px solid Highlight;
+  }
+
+  .item:focus {
+    outline-color: Highlight;
+  }
+}
+
+/* One system's evidence under the rule's player: notes, provenance, links. */
+.systemEvidence {
+  display: grid;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  font-size: var(--text-sm);
+}
+
+.links a {
+  color: var(--ink-2);
+  text-underline-offset: 3px;
+}
+
+/*
+ * What to know before a system's verdict: a label beside each fact, on hairlines. The label says
+ * what kind of fact it is, so a status, a build note and a different model no longer look alike.
+ */
+.facts {
+  display: grid;
+  margin: var(--space-3) 0 0;
+}
+
+.facts > div {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: var(--space-1) var(--space-4);
+  padding-block: var(--space-2);
+  border-top: 1px solid var(--line);
+}
+
+.facts dt {
+  font-size: var(--text-xs);
+  font-weight: 560;
+  color: var(--ink);
+}
+
+.facts dd {
+  margin: 0;
+  /* The rules between rows run the width of the block, like its outer rule; only the words
+     keep a line length that reads (design review 2026-11-16: three right edges in one block). */
+  max-width: var(--measure);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.facts code[data-short],
+.observations code[data-short] {
+  white-space: nowrap;
+}
+
+.facts code,
+.observations code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+  .facts > div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/*
+ * A model's card reached by the count's link ("4 of 5 share one other model"): it arrives with
+ * the block's heading above it, and a neutral edge says which card the link meant. Not blue:
+ * the keyboard ring already marks it when it takes focus.
+ */
+.trade {
+  scroll-margin-top: 170px;
+}
+
+.trade:target:not(:focus-visible) {
+  outline: 1px solid var(--line-strong);
+  outline-offset: var(--space-3);
+  border-radius: var(--radius-sm);
+}

@@ -1,0 +1,37 @@
+.line {
+  display: block;
+  font-family: var(--font-voice);
+  font-style: italic;
+  line-height: 1.25;
+  quotes: none;
+  /* Violet is "what is heard" (apps/atlas/CLAUDE.md), and a line spoken on focus is heard as
+     much as an announcement is. Until 2026-11-13 focus lines were ink, and next to a violet
+     announcement they read as something other than speech. */
+  color: var(--heard);
+  transition:
+    color var(--dur-functional) var(--ease-out),
+    opacity var(--dur-functional) var(--ease-out);
+}
+
+/* The bar marks a live region announcement, apart from speech on focus, without colour
+   (WCAG 1.4.1, forced colours). */
+.line[data-source='announcement'] {
+  border-inline-start: 2px solid currentColor;
+  padding-inline-start: 0.4em;
+}
+
+.line[data-size='lg'] {
+  font-size: var(--speech-lg);
+}
+
+.line[data-size='md'] {
+  font-size: var(--speech-md);
+}
+
+.line[data-size='sm'] {
+  font-size: var(--speech-sm);
+}
+
+.line[data-past] {
+  color: var(--ink-3);
+}

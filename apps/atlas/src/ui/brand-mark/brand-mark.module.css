@@ -1,0 +1,38 @@
+.mark {
+  flex: none;
+  display: block;
+}
+
+.key {
+  fill: var(--ink);
+}
+
+.arrow,
+.stop {
+  fill: none;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Cut out of the key: the page's ground shows through. */
+.arrow {
+  stroke: var(--canvas);
+}
+
+.stop {
+  stroke: var(--focus-on-ink);
+}
+
+/* One colour on the system's text colour: Highlight on CanvasText is not a pair the system
+   promises to keep apart, and the sign reads without its colour. */
+@media (forced-colors: active) {
+  .key {
+    fill: CanvasText;
+  }
+
+  .arrow,
+  .stop {
+    stroke: Canvas;
+  }
+}

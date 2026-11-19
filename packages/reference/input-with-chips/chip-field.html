@@ -1,0 +1,29 @@
+<div class="chip-field" data-chip-field>
+  <label class="chip-field__label" for="to-input">To</label>
+
+  <div class="chip-field__box">
+    <!-- Selected people. Filled by chip-field.js -->
+    <ul class="chip-field__chips" role="list" aria-label="Selected people"></ul>
+
+    <input
+      id="to-input"
+      class="chip-field__input"
+      type="text"
+      role="combobox"
+      aria-expanded="false"
+      aria-controls="to-listbox"
+      aria-autocomplete="list"
+      aria-describedby="to-help"
+      autocomplete="off"
+    />
+  </div>
+
+  <ul id="to-listbox" class="chip-field__popup" role="listbox" aria-label="Suggestions" hidden></ul>
+
+  <p id="to-help" class="chip-field__help">
+    Type a name and press Enter. Backspace reaches selected people.
+  </p>
+
+  <!-- Live region exists from the start, so announcements aren't missed -->
+  <div class="chip-field__status" role="status"></div>
+</div>

@@ -1,0 +1,19 @@
+pnpm-lock.yaml
+skills-lock.json
+.claude/
+docs/prototype/
+# Design review captures and HTML sketches: throwaway, like docs/design.
+design-review/
+# Hand-written prose; reflowing it creates noisy diffs.
+*.md
+apps/atlas/.next/
+apps/atlas/out/
+
+# Written by the engine (cli/write-measurement.ts), byte for byte; never reformatted by hand.
+data/measurements/
+
+# Eval results are written by the runner; raw transcripts are large.
+evals/results/
+
+# Build output.
+**/dist/

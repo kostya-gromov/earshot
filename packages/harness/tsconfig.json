@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.base.json",
+  // The shared build helper and data; each system's page has its own tsconfig. One shared module
+  // runs in the page (it writes the "Last action" line), so the browser's types are needed here.
+  "compilerOptions": { "lib": ["es2023", "dom"] },
+  "include": ["shared"]
+}

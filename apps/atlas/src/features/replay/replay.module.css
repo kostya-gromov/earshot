@@ -1,0 +1,204 @@
+/* The replay field: a schematic of the recorded tree (blue = focus, red = focus lost). */
+.wrap {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 0;
+  --chip-h: 30px;
+  --chip-font: var(--text-sm);
+}
+
+.wrap[data-size='lg'] {
+  --chip-h: 36px;
+  --chip-font: var(--text-base);
+  gap: 10px;
+}
+
+.wrap[data-size='sm'] {
+  --chip-h: 26px;
+  --chip-font: var(--text-xs);
+  gap: 6px;
+}
+
+/* For four lanes in a row: three chips still fit one line in a field about 230 px wide. */
+.wrap[data-size='xs'] {
+  --chip-h: 24px;
+  --chip-font: var(--text-2xs);
+  --chip-pad: 6px;
+  gap: 4px;
+}
+
+.wrap[data-size='xs'] .field {
+  gap: 4px;
+  padding: 5px;
+}
+
+/* The live field and its ghost share one cell, so the slot is as tall as the taller of the two. */
+.slot {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+}
+
+.slot > * {
+  grid-area: 1 / 1;
+}
+
+.field[data-ghost] {
+  visibility: hidden;
+}
+
+/* Chips wrap to a new line as in a real field, so none is cut and the ring lands on a whole chip. */
+.field {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  border-radius: var(--radius-md);
+  background: var(--well);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+}
+
+.chip {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  height: var(--chip-h);
+  max-width: 180px;
+  padding: 0 var(--chip-pad, 10px);
+  border-radius: var(--radius-sm);
+  background: var(--panel-2);
+  /* In the light theme the chip and the field are almost one grey; a hairline keeps its edge. */
+  box-shadow: inset 0 0 0 1px var(--line);
+  font-size: var(--chip-font);
+  color: var(--ink-2);
+  white-space: nowrap;
+  overflow: hidden;
+  transition:
+    opacity 280ms var(--ease-out),
+    transform 280ms var(--ease-out),
+    max-width 360ms var(--ease-out),
+    padding 360ms var(--ease-out),
+    margin 360ms var(--ease-out);
+}
+
+.chip[data-gone] {
+  opacity: 0;
+  transform: scale(0.9);
+  max-width: 0;
+  padding-inline: 0;
+  margin-inline: -3px;
+}
+
+/* Takes no room of its own, so it can never wrap: with a width, the caret dropped to a row of
+   its own whenever the chips filled the line, and fields with the same chips stopped looking the
+   same (design review 2026-11-13). The caret is drawn just after the last chip, in the field's
+   own padding when the row is full. */
+.input {
+  position: relative;
+  flex: 1 0 0;
+  min-width: 0;
+  height: var(--chip-h);
+}
+
+.caret {
+  position: absolute;
+  left: 3px;
+  top: 20%;
+  width: 1.5px;
+  height: 60%;
+  background: var(--ink-2);
+  opacity: 0;
+}
+
+/* Blinks five times, then stays lit. A drawn caret is not the browser's, so WCAG 2.2.2 applies:
+   blinking that starts by itself must stop within five seconds. Each new focus starts it again. */
+.field[data-focus='input'] .caret {
+  opacity: 1;
+  animation: blink 1s steps(1) 5;
+}
+
+@keyframes blink {
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.next {
+  flex: none;
+  align-self: start;
+  display: grid;
+  place-items: center;
+  min-height: calc(var(--chip-h) + 12px);
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  /* Dashed: a control of the recorded page, drawn in the replay, not a button on this one. */
+  border: 1px dashed var(--line-strong);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.next > * {
+  grid-area: 1 / 1;
+}
+
+.sizer {
+  visibility: hidden;
+}
+
+/* Held in place, unseen, while focus is not on it: its arrival would narrow the field. */
+.next[data-hidden] {
+  visibility: hidden;
+}
+
+.ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: var(--radius-md);
+  box-shadow:
+    0 0 0 2px var(--focus),
+    0 0 0 6px var(--focus-soft),
+    0 0 24px color-mix(in oklch, var(--focus) 45%, transparent);
+  transition:
+    transform 420ms var(--ease-out),
+    width 420ms var(--ease-out),
+    height 420ms var(--ease-out);
+}
+
+.ring[data-loss] {
+  box-shadow:
+    0 0 0 2px var(--loss),
+    0 0 24px color-mix(in oklch, var(--loss) 45%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip,
+  .ring {
+    transition: none;
+  }
+
+  .field[data-focus='input'] .caret {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (forced-colors: active) {
+  .field,
+  .next {
+    border: 1px solid CanvasText;
+  }
+
+  .ring {
+    box-shadow: none;
+    outline: 2px solid Highlight;
+  }
+}

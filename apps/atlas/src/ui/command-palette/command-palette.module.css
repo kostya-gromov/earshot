@@ -1,0 +1,264 @@
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 6px 0 10px;
+  font: var(--text-sm) / 1 var(--font-sans);
+  color: var(--ink-2);
+  background: color-mix(in oklch, var(--panel) 60%, transparent);
+  /* A control boundary at 3:1 (WCAG 1.4.11). */
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.searchIcon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.triggerLabel {
+  margin-inline-end: 20px;
+}
+
+/*
+ * Phones: the trigger is the search icon alone, so the header fits one row (design review
+ * 2026-11-10). The label is clipped, not removed: it stays the button's accessible name.
+ */
+@media (max-width: 560px) {
+  .trigger {
+    justify-content: center;
+    min-width: 34px;
+    padding: 0;
+  }
+
+  .triggerLabel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .shortcut {
+    display: none;
+  }
+}
+
+.trigger:hover {
+  color: var(--ink);
+}
+
+.shortcut {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  color: var(--ink-3);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-xs);
+  padding: 2px var(--space-1);
+}
+
+.dialog {
+  width: min(640px, calc(100vw - 2 * var(--gutter)));
+  margin-top: 12vh;
+  padding: 0;
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 64px -16px var(--shadow-color);
+}
+
+/* Dense enough that the page's display type recedes: the palette is the one raised surface. */
+.dialog::backdrop {
+  background: oklch(0 0 0 / 0.6);
+}
+
+.dialog[open] {
+  animation: enter var(--dur-micro) var(--ease-out);
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+}
+
+/* The field: the icon and the input on one line, over a hairline. Focus is in the input for
+   as long as the palette is open, so it is shown by that line in the focus colour, not by a
+   frame around the whole top of the window. */
+.field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-inline: var(--space-5);
+  color: var(--ink-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.field:focus-within {
+  border-bottom-color: var(--focus);
+  box-shadow: 0 1px 0 var(--focus);
+}
+
+.field .searchIcon {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: var(--text-md);
+  color: var(--ink);
+  background: none;
+  border: 0;
+  padding: var(--space-4) 0;
+}
+
+.input::placeholder {
+  color: var(--ink-3);
+}
+
+.input:focus-visible {
+  outline: none;
+}
+
+.list {
+  display: grid;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: var(--space-2);
+  max-height: min(420px, 52vh);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-2) transparent;
+}
+
+ul.list {
+  gap: 0;
+}
+
+.group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.groupTitle {
+  padding: var(--space-2) var(--space-3) 6px;
+  font: var(--group-label-font);
+  color: var(--group-label-color);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid transparent;
+  cursor: pointer;
+}
+
+.optionText {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.optionKeys {
+  display: inline-flex;
+  flex: none;
+  gap: 4px;
+}
+
+/* The active option is virtual keyboard focus, so it takes the focus colour. */
+.option[aria-selected='true'] {
+  background: var(--focus-soft);
+  border-left-color: var(--focus);
+}
+
+/* --ink-3 on the tinted active row falls to 4.45:1 in the dark theme (axe); lift it there. */
+.option[aria-selected='true'] .optionNote {
+  color: var(--ink-2);
+}
+
+.option[aria-disabled='true'] {
+  cursor: default;
+  color: var(--ink-3);
+}
+
+.optionLabel {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.optionNote {
+  overflow: hidden;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+  padding: var(--space-2) var(--space-5);
+  border-top: 1px solid var(--line);
+}
+
+.hints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-4);
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.hints span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+/* No keyboard to hint at on a phone, and no room. */
+@media (max-width: 560px) {
+  .hints {
+    display: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .field:focus-within {
+    border-bottom-color: Highlight;
+  }
+
+  .option[aria-selected='true'] {
+    border-left-color: Highlight;
+    outline: 1px solid Highlight;
+  }
+}

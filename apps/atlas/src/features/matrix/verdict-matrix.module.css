@@ -1,0 +1,297 @@
+/*
+ * The verdict matrix: every rule against every system, one quiet mark per cell. Pointing at or
+ * focusing a cell lights its row and column (a crosshair) and reads it out below.
+ */
+.matrix {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.scroller {
+  overflow-x: auto;
+  border-top: 1px solid var(--line-2);
+}
+
+.scroller table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.scroller th,
+.scroller td {
+  border-bottom: 1px solid var(--line);
+  transition: background-color var(--dur-micro) var(--ease-out);
+}
+
+/* Column heads: the system, its version underneath. */
+.scroller thead th {
+  padding: var(--space-4) var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 560;
+  color: var(--ink-2);
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.scroller thead th span {
+  display: block;
+  margin-top: 2px;
+  font: 400 var(--text-2xs) var(--font-mono);
+  color: var(--ink-3);
+}
+
+.ruleColumn {
+  width: 32%;
+}
+
+/* On wide screens the group label says "not counted"; the header keeps the words for assistive
+   technology, out of sight. */
+.scroller thead th .uncounted {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Row heads: the rule, its level and the reference beneath. */
+.scroller tbody th {
+  padding: var(--space-3) var(--space-4) var(--space-3) 0;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--ink);
+  text-align: start;
+}
+
+.scroller tbody th span {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--text-2xs);
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+.scroller tbody td {
+  padding: 0;
+  text-align: center;
+}
+
+.scroller tbody td a {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 52px;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+.scroller tbody td a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -4px;
+}
+
+/* A verdict a different model explains: a dashed frame around the mark itself, the size of the
+   one in the key, said in words in its name and readout. It used to frame the whole cell and was
+   the loudest thing in the table (design review 2026-11-13). */
+.scroller tbody td a[data-model] > :first-child {
+  outline: 1px dashed var(--line-strong);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Judged on part of its scenarios. */
+.partial {
+  position: absolute;
+  top: 12px;
+  right: calc(50% - 18px);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ink-3);
+}
+
+/* The crosshair. */
+.scroller [data-hot] {
+  background: color-mix(in oklch, var(--ink) 4%, transparent);
+}
+
+.scroller tbody tr[data-hot] td[data-hot] {
+  background: color-mix(in oklch, var(--ink) 8%, transparent);
+}
+
+.scroller thead th[data-hot] {
+  color: var(--ink);
+}
+
+/* A column that is shown but not counted. Its header text keeps AA contrast (WCAG 1.4.3: it is
+   content, not an inactive control), so it is dimmed with a token, not with opacity. */
+.scroller th[data-muted] {
+  color: var(--ink-3);
+}
+
+/*
+ * Shown, not counted: a group of its own at the end of the table, behind a rule and a gap, under
+ * one label. Its marks lose their colour and keep their shape and contrast (no opacity: a mark
+ * must keep 3:1, WCAG 1.4.11), so the counted columns are what the eye counts.
+ */
+.groups td {
+  padding: var(--space-3) var(--space-2) 0;
+  border-bottom: 0;
+  font-size: var(--text-2xs);
+  color: var(--ink-3);
+  text-align: center;
+}
+
+.scroller [data-group-start] {
+  border-inline-start: 1px solid var(--line-2);
+}
+
+.scroller td[data-muted] a > :first-child {
+  filter: grayscale(1);
+}
+
+.readout {
+  min-height: 1.5em;
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+/* Idle, it is the one line of help under the table, at the help's size. */
+.readout[data-idle] {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+/* The key: the table's own marks, each with its word, on one wrapping line above the table. */
+.key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+}
+
+.key li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.keyDot {
+  width: 5px;
+  height: 5px;
+  margin-inline: 8px;
+  border-radius: 50%;
+  background: var(--ink-3);
+}
+
+.keyFrame {
+  width: 22px;
+  height: 22px;
+  margin-inline: 3px;
+  border-radius: var(--radius-sm);
+  outline: 1px dashed var(--line-strong);
+  outline-offset: 3px;
+}
+
+.raw {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.raw a {
+  color: var(--ink-2);
+  text-underline-offset: 3px;
+}
+
+/*
+ * Phones: every system fits, nothing scrolls sideways (design review 2026-11-11: three of six
+ * columns were hidden behind a swipe nobody was prompted to make). Narrow verdict columns, system
+ * names set vertically, the rule column takes the rest.
+ */
+@media (max-width: 760px) {
+  .scroller table {
+    min-width: 0;
+  }
+
+  .ruleColumn {
+    width: auto;
+  }
+
+  .systemColumn {
+    width: 40px;
+  }
+
+  /* Two narrow columns cannot carry the label, so each header shows "not counted" where its
+     version would be. */
+  .groups {
+    display: none;
+  }
+
+  .scroller thead th .uncounted {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+  }
+
+  .scroller thead th[data-muted] .version {
+    display: none;
+  }
+
+  .scroller thead th {
+    width: 40px;
+    height: 8.5rem;
+    padding: var(--space-2) 0;
+    writing-mode: sideways-lr;
+    text-align: start;
+    vertical-align: bottom;
+  }
+
+  .scroller thead th span {
+    margin: 0 0 0 2px;
+  }
+
+  .scroller tbody th {
+    padding-right: var(--space-2);
+  }
+
+  .scroller tbody td a {
+    min-height: 48px;
+  }
+
+  .partial {
+    top: 8px;
+    right: calc(50% - 15px);
+  }
+}
+
+/* Browsers without sideways writing: vertical, turned to read bottom to top. */
+@supports not (writing-mode: sideways-lr) {
+  @media (max-width: 760px) {
+    .scroller thead th {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroller th,
+  .scroller td {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .scroller [data-hot] {
+    outline: 1px solid Highlight;
+  }
+}

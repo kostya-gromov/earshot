@@ -1,0 +1,593 @@
+# Every target the engine measures, and every candidate system we checked and why it is or is not
+# a target (CLAUDE.md 8.5, 8.6). URLs were opened on the date in `checked`; never add one from memory.
+#
+# Inclusion (ADR 0006): a system is a target when its maintainers ship a component for the pattern,
+# or document it as a composition of their own published components. A composition carries a
+# `composition` line saying what it combines and what Atlas did to assemble it. Otherwise the
+# system is not-applicable, with the evidence.
+#
+# status:
+#   measured        an adapter exists and data/measurements/<pattern>/<adapter>.json is published
+#   planned         a public demo exists; adapter not written yet (or a reserve candidate)
+#   not-applicable  the system has no equivalent component; `evidence` says where that is stated
+
+input-with-chips:
+  - system: Reference
+    status: measured
+    adapter: reference
+    url: packages/reference/input-with-chips/index.html (served locally on a free port)
+    version-source: packages/reference/package.json
+
+  - system: Atlassian
+    status: measured
+    adapter: atlassian
+    component: Select with isMulti, searchable (@atlaskit/select)
+    docs: https://atlassian.design/components/select/examples
+    url: packages/harness/atlassian/index.html
+    docs-example: https://atlaskit.atlassian.com/example?groupId=design-system&packageId=select&mode=none&exampleId=with-max-height
+    found: Harness page (ADR 0005) rendering @atlaskit/select 23.1.3 from npm, React 18.3.1 (its dependencies require React 18).
+    version-source: packages/harness/atlassian/package.json and pnpm-lock.yaml
+    checked: 2026-11-08
+    setup: Select with isMulti, searchable (the component’s default), given the same list of people as the reference and the same three people selected.
+    variant: Measured as a searchable select, the component’s default. The docs’ own “Multi select” example turns the text input off (`isSearchable={false}`); that configuration is not measured.
+    observations:
+      - source: seen
+        rules: [chip-stop, tab]
+        date: 2026-11-08
+        text: 'Each remove button is its own Tab stop. Shift+Tab from the input walks through them one by one.'
+      - source: recorded
+        rules: [chip-stop, chip-arrows, arrows]
+        date: 2026-11-17
+        text: 'The component describes its own arrow keys. The description on the input reads: “, multiple selections available, Use left or right arrow keys to navigate selected items”.'
+      - source: seen
+        rules: [chip-stop, chip-arrows, arrows]
+        date: 2026-11-13
+        text: 'Left Arrow in the empty input sets `aria-activedescendant` on the input to an id ending in `-remove` (for example `react-select-2-selected-value-2-remove`), and each further arrow key moves it to the neighbouring value. No element on the measured page has such an id: the selected values carry ids without that ending.'
+      - source: recorded
+        rules: [chip-stop, chip-arrows, arrows]
+        date: 2026-11-17
+        text: 'After Left Arrow the input’s `aria-activedescendant` names no element in the accessibility tree. On each of the four arrow keys nothing changes in the tree and nothing is announced.'
+      - source: screenshots
+        rules: [chip-stop, chip-arrows, arrows]
+        date: 2026-11-15
+        text: 'Nothing on screen shows which value the arrow keys reached: the field looks the same before and after Left Arrow once and twice and Right Arrow back, with no highlight on any value.'
+    notes:
+      - "Exports checked 2026-11-13 in the type declarations of the installed package (@atlaskit/select 23.1.3): no tag, token, chip or picker component; the package is the select and its variants. Not moved to 23.2.1: it was published on 2026-11-13, the day of the measurement, and pnpm's minimum release age holds back packages that new; it was installed for one run that day and rolled back. Atlassian also publishes @atlaskit/user-picker on npm (14.8.2 that day, 'Fabric component for display a dropdown to select a user from'). It is not in the design system's component index at atlassian.design, so it is not measured; whether it should be is an open question for the owner (ADR 0006)."
+      - Props listed in packages/harness/atlassian/src/main.tsx.
+      - "@atlaskit/analytics-next-stable-react-context declares a React ^16.8.0 peer; Atlaskit's own React 18 apps run with it the same way."
+      - Measured on the docs demo until 2026-11-08 (M2); that demo is linked as docs-example.
+
+  - system: Fluent 2
+    status: measured
+    adapter: fluent
+    component: TagPicker (@fluentui/react-tag-picker)
+    docs: https://fluent2.microsoft.design/components/web/react/core/tagpicker/usage
+    url: packages/harness/fluent/index.html
+    docs-example: https://react.fluentui.dev/iframe.html?id=components-tagpicker--default&viewMode=story
+    found: Harness page (ADR 0005) rendering TagPicker from @fluentui/react-components 9.75.2 on npm, React 19.3.1, built as the Default story.
+    version-source: packages/harness/fluent/package.json and pnpm-lock.yaml
+    checked: 2026-11-08
+    setup: Built as the docs’ Default story, with the reference’s names, inside FluentProvider with the light theme.
+    observations:
+      - source: seen
+        date: 2026-11-08
+        text: 'Selected tags are options in a listbox named “Selected people”. Each tag is its own dismiss button.'
+      - source: docs
+        rules: [bsp]
+        date: 2026-11-08
+        text: 'The usage docs say Backspace in the input removes the last tag.'
+      - source: recorded
+        rules: [bsp]
+        date: 2026-11-17
+        text: 'The first Backspace in the empty input moves focus to the last tag; the second removes it.'
+      - source: seen
+        rules: [chip-stop, tab]
+        date: 2026-11-08
+        text: 'The tag group is a Tab stop of its own, in both directions.'
+    notes:
+      - "Exports checked 2026-11-13 in the type declarations of the installed package (@fluentui/react-components 9.75.2), names matching the pattern's vocabulary: TagPicker, Tag, InteractionTag, Combobox, SwatchPicker, ColorPicker. TagPicker is the dedicated component and is the one measured."
+      - FluentProvider with webLightTheme; props listed in packages/harness/fluent/src/main.tsx.
+
+  - system: GitHub Primer
+    status: measured
+    adapter: primer
+    component: Autocomplete with TextInputWithTokens (@primer/react)
+    docs: https://primer.style/product/components/text-input-with-tokens/
+    url: packages/harness/primer/index.html
+    docs-example: https://primer.style/react/storybook/iframe.html?id=components-autocomplete-features--with-token-input&viewMode=story
+    found: Harness page (ADR 0005) rendering Autocomplete with TextInputWithTokens from @primer/react 38.45.0 on npm, React 19.3.1, built as the "With token input" story.
+    version-source: packages/harness/primer/package.json and pnpm-lock.yaml
+    deprecated: https://primer.style/product/components/text-input-with-tokens/accessibility/
+    checked: 2026-11-08
+    setup: Built as the “With token input” story, inside ThemeProvider and BaseStyles with the light theme.
+    observations:
+      - source: seen
+        date: 2026-11-08
+        text: 'Tokens have no role and no position in the set. The remove icon is hidden from assistive technology, so the thing a person clicks has no role or name.'
+    notes:
+      - "Exports checked 2026-11-13 in the type declarations of the installed package (@primer/react 38.45.0), names matching the pattern's vocabulary: Autocomplete, TextInputWithTokens, Token. The measured pair is the only tokens input."
+      - Deprecated; Primer's accessibility page says not to use it until known issues are fixed, and neither docs page names a replacement (checked 2026-11-08). Shown, not counted in agreement.
+      - Tokens are span tabindex=-1; the remove icon is aria-hidden. Props listed in packages/harness/primer/src/main.tsx.
+
+  - system: MUI
+    status: measured
+    adapter: mui
+    component: Autocomplete with multiple (@mui/material)
+    docs: https://mui.com/material-ui/react-autocomplete/#multiple-values
+    url: packages/harness/mui/index.html
+    found: Harness page (ADR 0005) rendering Autocomplete from @mui/material 9.5.0 on npm, React 19.3.1, built as the first field of the "Multiple values" docs example (Tags.tsx at tag v9.5.0).
+    version-source: packages/harness/mui/package.json and pnpm-lock.yaml
+    checked: 2026-11-09
+    setup: Built as the first field of the “Multiple values” docs example, with the example’s descriptions kept word for word.
+    observations:
+      - source: seen
+        date: 2026-11-09
+        text: 'Chips are buttons named by the person, with no position in the set. The delete icon is hidden from assistive technology.'
+      - source: recorded
+        rules: [arrows]
+        date: 2026-11-17
+        text: 'Left Arrow from the input focuses the last chip.'
+    notes:
+      - "Exports checked 2026-11-13 in the type declarations of the installed package (@mui/material 9.5.0), names matching the pattern's vocabulary: Autocomplete, Chip. Autocomplete with multiple is the only multi-value input."
+      - Chips are role="button" tabindex=-1; the delete icon is an aria-hidden SVG. Props listed in packages/harness/mui/src/main.tsx.
+      - Measured, the first Backspace removes the last chip (the bsp verdict says so; not repeated as an observation).
+
+  - system: React Aria
+    status: measured
+    adapter: react-aria
+    not-counted: its own component for this pattern, TokenField, is not measured yet
+    component: ComboBox with selectionMode="multiple" and a TagGroup (react-aria-components)
+    docs: https://react-aria.adobe.com/ComboBox#taggroup
+    url: packages/harness/react-aria/index.html
+    found: Harness page (ADR 0005) rendering react-aria-components 1.22.1 from npm, React 19.3.1, built as the "TagGroup" docs example.
+    composition: ComboBox and TagGroup, as the docs example combines them; the example’s unpublished starter wrappers are written out in the page file. This version also ships TokenField, which its docs describe for tag inputs and multi-select comboboxes. The engine cannot measure a field of that kind yet, so these verdicts describe the composition only.
+    version-source: packages/harness/react-aria/package.json and pnpm-lock.yaml
+    checked: 2026-11-09
+    setup: Adobe’s unstyled library, measured under its own name. Neither React Spectrum v3 nor Spectrum 2 has a coded tag field.
+    observations:
+      - source: recorded
+        rules: [keep-focus, say, count]
+        date: 2026-11-17
+        text: 'The selected tags are rows of a grid after the input. The arrow keys and Backspace in the input do not reach them, which “Arrows join the input and the chips” and “Backspace twice to remove” judge; so the keyboard scenarios for a removal remove nothing here.'
+    notes:
+      - A composition from the docs, not a single component. The example imports unpublished docs starter wrappers; the harness inlines what they render. Props listed in packages/harness/react-aria/src/main.tsx.
+      - "Checked 2026-11-13 in the installed packages (react-aria-components 1.22.1, react-aria 3.53.1): TokenField, TokenInput and Token are exported by this version (dist/types/exports/index.d.ts). The docs page https://react-aria.adobe.com/TokenField opens with 'Use it to build AI prompt fields, tag inputs, structured search fields, mention inputs, and multi-select comboboxes' and has a ComboBox example. Whether the docs label it alpha was not verified. Re-measuring on TokenField is proposed in docs/proposals/react-aria-token-field.md."
+      - "Checked 2026-11-13 in react-aria 3.53.1, dist/private/tag/useTag.mjs: removeButtonProps carries aria-label, aria-labelledby, isDisabled, id and onPress, and nothing that takes the button out of the tab order (no excludeFromTabOrder). The harness renders it as Button slot='remove', as the docs do. The Tab stop on the remove button is the library's behaviour at this version, not an artefact of the harness."
+      - "Same file: the tag's keyboard shortcuts are Delete and Backspace, both calling onRemove for the focused tag (or the selected tags)."
+
+  - system: Chakra UI
+    status: measured
+    adapter: chakra
+    component: TagsInput (@chakra-ui/react, built on Ark UI and Zag.js)
+    docs: https://chakra-ui.com/docs/components/tags-input
+    url: packages/harness/chakra/index.html
+    found: Harness page (ADR 0005) rendering TagsInput from @chakra-ui/react 3.38.0 on npm (Ark UI 5.40.0), React 19.3.1, built as the "Basic" docs example (tags-input-basic.tsx at tag @chakra-ui/react@3.38.0, unchanged from 3.37.0).
+    version-source: packages/harness/chakra/package.json and pnpm-lock.yaml
+    checked: 2026-11-13
+    setup: Built as the “Basic” docs example. Chakra wraps Ark UI’s TagsInput, so this covers that component too. It is a free-text field with no suggestion list; the rules measured here do not depend on suggestions.
+    variant: Measured without a suggestion list, as the docs’ “Basic” example. The docs also show TagsInput combined with Combobox; that example is not measured.
+    observations:
+      - source: seen
+        rules: [chip-stop, chip-arrows, tab, arrows, bsp]
+        date: 2026-11-13
+        text: 'Backspace and arrow keys highlight a tag on screen while keyboard focus stays in the input. Nothing in the accessibility tree says which tag is highlighted (no `aria-activedescendant`).'
+      - source: script
+        rules: [arrows, bsp, say]
+        date: 2026-11-13
+        text: 'Whether the highlighted tag is announced depends on what came before. In a field nobody has changed, and after a tag was added, the first Backspace or Left Arrow highlights a tag and nothing is announced. Right after a Backspace removal, a live region names the tag highlighted next, and names each tag as the arrow keys move the highlight.'
+      - source: screenshots
+        rules: [chip-arrows, arrows]
+        date: 2026-11-15
+        text: 'The highlight is a darker background on the tag. Left Arrow twice in the empty input puts it on the second tag from the end, and Delete then removes that tag, not the last one.'
+    notes:
+      - "2026-11-13: on 3.38.0 the engine first reported the click removal as not announced. Cause: Zag live-region 1.47.0 waits at least 100 ms before writing an announcement, and the engine's quiet window was 100 ms. The window is 400 ms since engine 0.11.0 (ADR 0003, amendment of 2026-11-13); measured on 3.38.0 after that."
+      - 'Observations seen again 2026-11-13 on 3.38.0 with a script pressing keys on the harness page and watching the live region for 1.5 s (four starting states: untouched, after adding a tag, after a removal with a tag highlighted, after a removal and typing). In @zag-js/tags-input 1.47.0 the highlight is logged for announcement only when an earlier log entry exists (logHighlightedTag).'
+      - "Exports checked 2026-11-13 in the type declarations of the installed package (@chakra-ui/react 3.38.0), names matching the pattern's vocabulary: TagsInput, Tag, Combobox, ColorPicker, DatePicker. TagsInput is the dedicated component and is the one measured."
+      - ChakraProvider with defaultSystem; the highlight is a data-highlighted attribute. Props listed in packages/harness/chakra/src/main.tsx.
+
+  - system: shadcn/ui
+    status: planned
+    component: Combobox "With chips" (Base UI underneath)
+    docs: https://ui.shadcn.com/docs/components/combobox#with-chips
+    url: https://ui.shadcn.com/docs/components/combobox#with-chips
+    checked: 2026-11-09
+    notes:
+      - shadcn is copied source, not a package. The generated component needs lucide-react, class-variance-authority, clsx, tailwind-merge and Tailwind CSS, which are not approved yet (docs/proposals/more-systems.md).
+
+  - system: IBM Carbon
+    status: not-applicable
+    reason: Multi-select shows one tag with the selected count that clears all selections; no per-value chips, and no documented composition.
+    evidence: https://carbondesignsystem.com/components/dropdown/usage/
+    checked: 2026-11-09
+
+  - system: Adobe Spectrum
+    status: not-applicable
+    reason: Tag field exists only as design guidance. Neither React Spectrum v3 nor Spectrum 2 ships a tag or token field, and the ComboBox of both picks a single option. Adobe’s React Aria ships TokenField for this; Atlas measures React Aria’s ComboBox with TagGroup above, not TokenField.
+    evidence:
+      - https://spectrum.adobe.com/web/design-only/components/tag-field
+      - https://react-spectrum.adobe.com/ComboBox
+    checked: 2026-11-13
+    notes:
+      - "Exports checked 2026-11-13 in @react-spectrum/s2 1.8.2 from npm (the exports folder and src): no TagField, TokenField or TokenInput anywhere in the source. Names matching the pattern's vocabulary: Autocomplete, ComboBox, Picker, TagGroup, SelectBoxGroup, ColorSwatchPicker, DatePicker, DateRangePicker. ComboBoxProps omits selectionMode, so it picks one option. Picker has selectionMode 'multiple', a dropdown without a text input. TagGroup stands alone. React Spectrum v3 was read the same day from its docs navigation, which lists TagGroup, ComboBox, Picker and SearchAutocomplete and no tag or token field (target audit, F5); its package exports were not listed. The Spectrum 2 docs site returned no content."
+
+  - system: Material 3 (Material Web)
+    status: not-applicable
+    reason: Input chips exist only as a chip set; the docs show no composition with a text field.
+    evidence: https://material-web.dev/components/chip/
+    checked: 2026-11-09
+
+  - system: GOV.UK Design System
+    status: not-applicable
+    reason: No multi-select or chips component. In a 2021 issue a contributor to its autocomplete suggested an “add another” pattern instead.
+    evidence:
+      - https://design-system.service.gov.uk/components/
+      - https://github.com/alphagov/accessible-autocomplete/issues/480
+    checked: 2026-11-06
+
+# Pattern in progress (docs/patterns/combobox.md): the reference and six systems are measured.
+# Each entry carries the target audit of 2026-11-14: exports at the pinned version,
+# the docs page read that day, and what the package's source says about announcements.
+combobox:
+  - system: Reference
+    status: measured
+    adapter: reference
+    url: packages/reference/combobox/index.html (served locally on a free port)
+    version-source: packages/reference/package.json
+
+  - system: Fluent 2
+    status: measured
+    adapter: fluent
+    component: Combobox (@fluentui/react-components)
+    docs: https://fluent2.microsoft.design/components/web/react/core/combobox/usage
+    url: packages/harness/fluent/combobox.html
+    docs-example: https://fluent2.microsoft.design/components/web/react/core/combobox/usage
+    found: Harness page (ADR 0005) rendering @fluentui/react-components 9.75.2 from npm, React 19.3.1.
+    version-source: packages/harness/fluent/package.json and pnpm-lock.yaml
+    checked: 2026-11-14
+    setup: Built as the “Filtering” story of the Combobox docs, which filters with the useComboboxFilter hook, with six fruit as options and the label “Fruit”.
+    variant: The docs show two ways. Measured is the Filtering story, where typing narrows the list; the Default story, where typing does not filter, is not measured.
+    notes:
+      - 'Inclusion test applied 2026-11-15 (ADR 0006, amendment): Combobox passes, recorded as a text input with the combobox role whose list narrows as you type. Dropdown does not: in @fluentui/react-combobox 9.17.9 its trigger is a button (useDropdown.js), so it is select-only. Select is a native select.'
+      - 'From the recording or the package, not seen by hand: When the text matches no option, the list holds one option with the message “No fruit match your search.”, and the combobox points at it.'
+      - 'Measured 2026-11-14 on engine 0.13.0, macOS: differs on tab (Tab stops on the button "Open Fruit") and selected; say-results and say-count not judged. The first matching option is active as soon as a letter is typed (automatic selection). The story source was read on the master branch, not at the tag of 9.75.2.'
+      - 'Exports checked 2026-11-14 in the type declarations of the installed package (@fluentui/react-components 9.75.2, the latest on npm that day), names matching combo, autocomplete, select, search, typeahead: Combobox, Dropdown, Listbox, Option, OptionGroup, SearchBox, Select, TagPicker. Combobox is the editable one: the docs say "Entering text will filter options or allow someone to submit a free form answer" and send lists that take no free text to Dropdown or Select.'
+      - 'Status: the docs title reads "Combobox Preview"; the Button page on the same site reads "Button Preview" in the same place, so the word is part of the site, not a mark on this component. No deprecated or unstable wording on the page. The Storybook page returned only a script shell and was not read.'
+      - 'Filtering: the docs say comboboxes "allow people to filter the list of options as they type"; the package exports a useComboboxFilter hook, so the harness page has to do the filtering. The Filtering story does it; its source was read in the repository on 2026-11-14 and the page follows it.'
+      - 'Announcements: no aria-live, announce or status role found in @fluentui/react-combobox 9.17.9 (searched its lib folder). Measured, nothing is written to a live region; the typed key makes the first match the active option.'
+      - 'The docs advise inlinePopup for VoiceOver ("Safari doesn''t support aria-owns"). The harness keeps the default, a popup outside the field, which the engine now records (ADR 0003, amendment of 2026-11-14).'
+
+  - system: MUI
+    status: measured
+    adapter: mui
+    component: Autocomplete, single value (@mui/material)
+    docs: https://mui.com/material-ui/react-autocomplete/#combo-box
+    url: packages/harness/mui/combobox.html
+    docs-example: https://mui.com/material-ui/react-autocomplete/#combo-box
+    found: Harness page (ADR 0005) rendering Autocomplete from @mui/material 9.5.0 on npm, React 19.3.1, built as the "Combo box" docs example.
+    version-source: packages/harness/mui/package.json and pnpm-lock.yaml
+    checked: 2026-11-14
+    setup: Built as the “Combo box” docs example, the first on the page, with six fruit as options and the label “Fruit”. The example sets disablePortal, so the popup is inside the field.
+    variant: The docs show two forms. Measured is the combo box, whose value comes from the list; freeSolo, which accepts any text, is not measured.
+    notes:
+      - 'Inclusion test applied 2026-11-15 (ADR 0006, amendment): Autocomplete passes, recorded as a text input with the combobox role whose list narrows as you type. Select does not: in @mui/material 9.5.0 the element with the combobox role is a div, not a text input (SelectInput.js, which cites APG select-only); NativeSelect is a native select.'
+      - 'Measured 2026-11-14 on engine 0.13.0, macOS: differs on down (the first Down Arrow in the empty field opens the popup and makes no option active), selected (the active option is not exposed as selected) and say-results; say-count not judged. When no option matches, a status region arrives holding "No options"; the engine records it as an inserted region (ADR 0003) and the verdict reason quotes it.'
+      - 'Exports checked 2026-11-14 in the installed package (@mui/material 9.5.0, the latest on npm that day), names matching combo, autocomplete, select, search, typeahead: Autocomplete, useAutocomplete, Select, NativeSelect. No Combobox component in the package or in the docs sidebar; Autocomplete is the editable one, and useAutocomplete is its hook, not a second component.'
+      - 'Status: no deprecated, lab or unstable label on the page; listed under Inputs.'
+      - 'Docs example to follow: "Combo box", whose code sets disablePortal, options, sx and renderInput with a TextField label. The docs'' own first example renders the popup inside the field; the harness follows it as written and says so.'
+      - 'Two forms on the page: combo box ("The value must be chosen from a predefined set of allowed values") and freeSolo ("the textbox can contain any arbitrary value"). The harness follows the first; the second is not measured.'
+      - 'Defaults read in the package source: autoHighlight false, disableListWrap false (arrow keys wrap), openOnFocus false, clearOnEscape false.'
+      - 'Announcements, read in Autocomplete.js on 2026-11-14: the status slot (role=status, aria-live=polite, aria-atomic) sits inside the popup and holds only the loading text or "No options"; it is rendered with the popup, with no timer. Nothing is written when the options change.'
+
+  - system: React Aria
+    status: measured
+    adapter: react-aria
+    component: ComboBox (react-aria-components)
+    docs: https://react-aria.adobe.com/ComboBox
+    url: packages/harness/react-aria/combobox.html
+    docs-example: https://react-aria.adobe.com/ComboBox
+    found: Harness page (ADR 0005) rendering react-aria-components 1.22.1 from npm, React 19.3.1.
+    version-source: packages/harness/react-aria/package.json and pnpm-lock.yaml
+    checked: 2026-11-14
+    setup: 'Built as the first ComboBox docs example: a label, the input, the trigger button, and a popover with a list of six fruit. The example’s wrapper is not published, so the page renders the same parts directly.'
+    variant: The library has two components for a text field with a list. Measured is ComboBox, which the docs give for choosing a value from a set; Autocomplete, for filtering a collection, is not measured.
+    platform: 'Measured on macOS. The message with the number of options does not depend on the system. The messages for the option the arrow keys reach and for a selection are written only on Apple systems (the isAppleDevice check, read in react-aria 3.53.1); on Windows or Linux they are not expected, which was not measured.'
+    notes:
+      - 'Inclusion test applied 2026-11-15 (ADR 0006, amendment): ComboBox passes, recorded as a text input with the combobox role whose list narrows as you type. Select was not read down to its element in source; its docs present it as a select with a button trigger. Autocomplete is left out on what its docs give it for, not on this test.'
+      - 'From the recording or the package, not seen by hand: The library announces the option the arrow keys reach only on Apple systems (its isAppleDevice check, read in the package on 14 Nov 2026). These measurements were made on macOS; on Windows or Linux those announcements are not made.'
+      - 'Measured 2026-11-14 on engine 0.13.0, macOS: differs on selected only. It says "3 options available." when the list changes and nothing when no option matches (not judged); the arrow keys stop at the ends of the list; Escape clears the text.'
+      - 'Exports checked 2026-11-14 in the type declarations of the installed package (react-aria-components 1.22.1, the latest on npm that day), names matching combo, autocomplete, select, search, typeahead: ComboBox, Autocomplete, SearchField, Select, ListBox. Two candidates, and the docs choose between them on both pages: "Use ComboBox to select one or more values from a pre-defined set of options." and "Use Autocomplete to filter a collection or provide text completions." ComboBox is measured; Autocomplete (command palettes, searchable menus) is not.'
+      - 'Status: no alpha, beta or deprecated label on either page.'
+      - 'Docs example to follow: the first ComboBox example, composed of Label, Input, a trigger Button, Popover and ListBox with items, no props at the call site. Defaults from the API table: menuTrigger ''input'' ("popover opens when the user edits the input text"); shouldFocusWrap and allowsCustomValue have no default listed.'
+      - "Measured, Down Arrow in the empty field opens the popup with the first option active, although menuTrigger is 'input'."
+      - 'Announcements: useComboBox.mjs (react-aria 3.53.1) announces the number of suggestions when the popup opens with no focused item or the count changes, and announces the focused option and a selection only behind a platform check that its comments tie to VoiceOver. The check is isAppleDevice (the platform string starts with Mac, or iOS), read in the package on 2026-11-14. The count message is not behind it; the focused option and the selection messages are, so those were recorded because the measurement machine is macOS.'
+      - 'The ComboBox page was read in full for its first 40,000 characters; the rest through a summary. No keyboard or accessibility section was found in either part.'
+
+  - system: Chakra UI
+    status: measured
+    adapter: chakra
+    component: Combobox (@chakra-ui/react, built on Ark UI and Zag.js)
+    docs: https://chakra-ui.com/docs/components/combobox
+    url: packages/harness/chakra/combobox.html
+    docs-example: https://chakra-ui.com/docs/components/combobox
+    found: Harness page (ADR 0005) rendering @chakra-ui/react 3.38.0 from npm, React 19.3.1.
+    version-source: packages/harness/chakra/package.json and pnpm-lock.yaml
+    checked: 2026-11-14
+    setup: Built as the “Basic” docs example, with six fruit as items and the label “Fruit”. The popup is in a Portal, as in the example.
+    notes:
+      - 'Inclusion test applied 2026-11-15 (ADR 0006, amendment): Combobox passes, recorded as a text input with the combobox role whose list narrows as you type. Select and NativeSelect were not read down to their elements in source; the docs present them as selects.'
+      - 'Measured 2026-11-14 on engine 0.13.0, macOS: differs on selected and say-results; say-count not judged. The option the arrow keys reach is announced; a typed letter is not. The example source was read on the main branch, not at the tag of 3.38.0.'
+      - 'Exports checked 2026-11-14 in the installed package (@chakra-ui/react 3.38.0, the latest on npm that day), component folders matching combo, autocomplete, select, search, typeahead, listbox: combobox, listbox, select, native-select. Combobox is the editable one: "combines a text input with a listbox, allowing users to filter a list of options".'
+      - 'Status: no beta, preview or deprecated label on or near the title.'
+      - 'Docs example to follow: "Basic" ("a searchable dropdown with single selection"). Its code was read in the repository on 2026-11-14 (apps/compositions/src/examples/combobox-basic.tsx, main branch) and the page follows it. The Usage skeleton has Root, Label, Control, Input, IndicatorGroup, ClearTrigger, Trigger, Positioner, Content, Empty, Item, with useListCollection and useFilter.'
+      - "Documented defaults: openOnKeyPress true, openOnClick false, openOnChange true, inputBehavior 'none', selectionBehavior 'replace', loopFocus true. allowCustomValue and closeOnSelect have no default listed."
+      - 'The page has a ClearTrigger and a Trigger; measured, Tab stops on neither.'
+      - 'Announcements: @zag-js/combobox 1.47.0 depends on @zag-js/live-region, which waits at least 100 ms before it writes (ADR 0003, amendment of 2026-11-13); what the combobox announces was not found by a text search of its bundle. Measured, the option the arrow keys reach is written to a live region and a typed letter is not.'
+
+  - system: GitHub Primer
+    status: measured
+    adapter: primer
+    component: Autocomplete, single selection (@primer/react)
+    docs: https://primer.style/product/components/autocomplete/
+    url: packages/harness/primer/combobox.html
+    docs-example: https://primer.style/product/components/autocomplete/
+    found: Harness page (ADR 0005) rendering Autocomplete from @primer/react 38.45.0 on npm, React 19.3.1.
+    version-source: packages/harness/primer/package.json and pnpm-lock.yaml
+    checked: 2026-11-14
+    setup: 'Built as the “Default” docs example: a labelled input with an overlay menu of six fruit, single selection, inside ThemeProvider and BaseStyles with the light theme.'
+    variant: 'The docs show several forms. Measured is the default, single selection; the form with tokens for selected items uses TextInputWithTokens, a deprecated component, and is what input with chips measures.'
+    notes:
+      - 'Inclusion test applied 2026-11-15 (ADR 0006, amendment): Autocomplete passes, recorded as a text input with the combobox role whose list narrows as you type. Select is a native select and SelectPanel opens a dialog (role dialog in SelectPanel.js), which this pattern leaves out.'
+      - 'Exports checked 2026-11-14 in the type declarations of the installed package (@primer/react 38.45.0; 38.46.0 was the latest on npm that day), names matching combo, autocomplete, select, search, typeahead: Autocomplete (with Input, Overlay, Menu), Select, SelectPanel, ActionMenu, TextInputWithTokens. Autocomplete is the editable one: "allows users to quickly filter through a list of options and pick one or more values for a field".'
+      - 'Status: the Overview marks React "ready"; the component is not marked deprecated. Two props are (openOnFocus, overlayProps); the page sets neither. The deprecation that keeps Primer out of the input-with-chips counts is TextInputWithTokens'' own, not Autocomplete''s.'
+      - 'The docs pages read (Overview, Guidelines) say nothing about keys or announcements; the Guidelines page was cut short in the fetch. The /react/ and /accessibility/ addresses returned the site home page.'
+      - 'Measured 2026-11-14 on engine 0.13.0, macOS: follows every rule that was judged, selected included. The typed key makes the first match active and nothing is written to a live region, so say-results and say-count are not judged; "No selectable options" is written when nothing matches (recorded, not judged). With the popup shown, Tab leaves focus on the input (not judged). Escape clears the text.'
+
+  - system: Atlassian
+    status: measured
+    adapter: atlassian
+    component: Select, single value, searchable (@atlaskit/select)
+    docs: https://atlassian.design/components/select/examples
+    url: packages/harness/atlassian/combobox.html
+    docs-example: https://atlassian.design/components/select/examples
+    found: Harness page (ADR 0005) rendering @atlaskit/select 23.1.3 from npm, React 18.3.1 (its dependencies require React 18).
+    version-source: packages/harness/atlassian/package.json and pnpm-lock.yaml
+    checked: 2026-11-14
+    setup: 'Built as the “Single select” docs example, with six fruit as options, an empty placeholder as in the example, and a label “Fruit”.'
+    variant: "Atlassian's docs call this component a select with a dropdown list, not a combobox. It is measured and counted because it meets the pattern's inclusion test (ADR 0006, amendment of 2026-11-15): by default its field is a text input with the combobox role that filters the list as you type; the “Async select” example, first on the page, is not measured."
+    notes:
+      - 'Inclusion test applied 2026-11-15 (ADR 0006, amendment): Select passes, recorded as a text input with the combobox role whose list narrows as you type, and searchable is its default (isSearchable true in @atlaskit/react-select 4.12.10). It was shown and not counted from 2026-11-14 until this test was written; the test, not the name its docs give it, decides, so it is counted.'
+      - 'From the recording or the package, not seen by hand: After Enter the chosen value is shown beside the input, which stays empty; the recording shows it as the input’s description and as an announcement, “option Apricot, selected.”'
+      - 'Exports checked 2026-11-14 in the type declarations of the installed package (@atlaskit/select 23.1.3; 23.2.1 was the latest on npm that day, see the input-with-chips note on its release age): the default Select, AsyncSelect, CreatableSelect, AsyncCreatableSelect, CheckboxSelect, RadioSelect, CountrySelect, PopupSelect. The components index of the design system lists no combobox, autocomplete, typeahead or search component.'
+      - 'Status: no deprecated, beta or caution label on Select. Two motion changes behind feature flags are marked Early Access; the page sets no flag.'
+      - 'Read in the package on 2026-11-14 (@atlaskit/react-select 4.12.10, select.js): isSearchable defaults to true, the input has role combobox and aria-autocomplete "both". The docs do not state the default.'
+      - 'Measured 2026-11-14 on engine 0.13.0, macOS: differs on selected only. It writes "3 results available for search term a." and "0 results available for search term z." to a live region. The first match is active as soon as a letter is typed. When nothing matches, "No options" is listed as an option. Escape clears the text.'
+
+# Pattern in progress (docs/patterns/menu-button.md, proposal approved 2026-11-16). The reference
+# is measured first. A system is added only after its export check and inclusion test are
+# written here with their date (engine CLAUDE.md, "Choosing what to measure").
+menu-button:
+  - system: Reference
+    status: measured
+    adapter: reference
+    url: packages/reference/menu-button/index.html (served locally on a free port)
+    version-source: packages/reference/package.json
+    observations:
+      - source: recorded
+        rules: [arrows, home-end]
+        date: 2026-11-17
+        text: 'The arrow keys wrap at both ends, so APG does not ask for Home and End here. The reference has them all the same: Home makes the first item active and End the last.'
+      - source: recorded
+        rules: [open]
+        date: 2026-11-17
+        text: 'Down Arrow on the button opens the menu on its first item and Up Arrow on its last; typing a letter in the menu moves to the next item that starts with it. APG marks all three optional.'
+
+  # What is written below was checked on 2026-11-16: the docs page that loaded that day and the
+  # installed package. `script` observations: the built page opened in Chromium by a script of
+  # ours, the menu opened with Enter, and the attributes on the rest of the page read.
+  - system: GitHub Primer
+    status: measured
+    adapter: primer
+    component: ActionMenu (@primer/react)
+    docs: https://primer.style/product/components/action-menu/
+    url: packages/harness/primer/menu-button.html
+    docs-example: https://primer.style/product/components/action-menu/
+    version-source: packages/harness/primer/package.json and pnpm-lock.yaml
+    checked: 2026-11-16
+    setup: 'Built as the “Default” story of ActionMenu: ActionMenu.Button and an ActionList in ActionMenu.Overlay. The third item has the disabled prop; each item’s onSelect writes the page’s “Last action” line. The example was read on the repository’s default branch on 16 Nov 2026, not at the tag of the measured version.'
+    variant: 'Primer has two ways to make an item unavailable. Measured is the disabled prop. inactiveText is a different notion, an item whose usual function is unavailable for a time with the reason said, and is not measured.'
+    observations:
+      - source: recorded
+        rules: [arrows, disabled, expanded]
+        date: 2026-11-17
+        text: 'The arrow keys reach the disabled item: Down Arrow from “Duplicate” made “Archive” active, exposed as disabled, and Enter on it ran no action. The button stays in the accessibility tree while the menu is shown.'
+      - source: package-source
+        rules: [disabled]
+        date: 2026-11-16
+        text: '@primer/react 38.45.0 describes the prop in its types (dist/ActionList/shared.d.ts): “Items that are disabled can not be clicked, selected, or navigated through.” The package’s code agrees with the recording, not with the last of the three: ActionList.Item sets aria-disabled="true" on the item and its click and key handlers return before onSelect when it is disabled (dist/ActionList/Item.js); ActionMenu gives its focus zone no filter (dist/ActionMenu/ActionMenu.js), and the focus zone leaves out only natively disabled form controls, not an element with aria-disabled (@primer/behaviors 1.11.0, dist/esm/utils/iterate-focusable-elements.mjs). So the item cannot be clicked or selected, and the arrow keys do reach it.'
+    notes:
+      - "Current, not deprecated (checked 2026-11-16, before any harness work). The docs page shows the status 'ready' for React. In the installed package (@primer/react 38.45.0) the main entry exports ActionMenu with ActionMenu.Button, ActionMenu.Anchor and ActionMenu.Overlay; the './deprecated' entry exports an older, different ActionMenu, which is not the one measured."
+      - "disabled, not inactiveText: decided by the owner on 2026-11-16. The docs page documents inactiveText ('may become inactive and display a message explaining why') and no disabled prop; the prop is in the package's types (ActionList/shared.d.ts)."
+      - 'The docs page was cut off before the end of its props; its Accessibility sub-page was not read.'
+      - "Inclusion test applied 2026-11-16 on the built page: passes. The engine recorded a button named 'Actions' that opens an element with role='menu' holding four elements with role='menuitem', and no listbox."
+  - system: Atlassian
+    status: measured
+    adapter: atlassian
+    component: Dropdown menu (@atlaskit/dropdown-menu)
+    docs: https://atlassian.design/components/dropdown-menu
+    url: packages/harness/atlassian/menu-button.html
+    docs-example: https://atlassian.design/components/dropdown-menu/examples
+    version-source: packages/harness/atlassian/package.json and pnpm-lock.yaml
+    checked: 2026-11-16
+    setup: 'Built as the “Default” example of Dropdown menu: a string trigger, shouldRenderToParent and one item group. The third item has isDisabled; each item’s onClick writes the page’s “Last action” line.'
+    observations:
+      - source: recorded
+        rules: [arrows, disabled]
+        date: 2026-11-17
+        text: 'The arrow keys skip the disabled item: Down Arrow from “Duplicate” made “Delete” active. The disabled item was never the active item, so Enter on it was not tried.'
+      - source: recorded
+        rules: [tab, expanded]
+        date: 2026-11-17
+        text: 'Tab in the menu closes it with focus on the button. The button stays in the accessibility tree while the menu is shown.'
+    notes:
+      - "A new dependency, approved by the owner on 2026-11-16 and installed that day: @atlaskit/dropdown-menu 21.3.2 (published 2026-11-13), 'A dropdown menu displays a list of actions or options to a user.' 21.3.3 came out on 2026-11-16 and is younger than pnpm's minimum release age; no exception was made for it."
+      - "The components index at atlassian.design lists 'Dropdown menu' with that description and links to this page; the page itself returned an empty body to the fetch on 2026-11-16, but its examples page and the Dropdown item code page did load: the Default example and the isDisabled prop are read from them, and neither shows a status label. A separate 'Menu' entry exists in the index (see the status note below)."
+      - "Inclusion test applied 2026-11-16 on the built page: passes. The engine recorded a button that opens an element with role='menu' holding four elements with role='menuitem'."
+      - "Export check 2026-11-16, installed @atlaskit/dropdown-menu 21.3.2 (dist/types/index.d.ts): default DropdownMenu, DropdownItem, DropdownItemGroup, DropdownItemCheckbox, DropdownItemCheckboxGroup, DropdownItemRadio, DropdownItemRadioGroup. Measured: DropdownMenu with DropdownItem in a DropdownItemGroup; the checkbox and radio items are out of the pattern's scope."
+      - "Status, checked 2026-11-16: the package's manifest and README carry no deprecation notice, and the examples and code pages that loaded show no status label. Not Menu: the manifest of @atlaskit/menu 11.0.6 (installed as a dependency) says 'We're planning to deprecate Menu. Avoid using it in new projects. Use Navigation system for side navigation, or Dropdown menu for contextual actions and options.' Menu also has no trigger of its own (it exports ButtonItem, LinkItem, Section, MenuGroup)."
+  - system: Fluent 2
+    status: measured
+    adapter: fluent
+    component: MenuButton opening a Menu (@fluentui/react-components)
+    docs: https://fluent2.microsoft.design/components/web/react/core/menu/usage
+    url: packages/harness/fluent/menu-button.html
+    docs-example: https://github.com/microsoft/fluentui/blob/%40fluentui/react-components_v9.75.2/packages/react-components/react-button/stories/src/MenuButton/MenuButtonDefault.stories.tsx
+    version-source: packages/harness/fluent/package.json and pnpm-lock.yaml
+    checked: 2026-11-16
+    setup: 'Built as the “Default” story of MenuButton, read at the tag of the measured version: Menu and MenuTrigger around a MenuButton, with MenuPopover and MenuList. The third item has the disabled prop; each item’s onClick writes the page’s “Last action” line.'
+    variant: 'Measured with MenuButton; the Default story’s plain Button is recorded as an observation, not counted.'
+    observations:
+      - source: docs
+        rules: [expanded]
+        date: 2026-11-16
+        text: 'In the docs’ Default story of Menu the trigger is a plain Button, not MenuButton.'
+      - source: recorded
+        rules: [expanded]
+        date: 2026-11-17
+        measurement: fluent-default-story
+        text: 'With the Default story’s plain Button, the button has no expanded state while the menu is closed; while the menu is shown it is exposed as expanded.'
+      - source: recorded
+        rules: [arrows, expanded, disabled]
+        date: 2026-11-17
+        text: 'With MenuButton the button is exposed as collapsed while the menu is hidden and as expanded while it is shown. The arrow keys reach the disabled item.'
+      - source: script
+        rules: [expanded, tab]
+        date: 2026-11-16
+        text: 'With the menu open, nothing on the rest of the page has aria-hidden or inert: the page stays exposed.'
+      - source: package-source
+        rules: [expanded]
+        date: 2026-11-16
+        text: '@fluentui/react-menu 9.25.9, useMenuTrigger: the trigger’s child gets aria-expanded only while the menu is open. @fluentui/react-button 9.11.3, useMenuButton: MenuButton sets aria-expanded to false when it is given none.'
+    notes:
+      - 'Installed @fluentui/react-components 9.75.2 exports Menu, MenuTrigger, MenuPopover, MenuList, MenuItem and also MenuButton (checked 2026-11-15 in its type declarations).'
+      - "MenuButton is shown with Menu and MenuTrigger in Fluent's own docs sources, read at the tag @fluentui/react-components_v9.75.2 on 2026-11-16. MenuButtonDefault.stories.tsx: '<Menu> <MenuTrigger disableButtonEnhancement> <MenuButton>Example</MenuButton> </MenuTrigger> <MenuPopover> <MenuList> ...'. MenuButtonDescription.md, in full: 'A menu button is a button with a chevron icon after the text typically used to trigger a menu.' MenuDescription.md: 'See also MenuButton'. No story of Menu itself uses MenuButton; its Default story has a plain Button in MenuTrigger."
+      - "Inclusion test applied 2026-11-16 on the built page with MenuButton: passes. The engine recorded a button named 'Actions' that opens an element with role='menu' holding four elements with role='menuitem', and no listbox."
+      - 'Target changed on 2026-11-16 (verdict audit, second round): a dedicated component wins over a composition. The page first followed the Default story of Menu with a plain Button and differed on expanded. That page is kept as a variant with its own measurement (the entry below), cited by the observation above and not counted. With MenuButton, expanded follows and no other verdict or reason changed.'
+
+  # A variant of Fluent 2, not a system of its own: never a column, never counted. Evidence for
+  # the observation of the entry above that cites it (ADR 0005, amendment of 2026-11-16).
+  - system: Fluent 2
+    status: measured
+    adapter: fluent-default-story
+    variant-of: fluent
+    not-counted: Fluent 2 is counted with MenuButton, its own component for a menu button; this is the Default story of Menu, with a plain Button
+    component: Menu with a plain Button as trigger (@fluentui/react-components)
+    docs: https://fluent2.microsoft.design/components/web/react/core/menu/usage
+    url: packages/harness/fluent/menu-button-default-story.html
+    docs-example: https://github.com/microsoft/fluentui/blob/%40fluentui/react-components_v9.75.2/packages/react-components/react-menu/stories/src/Menu/MenuDefault.stories.tsx
+    version-source: packages/harness/fluent/package.json and pnpm-lock.yaml
+    checked: 2026-11-16
+    setup: 'Built as the “Default” story of Menu, read at the tag of the measured version: Menu with positioning autoSize and MenuTrigger around a plain Button. The third item has the disabled prop, as in the story; each item’s onClick writes the page’s “Last action” line.'
+    notes:
+      - 'Measured 2026-11-16: differs on expanded (the button is in the accessibility tree with no expanded state while the menu is hidden); every other verdict as on the MenuButton page.'
+
+      - "The Fluent 2 docs page heading reads 'Menu Preview'; its example code did not load in the fetch (a CodeSandbox link). The page links the APG menubar pattern."
+  - system: MUI
+    status: measured
+    adapter: mui
+    component: Menu with a Button (@mui/material)
+    docs: https://mui.com/material-ui/react-menu/
+    url: packages/harness/mui/menu-button.html
+    docs-example: https://mui.com/material-ui/react-menu/#basic-menu
+    version-source: packages/harness/mui/package.json and pnpm-lock.yaml
+    checked: 2026-11-16
+    setup: 'Built as the “Basic menu” docs demo, with its ids and ARIA attributes kept word for word. The third item has the disabled prop; each item’s onClick writes the page’s “Last action” line and closes the menu.'
+    composition: 'Material UI documents no ready-made menu button. The docs demo wires a Button to a Menu with its own state and ARIA attributes, and the measured page does the same. So the button’s expanded state on this page is written by that wiring (aria-expanded set to the open state, true or false), not by the package. The same holds for the menu closing after an action: each item’s handler on the page closes it, as the demo’s items do.'
+    observations:
+      - source: recorded
+        date: 2026-11-17
+        text: 'The button’s label on the page is “Actions”; its name in the accessibility tree is “ACTIONS”, and the spoken lines say it so.'
+      - source: package-source
+        date: 2026-11-16
+        text: '@mui/material 9.5.0, createTypography: the text style of a button sets text-transform to uppercase.'
+      - source: recorded
+        rules: [arrows, disabled]
+        date: 2026-11-17
+        text: 'The arrow keys skip the disabled item: Down Arrow from “Duplicate” made “Delete” active. The disabled item was never the active item, so Enter on it was not tried.'
+      - source: recorded
+        rules: [expanded, tab]
+        date: 2026-11-17
+        text: 'While the menu is shown the button is not in the accessibility tree; once the menu is hidden it is there again, exposed as collapsed. Tab in the menu closes it with focus on the button.'
+      - source: script
+        rules: [expanded, tab]
+        date: 2026-11-16
+        text: 'With the menu open, the main element of the page has aria-hidden="true", so the rest of the page is hidden from assistive technology.'
+      - source: package-source
+        rules: [expanded, tab]
+        date: 2026-11-16
+        text: '@mui/material 9.5.0: ModalManager sets aria-hidden on the siblings of an open modal, and Menu closes on Tab with the reason "tabKeyDown".'
+    notes:
+      - "Installed @mui/material 9.5.0 has Menu, MenuItem and MenuList (checked 2026-11-15). The docs page describes no ready-made menu button component and links the APG menu button pattern, so this is a docs composition (ADR 0006): a Button wired to a Menu by the page's own code."
+      - "The demo's code is not in the docs page's fetched text; it was read in the repository at the tag v9.5.0 on 2026-11-16 (docs/data/material/components/menus/BasicMenu.tsx): aria-controls={open ? menuId : undefined}, aria-haspopup='true', aria-expanded={open}. The harness has the same three expressions. The docs page says: 'If used for item selection, when opened, simple menus place the initial focus on the selected menu item.'"
+      - "Inclusion test applied 2026-11-16 on the built page: passes. The engine recorded a button, exposed with the name 'ACTIONS', that opens an element with role='menu' holding four elements with role='menuitem', and no listbox."
+  - system: React Aria
+    status: measured
+    adapter: react-aria
+    component: MenuTrigger with Menu (react-aria-components)
+    docs: https://react-aria.adobe.com/Menu
+    url: packages/harness/react-aria/menu-button.html
+    docs-example: https://react-aria.adobe.com/Menu
+    version-source: packages/harness/react-aria/package.json and pnpm-lock.yaml
+    checked: 2026-11-16
+    setup: 'Built as the first example on the Menu page. Its starter wrappers are not published, so the page renders what they render: MenuTrigger around a Button and a Popover that holds the Menu. The third item has isDisabled; each item’s onAction writes the page’s “Last action” line. The starter was read on the repository’s default branch on 16 Nov 2026, not at the tag of the measured version.'
+    observations:
+      - source: recorded
+        rules: [arrows, disabled]
+        date: 2026-11-17
+        text: 'The arrow keys skip the disabled item: Down Arrow from “Duplicate” made “Delete” active. The disabled item was never the active item, so Enter on it was not tried.'
+      - source: recorded
+        rules: [expanded, tab]
+        date: 2026-11-17
+        text: 'While the menu is shown the button is not in the accessibility tree; once the menu is hidden it is there again, exposed as collapsed. Tab in the menu leaves focus on the same item and the menu stays shown.'
+      - source: script
+        rules: [expanded, tab]
+        date: 2026-11-16
+        text: 'With the menu open, the main element of the page has the inert attribute, so the rest of the page is hidden from assistive technology and cannot take focus.'
+      - source: package-source
+        rules: [expanded, tab]
+        date: 2026-11-16
+        text: 'react-aria 3.53.1, usePopover: everything outside a popover is hidden with inert unless the popover is set to be non-modal.'
+    notes:
+      - 'Installed react-aria-components 1.22.1 exports MenuTrigger, Menu and MenuItem (checked 2026-11-15).'
+      - "The docs example imports starter wrappers ('vanilla-starter/Menu', 'vanilla-starter/Button') that wrap react-aria-components and render a Popover inside their own MenuTrigger; as for combobox, the harness inlines what they render. Disabled items: 'isDisabled' on MenuItem, or 'disabledKeys' on Menu, of which the props table says 'These items cannot be selected, focused, or otherwise interacted with'."
+      - "Inclusion test applied 2026-11-16 on the built page: passes. The engine recorded a button named 'Actions' that opens an element with role='menu' holding four elements with role='menuitem', and no listbox."
+  - system: Chakra UI
+    status: measured
+    adapter: chakra
+    component: Menu (@chakra-ui/react)
+    docs: https://chakra-ui.com/docs/components/menu
+    url: packages/harness/chakra/menu-button.html
+    docs-example: https://chakra-ui.com/docs/components/menu
+    version-source: packages/harness/chakra/package.json and pnpm-lock.yaml
+    checked: 2026-11-16
+    setup: 'Built as the “Basic” docs example: Menu.Trigger around a Button and the content in a Portal. The third item has the disabled prop; each item’s onSelect writes the page’s “Last action” line. The example was read on the repository’s default branch on 16 Nov 2026, not at the tag of the measured version.'
+    observations:
+      - source: recorded
+        rules: [arrows, disabled]
+        date: 2026-11-17
+        text: 'The arrow keys skip the disabled item: Down Arrow from “Duplicate” made “Delete” active. The disabled item was never the active item, so Enter on it was not tried.'
+      - source: recorded
+        rules: [arrows, tab, expanded]
+        date: 2026-11-17
+        text: 'Focus is on the menu itself and the active item is named with aria-activedescendant. Tab leaves focus where it is and the menu stays shown. The button stays in the accessibility tree, exposed as expanded.'
+      - source: script
+        rules: [expanded, tab]
+        date: 2026-11-16
+        text: 'With the menu open, nothing on the rest of the page has aria-hidden or inert: the page stays exposed.'
+      - source: package-source
+        rules: [tab]
+        date: 2026-11-16
+        text: '@zag-js/menu 1.47.0, which Chakra UI’s menu is built on: a Tab that would leave the menu is prevented.'
+    notes:
+      - "Installed @chakra-ui/react 3.38.0 has components/menu (checked 2026-11-15). Docs usage: Menu.Root, Menu.Trigger, Menu.Positioner, Menu.Content, Menu.Item; a 'disabled' prop on Menu.Item ('Whether the menu item is disabled')."
+      - "Root props on the docs page: loopFocus (default false, 'Whether to loop the keyboard navigation') and typeahead (default true). The page also documents a context menu, which is out of scope."
+      - "Inclusion test applied 2026-11-16 on the built page: passes. The engine recorded a button named 'Actions' that opens an element with role='menu' holding four elements with role='menuitem', and no listbox."

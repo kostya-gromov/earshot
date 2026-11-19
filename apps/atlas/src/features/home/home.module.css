@@ -1,0 +1,134 @@
+/*
+ * The opening: the statement across the page, one sentence with the buttons at its side, then
+ * the recorded scene in its frame, all within the first view of a laptop screen.
+ */
+.intro {
+  display: grid;
+  gap: var(--space-5);
+  /* Tight above and below the statement, so the recording, which is the proof, starts high in
+     the first view (design review 2026-11-14: it began two thirds of the way down). */
+  padding-top: var(--space-6);
+}
+
+.title {
+  max-width: 20ch;
+  font-size: clamp(40px, 5.6vw, 68px);
+  line-height: 1.02;
+  letter-spacing: var(--tracking-display);
+  font-weight: 560;
+  text-wrap: balance;
+  color: var(--ink);
+}
+
+.quiet {
+  color: var(--ink-3);
+}
+
+/* The buttons sit beside the text they act on, at its last line: under it they pushed the
+   recording out of the first view (design review 2026-11-14). */
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: var(--space-4) var(--space-6);
+}
+
+.lede {
+  max-width: 62ch;
+  font-size: var(--text-md);
+  line-height: 1.55;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font: 500 var(--text-base) / 1 var(--font-sans);
+  text-decoration: none;
+  transition:
+    transform var(--dur-micro) var(--ease-out),
+    background-color var(--dur-micro) var(--ease-out);
+}
+
+.primary {
+  background: var(--ink);
+  color: var(--canvas);
+}
+
+.secondary {
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+
+.secondary:hover {
+  background: var(--panel-2);
+}
+
+.primary:active,
+.secondary:active {
+  transform: scale(0.98);
+}
+
+.sceneWrap {
+  margin-top: 0;
+}
+
+/* Load (apps/atlas/CLAUDE.md, Motion): the opening comes in once as one block, the statement
+   first, then the scene. Off under reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .title,
+  .row,
+  .sceneWrap {
+    animation: rise 800ms var(--ease-out) both;
+  }
+
+  .row {
+    animation-delay: 120ms;
+  }
+
+  .sceneWrap {
+    animation-duration: 1000ms;
+    animation-delay: 260ms;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@media (forced-colors: active) {
+  .primary,
+  .secondary {
+    border: 1px solid LinkText;
+  }
+}
+
+/* On a phone the opening keeps one sentence, so the recording starts sooner; the recording's own
+   note says it was measured in Chromium. */
+@media (max-width: 860px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+  }
+}
+
+@media (max-width: 560px) {
+  /* One sentence, then the buttons under it; the scene follows at once. */
+  .lede {
+    font-size: var(--text-base);
+  }
+}

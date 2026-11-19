@@ -1,0 +1,46 @@
+import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
+import { Inter, Newsreader } from 'next/font/google';
+import { themeBootScript, themeBootStyle } from '@/features/theme';
+import './globals.css';
+
+// next/font self-hosts the files at build time with metric-matched fallbacks: no layout shift
+// from fonts and no request to Google from the visitor's browser.
+// The optical-size axis gives the large display cut its tighter shapes (D1a's title).
+// Known gap (measured 2026-11-13): with a slow font the home page still shifts by 0.036 at
+// 1440 px, because the fallback is about 5% narrower than this variable cut and a few lines
+// re-break. One custom fallback scale, and one per weight, were tried and made 390 px or the
+// title worse; see docs/follow-ups/web-vitals.md.
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+  axes: ['opsz'],
+});
+// Serif italic is reserved for what a screen reader would say (apps/atlas/CLAUDE.md).
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  style: ['italic'],
+  weight: ['400'],
+  variable: '--font-newsreader',
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  title: { default: 'Atlas', template: '%s · Atlas' },
+  description:
+    'Keyboard behavior, focus and announcements of interactive components, measured across design systems.',
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    // The boot script sets data-theme before React hydrates, so the attribute may differ.
+    <html lang="en" className={`${inter.variable} ${newsreader.variable}`} suppressHydrationWarning>
+      <head>
+        <style dangerouslySetInnerHTML={{ __html: themeBootStyle }} />
+        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
+      </head>
+      <body>{children}</body>
+    </html>
+  );
+}

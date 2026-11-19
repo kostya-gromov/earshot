@@ -1,0 +1,2360 @@
+{
+  "schemaVersion": 1,
+  "pattern": "input-with-chips",
+  "target": {
+    "system": "Chakra UI",
+    "systemVersion": {
+      "version": "3.38.0",
+      "source": "@chakra-ui/react installed in packages/harness (pnpm-lock.yaml)"
+    },
+    "url": "packages/harness/chakra/index.html",
+    "adapter": "chakra",
+    "adapterVersion": 2,
+    "itemsFoundBy": "Elements with Ark's data-part=\"item\" marker (tags have no role)."
+  },
+  "provenance": {
+    "status": "measured",
+    "engineVersion": "0.16.4",
+    "browser": "chromium 156.0.8078.4",
+    "os": "darwin",
+    "measuredAt": "2026-11-17T13:06:55.165Z",
+    "runs": 3,
+    "consistent": true
+  },
+  "scenarios": [
+    {
+      "id": "chip-tab",
+      "rules": [
+        "chip-stop"
+      ],
+      "initialState": "Initial state was not reached",
+      "runs": [
+        {
+          "status": "setup-failed",
+          "reason": "The last chip cannot take focus, so the chips cannot be tested on their own."
+        },
+        {
+          "status": "setup-failed",
+          "reason": "The last chip cannot take focus, so the chips cannot be tested on their own."
+        },
+        {
+          "status": "setup-failed",
+          "reason": "The last chip cannot take focus, so the chips cannot be tested on their own."
+        }
+      ]
+    },
+    {
+      "id": "chip-shift-tab",
+      "rules": [
+        "chip-stop"
+      ],
+      "initialState": "Initial state was not reached",
+      "runs": [
+        {
+          "status": "setup-failed",
+          "reason": "The last chip cannot take focus, so the chips cannot be tested on their own."
+        },
+        {
+          "status": "setup-failed",
+          "reason": "The last chip cannot take focus, so the chips cannot be tested on their own."
+        },
+        {
+          "status": "setup-failed",
+          "reason": "The last chip cannot take focus, so the chips cannot be tested on their own."
+        }
+      ]
+    },
+    {
+      "id": "chip-arrows",
+      "rules": [
+        "chip-arrows"
+      ],
+      "initialState": "Initial state was not reached",
+      "runs": [
+        {
+          "status": "setup-failed",
+          "reason": "The last chip cannot take focus, so the chips cannot be tested on their own."
+        },
+        {
+          "status": "setup-failed",
+          "reason": "The last chip cannot take focus, so the chips cannot be tested on their own."
+        },
+        {
+          "status": "setup-failed",
+          "reason": "The last chip cannot take focus, so the chips cannot be tested on their own."
+        }
+      ]
+    },
+    {
+      "id": "tab-out",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "speech": [
+                "To, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "To, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": [
+                "To, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shift-tab-out",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tab-from-chip",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backspace-twice",
+      "rules": [
+        "bsp",
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Tag Hiroshi Matsui deleted. Tag Greg Fisher selected. Press enter to edit, delete or backspace to remove.",
+                  "politeness": "assertive",
+                  "at": 109,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Delete tag Hiroshi Matsui"
+                  },
+                  {
+                    "role": "image",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 509,
+                "quiet": true
+              },
+              "speech": [
+                "Tag Hiroshi Matsui deleted. Tag Greg Fisher selected. Press enter to edit, delete or backspace to remove."
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Tag Hiroshi Matsui deleted. Tag Greg Fisher selected. Press enter to edit, delete or backspace to remove.",
+                  "politeness": "assertive",
+                  "at": 110,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Delete tag Hiroshi Matsui"
+                  },
+                  {
+                    "role": "image",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 513,
+                "quiet": true
+              },
+              "speech": [
+                "Tag Hiroshi Matsui deleted. Tag Greg Fisher selected. Press enter to edit, delete or backspace to remove."
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Tag Hiroshi Matsui deleted. Tag Greg Fisher selected. Press enter to edit, delete or backspace to remove.",
+                  "politeness": "assertive",
+                  "at": 113,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Delete tag Hiroshi Matsui"
+                  },
+                  {
+                    "role": "image",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 519,
+                "quiet": true
+              },
+              "speech": [
+                "Tag Hiroshi Matsui deleted. Tag Greg Fisher selected. Press enter to edit, delete or backspace to remove."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arrows",
+      "rules": [
+        "arrows"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delete-focused",
+      "rules": [
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Tag Hiroshi Matsui deleted",
+                  "politeness": "assertive",
+                  "at": 106,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Delete tag Hiroshi Matsui"
+                  },
+                  {
+                    "role": "image",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 515,
+                "quiet": true
+              },
+              "speech": [
+                "Tag Hiroshi Matsui deleted"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Tag Hiroshi Matsui deleted",
+                  "politeness": "assertive",
+                  "at": 104,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Delete tag Hiroshi Matsui"
+                  },
+                  {
+                    "role": "image",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 516,
+                "quiet": true
+              },
+              "speech": [
+                "Tag Hiroshi Matsui deleted"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Tag Hiroshi Matsui deleted",
+                  "politeness": "assertive",
+                  "at": 111,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Delete tag Hiroshi Matsui"
+                  },
+                  {
+                    "role": "image",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 513,
+                "quiet": true
+              },
+              "speech": [
+                "Tag Hiroshi Matsui deleted"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remove-click",
+      "rules": [
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Delete tag Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Tag Greg Fisher deleted",
+                  "politeness": "assertive",
+                  "at": 175,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Delete tag Greg Fisher"
+                  },
+                  {
+                    "role": "image",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 561,
+                "quiet": true
+              },
+              "speech": [
+                "Tag Greg Fisher deleted"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Delete tag Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Tag Greg Fisher deleted",
+                  "politeness": "assertive",
+                  "at": 174,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Delete tag Greg Fisher"
+                  },
+                  {
+                    "role": "image",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 563,
+                "quiet": true
+              },
+              "speech": [
+                "Tag Greg Fisher deleted"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Delete tag Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Tag Greg Fisher deleted",
+                  "politeness": "assertive",
+                  "at": 168,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Delete tag Greg Fisher"
+                  },
+                  {
+                    "role": "image",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 550,
+                "quiet": true
+              },
+              "speech": [
+                "Tag Greg Fisher deleted"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "verdicts": {
+    "chip-stop": {
+      "verdict": "inconclusive",
+      "summary": "Could not reach the starting state",
+      "reason": "[chip-tab] The last chip cannot take focus, so the chips cannot be tested on their own. [chip-shift-tab] The last chip cannot take focus, so the chips cannot be tested on their own.",
+      "basis": [
+        {
+          "scenario": "chip-tab",
+          "verdict": "inconclusive",
+          "summary": "Could not reach the starting state"
+        },
+        {
+          "scenario": "chip-shift-tab",
+          "verdict": "inconclusive",
+          "summary": "Could not reach the starting state"
+        }
+      ]
+    },
+    "chip-arrows": {
+      "verdict": "inconclusive",
+      "summary": "Could not reach the starting state",
+      "reason": "[chip-arrows] The last chip cannot take focus, so the chips cannot be tested on their own.",
+      "basis": [
+        {
+          "scenario": "chip-arrows",
+          "verdict": "inconclusive",
+          "summary": "Could not reach the starting state"
+        }
+      ]
+    },
+    "tab": {
+      "verdict": "follows",
+      "summary": "Leaves the field in one step",
+      "reason": "[tab-out] Tab left the component in one step. [shift-tab-out] Shift+Tab left the component in one step. Not judged: [tab-from-chip] ArrowLeft did not focus a chip, so Tab from a chip could not be tested.",
+      "basis": [
+        {
+          "scenario": "tab-out",
+          "verdict": "follows",
+          "summary": "Leaves the field in one step"
+        },
+        {
+          "scenario": "shift-tab-out",
+          "verdict": "follows",
+          "summary": "Leaves the field in one step"
+        },
+        {
+          "scenario": "tab-from-chip",
+          "verdict": "inconclusive",
+          "summary": "No chip to Tab from"
+        }
+      ]
+    },
+    "arrows": {
+      "verdict": "differs",
+      "summary": "Left Arrow does not reach a chip",
+      "reason": "[arrows] After step 1 (ArrowLeft), focus was on textbox \"To\", not on chip 3. Nothing was announced.",
+      "basis": [
+        {
+          "scenario": "arrows",
+          "verdict": "differs",
+          "summary": "Left Arrow does not reach a chip"
+        }
+      ]
+    },
+    "bsp": {
+      "verdict": "differs",
+      "summary": "First Backspace shows no chip about to go",
+      "reason": "[backspace-twice] A removal took two presses: the first Backspace removed nothing, the second removed a chip. But after the first, focus was still on textbox \"To\", the accessibility tree did not change and nothing was announced, so nothing says which chip is about to go.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "differs",
+          "summary": "First Backspace shows no chip about to go"
+        }
+      ]
+    },
+    "keep-focus": {
+      "verdict": "follows",
+      "summary": "Focus stays in the field",
+      "reason": "[backspace-twice] After the removal, focus stayed in the field. [delete-focused] After the removal, focus stayed in the field. [remove-click] After the removal, focus stayed in the field.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "follows",
+          "summary": "Focus stays in the field"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "follows",
+          "summary": "Focus stays in the field"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "follows",
+          "summary": "Focus stays in the field"
+        }
+      ]
+    },
+    "say": {
+      "verdict": "follows",
+      "summary": "Announced, naming the value",
+      "reason": "[backspace-twice] The removal was announced and named the removed value. [delete-focused] The removal was announced and named the removed value. [remove-click] The removal was announced and named the removed value.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "follows",
+          "summary": "Announced, naming the value"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "follows",
+          "summary": "Announced, naming the value"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "follows",
+          "summary": "Announced, naming the value"
+        }
+      ]
+    },
+    "count": {
+      "verdict": "differs",
+      "summary": "Announced without the new count",
+      "reason": "[backspace-twice] Removal was announced as \"Tag Hiroshi Matsui deleted. Tag Greg Fisher selected. Press enter to edit, delete or backspace to remove.\" without the new count of 2. [delete-focused] Removal was announced as \"Tag Hiroshi Matsui deleted\" without the new count of 2. [remove-click] Removal was announced as \"Tag Greg Fisher deleted\" without the new count of 2.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "differs",
+          "summary": "Announced without the new count"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "differs",
+          "summary": "Announced without the new count"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "differs",
+          "summary": "Announced without the new count"
+        }
+      ]
+    }
+  }
+}

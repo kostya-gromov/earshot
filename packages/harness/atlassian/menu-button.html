@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atlassian Dropdown menu · Earshot harness</title>
+    <link rel="stylesheet" href="../shared/page.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Focusable fields before and after the component, as on the reference page (ADR 0005). -->
+      <label for="name">Name</label>
+      <input id="name" type="text" value="Quarterly report" />
+      <div id="component" data-earshot-root></div>
+      <!-- Written by each item's own handler. Plain text, not a live region. -->
+      <p id="last-action">Last action: none</p>
+      <label for="note">Note</label>
+      <input id="note" type="text" />
+    </main>
+    <script type="module" src="./src/menu-button.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<div class="menu-button" data-menu-button>
+  <button
+    type="button"
+    id="actions-button"
+    class="menu-button__button"
+    aria-haspopup="menu"
+    aria-expanded="false"
+    aria-controls="actions-menu"
+  >
+    Actions
+  </button>
+
+  <!-- Hidden while closed, so it is out of the accessibility tree. Filled by menu-button.js -->
+  <ul
+    id="actions-menu"
+    class="menu-button__menu"
+    role="menu"
+    aria-labelledby="actions-button"
+    hidden
+  ></ul>
+</div>

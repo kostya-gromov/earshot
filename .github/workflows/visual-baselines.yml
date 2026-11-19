@@ -1,0 +1,30 @@
+name: Visual baselines
+
+# Run by hand after an approved visual change: writes the Linux snapshots in the same container
+# the CI visual job uses and uploads them. Review the images, then commit them under
+# apps/atlas/test/visual/visual.spec.ts-snapshots/.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  baselines:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.64.1-noble
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build:atlas
+      - run: pnpm --filter @earshot/atlas exec playwright test --project visual --update-snapshots=all
+      - uses: actions/upload-artifact@v4
+        with:
+          name: visual-baselines-linux
+          path: apps/atlas/test/visual/visual.spec.ts-snapshots/*-linux.png
+          retention-days: 14

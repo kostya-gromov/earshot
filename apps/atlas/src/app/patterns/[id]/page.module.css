@@ -1,0 +1,44 @@
+.wrap {
+  position: relative;
+  max-width: calc(var(--page) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+/* A lit stage in the dark theme: one soft light from above and a masked dot grid (D1a). */
+.backdrop {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1100px;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 28rem at 50% -8%, var(--glow-sky), transparent 70%),
+    radial-gradient(var(--grid-dot) 1px, transparent 1px) 0 0 / 22px 22px;
+  mask-image: radial-gradient(68rem 40rem at 50% 24%, black, transparent 75%);
+  pointer-events: none;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+  padding-bottom: var(--space-9);
+}
+
+@media (forced-colors: active) {
+  .backdrop {
+    display: none;
+  }
+}
+
+.section {
+  display: grid;
+  /* Grid items default to min-width: auto; wide code would widen the page instead of scrolling. */
+  min-width: 0;
+  gap: var(--space-5);
+}
+
+.note {
+  max-width: var(--measure);
+  color: var(--ink-2);
+}

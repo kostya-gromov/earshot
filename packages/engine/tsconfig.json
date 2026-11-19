@@ -1,0 +1,8 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    // `dom` for the in-page scripts in src/capture/page; everything else runs in Node.
+    "lib": ["es2023", "dom", "dom.iterable"]
+  },
+  "include": ["src", "test"]
+}

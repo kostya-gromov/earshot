@@ -1,0 +1,3338 @@
+{
+  "schemaVersion": 1,
+  "pattern": "input-with-chips",
+  "target": {
+    "system": "Reference",
+    "systemVersion": {
+      "version": "0.1.3",
+      "source": "packages/reference/package.json"
+    },
+    "url": "packages/reference/input-with-chips/index.html",
+    "adapter": "reference",
+    "adapterVersion": 2,
+    "itemsFoundBy": "Buttons named \"Remove …\" in the list \"Selected people\"."
+  },
+  "provenance": {
+    "status": "measured",
+    "engineVersion": "0.16.4",
+    "browser": "chromium 156.0.8078.4",
+    "os": "darwin",
+    "measuredAt": "2026-11-19T10:19:36.538Z",
+    "runs": 3,
+    "consistent": true
+  },
+  "scenarios": [
+    {
+      "id": "chip-tab",
+      "rules": [
+        "chip-stop"
+      ],
+      "initialState": "3 chips, empty input focused, then focus moved to the last chip",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 419,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 418,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chip-shift-tab",
+      "rules": [
+        "chip-stop"
+      ],
+      "initialState": "3 chips, empty input focused, then focus moved to the last chip",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(2) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(2) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(2) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chip-arrows",
+      "rules": [
+        "chip-arrows"
+      ],
+      "initialState": "3 chips, empty input focused, then focus moved to the last chip",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 417,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tab-out",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 chips, empty input focused",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 411,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 421,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shift-tab-out",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 chips, empty input focused",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(2) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 420,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(2) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 422,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "From",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "me@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(2) > input#from",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 421,
+                "quiet": true
+              },
+              "speech": [
+                "From, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tab-from-chip",
+      "rules": [
+        "tab"
+      ],
+      "initialState": "3 chips, empty input focused",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(4) > input#subject",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backspace-twice",
+      "rules": [
+        "bsp",
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 chips, empty input focused",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [
+                {
+                  "text": "Hiroshi Matsui removed. 2 selected",
+                  "politeness": "polite",
+                  "at": 1,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui removed. 2 selected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "listitem",
+                    "name": ""
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 2",
+                "Hiroshi Matsui removed. 2 selected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [
+                {
+                  "text": "Hiroshi Matsui removed. 2 selected",
+                  "politeness": "polite",
+                  "at": 1,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui removed. 2 selected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "listitem",
+                    "name": ""
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 2",
+                "Hiroshi Matsui removed. 2 selected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [
+                {
+                  "text": "Hiroshi Matsui removed. 2 selected",
+                  "politeness": "polite",
+                  "at": 1,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui removed. 2 selected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "listitem",
+                    "name": ""
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 2",
+                "Hiroshi Matsui removed. 2 selected"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arrows",
+      "rules": [
+        "arrows"
+      ],
+      "initialState": "3 chips, empty input focused",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 420,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 420,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delete-focused",
+      "rules": [
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 chips, empty input focused",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [
+                {
+                  "text": "Hiroshi Matsui removed. 2 selected",
+                  "politeness": "polite",
+                  "at": 1,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui removed. 2 selected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "listitem",
+                    "name": ""
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 417,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 2",
+                "Hiroshi Matsui removed. 2 selected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [
+                {
+                  "text": "Hiroshi Matsui removed. 2 selected",
+                  "politeness": "polite",
+                  "at": 1,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui removed. 2 selected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "listitem",
+                    "name": ""
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 2",
+                "Hiroshi Matsui removed. 2 selected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 421,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Hiroshi Matsui, button, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(3) > button:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Greg Fisher",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > button:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [
+                {
+                  "text": "Hiroshi Matsui removed. 2 selected",
+                  "politeness": "polite",
+                  "at": 1,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui removed. 2 selected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "listitem",
+                    "name": ""
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "speech": [
+                "Remove Greg Fisher, button, 2 of 2",
+                "Hiroshi Matsui removed. 2 selected"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remove-click",
+      "rules": [
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 chips, empty input focused",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Remove Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Greg Fisher removed. 2 selected",
+                  "politeness": "polite",
+                  "at": 68,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher removed. 2 selected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Greg Fisher"
+                  },
+                  {
+                    "role": "listitem",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 443,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher removed. 2 selected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Remove Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Greg Fisher removed. 2 selected",
+                  "politeness": "polite",
+                  "at": 53,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher removed. 2 selected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Greg Fisher"
+                  },
+                  {
+                    "role": "listitem",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 444,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher removed. 2 selected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Remove Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Type a name and press Enter. Backspace reaches selected people.",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#mount > div:nth-child(1) > div:nth-child(2) > input#to-input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Greg Fisher removed. 2 selected",
+                  "politeness": "polite",
+                  "at": 54,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher removed. 2 selected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Greg Fisher"
+                  },
+                  {
+                    "role": "listitem",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 445,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher removed. 2 selected"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "verdicts": {
+    "chip-stop": {
+      "verdict": "follows",
+      "summary": "The chips are one Tab stop",
+      "reason": "[chip-tab] From chip 3, Tab left the chips for textbox \"Subject\". [chip-shift-tab] From chip 3, Shift+Tab left the chips for textbox \"From\".",
+      "basis": [
+        {
+          "scenario": "chip-tab",
+          "verdict": "follows",
+          "summary": "Tab leaves the chips"
+        },
+        {
+          "scenario": "chip-shift-tab",
+          "verdict": "follows",
+          "summary": "Shift+Tab leaves the chips"
+        }
+      ]
+    },
+    "chip-arrows": {
+      "verdict": "follows",
+      "summary": "Arrows move between chips",
+      "reason": "[chip-arrows] From chip 3, Left Arrow moved to chip 2 and Right Arrow back to chip 3.",
+      "basis": [
+        {
+          "scenario": "chip-arrows",
+          "verdict": "follows",
+          "summary": "Arrows move between chips"
+        }
+      ]
+    },
+    "tab": {
+      "verdict": "follows",
+      "summary": "Leaves the field in one step",
+      "reason": "[tab-out] Tab left the component in one step. [shift-tab-out] Shift+Tab left the component in one step. [tab-from-chip] Tab left the component in one step.",
+      "basis": [
+        {
+          "scenario": "tab-out",
+          "verdict": "follows",
+          "summary": "Leaves the field in one step"
+        },
+        {
+          "scenario": "shift-tab-out",
+          "verdict": "follows",
+          "summary": "Leaves the field in one step"
+        },
+        {
+          "scenario": "tab-from-chip",
+          "verdict": "follows",
+          "summary": "Leaves the field in one step"
+        }
+      ]
+    },
+    "arrows": {
+      "verdict": "follows",
+      "summary": "Moves through chips and back to the input",
+      "reason": "[arrows] Arrow keys moved through chips and returned to input.",
+      "basis": [
+        {
+          "scenario": "arrows",
+          "verdict": "follows",
+          "summary": "Moves through chips and back to the input"
+        }
+      ]
+    },
+    "bsp": {
+      "verdict": "follows",
+      "summary": "First press focuses the chip, second removes it",
+      "reason": "[backspace-twice] Backspace focused the last chip, then removed it.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "follows",
+          "summary": "First press focuses the chip, second removes it"
+        }
+      ]
+    },
+    "keep-focus": {
+      "verdict": "follows",
+      "summary": "Focus stays in the field",
+      "reason": "[backspace-twice] After the removal, focus stayed in the field. [delete-focused] After the removal, focus stayed in the field. [remove-click] After the removal, focus stayed in the field.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "follows",
+          "summary": "Focus stays in the field"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "follows",
+          "summary": "Focus stays in the field"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "follows",
+          "summary": "Focus stays in the field"
+        }
+      ]
+    },
+    "say": {
+      "verdict": "follows",
+      "summary": "Announced, naming the value",
+      "reason": "[backspace-twice] The removal was announced and named the removed value. [delete-focused] The removal was announced and named the removed value. [remove-click] The removal was announced and named the removed value.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "follows",
+          "summary": "Announced, naming the value"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "follows",
+          "summary": "Announced, naming the value"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "follows",
+          "summary": "Announced, naming the value"
+        }
+      ]
+    },
+    "count": {
+      "verdict": "follows",
+      "summary": "Says how many remain",
+      "reason": "[backspace-twice] The removal announcement included the new count of 2. [delete-focused] The removal announcement included the new count of 2. [remove-click] The removal announcement included the new count of 2.",
+      "basis": [
+        {
+          "scenario": "backspace-twice",
+          "verdict": "follows",
+          "summary": "Says how many remain"
+        },
+        {
+          "scenario": "delete-focused",
+          "verdict": "follows",
+          "summary": "Says how many remain"
+        },
+        {
+          "scenario": "remove-click",
+          "verdict": "follows",
+          "summary": "Says how many remain"
+        }
+      ]
+    }
+  }
+}

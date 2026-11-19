@@ -1,0 +1,612 @@
+/* One rule in depth (design sketch F): rules on the left, the chosen rule on the right. */
+.depth {
+  scroll-margin-top: var(--space-5);
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: var(--space-7);
+  align-items: start;
+  margin-top: var(--space-7);
+}
+
+.tabs {
+  position: sticky;
+  isolation: isolate;
+  top: calc(var(--header-cover) + var(--space-5));
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.tabs [role='tab'] {
+  display: grid;
+  gap: 2px;
+  padding: var(--space-3) 0 var(--space-3) var(--space-4);
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  color: var(--ink-3);
+  font: var(--text-sm) / 1.35 var(--font-sans);
+  text-align: start;
+  cursor: pointer;
+  transition:
+    color var(--dur-micro) var(--ease-out),
+    box-shadow var(--dur-micro) var(--ease-out);
+}
+
+.tabs [role='tab']:hover {
+  color: var(--ink);
+}
+
+.tabs [role='tab'][aria-selected='true'] {
+  color: var(--ink);
+}
+
+/* The selected tab's bar travels between tabs (functional motion: shows where the choice went). */
+.indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: var(--height);
+  transform: translateY(var(--top));
+  /* Ink, not blue: blue means keyboard focus only (apps/atlas/CLAUDE.md), and selection is not focus. */
+  background: var(--ink);
+  transition:
+    transform 260ms var(--ease-out),
+    height 260ms var(--ease-out);
+}
+
+/* A newly shown rule rises in, so the change reads as a step, not a flash. */
+.panel:not([hidden]) {
+  animation: panel-in 220ms var(--ease-out);
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .indicator {
+    transition: none;
+  }
+
+  .panel:not([hidden]) {
+    animation: panel-fade 100ms linear;
+  }
+}
+
+@keyframes panel-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+.tabs small {
+  font-size: var(--text-2xs);
+  color: var(--ink-3);
+}
+
+.panel:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 8px;
+  border-radius: var(--radius-sm);
+}
+
+/* A class sets display on the content, so the hidden panels need saying explicitly. */
+.panel[hidden] {
+  display: none;
+}
+
+.rule {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.head {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.ruleKeys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Below the section head's size, so the rule reads as a part of the section, not a new one. */
+.head h3 {
+  font-size: var(--text-xl);
+  line-height: 1.08;
+  letter-spacing: var(--tracking-display);
+  font-weight: 560;
+}
+
+.level {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.description {
+  max-width: var(--measure);
+  font-size: var(--text-base);
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+/* A link from the matrix scrolls here: a little air above, so the player is not glued to the edge. */
+/* Sources and agreement, side by side under the recording. */
+.basis {
+  display: grid;
+  grid-template-columns: var(--split);
+  gap: var(--space-5) var(--split-gap);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .basis {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.watch {
+  scroll-margin-top: var(--space-6);
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  border-block: 1px solid var(--line-2);
+}
+
+.stage {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-5) var(--space-5) 0;
+}
+
+/* Where the page scrolls to the recording (one column), its title keeps room from the window's
+   edge (panel invariant "choice-named"). */
+.scene {
+  scroll-margin-top: var(--space-4);
+}
+
+/*
+ * The recording stays in view while the scenarios under it are read and chosen: with a fold open
+ * the column is taller than the window, and a scenario chosen far down played a replay nobody
+ * could see (design review 2026-11-16). Flat, on the page's own background, a hairline under it;
+ * the list scrolls beneath. On narrower screens it would take too much of the window, so there
+ * choosing a scenario scrolls to it instead (use-rule-player.ts).
+ */
+@media (min-width: 1024px) and (min-height: 800px) {
+  .scene {
+    position: sticky;
+    /* Right under the header, with its own space above the keys: rows passing under it must not
+       show in a gap between the header and the recording. */
+    top: var(--header-cover);
+    z-index: 1;
+    margin-block-start: calc(-1 * var(--space-5));
+    padding-block: var(--space-5) var(--space-3);
+    border-block-end: 1px solid var(--line);
+    background: var(--canvas);
+  }
+}
+
+/* The recordings of a system in one cell: as tall as the tallest, one of them seen. */
+.sizer {
+  display: grid;
+}
+
+.sizer > * {
+  grid-area: 2 / 1;
+  min-width: 0;
+}
+
+/* The name of the scenario that plays, above the recordings stacked in the cell under it. */
+.sizer > .sceneTitle {
+  grid-area: 1 / 1;
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 560;
+  color: var(--ink);
+}
+
+/* Unseen by opacity, not by visibility: a step inside a recording sets its own visibility, and
+   would show through a hidden parent. `inert` and aria-hidden keep it out of reach. */
+.ghost {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*
+ * A row that takes keyboard focus comes to rest below the stuck recording, never under it
+ * (WCAG 2.4.11). The recording's height is measured (use-scene-room.ts). In a window shorter
+ * than 800 px the recording is not stuck at all: it would leave too little of the list to see.
+ */
+@media (min-width: 1024px) and (min-height: 800px) {
+  .stage .scenario,
+  .stage .fold button {
+    scroll-margin-top: calc(var(--scene-room, 0px) + var(--space-3));
+  }
+}
+
+/* The chosen scenario cannot be shown for this system: said in one quiet line. */
+.missing {
+  margin: 0;
+  text-wrap: pretty;
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+}
+
+/* A system's evidence, across both columns of the panel. Its own blocks cap their line length. */
+.details {
+  grid-column: 1 / -1;
+  padding-block-end: var(--space-5);
+}
+
+.label {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.scenarios {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* In a fold: the name and what sets the scenario apart on one line. */
+.scenario[data-inline] b {
+  display: inline;
+}
+
+/* The scenario being watched, kept under its closed fold: level with the rows of an open one. */
+.kept {
+  margin-inline-start: calc(22px + var(--space-3));
+}
+
+/* "· 1 step judged, 3 not judged" wraps as a whole, never in the middle of a count. */
+.count {
+  white-space: nowrap;
+}
+
+/* What the scenarios of a fold share, said once above them, in line with their words. */
+.shared {
+  /* Level with the labels of the rows under it: their badge column and the row's padding. */
+  margin: var(--space-1) 0 var(--space-2) calc(22px + var(--space-3) * 2);
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+/* "11 more scenarios, same result": under the row they repeat, in line with its words. */
+.fold {
+  margin: 2px 0 var(--space-2) calc(22px + var(--space-3) * 2);
+}
+
+.scenario {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 0;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--ink-3);
+  font: var(--text-sm) / 1.35 var(--font-sans);
+  text-align: start;
+  cursor: pointer;
+}
+
+/* The words keep their column when a scenario has no result to show a badge for. The badge is
+   a span too, so the rule is for the last child, which is always the words. */
+.scenario > span:last-child {
+  grid-column: 2;
+}
+
+.scenario b {
+  display: block;
+  font-weight: 500;
+  color: var(--ink-2);
+}
+
+/* Under the pointer a row answers with its ink only; the fill belongs to the chosen row, so
+   two rows never both look chosen, in either theme (panel invariant "hover-apart"). */
+.scenario:hover b {
+  color: var(--ink);
+}
+
+.scenario[aria-pressed='true'] {
+  background: var(--panel-2);
+}
+
+.scenario[aria-pressed='true'] b {
+  color: var(--ink);
+}
+
+.decided {
+  display: block;
+  margin-top: 2px;
+  font-style: normal;
+  font-size: var(--text-2xs);
+  color: var(--ink-2);
+}
+
+.tree {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.note {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.textSteps {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.textSteps li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.recording {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.keys {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.keys > span {
+  display: flex;
+  gap: 6px;
+}
+
+/* As tall as the keycaps beside it, so the row reads as one line; never under 24 px, the
+   minimum target size (WCAG 2.5.8). */
+.pause {
+  height: calc(1.9 * var(--text-xs));
+  min-height: 24px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  box-shadow: inset 0 0 0 1px var(--line-2);
+  color: var(--ink-2);
+  font: var(--text-xs) var(--font-sans);
+  cursor: pointer;
+}
+
+.speech {
+  display: grid;
+}
+
+/* Hidden steps keep their height but leave the accessibility tree (visibility, not opacity). */
+.step {
+  grid-area: 1 / 1;
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  visibility: hidden;
+}
+
+.step[data-current] {
+  visibility: visible;
+}
+
+.what {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+/* Upright: italic is the voice of what was said, and here nothing was. */
+.silent {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.verdicts {
+  display: grid;
+  align-content: start;
+  gap: 2px;
+  padding: var(--space-5) 0 var(--space-5) var(--space-5);
+}
+
+/* The systems' cell: as tall as the row of the two columns, and no taller. The list inside it
+   stays at the top of the window only within this cell, so it never travels over the evidence
+   under the columns (panel invariant "systems-apart"). The divider is the cell's, full height. */
+.side {
+  min-width: 0;
+  border-left: 1px solid var(--line);
+}
+
+.verdicts button {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border: 0;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--ink-3);
+  font: var(--text-sm) / 1.35 var(--font-sans);
+  text-align: start;
+  cursor: pointer;
+}
+
+.verdicts button b {
+  display: block;
+  font-weight: 560;
+  color: var(--ink-2);
+}
+
+.verdicts button:hover b {
+  color: var(--ink);
+}
+
+.verdicts button[aria-pressed='true'] {
+  background: var(--panel-2);
+}
+
+/* Beside a long list of scenarios the systems stay in view, like the recording, in a window
+   tall enough for both (panel invariant "systems-seen"). */
+@media (min-width: 1024px) and (min-height: 800px) {
+  .verdicts {
+    position: sticky;
+    top: var(--header-cover);
+    align-self: start;
+  }
+}
+
+.verdicts button[aria-pressed='true'] b {
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .depth {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /*
+   * One scrolling row of rule titles above the rule, so the first rule shows within a screen
+   * instead of after eight stacked rows. Still positioned: the bar is measured from this list.
+   */
+  .tabs {
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    border-top: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .tabs [role='tab'] {
+    flex: none;
+    max-width: 16rem;
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 0;
+  }
+
+  .tabs small {
+    display: none;
+  }
+
+  .indicator {
+    top: auto;
+    bottom: 0;
+    width: var(--width);
+    height: 2px;
+    transform: translateX(var(--left));
+    transition:
+      transform 260ms var(--ease-out),
+      width 260ms var(--ease-out);
+  }
+
+  /* Said again here: this rule comes after the one above that turns the bar's motion off, and
+     without it the bar travelled on narrow screens under reduced motion (found by the panel's
+     invariants, 2026-11-16). */
+  @media (prefers-reduced-motion: reduce) {
+    .indicator {
+      transition: none;
+    }
+  }
+
+  .watch {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .stage {
+    padding-right: 0;
+  }
+
+  /*
+   * On a phone the systems are one scrolling row right above the recording, like the rule tabs:
+   * the control stays where it was tapped, and the recording it changes is on screen under it
+   * (as a seven-row list it pushed the recording below the fold). Mark and name only; the
+   * verdict's sentence is said by the scenario list under the recording, and stays in each
+   * button's name.
+   */
+  .side {
+    order: -1;
+    border-left: 0;
+  }
+
+  .verdicts {
+    /* A grid item is as wide as its content unless told otherwise; then the row scrolls itself.
+       Positioned, so the badges' visually hidden labels (absolute) are clipped with the row and
+       do not widen the page. */
+    position: relative;
+    min-width: 0;
+    display: flex;
+    gap: var(--space-2);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    padding: var(--space-4) 0;
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .verdicts button {
+    flex: none;
+    grid-template-columns: 22px auto;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 40px;
+    box-shadow: inset 0 0 0 1px var(--line);
+  }
+
+  .verdicts button span {
+    font-size: 0;
+  }
+
+  .verdicts button b {
+    font-size: var(--text-sm);
+  }
+
+  .verdicts button em {
+    display: none;
+  }
+}
+
+/* Forced colours replace backgrounds, which would leave the selected rule unmarked: the bar keeps
+   the system's selection colour. */
+@media (forced-colors: active) {
+  .indicator {
+    forced-color-adjust: none;
+    background: Highlight;
+  }
+
+  /* The chosen scenario and the chosen system are marked by their fill, which forced colours
+     take away: a bar in the system's selection colour on the row's leading edge says it there,
+     as on the chosen rule. Its own box, because forced colours also drop a gradient; not an
+     outline, which is the focus ring's (panel invariant "choice-marked"). */
+  .scenario[aria-pressed='true'],
+  .verdicts button[aria-pressed='true'] {
+    position: relative;
+  }
+
+  .scenario[aria-pressed='true']::before,
+  .verdicts button[aria-pressed='true']::before {
+    content: '';
+    position: absolute;
+    /* Short of the row's ends: at full height it ran into the focus ring of the row beside it
+       (design review, 2026-11-17). */
+    inset: 5px auto 5px 0;
+    width: 3px;
+    border-radius: 2px;
+    forced-color-adjust: none;
+    background: Highlight;
+  }
+}

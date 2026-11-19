@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4 # version comes from packageManager in package.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # Before the check: the engine's capture tests in `pnpm test` launch Chromium. After it,
+      # they failed on a fresh runner with no browser installed (CI run #3, 2026-11-19).
+      - run: pnpm --filter @earshot/reference exec playwright install --with-deps chromium
+      # lint, format, typecheck, unit tests, data validation
+      - run: pnpm check
+      # Static export of the site; fails on type or build errors.
+      - run: pnpm build:atlas
+      # CLAUDE.md 11: at most 60 KB gzip of client JS beyond the framework on the pattern page.
+      - run: pnpm --filter @earshot/atlas budget
+      - run: pnpm test:e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-traces
+          path: |
+            packages/reference/test-results/
+            apps/atlas/test-results/
+          retention-days: 7
+
+  # Visual regression (CLAUDE.md 11: light, dark, forced colours, reduced motion). Runs in the
+  # Playwright container so fonts and rendering match the Linux baselines exactly. Baselines come
+  # from the "Visual baselines" workflow; until they are committed, this job says so and skips.
+  visual:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.64.1-noble
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Check for Linux baselines
+        id: baselines
+        shell: bash
+        run: |
+          if ls apps/atlas/test/visual/visual.spec.ts-snapshots/*-linux.png >/dev/null 2>&1; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::No Linux visual baselines yet. Run the Visual baselines workflow and commit its artifact."
+          fi
+      - if: steps.baselines.outputs.present == 'true'
+        run: pnpm build:atlas
+      - if: steps.baselines.outputs.present == 'true'
+        run: pnpm --filter @earshot/atlas test:visual
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: visual-diffs
+          path: apps/atlas/test-results/
+          retention-days: 7

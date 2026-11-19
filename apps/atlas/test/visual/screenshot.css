@@ -1,0 +1,10 @@
+/* Applied only while taking visual snapshots: freeze what moves on its own. */
+*,
+*::before,
+*::after {
+  caret-color: transparent !important;
+}
+
+[data-reveal] {
+  animation: none !important;
+}

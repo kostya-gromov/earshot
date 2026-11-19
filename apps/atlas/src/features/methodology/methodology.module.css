@@ -1,0 +1,329 @@
+.part {
+  display: grid;
+  gap: var(--space-4);
+  scroll-margin-top: var(--space-6);
+}
+
+.part h2 {
+  font-size: var(--text-xl);
+  line-height: 1.12;
+  letter-spacing: var(--tracking-heading);
+  font-weight: 620;
+}
+
+.part p,
+.part li,
+.part dd {
+  max-width: var(--measure);
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.part ol,
+.part ul {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding-inline-start: 1.25em;
+}
+
+.part dl {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: var(--space-3) var(--space-5);
+  margin: 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+}
+
+.part dt {
+  font-weight: 600;
+}
+
+.part dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .part dl {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  .part dd + dt {
+    margin-top: var(--space-3);
+  }
+}
+
+.part h3 {
+  margin-top: var(--space-3);
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+.part a {
+  color: var(--ink);
+  text-underline-offset: 3px;
+}
+
+/* The method in six lines: the one block a reader who skips the page still gets. */
+.summary {
+  display: grid;
+  gap: var(--space-3);
+  padding-block: var(--space-5);
+  border-block: 1px solid var(--line-2);
+}
+
+.summary h2 {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.summary ul {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding-inline-start: 1.25em;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+/* On this page: the list of parts. A rail beside the text on wide screens (see the page's grid),
+   two columns at the top on narrow ones. */
+.contentsLabel {
+  margin-bottom: var(--space-3);
+  font: var(--group-label-font);
+  color: var(--group-label-color);
+}
+
+.contents ol {
+  columns: 2;
+  column-gap: var(--space-7);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.contents li {
+  break-inside: avoid;
+}
+
+.contents ol a {
+  display: block;
+  padding: 5px 0 5px var(--space-3);
+  border-inline-start: 1px solid var(--line);
+  color: var(--ink-3);
+  text-decoration: none;
+  transition:
+    color var(--dur-micro) var(--ease-out),
+    border-color var(--dur-micro) var(--ease-out);
+}
+
+.contents ol a:hover {
+  color: var(--ink);
+}
+
+/* Where the reader is. Ink and weight, not blue: blue means keyboard focus only. */
+.contents ol a[aria-current] {
+  border-color: var(--ink);
+  color: var(--ink);
+  font-weight: 560;
+}
+
+/* The way back to the list once it has scrolled away, on screens with no rail. */
+.backToContents {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 100ms ease-in,
+    visibility 0s linear 100ms;
+  position: fixed;
+  right: var(--gutter);
+  bottom: var(--space-5);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--panel);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.backToContents[data-shown] {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 150ms var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backToContents,
+  .backToContents[data-shown] {
+    transition: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .rail {
+    position: sticky;
+    top: calc(var(--header-cover) + var(--space-6));
+  }
+
+  .contents ol {
+    columns: 1;
+  }
+
+  /* The rail is always on screen here, so the way back is not needed. */
+  .backToContents {
+    display: none;
+  }
+}
+
+.verdictTerm {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  align-self: start;
+}
+
+/* Tables: rows on hairlines, like the rest of the site. Wide ones scroll inside their own box. */
+.scroller {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.scroller .table {
+  min-width: 620px;
+}
+
+.table th,
+.table td {
+  padding: var(--space-3) var(--space-4) var(--space-3) 0;
+  border-bottom: 1px solid var(--line);
+  text-align: start;
+  vertical-align: top;
+  color: var(--ink-2);
+}
+
+/* Versions, dates and keys stay on one line and line up digit under digit. */
+.table td[data-label='Version'],
+.table td[data-label='Measured'],
+.table td[data-label='Keys'] {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.table td[data-label='Keys'] .keys {
+  flex-wrap: nowrap;
+}
+
+.table tbody th {
+  min-width: 8rem;
+}
+
+.table td[data-label='In agreement counts'] {
+  min-width: 13rem;
+}
+
+.part code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+
+.table thead th {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--ink-3);
+}
+
+.table tbody th {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/*
+ * Phones: a wide table becomes stacked records, each row a title with labelled values under it,
+ * the form the definition lists already take. Nothing is cut off behind a sideways scroll
+ * (design review 2026-11-13: the "Judges" column was off screen with no cue).
+ */
+@media (max-width: 640px) {
+  .contents ol {
+    columns: 1;
+  }
+
+  .scroller .stack {
+    min-width: 0;
+  }
+
+  .stack,
+  .stack tbody,
+  .stack tr,
+  .stack th,
+  .stack td {
+    display: block;
+  }
+
+  .stack thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .stack tr {
+    padding-block: var(--space-4);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .stack tbody th,
+  .stack td {
+    padding: 0;
+    border: 0;
+  }
+
+  .table tbody th {
+    min-width: 0;
+  }
+
+  .stack td[data-label] {
+    white-space: normal;
+  }
+
+  .stack td {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: var(--space-3);
+    padding-top: var(--space-2);
+  }
+
+  .stack td::before {
+    content: attr(data-label) / '';
+    font-size: var(--text-xs);
+    color: var(--ink-3);
+  }
+}
+
+/* Each pattern's scenarios behind its own button: a short stack, not three tables in a row. */
+.disclosures {
+  display: grid;
+  border-top: 1px solid var(--line);
+}

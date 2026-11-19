@@ -1,0 +1,137 @@
+/*
+ * Global token layer (D1b), extracted from the approved D1a mockup (docs/design/d1).
+ * Every colour, size and duration on the site comes from here; components never hard-code one.
+ * Colours use light-dark(), so one declaration holds both themes; `color-scheme` picks the theme
+ * (system by default, forced by [data-theme] for review).
+ */
+/*
+ * Custom properties holding light-dark() are resolved where they are declared, so a subtree with
+ * its own theme (data-theme on any element, including <html>) must declare them again.
+ */
+:root,
+[data-theme] {
+  color-scheme: light dark;
+
+  /* Surfaces: canvas < sunken well < panel < raised (the playground only) */
+  --canvas: light-dark(oklch(0.985 0.003 250), oklch(0.15 0.012 265));
+  --well: light-dark(oklch(0.97 0.004 250), oklch(0.135 0.012 265));
+  --panel: light-dark(oklch(1 0 0), oklch(0.19 0.012 265));
+  --panel-2: light-dark(oklch(0.965 0.004 250), oklch(0.225 0.012 265));
+  --line: light-dark(oklch(0.2 0.01 260 / 0.09), oklch(1 0 0 / 0.075));
+  --line-2: light-dark(oklch(0.45 0.01 260 / 0.5), oklch(1 0 0 / 0.2));
+  /* Controls that must reach 3:1 against their surface (WCAG 1.4.11) */
+  --line-strong: light-dark(oklch(0.58 0.012 260), oklch(0.56 0.012 265));
+
+  /* Text */
+  --ink: light-dark(oklch(0.2 0.015 260), oklch(0.96 0.005 265));
+  --ink-2: light-dark(oklch(0.43 0.012 260), oklch(0.76 0.012 265));
+  --ink-3: light-dark(oklch(0.47 0.01 260), oklch(0.66 0.012 265));
+  --ink-ghost: light-dark(oklch(0.2 0.01 260 / 0.24), oklch(1 0 0 / 0.22));
+  --ink-fade: light-dark(oklch(0.2 0.015 260), oklch(0.76 0.02 265));
+
+  /* Meaning colours: the only hues on the page */
+  --focus: light-dark(oklch(0.53 0.2 260), oklch(0.72 0.16 255));
+  --heard: light-dark(oklch(0.5 0.19 300), oklch(0.77 0.13 300));
+  --loss: light-dark(oklch(0.5 0.19 25), oklch(0.72 0.15 25));
+  --match: light-dark(oklch(0.45 0.12 155), oklch(0.76 0.14 155));
+  --focus-soft: color-mix(in oklch, var(--focus) 14%, transparent);
+  /* Focus drawn on a shape filled with --ink (the brand mark's key): the other theme's focus,
+     because the ink is the other theme's ground. */
+  --focus-on-ink: light-dark(oklch(0.72 0.16 255), oklch(0.53 0.2 260));
+  --heard-soft: color-mix(in oklch, var(--heard) 7%, transparent);
+  --loss-soft: color-mix(in oklch, var(--loss) 12%, transparent);
+  --match-soft: color-mix(in oklch, var(--match) 12%, transparent);
+
+  /* Stage light (dark theme only: transparent in light) */
+  --grid-dot: light-dark(oklch(0.2 0.01 260 / 0.07), oklch(1 0 0 / 0.06));
+  --glow-sky: light-dark(oklch(0.7 0.1 260 / 0.1), oklch(0.5 0.12 265 / 0.2));
+  --edge-hi: light-dark(oklch(0.2 0.01 260 / 0.1), oklch(1 0 0 / 0.22));
+  --edge-lo: light-dark(oklch(0.2 0.01 260 / 0.1), oklch(1 0 0 / 0.04));
+  --edge-focus: light-dark(oklch(0.2 0.01 260 / 0.1), oklch(0.7 0.17 255 / 0.3));
+  --shadow-color: light-dark(oklch(0.3 0.05 260 / 0.22), oklch(0 0 0 / 0.6));
+  --inner-hi: light-dark(oklch(1 0 0 / 0), oklch(1 0 0 / 0.06));
+
+  /* Type */
+  /* --font-inter and --font-newsreader are set by next/font in app/layout.tsx (self-hosted) */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-voice: var(--font-newsreader), Georgia, serif;
+  --font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, monospace;
+  --text-2xs: 11.5px;
+  --text-xs: 12.5px;
+  --text-sm: 13.5px;
+  --text-base: 15px;
+  --text-md: 17px;
+  --text-lg: 21px;
+  --text-xl: clamp(26px, 3vw, 34px);
+  --text-display: clamp(44px, 7vw, 80px);
+  /* The second display size: section statements and pattern names on cards. */
+  --text-display-sm: clamp(32px, 4vw, 48px);
+  --speech-lg: clamp(24px, 3.2vw, 34px);
+  --speech-md: 19px;
+  --speech-sm: 16px;
+  --tracking-display: -0.045em;
+  --tracking-heading: -0.025em;
+
+  /* Space: 4 px base */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+  --space-9: 120px;
+  --gutter: clamp(16px, 4vw, 32px);
+  /* One split for every two-part row on a page (heading and lead, text and scene, statement and
+     points), so their inner edges line up down the page instead of each starting at its own x
+     (design review 2026-11-13). Three-up rows use the same gap. */
+  --split: minmax(0, 1fr) minmax(0, 1fr);
+  --split-gap: var(--space-8);
+  --measure: 62ch;
+  --page: 1120px;
+  /* A group's label: the menu's columns, the search's groups, the footer's columns, the
+     methodology's contents. One look everywhere (design review 2026-11-18: there were four). */
+  --group-label-font: 500 var(--text-xs) / 1.2 var(--font-sans);
+  --group-label-color: var(--ink-3);
+  /* The header's height, and how much of the window it covers: what sticks or scrolls into view
+     starts below it. Zero where the header does not stick (a short window). */
+  --header-height: 70px;
+  --header-cover: var(--header-height);
+
+  /* Radius */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --dur-micro: 150ms;
+  --dur-functional: 220ms;
+  --dur-signature: 500ms;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+}
+[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-micro: 0ms;
+    --dur-functional: 0ms;
+    --dur-signature: 100ms;
+  }
+}
+
+/* A phone turned sideways or a page zoomed in: a sticky header would take a fifth of the height. */
+@media (max-height: 500px) {
+  :root {
+    --header-cover: 0px;
+  }
+}

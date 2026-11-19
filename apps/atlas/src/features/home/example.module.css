@@ -1,0 +1,312 @@
+/*
+ * The opening scene, across the full width: one line that says what it shows, one frame with the
+ * recordings, and under it what that means. The frame is a hairline with a line of provenance
+ * on top; it is not raised and not drawn as a window, because nothing in it is drawn.
+ */
+.scene {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.title {
+  font-size: var(--text-lg);
+  line-height: 1.2;
+  letter-spacing: var(--tracking-heading);
+  font-weight: 560;
+  text-wrap: balance;
+}
+
+.quiet {
+  color: var(--ink-3);
+}
+
+.frame {
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-lg);
+}
+
+/* Where the recording comes from, on the left; the one control, on the right. */
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+  min-height: 52px;
+  padding: var(--space-2) var(--space-3) var(--space-2) var(--space-5);
+  border-bottom: 1px solid var(--line);
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+.facts li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.facts li:first-child {
+  font-weight: 560;
+  color: var(--ink);
+}
+
+.press {
+  /* Wide enough for either label, and never wrapped under the facts: "Press Backspace" becomes
+     "Press again" after the first run, and the bar must not change height when it does (CLS). */
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 138px;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--panel);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+  color: var(--ink);
+  font: 500 var(--text-sm) var(--font-sans);
+  cursor: pointer;
+  transition: transform var(--dur-micro) var(--ease-out);
+}
+
+.press:hover {
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+
+.press:active {
+  transform: scale(0.97);
+}
+
+/* Name, field, result: three columns, so the systems line up and compare at a glance. The field
+   keeps the width three chips need; stretched across the frame it would be an empty band. */
+.lane {
+  display: grid;
+  grid-template-columns: 168px minmax(0, 400px) minmax(0, 1fr);
+  gap: var(--space-2) var(--space-6);
+  align-items: center;
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--line);
+}
+
+.lane:last-child {
+  border-bottom: 0;
+}
+
+.name {
+  display: grid;
+  gap: 2px;
+  font-weight: 560;
+  font-size: var(--text-sm);
+}
+
+.name > span {
+  font: var(--text-2xs) var(--font-mono);
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+.field {
+  min-width: 0;
+}
+
+.result {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+/* Neutral: the label says what happened, not whether it was right. Its line is held from the
+   start, so the result arriving never moves the row. */
+.label {
+  min-height: 1.4em;
+  font-size: var(--text-sm);
+  font-weight: 560;
+  color: var(--ink);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 160ms var(--ease-out),
+    transform 160ms var(--ease-out),
+    visibility 0s linear 160ms;
+}
+
+/* Hidden by visibility as well, so the phrase is not read before the press has happened. */
+.label[data-shown] {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 160ms var(--ease-out),
+    transform 160ms var(--ease-out);
+}
+
+/* Rows answer 50 ms apart, so the eye reads them top to bottom. */
+.lane:nth-child(2) .label {
+  transition-delay: 50ms;
+}
+
+.lane:nth-child(3) .label {
+  transition-delay: 100ms;
+}
+
+.lane:nth-child(4) .label {
+  transition-delay: 150ms;
+}
+
+.lane:nth-child(5) .label {
+  transition-delay: 200ms;
+}
+
+.outcomeSlot {
+  display: grid;
+}
+
+/* Hidden parts keep their height but leave the accessibility tree (visibility, not opacity). */
+.outcomeSlot > .outcome {
+  grid-area: 1 / 1;
+  visibility: hidden;
+}
+
+.outcomeSlot > .outcome[data-current] {
+  visibility: visible;
+}
+
+.outcome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-3);
+  min-height: 1.6em;
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+/* Upright: italic is the voice of what was said, and here nothing was (design review
+   2026-11-14). */
+.silent {
+  font-style: normal;
+}
+
+/* Under the frame: why it matters, on the left; what Atlas holds, at length, on the right. */
+.after {
+  display: grid;
+  grid-template-columns: var(--split);
+  gap: var(--space-4) var(--split-gap);
+  align-items: start;
+  padding-top: var(--space-3);
+}
+
+.after > div {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.point {
+  max-width: 34ch;
+  font-size: var(--text-md);
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.note {
+  max-width: 52ch;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.lede {
+  max-width: 60ch;
+  font-size: var(--text-base);
+  line-height: 1.55;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+/* Instant under reduced motion: the result is simply there. */
+@media (prefers-reduced-motion: reduce) {
+  .label,
+  .lane .label {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Narrower than three columns allow: the name over the field, the result under it. */
+@media (max-width: 1100px) {
+  .lane {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2) var(--space-3);
+  }
+
+  .field {
+    max-width: 420px;
+  }
+
+  .after {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/*
+ * On a phone the bar stays on screen while the rows scroll under it, so a reader sees every
+ * result change, not only the first (design review 2026-11-13). Its facts stack; nothing in the
+ * frame is wider than the screen.
+ */
+@media (max-width: 560px) {
+  .title {
+    font-size: var(--text-md);
+    text-wrap: wrap;
+  }
+
+  .quiet {
+    display: block;
+  }
+
+  .bar {
+    flex-wrap: nowrap;
+    position: sticky;
+    top: var(--header-cover);
+    z-index: 2;
+    padding-inline: var(--space-4) var(--space-3);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    background: var(--canvas);
+  }
+
+  .facts {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+}
+
+@media (forced-colors: active) {
+  .frame {
+    border-color: CanvasText;
+  }
+
+  .press {
+    border: 1px solid ButtonText;
+  }
+}

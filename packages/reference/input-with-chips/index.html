@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Input with chips · Earshot reference</title>
+    <link rel="stylesheet" href="./chip-field.css" />
+    <style>
+      /* Page chrome only. The component's own styles live in chip-field.css. */
+      :root {
+        --canvas: #f6f7f9;
+        --panel: #ffffff;
+        --ink: #16181d;
+        --ink-2: #4a505c;
+        --line-2: #858c98; /* field border at 3:1 or more against the panel (WCAG 1.4.11) */
+        --key: #2f6bff;
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --canvas: #0d0e11;
+          --panel: #16181d;
+          --ink: #e8eaee;
+          --ink-2: #a5abb6;
+          --line-2: #6b7280;
+          --key: #6b95ff;
+        }
+      }
+      body {
+        margin: 0;
+        min-block-size: 100vh;
+        display: grid;
+        place-items: start center;
+        padding-block: 12vh;
+        background: var(--canvas);
+        color: var(--ink);
+        font:
+          15px/1.5 system-ui,
+          sans-serif;
+      }
+      main {
+        inline-size: min(520px, 100% - 32px);
+        display: grid;
+        gap: 16px;
+        padding: 24px;
+        border-radius: 12px;
+        background: var(--panel);
+      }
+      h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      .subject {
+        display: grid;
+        gap: 6px;
+      }
+      .subject label {
+        font-weight: 500;
+        font-size: 13px;
+      }
+      .subject input {
+        font: inherit;
+        padding: 8px;
+        border: 1px solid var(--line-2);
+        border-radius: 8px;
+        background: var(--panel);
+        color: inherit;
+      }
+      .subject input:focus-visible {
+        outline: 2px solid var(--key);
+        outline-offset: 1px;
+      }
+      .chip-field__input {
+        color: inherit;
+        font: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>New message</h1>
+      <!-- Focusable fields before and after the chip field, so the engine can observe Tab and
+           Shift+Tab leaving it instead of reaching the document. -->
+      <div class="subject">
+        <label for="from">From</label>
+        <input id="from" type="text" value="me@example.com" />
+      </div>
+      <!-- Markup is loaded from chip-field.html so there is exactly one copy of it. -->
+      <div id="mount"></div>
+      <div class="subject">
+        <label for="subject">Subject</label>
+        <input id="subject" type="text" />
+      </div>
+    </main>
+
+    <script type="module">
+      import { createChipField } from './chip-field.js';
+
+      const mount = document.getElementById('mount');
+      // Trusted, same-origin static file: the reference markup itself.
+      mount.innerHTML = await (await fetch('./chip-field.html')).text();
+      const root = mount.querySelector('[data-chip-field]');
+
+      createChipField(root, {
+        initial: ['Irene Oh', 'Greg Fisher', 'Hiroshi Matsui'],
+        directory: [
+          'Irene Oh',
+          'Greg Fisher',
+          'Hiroshi Matsui',
+          'Ana Lima',
+          'Ben Carter',
+          'Dana Kowalska',
+          'Elif Demir',
+          'Marta Nowak',
+        ],
+      });
+      // Lets the engine's adapter know the component is usable (CLAUDE.md 8.5, ready()).
+      root.dataset.ready = 'true';
+    </script>
+  </body>
+</html>

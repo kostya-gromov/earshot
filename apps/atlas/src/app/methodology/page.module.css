@@ -1,0 +1,61 @@
+.wrap {
+  max-width: calc(var(--page) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+  max-width: 760px;
+  padding-block: var(--space-7) var(--space-9);
+}
+
+/*
+ * Wide screens: the text keeps its 760 px column and "On this page" takes the empty space beside
+ * it as a rail that stays on screen for the whole page (design review 2026-11-13).
+ */
+@media (min-width: 1024px) {
+  .page {
+    max-width: none;
+    grid-template-columns: minmax(0, 860px) minmax(180px, 240px);
+    column-gap: var(--space-8);
+    justify-content: space-between;
+  }
+
+  .page {
+    position: relative;
+  }
+
+  .page > * {
+    grid-column: 1;
+  }
+
+  /* Out of the grid's rows: as a spanning grid item it added empty rows, and their gaps, before
+     the footer. It fills the page's height on the right, and the rail inside it sticks. */
+  .page > nav {
+    position: absolute;
+    inset-block: var(--space-7) var(--space-9);
+    inset-inline-end: 0;
+    width: 240px;
+  }
+}
+
+.head {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.head h1 {
+  font-size: var(--text-display);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display);
+  font-weight: 650;
+}
+
+.head p {
+  max-width: var(--measure);
+  font-size: var(--text-md);
+  color: var(--ink-2);
+}
