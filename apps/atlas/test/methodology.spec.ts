@@ -12,17 +12,18 @@ for (const colorScheme of ['light', 'dark'] as const) {
   });
 }
 
-test('Suggest a correction lands on the corrections part of the methodology', async ({ page }) => {
+test("the footer's Suggest a correction leads to how corrections work, and a way to file one", async ({
+  page,
+}) => {
   await page.goto('/patterns/input-with-chips/');
-  await page.getByRole('tablist', { name: 'Rules' }).locator('#tab-bsp').click();
-  const href = await page
-    .locator('#rule-bsp')
-    .getByRole('link', { name: 'Suggest a correction' })
-    .getAttribute('href');
-  await page.goto(href!);
+  await page.getByRole('contentinfo').getByRole('link', { name: 'Suggest a correction' }).click();
   await expect(
     page.getByRole('heading', { level: 2, name: 'Suggest a correction' }),
   ).toBeInViewport();
+  await expect(page.getByRole('link', { name: 'open a correction' })).toHaveAttribute(
+    'href',
+    'https://github.com/kostya-gromov/earshot-atlas/issues/new?template=correction.yml',
+  );
 });
 
 test('the provenance example is a real measured system, not the reference', async ({ page }) => {

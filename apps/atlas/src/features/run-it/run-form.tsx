@@ -24,7 +24,7 @@ function useRunForm() {
     }
     setProblem(undefined);
     setResult(
-      'The link looks right. Nothing was sent or fetched: running stories opens with the public release.',
+      'The link looks right. Nothing was sent or fetched: running stories is not open yet.',
     );
   }
 

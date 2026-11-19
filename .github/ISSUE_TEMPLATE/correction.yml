@@ -1,0 +1,47 @@
+name: Suggest a correction
+description: A verdict, a recording or a rule on Earshot Atlas looks wrong.
+title: 'Correction: '
+labels: ['correction']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. A verdict is never edited by hand. If the recording was wrong, the engine, the adapter or the page we render the component on is fixed and the system is measured again; if the rule or our reading of it was wrong, the rule changes and every system is judged again. Either way the change is listed under "What changed, and when" in the methodology, with its date and the versions before and after. A correction we do not take is answered here, with the reason.
+  - type: input
+    id: system
+    attributes:
+      label: System and version
+      placeholder: MUI 9.5.0
+    validations:
+      required: true
+  - type: input
+    id: rule
+    attributes:
+      label: Pattern and rule
+      placeholder: combobox / escape
+    validations:
+      required: true
+  - type: input
+    id: verdict
+    attributes:
+      label: Verdict shown
+  - type: input
+    id: measured
+    attributes:
+      label: Date measured
+  - type: input
+    id: file
+    attributes:
+      label: Raw file
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: What Atlas says, and what you see instead.
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How to see it
+      description: The page or package, the browser and screen reader if one was used, and the keys pressed.

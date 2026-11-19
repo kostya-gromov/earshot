@@ -1,4 +1,5 @@
 import type { Measurement, TargetEntry } from '@earshot/contracts';
+import { correctionLink } from '@/lib/correction-link';
 import { measuredOn } from '@/lib/measured-on';
 import styles from './evidence.module.css';
 
@@ -67,10 +68,11 @@ interface EvidenceLinksProps {
   measurement: Measurement;
   file: string;
   entry: TargetEntry | undefined;
+  ruleId: string;
 }
 
 /** Raw data, the system's own docs and demo, and a way to tell us we got it wrong (CLAUDE.md 2.5). */
-export function EvidenceLinks({ measurement, file, entry }: EvidenceLinksProps) {
+export function EvidenceLinks({ measurement, file, entry, ruleId }: EvidenceLinksProps) {
   const { url } = measurement.target;
   return (
     <>
@@ -81,7 +83,8 @@ export function EvidenceLinks({ measurement, file, entry }: EvidenceLinksProps) 
       {entry?.status === 'measured' && entry['docs-example'] && (
         <a href={entry['docs-example']}>Docs example</a>
       )}
-      <a href="/methodology/#corrections">Suggest a correction</a>
+      {/* A new issue, filled in with this card: the system, version, rule, verdict and file. */}
+      <a href={correctionLink({ measurement, file, ruleId })}>Suggest a correction</a>
     </>
   );
 }

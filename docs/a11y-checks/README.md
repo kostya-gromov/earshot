@@ -13,9 +13,27 @@ versions, the steps taken, and what was heard at each step.
 M2 was accepted with this check deferred. **It must be done before any measured finding is
 published (the post after M2, or the M3 release).**
 
-**Done on 2026-11-19 with VoiceOver** (`2026-11-19-third-party-voiceover.md`): every item below
-matched the recordings, so the publishing gate is cleared. Still open before a release: NVDA with
-Firefox (`apps/atlas/CLAUDE.md`, Quality bar).
+**First pass on 2026-11-19 with VoiceOver** (`2026-11-19-third-party-voiceover.md`): no difference
+was noted, but results were not written down per item, and the expected values listed for
+Atlassian then ("Canberra") came from an earlier recording, not the current harness files (verdict
+audit, 2026-11-19). **To repeat item by item** against the current values below, writing down what
+was heard for each. NVDA with Firefox is also still open (`apps/atlas/CLAUDE.md`, Quality bar).
+
+Current expected values, from the measurement files of the harness recordings:
+
+- Atlassian, from the empty field: Left Arrow, focus stays on the combobox "To" and nothing is
+  announced; Backspace removes a chip and announces "option Hiroshi Matsui, deselected"; Shift+Tab
+  moves focus to button "Remove Hiroshi Matsui", inside the component.
+- Fluent 2, Primer, MUI: no announcement of the removal, after Backspace, Delete or a click on a
+  remove button.
+- React Aria: a removal by click inserts a live region that already holds "Irene OhGreg
+  FisherHiroshi Matsui" (the same appears after Tab with no removal, so it is not counted as an
+  announcement). What does VoiceOver say there, if anything?
+- MUI and Primer: is the field's changed description spoken after a removal?
+- The reference: the third remove button is "Remove Hiroshi Matsui, button, 3 of 3".
+
+How the list came about, for the record (the values to check against are the current ones above;
+those below include the docs-demo values the first pass used):
 
 - 2026-11-19: The owner checked the reference implementations in the playground with VoiceOver
   (`2026-11-19-reference-playground-voiceover.md`), then the third-party items below.
@@ -25,8 +43,10 @@ Firefox (`apps/atlas/CLAUDE.md`, Quality bar).
   Safari or NVDA + Firefox.
 - Check against the recorded verdicts:
   - Left Arrow from the empty input: is anything said or does focus move? (measured: nothing)
-  - Backspace in the empty input: what is said? (measured: "option Canberra, deselected")
-  - Shift+Tab from the input: where does focus land? (measured: "Remove Canberra")
+  - Backspace in the empty input: what is said? (measured on the docs demo: "option Canberra,
+    deselected"; on the harness: "option Hiroshi Matsui, deselected")
+  - Shift+Tab from the input: where does focus land? (measured on the docs demo: "Remove
+    Canberra"; on the harness: "Remove Hiroshi Matsui")
 - Also check the reference for ADR 0003: does the screen reader say "3 of 3" for the third remove
   button? The engine derives it from the list structure.
 - Before publishing a "no announcement" finding (Fluent 2, Primer), confirm with a screen reader

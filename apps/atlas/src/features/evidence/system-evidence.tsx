@@ -207,7 +207,7 @@ export function SystemEvidence({ ruleId, loaded, entry, model }: SystemEvidenceP
       />
       <EvidenceProvenance measurement={measurement} />
       <p className={styles.links}>
-        <EvidenceLinks measurement={measurement} file={file} entry={entry} />
+        <EvidenceLinks measurement={measurement} file={file} entry={entry} ruleId={ruleId} />
       </p>
     </div>
   );

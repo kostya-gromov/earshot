@@ -4,7 +4,7 @@ A reference for complex UI patterns that answers three questions: how the patter
 
 Three patterns are measured, each in six design systems: input with chips, combobox (list autocomplete) and menu button. Decisions, proposals and pattern briefs start from [`docs/INDEX.md`](docs/INDEX.md).
 
-**Status:** milestone M5, validation with designers and engineers. The measured findings about third-party systems have been checked by hand with VoiceOver ([`docs/a11y-checks/`](docs/a11y-checks/README.md)). A check with NVDA and Firefox is still due before a release.
+**Status:** milestone M5, validation with designers and engineers. A first check by hand of the measured findings, with VoiceOver, is being repeated item by item, and a check with NVDA and Firefox is still due ([`docs/a11y-checks/`](docs/a11y-checks/README.md)).
 
 ## Setup
 

@@ -81,8 +81,8 @@ export function Changes() {
     <Part id="changes" title="What changed, and when">
       <p>
         Rules, scenarios and counting change as we learn. Each change is dated here, newest first.
-        Nothing is published yet, so no published verdict has changed; from the first release, a
-        changed verdict is listed here with the versions and dates before and after.
+        Atlas was first published on 19 Nov 2026; a verdict that changes after that is listed here
+        with the versions and dates before and after.
       </p>
       <dl>
         {/* Two entries may share a date, so the key is the entry's place in the list. */}

@@ -1,8 +1,27 @@
 import type { ReactNode } from 'react';
+import { publicRepository } from '@/lib/correction-link';
 import { SpeechLine } from '@/ui';
 import styles from './methodology.module.css';
 
 /** One part of the methodology: a heading and its prose, with an anchor others can link to. */
+/**
+ * What was checked by hand against a real screen reader, no further than the notes support: a
+ * first spot check of input with chips, to be repeated item by item (verdict audit, 2026-11-19).
+ */
+function ManualCheck() {
+  return (
+    <p>
+      Checks by hand with a real screen reader have begun. A first pass, on 19 Nov 2026 with
+      VoiceOver on macOS, went through input with chips: Atlassian on Left Arrow, Backspace and
+      Shift+Tab from the empty field, a chip removed in Fluent 2, Primer, MUI and React Aria, and
+      &ldquo;3 of 3&rdquo; on the reference. Its results were not written down item by item, so it
+      is being repeated against the published recordings before anything is said about the match.
+      Not checked yet: combobox, menu button, and NVDA.{' '}
+      <a href={`${publicRepository}/tree/main/docs/a11y-checks`}>The notes of each check</a>
+    </p>
+  );
+}
+
 export function Part({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
     <section className={styles.part} aria-labelledby={`${id}-title`} id={id}>
@@ -128,6 +147,7 @@ export function SemanticModel() {
         It is not NVDA, JAWS or VoiceOver output. Real screen readers phrase things differently and
         differ from each other. Runs with real screen readers are planned for a later phase.
       </p>
+      <ManualCheck />
       <p>Simplifications we know of:</p>
       <ul>
         <li>The full text of a live region is used; aria-atomic and aria-relevant are ignored.</li>

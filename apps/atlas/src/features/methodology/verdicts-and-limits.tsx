@@ -1,3 +1,4 @@
+import { publicRepository } from '@/lib/correction-link';
 import type { Measurement, Verdict } from '@earshot/contracts';
 import { VerdictBadge } from '@/features/evidence';
 import { measuredOn } from '@/lib/measured-on';
@@ -163,8 +164,9 @@ export function Limitations() {
           system’s to explain; the trade-offs on the pattern page are our reading.
         </li>
         <li>
-          A manual check of one measured system with a real screen reader is still pending and will
-          be published before this site is.
+          Checks by hand with a real screen reader are partial: a first VoiceOver spot check of
+          input with chips, being repeated item by item (see the semantic model). Combobox, menu
+          button and NVDA are not checked yet.
         </li>
         <li>
           Public demos differ from production use. A demo with nothing focusable after the component
@@ -179,11 +181,20 @@ export function Corrections() {
   return (
     <Part id="corrections" title="Suggest a correction">
       <p>
-        If a result looks wrong, tell us which system, rule and scenario, what you expected, and how
-        to see it: a version, a URL, the keys you pressed. We re-run the engine. When the engine or
-        an adapter was wrong, we fix it, publish a new dated measurement and say what changed.
+        Corrections are public issues on GitHub. &ldquo;Suggest a correction&rdquo; on a
+        system&rsquo;s card opens one whose title names the system, its version and the rule; add
+        what you expected and how to see it: the page or package, the browser, the keys you pressed.
+        For anything else,{' '}
+        <a href={`${publicRepository}/issues/new?template=correction.yml`}>open a correction</a>.
       </p>
-      <p>The public channel for corrections opens with the first public release of this site.</p>
+      <p>
+        A verdict is never edited by hand. If the recording was wrong, the engine, the adapter or
+        the page we render the system&rsquo;s component on is fixed and the system is measured
+        again; if the rule or our reading of it was wrong, the rule changes and every system is
+        judged again. Either way the change is listed under &ldquo;What changed, and when&rdquo;,
+        with its date and the versions before and after. A correction we do not take is answered on
+        the issue, with the reason.
+      </p>
     </Part>
   );
 }

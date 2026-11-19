@@ -15,7 +15,7 @@ const points = [
   },
   {
     claim: 'Open to correction',
-    text: 'Every result shows its version, browser and date and links to the raw data, so it can be checked. The channel for corrections opens with the first public release.',
+    text: 'Every result shows its version, browser and date and links to the raw data, so it can be checked. Each system’s card has a link to suggest a correction, which opens a public issue on GitHub.',
   },
 ];
 

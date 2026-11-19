@@ -101,9 +101,19 @@ test('every card says where its numbers come from and how to challenge them', as
     'href',
     '/data/measurements/input-with-chips/mui.json',
   );
-  await expect(panel.getByRole('link', { name: 'Suggest a correction' })).toHaveAttribute(
-    'href',
-    '/methodology/#corrections',
+  // A public issue, filled in with this card (2026-11-19, the first release).
+  const correction = new URL(
+    (await panel.getByRole('link', { name: 'Suggest a correction' }).getAttribute('href'))!,
+  );
+  expect(correction.origin + correction.pathname).toBe(
+    'https://github.com/kostya-gromov/earshot-atlas/issues/new',
+  );
+  expect(correction.searchParams.get('template')).toBe('correction.yml');
+  expect(correction.searchParams.get('title')).toMatch(
+    /^Correction: MUI 9\.5\.0, input-with-chips \/ /,
+  );
+  expect(correction.searchParams.get('file')).toBe(
+    'https://github.com/kostya-gromov/earshot-atlas/blob/main/data/measurements/input-with-chips/mui.json',
   );
 });
 
