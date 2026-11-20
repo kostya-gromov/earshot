@@ -2,7 +2,9 @@
 .run {
   display: grid;
   grid-template-columns: 1fr minmax(0, 440px);
-  gap: var(--space-8);
+  /* Rows sit closer than columns: at the section gap the second path read as its own section. */
+  column-gap: var(--space-8);
+  row-gap: var(--space-6);
   align-items: start;
 }
 
@@ -118,15 +120,84 @@
   color: var(--ink-2);
 }
 
+/* The second path sits under both columns, behind a hairline, on the section's own columns. */
+.suggest {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  align-items: start;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+}
+
+.suggestTitle {
+  font-size: var(--text-lg);
+  line-height: 1.2;
+  letter-spacing: var(--tracking-heading);
+  font-weight: 620;
+}
+
+.suggestText {
+  margin-top: var(--space-3);
+  max-width: var(--measure);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.suggestLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.suggestAction {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    border-color var(--dur-micro) var(--ease-out),
+    transform var(--dur-micro) var(--ease-out);
+}
+
+.suggestAction:hover {
+  border-color: var(--ink);
+}
+
+.suggestAction:active {
+  transform: scale(0.97);
+}
+
+/* A text link on its own line on a phone still gets a 24 px target. */
+.suggestLinks a:not(.suggestAction) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+}
+
 @media (max-width: 860px) {
   .run {
     grid-template-columns: 1fr;
     gap: var(--space-6);
   }
+
+  .suggest {
+    gap: var(--space-4);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .submit {
+  .submit,
+  .suggestAction {
     transition: none;
   }
 }

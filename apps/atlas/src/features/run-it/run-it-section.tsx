@@ -1,6 +1,7 @@
 import { SectionHead } from '@/ui';
 import { RunForm } from './run-form';
 import styles from './run-it.module.css';
+import { SuggestSystem } from './suggest-system';
 
 const steps = [
   'Your story’s play function brings the component to the starting state',
@@ -15,7 +16,10 @@ interface RunItSectionProps {
   startingState: string;
 }
 
-/** "Run it on your component": what the product will do, and a way to say you want it. */
+/**
+ * "Run it on your component": what the product will do with a team's own story (not open yet),
+ * and below it the path that is open, suggesting a public design system.
+ */
 export function RunItSection({ patternId, scenarioCount, startingState }: RunItSectionProps) {
   return (
     <section className={styles.run} aria-labelledby="run-title">
@@ -42,6 +46,7 @@ export function RunItSection({ patternId, scenarioCount, startingState }: RunItS
         </ol>
       </div>
       <RunForm storyName={`${patternId}--for-earshot`} />
+      <SuggestSystem patternId={patternId} scenarioCount={scenarioCount} />
     </section>
   );
 }

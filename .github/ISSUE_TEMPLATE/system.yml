@@ -1,0 +1,41 @@
+name: Suggest a system
+description: A public design system that Earshot Atlas should measure for a pattern.
+title: 'System for '
+labels: ['system']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. A system is measured for a pattern when its maintainers ship a component for it, or document it as a composition of their own published components. Community packages, third-party wrappers and compositions we would design ourselves are not counted. If the system qualifies, we write an adapter, the engine runs the pattern's scenarios, and the result is published with its version, browser and date. If it does not, this issue is answered with the reason.
+  - type: input
+    id: system
+    attributes:
+      label: Design system
+      placeholder: Chakra UI
+    validations:
+      required: true
+  - type: input
+    id: pattern
+    attributes:
+      label: Pattern
+      description: The pattern's id on Atlas.
+      placeholder: combobox
+    validations:
+      required: true
+  - type: input
+    id: docs
+    attributes:
+      label: Where its docs show the pattern
+      description: The page of the component, or of the documented example that builds it.
+    validations:
+      required: true
+  - type: input
+    id: package
+    attributes:
+      label: Published package
+      placeholder: '@chakra-ui/react'
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything we should know
+      description: For example, which of several similar components is the one for this pattern.
