@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React Aria Tabs · Earshot harness</title>
+    <link rel="stylesheet" href="../shared/page.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Focusable fields before and after the component, as on the reference page (ADR 0005). -->
+      <label for="project-name">Project name</label>
+      <input id="project-name" type="text" value="Earshot Atlas" />
+      <div id="component" data-earshot-root></div>
+      <label for="notes">Notes</label>
+      <input id="notes" type="text" />
+    </main>
+    <script type="module" src="./src/tabs.tsx"></script>
+  </body>
+</html>

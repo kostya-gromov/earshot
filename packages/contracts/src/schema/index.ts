@@ -22,6 +22,7 @@ export {
   Verdict,
   VerdictResult,
   PopupState,
+  TabSetState,
 } from './observation.ts';
 export { Measurement, Provenance, SystemVersion, Target } from './measurement.ts';
 export { checkMeasurementAgainstPattern } from './measurement-checks.ts';

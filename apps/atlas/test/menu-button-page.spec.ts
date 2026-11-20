@@ -16,7 +16,7 @@ test('the page is one of the patterns, and nothing is left at the preview addres
     .locator('main p')
     .filter({ hasText: /^Pattern/ })
     .first();
-  await expect(kicker).toContainText('3 of 3');
+  await expect(kicker).toContainText('3 of 4');
   await expect(page.getByRole('link', { name: 'Patterns', exact: true })).toHaveAttribute(
     'href',
     '/#patterns',
@@ -55,7 +55,7 @@ test('a note recorded on a variant shows that recording’s provenance and its f
   );
   // Its own line: version, browser, engine and date, as on every measured card.
   await expect(note).toContainText(
-    /Fluent 2 9\.75\.2, Chromium [\d.]+ on macOS, engine \d+\.\d+\.\d+, 17 Nov 2026\./,
+    /Fluent 2 9\.75\.2, Chromium [\d.]+ on macOS, engine \d+\.\d+\.\d+, 19 Nov 2026\./,
   );
   const link = note.getByRole('link', { name: 'Raw JSON of this recording' });
   const response = await page.request.get((await link.getAttribute('href')) ?? '');

@@ -55,8 +55,14 @@ export function attachSpeech(root: HTMLElement, say: Say): () => void {
   const input = root.querySelector('input');
   const pointer = pointerGesture(root, say);
   const onFocus = (event: FocusEvent) => {
-    if (!(event.target instanceof Element) || pointer.isHolding()) return;
-    say(focusLine(event.target), 'focus');
+    const { target } = event;
+    if (!(target instanceof Element) || pointer.isHolding()) return;
+    // Read once the handler that moved focus has finished, as the engine reads a step after it:
+    // the reference's tabs focus a tab and then select it, and a line read at the moment focus
+    // landed left "selected" out (design review, 2026-11-20).
+    queueMicrotask(() => {
+      if (document.activeElement === target) say(focusLine(target), 'focus');
+    });
   };
   // The same key is heard twice on the root: on the way down, before the reference's handler on
   // the input moves the active option, and on the way up, right after it. Two keys inside one

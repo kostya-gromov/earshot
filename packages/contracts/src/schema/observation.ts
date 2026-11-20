@@ -49,6 +49,11 @@ export const FocusInfo = z.strictObject({
    * would read a focused menu item as focus that left the component (ADR 0003, 2026-11-16).
    */
   isInsidePopup: z.boolean().optional(),
+  /**
+   * For adapters that declare panels (tabs): focus is on, or inside, a panel that is in the
+   * accessibility tree. A panel left out of the tree cannot hold focus, so this is the shown one.
+   */
+  isInsidePanel: z.boolean().optional(),
   /** Resolved aria-activedescendant, for patterns that move virtual focus. */
   activeDescendant: AccessibleNode.optional(),
   /**
@@ -120,6 +125,19 @@ export const PopupState = z.strictObject({
 });
 export type PopupState = z.infer<typeof PopupState>;
 
+/**
+ * Every tab and every shown panel at one moment, as the accessibility tree exposes them (tabs,
+ * engine 0.17.0). The rules judge the whole set, not only the focused tab: one tab selected,
+ * one panel shown and named by it.
+ */
+export const TabSetState = z.strictObject({
+  /** The tabs in DOM order; a tab the tree leaves out is not listed. */
+  tabs: z.array(AccessibleNode),
+  /** The panels that are in the accessibility tree, in DOM order. */
+  panels: z.array(AccessibleNode),
+});
+export type TabSetState = z.infer<typeof TabSetState>;
+
 export const Action = z.discriminatedUnion('type', [
   z.strictObject({ type: z.literal('press'), key: NonEmpty }),
   z.strictObject({ type: z.literal('type'), text: z.string() }),
@@ -141,6 +159,8 @@ export const Step = z.strictObject({
    * action. Systems often render it outside the component root, where `axDiff` does not look.
    */
   popup: z.strictObject({ before: PopupState, after: PopupState }).optional(),
+  /** For adapters that declare panels (tabs): the tab set before and after the action. */
+  tabSet: z.strictObject({ before: TabSetState, after: TabSetState }).optional(),
   /**
    * For adapters that declare where the page shows what an action did (ADR 0003, 2026-11-16):
    * that element's text before and after the step, empty when it is not on the page. A measured

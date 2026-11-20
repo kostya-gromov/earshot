@@ -14,10 +14,10 @@
   },
   "provenance": {
     "status": "measured",
-    "engineVersion": "0.16.4",
+    "engineVersion": "0.17.0",
     "browser": "chromium 156.0.8078.4",
     "os": "darwin",
-    "measuredAt": "2026-11-17T13:16:17.085Z",
+    "measuredAt": "2026-11-19T17:30:31.839Z",
     "runs": 3,
     "consistent": true
   },
@@ -84,7 +84,7 @@
                 ]
               },
               "settle": {
-                "ms": 514,
+                "ms": 516,
                 "quiet": true
               },
               "popup": {
@@ -199,7 +199,7 @@
                 ]
               },
               "settle": {
-                "ms": 515,
+                "ms": 514,
                 "quiet": true
               },
               "popup": {
@@ -439,7 +439,7 @@
                 ]
               },
               "settle": {
-                "ms": 513,
+                "ms": 518,
                 "quiet": true
               },
               "popup": {
@@ -554,7 +554,7 @@
                 ]
               },
               "settle": {
-                "ms": 618,
+                "ms": 514,
                 "quiet": true
               },
               "popup": {
@@ -669,7 +669,7 @@
                 ]
               },
               "settle": {
-                "ms": 608,
+                "ms": 626,
                 "quiet": true
               },
               "popup": {
@@ -793,237 +793,237 @@
                 ]
               },
               "settle": {
-                "ms": 620,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Rename, menuitem, 1 of 4"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Actions",
-                "states": {
-                  "invalid": false,
-                  "hasPopup": "menu"
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Actions"
-                    },
-                    "property": "expanded",
-                    "before": null,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 617,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Rename, menuitem, 1 of 4"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Actions",
-                "states": {
-                  "invalid": false,
-                  "hasPopup": "menu"
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Actions"
-                    },
-                    "property": "expanded",
-                    "before": null,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
                 "ms": 514,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Rename, menuitem, 1 of 4"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Actions",
+                "states": {
+                  "invalid": false,
+                  "hasPopup": "menu"
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Actions"
+                    },
+                    "property": "expanded",
+                    "before": null,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 513,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Rename, menuitem, 1 of 4"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Actions",
+                "states": {
+                  "invalid": false,
+                  "hasPopup": "menu"
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Actions"
+                    },
+                    "property": "expanded",
+                    "before": null,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 518,
                 "quiet": true
               },
               "popup": {
@@ -1093,6 +1093,82 @@
       ],
       "initialState": "button focused, menu closed, no action run",
       "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowUp"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Actions",
+                "states": {
+                  "invalid": false,
+                  "hasPopup": "menu"
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Actions",
+                "states": {
+                  "invalid": false,
+                  "hasPopup": "menu"
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": []
+            }
+          ]
+        },
         {
           "status": "completed",
           "steps": [
@@ -1210,83 +1286,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowUp"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Actions",
-                "states": {
-                  "invalid": false,
-                  "hasPopup": "menu"
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Actions",
-                "states": {
-                  "invalid": false,
-                  "hasPopup": "menu"
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 401,
+                "ms": 416,
                 "quiet": true
               },
               "popup": {
@@ -1385,7 +1385,7 @@
                 ]
               },
               "settle": {
-                "ms": 629,
+                "ms": 630,
                 "quiet": true
               },
               "popup": {
@@ -1488,7 +1488,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 412,
                 "quiet": true
               },
               "popup": {
@@ -1615,7 +1615,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 403,
                 "quiet": true
               },
               "popup": {
@@ -1754,7 +1754,7 @@
                 ]
               },
               "settle": {
-                "ms": 513,
+                "ms": 617,
                 "quiet": true
               },
               "popup": {
@@ -1857,7 +1857,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 409,
                 "quiet": true
               },
               "popup": {
@@ -2123,7 +2123,7 @@
                 ]
               },
               "settle": {
-                "ms": 515,
+                "ms": 619,
                 "quiet": true
               },
               "popup": {
@@ -2226,7 +2226,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 401,
                 "quiet": true
               },
               "popup": {
@@ -2353,7 +2353,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
+                "ms": 412,
                 "quiet": true
               },
               "popup": {
@@ -2605,518 +2605,6 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Delete, menuitem, 4 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Delete",
-                "posInSet": 4,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 4,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 407,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Rename, menuitem, 1 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Duplicate",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 412,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Duplicate, menuitem, 2 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Duplicate",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Archive",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "disabled": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4)",
-                "element": 5
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 402,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Archive, menuitem, 3 of 4, unavailable"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Archive",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "disabled": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4)",
-                "element": 5
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Delete",
-                "posInSet": 4,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 4,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
                 "ms": 403,
                 "quiet": true
               },
@@ -3244,376 +2732,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Rename, menuitem, 1 of 4"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Actions",
-                "states": {
-                  "invalid": false,
-                  "hasPopup": "menu"
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Actions"
-                    },
-                    "property": "expanded",
-                    "before": null,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 516,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Rename, menuitem, 1 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowUp"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Delete",
-                "posInSet": 4,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 4,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 401,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Delete, menuitem, 4 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Delete",
-                "posInSet": 4,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 4,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 414,
+                "ms": 411,
                 "quiet": true
               },
               "popup": {
@@ -3869,7 +2988,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
+                "ms": 408,
                 "quiet": true
               },
               "popup": {
@@ -4125,7 +3244,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 412,
                 "quiet": true
               },
               "popup": {
@@ -4264,7 +3383,7 @@
                 ]
               },
               "settle": {
-                "ms": 628,
+                "ms": 516,
                 "quiet": true
               },
               "popup": {
@@ -4367,7 +3486,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 417,
+                "ms": 406,
                 "quiet": true
               },
               "popup": {
@@ -4494,7 +3613,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 406,
+                "ms": 404,
                 "quiet": true
               },
               "popup": {
@@ -4621,7 +3740,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
+                "ms": 409,
                 "quiet": true
               },
               "popup": {
@@ -4750,7 +3869,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 405,
                 "quiet": true
               },
               "popup": {
@@ -4879,7 +3998,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 407,
+                "ms": 414,
                 "quiet": true
               },
               "popup": {
@@ -5006,7 +4125,888 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 414,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Rename, menuitem, 1 of 4"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Actions",
+                "states": {
+                  "invalid": false,
+                  "hasPopup": "menu"
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Actions"
+                    },
+                    "property": "expanded",
+                    "before": null,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 512,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Rename, menuitem, 1 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowUp"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Delete",
+                "posInSet": 4,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 4,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Delete, menuitem, 4 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Delete",
+                "posInSet": 4,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 4,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Rename, menuitem, 1 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Duplicate",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Duplicate, menuitem, 2 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Duplicate",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Archive",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "disabled": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4)",
+                "element": 5
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Archive, menuitem, 3 of 4, unavailable"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Archive",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "disabled": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4)",
+                "element": 5
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Delete",
+                "posInSet": 4,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 4,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Delete, menuitem, 4 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Delete",
+                "posInSet": 4,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 4,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
                 "quiet": true
               },
               "popup": {
@@ -5258,7 +5258,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
+                "ms": 411,
                 "quiet": true
               },
               "popup": {
@@ -5385,7 +5385,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 408,
+                "ms": 403,
                 "quiet": true
               },
               "popup": {
@@ -5504,6 +5504,133 @@
                 "isInsidePopup": true,
                 "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
                 "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Delete, menuitem, 4 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Home"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Delete",
+                "posInSet": 4,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 4,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
               },
               "announcements": [],
               "axDiff": {
@@ -5592,133 +5719,6 @@
                 "after": "Last action: none"
               },
               "speech": [
-                "Delete, menuitem, 4 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Home"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Delete",
-                "posInSet": 4,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 4,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 412,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
                 "Rename, menuitem, 1 of 4"
               ]
             }
@@ -5778,7 +5778,7 @@
                 ]
               },
               "settle": {
-                "ms": 629,
+                "ms": 625,
                 "quiet": true
               },
               "popup": {
@@ -5881,261 +5881,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Delete, menuitem, 4 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Home"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Delete",
-                "posInSet": 4,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 4,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 408,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Rename, menuitem, 1 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "End"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Delete",
-                "posInSet": 4,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 4,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 406,
+                "ms": 405,
                 "quiet": true
               },
               "popup": {
@@ -6344,126 +6090,11 @@
               "speech": [
                 "Rename, menuitem, 1 of 4"
               ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Actions",
-                "states": {
-                  "invalid": false,
-                  "hasPopup": "menu"
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Actions"
-                    },
-                    "property": "expanded",
-                    "before": null,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 512,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Rename, menuitem, 1 of 4"
-              ]
             },
             {
               "action": {
                 "type": "press",
-                "key": "ArrowUp"
+                "key": "End"
               },
               "focusBefore": {
                 "role": "menuitem",
@@ -6504,7 +6135,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 404,
                 "quiet": true
               },
               "popup": {
@@ -6713,11 +6344,126 @@
               "speech": [
                 "Rename, menuitem, 1 of 4"
               ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Actions",
+                "states": {
+                  "invalid": false,
+                  "hasPopup": "menu"
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Actions"
+                    },
+                    "property": "expanded",
+                    "before": null,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 516,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Rename, menuitem, 1 of 4"
+              ]
             },
             {
               "action": {
                 "type": "press",
-                "key": "End"
+                "key": "ArrowUp"
               },
               "focusBefore": {
                 "role": "menuitem",
@@ -6758,7 +6504,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 408,
                 "quiet": true
               },
               "popup": {
@@ -6886,6 +6632,260 @@
               },
               "settle": {
                 "ms": 409,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Rename, menuitem, 1 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "End"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Delete",
+                "posInSet": 4,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 4,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Delete, menuitem, 4 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Home"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Delete",
+                "posInSet": 4,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 4,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(5)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
                 "quiet": true
               },
               "popup": {
@@ -7137,7 +7137,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 406,
+                "ms": 410,
                 "quiet": true
               },
               "popup": {
@@ -7240,137 +7240,6 @@
                 "isInsidePopup": true,
                 "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
                 "element": 3
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Archive",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "disabled": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4)",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Archive, menuitem, 3 of 4, unavailable"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Archive",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "disabled": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4)",
-                "element": 4
               },
               "focusAfter": {
                 "role": "menuitem",
@@ -7476,6 +7345,137 @@
                 "before": "Last action: none",
                 "after": "Last action: none"
               },
+              "speech": [
+                "Archive, menuitem, 3 of 4, unavailable"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Archive",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "disabled": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4)",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Archive",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "disabled": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4)",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
               "speech": []
             }
           ]
@@ -7534,7 +7534,7 @@
                 ]
               },
               "settle": {
-                "ms": 615,
+                "ms": 515,
                 "quiet": true
               },
               "popup": {
@@ -7637,7 +7637,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 407,
                 "quiet": true
               },
               "popup": {
@@ -7766,7 +7766,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
+                "ms": 412,
                 "quiet": true
               },
               "popup": {
@@ -7897,7 +7897,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 417,
                 "quiet": true
               },
               "popup": {
@@ -8034,7 +8034,7 @@
                 ]
               },
               "settle": {
-                "ms": 619,
+                "ms": 516,
                 "quiet": true
               },
               "popup": {
@@ -8137,7 +8137,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 400,
                 "quiet": true
               },
               "popup": {
@@ -8397,7 +8397,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 406,
+                "ms": 404,
                 "quiet": true
               },
               "popup": {
@@ -8647,7 +8647,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
+                "ms": 409,
                 "quiet": true
               },
               "popup": {
@@ -8781,7 +8781,359 @@
                 ]
               },
               "settle": {
-                "ms": 416,
+                "ms": 409,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Actions, button, has popup menu"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Actions",
+                "states": {
+                  "invalid": false,
+                  "hasPopup": "menu"
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Actions"
+                    },
+                    "property": "expanded",
+                    "before": null,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 512,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Rename, menuitem, 1 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Duplicate",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Duplicate, menuitem, 2 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Escape"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Duplicate",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Actions",
+                "states": {
+                  "invalid": false,
+                  "hasPopup": "menu"
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Actions"
+                    },
+                    "property": "expanded",
+                    "before": true,
+                    "after": null
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 408,
                 "quiet": true
               },
               "popup": {
@@ -8999,359 +9351,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Duplicate, menuitem, 2 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Escape"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Duplicate",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Actions",
-                "states": {
-                  "invalid": false,
-                  "hasPopup": "menu"
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Actions"
-                    },
-                    "property": "expanded",
-                    "before": true,
-                    "after": null
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 410,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Actions, button, has popup menu"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Actions",
-                "states": {
-                  "invalid": false,
-                  "hasPopup": "menu"
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Actions"
-                    },
-                    "property": "expanded",
-                    "before": null,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 516,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Rename, menuitem, 1 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Duplicate",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3)",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 407,
+                "ms": 406,
                 "quiet": true
               },
               "popup": {
@@ -9611,7 +9611,7 @@
                 ]
               },
               "settle": {
-                "ms": 515,
+                "ms": 516,
                 "quiet": true
               },
               "popup": {
@@ -9714,7 +9714,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 414,
                 "quiet": true
               },
               "popup": {
@@ -9848,7 +9848,7 @@
                 ]
               },
               "settle": {
-                "ms": 401,
+                "ms": 402,
                 "quiet": true
               },
               "popup": {
@@ -9963,7 +9963,7 @@
                 ]
               },
               "settle": {
-                "ms": 627,
+                "ms": 515,
                 "quiet": true
               },
               "popup": {
@@ -10066,7 +10066,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 402,
+                "ms": 404,
                 "quiet": true
               },
               "popup": {
@@ -10315,7 +10315,7 @@
                 ]
               },
               "settle": {
-                "ms": 513,
+                "ms": 630,
                 "quiet": true
               },
               "popup": {
@@ -10418,7 +10418,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 406,
+                "ms": 401,
                 "quiet": true
               },
               "popup": {
@@ -10552,7 +10552,7 @@
                 ]
               },
               "settle": {
-                "ms": 404,
+                "ms": 403,
                 "quiet": true
               },
               "popup": {
@@ -10677,6 +10677,456 @@
                 ]
               },
               "settle": {
+                "ms": 512,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Rename, menuitem, 1 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Note",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePopup": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#note",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Actions"
+                    },
+                    "property": "expanded",
+                    "before": true,
+                    "after": null
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Note, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Actions",
+                "states": {
+                  "invalid": false,
+                  "hasPopup": "menu"
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Actions"
+                    },
+                    "property": "expanded",
+                    "before": null,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 513,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Rename, menuitem, 1 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Note",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePopup": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#note",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Actions"
+                    },
+                    "property": "expanded",
+                    "before": true,
+                    "after": null
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "menuitem",
+                      "name": "Rename",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Duplicate",
+                      "states": {}
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Archive",
+                      "states": {
+                        "disabled": true
+                      }
+                    },
+                    {
+                      "role": "menuitem",
+                      "name": "Delete",
+                      "states": {}
+                    }
+                  ],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "button",
+                    "name": "Actions",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "effect": {
+                "before": "Last action: none",
+                "after": "Last action: none"
+              },
+              "speech": [
+                "Note, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Actions",
+                "states": {
+                  "invalid": false,
+                  "hasPopup": "menu"
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "menuitem",
+                "name": "Rename",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePopup": true,
+                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Actions"
+                    },
+                    "property": "expanded",
+                    "before": null,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
                 "ms": 514,
                 "quiet": true
               },
@@ -10787,457 +11237,7 @@
                 ]
               },
               "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Note, textbox"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Actions",
-                "states": {
-                  "invalid": false,
-                  "hasPopup": "menu"
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Actions"
-                    },
-                    "property": "expanded",
-                    "before": null,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 628,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Rename, menuitem, 1 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Note",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsidePopup": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#note",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Actions"
-                    },
-                    "property": "expanded",
-                    "before": true,
-                    "after": null
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 417,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Note, textbox"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Actions",
-                "states": {
-                  "invalid": false,
-                  "hasPopup": "menu"
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "body:nth-child(2) > main:nth-child(1) > div#component > div:nth-child(1) > button#menu_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Actions"
-                    },
-                    "property": "expanded",
-                    "before": null,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 517,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": [],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "menuitem",
-                      "name": "Rename",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Duplicate",
-                      "states": {}
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Archive",
-                      "states": {
-                        "disabled": true
-                      }
-                    },
-                    {
-                      "role": "menuitem",
-                      "name": "Delete",
-                      "states": {}
-                    }
-                  ],
-                  "opener": {
-                    "role": "button",
-                    "name": "Actions",
-                    "states": {
-                      "expanded": true,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "effect": {
-                "before": "Last action: none",
-                "after": "Last action: none"
-              },
-              "speech": [
-                "Rename, menuitem, 1 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "menuitem",
-                "name": "Rename",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePopup": true,
-                "path": "body:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Note",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsidePopup": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#note",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Actions"
-                    },
-                    "property": "expanded",
-                    "before": true,
-                    "after": null
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 413,
+                "ms": 401,
                 "quiet": true
               },
               "popup": {
@@ -11361,7 +11361,7 @@
                 ]
               },
               "settle": {
-                "ms": 617,
+                "ms": 515,
                 "quiet": true
               },
               "popup": {
@@ -11464,7 +11464,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 408,
                 "quiet": true
               },
               "popup": {
@@ -11603,7 +11603,7 @@
                 ]
               },
               "settle": {
-                "ms": 616,
+                "ms": 517,
                 "quiet": true
               },
               "popup": {
@@ -11706,7 +11706,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 407,
                 "quiet": true
               },
               "popup": {
@@ -11948,7 +11948,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 410,
                 "quiet": true
               },
               "popup": {

@@ -12,27 +12,44 @@ function roleOf(element: Element): string {
   return element.localName;
 }
 
+/** The text of the elements aria-labelledby names, as a tab panel is named by its tab. */
+function labelledByText(element: Element): string {
+  const ids = element.getAttribute('aria-labelledby')?.split(/\s+/).filter(Boolean) ?? [];
+  return ids
+    .map((id) => document.getElementById(id)?.textContent?.trim() ?? '')
+    .filter(Boolean)
+    .join(' ');
+}
+
 function nameOf(element: Element): string {
+  const labelledBy = labelledByText(element);
+  if (labelledBy) return labelledBy;
   const label = element.getAttribute('aria-label');
   if (label) return label;
   const labelled = element.id ? document.querySelector(`label[for="${element.id}"]`) : null;
   return (labelled ?? element).textContent?.trim() ?? '';
 }
 
-/** "3 of 3" for an item in a list, as screen readers say it for list items. */
+/** "3 of 3" for an item in a list, as screen readers say it for list items, and for a tab. */
 export function positionOf(element: Element): string {
+  if (element.getAttribute('role') === 'tab' && element.parentElement) {
+    const tabs = [...element.parentElement.querySelectorAll(':scope > [role="tab"]')];
+    return `${tabs.indexOf(element) + 1} of ${tabs.length}`;
+  }
   const item = element.closest('li');
   if (!item?.parentElement) return '';
   const items = [...item.parentElement.children].filter((node) => node.localName === 'li');
   return `${items.indexOf(item) + 1} of ${items.length}`;
 }
 
-/** "expanded" or "collapsed", then "unavailable" for a disabled item, as the engine words them. */
+/** "expanded" or "collapsed", "unavailable" for a disabled item, "selected" for the selected tab. */
 function stateOf(element: Element): string {
   const expanded = element.getAttribute('aria-expanded');
   const states = [
     expanded === null ? '' : expanded === 'true' ? 'expanded' : 'collapsed',
     element.getAttribute('aria-disabled') === 'true' ? 'unavailable' : '',
+    // Options say it in optionLine; a tab says it here, as the engine words it.
+    roleOf(element) === 'tab' && element.getAttribute('aria-selected') === 'true' ? 'selected' : '',
   ];
   return states.filter(Boolean).join(', ');
 }

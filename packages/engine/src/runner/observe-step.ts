@@ -6,11 +6,13 @@ import type {
   InsertedRegion,
   PopupState,
   Settle,
+  TabSetState,
 } from '@earshot/contracts';
 import { readAxSubtree } from '../capture/ax-tree.ts';
 import { readFocus } from '../capture/focus.ts';
 import { drainAnnouncements, drainInsertedRegions, pageNow } from '../capture/live-regions.ts';
 import { readPopup } from '../capture/popup.ts';
+import { readTabSet } from '../capture/tab-set.ts';
 import type { Adapter } from '../adapters/adapter.ts';
 import { announcementsInWindow, insertedRegionsInWindow } from '../model/announcements.ts';
 import type { AxEntry } from '../model/ax-tree.ts';
@@ -31,6 +33,8 @@ export interface StepObservation {
   popup?: { before: PopupState; after: PopupState };
   /** Only for adapters that declare an effect element. */
   effect?: { before: string; after: string };
+  /** Only for adapters that declare panels (tabs). */
+  tabSet?: { before: TabSetState; after: TabSetState };
 }
 
 type Role = Parameters<Page['getByRole']>[0];
@@ -87,13 +91,36 @@ async function withPopup<State, InteractionId extends string>(
   return { ...focus, isInsidePopup };
 }
 
-/** Focus with the places the adapter knows: which item, and whether it is in the popup. */
+/** For adapters with panels (tabs): whether focus is on or inside a panel. */
+async function withPanel<State, InteractionId extends string>(
+  page: Page,
+  adapter: Adapter<State, InteractionId>,
+  focus: FocusInfo,
+): Promise<FocusInfo> {
+  if (!adapter.panels) return focus;
+  const isInsidePanel = await adapter.panels.locate(page).evaluateAll((panels) => {
+    const active = window.__earshot.deepActiveElement();
+    return active !== null && panels.some((panel) => panel.contains(active));
+  });
+  return { ...focus, isInsidePanel };
+}
+
+/** Focus with the places the adapter knows: which item, in the popup, in a panel. */
 async function focusNow<State, InteractionId extends string>(
   session: Session,
   adapter: Adapter<State, InteractionId>,
 ): Promise<FocusInfo> {
   const focus = await withItem(session.page, adapter, await readFocus(session.cdp));
-  return withPopup(session.page, adapter, focus);
+  return withPanel(session.page, adapter, await withPopup(session.page, adapter, focus));
+}
+
+/** Every tab and every shown panel now, for adapters that declare panels. */
+async function tabSetNow<State, InteractionId extends string>(
+  session: Session,
+  adapter: Adapter<State, InteractionId>,
+): Promise<TabSetState | undefined> {
+  if (!adapter.panels) return undefined;
+  return readTabSet(session, { tabs: adapter.items.locate, panels: adapter.panels.locate });
 }
 
 /** What the page says the last action was, for adapters that declare where it says so. */
@@ -136,6 +163,7 @@ export async function observeStep<State, InteractionId extends string>(
   const focusBefore = await focusNow(session, adapter);
   const popupBefore = await popupNow(session, adapter);
   const effectBefore = await effectNow(page, adapter);
+  const tabSetBefore = await tabSetNow(session, adapter);
   await drainAnnouncements(page); // anything before this step is not this step's
   await drainInsertedRegions(page);
   const start = await pageNow(page);
@@ -148,7 +176,11 @@ export async function observeStep<State, InteractionId extends string>(
   const insertedRegions = insertedRegionsInWindow(await drainInsertedRegions(page), { start, end });
   const popupAfter = await popupNow(session, adapter);
   const effectAfter = await effectNow(page, adapter);
+  const tabSetAfter = await tabSetNow(session, adapter);
   return {
+    ...(tabSetBefore && tabSetAfter
+      ? { tabSet: { before: tabSetBefore, after: tabSetAfter } }
+      : {}),
     ...(effectBefore !== undefined && effectAfter !== undefined
       ? { effect: { before: effectBefore, after: effectAfter } }
       : {}),

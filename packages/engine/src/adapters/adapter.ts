@@ -45,6 +45,12 @@ export interface Adapter<State, InteractionId extends string> {
    * around every step.
    */
   effect?: { locate: (page: Page) => Locator; description: string };
+  /**
+   * Tabs only: the tab panels, shown or not, wherever the system renders them. The tabs are
+   * `items`. The engine records every tab and every shown panel around each step, and whether
+   * focus is inside a shown panel.
+   */
+  panels?: { locate: (page: Page) => Locator; description: string };
   ready: (page: Page) => Promise<void>;
   setup: (page: Page, state: State) => Promise<SetupResult>;
   resolveClickTarget: (page: Page, id: InteractionId) => Promise<ResolveClickResult>;

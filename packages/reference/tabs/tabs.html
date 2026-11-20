@@ -1,0 +1,91 @@
+<div class="tabs" data-tabs>
+  <!-- Roving tabindex: only the active tab is a Tab stop. tabs.js keeps the attributes in step. -->
+  <div class="tabs__list" role="tablist" aria-label="Project">
+    <button
+      type="button"
+      class="tabs__tab"
+      role="tab"
+      id="tab-overview"
+      aria-controls="panel-overview"
+      aria-selected="true"
+    >
+      Overview
+    </button>
+    <button
+      type="button"
+      class="tabs__tab"
+      role="tab"
+      id="tab-activity"
+      aria-controls="panel-activity"
+      aria-selected="false"
+      tabindex="-1"
+    >
+      Activity
+    </button>
+    <button
+      type="button"
+      class="tabs__tab"
+      role="tab"
+      id="tab-members"
+      aria-controls="panel-members"
+      aria-selected="false"
+      tabindex="-1"
+    >
+      Members
+    </button>
+    <button
+      type="button"
+      class="tabs__tab"
+      role="tab"
+      id="tab-settings"
+      aria-controls="panel-settings"
+      aria-selected="false"
+      tabindex="-1"
+    >
+      Settings
+    </button>
+  </div>
+
+  <!-- Every panel is a Tab stop (tabindex="0"): three of them hold plain text, and APG recommends
+       that all panels in a set are focusable when any of them starts with content that is not. -->
+  <div
+    class="tabs__panel"
+    role="tabpanel"
+    id="panel-overview"
+    aria-labelledby="tab-overview"
+    tabindex="0"
+  >
+    <p>Earshot Atlas measures how design systems behave for keyboard and screen reader users.</p>
+  </div>
+  <div
+    class="tabs__panel"
+    role="tabpanel"
+    id="panel-activity"
+    aria-labelledby="tab-activity"
+    tabindex="0"
+    hidden
+  >
+    <p>Recent changes to the project appear here.</p>
+  </div>
+  <!-- Starts with a link, the only element in any panel that takes focus. -->
+  <div
+    class="tabs__panel"
+    role="tabpanel"
+    id="panel-members"
+    aria-labelledby="tab-members"
+    tabindex="0"
+    hidden
+  >
+    <p><a href="#members">Invite people</a> to review the measurements with you.</p>
+  </div>
+  <div
+    class="tabs__panel"
+    role="tabpanel"
+    id="panel-settings"
+    aria-labelledby="tab-settings"
+    tabindex="0"
+    hidden
+  >
+    <p>Settings take effect on the next measurement.</p>
+  </div>
+</div>

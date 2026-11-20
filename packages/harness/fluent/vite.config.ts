@@ -6,7 +6,13 @@ const { plugin, ...config } = harnessConfig({
   from: import.meta.url,
   system: 'fluent',
   measuredPackage: '@fluentui/react-components',
-  pages: ['index.html', 'combobox.html', 'menu-button.html', 'menu-button-default-story.html'],
+  pages: [
+    'index.html',
+    'combobox.html',
+    'menu-button.html',
+    'menu-button-default-story.html',
+    'tabs.html',
+  ],
 });
 
 export default defineConfig({ ...config, plugins: [react(), plugin] });

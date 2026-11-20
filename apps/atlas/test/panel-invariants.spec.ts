@@ -64,6 +64,13 @@ const pages = [
     systemShift: 0,
     listShift: 0,
   },
+  {
+    id: 'tabs',
+    path: '/patterns/tabs/',
+    rule: /Tab reaches the shown panel/,
+    systemShift: 0,
+    listShift: 0,
+  },
 ] as const;
 const sizes = [
   { width: 1440, height: 900 },

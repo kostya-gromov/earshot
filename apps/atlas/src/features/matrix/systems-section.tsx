@@ -36,6 +36,14 @@ const gridScenariosByPattern: Readonly<Record<string, readonly GridScenario[]>> 
     { id: 'activate', label: 'Enter on an item', ruleId: 'activate' },
     { id: 'ends', label: 'Arrows at both ends', ruleId: 'arrows' },
   ],
+  // Where the measured systems part: the panel after Tab, and how a tab is activated.
+  tabs: [
+    { id: 'tab-out-text', label: 'Tab from a tab', ruleId: 'panel-reachable' },
+    { id: 'activate-enter', label: 'Right Arrow, Enter', ruleId: 'activate' },
+    { id: 'move', label: 'Arrows between tabs', ruleId: 'arrows' },
+    { id: 'tab-in', label: 'Tab into the tabs', ruleId: 'tab-in' },
+    { id: 'ends', label: 'Arrows at both ends', ruleId: 'wrap' },
+  ],
 };
 
 interface SystemsSectionProps {

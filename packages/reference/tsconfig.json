@@ -7,6 +7,7 @@
     "input-with-chips",
     "combobox",
     "menu-button",
+    "tabs",
     "scripts",
     "test",
     "playwright.config.ts"

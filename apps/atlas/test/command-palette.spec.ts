@@ -23,7 +23,7 @@ test('Control+K opens it with focus in the combobox and the first pattern active
   await expect(combobox(page)).toBeFocused();
   await expect(combobox(page)).toHaveAttribute('aria-expanded', 'true');
   expect(await activeOptionName(page)).toBe('Input with chips');
-  await expect(page.getByRole('status').filter({ hasText: 'patterns' })).toHaveText('3 patterns');
+  await expect(page.getByRole('status').filter({ hasText: 'patterns' })).toHaveText('4 patterns');
 });
 
 // Every pattern has a page since 2026-11-16, so none is skipped here; that arrows pass an option
@@ -35,9 +35,11 @@ test('arrows go through every pattern and wrap at both ends', async ({ page }) =
   await page.keyboard.press('ArrowDown');
   expect(await activeOptionName(page)).toBe('Menu button');
   await page.keyboard.press('ArrowDown');
+  expect(await activeOptionName(page)).toBe('Tabs');
+  await page.keyboard.press('ArrowDown');
   expect(await activeOptionName(page)).toBe('Input with chips');
   await page.keyboard.press('ArrowUp');
-  expect(await activeOptionName(page)).toBe('Menu button');
+  expect(await activeOptionName(page)).toBe('Tabs');
   await expect(combobox(page)).toBeFocused();
 });
 
@@ -125,7 +127,7 @@ test.describe('combobox rules', () => {
     page,
   }) => {
     await trigger(page).click();
-    await expect(options(page)).toHaveCount(3);
+    await expect(options(page)).toHaveCount(4);
     await expect(combobox(page)).toHaveAttribute('aria-expanded', 'true');
     await page.keyboard.type('zzz');
     await expect(options(page)).toHaveCount(0);
@@ -158,7 +160,7 @@ test.describe('combobox rules', () => {
     await trigger(page).click();
     const status = page.locator('dialog[open]').getByRole('status');
     // Written into a region that already exists, not inserted together with its text.
-    await expect(status).toHaveText('3 patterns');
+    await expect(status).toHaveText('4 patterns');
     await page.keyboard.type('token');
     await expect(status).toHaveText('1 pattern');
     await page.keyboard.type('zzz');

@@ -1,0 +1,182 @@
+/* The tabs replay: the tab list and the shown panel, drawn from the recording. Blue is focus only;
+   the selected tab is marked by a bar and weight, never by colour (the page's own requirement). */
+.row {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* Room for the focus ring and its halo on every side: the ring is never cut (design review
+   2026-11-19). The list spans the drawing, so its baseline ends where the panel ends. */
+.list {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  min-width: 0;
+  padding: 6px 6px 0;
+  overflow-x: clip;
+  overflow-clip-margin: 6px;
+  box-shadow: inset 0 -1px 0 var(--line-2);
+}
+
+:global([data-size='sm']) .list {
+  padding: 3px 3px 0;
+  overflow-clip-margin: 3px;
+}
+
+/* Wider than the list drawings it shares styles with: four tab names, in capitals where a
+   system's tree gives them so, fit without being cut. */
+.wrap {
+  max-width: 380px;
+}
+
+.tab {
+  flex: none;
+  display: grid;
+  align-items: center;
+  height: calc(var(--row-h) + 6px);
+  padding: 0 8px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  font-size: var(--row-font);
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+:global([data-size='sm']) .tab {
+  padding: 0 3px;
+  font-size: var(--text-2xs);
+}
+
+.tab[data-selected] {
+  color: var(--ink);
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--ink);
+}
+
+/* No selected state in the tree: dashed, like every part known from the recording and not exposed. */
+.tab[data-unstated] {
+  outline: 1px dashed var(--line-strong);
+  outline-offset: -2px;
+}
+
+/* Keyboard focus: the same ring the other replays draw. */
+.tab[data-target] {
+  box-shadow:
+    0 0 0 2px var(--focus),
+    0 0 0 6px var(--focus-soft);
+}
+
+.tab[data-selected][data-target] {
+  /* A 2 px gap between the bar and the ring, as the reference draws it since 0.1.5. */
+  box-shadow:
+    inset 0 -2px 0 var(--ink),
+    0 0 0 2px var(--canvas),
+    0 0 0 4px var(--focus),
+    0 0 0 8px var(--focus-soft);
+}
+
+:global([data-size='sm']) .tab[data-target] {
+  box-shadow: 0 0 0 2px var(--focus);
+}
+
+:global([data-size='sm']) .tab[data-selected][data-target] {
+  box-shadow:
+    inset 0 -2px 0 var(--ink),
+    0 0 0 2px var(--canvas),
+    0 0 0 4px var(--focus);
+}
+
+.panel {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: calc(var(--row-h) + 12px);
+  padding: 0 10px;
+  border-radius: var(--radius-md);
+  background: var(--well);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+  font-size: var(--row-font);
+  color: var(--ink);
+}
+
+/* The word "Panel" is a recorded role, mono like every recorded token; the name is a name. */
+.panelRole {
+  margin-right: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  color: var(--ink-3);
+}
+
+.panel[data-target] {
+  box-shadow:
+    0 0 0 2px var(--focus),
+    0 0 0 6px var(--focus-soft);
+}
+
+.panel[data-missing] {
+  background: none;
+  box-shadow: none;
+  outline: 1px dashed var(--line-strong);
+  outline-offset: -1px;
+}
+
+/* Focus on an element inside the panel, by the name the tree gives it. */
+.inside {
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  color: var(--ink);
+  box-shadow:
+    0 0 0 2px var(--focus),
+    0 0 0 5px var(--focus-soft);
+}
+
+.legendSelected,
+.legendFocus {
+  padding: 0 4px;
+  font-size: var(--text-2xs);
+}
+
+.legendSelected {
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--ink);
+}
+
+.legendFocus {
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 0 2px var(--focus);
+}
+
+@media (forced-colors: active) {
+  .tab[data-selected] {
+    box-shadow: none;
+    border-bottom: 2px solid CanvasText;
+  }
+
+  .tab[data-target],
+  .tab[data-selected][data-target],
+  :global([data-size='sm']) .tab[data-target],
+  :global([data-size='sm']) .tab[data-selected][data-target],
+  .panel[data-target],
+  .inside,
+  .legendFocus {
+    box-shadow: none;
+    outline: 2px solid Highlight;
+    outline-offset: 1px;
+  }
+
+  .panel {
+    box-shadow: none;
+    outline: 1px solid CanvasText;
+    outline-offset: -1px;
+  }
+
+  .legendSelected {
+    box-shadow: none;
+    border-bottom: 2px solid CanvasText;
+  }
+}

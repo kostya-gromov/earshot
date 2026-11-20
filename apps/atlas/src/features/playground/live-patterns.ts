@@ -15,7 +15,7 @@ export interface LivePattern {
   /** The key the empty playground invites: the first thing worth pressing in this pattern. */
   firstKey: string;
   /** Where that key is pressed, as the invitation says it: “Press Enter on the button”. */
-  firstKeyPlace: 'in the field' | 'on the button';
+  firstKeyPlace: 'in the field' | 'on the button' | 'on a tab';
   /** False when the reference has no live region: nothing is ever heard but focus landing. */
   announces: boolean;
   /** "Watch it": the keys a person would press. One character is typed text. */
@@ -31,6 +31,10 @@ interface ChipFieldModule {
 
 interface ComboboxModule {
   createCombobox: (root: HTMLElement, options: { options: readonly string[] }) => Stop;
+}
+
+interface TabsModule {
+  createTabs: (root: HTMLElement) => Stop;
 }
 
 interface MenuButtonModule {
@@ -107,5 +111,14 @@ export const livePatterns: Readonly<Record<string, LivePattern>> = {
     firstKeyPlace: 'on the button',
     announces: false,
     watchSequence: ['Enter', 'ArrowDown', 'ArrowUp', 'ArrowDown', 'Enter'],
+  },
+  tabs: {
+    rootSelector: '[data-tabs]',
+    start: (module, root) => (module as TabsModule).createTabs(root),
+    attach: () => [],
+    firstKey: 'ArrowRight',
+    firstKeyPlace: 'on a tab',
+    announces: false,
+    watchSequence: ['ArrowRight', 'ArrowRight', 'ArrowLeft', 'ArrowLeft', 'ArrowLeft', 'Tab'],
   },
 };

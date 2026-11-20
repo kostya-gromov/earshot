@@ -14,10 +14,10 @@
   },
   "provenance": {
     "status": "measured",
-    "engineVersion": "0.16.4",
+    "engineVersion": "0.17.0",
     "browser": "chromium 156.0.8078.4",
     "os": "darwin",
-    "measuredAt": "2026-11-17T13:06:25.100Z",
+    "measuredAt": "2026-11-19T17:20:41.172Z",
     "runs": 3,
     "consistent": true
   },
@@ -50,7 +50,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria1781189169-_r_3_ > div:nth-child(2) > div#react-aria1781189169-_r_d_ > div#react-aria1781189169-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria4870448912-_r_3_ > div:nth-child(2) > div#react-aria4870448912-_r_d_ > div#react-aria4870448912-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "focusAfter": {
@@ -67,7 +67,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria1781189169-_r_d_ > div#react-aria1781189169-_r_d_-HiroshiMatsui > div:nth-child(1) > button#react-aria1781189169-_r_u_",
+                "path": "div:nth-child(2) > div#react-aria4870448912-_r_d_ > div#react-aria4870448912-_r_d_-HiroshiMatsui > div:nth-child(1) > button#react-aria4870448912-_r_u_",
                 "element": 2
               },
               "announcements": [],
@@ -77,7 +77,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 408,
+                "ms": 412,
                 "quiet": true
               },
               "speech": [
@@ -107,7 +107,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria5951380907-_r_3_ > div:nth-child(2) > div#react-aria5951380907-_r_d_ > div#react-aria5951380907-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria6044327038-_r_3_ > div:nth-child(2) > div#react-aria6044327038-_r_d_ > div#react-aria6044327038-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "focusAfter": {
@@ -124,7 +124,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria5951380907-_r_d_ > div#react-aria5951380907-_r_d_-HiroshiMatsui > div:nth-child(1) > button#react-aria5951380907-_r_u_",
+                "path": "div:nth-child(2) > div#react-aria6044327038-_r_d_ > div#react-aria6044327038-_r_d_-HiroshiMatsui > div:nth-child(1) > button#react-aria6044327038-_r_u_",
                 "element": 2
               },
               "announcements": [],
@@ -134,7 +134,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 402,
+                "ms": 413,
                 "quiet": true
               },
               "speech": [
@@ -164,7 +164,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria240498282-_r_3_ > div:nth-child(2) > div#react-aria240498282-_r_d_ > div#react-aria240498282-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria5573038156-_r_3_ > div:nth-child(2) > div#react-aria5573038156-_r_d_ > div#react-aria5573038156-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "focusAfter": {
@@ -181,7 +181,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria240498282-_r_d_ > div#react-aria240498282-_r_d_-HiroshiMatsui > div:nth-child(1) > button#react-aria240498282-_r_u_",
+                "path": "div:nth-child(2) > div#react-aria5573038156-_r_d_ > div#react-aria5573038156-_r_d_-HiroshiMatsui > div:nth-child(1) > button#react-aria5573038156-_r_u_",
                 "element": 2
               },
               "announcements": [],
@@ -191,7 +191,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 412,
                 "quiet": true
               },
               "speech": [
@@ -230,7 +230,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria9684178686-_r_3_ > div:nth-child(2) > div#react-aria9684178686-_r_d_ > div#react-aria9684178686-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria6069324290-_r_3_ > div:nth-child(2) > div#react-aria6069324290-_r_d_ > div#react-aria6069324290-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "focusAfter": {
@@ -244,7 +244,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria9684178686-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6069324290-_r_4_",
                 "element": 2
               },
               "announcements": [],
@@ -254,7 +254,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 407,
+                "ms": 409,
                 "quiet": true
               },
               "speech": [
@@ -284,7 +284,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria1083715076-_r_3_ > div:nth-child(2) > div#react-aria1083715076-_r_d_ > div#react-aria1083715076-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria6945854550-_r_3_ > div:nth-child(2) > div#react-aria6945854550-_r_d_ > div#react-aria6945854550-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "focusAfter": {
@@ -298,7 +298,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1083715076-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6945854550-_r_4_",
                 "element": 2
               },
               "announcements": [],
@@ -308,7 +308,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 405,
                 "quiet": true
               },
               "speech": [
@@ -338,7 +338,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria3556169818-_r_3_ > div:nth-child(2) > div#react-aria3556169818-_r_d_ > div#react-aria3556169818-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria8109365206-_r_3_ > div:nth-child(2) > div#react-aria8109365206-_r_d_ > div#react-aria8109365206-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "focusAfter": {
@@ -352,7 +352,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3556169818-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8109365206-_r_4_",
                 "element": 2
               },
               "announcements": [],
@@ -362,7 +362,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 407,
+                "ms": 406,
                 "quiet": true
               },
               "speech": [
@@ -401,7 +401,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria387969512-_r_3_ > div:nth-child(2) > div#react-aria387969512-_r_d_ > div#react-aria387969512-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria6695117761-_r_3_ > div:nth-child(2) > div#react-aria6695117761-_r_d_ > div#react-aria6695117761-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "focusAfter": {
@@ -417,7 +417,7 @@
                   "index": 2,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria387969512-_r_3_ > div:nth-child(2) > div#react-aria387969512-_r_d_ > div#react-aria387969512-_r_d_-GregFisher",
+                "path": "div:nth-child(2) > div#react-aria6695117761-_r_3_ > div:nth-child(2) > div#react-aria6695117761-_r_d_ > div#react-aria6695117761-_r_d_-GregFisher",
                 "element": 2
               },
               "announcements": [],
@@ -452,7 +452,7 @@
                   "index": 2,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria387969512-_r_3_ > div:nth-child(2) > div#react-aria387969512-_r_d_ > div#react-aria387969512-_r_d_-GregFisher",
+                "path": "div:nth-child(2) > div#react-aria6695117761-_r_3_ > div:nth-child(2) > div#react-aria6695117761-_r_d_ > div#react-aria6695117761-_r_d_-GregFisher",
                 "element": 2
               },
               "focusAfter": {
@@ -468,7 +468,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria387969512-_r_3_ > div:nth-child(2) > div#react-aria387969512-_r_d_ > div#react-aria387969512-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria6695117761-_r_3_ > div:nth-child(2) > div#react-aria6695117761-_r_d_ > div#react-aria6695117761-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "announcements": [],
@@ -508,7 +508,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria6228721404-_r_3_ > div:nth-child(2) > div#react-aria6228721404-_r_d_ > div#react-aria6228721404-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria1017528573-_r_3_ > div:nth-child(2) > div#react-aria1017528573-_r_d_ > div#react-aria1017528573-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "focusAfter": {
@@ -524,7 +524,7 @@
                   "index": 2,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria6228721404-_r_3_ > div:nth-child(2) > div#react-aria6228721404-_r_d_ > div#react-aria6228721404-_r_d_-GregFisher",
+                "path": "div:nth-child(2) > div#react-aria1017528573-_r_3_ > div:nth-child(2) > div#react-aria1017528573-_r_d_ > div#react-aria1017528573-_r_d_-GregFisher",
                 "element": 2
               },
               "announcements": [],
@@ -534,7 +534,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 410,
                 "quiet": true
               },
               "speech": [
@@ -559,7 +559,7 @@
                   "index": 2,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria6228721404-_r_3_ > div:nth-child(2) > div#react-aria6228721404-_r_d_ > div#react-aria6228721404-_r_d_-GregFisher",
+                "path": "div:nth-child(2) > div#react-aria1017528573-_r_3_ > div:nth-child(2) > div#react-aria1017528573-_r_d_ > div#react-aria1017528573-_r_d_-GregFisher",
                 "element": 2
               },
               "focusAfter": {
@@ -575,7 +575,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria6228721404-_r_3_ > div:nth-child(2) > div#react-aria6228721404-_r_d_ > div#react-aria6228721404-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria1017528573-_r_3_ > div:nth-child(2) > div#react-aria1017528573-_r_d_ > div#react-aria1017528573-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "announcements": [],
@@ -585,7 +585,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 413,
                 "quiet": true
               },
               "speech": [
@@ -615,7 +615,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria5634635209-_r_3_ > div:nth-child(2) > div#react-aria5634635209-_r_d_ > div#react-aria5634635209-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria1350134285-_r_3_ > div:nth-child(2) > div#react-aria1350134285-_r_d_ > div#react-aria1350134285-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "focusAfter": {
@@ -631,7 +631,7 @@
                   "index": 2,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria5634635209-_r_3_ > div:nth-child(2) > div#react-aria5634635209-_r_d_ > div#react-aria5634635209-_r_d_-GregFisher",
+                "path": "div:nth-child(2) > div#react-aria1350134285-_r_3_ > div:nth-child(2) > div#react-aria1350134285-_r_d_ > div#react-aria1350134285-_r_d_-GregFisher",
                 "element": 2
               },
               "announcements": [],
@@ -641,7 +641,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 406,
                 "quiet": true
               },
               "speech": [
@@ -666,7 +666,7 @@
                   "index": 2,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria5634635209-_r_3_ > div:nth-child(2) > div#react-aria5634635209-_r_d_ > div#react-aria5634635209-_r_d_-GregFisher",
+                "path": "div:nth-child(2) > div#react-aria1350134285-_r_3_ > div:nth-child(2) > div#react-aria1350134285-_r_d_ > div#react-aria1350134285-_r_d_-GregFisher",
                 "element": 2
               },
               "focusAfter": {
@@ -682,7 +682,7 @@
                   "index": 3,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria5634635209-_r_3_ > div:nth-child(2) > div#react-aria5634635209-_r_d_ > div#react-aria5634635209-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria1350134285-_r_3_ > div:nth-child(2) > div#react-aria1350134285-_r_d_ > div#react-aria1350134285-_r_d_-HiroshiMatsui",
                 "element": 1
               },
               "announcements": [],
@@ -729,7 +729,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7698584206-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4587223266-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -745,7 +745,225 @@
                   "index": 1,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria7698584206-_r_3_ > div:nth-child(2) > div#react-aria7698584206-_r_d_ > div#react-aria7698584206-_r_d_-IreneOh",
+                "path": "div:nth-child(2) > div#react-aria4587223266-_r_3_ > div:nth-child(2) > div#react-aria4587223266-_r_d_ > div#react-aria4587223266-_r_d_-IreneOh",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": [
+                "Irene Oh, row, 1 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria4587223266-_r_3_ > div:nth-child(2) > div#react-aria4587223266-_r_d_ > div#react-aria4587223266-_r_d_-IreneOh",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4587223266-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7066492813-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria7066492813-_r_3_ > div:nth-child(2) > div#react-aria7066492813-_r_d_ > div#react-aria7066492813-_r_d_-IreneOh",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": [
+                "Irene Oh, row, 1 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria7066492813-_r_3_ > div:nth-child(2) > div#react-aria7066492813-_r_d_ > div#react-aria7066492813-_r_d_-IreneOh",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7066492813-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria9876804943-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria9876804943-_r_3_ > div:nth-child(2) > div#react-aria9876804943-_r_d_ > div#react-aria9876804943-_r_d_-IreneOh",
                 "element": 2
               },
               "announcements": [],
@@ -786,7 +1004,7 @@
                   "index": 1,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria7698584206-_r_3_ > div:nth-child(2) > div#react-aria7698584206-_r_d_ > div#react-aria7698584206-_r_d_-IreneOh",
+                "path": "div:nth-child(2) > div#react-aria9876804943-_r_3_ > div:nth-child(2) > div#react-aria9876804943-_r_d_ > div#react-aria9876804943-_r_d_-IreneOh",
                 "element": 2
               },
               "focusAfter": {
@@ -800,7 +1018,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7698584206-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria9876804943-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -810,225 +1028,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "speech": [
-                "To, combobox, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5071685158-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "row",
-                "name": "Irene Oh",
-                "description": "Press Delete to remove tag.",
-                "posInSet": 1,
-                "setSize": 3,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "path": "div:nth-child(2) > div#react-aria5071685158-_r_3_ > div:nth-child(2) > div#react-aria5071685158-_r_d_ > div#react-aria5071685158-_r_d_-IreneOh",
-                "element": 2
-              },
-              "announcements": [],
-              "insertedRegions": [
-                {
-                  "text": "Irene OhGreg FisherHiroshi Matsui",
-                  "politeness": "polite"
-                }
-              ],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 403,
-                "quiet": true
-              },
-              "speech": [
-                "Irene Oh, row, 1 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "row",
-                "name": "Irene Oh",
-                "description": "Press Delete to remove tag.",
-                "posInSet": 1,
-                "setSize": 3,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "path": "div:nth-child(2) > div#react-aria5071685158-_r_3_ > div:nth-child(2) > div#react-aria5071685158-_r_d_ > div#react-aria5071685158-_r_d_-IreneOh",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5071685158-_r_4_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "speech": [
-                "To, combobox, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3739706966-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "row",
-                "name": "Irene Oh",
-                "description": "Press Delete to remove tag.",
-                "posInSet": 1,
-                "setSize": 3,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "path": "div:nth-child(2) > div#react-aria3739706966-_r_3_ > div:nth-child(2) > div#react-aria3739706966-_r_d_ > div#react-aria3739706966-_r_d_-IreneOh",
-                "element": 2
-              },
-              "announcements": [],
-              "insertedRegions": [
-                {
-                  "text": "Irene OhGreg FisherHiroshi Matsui",
-                  "politeness": "polite"
-                }
-              ],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 410,
-                "quiet": true
-              },
-              "speech": [
-                "Irene Oh, row, 1 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "row",
-                "name": "Irene Oh",
-                "description": "Press Delete to remove tag.",
-                "posInSet": 1,
-                "setSize": 3,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "path": "div:nth-child(2) > div#react-aria3739706966-_r_3_ > div:nth-child(2) > div#react-aria3739706966-_r_d_ > div#react-aria3739706966-_r_d_-IreneOh",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3739706966-_r_4_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 408,
+                "ms": 400,
                 "quiet": true
               },
               "speech": [
@@ -1065,7 +1065,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1553598009-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6008029175-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1115,7 +1115,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8022727261-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3152915145-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1137,7 +1137,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 415,
                 "quiet": true
               },
               "speech": [
@@ -1165,7 +1165,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6716255239-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3978461360-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1187,7 +1187,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 400,
                 "quiet": true
               },
               "speech": [
@@ -1224,7 +1224,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4042602978-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6975243480-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1238,7 +1238,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4042602978-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6975243480-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -1248,7 +1248,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 414,
                 "quiet": true
               },
               "speech": []
@@ -1269,7 +1269,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4042602978-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6975243480-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1285,7 +1285,7 @@
                   "index": 1,
                   "count": 3
                 },
-                "path": "div:nth-child(2) > div#react-aria4042602978-_r_3_ > div:nth-child(2) > div#react-aria4042602978-_r_d_ > div#react-aria4042602978-_r_d_-IreneOh",
+                "path": "div:nth-child(2) > div#react-aria6975243480-_r_3_ > div:nth-child(2) > div#react-aria6975243480-_r_d_ > div#react-aria6975243480-_r_d_-IreneOh",
                 "element": 2
               },
               "announcements": [],
@@ -1301,7 +1301,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 409,
                 "quiet": true
               },
               "speech": [
@@ -1329,7 +1329,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8816524167-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1446281277-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1343,168 +1343,10 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8816524167-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1446281277-_r_4_",
                 "element": 1
               },
               "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 400,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8816524167-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "row",
-                "name": "Irene Oh",
-                "description": "Press Delete to remove tag.",
-                "posInSet": 1,
-                "setSize": 3,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "path": "div:nth-child(2) > div#react-aria8816524167-_r_3_ > div:nth-child(2) > div#react-aria8816524167-_r_d_ > div#react-aria8816524167-_r_d_-IreneOh",
-                "element": 2
-              },
-              "announcements": [],
-              "insertedRegions": [
-                {
-                  "text": "Irene OhGreg FisherHiroshi Matsui",
-                  "politeness": "polite"
-                }
-              ],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 411,
-                "quiet": true
-              },
-              "speech": [
-                "Irene Oh, row, 1 of 3"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8980725345-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8980725345-_r_4_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8980725345-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "row",
-                "name": "Irene Oh",
-                "description": "Press Delete to remove tag.",
-                "posInSet": 1,
-                "setSize": 3,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "path": "div:nth-child(2) > div#react-aria8980725345-_r_3_ > div:nth-child(2) > div#react-aria8980725345-_r_d_ > div#react-aria8980725345-_r_d_-IreneOh",
-                "element": 2
-              },
-              "announcements": [],
-              "insertedRegions": [
-                {
-                  "text": "Irene OhGreg FisherHiroshi Matsui",
-                  "politeness": "polite"
-                }
-              ],
               "axDiff": {
                 "added": [],
                 "removed": [],
@@ -1512,6 +1354,164 @@
               },
               "settle": {
                 "ms": 403,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1446281277-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria1446281277-_r_3_ > div:nth-child(2) > div#react-aria1446281277-_r_d_ > div#react-aria1446281277-_r_d_-IreneOh",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 417,
+                "quiet": true
+              },
+              "speech": [
+                "Irene Oh, row, 1 of 3"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria53252081-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria53252081-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria53252081-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Irene Oh",
+                "description": "Press Delete to remove tag.",
+                "posInSet": 1,
+                "setSize": 3,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "path": "div:nth-child(2) > div#react-aria53252081-_r_3_ > div:nth-child(2) > div#react-aria53252081-_r_d_ > div#react-aria53252081-_r_d_-IreneOh",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
                 "quiet": true
               },
               "speech": [
@@ -1551,7 +1551,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria845273576-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8357018810-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1565,7 +1565,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria845273576-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8357018810-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -1575,7 +1575,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 401,
                 "quiet": true
               },
               "speech": []
@@ -1596,7 +1596,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria845273576-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8357018810-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1610,57 +1610,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria845273576-_r_4_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 412,
-                "quiet": true
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Backspace"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3720191464-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3720191464-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria8357018810-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -1674,6 +1624,56 @@
                 "quiet": true
               },
               "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1430417597-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1430417597-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": []
             },
             {
               "action": {
@@ -1691,7 +1691,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3720191464-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1430417597-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1705,7 +1705,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3720191464-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1430417597-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -1715,7 +1715,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 417,
+                "ms": 414,
                 "quiet": true
               },
               "speech": []
@@ -1741,7 +1741,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1259996071-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3265699482-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1755,7 +1755,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1259996071-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3265699482-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -1765,7 +1765,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 403,
                 "quiet": true
               },
               "speech": []
@@ -1786,7 +1786,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1259996071-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3265699482-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1800,7 +1800,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria1259996071-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3265699482-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -1810,7 +1810,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 408,
                 "quiet": true
               },
               "speech": []
@@ -1845,7 +1845,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria427704543-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -1859,237 +1859,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 408,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 401,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6905573545-_r_4_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 401,
-                "quiet": true
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 411,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria427704543-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -2107,7 +1877,7 @@
             {
               "action": {
                 "type": "press",
-                "key": "ArrowRight"
+                "key": "ArrowLeft"
               },
               "focusBefore": {
                 "role": "combobox",
@@ -2120,7 +1890,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria427704543-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -2134,7 +1904,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria427704543-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -2165,7 +1935,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria427704543-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -2179,7 +1949,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria389749050-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria427704543-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -2189,7 +1959,52 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria427704543-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria427704543-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
                 "quiet": true
               },
               "speech": []
@@ -2215,7 +2030,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7487189242-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -2229,7 +2044,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7487189242-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -2239,7 +2054,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 401,
                 "quiet": true
               },
               "speech": []
@@ -2260,7 +2075,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7487189242-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -2274,7 +2089,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7487189242-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -2284,7 +2099,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 402,
+                "ms": 416,
                 "quiet": true
               },
               "speech": []
@@ -2305,7 +2120,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7487189242-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -2319,7 +2134,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7487189242-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -2329,7 +2144,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 415,
                 "quiet": true
               },
               "speech": []
@@ -2350,7 +2165,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7487189242-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -2364,7 +2179,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3663352810-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7487189242-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -2374,7 +2189,192 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 411,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5775401242-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5775401242-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5775401242-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5775401242-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5775401242-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5775401242-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5775401242-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5775401242-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
                 "quiet": true
               },
               "speech": []
@@ -2411,7 +2411,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4630319144-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6781984991-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -2425,52 +2425,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4630319144-_r_4_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 402,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Delete"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4630319144-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4630319144-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6781984991-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -2484,56 +2439,6 @@
                 "quiet": true
               },
               "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria2287210170-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria2287210170-_r_4_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 410,
-                "quiet": true
-              },
-              "speech": []
             },
             {
               "action": {
@@ -2551,7 +2456,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria2287210170-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6781984991-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -2565,7 +2470,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria2287210170-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria6781984991-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -2575,7 +2480,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 408,
                 "quiet": true
               },
               "speech": []
@@ -2601,7 +2506,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5496297519-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3687919252-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -2615,7 +2520,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5496297519-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3687919252-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -2625,7 +2530,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 401,
                 "quiet": true
               },
               "speech": []
@@ -2646,7 +2551,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5496297519-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3687919252-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -2660,7 +2565,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria5496297519-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3687919252-_r_4_",
                 "element": 1
               },
               "announcements": [],
@@ -2670,7 +2575,102 @@
                 "changed": []
               },
               "settle": {
-                "ms": 400,
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7488080599-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7488080599-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7488080599-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7488080599-_r_4_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
                 "quiet": true
               },
               "speech": []
@@ -2710,7 +2710,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria4545947263-_r_4_",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria211646980-_r_4_",
                 "element": 1
               },
               "focusAfter": {
@@ -2725,165 +2725,7 @@
                   "index": 2,
                   "count": 2
                 },
-                "path": "div:nth-child(2) > div#react-aria4545947263-_r_3_ > div:nth-child(2) > div#react-aria4545947263-_r_d_ > div#react-aria4545947263-_r_d_-HiroshiMatsui",
-                "element": 2
-              },
-              "announcements": [],
-              "insertedRegions": [
-                {
-                  "text": "Irene OhGreg FisherHiroshi Matsui",
-                  "politeness": "polite"
-                }
-              ],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "row",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "gridcell",
-                    "name": "Greg Fisher Remove Greg Fisher"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "button",
-                    "name": "Remove Greg Fisher"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 440,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui, row, 2 of 2"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "click",
-                "target": {
-                  "role": "button",
-                  "name": "Remove Greg Fisher"
-                }
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria3108704532-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "row",
-                "name": "Hiroshi Matsui",
-                "posInSet": 2,
-                "setSize": 2,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 2
-                },
-                "path": "div:nth-child(2) > div#react-aria3108704532-_r_3_ > div:nth-child(2) > div#react-aria3108704532-_r_d_ > div#react-aria3108704532-_r_d_-HiroshiMatsui",
-                "element": 2
-              },
-              "announcements": [],
-              "insertedRegions": [
-                {
-                  "text": "Irene OhGreg FisherHiroshi Matsui",
-                  "politeness": "polite"
-                }
-              ],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "row",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "gridcell",
-                    "name": "Greg Fisher Remove Greg Fisher"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "button",
-                    "name": "Remove Greg Fisher"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 436,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui, row, 2 of 2"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "click",
-                "target": {
-                  "role": "button",
-                  "name": "Remove Greg Fisher"
-                }
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected people",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria7603621259-_r_4_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "row",
-                "name": "Hiroshi Matsui",
-                "posInSet": 2,
-                "setSize": 2,
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 2
-                },
-                "path": "div:nth-child(2) > div#react-aria7603621259-_r_3_ > div:nth-child(2) > div#react-aria7603621259-_r_d_ > div#react-aria7603621259-_r_d_-HiroshiMatsui",
+                "path": "div:nth-child(2) > div#react-aria211646980-_r_3_ > div:nth-child(2) > div#react-aria211646980-_r_d_ > div#react-aria211646980-_r_d_-HiroshiMatsui",
                 "element": 2
               },
               "announcements": [],
@@ -2917,6 +2759,164 @@
               },
               "settle": {
                 "ms": 437,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, row, 2 of 2"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Remove Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria598587556-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(2) > div#react-aria598587556-_r_3_ > div:nth-child(2) > div#react-aria598587556-_r_d_ > div#react-aria598587556-_r_d_-HiroshiMatsui",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "row",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "gridcell",
+                    "name": "Greg Fisher Remove Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 449,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, row, 2 of 2"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Remove Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected people",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div:nth-child(2) > div:nth-child(2) > input#react-aria9499411453-_r_4_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "row",
+                "name": "Hiroshi Matsui",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(2) > div#react-aria9499411453-_r_3_ > div:nth-child(2) > div#react-aria9499411453-_r_d_ > div#react-aria9499411453-_r_d_-HiroshiMatsui",
+                "element": 2
+              },
+              "announcements": [],
+              "insertedRegions": [
+                {
+                  "text": "Irene OhGreg FisherHiroshi Matsui",
+                  "politeness": "polite"
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "row",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "gridcell",
+                    "name": "Greg Fisher Remove Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 442,
                 "quiet": true
               },
               "speech": [

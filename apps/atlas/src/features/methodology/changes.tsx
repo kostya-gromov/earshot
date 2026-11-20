@@ -13,6 +13,14 @@ interface Change {
 
 const changes: readonly Change[] = [
   {
+    date: '19 Nov 2026',
+    text: 'Tabs, the fourth pattern, is on the site: nine rules, measured in five systems on engine 0.17.0 with reference 0.1.5. Two systems, Fluent 2 and MUI, are measured as their documentation builds the panels, since neither package ships one. Whether a system activates a tab as it receives focus or on Enter and Space is shown, not judged: the standards allow both.',
+  },
+  {
+    date: '19 Nov 2026',
+    text: 'Engine 0.17.0 and reference 0.1.4. For tabs, the fourth pattern, the engine now records every tab and every shown panel after each step, and whether focus is inside the shown panel; tabs is being measured and is not on the site yet. Nothing changed in what the engine records for the three patterns here: every system and the reference of every pattern measured again, and each recording is the same as before, step for step, apart from timings. No verdict and no reason changed. Reference 0.1.5 the same day: in the tabs reference the focus ring now sits outside the tab, so it no longer covers the selected tab’s bar. Styles only; every reference measured again, each recording the same as before.',
+  },
+  {
     date: '17 Nov 2026',
     text: 'Engine 0.16.3 and 0.16.4, measured the same day. Under “The chips are one Tab stop” a scenario that follows now says what its own key did, “Tab leaves the chips” or “Shift+Tab leaves the chips”, where it used to say the rule’s name. React Aria showed why: its Shift+Tab leaves the chips and its Tab stops on a control inside one, so one row read “The chips are one Tab stop” under a verdict of Differs. A system whose two scenarios both follow is still described by the rule’s own words, “The chips are one Tab stop”. Every system and the reference of every pattern measured again, so all are on one engine. No verdict and no reason changed.',
   },

@@ -4,6 +4,28 @@ One version for the package: both references are published together, and every m
 reference records this version in its provenance. A change that a reader of the site could
 notice gets an entry, with whether behavior or verdicts changed.
 
+## 0.1.5 (2026-11-19)
+
+- **tabs, fixed:** the focus ring on a tab was drawn inside it, over the selected tab's bar, so a
+  tab that was both focused and selected showed "selected" by weight alone. That broke the
+  pattern's own requirement "Selected and focused look different" (APG: "The selected state must
+  be visually distinct from the focus indicator"). The ring is now outside the tab with a 2 px
+  gap. In forced colours the unselected tabs' transparent bottom border showed as white
+  segments under them; it is painted as the background now, and the selected tab's bar and the
+  focus ring take different system colours (`tabs.css`). The ring fix has a test that failed first, in `test/tabs.spec.ts`;
+  the forced-colours fix was checked on screenshots in both themes.
+- Styles only. Behavior, the accessibility tree and every verdict are unchanged; all four
+  references were measured again on this version, each recording the same as before step for
+  step.
+
+## 0.1.4 (2026-11-19)
+
+- **tabs, added:** the fourth reference, a horizontal tab list of four tabs with one panel shown
+  at a time (`tabs/`). Tabs activate as they receive focus (every panel is already in the page),
+  the arrow keys wrap, Home and End go to the ends, and every panel is a Tab stop named by its tab.
+- The three existing references are unchanged; they are measured again on this version with the
+  engine that adds what tabs need.
+
 ## 0.1.3 (2026-11-16)
 
 - **menu button, added:** the third reference, a button that opens a menu of four actions, one

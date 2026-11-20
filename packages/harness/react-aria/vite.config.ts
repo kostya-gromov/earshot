@@ -6,7 +6,7 @@ const { plugin, ...config } = harnessConfig({
   from: import.meta.url,
   system: 'react-aria',
   measuredPackage: 'react-aria-components',
-  pages: ['index.html', 'combobox.html', 'menu-button.html'],
+  pages: ['index.html', 'combobox.html', 'menu-button.html', 'tabs.html'],
 });
 
 export default defineConfig({ ...config, plugins: [react(), plugin] });

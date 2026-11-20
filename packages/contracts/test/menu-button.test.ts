@@ -8,7 +8,7 @@ describe('menu button pattern', () => {
   });
 
   it('is listed third, after the patterns measured before it', () => {
-    expect(Object.keys(patterns)).toEqual(['input-with-chips', 'combobox', 'menu-button']);
+    expect(Object.keys(patterns)).toEqual(['input-with-chips', 'combobox', 'menu-button', 'tabs']);
   });
 
   it('has nine rules, two of them Atlas recommendations', () => {

@@ -9,5 +9,5 @@ export interface PlannedPattern {
   description: string;
 }
 
-/** None now: the three patterns of phase 1 (CLAUDE.md 3) all have a page. */
+/** None now: the four patterns of CLAUDE.md 3 all have a page. */
 export const plannedPatterns: readonly PlannedPattern[] = [];

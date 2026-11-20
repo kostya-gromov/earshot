@@ -16,6 +16,14 @@ import {
   menuTourSteps,
   observeMenuKey,
 } from './menu-tour';
+import { snapshotTabs } from './tabs-snapshot';
+import {
+  heardNothingInTabs,
+  initialTabsTour,
+  observeTabsKey,
+  tabsRulesLitBy,
+  tabsTourSteps,
+} from './tabs-tour';
 import { defineTour, type Tour } from './tour';
 import { chipsTourSteps } from './tour-steps';
 
@@ -47,5 +55,14 @@ export const tours: Readonly<Record<string, Tour>> = {
     observeKey: observeMenuKey,
     heardMessage: heardNothing,
     rulesLitBy: menuRulesLitBy,
+  }),
+  tabs: defineTour({
+    steps: tabsTourSteps,
+    initial: initialTabsTour,
+    heardRule: undefined,
+    snapshot: snapshotTabs,
+    observeKey: observeTabsKey,
+    heardMessage: heardNothingInTabs,
+    rulesLitBy: tabsRulesLitBy,
   }),
 };

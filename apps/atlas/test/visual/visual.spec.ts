@@ -8,6 +8,7 @@ const pages = [
   { name: 'pattern', path: '/patterns/input-with-chips/' },
   { name: 'combobox', path: '/patterns/combobox/' },
   { name: 'menu-button', path: '/patterns/menu-button/' },
+  { name: 'tabs', path: '/patterns/tabs/' },
   { name: 'methodology', path: '/methodology/' },
 ] as const;
 

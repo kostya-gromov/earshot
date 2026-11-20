@@ -42,6 +42,25 @@ const menuScenarioLabels: Readonly<Record<string, string>> = {
   typeahead: 'A letter typed in the menu',
 };
 
+/** Tabs share ids with other patterns (`ends`, `move`, `home-end`) for keys on a tab list. */
+const tabsScenarioLabels: Readonly<Record<string, string>> = {
+  'tab-in': 'Tab into the tabs, a later tab active',
+  'tab-in-back': 'Shift+Tab back into the tabs',
+  'tab-out-text': 'Tab from a tab, its panel plain text',
+  'tab-out-link': 'Tab from a tab, a link starts its panel',
+  move: 'Right Arrow twice, then Left Arrow',
+  ends: 'The arrow keys at both ends of the tabs',
+  'activate-enter': 'Right Arrow, then Enter',
+  'activate-space': 'Right Arrow, then Space',
+  'vertical-keys': 'Down Arrow, then Up Arrow',
+  'home-end': 'End, then Home',
+};
+
+const labelsByPattern: Readonly<Record<string, Readonly<Record<string, string>>>> = {
+  'menu-button': menuScenarioLabels,
+  tabs: tabsScenarioLabels,
+};
+
 /** The labels of one pattern's scenarios, for the scenario list beside a replay. */
 export const scenarioLabelsOf = (patternId: string): Readonly<Record<string, string>> =>
-  patternId === 'menu-button' ? menuScenarioLabels : fieldScenarioLabels;
+  labelsByPattern[patternId] ?? fieldScenarioLabels;

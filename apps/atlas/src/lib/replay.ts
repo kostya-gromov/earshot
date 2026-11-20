@@ -1,6 +1,7 @@
 import type { FocusInfo, Measurement, Step } from '@earshot/contracts';
-import { comboboxSteps, describeComboboxChange, type ComboboxStep } from './combobox-replay';
-import { describeMenuChange, menuSteps, type MenuStep } from './menu-replay';
+import { comboboxSteps, type ComboboxStep } from './combobox-replay';
+import { menuSteps, type MenuStep } from './menu-replay';
+import { tabsSteps, type TabsStep } from './tabs-replay';
 import { basisWithReasons, type LaneVerdict } from './lane-verdict';
 
 /**
@@ -39,6 +40,8 @@ export interface ReplayStep {
   combobox?: ComboboxStep;
   /** Present for a menu button: the button, the items and the page's last action. */
   menu?: MenuStep;
+  /** Present for tabs: every tab, the shown panel and where focus is. */
+  tabs?: TabsStep;
 }
 
 const named = (nodes: readonly { role: string | null; name: string }[]) =>
@@ -97,7 +100,8 @@ export function replaySteps(steps: readonly Step[], people: readonly string[]): 
   // The popup's side is read over the whole run: the field's text is carried from step to step.
   // A menu button recording carries the page's last action; a combobox recording does not.
   const menu = menuSteps(steps);
-  const popup = menu.length > 0 ? [] : comboboxSteps(steps);
+  const tabs = tabsSteps(steps);
+  const popup = menu.length > 0 || tabs.length > 0 ? [] : comboboxSteps(steps);
   const hasPopup = popup.length === steps.length;
   return steps.map((step, index) => {
     const removed = removedBy(step, people, gone);
@@ -114,6 +118,7 @@ export function replaySteps(steps: readonly Step[], people: readonly string[]): 
       added: named(step.axDiff.added),
       ...(hasPopup && popup[index] ? { combobox: popup[index] } : {}),
       ...(menu[index] ? { menu: menu[index] } : {}),
+      ...(tabs[index] ? { tabs: tabs[index] } : {}),
     };
   });
 }
@@ -161,26 +166,6 @@ export function focusWords(focus: ReplayFocus): string {
     case 'outside':
     case 'other':
       return `${focus.role ?? 'an element'} “${focus.name}”`;
-  }
-}
-
-/** What happened in a step, in words, for the text that stands beside every schematic. */
-export function describeStep(step: ReplayStep): string {
-  if (step.menu) return describeMenuChange(step.menu);
-  if (step.combobox) return describeComboboxChange(step.combobox);
-  const removal = step.removed.length > 0 ? `${step.removed.join(', ')} removed. ` : '';
-  const { to } = step;
-  switch (to.kind) {
-    case 'chip':
-      return `${removal}Focus on chip ${to.index} of ${to.count}`;
-    case 'input':
-      return `${removal}Focus in the input`;
-    case 'outside':
-      return `${removal}Focus left the field`;
-    case 'body':
-      return `${removal}Focus lost to the page`;
-    case 'other':
-      return `${removal}Focus on ${to.role ?? 'an element'} “${to.name}”`;
   }
 }
 
@@ -256,3 +241,5 @@ export {
   ruleWideResult,
   type LaneVerdict,
 } from './lane-verdict';
+
+export { describeStep } from './step-words';

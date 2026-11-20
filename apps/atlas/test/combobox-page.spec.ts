@@ -22,7 +22,7 @@ test('the page is listed on the home page and counts only the patterns that have
     .locator('main p')
     .filter({ hasText: /^Pattern/ })
     .first();
-  await expect(kicker).toContainText('2 of 3');
+  await expect(kicker).toContainText('2 of 4');
   await expect(kicker).not.toContainText('in progress');
   await expect(page.getByRole('link', { name: 'Patterns', exact: true })).toHaveAttribute(
     'href',

@@ -156,7 +156,38 @@
   }
 }
 
+/* Tabs: Right Arrow moves focus to the next tab, and the selected bar goes with it. */
+.selectedBar {
+  stroke: var(--ink-2);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+
+.tabMove {
+  animation: tab-move 6s var(--ease-out) infinite;
+}
+
+@keyframes tab-move {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+  26%,
+  46% {
+    transform: translateX(60px);
+  }
+  52%,
+  72% {
+    transform: translateX(120px);
+  }
+  78%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .tabMove,
   .leaving,
   .chipRing,
   .popup,
@@ -172,6 +203,7 @@
 }
 
 /* The resting frame, the same one reduced motion shows: what the site draws. */
+[data-done] .tabMove,
 [data-done] .leaving,
 [data-done] .chipRing,
 [data-done] .popup,

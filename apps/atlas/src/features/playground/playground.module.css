@@ -322,6 +322,15 @@
  * fit, so an open menu never covers what follows and never moves the page. The reference places
  * the menu itself.
  */
+/* Four tabs fit a phone-wide card with tighter tabs (design review 2026-11-19). No scroll
+   container: it cut the 4 px ring the reference draws around the first and last tab (second
+   review that day). The reference is unchanged. */
+@media (max-width: 480px) {
+  .stage :global(.tabs__tab) {
+    padding-inline: 8px;
+  }
+}
+
 .stage :global(.menu-button) {
   margin-block-end: 176px;
 }

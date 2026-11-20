@@ -6,8 +6,8 @@ const { plugin, ...config } = harnessConfig({
   from: import.meta.url,
   system: 'atlassian',
   measuredPackage: '@atlaskit/select',
-  pages: ['index.html', 'combobox.html', 'menu-button.html'],
-  packageByPage: { 'menu-button.html': '@atlaskit/dropdown-menu' },
+  pages: ['index.html', 'combobox.html', 'menu-button.html', 'tabs.html'],
+  packageByPage: { 'menu-button.html': '@atlaskit/dropdown-menu', 'tabs.html': '@atlaskit/tabs' },
 });
 
 export default defineConfig({ ...config, plugins: [react(), plugin] });

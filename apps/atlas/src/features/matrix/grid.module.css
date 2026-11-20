@@ -170,3 +170,24 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+@media (forced-colors: active) {
+  /* The chosen scenario is marked by its fill, which forced colours take away: a bar in the
+     system's selection colour on its leading edge says it there, as the rule panel's chosen row
+     does; not an outline, which is the focus ring's (design review 2026-11-19). The buttons keep
+     a border so they read as buttons at all. */
+  .scenarios button {
+    position: relative;
+    border: 1px solid ButtonText;
+  }
+
+  .scenarios button[aria-pressed='true']::before {
+    content: '';
+    position: absolute;
+    inset: 5px auto 5px 2px;
+    width: 3px;
+    border-radius: 2px;
+    forced-color-adjust: none;
+    background: Highlight;
+  }
+}

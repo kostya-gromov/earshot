@@ -1,0 +1,66 @@
+.tabs {
+  --tabs-bg: var(--panel, #fff);
+  --tabs-border: var(--line-2, #858c98); /* 3:1 or more against the panel (WCAG 1.4.11) */
+  --tabs-focus: var(--key, #2f6bff);
+  display: grid;
+  gap: 0;
+}
+
+.tabs__list {
+  display: flex;
+  gap: 4px;
+  border-block-end: 1px solid var(--tabs-border);
+}
+
+.tabs__tab {
+  min-block-size: 40px;
+  padding: 8px 14px;
+  border: 0;
+  border-block-end: 3px solid transparent;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+/* Selected is told by weight and a 3 px bar, not by colour alone, and apart from focus. */
+.tabs__tab[aria-selected='true'] {
+  border-block-end-color: currentColor;
+  font-weight: 600;
+}
+/* The ring sits outside the tab with a 2 px gap, so the selected tab's bar stays visible inside
+   it: selected and focused look different even on one tab (the page's requirement, and APG:
+   "The selected state must be visually distinct from the focus indicator"). Since 0.1.5. */
+.tabs__tab:focus-visible {
+  outline: 2px solid var(--tabs-focus);
+  outline-offset: 2px;
+  border-radius: 6px 6px 0 0;
+}
+
+.tabs__panel {
+  padding: 16px 4px;
+}
+.tabs__panel:focus-visible {
+  outline: 2px solid var(--tabs-focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+.tabs__panel[hidden] {
+  display: none;
+}
+.tabs__panel p {
+  margin: 0;
+}
+
+@media (forced-colors: active) {
+  /* A transparent border shows in forced colours (APG tabs example): the unselected tabs' is
+     painted as the background instead, so only the selected tab has a bar. */
+  .tabs__tab {
+    border-block-end-color: Canvas;
+  }
+  .tabs__tab[aria-selected='true'] {
+    border-block-end-color: CanvasText;
+  }
+  .tabs__tab:focus-visible {
+    outline-color: Highlight;
+  }
+}

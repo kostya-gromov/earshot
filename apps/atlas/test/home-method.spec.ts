@@ -7,15 +7,15 @@ test.describe('step 1 of the method, the rules', () => {
 
   test('counts the rules, draws how one is made, and counts the two levels', async ({ page }) => {
     await page.goto('/');
-    await expect(step(page)).toContainText('27 rules so far, in 3 patterns');
+    await expect(step(page)).toContainText('36 rules so far, in 4 patterns');
     await expect(step(page).locator('svg')).toHaveCount(1);
-    await expect(step(page)).toContainText('From the standards16');
-    await expect(step(page)).toContainText('Atlas recommendations11');
-    // The drawing shows a rule built from the standards; it does not speak for the other eleven.
+    await expect(step(page)).toContainText('From the standards24');
+    await expect(step(page)).toContainText('Atlas recommendations12');
+    // The drawing shows a rule built from the standards; it does not speak for the other twelve.
     await expect(step(page).locator('figcaption')).toHaveText(
       // No rule applies a WCAG criterion directly, and the caption says so: the drawing joins
       // both standards to a rule.
-      'How 16 of 27 rules are built: each applies an APG page, and cites WCAG where a criterion relates. The other 11 are Atlas recommendations; each says why.',
+      'How 24 of 36 rules are built: each applies an APG page, and cites WCAG where a criterion relates. The other 12 are Atlas recommendations; each says why.',
     );
   });
 
@@ -25,22 +25,24 @@ test.describe('step 1 of the method, the rules', () => {
     const apg = step(page).getByRole('region', { name: /^APG/ });
     await expect(wcag.getByRole('heading')).toHaveText('WCAG 5 criteria');
     await expect(wcag.getByRole('listitem')).toHaveCount(5);
-    await expect(apg.getByRole('heading')).toHaveText('APG 13 pages');
-    await expect(apg.getByRole('listitem')).toHaveCount(13);
+    await expect(apg.getByRole('heading')).toHaveText('APG 19 pages');
+    await expect(apg.getByRole('listitem')).toHaveCount(19);
     // Pages, not rules: one page may stand behind several rules.
-    await expect(step(page)).toContainText('18 pages cited');
+    await expect(step(page)).toContainText('24 pages cited');
     // A related page is not listed as a requirement: said once, over the pages it is true of.
     // Since 2026-11-17 no rule applies a WCAG criterion directly: 2.4.3 is about the order of
     // focus, not where it goes after a removal, so all five are related and none stands apart.
     await expect(wcag.getByText('Applied', { exact: true })).toHaveCount(0);
     await expect(wcag.getByText('Related, not applied directly')).toHaveCount(1);
     await expect(wcag.getByRole('list')).toHaveCount(1);
-    // One APG section is cited only as related (persistence of focus, for "Keep focus in the
-    // field after a removal"), so that group is split: twelve applied, one related.
+    // Two APG sections are cited only as related (persistence of focus, for "Keep focus in the
+    // field after a removal"; selection following focus, for tabs' "Enter and Space activate the
+    // focused tab", since 2026-11-19), so that group is split: seventeen applied, two related.
     await expect(apg.getByText('Applied', { exact: true })).toHaveCount(1);
     await expect(apg.getByText('Related, not applied directly')).toHaveCount(1);
     await expect(apg.getByRole('list').last().getByRole('listitem')).toHaveText([
       /discernible and predictable keyboard focus/,
+      /deciding when to make selection follow focus/,
     ]);
   });
 

@@ -43,13 +43,13 @@ test('the home page does not scroll sideways on a phone', async ({ page }) => {
 
 test('no pattern is listed as in progress: all three of phase 1 have a page', async ({ page }) => {
   await page.goto('/');
-  await expect(catalogue(page).getByRole('listitem')).toHaveCount(3);
+  await expect(catalogue(page).getByRole('listitem')).toHaveCount(4);
   await expect(page.getByText('In progress')).toHaveCount(0);
 });
 
 test('every measured pattern is listed with a link to its page', async ({ page }) => {
   await page.goto('/');
-  for (const id of ['input-with-chips', 'combobox', 'menu-button']) {
+  for (const id of ['input-with-chips', 'combobox', 'menu-button', 'tabs']) {
     await expect(catalogue(page).locator(`a[href="/patterns/${id}/"]`).first()).toBeVisible();
   }
 });
@@ -249,6 +249,6 @@ test('the example shows no controls around its fields to press', async ({ page }
 test('the totals name each pattern with its rules and the systems it counts', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('main')).toContainText(
-    'Totals for every pattern measured so far: Input with chips (8 rules, 4 systems counted), Combobox (10 rules, 6 systems counted), and Menu button (9 rules, 6 systems counted).',
+    'Totals for every pattern measured so far: Input with chips (8 rules, 4 systems counted), Combobox (10 rules, 6 systems counted), Menu button (9 rules, 6 systems counted), and Tabs (9 rules, 5 systems counted).',
   );
 });

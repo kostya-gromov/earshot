@@ -40,7 +40,8 @@ describe('the sources of every rule', () => {
     }
   });
 
-  it('mark seventeen citations as not applied directly', () => {
-    expect(sources.filter(({ relation }) => relation !== undefined)).toHaveLength(17);
+  // Nineteen since 2026-11-19: tabs cites the practice on selection following focus and 4.1.2 as related.
+  it('mark nineteen citations as not applied directly', () => {
+    expect(sources.filter(({ relation }) => relation !== undefined)).toHaveLength(19);
   });
 });

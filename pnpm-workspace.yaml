@@ -2,3 +2,18 @@ packages:
   - packages/*
   - packages/harness/*
   - apps/*
+
+# Next's own type declarations import "react" and "react-dom" without declaring their types, so
+# TypeScript found them through pnpm's hidden hoisting, which picks one of the two React type
+# versions in the workspace (19 for the site, 18 for the Atlassian harness) by chance. Declared as
+# optional peers, Next is linked to the site's own versions instead (2026-11-19).
+packageExtensions:
+  next:
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true

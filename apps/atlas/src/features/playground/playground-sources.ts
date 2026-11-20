@@ -10,4 +10,5 @@ export const playgroundSources: Readonly<Record<string, PlaygroundSource>> = {
   'input-with-chips': { entry: 'chip-field', layout: 'stacked' },
   combobox: { entry: 'combobox', layout: 'beside' },
   'menu-button': { entry: 'menu-button', layout: 'beside' },
+  tabs: { entry: 'tabs', layout: 'stacked' },
 };
