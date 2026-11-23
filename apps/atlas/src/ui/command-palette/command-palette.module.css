@@ -64,6 +64,12 @@
   padding: 2px var(--space-1);
 }
 
+/* platform-boot.ts marks Apple platforms on <html> before the first paint. */
+:global(html[data-platform='apple']) .shortcutOther,
+:global(html:not([data-platform='apple'])) .shortcutApple {
+  display: none;
+}
+
 .dialog {
   width: min(640px, calc(100vw - 2 * var(--gutter)));
   margin-top: 12vh;

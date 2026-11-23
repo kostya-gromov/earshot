@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { Inter, Newsreader } from 'next/font/google';
 import { themeBootScript, themeBootStyle } from '@/features/theme';
 import { siteOrigin } from '@/lib/site-origin';
+import { platformBootScript } from '@/ui';
 import './globals.css';
 
 // next/font self-hosts the files at build time with metric-matched fallbacks: no layout shift
@@ -40,11 +41,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    // The boot script sets data-theme before React hydrates, so the attribute may differ.
+    // The boot scripts set data-theme and data-platform before React hydrates, so the
+    // attributes may differ.
     <html lang="en" className={`${inter.variable} ${newsreader.variable}`} suppressHydrationWarning>
       <head>
         <style dangerouslySetInnerHTML={{ __html: themeBootStyle }} />
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
+        <script dangerouslySetInnerHTML={{ __html: platformBootScript }} />
       </head>
       <body>{children}</body>
     </html>

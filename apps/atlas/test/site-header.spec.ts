@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
 test('the theme switch in the footer sets and remembers the theme', async ({ page }) => {
   await page.goto('/patterns/input-with-chips/');
@@ -89,3 +89,35 @@ for (const scheme of ['dark', 'light'] as const) {
     expect(isDark).toBe(scheme === 'dark');
   });
 }
+
+// Every link is a full page load. The shortcut used to read "Ctrl K" until React hydrated and
+// "⌘K" after, so on a Mac the search button changed width and jumped on every page.
+test.describe('on a Mac', () => {
+  test.use({
+    userAgent:
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+  });
+
+  async function searchBox(page: Page) {
+    const search = page.getByRole('banner').getByRole('button', { name: 'Search' });
+    // Both labels are in the page; what is drawn is what counts.
+    await expect(search).toContainText('⌘K', { useInnerText: true });
+    await expect(search).not.toContainText('Ctrl', { useInnerText: true });
+    return search.boundingBox();
+  }
+
+  test('the search button is drawn as it will stay, before React hydrates', async ({
+    page,
+    context,
+  }) => {
+    await page.goto('/patterns/tabs/');
+    await page.locator('[data-tabs][data-ready="true"]').first().waitFor();
+    const hydrated = await searchBox(page);
+
+    const before = await context.newPage();
+    // Without the framework's scripts the page stays as the server wrote it.
+    await before.route('**/_next/static/chunks/**/*.js', (route) => route.abort());
+    await before.goto('/patterns/tabs/');
+    expect(await searchBox(before)).toEqual(hydrated);
+  });
+});

@@ -3,6 +3,7 @@ export { useArrival } from './arrival/use-arrival';
 export { Badge, type BadgeTone } from './badge/badge';
 export { BrandMark } from './brand-mark/brand-mark';
 export { CommandPalette } from './command-palette/command-palette';
+export { platformBootScript } from './command-palette/platform-boot';
 export type { PaletteItem } from './command-palette/palette-model';
 export { Disclosure } from './disclosure/disclosure';
 export { LensIntro } from './lens-intro/lens-intro';

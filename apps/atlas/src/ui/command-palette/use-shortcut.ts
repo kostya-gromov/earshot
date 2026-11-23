@@ -1,14 +1,6 @@
 'use client';
 
-import { useEffect, useSyncExternalStore } from 'react';
-
-const isApplePlatform = (): boolean => /Mac|iPhone|iPad/.test(navigator.userAgent);
-const noSubscription = () => () => {};
-
-/** Whether to show ⌘ or Ctrl. The server renders Ctrl; the client corrects it after hydration. */
-export function useIsApple(): boolean {
-  return useSyncExternalStore(noSubscription, isApplePlatform, () => false);
-}
+import { useEffect } from 'react';
 
 /** Runs `onTrigger` for ⌘K on Apple platforms and Ctrl+K elsewhere, anywhere on the page. */
 export function useShortcut(key: string, onTrigger: () => void): void {

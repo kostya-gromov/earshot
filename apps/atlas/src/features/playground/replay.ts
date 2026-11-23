@@ -91,10 +91,13 @@ function pressKey(key: string) {
 export async function replayKeys({ root, keys, onKey, isCancelled, holdMs }: ReplayOptions) {
   // Without scrolling: the caller scrolls the field into view smoothly, and a plain focus()
   // would jump there first.
-  // Where every recording starts: the field's input, the button of a menu button, or the button
-  // that opens a dialog (it comes before the dialog's own field in the markup).
+  // Where every recording starts: the field's input, the button of a menu button, the button
+  // that opens a dialog (it comes before the dialog's own field in the markup), or the selected
+  // tab, the one Tab stop of a tab list. Without a start the keys reach the body and do nothing.
   root
-    .querySelector<HTMLElement>('[data-dialog-open], input, [aria-haspopup="menu"]')
+    .querySelector<HTMLElement>(
+      '[data-dialog-open], input, [aria-haspopup="menu"], [role="tab"][aria-selected="true"]',
+    )
     ?.focus(asAfterAKey);
   const beat = reducedMotion() ? 350 : 700;
   for (const [index, key] of keys.entries()) {

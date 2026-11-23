@@ -38,6 +38,20 @@ test('the playground runs the reference and its tour counts real keys', async ({
   await expect(page.getByText('Settings, tabpanel').first()).toBeVisible();
 });
 
+test('"Watch it" starts on the selected tab, arrows through the tabs and stops at Tab', async ({
+  page,
+}) => {
+  test.setTimeout(20_000);
+  const playground = page.locator('[data-tabs][data-ready="true"]').first();
+  await playground.waitFor();
+  await page.getByRole('button', { name: 'Watch it' }).click();
+  // Right, Right, Left: Activity, Members, then back to Activity.
+  await expect(playground.getByRole('tab', { name: 'Members', exact: true })).toBeFocused();
+  // Left, Left wraps past Overview to Settings; Tab is the person's to press.
+  await expect(playground.getByRole('tab', { name: 'Settings', exact: true })).toBeFocused();
+  await expect(page.getByText('Next step: press Tab yourself')).toBeVisible();
+});
+
 test('the systems that were measured are the columns of the matrix', async ({ page }) => {
   const systems = page.getByRole('columnheader');
   await expect(systems).toHaveCount(5);

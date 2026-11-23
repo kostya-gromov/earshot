@@ -2,7 +2,6 @@
 
 import type { KeyboardEvent } from 'react';
 import { Keycap } from '../keycap/keycap';
-import { useIsApple } from './use-shortcut';
 import styles from './command-palette.module.css';
 
 function SearchIcon() {
@@ -34,7 +33,6 @@ export function PaletteHints() {
 
 /** The button that opens the palette; it advertises the shortcut to assistive technology too. */
 export function PaletteTrigger({ label, onOpen }: { label: string; onOpen: () => void }) {
-  const isApple = useIsApple();
   return (
     <button
       type="button"
@@ -44,8 +42,10 @@ export function PaletteTrigger({ label, onOpen }: { label: string; onOpen: () =>
     >
       <SearchIcon />
       <span className={styles.triggerLabel}>{label}</span>
+      {/* Both are in the page; the platform mark set before the first paint shows one. */}
       <kbd className={styles.shortcut} aria-hidden="true">
-        {isApple ? '⌘K' : 'Ctrl K'}
+        <span className={styles.shortcutApple}>⌘K</span>
+        <span className={styles.shortcutOther}>Ctrl K</span>
       </kbd>
     </button>
   );
