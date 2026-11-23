@@ -1,6 +1,7 @@
 export { ComboboxField } from './combobox-field';
 export { ComboboxFrames } from './combobox-frames';
 export { ComboboxLegend } from './combobox-marks';
+export { KeyRow } from './key-row';
 export { RecordingLegend } from './recording-legend';
 export { ReplayField } from './replay-field';
 export { TabsLegend } from './tabs-field';

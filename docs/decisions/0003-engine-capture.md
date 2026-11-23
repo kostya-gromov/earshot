@@ -249,3 +249,42 @@ Engine 0.16.1, measured once for all three patterns. The first was found by the 
 ### Engine 0.16.2, the same day: one step is written "the one step"
 
 Wording only, in the two `expanded` evaluators: "after the 1 step judged" became "after the one step judged", and "after any of the 1 step here" became "after the one step here". Measured again for all three patterns: no verdict changed, no spoken line changed, and reasons changed in these words alone.
+
+## Amendment (2026-11-21): engine 0.18.0, what a modal dialog needs
+
+Decided by the owner with the dialog proposal (`docs/proposals/dialog.md`, decision 8). One engine version; the four published patterns are measured again on it.
+
+- **The dialog at each step** (`Step.dialog`, for adapters that declare one): the dialog's node as the tree exposes it, absent when none is in the tree; the name of the first heading inside it, its visible title; and the button that opens it, absent when the tree leaves it out, as it does for the page behind the browser's own modal dialog.
+- **`states.modal`**, from the tree's own property. Chromium reports it for `aria-modal="true"` and for a native `<dialog>` opened with `showModal()`, which has no such attribute (checked by hand on 2026-11-21 before it was built, then by `test/capture/dialog.test.ts`).
+- **`focus.isInsideDialog`**: focus is on the dialog or inside it, wherever the system renders it. The same idea as `isInsidePopup` and `isInsidePanel`.
+- **`focus.leftPage`**: the page has no focus at all, because it went to the browser's own controls. Tab on the last element of a native modal dialog does this, and `document.activeElement` is then the body, so the step read as focus lost to the page. Written only when true, so recordings where it never happens are unchanged.
+- **A click at a point** (`action.at: "point"`): the mouse goes to the centre of the target, whatever is drawn over it. `locator.click()` waits until the element itself would receive the click, which a field behind a modal backdrop never does. Recorded as such, so a reader knows which kind of click a step was.
+- **Quiet also means focus at rest.** A change of focus restarts the quiet window, as a change in the DOM does: a focus guard may hand focus on without touching the DOM. It follows a chain of hand-ons, each within the window of the last. It does not catch one that comes later than the window after a page that was completely still; nothing based on a quiet window can, and the same has always been true of a late DOM change. The listeners sit on the document, so a page that rewrites itself with `document.open()` loses them; a measured page is reached by navigation and keeps them.
+- **How it was split.** `runner/observe-step.ts` had reached the size limit: the places focus can be (`focus-places.ts`) and the adapter's declared parts (`adapter-states.ts`) are modules of their own now. No behavior changed in that move.
+
+### Engine 0.19.0 (2026-11-21): a click at a point is checked first
+
+A click at a point says something about the page behind only when the point is behind the
+backdrop, not under the dialog. On the reference page the open dialog covered the field, and
+the click landed on the dialog. Before a click at a point, the engine compares the point with
+the box of the adapter's dialog; when the box covers it, the run ends with that reason and the
+rule is not judged. Pages for the dialog keep the field clear of a centred dialog.
+
+### Engine 0.19.1 (2026-11-22): the wording of one reason
+
+No change to capture. The reason of `outside-inert` said "A click on textbox "Notes", outside
+the dialog"; the click goes to the point where the field is, on whatever covers it, and the
+reason says "A click where textbox "Notes" is, behind the dialog". Every pattern was measured
+again on it, so that all data is on one engine version.
+
+### Engine 0.20.0 (2026-11-23): no spoken line for focus outside the page; the click's point
+
+- **Speech.** A step that ends with the document no longer holding focus (`focus.leftPage`) was
+  spoken as "…, document". The semantic model reads what focus lands on in the page's tree, and
+  outside the page there is nothing of the page to read: the model now writes no focus line for
+  such a step. Announcements of live regions in the step are still written. Focus that fell to
+  the document while the page kept focus is spoken as before. The site says "Not modelled:
+  focus is outside the page" in the line's place.
+- **A click at a point records the point**, in whole CSS pixels of the viewport (`action.point`).
+  The point is read once and is the point clicked. Drawings stay schematic.
+

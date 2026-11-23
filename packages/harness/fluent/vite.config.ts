@@ -12,6 +12,7 @@ const { plugin, ...config } = harnessConfig({
     'menu-button.html',
     'menu-button-default-story.html',
     'tabs.html',
+    'dialog.html',
   ],
 });
 

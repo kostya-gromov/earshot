@@ -1,10 +1,12 @@
 'use client';
 
 import { comboboxPlaces } from '@/lib/combobox-replay';
+import { dialogAwaySide, dialogBehind, dialogControls } from '@/lib/dialog-replay';
 import { menuOutside } from '@/lib/menu-replay';
-import { tabsOutside } from '@/lib/tabs-replay';
+import { tabsAwaySide, tabsOutsideAt, tabsOutsideNames } from '@/lib/tabs-replay';
 import { replayStateAt, type ReplayStep } from '@/lib/replay';
 import { ComboboxField } from './combobox-field';
+import { DialogField } from './dialog-field';
 import { MenuField } from './menu-field';
 import { TabsField } from './tabs-field';
 import { ReplayField } from './replay-field';
@@ -81,6 +83,27 @@ function MenuStage({ steps, index, size, rows }: StepFieldProps) {
   );
 }
 
+/** The button, the dialog and its controls of a recording at one step. */
+function DialogStage({ steps, index, size }: StepFieldProps) {
+  const all = steps.flatMap(({ dialog }) => (dialog ? [dialog] : []));
+  const first = all[0];
+  if (!first) return null;
+  const current = index < 0 ? undefined : all[index];
+  return (
+    <DialogField
+      moment={current?.after ?? first.before}
+      openerName={first.openerName}
+      controls={dialogControls(all)}
+      controlCount={first.controlCount}
+      behind={dialogBehind(all)}
+      isClicked={current?.clickedAt !== undefined}
+      awaySide={dialogAwaySide(all)}
+      size={size === 'md' ? 'md' : 'sm'}
+      isLive={index >= 0}
+    />
+  );
+}
+
 /** The tabs and the shown panel of a recording at one step. */
 function TabsStage({ steps, index, size }: StepFieldProps) {
   const all = steps.flatMap(({ tabs }) => (tabs ? [tabs] : []));
@@ -90,10 +113,21 @@ function TabsStage({ steps, index, size }: StepFieldProps) {
     <TabsField
       moment={index < 0 ? first.before : (all[index]?.after ?? first.before)}
       size={size === 'md' ? 'md' : 'sm'}
-      outside={tabsOutside(all)}
+      outside={tabsOutsideAt(all, index)}
+      outsideNames={tabsOutsideNames(all)}
+      awaySide={tabsAwaySide(all)}
       isLive={index >= 0}
     />
   );
+}
+
+/** The drawing a recording's first step asks for; none for a field of chips. */
+function stageFor(first: ReplayStep | undefined) {
+  if (first?.tabs) return TabsStage;
+  if (first?.dialog) return DialogStage;
+  if (first?.menu) return MenuStage;
+  if (first?.combobox) return ComboboxStage;
+  return undefined;
 }
 
 /**
@@ -103,9 +137,8 @@ function TabsStage({ steps, index, size }: StepFieldProps) {
  */
 export function StepField(props: StepFieldProps) {
   const { steps, index, people, size = 'md', hasControls } = props;
-  if (steps[0]?.tabs) return <TabsStage {...props} size={size} />;
-  if (steps[0]?.menu) return <MenuStage {...props} size={size} />;
-  if (steps[0]?.combobox) return <ComboboxStage {...props} size={size} />;
+  const Stage = stageFor(steps[0]);
+  if (Stage) return <Stage {...props} size={size} />;
   return (
     <ReplayField
       state={replayStateAt(steps, index)}

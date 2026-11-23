@@ -13,6 +13,26 @@ interface Change {
 
 const changes: readonly Change[] = [
   {
+    date: '23 Nov 2026',
+    text: 'Modal dialog, the fifth pattern, is on the site: ten rules, two of them Atlas recommendations, measured in six systems on engine 0.20.0 with reference 0.1.8. Five of the six follow all ten; one does not report its dialog as modal in the accessibility tree while it behaves as one. Two systems are measured as their documentation’s form example builds the dialog, with focus set on the first field, and the same dialog without that is shown beside them and not counted. A click on the page behind is recorded and drawn where it was made.',
+  },
+  {
+    date: '23 Nov 2026',
+    text: 'Engine 0.20.0 and reference 0.1.8. The semantic model no longer writes a spoken line for a step that ends with focus outside the page: it reads what focus lands on in the page’s tree, and there is nothing of the page to read there. Three tabs recordings (React Aria, Chakra UI, Fluent 2) held the line “…, document” for such a step. A click made at a point now records the point. The reference tabs wrap to a second row on a page 320 px wide, where they made the whole page scroll sideways. Every system and the reference measured again. No verdict and no reason changed, and each recording is the same as before, step for step, apart from timings and those two things.',
+  },
+  {
+    date: '22 Nov 2026',
+    text: 'A correction to how three tabs recordings are shown. In React Aria, Chakra UI and Fluent 2, the last Shift+Tab of “Shift+Tab back into the tabs” goes on past the first field of the page, out of the page. The site said “Focus lost to the page” for that step. It now says “Focus left the page” and marks the place with a sign of its own: Tab carried focus out, the page did not drop it. No verdict changed; that step is not what the rule judges.',
+  },
+  {
+    date: '22 Nov 2026',
+    text: 'Engine 0.19.1 and reference 0.1.7. Both change only the modal dialog, a fifth pattern that is being measured and is not on the site yet: before a click on the page behind an open dialog, the engine checks that the dialog itself does not cover the point, and the reference page keeps its fields clear of the dialog. Every system and the reference of the four patterns here measured again, so that all data is on one engine version. No verdict and no reason changed, and each recording is the same as before, step for step, apart from timings.',
+  },
+  {
+    date: '21 Nov 2026',
+    text: 'Engine 0.18.0 and reference 0.1.6. For the modal dialog, a fifth pattern that is being measured and is not on the site yet, the engine now records the dialog after each step, whether focus is inside it, and when focus has left the page for the browser’s own controls; a step is also held open while focus is still changing. Every system and the reference of the four patterns here measured again. No verdict and no reason changed, and each recording is the same as before, step for step, apart from timings and one new fact: in three tabs recordings (React Aria, Chakra UI, Fluent 2) the last Shift+Tab of “Shift+Tab back into the tabs” goes past the first field of the page, and that step now says focus left the page, where it used to read as focus on the document.',
+  },
+  {
     date: '19 Nov 2026',
     text: 'Tabs, the fourth pattern, is on the site: nine rules, measured in five systems on engine 0.17.0 with reference 0.1.5. Two systems, Fluent 2 and MUI, are measured as their documentation builds the panels, since neither package ships one. Whether a system activates a tab as it receives focus or on Enter and Space is shown, not judged: the standards allow both.',
   },

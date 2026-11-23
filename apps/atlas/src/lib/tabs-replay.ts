@@ -10,6 +10,7 @@ export type TabsFocus =
   | { kind: 'panel' }
   | { kind: 'in-panel'; role: string | null; name: string }
   | { kind: 'outside'; role: string | null; name: string }
+  | { kind: 'away' }
   | { kind: 'body' };
 
 export interface TabsTab {
@@ -43,6 +44,9 @@ function focusedTab(focus: FocusInfo, tabSet: TabSetState): string | undefined {
 }
 
 function tabsFocus(focus: FocusInfo, tabSet: TabSetState): TabsFocus {
+  // The document no longer has focus (engine 0.18.0, focus.leftPage): Tab went on past the
+  // page's last or first stop. Not a loss: the page did not drop focus, the person carried it out.
+  if (focus.leftPage) return { kind: 'away' };
   if (focus.isBody) return { kind: 'body' };
   const tab = focusedTab(focus, tabSet);
   if (tab !== undefined) return { kind: 'tab', name: tab };
@@ -105,6 +109,8 @@ function focusWords(focus: TabsFocus): string {
     case 'outside':
       // Past the panel is the point of "Tab reaches the shown panel", so it is named.
       return `Focus left the tabs: ${focus.name || focus.role || 'an unnamed control'}.`;
+    case 'away':
+      return 'Focus left the page.';
     case 'body':
       return 'Focus lost to the page.';
   }
@@ -138,10 +144,45 @@ export function describeTabsChange({ before, after }: TabsStep): string {
   return changes.length > 0 ? changes.join(' ') : 'Nothing changes.';
 }
 
-/** The control focus goes to outside the tabs and their panel in a recording, by the name recorded. */
-export function tabsOutside(steps: readonly TabsStep[]): string | undefined {
-  const reached = steps.flatMap(({ before, after }) => [before.focus, after.focus]);
-  return reached.flatMap((focus) =>
-    focus.kind === 'outside' ? [focus.name || focus.role || ''] : [],
-  )[0];
+const outsideName = ({ focus }: TabsMoment): string | undefined =>
+  focus.kind === 'outside' ? focus.name || focus.role || '' : undefined;
+
+/** A recording's moments in order: before the first key, then after each step. */
+const momentsOf = (steps: readonly TabsStep[]): TabsMoment[] =>
+  steps[0] ? [steps[0].before, ...steps.map(({ after }) => after)] : [];
+
+/** Every control outside the tabs that focus is on in a recording, by the name recorded, once each. */
+export function tabsOutsideNames(steps: readonly TabsStep[]): string[] {
+  const reached = momentsOf(steps).flatMap((moment) => outsideName(moment) ?? []);
+  return [...new Set(reached)];
+}
+
+/**
+ * The name the one box outside the tabs carries at a step (-1: before the first key): the
+ * control focus is on, by the name recorded. While focus is elsewhere, the control it was last
+ * on, and before it has been on any, the one it goes to first. The drawing never names a
+ * control the recording does not have focus on at that step as if it did.
+ */
+export function tabsOutsideAt(steps: readonly TabsStep[], index: number): string | undefined {
+  const names = momentsOf(steps).map(outsideName);
+  const at = Math.min(Math.max(index + 1, 0), names.length - 1);
+  const last = names.slice(0, at + 1).findLast((name) => name !== undefined);
+  return last ?? names.slice(at + 1).find((name) => name !== undefined);
+}
+
+/**
+ * The way focus left the page, from the key that took it out: Shift+Tab goes back past the
+ * page's first stop, Tab on past its last. The recording holds the key, not a place.
+ */
+export function tabsAwaySide(steps: readonly TabsStep[]): 'before' | 'after' | undefined {
+  const left = steps.find(({ after }) => after.focus.kind === 'away');
+  if (!left) return undefined;
+  return left.key.startsWith('Shift+') ? 'before' : 'after';
+}
+
+/** Whether focus leaves the page at any moment of a recording: then the schematic shows where to. */
+export function tabsLeavePage(steps: readonly TabsStep[]): boolean {
+  return steps.some(
+    ({ before, after }) => before.focus.kind === 'away' || after.focus.kind === 'away',
+  );
 }

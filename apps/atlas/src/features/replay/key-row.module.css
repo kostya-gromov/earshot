@@ -1,0 +1,48 @@
+/* One key, or one key and how many times it is pressed in a row. */
+.run {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.count {
+  display: inline-grid;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-3);
+  white-space: nowrap;
+  /* Never taller than the key beside it: the row keeps the height it had without a count. */
+  line-height: 1;
+}
+
+.count[data-current] {
+  color: var(--ink);
+}
+
+/* Both texts share the cell; the one not shown keeps its width and is unseen. */
+.count > span {
+  grid-area: 1 / 1;
+  visibility: hidden;
+}
+
+.count > span[data-shown] {
+  visibility: visible;
+}
+
+/*
+ * A press inside a run: the key dips and comes back, so each of several presses of one key is
+ * seen. Micro motion (opacity only, no movement); none under reduced motion, where the count
+ * alone changes.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .run[data-pressing] > :first-child {
+    animation: key-press 140ms var(--ease-out);
+  }
+}
+
+@keyframes key-press {
+  from {
+    opacity: 0.45;
+  }
+}

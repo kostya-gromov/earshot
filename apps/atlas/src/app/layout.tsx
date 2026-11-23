@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { Inter, Newsreader } from 'next/font/google';
 import { themeBootScript, themeBootStyle } from '@/features/theme';
+import { siteOrigin } from '@/lib/site-origin';
 import './globals.css';
 
 // next/font self-hosts the files at build time with metric-matched fallbacks: no layout shift
@@ -29,7 +30,7 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   // Link previews need absolute addresses; the image itself is app/opengraph-image.png, taken
   // from the home page by scripts/og-image.ts.
-  metadataBase: new URL('https://earshot-atlas.vercel.app'),
+  metadataBase: new URL(siteOrigin),
   title: { default: 'Atlas', template: '%s · Atlas' },
   description:
     'Keyboard behavior, focus and announcements of interactive components, measured across design systems.',

@@ -62,6 +62,7 @@ function statesOf(node: RawAxNode): AccessibleStates {
     checked: asTristate(read('checked')),
     disabled: asBoolean(read('disabled')),
     invalid: asInvalid(read('invalid')),
+    modal: asBoolean(read('modal')),
   });
 }
 

@@ -10,6 +10,7 @@ export type MenuFocus =
   | { kind: 'item'; index: number; name: string }
   | { kind: 'menu' }
   | { kind: 'outside'; role: string | null; name: string }
+  | { kind: 'away' }
   | { kind: 'body' };
 
 export interface MenuItem {
@@ -37,6 +38,8 @@ export interface MenuStep {
 }
 
 function menuFocus(focus: FocusInfo, popup: PopupState): MenuFocus {
+  // The document no longer has focus: carried out of the page, which is not a loss.
+  if (focus.leftPage) return { kind: 'away' };
   if (focus.isBody) return { kind: 'body' };
   const item = focus.item && popup.options[focus.item.index - 1];
   if (focus.item && item) return { kind: 'item', index: focus.item.index, name: item.name };
@@ -114,6 +117,8 @@ function focusWords(focus: MenuFocus): string {
     case 'outside':
       // Where it went is the point of the Tab rule, so it is named.
       return `Focus left the menu button: ${focus.name || focus.role || 'an unnamed control'}`;
+    case 'away':
+      return 'Focus left the page';
     case 'body':
       return 'Focus lost to the page';
   }

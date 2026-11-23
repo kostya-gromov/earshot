@@ -43,16 +43,23 @@ export function RuleTradeOffs({ pattern, ruleId, measured }: RuleTradeOffsProps)
       .system ?? adapter;
   if (tradeOffs.length + rest.length + models.length === 0) return null;
   const hasDraft = [...tradeOffs, ...models].some(({ status }) => status === 'draft');
+  const hasAlternative =
+    models.length + rest.length > 0 || tradeOffs.some(({ kind }) => kind === 'alternative');
   return (
     <div className={styles.tradeGroup}>
       <header className={styles.tradeHead}>
         <h4>Why systems differ</h4>
         {hasDraft && <span className={styles.draft}>Draft, pending review</span>}
-        <p>
-          Differing is not failing. Each alternative has something it gains, something it costs, and
-          a case where it is reasonable. That case is a condition: a system listed beside it does
-          not necessarily meet it.
-        </p>
+        {hasAlternative ? (
+          <p>
+            Differing is not failing. Each alternative has something it gains, something it costs,
+            and a case where it is reasonable. That case is a condition: a system listed beside it
+            does not necessarily meet it.
+          </p>
+        ) : (
+          // Only a note: nothing is on record of what the difference gains, and the note says so.
+          <p>Differing is not failing. What is on record about the difference is below.</p>
+        )}
       </header>
       {tradeOffs.map((tradeOff, index) => (
         <TradeOff

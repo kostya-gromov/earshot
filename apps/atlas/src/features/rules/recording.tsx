@@ -1,15 +1,26 @@
 'use client';
 
 import { useRef, type RefObject } from 'react';
-import { RecordingLegend, StepField, useClock } from '@/features/replay';
-import { describeStep, focusWords, type ReplayLane, type ReplayStep } from '@/lib/replay';
+import { KeyRow, RecordingLegend, StepField, useClock } from '@/features/replay';
+import {
+  describeStep,
+  endsOutsidePage,
+  focusWords,
+  notModelledWords,
+  spokenLines,
+  type ReplayLane,
+  type ReplayStep,
+} from '@/lib/replay';
 import { Keycap, SpeechLine } from '@/ui';
 import styles from './depth.module.css';
 
 /** Every line the semantic model spoke at a step: announcements in violet, focus in ink. */
 function Spoken({ step }: { step: ReplayStep }) {
-  if (step.speech.length === 0) return <p className={styles.silent}>Nothing said</p>;
-  return step.speech.map((line) => (
+  const lines = spokenLines(step);
+  // Upright and grey, like "Nothing said": a statement about the model, not something heard.
+  const unspoken = endsOutsidePage(step) ? notModelledWords : 'Nothing said';
+  if (lines.length === 0) return <p className={styles.silent}>{unspoken}</p>;
+  return lines.map((line) => (
     <SpeechLine key={line} source={step.heard.includes(line) ? 'announcement' : 'focus'} size="sm">
       {line}
     </SpeechLine>
@@ -131,9 +142,7 @@ function RecordingView(props: RecordingViewProps) {
     <div ref={rootRef} className={styles.recording}>
       <div className={styles.keys}>
         <span aria-hidden="true">
-          {steps.map((step, i) => (
-            <Keycap key={i} keys={step.key} pressed={i === index} />
-          ))}
+          <KeyRow keys={steps.map(({ key }) => key)} index={index} />
         </span>
         <button type="button" className={styles.pause} onClick={control?.toggle}>
           {control?.isPlaying ? 'Pause' : 'Play'}

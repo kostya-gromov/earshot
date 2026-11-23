@@ -363,6 +363,12 @@
   gap: var(--space-4);
 }
 
+/* A grid child is as wide as its content unless told otherwise: a long row of keys would widen
+   the whole recording, and push the schematic under it past the edge. */
+.recording > * {
+  min-width: 0;
+}
+
 .keys {
   display: flex;
   align-items: center;
@@ -485,6 +491,9 @@
    */
   .tabs {
     position: relative;
+    /* The offset belongs to the list that sticks beside the rule: here it would push the strip
+       down over the rule it shows. */
+    top: auto;
     display: flex;
     overflow-x: auto;
     scrollbar-width: thin;

@@ -1,0 +1,36 @@
+/*
+ * From Modal.css of the first example on https://react-aria.adobe.com/Modal (read 2026-11-21):
+ * where the overlay and the modal are placed. react-aria-components ships unstyled, and without
+ * these rules the modal is drawn in the page flow with nothing over the page behind. Left out:
+ * the theme import and its variables (plain values instead), the fonts, and the entering and
+ * exiting animations (the engine measures with reduced motion).
+ */
+.react-aria-ModalOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--page-width);
+  height: var(--page-height);
+  background: rgba(0 0 0 / 0.5);
+  overflow: clip;
+  z-index: 100;
+}
+
+.react-aria-Modal {
+  position: sticky;
+  max-height: calc(var(--visual-viewport-height) * 0.9);
+  top: calc(var(--visual-viewport-height) / 2);
+  margin-left: 50vw;
+  translate: -50% -50%;
+  box-shadow: 0 8px 32px rgba(0 0 0 / 0.2);
+  border-radius: 12px;
+  background: #fff;
+  color: #16181d;
+  outline: 1px solid #858c98;
+  width: max-content;
+  max-width: min(500px, 90vw);
+  padding: 24px;
+  font:
+    14px/1.4 system-ui,
+    sans-serif;
+}

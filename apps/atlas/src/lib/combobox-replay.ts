@@ -10,6 +10,7 @@ export type ComboboxFocus =
   | { kind: 'option'; index: number; name: string }
   | { kind: 'outside'; role: string | null; name: string }
   | { kind: 'other'; role: string | null; name: string }
+  | { kind: 'away' }
   | { kind: 'body' };
 
 export interface ComboboxOption {
@@ -49,6 +50,8 @@ export interface ComboboxStep {
 const textEntryRoles: ReadonlySet<string> = new Set(['combobox', 'textbox', 'searchbox']);
 
 function comboboxFocus(focus: FocusInfo, popup: PopupState): ComboboxFocus {
+  // The document no longer has focus: carried out of the page, which is not a loss.
+  if (focus.leftPage) return { kind: 'away' };
   if (focus.isBody) return { kind: 'body' };
   const option = focus.item && popup.options[focus.item.index - 1];
   if (focus.item && option) return { kind: 'option', index: focus.item.index, name: option.name };
@@ -155,6 +158,8 @@ function focusWords(focus: ComboboxFocus): string {
     case 'outside':
       // Where it went is the point of the Tab rule, so it is named.
       return `Focus left the field: ${focus.name || focus.role || 'an unnamed control'}`;
+    case 'away':
+      return 'Focus left the page';
     case 'body':
       return 'Focus lost to the page';
     case 'other':

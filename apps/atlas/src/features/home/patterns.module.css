@@ -176,6 +176,105 @@
   border-bottom: 0;
 }
 
+/* The drawing in a row of the list of all patterns: smaller, in the same proportions. */
+.glyphCompact {
+  height: 142px;
+  margin-bottom: 0;
+  align-self: start;
+  transition: box-shadow var(--dur-micro) var(--ease-out);
+}
+
+/* Not while the pointer is on a source link inside the row, which goes elsewhere. */
+li:hover:not(:has(p a:hover)) > .glyphCompact {
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+
+@media (max-width: 1199px) {
+  .glyphCompact {
+    height: 106px;
+  }
+}
+
+@media (max-width: 700px) {
+  .glyphCompact {
+    height: 120px;
+  }
+}
+
+/* The drawing of a row on the list of all patterns fades in once, when first scrolled to
+   (Motion: Arrival): opacity only, and only the drawing. The state is set by script, with motion
+   allowed, for a row below the fold; otherwise nothing waits. */
+.arriving {
+  position: absolute;
+  inset: 0;
+}
+
+.arriving[data-state='waiting'] {
+  opacity: 0;
+}
+
+.arriving[data-state='seen'] {
+  animation: arrive 280ms var(--ease-out);
+}
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Under the home list, in the middle: the way to every pattern, as the outlined button of the
+   page's opening ("How it works"). The hairline above it closes the list. */
+.all {
+  display: flex;
+  justify-content: center;
+  /* As far from the list's last line as from the next section's. */
+  padding-top: 60px;
+  border-top: 1px solid var(--line);
+}
+
+.all a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 42px;
+  padding: 0 20px;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  font: 500 var(--text-base) / 1 var(--font-sans);
+  color: var(--ink);
+  text-decoration: none;
+  transition:
+    transform var(--dur-micro) var(--ease-out),
+    background-color var(--dur-micro) var(--ease-out);
+}
+
+.all a:hover {
+  background: var(--panel-2);
+}
+
+.all a:active {
+  transform: scale(0.98);
+}
+
+.all a span {
+  color: var(--ink-3);
+  transition:
+    transform var(--dur-micro) var(--ease-out),
+    color var(--dur-micro) var(--ease-out);
+}
+
+.all a:hover span {
+  color: var(--ink);
+  transform: translateX(3px);
+}
+
+@media (forced-colors: active) {
+  .all a {
+    border: 1px solid LinkText;
+  }
+}
+
 @media (max-width: 860px) {
   .published,
   .planned {

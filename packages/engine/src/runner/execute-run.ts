@@ -5,6 +5,7 @@ import type { ScenarioDefinition, StepDefinition } from '../scenarios/types.ts';
 import { buildStep } from './build-step.ts';
 import { openSession } from './browser.ts';
 import { observeStep } from './observe-step.ts';
+import { centreOf, clickAt, coversCentre } from './click-at-centre.ts';
 import { focusLastItem } from './start-on-item.ts';
 
 interface RunExecution {
@@ -25,6 +26,20 @@ async function resolveAction<State, InteractionId extends string>(
   if (definition.type !== 'click') return { action: definition };
   const resolved = await adapter.resolveClickTarget(page, definition.target);
   if (!resolved.ok) return { error: resolved.reason };
+  if (resolved.atPoint) {
+    if (adapter.dialog && (await coversCentre(adapter.dialog.locate(page), resolved.locator))) {
+      // Expected, so a value: the scenario is not judged, and the reason says why.
+      return {
+        error: `The open dialog covers the point of the click on ${resolved.target.role ?? 'element'} "${resolved.target.name}": a click there is a click on the dialog, not outside it.`,
+      };
+    }
+    // Read once, before the click: the point recorded is the point clicked.
+    const point = await centreOf(resolved.locator);
+    return {
+      action: { type: 'click', target: resolved.target, at: 'point', point },
+      performAction: () => clickAt(page, point),
+    };
+  }
   return {
     action: { type: 'click', target: resolved.target },
     performAction: () => resolved.locator.click(),

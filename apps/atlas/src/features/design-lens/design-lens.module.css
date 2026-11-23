@@ -45,12 +45,65 @@
   gap: var(--space-2);
 }
 
+/* One box, then the quieter download as text (design review 2026-11-21: two equal boxes had no
+   order between them). The row wraps before a label does. */
 .all {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-1);
+  gap: var(--space-2);
   justify-content: flex-end;
   margin-block: calc(-1 * var(--space-3)) var(--space-3);
+}
+
+/* The row is pulled up beside the intro's last line when it holds only controls at its end. With
+   a sentence at its start it would run into the intro's text, so it keeps its own distance. */
+.all:has(.plugin) {
+  margin-block-start: var(--space-2);
+}
+
+/* What is coming, at the row's start, so the controls keep the end. On a narrow screen it takes
+   a line of its own above them. */
+.plugin {
+  /* A line of its own until the row is wide enough for the sentence and every control: sharing
+     a line earlier split the controls over two (design review 2026-11-23, 820 to 980 px). */
+  flex: 1 1 100%;
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+@media (min-width: 1024px) {
+  .plugin {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+/* Led by weight, not by ink: the brightest text in the row stays with what can be pressed. */
+.plugin strong {
+  font-weight: 600;
+}
+
+.plugin .tag {
+  margin-inline-end: var(--space-2);
+  vertical-align: 1px;
+}
+
+/* In forced colours a bordered pill reads as a third button beside the two real controls. */
+@media (forced-colors: active) {
+  .plugin .tag {
+    padding-inline: 0;
+    border: 0;
+  }
+
+  .plugin .tag::before {
+    content: '(';
+  }
+
+  .plugin .tag::after {
+    content: ')';
+  }
 }
 
 .copy {
@@ -58,6 +111,7 @@
   transition: color var(--dur-micro) var(--ease-out);
   min-height: 28px;
   padding: 0 10px;
+  white-space: nowrap;
   font: 500 var(--text-xs) / 1 var(--font-sans);
   color: var(--ink-2);
   background: none;
@@ -69,6 +123,12 @@
 /* A quiet button's text ends where the source links above it end, not short by its padding. */
 .sources .copy {
   margin-inline-end: -10px;
+}
+
+/* The download is a link in the button's box: same height, its text centred, no underline. */
+a.copy {
+  align-items: center;
+  text-decoration: none;
 }
 
 .copyLabel {
@@ -112,6 +172,8 @@
 .tip {
   position: relative;
   display: inline-flex;
+  /* The "i" has no box of its own, so it keeps the 4 px it had beside one. */
+  margin-inline-start: calc(-1 * var(--space-1));
 }
 
 .tipButton {
@@ -149,7 +211,7 @@
   top: 100%;
   right: 0;
   width: max-content;
-  max-width: min(280px, calc(100vw - 2 * var(--gutter)));
+  max-width: min(320px, calc(100vw - 2 * var(--gutter)));
   margin-top: 4px;
   padding: var(--space-2) var(--space-3);
   font-size: var(--text-xs);

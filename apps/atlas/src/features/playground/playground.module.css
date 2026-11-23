@@ -631,3 +631,61 @@
     box-shadow: none;
   }
 }
+
+/*
+ * "You would hear", over an open modal dialog (dialog-heard.ts): the last line of the
+ * transcript in a popover, which the browser draws above the dialog's backdrop. Read only: it
+ * is inert like everything outside the dialog. Right under the dialog and as wide as it, placed
+ * from the dialog's own box by the script: one thing with the dialog, not a message in a corner
+ * (design review, 2026-11-23).
+ */
+.heardOver {
+  position: fixed;
+  inset: auto;
+  margin: 0;
+  box-sizing: border-box;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-md);
+  background: var(--panel);
+  color: var(--ink);
+}
+
+/* Only while it is open: a popover that is not shown has no box. */
+.heardOver:popover-open {
+  display: grid;
+  gap: 2px;
+}
+
+.heardOver > span:first-child {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+/* The voice: serif italic and violet, as every spoken line on the site. */
+.heardOver > span:nth-child(2) {
+  font-family: var(--font-voice);
+  font-style: italic;
+  font-size: var(--text-lg);
+  color: var(--heard);
+}
+
+/* The playground's own note, when it has one: interface text, not speech. */
+.heardOver > span:last-child {
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+}
+
+.heardOver > span:last-child:empty {
+  display: none;
+}
+
+@media (forced-colors: active) {
+  .heardOver {
+    border-color: CanvasText;
+  }
+
+  .heardOver > span:nth-child(2) {
+    color: CanvasText;
+  }
+}

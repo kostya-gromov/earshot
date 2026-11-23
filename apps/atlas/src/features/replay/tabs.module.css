@@ -7,6 +7,21 @@
   min-width: 0;
 }
 
+/* The names the box outside carries in a recording, in one cell: only the current one is seen,
+   and the box is as wide as the longest, so it does not change between steps. */
+.names {
+  display: grid;
+  place-items: center;
+}
+
+.names > span {
+  grid-area: 1 / 1;
+}
+
+.names > span[data-unseen] {
+  visibility: hidden;
+}
+
 /* Room for the focus ring and its halo on every side: the ring is never cut (design review
    2026-11-19). The list spans the drawing, so its baseline ends where the panel ends. */
 .list {
@@ -14,6 +29,9 @@
   display: flex;
   gap: 4px;
   min-width: 0;
+  /* The tabs measure themselves against the list: where it is narrow they take less padding
+     (see .tab), so four names still fit one line and none is cut at the edge. */
+  container-type: inline-size;
   padding: 6px 6px 0;
   overflow-x: clip;
   overflow-clip-margin: 6px;
@@ -36,9 +54,15 @@
   display: grid;
   align-items: center;
   height: calc(var(--row-h) + 6px);
-  padding: 0 8px;
+  /* 8 px where there is room; less in a narrow drawing, down to 2 px. The 232 px is what four
+     names of the measured pages take with the list's own padding and gaps: what is left of the
+     list's width is shared between the eight sides. A second line was tried instead and moves
+     the list under the drawing (panel invariant list-stays, 2026-11-22). */
+  padding: 0 clamp(2px, (100cqi - 232px) / 8, 8px);
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-  font-size: var(--row-font);
+  /* Names in capitals (MUI's tree gives them so) are wider still: in a narrow list the type
+     comes down with the list's width, never under 11 px. */
+  font-size: clamp(11px, 3.9cqi, var(--row-font));
   color: var(--ink-2);
   white-space: nowrap;
 }
@@ -90,6 +114,8 @@
 .panel {
   flex: 1;
   min-width: 0;
+  /* Its own width decides what it can hold (see .panelRole below). */
+  container-type: inline-size;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -111,6 +137,20 @@
   color: var(--ink-3);
 }
 
+/* In a narrow drawing (a 320 px page) the panel's name and the link focus is on do not fit one
+   line with the role before them: the link's words went to a second line and that step was 4 px
+   taller than the others. The role is left out there at every step (the words beside the
+   drawing say "panel"), and the link's box takes less padding. */
+@container (max-width: 200px) {
+  .panelRole {
+    display: none;
+  }
+
+  .inside {
+    padding-inline: 3px;
+  }
+}
+
 .panel[data-target] {
   box-shadow:
     0 0 0 2px var(--focus),
@@ -126,6 +166,8 @@
 
 /* Focus on an element inside the panel, by the name the tree gives it. */
 .inside {
+  /* One line always: its words went to a second line in a narrow panel and the step grew 4 px. */
+  white-space: nowrap;
   padding: 2px 6px;
   border-radius: var(--radius-sm);
   font-family: var(--font-sans);
@@ -136,9 +178,52 @@
 }
 
 .legendSelected,
-.legendFocus {
+.legendFocus,
+.legendAway {
   padding: 0 4px;
   font-size: var(--text-2xs);
+}
+
+/*
+ * Outside the page: where focus is when the document no longer has it. Neutral on purpose.
+ * Not the focus blue, which marks a place on the page, and not the red of a loss: the page did
+ * not drop focus, Tab carried it on to the browser.
+ */
+.away {
+  /* On a line of its own, as wide as its words: beside the panel it took the room the panel
+     needs on the step that shows a link, and the row broke for that step alone (design
+     review, 2026-11-22). */
+  justify-self: start;
+  display: grid;
+  place-items: center;
+  /* As tall as the panel beside it; --chip-h belongs to the chips' drawing, not to this one. */
+  min-height: calc(var(--row-h) + 12px);
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--line-strong);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.away[data-target],
+.legendAway {
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 0 2px var(--ink-2);
+  color: var(--ink);
+}
+
+/* The legend shows the ring alone, the size of the other samples: the words beside it say it. */
+.legendAway {
+  display: inline-block;
+  inline-size: 24px;
+  block-size: 14px;
+  padding: 0;
+  margin-inline: 2px;
+}
+
+.away[data-target] {
+  border-color: transparent;
+  border-radius: var(--radius-md);
 }
 
 .legendSelected {
@@ -173,6 +258,19 @@
     box-shadow: none;
     outline: 1px solid CanvasText;
     outline-offset: -1px;
+  }
+
+  .away[data-target],
+  .legendAway {
+    box-shadow: none;
+    outline: 2px solid CanvasText;
+    outline-offset: 1px;
+  }
+
+  /* Forced colours repaint a transparent border: without this a dashed one sits in the outline. */
+  .away[data-target] {
+    border-style: solid;
+    border-color: Canvas;
   }
 
   .legendSelected {

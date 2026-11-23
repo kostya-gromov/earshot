@@ -40,8 +40,9 @@ describe('the sources of every rule', () => {
     }
   });
 
-  // Nineteen since 2026-11-19: tabs cites the practice on selection following focus and 4.1.2 as related.
-  it('mark nineteen citations as not applied directly', () => {
-    expect(sources.filter(({ relation }) => relation !== undefined)).toHaveLength(19);
+  // Twenty-two since 2026-11-21: the dialog cites its example page and the roles section as
+  // rationale for its two recommendations, and 2.4.3 as related to the Tab wrap.
+  it('mark twenty-two citations as not applied directly', () => {
+    expect(sources.filter(({ relation }) => relation !== undefined)).toHaveLength(22);
   });
 });

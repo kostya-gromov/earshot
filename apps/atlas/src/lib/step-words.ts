@@ -1,4 +1,5 @@
 import { describeComboboxChange } from './combobox-replay';
+import { describeDialogChange } from './dialog-replay';
 import { describeMenuChange } from './menu-replay';
 import type { ReplayStep } from './replay';
 import { describeTabsChange } from './tabs-replay';
@@ -17,6 +18,8 @@ function describeFieldStep(step: ReplayStep): string {
       return `${removal}Focus in the input`;
     case 'outside':
       return `${removal}Focus left the field`;
+    case 'away':
+      return `${removal}Focus left the page`;
     case 'body':
       return `${removal}Focus lost to the page`;
     case 'other':
@@ -27,6 +30,7 @@ function describeFieldStep(step: ReplayStep): string {
 /** What happened in a step, in words, for the text that stands beside every schematic. */
 export function describeStep(step: ReplayStep): string {
   if (step.tabs) return describeTabsChange(step.tabs);
+  if (step.dialog) return describeDialogChange(step.dialog);
   if (step.menu) return describeMenuChange(step.menu);
   if (step.combobox) return describeComboboxChange(step.combobox);
   return describeFieldStep(step);

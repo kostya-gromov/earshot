@@ -1,4 +1,5 @@
 import { comboboxSuite } from '../suites/combobox.ts';
+import { dialogSuite } from '../suites/dialog.ts';
 import { inputWithChipsSuite } from '../suites/input-with-chips.ts';
 import { menuButtonSuite } from '../suites/menu-button.ts';
 import { tabsSuite } from '../suites/tabs.ts';
@@ -8,10 +9,12 @@ const inputWithChips = registerPattern(inputWithChipsSuite);
 const combobox = registerPattern(comboboxSuite);
 const menuButton = registerPattern(menuButtonSuite);
 const tabs = registerPattern(tabsSuite);
+const dialog = registerPattern(dialogSuite);
 
 export const registeredPatterns: ReadonlyMap<string, RegisteredPattern> = new Map([
   [inputWithChips.pattern.id, inputWithChips],
   [combobox.pattern.id, combobox],
   [menuButton.pattern.id, menuButton],
   [tabs.pattern.id, tabs],
+  [dialog.pattern.id, dialog],
 ]);

@@ -37,4 +37,35 @@ describe('settle', () => {
     ]);
     await context.close();
   });
+
+  // Dialog proposal, 2026-11-21: a focus guard may hand focus on from a timer without touching
+  // the DOM. Quiet used to mean a still DOM only, so the step closed with focus on the guard.
+  it('is not quiet while focus is still changing', async () => {
+    const context = await browser.newContext();
+    await installPageScripts(context);
+    const page = await context.newPage();
+    // A navigation, as in a measurement: setContent rewrites the document with document.open(),
+    // which drops the listeners the page scripts put on it.
+    const html = '<div id="guard" tabindex="0"></div><button id="first">Name</button>';
+    await page.goto(`data:text/html,${encodeURIComponent(html)}`);
+    await page.waitForTimeout(SETTLE_OPTIONS.quietMs + 100);
+
+    // One page call, so both times are read on the page's own clock.
+    const result = await page.evaluate(async (options) => {
+      let handedOnAt = 0;
+      document.getElementById('guard')!.focus();
+      setTimeout(() => {
+        document.getElementById('first')!.focus();
+        handedOnAt = performance.now();
+      }, 300);
+      const { quiet } = await window.__earshot.waitForQuiet(options);
+      return { quiet, stillForMs: performance.now() - handedOnAt };
+    }, SETTLE_OPTIONS);
+
+    expect(result.quiet).toBe(true);
+    // The window restarted when focus was handed on, 300 ms in: before, it closed at 400 ms.
+    expect(result.stillForMs).toBeGreaterThanOrEqual(SETTLE_OPTIONS.quietMs);
+    expect(await page.evaluate(() => document.activeElement?.id)).toBe('first');
+    await context.close();
+  });
 });

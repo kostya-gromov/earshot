@@ -1,4 +1,5 @@
 import { comboboxFileOrder, comboboxNotes } from './combobox-notes';
+import { dialogFileOrder, dialogNotes } from './dialog-notes';
 import { menuButtonFileOrder, menuButtonNotes } from './menu-button-notes';
 import { referenceFileOrder, referenceNotes, type ReferenceGuide } from './reference-notes';
 import { tabsFileOrder, tabsNotes } from './tabs-notes';
@@ -9,4 +10,5 @@ export const referenceGuides: Readonly<Record<string, ReferenceGuide>> = {
   combobox: { files: comboboxFileOrder, notes: comboboxNotes },
   'menu-button': { files: menuButtonFileOrder, notes: menuButtonNotes },
   tabs: { files: tabsFileOrder, notes: tabsNotes },
+  dialog: { files: dialogFileOrder, notes: dialogNotes },
 };

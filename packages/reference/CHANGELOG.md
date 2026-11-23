@@ -4,6 +4,35 @@ One version for the package: both references are published together, and every m
 reference records this version in its provenance. A change that a reader of the site could
 notice gets an entry, with whether behavior or verdicts changed.
 
+## 0.1.8 (2026-11-23)
+
+- **tabs, fixed:** on a page 320 px wide the four tabs side by side were wider than the page, and
+  the whole page scrolled sideways (WCAG 1.4.10 Reflow; found on 2026-11-22 by a test that
+  chooses every scenario at 320 and 390). The row of tabs now wraps to a second row when it does
+  not fit. First tried as a row that scrolls inside itself: it cut the focus ring of the tab at
+  its edge, and the page test for that ring caught it. At the width the engine measures in,
+  nothing changes: the row fits. Behaviour and verdicts are unchanged; every
+  reference is measured again on this version.
+
+## 0.1.7 (2026-11-21)
+
+- **dialog, the page around it:** the fields "Email" and "Notes" and the button sit at the left
+  edge of the page instead of its centre. Centred, the open dialog lay over the field "Notes",
+  so the engine's click "outside the dialog" landed on the dialog itself and showed nothing
+  about the page behind (found on 2026-11-21, before any system was measured). The dialog and
+  its script are unchanged. The verdict on "The page behind cannot be used" is measured again
+  with the click on the backdrop; what it records is in the measurement file.
+
+## 0.1.6 (2026-11-21)
+
+- **dialog, added:** the fifth reference, a modal dialog opened by a button (`dialog/`). It is the
+  browser's own `<dialog>` opened with `showModal()`: the browser reports it as modal, makes the
+  page behind inert, puts focus on the first field, closes it on Escape and returns focus to the
+  button. The script adds one thing the native element does not do as APG describes: Tab and
+  Shift+Tab wrap at the ends instead of leaving the page for the browser's own controls first.
+- The four existing references are unchanged; they are measured again on this version with the
+  engine that adds what the dialog needs.
+
 ## 0.1.5 (2026-11-19)
 
 - **tabs, fixed:** the focus ring on a tab was drawn inside it, over the selected tab's bar, so a

@@ -9,7 +9,12 @@ export interface MeasuredDifference {
   summary: string;
 }
 
-const lowerFirst = (text: string) => text.charAt(0).toLowerCase() + text.slice(1);
+// A key keeps its capital after "Alternative:": "tab on the last element" is not the key Tab.
+const startsWithKey =
+  /^(Tab|Shift|Enter|Escape|Space|Home|End|Backspace|Delete|Up Arrow|Down Arrow|Left Arrow|Right Arrow)\b/;
+
+const lowerFirst = (text: string) =>
+  startsWithKey.test(text) ? text : text.charAt(0).toLowerCase() + text.slice(1);
 
 /** "Atlassian, GitHub Primer and MUI". */
 const listed = (names: readonly string[]): string =>

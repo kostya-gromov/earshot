@@ -8,10 +8,10 @@ const url = '/patterns/combobox/';
 // The open rule; the lenses further down are tab panels too.
 const rulePanel = (page: Page) => page.locator('[role="tabpanel"][id^="rule-"]:not([hidden])');
 
-test('the page is listed on the home page and counts only the patterns that have a page', async ({
+test('the page is in the list of patterns and counts only the patterns that have a page', async ({
   page,
 }) => {
-  await page.goto('/');
+  await page.goto('/patterns/');
   await expect(
     page.getByRole('main').locator('a[href="/patterns/combobox/"]').first(),
   ).toBeVisible();
@@ -22,11 +22,11 @@ test('the page is listed on the home page and counts only the patterns that have
     .locator('main p')
     .filter({ hasText: /^Pattern/ })
     .first();
-  await expect(kicker).toContainText('2 of 4');
+  await expect(kicker).toContainText('2 of 5');
   await expect(kicker).not.toContainText('in progress');
   await expect(page.getByRole('link', { name: 'Patterns', exact: true })).toHaveAttribute(
     'href',
-    '/#patterns',
+    '/patterns/',
   );
   // Nothing is left behind at the old address.
   const old = await page.goto('/lab/patterns/combobox/');

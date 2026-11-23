@@ -37,7 +37,7 @@ input-with-chips:
         text: 'Each remove button is its own Tab stop. Shift+Tab from the input walks through them one by one.'
       - source: recorded
         rules: [chip-stop, chip-arrows, arrows]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The component describes its own arrow keys. The description on the input reads: “, multiple selections available, Use left or right arrow keys to navigate selected items”.'
       - source: seen
         rules: [chip-stop, chip-arrows, arrows]
@@ -45,7 +45,7 @@ input-with-chips:
         text: 'Left Arrow in the empty input sets `aria-activedescendant` on the input to an id ending in `-remove` (for example `react-select-2-selected-value-2-remove`), and each further arrow key moves it to the neighbouring value. No element on the measured page has such an id: the selected values carry ids without that ending.'
       - source: recorded
         rules: [chip-stop, chip-arrows, arrows]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'After Left Arrow the input’s `aria-activedescendant` names no element in the accessibility tree. On each of the four arrow keys nothing changes in the tree and nothing is announced.'
       - source: screenshots
         rules: [chip-stop, chip-arrows, arrows]
@@ -78,7 +78,7 @@ input-with-chips:
         text: 'The usage docs say Backspace in the input removes the last tag.'
       - source: recorded
         rules: [bsp]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The first Backspace in the empty input moves focus to the last tag; the second removes it.'
       - source: seen
         rules: [chip-stop, tab]
@@ -125,7 +125,7 @@ input-with-chips:
         text: 'Chips are buttons named by the person, with no position in the set. The delete icon is hidden from assistive technology.'
       - source: recorded
         rules: [arrows]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'Left Arrow from the input focuses the last chip.'
     notes:
       - "Exports checked 2026-11-13 in the type declarations of the installed package (@mui/material 9.5.0), names matching the pattern's vocabulary: Autocomplete, Chip. Autocomplete with multiple is the only multi-value input."
@@ -147,7 +147,7 @@ input-with-chips:
     observations:
       - source: recorded
         rules: [keep-focus, say, count]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The selected tags are rows of a grid after the input. The arrow keys and Backspace in the input do not reach them, which “Arrows join the input and the chips” and “Backspace twice to remove” judge; so the keyboard scenarios for a removal remove nothing here.'
     notes:
       - A composition from the docs, not a single component. The example imports unpublished docs starter wrappers; the harness inlines what they render. Props listed in packages/harness/react-aria/src/main.tsx.
@@ -374,11 +374,11 @@ menu-button:
     observations:
       - source: recorded
         rules: [arrows, home-end]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The arrow keys wrap at both ends, so APG does not ask for Home and End here. The reference has them all the same: Home makes the first item active and End the last.'
       - source: recorded
         rules: [open]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'Down Arrow on the button opens the menu on its first item and Up Arrow on its last; typing a letter in the menu moves to the next item that starts with it. APG marks all three optional.'
 
   # What is written below was checked on 2026-11-16: the docs page that loaded that day and the
@@ -398,7 +398,7 @@ menu-button:
     observations:
       - source: recorded
         rules: [arrows, disabled, expanded]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The arrow keys reach the disabled item: Down Arrow from “Duplicate” made “Archive” active, exposed as disabled, and Enter on it ran no action. The button stays in the accessibility tree while the menu is shown.'
       - source: package-source
         rules: [disabled]
@@ -422,11 +422,11 @@ menu-button:
     observations:
       - source: recorded
         rules: [arrows, disabled]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The arrow keys skip the disabled item: Down Arrow from “Duplicate” made “Delete” active. The disabled item was never the active item, so Enter on it was not tried.'
       - source: recorded
         rules: [tab, expanded]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'Tab in the menu closes it with focus on the button. The button stays in the accessibility tree while the menu is shown.'
     notes:
       - "A new dependency, approved by the owner on 2026-11-16 and installed that day: @atlaskit/dropdown-menu 21.3.2 (published 2026-11-13), 'A dropdown menu displays a list of actions or options to a user.' 21.3.3 came out on 2026-11-16 and is younger than pnpm's minimum release age; no exception was made for it."
@@ -452,12 +452,12 @@ menu-button:
         text: 'In the docs’ Default story of Menu the trigger is a plain Button, not MenuButton.'
       - source: recorded
         rules: [expanded]
-        date: 2026-11-19
+        date: 2026-11-23
         measurement: fluent-default-story
         text: 'With the Default story’s plain Button, the button has no expanded state while the menu is closed; while the menu is shown it is exposed as expanded.'
       - source: recorded
         rules: [arrows, expanded, disabled]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'With MenuButton the button is exposed as collapsed while the menu is hidden and as expanded while it is shown. The arrow keys reach the disabled item.'
       - source: script
         rules: [expanded, tab]
@@ -504,18 +504,18 @@ menu-button:
     composition: 'Material UI documents no ready-made menu button. The docs demo wires a Button to a Menu with its own state and ARIA attributes, and the measured page does the same. So the button’s expanded state on this page is written by that wiring (aria-expanded set to the open state, true or false), not by the package. The same holds for the menu closing after an action: each item’s handler on the page closes it, as the demo’s items do.'
     observations:
       - source: recorded
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The button’s label on the page is “Actions”; its name in the accessibility tree is “ACTIONS”, and the spoken lines say it so.'
       - source: package-source
         date: 2026-11-16
         text: '@mui/material 9.5.0, createTypography: the text style of a button sets text-transform to uppercase.'
       - source: recorded
         rules: [arrows, disabled]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The arrow keys skip the disabled item: Down Arrow from “Duplicate” made “Delete” active. The disabled item was never the active item, so Enter on it was not tried.'
       - source: recorded
         rules: [expanded, tab]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'While the menu is shown the button is not in the accessibility tree; once the menu is hidden it is there again, exposed as collapsed. Tab in the menu closes it with focus on the button.'
       - source: script
         rules: [expanded, tab]
@@ -542,11 +542,11 @@ menu-button:
     observations:
       - source: recorded
         rules: [arrows, disabled]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The arrow keys skip the disabled item: Down Arrow from “Duplicate” made “Delete” active. The disabled item was never the active item, so Enter on it was not tried.'
       - source: recorded
         rules: [expanded, tab]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'While the menu is shown the button is not in the accessibility tree; once the menu is hidden it is there again, exposed as collapsed. Tab in the menu leaves focus on the same item and the menu stays shown.'
       - source: script
         rules: [expanded, tab]
@@ -573,11 +573,11 @@ menu-button:
     observations:
       - source: recorded
         rules: [arrows, disabled]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The arrow keys skip the disabled item: Down Arrow from “Duplicate” made “Delete” active. The disabled item was never the active item, so Enter on it was not tried.'
       - source: recorded
         rules: [arrows, tab, expanded]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'Focus is on the menu itself and the active item is named with aria-activedescendant. Tab leaves focus where it is and the menu stays shown. The button stays in the accessibility tree, exposed as expanded.'
       - source: script
         rules: [expanded, tab]
@@ -601,7 +601,7 @@ tabs:
     observations:
       - source: recorded
         rules: [arrows, activate]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The arrow keys activate the tab they move to, so APG does not ask Enter or Space to: the reference has every panel in the page, the case in which APG recommends automatic activation.'
 
   - system: React Aria
@@ -617,7 +617,7 @@ tabs:
     observations:
       - source: recorded
         rules: [panel-reachable]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'Tab from "Members" lands on the link its panel starts with, and from "Overview" on the panel itself: the panel is a Tab stop only where it holds nothing that takes focus.'
     notes:
       - "Exports checked 2026-11-19 in the installed package's types (react-aria-components 1.22.1, dist/types/exports/Tabs.d.ts): Tabs, TabList, Tab, TabPanels, TabPanel, TabsContext, TabListStateContext. A dedicated component."
@@ -637,7 +637,7 @@ tabs:
     observations:
       - source: recorded
         rules: [panel-reachable]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'Tab from "Members" lands on the link its panel starts with, and from "Overview" on the panel itself.'
     notes:
       - 'Exports checked 2026-11-19: components/tabs is in the installed @chakra-ui/react 3.38.0 (dist/types/components/tabs). A dedicated component.'
@@ -659,11 +659,11 @@ tabs:
     observations:
       - source: recorded
         rules: [panel-reachable]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'Tab from “Overview”, whose panel holds plain text, lands on the field after the tabs; from “Members” it lands on the link the panel starts with.'
       - source: recorded
         rules: [arrows, activate]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The arrow keys move focus without activating the tab; Enter and Space activate the focused tab.'
     notes:
       - 'Exports checked 2026-11-19 in the installed @fluentui/react-components 9.75.2 (dist/index.d.ts): TabList, Tab, TabListProps; no TabPanel. In @fluentui/react-tabs 9.12.6 types: selectTabOnFocus, “When true, focusing a tab will select it. @default false”.'
@@ -685,10 +685,10 @@ tabs:
     observations:
       - source: recorded
         rules: [arrows, activate]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The arrow keys move focus without activating the tab; Enter and Space activate the focused tab.'
       - source: recorded
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'The tabs’ labels on the page are “Overview”, “Activity”, “Members”, “Settings”; their names in the accessibility tree are in capitals (“OVERVIEW”), and so are the panels’ names, which come from the tabs.'
     notes:
       - 'The demo read on 2026-11-19 at the tag v9.5.0 (docs/data/material/components/tabs/BasicTabs.tsx): its CustomTabPanel renders `role="tabpanel"`, `hidden={value !== index}`, `tabIndex={0}`, `id={`simple-tabpanel-${index}`}`, `aria-labelledby={`simple-tab-${index}`}`, as the measured page does.'
@@ -712,7 +712,7 @@ tabs:
         text: 'The code page describes useTab’s onKeyDown as “Allows navigation of tabs with automatic activation.”, and the usage page says “The tab key is used to navigate to the tab content, not to the next tab.”'
       - source: recorded
         rules: [panel-reachable]
-        date: 2026-11-19
+        date: 2026-11-23
         text: 'Tab from “Overview” and from “Members” lands on the panel itself, also where the panel starts with a link.'
     notes:
       - "Exports checked 2026-11-19 in the installed @atlaskit/tabs 21.3.1 (dist/types/index.d.ts): Tabs (default), TabPanel, Tab, TabList, useTab, useTabPanel. A dedicated component. Added to the harness on 2026-11-19 with the owner's approval (docs/proposals/tabs.md, decision 8); published on npm on 2026-11-10."
@@ -726,3 +726,216 @@ tabs:
     checked: 2026-11-19
     notes:
       - "Not measured for now (docs/proposals/tabs.md, decision 8). Exports checked 2026-11-19 in the installed @primer/react 38.45.0: role 'tab', 'tablist' and 'tabpanel' appear only under dist/experimental (Tabs, UnderlinePanels); TabNav in the main entry is marked @deprecated in its types; UnderlineNav in the main entry was not inspected. An experimental export is not measured until the owner decides otherwise."
+
+dialog:
+  - system: Reference
+    status: measured
+    adapter: reference
+    url: packages/reference/dialog/index.html (served locally on a free port)
+    version-source: packages/reference/package.json
+    observations:
+      - source: recorded
+        rules: [outside-inert]
+        date: 2026-11-23
+        text: 'A click at the point where the field “Notes” is, behind the dialog, leaves the dialog open and moves focus to the dialog element itself, which is what the browser does for its own modal dialog.'
+
+  - system: React Aria
+    status: measured
+    adapter: react-aria
+    component: Modal with Dialog and DialogTrigger (react-aria-components)
+    docs: https://react-aria.adobe.com/Modal
+    url: packages/harness/react-aria/dialog.html
+    found: Harness page (ADR 0005) rendering react-aria-components 1.22.1 from npm, React 19.3.1, built as the first docs example.
+    version-source: packages/harness/react-aria/package.json and pnpm-lock.yaml
+    checked: 2026-11-21
+    setup: The first example of the Modal docs with the title, the field and the two buttons every dialog target gets; autoFocus on the text field as the example has it; no props on Modal or Dialog, so isDismissable and isKeyboardDismissDisabled stay false and the role stays dialog.
+    variant: 'Measured with autoFocus on the first field, as the docs’ example sets it. Without it, focus goes to the dialog itself on opening; that is recorded as an observation, not counted.'
+    observations:
+      - source: recorded
+        rules: [modal]
+        date: 2026-11-23
+        text: 'The open dialog is in the accessibility tree with the role dialog and the name of its title, and is not reported as modal.'
+      - source: recorded
+        rules: [focus-not-on-dialog]
+        date: 2026-11-23
+        measurement: react-aria-default-focus
+        text: 'Without autoFocus on the field, Enter on the button puts focus on the dialog itself, and the first Tab moves it to the field.'
+      - source: recorded
+        rules: [outside-inert]
+        date: 2026-11-23
+        text: 'A click at the point where the field “Notes” is, behind the dialog, leaves the dialog open and focus on the field "Name".'
+    notes:
+      - "Exports checked 2026-11-21 in the installed package's types (react-aria-components 1.22.1, dist/types/exports/Modal.d.ts and Dialog.d.ts): Modal, ModalOverlay, DialogTrigger, Dialog, Heading. A dedicated component."
+      - "Inclusion test applied 2026-11-21 on the built page: passes. The engine recorded a button named 'Edit profile' that opens an element with role='dialog' named 'Edit profile', holding a text field and two buttons."
+      - "The docs example imports the docs' vanilla starter wrappers (Modal, Dialog, Form, TextField, Button); the page uses the components they wrap, with the placement rules of the example's Modal.css and none of its theme. The address react-aria.adobe.com/Dialog.html answered 404 on 2026-11-21; the Modal page documents Dialog."
+      - "The string aria-modal is not in the page's built script for the dialog (searched 2026-11-21). Package source read 2026-11-22 (react-aria 3.53.1, dist/private/overlays): useModalOverlay calls ariaHideOutside with shouldUseInert: true, and ariaHideOutside sets element.inert where the browser supports it and aria-hidden='true' otherwise."
+
+  # A variant of React Aria, not a system of its own: never a column, never counted. Evidence for
+  # the observation of the entry above that cites it (ADR 0005, amendment of 2026-11-16).
+  - system: React Aria
+    status: measured
+    adapter: react-aria-default-focus
+    variant-of: react-aria
+    not-counted: React Aria is counted as its docs example builds the dialog, with autoFocus on the first field; this is the same dialog without it
+    component: Modal with Dialog and DialogTrigger (react-aria-components)
+    docs: https://react-aria.adobe.com/Modal
+    url: packages/harness/react-aria/dialog-default-focus.html
+    version-source: packages/harness/react-aria/package.json and pnpm-lock.yaml
+    checked: 2026-11-21
+    setup: The counted page with one difference, no autoFocus on the text field.
+    notes:
+      - 'Measured 2026-11-23: differs on focus-not-on-dialog (focus is on the dialog container after opening); every other verdict as on the counted page.'
+
+  - system: Chakra UI
+    status: measured
+    adapter: chakra
+    component: Dialog (@chakra-ui/react, built on Ark UI and Zag.js)
+    docs: https://chakra-ui.com/docs/components/dialog
+    url: packages/harness/chakra/dialog.html
+    docs-example: https://github.com/chakra-ui/chakra-ui/blob/%40chakra-ui/react%403.38.0/apps/compositions/src/examples/dialog-basic.tsx
+    found: Harness page (ADR 0005) rendering @chakra-ui/react 3.38.0 from npm, React 19.3.1, built as the docs' Basic example.
+    version-source: packages/harness/chakra/package.json and pnpm-lock.yaml
+    checked: 2026-11-21
+    setup: Dialog.Root with no props, so modal, trapFocus, closeOnEscape and closeOnInteractOutside stay at their documented default, true; the trigger, the content in a Portal and the close button as in the Basic example; no initial focus is set.
+    observations:
+      - source: recorded
+        rules: [outside-inert]
+        date: 2026-11-23
+        text: 'A click at the point where the field “Notes” is, behind the dialog, closes the dialog, and focus is back on the button that opened it.'
+      - source: recorded
+        rules: [wrap]
+        date: 2026-11-23
+        text: 'The example’s close button is the last Tab stop: Tab goes from "Save" to "Close" and then round to the field.'
+    notes:
+      - 'Exports checked 2026-11-21: components/dialog is in the installed @chakra-ui/react 3.38.0 (dist/types/components), beside alert and drawer. A dedicated component.'
+      - "Inclusion test applied 2026-11-21 on the built page: passes. The engine recorded a button named 'Edit profile' that opens an element with role='dialog' named 'Edit profile', reported as modal, holding a text field and three buttons."
+      - "The docs page's HTML holds no example code; the Basic example was read on 2026-11-21 in the repository on main, and on 2026-11-23 at the tag of the installed version, @chakra-ui/react@3.38.0, where the file is the same. The docs' Initial Focus example sets initialFocusEl on a second field to show the prop; the page measured has one field and sets none."
+
+  - system: Fluent 2
+    status: measured
+    adapter: fluent
+    component: Dialog with DialogTrigger, DialogSurface, DialogBody, DialogTitle, DialogContent and DialogActions (@fluentui/react-components)
+    docs: https://fluent2.microsoft.design/components/web/react/core/dialog/usage
+    url: packages/harness/fluent/dialog.html
+    docs-example: https://github.com/microsoft/fluentui/blob/485355d27452890bac9954cda30c0dbf1934da41/packages/react-components/react-dialog/stories/src/Dialog/DialogDefault.stories.tsx
+    found: Harness page (ADR 0005) rendering @fluentui/react-components 9.75.2 (@fluentui/react-dialog 9.18.6) from npm, React 19.3.1, built as the Default story.
+    version-source: packages/harness/fluent/package.json and pnpm-lock.yaml
+    checked: 2026-11-21
+    setup: 'Built as the Default story, read at the commit of the measured version: Dialog with no props, so modalType stays modal; the primary button first in the actions, so Save comes before Cancel. The field is a Label and an Input as the With Form story writes them. No autoFocus: neither story sets any.'
+    variant: 'Measured as the Default story, a modal dialog. The With Form story sets modalType="non-modal", which this pattern leaves out, and is not measured.'
+    observations:
+      - source: recorded
+        rules: [outside-inert, return-focus]
+        date: 2026-11-23
+        text: 'A click at the point where the field “Notes” is, behind the dialog, closes the dialog; after it focus is on the document, not on the button that opened the dialog.'
+    notes:
+      - 'Exports checked 2026-11-21 in the installed @fluentui/react-components 9.75.2 (dist/index.d.ts): Dialog, DialogTrigger, DialogSurface, DialogBody, DialogTitle, DialogContent, DialogActions. In @fluentui/react-dialog 9.18.6 the modalType prop is modal, non-modal or alert, "@default modal". A dedicated component.'
+      - "Inclusion test applied 2026-11-21 on the built page: passes. The engine recorded a button named 'Edit profile' that opens an element with role='dialog' named 'Edit profile', reported as modal, holding a text field and two buttons."
+      - 'The docs address above answered 200 on 2026-11-21; its content was not read (the site renders with JavaScript). The stories were read in the repository at the commit named in docs-example.'
+
+  - system: MUI
+    status: measured
+    adapter: mui
+    component: Dialog with DialogTitle, DialogContent and DialogActions (@mui/material)
+    docs: https://mui.com/material-ui/react-dialog/
+    url: packages/harness/mui/dialog.html
+    docs-example: https://github.com/mui/material-ui/blob/v9.5.0/docs/data/material/components/dialogs/FormDialog.tsx
+    found: Harness page (ADR 0005) rendering @mui/material 9.5.0 from npm, React 19.3.1, built as the Form dialogs demo.
+    version-source: packages/harness/mui/package.json and pnpm-lock.yaml
+    checked: 2026-11-21
+    setup: 'Built as the “Form dialogs” demo, read at the tag of the measured version: Dialog with open and onClose in state, a TextField with autoFocus as the demo has it, Cancel and Save. Nothing else is set on Dialog, so disableAutoFocus, disableEnforceFocus and disableRestoreFocus stay false.'
+    variant: 'Measured with autoFocus on the field, as the docs’ form demo sets it. Without it, focus goes to the dialog itself on opening; that is recorded as an observation, not counted.'
+    observations:
+      - source: recorded
+        rules: [focus-not-on-dialog]
+        date: 2026-11-23
+        measurement: mui-default-focus
+        text: 'Without autoFocus on the field, Enter on the button puts focus on the dialog itself, and the first Tab moves it to the field.'
+      - source: recorded
+        rules: [outside-inert, return-focus]
+        date: 2026-11-23
+        text: 'A click at the point where the field “Notes” is, behind the dialog, closes the dialog, and focus is back on the button that opened it.'
+      - source: recorded
+        rules: [return-focus]
+        date: 2026-11-23
+        text: 'The buttons’ names in the accessibility tree are in capitals (“EDIT PROFILE”, “CANCEL”, “SAVE”); the dialog’s name and its title are “Edit profile”.'
+    notes:
+      - 'Exports checked 2026-11-21 in the installed @mui/material 9.5.0: the folders Dialog, DialogActions, DialogContent, DialogContentText and DialogTitle, beside Modal and Drawer. A dedicated component. Modal.d.ts gives "@default false" for disableAutoFocus, disableEnforceFocus and disableRestoreFocus.'
+      - "Inclusion test applied 2026-11-21 on the built page: passes. The engine recorded a button named 'EDIT PROFILE' that opens an element with role='dialog' named 'Edit profile', reported as modal, holding a text field and two buttons."
+      - 'Not followed from the demo: its form element with a submit button, and required, name and type="email" on the field. Focus guards beside the dialog were checked before the evaluators (docs/proposals/dialog.md, 2026-11-21): the engine reads the element focus rests on.'
+
+  # A variant of MUI, not a system of its own: never a column, never counted. Evidence for the
+  # observation of the entry above that cites it (ADR 0005, amendment of 2026-11-16).
+  - system: MUI
+    status: measured
+    adapter: mui-default-focus
+    variant-of: mui
+    not-counted: MUI is counted as its docs form demo builds the dialog, with autoFocus on the field; this is the same dialog without it
+    component: Dialog with DialogTitle, DialogContent and DialogActions (@mui/material)
+    docs: https://mui.com/material-ui/react-dialog/
+    url: packages/harness/mui/dialog-default-focus.html
+    version-source: packages/harness/mui/package.json and pnpm-lock.yaml
+    checked: 2026-11-21
+    setup: The counted page with one difference, no autoFocus on the TextField.
+    notes:
+      - 'Measured 2026-11-23: differs on focus-not-on-dialog (focus is on the dialog container after opening); every other verdict as on the counted page.'
+
+  - system: GitHub Primer
+    status: measured
+    adapter: primer
+    component: Dialog (@primer/react)
+    docs: https://primer.style/product/components/dialog/
+    url: packages/harness/primer/dialog.html
+    docs-example: https://github.com/primer/react/blob/%40primer/react%4038.45.0/packages/react/src/Dialog/Dialog.stories.tsx
+    found: Harness page (ADR 0005) rendering @primer/react 38.45.0 from npm, React 19.3.1, built as the Default story.
+    version-source: packages/harness/primer/package.json and pnpm-lock.yaml
+    checked: 2026-11-22
+    setup: 'Built as the Default story, read at the tag of the measured version: a Button that toggles the state and a Dialog rendered while it is open, with title, onClose and footerButtons for Cancel and Save. No initialFocusRef, returnFocusRef or autoFocus: the story sets none. The close button in the header is the component’s own.'
+    observations:
+      - source: recorded
+        rules: [open-focus, wrap]
+        date: 2026-11-23
+        text: 'On opening, focus is on the component’s own button "Close", not on the field; Tab then goes to "Name", "Cancel", "Save" and round to "Close".'
+      - source: recorded
+        rules: [outside-inert, return-focus]
+        date: 2026-11-23
+        text: 'A click at the point where the field “Notes” is, behind the dialog, closes the dialog, and focus is back on the button that opened it.'
+      - source: recorded
+        rules: [modal]
+        date: 2026-11-23
+        text: 'While the dialog is open and reported as modal, the button that opened it is still in the accessibility tree.'
+    notes:
+      - 'Exports checked 2026-11-21 in the installed @primer/react 38.45.0: Dialog is exported from the main entry, with no @deprecated in dist/Dialog/Dialog.d.ts; it declares role dialog or alertdialog (default dialog), initialFocusRef and returnFocusRef. ConfirmationDialog is a separate export and is not this pattern. A dedicated component.'
+      - "Inclusion test applied 2026-11-22 on the built page: passes. The engine recorded a button named 'Edit profile' that opens an element with role='dialog' named 'Edit profile', reported as modal, holding a text field and three buttons."
+      - 'The docs address above answered 200 on 2026-11-22; its content was not read. The story was read in the repository at the tag named in docs-example. The feature stories show no form with initial focus on a field, so there is no variant.'
+
+  - system: Atlassian
+    status: measured
+    adapter: atlassian
+    component: Modal dialog (@atlaskit/modal-dialog)
+    docs: https://atlassian.design/components/modal-dialog/examples
+    url: packages/harness/atlassian/dialog.html
+    found: Harness page (ADR 0005) rendering @atlaskit/modal-dialog 17.3.0 from npm, React 18.3.1, built as the Default example.
+    version-source: packages/harness/atlassian/package.json and pnpm-lock.yaml
+    checked: 2026-11-22
+    variant: 'Measured with plain HTML buttons and a plain field around the package’s modal: the docs examples render them with @atlaskit/button, form and textfield, which are not installed. The modal, its header with the close button, its title, body and footer are the package’s own, and they are what the rules judge.'
+    setup: 'Built as the “Default” example: ModalTransition around a Modal with onClose only, ModalHeader hasCloseButton with ModalTitle, ModalBody and ModalFooter. No autoFocus on Modal: neither the Default nor the Form example passes it. The buttons and the field are plain HTML elements.'
+    observations:
+      - source: recorded
+        rules: [open-focus, wrap]
+        date: 2026-11-23
+        text: 'On opening, focus is on the header’s own button "Close Modal", not on the field; Tab then goes to "Name", "Cancel", "Save" and round to "Close Modal".'
+      - source: recorded
+        rules: [outside-inert, return-focus]
+        date: 2026-11-23
+        text: 'A click at the point where the field “Notes” is, behind the modal, closes the modal, and focus is back on the button that opened it.'
+      - source: recorded
+        rules: [modal]
+        date: 2026-11-23
+        text: 'While the modal is open and reported as modal, the button that opened it is still in the accessibility tree.'
+    notes:
+      - 'The example renders @atlaskit/button, and the Form example @atlaskit/form and @atlaskit/textfield. Those packages are not installed, so the button that opens the modal, the field and the two footer buttons are plain button and input elements; the modal, its header with the close button, its title, body and footer are the package’s own. What the rules judge is the modal’s.'
+      - 'Added 2026-11-22: @atlaskit/modal-dialog 17.3.0, published on 2026-11-20 (npm), approved by the owner on 2026-11-21. Exports checked that day in the installed package: the entry points modal-dialog, modal-header, modal-title, modal-body, modal-footer, modal-transition, close-button and full-screen. A dedicated component.'
+      - "Inclusion test applied 2026-11-22 on the built page: passes. The engine recorded a button named 'Edit profile' that opens an element with role='dialog' named 'Edit profile', reported as modal, holding a text field and three buttons."
+      - 'The docs page says "A modal dialog should focus on the first available interactive element when opened" and recommends a close button in the header (read 2026-11-22). The installed types mark shouldCloseOnEscapePress as deprecated.'
+      - 'pnpm reports unmet peers after the install, among them react for react-scrolllock and typescript for react-intl; the page type-checks and builds.'

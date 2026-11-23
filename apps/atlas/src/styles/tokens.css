@@ -24,7 +24,9 @@
 
   /* Text */
   --ink: light-dark(oklch(0.2 0.015 260), oklch(0.96 0.005 265));
-  --ink-2: light-dark(oklch(0.43 0.012 260), oklch(0.76 0.012 265));
+  /* Light: 0.37, a tenth from --ink-3 as in the dark theme. It was 0.43, and the two greys read
+     as one level (design review 2026-11-23). Darker, so no contrast is lost. */
+  --ink-2: light-dark(oklch(0.37 0.012 260), oklch(0.76 0.012 265));
   --ink-3: light-dark(oklch(0.47 0.01 260), oklch(0.66 0.012 265));
   --ink-ghost: light-dark(oklch(0.2 0.01 260 / 0.24), oklch(1 0 0 / 0.22));
   --ink-fade: light-dark(oklch(0.2 0.015 260), oklch(0.76 0.02 265));

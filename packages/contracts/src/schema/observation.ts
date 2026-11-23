@@ -12,6 +12,11 @@ export const AccessibleStates = z.strictObject({
   disabled: z.boolean().optional(),
   invalid: z.boolean().optional(),
   /**
+   * The tree reports the element as modal (dialog, engine 0.18.0): true for aria-modal="true" and
+   * for the browser's own dialog element opened as modal, which has no such attribute.
+   */
+  modal: z.boolean().optional(),
+  /**
    * The kind of popup the focused element says it has, when that is more than its role already
    * says: read from its own `aria-haspopup` attribute ("true" is a menu) and left out when the
    * value is the role's default. A combobox has a listbox by default, so writing
@@ -54,6 +59,17 @@ export const FocusInfo = z.strictObject({
    * accessibility tree. A panel left out of the tree cannot hold focus, so this is the shown one.
    */
   isInsidePanel: z.boolean().optional(),
+  /**
+   * For adapters that declare a dialog: focus is on the dialog or inside it, wherever on the
+   * page the system renders it.
+   */
+  isInsideDialog: z.boolean().optional(),
+  /**
+   * The page itself has no focus: it went to the browser's own controls, as Tab does from the
+   * last element of a native modal dialog. `document.activeElement` is then the body, so without
+   * this the step reads as focus lost to the page (engine 0.18.0). Absent while the page has it.
+   */
+  leftPage: z.literal(true).optional(),
   /** Resolved aria-activedescendant, for patterns that move virtual focus. */
   activeDescendant: AccessibleNode.optional(),
   /**
@@ -138,10 +154,40 @@ export const TabSetState = z.strictObject({
 });
 export type TabSetState = z.infer<typeof TabSetState>;
 
+/**
+ * The dialog at one moment, as the accessibility tree exposes it (dialog, engine 0.18.0).
+ */
+export const DialogState = z.strictObject({
+  /** The dialog's node, with its modal state. Absent when no dialog is in the tree: it is closed. */
+  dialog: AccessibleNode.optional(),
+  /** The name of the first heading inside the dialog: its visible title. Absent without one. */
+  heading: z.string().optional(),
+  /**
+   * The button that opens the dialog, as the tree exposes it. Absent when the tree leaves it
+   * out, as it does for the page behind the browser's own modal dialog.
+   */
+  opener: AccessibleNode.optional(),
+});
+export type DialogState = z.infer<typeof DialogState>;
+
 export const Action = z.discriminatedUnion('type', [
   z.strictObject({ type: z.literal('press'), key: NonEmpty }),
   z.strictObject({ type: z.literal('type'), text: z.string() }),
-  z.strictObject({ type: z.literal('click'), target: AccessibleRef }),
+  z.strictObject({
+    type: z.literal('click'),
+    target: AccessibleRef,
+    /**
+     * The click was made at the centre point of the target, whatever is drawn over it: the way
+     * to click a field that a modal dialog's backdrop covers (engine 0.18.0). Absent for a click
+     * on the element itself.
+     */
+    at: z.literal('point').optional(),
+    /**
+     * Where a click at a point was made, in CSS pixels of the viewport the engine measures in
+     * (engine 0.20.0). Absent for a click on the element itself.
+     */
+    point: z.strictObject({ x: z.number().int(), y: z.number().int() }).optional(),
+  }),
 ]);
 export type Action = z.infer<typeof Action>;
 
@@ -161,6 +207,8 @@ export const Step = z.strictObject({
   popup: z.strictObject({ before: PopupState, after: PopupState }).optional(),
   /** For adapters that declare panels (tabs): the tab set before and after the action. */
   tabSet: z.strictObject({ before: TabSetState, after: TabSetState }).optional(),
+  /** For adapters that declare a dialog: the dialog before and after the action. */
+  dialog: z.strictObject({ before: DialogState, after: DialogState }).optional(),
   /**
    * For adapters that declare where the page shows what an action did (ADR 0003, 2026-11-16):
    * that element's text before and after the step, empty when it is not on the page. A measured

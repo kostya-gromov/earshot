@@ -12,6 +12,27 @@
   stroke-width: 1.6;
 }
 
+/* A surface over the page (the dialog): filled with the plate's ground, so what is behind it
+   stops at its edge and it reads as lying on top. No colour of its own. */
+.surface {
+  fill: var(--canvas);
+  stroke: var(--line-strong);
+  stroke-width: 1.2;
+}
+
+/* The page behind a surface: fainter, so it recedes. */
+.behind {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1.2;
+}
+
+@media (forced-colors: active) {
+  .surface {
+    fill: Canvas;
+  }
+}
+
 /* Input with chips: focus to the neighbour chip and back, Backspace removes, focus moves on. */
 .chipRing {
   animation: chip-ring 6s var(--ease-out) infinite;

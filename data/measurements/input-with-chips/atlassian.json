@@ -14,10 +14,10 @@
   },
   "provenance": {
     "status": "measured",
-    "engineVersion": "0.17.0",
+    "engineVersion": "0.20.0",
     "browser": "chromium 156.0.8078.4",
     "os": "darwin",
-    "measuredAt": "2026-11-19T17:18:21.448Z",
+    "measuredAt": "2026-11-23T09:35:17.421Z",
     "runs": 3,
     "consistent": true
   },
@@ -73,7 +73,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 407,
                 "quiet": true
               },
               "speech": [
@@ -126,7 +126,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 407,
                 "quiet": true
               },
               "speech": [
@@ -179,7 +179,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 405,
                 "quiet": true
               },
               "speech": [
@@ -242,7 +242,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 402,
                 "quiet": true
               },
               "speech": [
@@ -296,7 +296,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 412,
                 "quiet": true
               },
               "speech": [
@@ -350,7 +350,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 412,
                 "quiet": true
               },
               "speech": [
@@ -413,105 +413,6 @@
                 "changed": []
               },
               "settle": {
-                "ms": 417,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Remove Hiroshi Matsui",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div#react-select-2-selected-value-2 > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > button:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Remove Hiroshi Matsui",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div#react-select-2-selected-value-2 > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > button:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 410,
-                "quiet": true
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Remove Hiroshi Matsui",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div#react-select-2-selected-value-2 > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > button:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Remove Hiroshi Matsui",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div#react-select-2-selected-value-2 > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > button:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
                 "ms": 409,
                 "quiet": true
               },
@@ -559,7 +460,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
+                "ms": 411,
                 "quiet": true
               },
               "speech": []
@@ -611,7 +512,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 410,
                 "quiet": true
               },
               "speech": []
@@ -658,7 +559,106 @@
                 "changed": []
               },
               "settle": {
-                "ms": 407,
+                "ms": 411,
+                "quiet": true
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#react-select-2-selected-value-2 > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > button:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#react-select-2-selected-value-2 > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > button:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 411,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#react-select-2-selected-value-2 > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > button:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Remove Hiroshi Matsui",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div#react-select-2-selected-value-2 > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > button:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
                 "quiet": true
               },
               "speech": []
@@ -715,197 +715,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 407,
-                "quiet": true
-              },
-              "speech": [
-                "Subject, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Subject",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "speech": [
-                "To, combobox, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Subject",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 417,
-                "quiet": true
-              },
-              "speech": [
-                "Subject, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Subject",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 413,
-                "quiet": true
-              },
-              "speech": [
-                "To, combobox, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Subject",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 403,
+                "ms": 416,
                 "quiet": true
               },
               "speech": [
@@ -951,6 +761,196 @@
               },
               "settle": {
                 "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
                 "quiet": true
               },
               "speech": [
@@ -1012,7 +1012,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 402,
+                "ms": 416,
                 "quiet": true
               },
               "speech": [
@@ -1065,7 +1065,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 416,
                 "quiet": true
               },
               "speech": [
@@ -1118,7 +1118,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 406,
+                "ms": 401,
                 "quiet": true
               },
               "speech": [
@@ -1180,7 +1180,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 413,
                 "quiet": true
               },
               "speech": []
@@ -1224,7 +1224,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 407,
                 "quiet": true
               },
               "speech": [
@@ -1269,6 +1269,147 @@
                 "value": "",
                 "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
                 "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 411,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
               },
               "announcements": [],
               "axDiff": {
@@ -1278,147 +1419,6 @@
               },
               "settle": {
                 "ms": 414,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Subject",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 403,
-                "quiet": true
-              },
-              "speech": [
-                "Subject, textbox"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 408,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Subject",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 403,
                 "quiet": true
               },
               "speech": [
@@ -1479,7 +1479,7 @@
                 {
                   "text": "option Hiroshi Matsui, deselected",
                   "politeness": "polite",
-                  "at": 4,
+                  "at": 2,
                   "insertedLate": false
                 }
               ],
@@ -1503,7 +1503,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 408,
+                "ms": 413,
                 "quiet": true
               },
               "speech": [
@@ -1547,7 +1547,7 @@
                 {
                   "text": "option Greg Fisher, deselected",
                   "politeness": "polite",
-                  "at": 1,
+                  "at": 2,
                   "insertedLate": false
                 }
               ],
@@ -1576,7 +1576,7 @@
                 ]
               },
               "settle": {
-                "ms": 408,
+                "ms": 409,
                 "quiet": true
               },
               "speech": [
@@ -1649,7 +1649,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 408,
+                "ms": 403,
                 "quiet": true
               },
               "speech": [
@@ -1722,7 +1722,7 @@
                 ]
               },
               "settle": {
-                "ms": 401,
+                "ms": 417,
                 "quiet": true
               },
               "speech": [
@@ -1795,7 +1795,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 414,
                 "quiet": true
               },
               "speech": [
@@ -1868,7 +1868,7 @@
                 ]
               },
               "settle": {
-                "ms": 404,
+                "ms": 412,
                 "quiet": true
               },
               "speech": [
@@ -1930,7 +1930,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 413,
                 "quiet": true
               },
               "speech": []
@@ -1977,101 +1977,101 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
                 "ms": 409,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
                 "quiet": true
               },
               "speech": []
@@ -2122,7 +2122,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 413,
                 "quiet": true
               },
               "speech": []
@@ -2169,7 +2169,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 414,
                 "quiet": true
               },
               "speech": []
@@ -2216,7 +2216,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 411,
                 "quiet": true
               },
               "speech": []
@@ -2314,7 +2314,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 406,
+                "ms": 415,
                 "quiet": true
               },
               "speech": []
@@ -2323,6 +2323,53 @@
               "action": {
                 "type": "press",
                 "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
               },
               "focusBefore": {
                 "role": "combobox",
@@ -2412,53 +2459,6 @@
                 "quiet": true
               },
               "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 407,
-                "quiet": true
-              },
-              "speech": []
             }
           ]
         }
@@ -2517,249 +2517,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Delete"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(3) > input#to-input",
-                "element": 1
-              },
-              "announcements": [
-                {
-                  "text": "option Hiroshi Matsui, deselected",
-                  "politeness": "polite",
-                  "at": 3,
-                  "insertedLate": false
-                }
-              ],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "option Hiroshi Matsui, deselected"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "button",
-                    "name": "Remove Hiroshi Matsui"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 416,
-                "quiet": true
-              },
-              "speech": [
-                "option Hiroshi Matsui, deselected"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 406,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Delete"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(3) > input#to-input",
-                "element": 1
-              },
-              "announcements": [
-                {
-                  "text": "option Hiroshi Matsui, deselected",
-                  "politeness": "polite",
-                  "at": 2,
-                  "insertedLate": false
-                }
-              ],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "option Hiroshi Matsui, deselected"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "button",
-                    "name": "Remove Hiroshi Matsui"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "speech": [
-                "option Hiroshi Matsui, deselected"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendantUnresolved": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
+                "ms": 412,
                 "quiet": true
               },
               "speech": []
@@ -2835,6 +2593,248 @@
               ]
             }
           ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(3) > input#to-input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "option Hiroshi Matsui, deselected",
+                  "politeness": "polite",
+                  "at": 3,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "option Hiroshi Matsui, deselected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": [
+                "option Hiroshi Matsui, deselected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendantUnresolved": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(3) > input#to-input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "option Hiroshi Matsui, deselected",
+                  "politeness": "polite",
+                  "at": 3,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "option Hiroshi Matsui, deselected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Hiroshi Matsui"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "option Hiroshi Matsui, deselected"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2890,7 +2890,7 @@
                 {
                   "text": "option Greg Fisher, deselected",
                   "politeness": "polite",
-                  "at": 27,
+                  "at": 30,
                   "insertedLate": false
                 }
               ],
@@ -2914,7 +2914,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 413,
                 "quiet": true
               },
               "speech": [
@@ -2966,83 +2966,7 @@
                 {
                   "text": "option Greg Fisher, deselected",
                   "politeness": "polite",
-                  "at": 23,
-                  "insertedLate": false
-                }
-              ],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "option Greg Fisher, deselected"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "button",
-                    "name": "Remove Greg Fisher"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "speech": [
-                "option Greg Fisher, deselected"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "click",
-                "target": {
-                  "role": "button",
-                  "name": "Remove Greg Fisher"
-                }
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(3) > input#to-input",
-                "element": 1
-              },
-              "announcements": [
-                {
-                  "text": "option Greg Fisher, deselected",
-                  "politeness": "polite",
-                  "at": 35,
+                  "at": 30,
                   "insertedLate": false
                 }
               ],
@@ -3067,6 +2991,82 @@
               },
               "settle": {
                 "ms": 409,
+                "quiet": true
+              },
+              "speech": [
+                "option Greg Fisher, deselected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "Remove Greg Fisher"
+                }
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(4) > input#to-input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": ", multiple selections available, Use left or right arrow keys to navigate selected items",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(3) > input#to-input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "option Greg Fisher, deselected",
+                  "politeness": "polite",
+                  "at": 30,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "option Greg Fisher, deselected"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Remove Greg Fisher"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
                 "quiet": true
               },
               "speech": [

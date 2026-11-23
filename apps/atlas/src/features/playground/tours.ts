@@ -16,6 +16,14 @@ import {
   menuTourSteps,
   observeMenuKey,
 } from './menu-tour';
+import { snapshotDialog } from './dialog-snapshot';
+import {
+  dialogRulesLitBy,
+  dialogTourSteps,
+  heardNothingInDialog,
+  initialDialogTour,
+  observeDialogKey,
+} from './dialog-tour';
 import { snapshotTabs } from './tabs-snapshot';
 import {
   heardNothingInTabs,
@@ -64,5 +72,14 @@ export const tours: Readonly<Record<string, Tour>> = {
     observeKey: observeTabsKey,
     heardMessage: heardNothingInTabs,
     rulesLitBy: tabsRulesLitBy,
+  }),
+  dialog: defineTour({
+    steps: dialogTourSteps,
+    initial: initialDialogTour,
+    heardRule: undefined,
+    snapshot: snapshotDialog,
+    observeKey: observeDialogKey,
+    heardMessage: heardNothingInDialog,
+    rulesLitBy: dialogRulesLitBy,
   }),
 };

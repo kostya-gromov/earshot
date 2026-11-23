@@ -1,3 +1,4 @@
+import { attachDialogHeard } from './dialog-heard';
 import { attachFieldMotion } from './field-motion';
 import { holdFieldHeight } from './hold-height';
 import { directory, initialPeople } from './people';
@@ -20,6 +21,8 @@ export interface LivePattern {
   announces: boolean;
   /** "Watch it": the keys a person would press. One character is typed text. */
   watchSequence: readonly string[];
+  /** How long "Watch it" rests after each key, where the usual beat is too short to follow. */
+  watchHoldMs?: number;
 }
 
 interface ChipFieldModule {
@@ -31,6 +34,10 @@ interface ChipFieldModule {
 
 interface ComboboxModule {
   createCombobox: (root: HTMLElement, options: { options: readonly string[] }) => Stop;
+}
+
+interface DialogModule {
+  createDialog: (root: HTMLElement) => Stop;
 }
 
 interface TabsModule {
@@ -120,5 +127,22 @@ export const livePatterns: Readonly<Record<string, LivePattern>> = {
     firstKeyPlace: 'on a tab',
     announces: false,
     watchSequence: ['ArrowRight', 'ArrowRight', 'ArrowLeft', 'ArrowLeft', 'ArrowLeft', 'Tab'],
+  },
+  dialog: {
+    rootSelector: '[data-dialog]',
+    start: (module, root) => (module as DialogModule).createDialog(root),
+    // The transcript's last line, shown over the open dialog's backdrop.
+    attach: (root) => [attachDialogHeard(root)],
+    firstKey: 'Enter',
+    firstKeyPlace: 'on the button',
+    announces: false,
+    // Opens it, goes round it once and closes it: every step of the tour is seen. Tab can be
+    // shown here and nowhere else (replay.ts): the third Tab is on the last button, where the
+    // reference's own handler wraps it to the field. It never stops with the dialog open, which
+    // would leave the page behind unusable (owner, 2026-11-23).
+    watchSequence: ['Enter', 'Tab', 'Tab', 'Tab', 'Escape'],
+    // Long enough to see where focus went and read what was said, before the next key: at the
+    // usual beat the dialog was gone in 0.7 s (owner, 2026-11-23).
+    watchHoldMs: 1700,
   },
 };

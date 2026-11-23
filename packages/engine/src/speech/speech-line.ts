@@ -38,6 +38,9 @@ function landedOn(focusAfter: FocusInfo): string[] {
 }
 
 function focusLines({ documentTitle, focusBefore, focusAfter }: SpeechInput): string[] {
+  // Focus left the page: the model reads what focus lands on in the page's tree, and there is
+  // nothing of the page to read. No line, not the document's (engine 0.20.0).
+  if (focusAfter.leftPage) return [];
   if (!isSameElement(focusBefore, focusAfter)) {
     if (!focusAfter.isBody) return landedOn(focusAfter);
     const title = documentTitle.trim();

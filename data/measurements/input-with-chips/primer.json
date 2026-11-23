@@ -14,10 +14,10 @@
   },
   "provenance": {
     "status": "measured",
-    "engineVersion": "0.17.0",
+    "engineVersion": "0.20.0",
     "browser": "chromium 156.0.8078.4",
     "os": "darwin",
-    "measuredAt": "2026-11-19T17:19:32.058Z",
+    "measuredAt": "2026-11-23T09:36:26.953Z",
     "runs": 3,
     "consistent": true
   },
@@ -91,7 +91,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 408,
                 "quiet": true
               },
               "speech": [
@@ -162,7 +162,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -233,7 +233,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 417,
+                "ms": 409,
                 "quiet": true
               },
               "speech": [
@@ -315,7 +315,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 400,
+                "ms": 406,
                 "quiet": true
               },
               "speech": [
@@ -388,7 +388,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 408,
                 "quiet": true
               },
               "speech": [
@@ -461,7 +461,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 408,
                 "quiet": true
               },
               "speech": [
@@ -557,7 +557,7 @@
                 ]
               },
               "settle": {
-                "ms": 403,
+                "ms": 408,
                 "quiet": true
               },
               "speech": [
@@ -638,7 +638,7 @@
                 ]
               },
               "settle": {
-                "ms": 404,
+                "ms": 409,
                 "quiet": true
               },
               "speech": [
@@ -725,7 +725,7 @@
                 ]
               },
               "settle": {
-                "ms": 415,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -806,7 +806,7 @@
                 ]
               },
               "settle": {
-                "ms": 400,
+                "ms": 413,
                 "quiet": true
               },
               "speech": [
@@ -893,7 +893,7 @@
                 ]
               },
               "settle": {
-                "ms": 414,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -974,7 +974,7 @@
                 ]
               },
               "settle": {
-                "ms": 400,
+                "ms": 409,
                 "quiet": true
               },
               "speech": [
@@ -1033,7 +1033,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 402,
+                "ms": 410,
                 "quiet": true
               },
               "speech": [
@@ -1070,6 +1070,56 @@
                 "value": "",
                 "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
                 "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
               },
               "announcements": [],
               "axDiff": {
@@ -1082,56 +1132,6 @@
                 "quiet": true
               },
               "speech": [
-                "To, combobox, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Subject",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 401,
-                "quiet": true
-              },
-              "speech": [
                 "Subject, textbox"
               ]
             },
@@ -1173,7 +1173,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 409,
                 "quiet": true
               },
               "speech": [
@@ -1223,7 +1223,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 406,
+                "ms": 415,
                 "quiet": true
               },
               "speech": [
@@ -1268,7 +1268,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -1327,7 +1327,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 413,
                 "quiet": true
               },
               "speech": [
@@ -1377,7 +1377,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -1427,7 +1427,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 414,
                 "quiet": true
               },
               "speech": [
@@ -1509,7 +1509,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -1648,7 +1648,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 413,
                 "quiet": true
               },
               "speech": [
@@ -1714,7 +1714,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 408,
+                "ms": 410,
                 "quiet": true
               },
               "speech": [
@@ -1787,7 +1787,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -1853,7 +1853,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 408,
+                "ms": 410,
                 "quiet": true
               },
               "speech": [
@@ -1950,7 +1950,7 @@
                 ]
               },
               "settle": {
-                "ms": 405,
+                "ms": 424,
                 "quiet": true
               },
               "speech": []
@@ -2097,7 +2097,7 @@
                 ]
               },
               "settle": {
-                "ms": 408,
+                "ms": 418,
                 "quiet": true
               },
               "speech": [
@@ -2182,7 +2182,239 @@
                 ]
               },
               "settle": {
-                "ms": 415,
+                "ms": 422,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected: Irene Oh, Greg Fisher",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "Hiroshi Matsui",
+                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected: Irene Oh, Greg Fisher",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Hiroshi Matsui",
+                  "posInSet": 3,
+                  "setSize": 8,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "",
+                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "listbox",
+                    "name": "To"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Irene Oh"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Irene Oh"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Ana Lima"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Ana Lima"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Ben Carter"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Ben Carter"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Dana Kowalska"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Dana Kowalska"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Elif Demir"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Elif Demir"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Marta Nowak"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Marta Nowak"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "To"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "To"
+                    },
+                    "property": "value",
+                    "before": "Hiroshi Matsui",
+                    "after": null
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, option, 3 of 8"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected: Irene Oh, Greg Fisher",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "Hiroshi Matsui",
+                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "To"
+                    },
+                    "property": "value",
+                    "before": null,
+                    "after": "Hiroshi Matsui"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Selected: Irene Oh, Greg Fisher"
+                    },
+                    "property": "name",
+                    "before": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
+                    "after": "Selected: Irene Oh, Greg Fisher"
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 420,
                 "quiet": true
               },
               "speech": []
@@ -2337,238 +2569,6 @@
               ]
             }
           ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Backspace"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected: Irene Oh, Greg Fisher",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "Hiroshi Matsui",
-                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "To"
-                    },
-                    "property": "value",
-                    "before": null,
-                    "after": "Hiroshi Matsui"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Selected: Irene Oh, Greg Fisher"
-                    },
-                    "property": "name",
-                    "before": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
-                    "after": "Selected: Irene Oh, Greg Fisher"
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Backspace"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected: Irene Oh, Greg Fisher",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "Hiroshi Matsui",
-                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected: Irene Oh, Greg Fisher",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Hiroshi Matsui",
-                  "posInSet": 3,
-                  "setSize": 8,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "",
-                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "listbox",
-                    "name": "To"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Irene Oh"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Irene Oh"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Ana Lima"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Ana Lima"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Ben Carter"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Ben Carter"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Dana Kowalska"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Dana Kowalska"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Elif Demir"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Elif Demir"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Marta Nowak"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Marta Nowak"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "To"
-                    },
-                    "property": "expanded",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "To"
-                    },
-                    "property": "value",
-                    "before": "Hiroshi Matsui",
-                    "after": null
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 409,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui, option, 3 of 8"
-              ]
-            }
-          ]
         }
       ]
     },
@@ -2643,7 +2643,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -2725,7 +2725,615 @@
                 ]
               },
               "settle": {
-                "ms": 415,
+                "ms": 411,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher (press backspace or delete to remove), generic"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "generic",
+                "name": "Greg Fisher (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "generic",
+                "name": "Hiroshi Matsui (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "generic",
+                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "generic",
+                    "name": "Greg Fisher (press backspace or delete to remove)"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Greg Fisher"
+                    },
+                    "property": "name",
+                    "before": "Hiroshi Matsui",
+                    "after": "Greg Fisher"
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui (press backspace or delete to remove), generic"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "generic",
+                "name": "Hiroshi Matsui (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "generic",
+                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "generic",
+                "name": "Hiroshi Matsui (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "generic",
+                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui (press backspace or delete to remove), generic"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "generic",
+                "name": "Hiroshi Matsui (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "generic",
+                "name": "Greg Fisher (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "generic",
+                      "name": "Greg Fisher (press backspace or delete to remove)"
+                    },
+                    "property": "name",
+                    "before": "Hiroshi Matsui (press backspace or delete to remove)",
+                    "after": "Greg Fisher (press backspace or delete to remove)"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Greg Fisher"
+                    },
+                    "property": "name",
+                    "before": "Hiroshi Matsui",
+                    "after": "Greg Fisher"
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher (press backspace or delete to remove), generic"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "generic",
+                "name": "Greg Fisher (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "generic",
+                "name": "Hiroshi Matsui (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "generic",
+                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "generic",
+                    "name": "Greg Fisher (press backspace or delete to remove)"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Greg Fisher"
+                    },
+                    "property": "name",
+                    "before": "Hiroshi Matsui",
+                    "after": "Greg Fisher"
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui (press backspace or delete to remove), generic"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "generic",
+                "name": "Hiroshi Matsui (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "generic",
+                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "generic",
+                "name": "Hiroshi Matsui (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "generic",
+                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui (press backspace or delete to remove), generic"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "generic",
+                "name": "Hiroshi Matsui (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "generic",
+                "name": "Greg Fisher (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "generic",
+                      "name": "Greg Fisher (press backspace or delete to remove)"
+                    },
+                    "property": "name",
+                    "before": "Hiroshi Matsui (press backspace or delete to remove)",
+                    "after": "Greg Fisher (press backspace or delete to remove)"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Greg Fisher"
+                    },
+                    "property": "name",
+                    "before": "Hiroshi Matsui",
+                    "after": "Greg Fisher"
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -2874,615 +3482,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
-                "quiet": true
-              },
-              "speech": [
-                "To, combobox, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "generic",
-                "name": "Hiroshi Matsui (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "generic",
-                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 405,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui (press backspace or delete to remove), generic"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "generic",
-                "name": "Hiroshi Matsui (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "generic",
-                "name": "Greg Fisher (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "generic",
-                      "name": "Greg Fisher (press backspace or delete to remove)"
-                    },
-                    "property": "name",
-                    "before": "Hiroshi Matsui (press backspace or delete to remove)",
-                    "after": "Greg Fisher (press backspace or delete to remove)"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Greg Fisher"
-                    },
-                    "property": "name",
-                    "before": "Hiroshi Matsui",
-                    "after": "Greg Fisher"
-                  }
-                ]
-              },
-              "settle": {
                 "ms": 412,
-                "quiet": true
-              },
-              "speech": [
-                "Greg Fisher (press backspace or delete to remove), generic"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "generic",
-                "name": "Greg Fisher (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "generic",
-                "name": "Hiroshi Matsui (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "generic",
-                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "generic",
-                    "name": "Greg Fisher (press backspace or delete to remove)"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Greg Fisher"
-                    },
-                    "property": "name",
-                    "before": "Hiroshi Matsui",
-                    "after": "Greg Fisher"
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 416,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui (press backspace or delete to remove), generic"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "generic",
-                "name": "Hiroshi Matsui (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "generic",
-                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 401,
-                "quiet": true
-              },
-              "speech": [
-                "To, combobox, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "generic",
-                "name": "Hiroshi Matsui (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "generic",
-                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui (press backspace or delete to remove), generic"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "generic",
-                "name": "Hiroshi Matsui (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "generic",
-                "name": "Greg Fisher (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "generic",
-                      "name": "Greg Fisher (press backspace or delete to remove)"
-                    },
-                    "property": "name",
-                    "before": "Hiroshi Matsui (press backspace or delete to remove)",
-                    "after": "Greg Fisher (press backspace or delete to remove)"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Greg Fisher"
-                    },
-                    "property": "name",
-                    "before": "Hiroshi Matsui",
-                    "after": "Greg Fisher"
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 416,
-                "quiet": true
-              },
-              "speech": [
-                "Greg Fisher (press backspace or delete to remove), generic"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "generic",
-                "name": "Greg Fisher (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "generic",
-                "name": "Hiroshi Matsui (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "generic",
-                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "generic",
-                    "name": "Greg Fisher (press backspace or delete to remove)"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Greg Fisher"
-                    },
-                    "property": "name",
-                    "before": "Hiroshi Matsui",
-                    "after": "Greg Fisher"
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui (press backspace or delete to remove), generic"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "generic",
-                "name": "Hiroshi Matsui (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "generic",
-                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 400,
                 "quiet": true
               },
               "speech": [
@@ -3566,7 +3566,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -3646,85 +3646,85 @@
                     "after": "Greg Fisher"
                   }
                 ]
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher (press backspace or delete to remove), generic"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "generic",
+                "name": "Hiroshi Matsui (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "generic",
+                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "changed": []
               },
               "settle": {
                 "ms": 413,
                 "quiet": true
               },
               "speech": [
-                "Greg Fisher (press backspace or delete to remove), generic"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "description": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input#_r_0_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "generic",
-                "name": "Hiroshi Matsui (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "generic",
-                    "name": "Hiroshi Matsui (press backspace or delete to remove)"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 405,
-                "quiet": true
-              },
-              "speech": [
                 "Hiroshi Matsui (press backspace or delete to remove), generic"
               ]
             },
@@ -3803,7 +3803,7 @@
                 ]
               },
               "settle": {
-                "ms": 408,
+                "ms": 407,
                 "quiet": true
               },
               "speech": [
@@ -3874,91 +3874,91 @@
                   }
                 ],
                 "changed": []
-              },
-              "settle": {
-                "ms": 403,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui (press backspace or delete to remove), generic"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Delete"
-              },
-              "focusBefore": {
-                "role": "generic",
-                "name": "Hiroshi Matsui (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "generic",
-                "name": "Greg Fisher (press backspace or delete to remove)",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 2
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Greg Fisher"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "(press backspace or delete to remove)"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Selected: Irene Oh, Greg Fisher"
-                    },
-                    "property": "name",
-                    "before": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
-                    "after": "Selected: Irene Oh, Greg Fisher"
-                  },
-                  {
-                    "node": {
-                      "role": "generic",
-                      "name": "Greg Fisher (press backspace or delete to remove)"
-                    },
-                    "property": "name",
-                    "before": "Hiroshi Matsui (press backspace or delete to remove)",
-                    "after": "Greg Fisher (press backspace or delete to remove)"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Greg Fisher"
-                    },
-                    "property": "name",
-                    "before": "Hiroshi Matsui",
-                    "after": "Greg Fisher"
-                  }
-                ]
               },
               "settle": {
                 "ms": 412,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui (press backspace or delete to remove), generic"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "generic",
+                "name": "Hiroshi Matsui (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(4)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "generic",
+                "name": "Greg Fisher (press backspace or delete to remove)",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > span:nth-child(2) > div:nth-child(1) > span:nth-child(3)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Greg Fisher"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "(press backspace or delete to remove)"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Selected: Irene Oh, Greg Fisher"
+                    },
+                    "property": "name",
+                    "before": "Selected: Irene Oh, Greg Fisher, Hiroshi Matsui",
+                    "after": "Selected: Irene Oh, Greg Fisher"
+                  },
+                  {
+                    "node": {
+                      "role": "generic",
+                      "name": "Greg Fisher (press backspace or delete to remove)"
+                    },
+                    "property": "name",
+                    "before": "Hiroshi Matsui (press backspace or delete to remove)",
+                    "after": "Greg Fisher (press backspace or delete to remove)"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Greg Fisher"
+                    },
+                    "property": "name",
+                    "before": "Hiroshi Matsui",
+                    "after": "Greg Fisher"
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 409,
                 "quiet": true
               },
               "speech": [
@@ -4061,7 +4061,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 447,
+                "ms": 440,
                 "quiet": true
               },
               "speech": [
@@ -4153,7 +4153,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 443,
+                "ms": 445,
                 "quiet": true
               },
               "speech": [
@@ -4245,7 +4245,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 441,
+                "ms": 440,
                 "quiet": true
               },
               "speech": [

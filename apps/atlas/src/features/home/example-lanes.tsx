@@ -3,7 +3,14 @@
 import { useRef } from 'react';
 import { ReplayField } from '@/features/replay';
 import { backspaceOutcome } from '@/lib/backspace-summary';
-import { describeStep, replayStateAt, type ReplayStep } from '@/lib/replay';
+import {
+  describeStep,
+  endsOutsidePage,
+  notModelledWords,
+  replayStateAt,
+  spokenLines,
+  type ReplayStep,
+} from '@/lib/replay';
 import { Keycap, SpeechLine } from '@/ui';
 import { useExamplePress } from './use-example-press';
 import styles from './example.module.css';
@@ -16,7 +23,7 @@ export interface ExampleLane {
 }
 
 function Result({ step }: { step: ReplayStep }) {
-  const line = step.heard[0] ?? step.speech.at(-1);
+  const line = step.heard[0] ?? spokenLines(step).at(-1);
   return (
     <>
       <span>
@@ -29,7 +36,9 @@ function Result({ step }: { step: ReplayStep }) {
           {line}
         </SpeechLine>
       ) : (
-        <span className={styles.silent}>Nothing said</span>
+        <span className={styles.silent}>
+          {endsOutsidePage(step) ? notModelledWords : 'Nothing said'}
+        </span>
       )}
     </>
   );

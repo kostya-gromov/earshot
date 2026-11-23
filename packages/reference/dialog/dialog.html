@@ -1,0 +1,16 @@
+<div class="dialog-demo" data-dialog>
+  <button type="button" class="dialog-demo__button" data-dialog-open>Edit profile</button>
+  <!-- The native element: showModal() marks it modal, makes the page behind inert, closes on
+       Escape and puts focus back on the button. dialog.js adds only the Tab wrap. -->
+  <dialog class="dialog" aria-labelledby="dialog-title">
+    <h2 class="dialog__title" id="dialog-title">Edit profile</h2>
+    <div class="dialog__field">
+      <label for="dialog-name">Name</label>
+      <input id="dialog-name" type="text" autocomplete="off" />
+    </div>
+    <div class="dialog__actions">
+      <button type="button" class="dialog-demo__button" data-dialog-close>Cancel</button>
+      <button type="button" class="dialog-demo__button" data-dialog-close>Save</button>
+    </div>
+  </dialog>
+</div>

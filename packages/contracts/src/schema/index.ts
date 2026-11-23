@@ -6,6 +6,7 @@
  */
 export { NonEmpty, PatternId, RuleId, Slug } from './primitives.ts';
 export { Source } from './sources.ts';
+export { FigmaFile, FigmaFiles } from './figma-file.ts';
 export { Pattern, Requirement, Rule, TradeOff } from './pattern.ts';
 export {
   AccessibleNode,
@@ -23,6 +24,7 @@ export {
   VerdictResult,
   PopupState,
   TabSetState,
+  DialogState,
 } from './observation.ts';
 export { Measurement, Provenance, SystemVersion, Target } from './measurement.ts';
 export { checkMeasurementAgainstPattern } from './measurement-checks.ts';

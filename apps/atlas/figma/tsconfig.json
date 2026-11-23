@@ -1,0 +1,11 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    // The drawing code runs in Figma's plugin sandbox: no DOM, no Node, only the `figma` global.
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": ["es2023"],
+    "types": ["@figma/plugin-typings"]
+  },
+  "include": ["."]
+}

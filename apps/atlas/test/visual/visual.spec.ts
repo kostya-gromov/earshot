@@ -9,7 +9,9 @@ const pages = [
   { name: 'combobox', path: '/patterns/combobox/' },
   { name: 'menu-button', path: '/patterns/menu-button/' },
   { name: 'tabs', path: '/patterns/tabs/' },
+  { name: 'dialog', path: '/patterns/dialog/' },
   { name: 'methodology', path: '/methodology/' },
+  { name: 'patterns', path: '/patterns/' },
 ] as const;
 
 const modes = {

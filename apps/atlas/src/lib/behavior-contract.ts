@@ -24,6 +24,7 @@ function actionText(action: Action): string {
 }
 
 function focusParts(focus: FocusInfo): ContractPart[] {
+  if (focus.leftPage) return [plain('focus leaves the page')];
   if (focus.isBody) return [plain('focus falls to the document')];
   if (!focus.isInsideComponent) return [plain('focus leaves the field')];
   const position =

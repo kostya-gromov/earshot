@@ -2,9 +2,16 @@
 
 import { useRef, useState, type CSSProperties } from 'react';
 import { VerdictBadge } from '@/features/evidence';
-import { RecordingLegend, StepField, listRows, useClock } from '@/features/replay';
-import { describeStep, type ReplayLane, type ReplayStep } from '@/lib/replay';
-import { Keycap, SpeechLine } from '@/ui';
+import { KeyRow, RecordingLegend, StepField, listRows, useClock } from '@/features/replay';
+import {
+  describeStep,
+  endsOutsidePage,
+  notModelledWords,
+  spokenLines,
+  type ReplayLane,
+  type ReplayStep,
+} from '@/lib/replay';
+import { SpeechLine } from '@/ui';
 import styles from './grid.module.css';
 
 /**
@@ -21,7 +28,7 @@ export interface GridScenario {
 }
 
 function Said({ step }: { step: ReplayStep }) {
-  const line = step.heard[0] ?? step.speech.at(-1);
+  const line = step.heard[0] ?? spokenLines(step).at(-1);
   return (
     <>
       <span className={styles.what}>{describeStep(step)}</span>
@@ -30,7 +37,9 @@ function Said({ step }: { step: ReplayStep }) {
           {line}
         </SpeechLine>
       ) : (
-        <span className={styles.silent}>Nothing said</span>
+        <span className={styles.silent}>
+          {endsOutsidePage(step) ? notModelledWords : 'Nothing said'}
+        </span>
       )}
     </>
   );
@@ -117,11 +126,7 @@ function Lanes({ scenario, lanes, people }: LanesProps) {
     <>
       <div className={styles.keys}>
         <span aria-hidden="true" className={styles.keyRow}>
-          {keys.map((step, i) => (
-            <span key={i} data-done={i < index || undefined}>
-              <Keycap keys={step.key === 'Click' ? 'Click' : step.key} pressed={i === index} />
-            </span>
-          ))}
+          <KeyRow keys={keys.map(({ key }) => key)} index={index} dimsDone />
         </span>
         <button type="button" className={styles.pause} onClick={toggle}>
           {isPlaying ? 'Pause' : 'Play'}

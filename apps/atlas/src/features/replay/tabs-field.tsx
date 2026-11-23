@@ -5,8 +5,12 @@ import styles from './tabs.module.css';
 interface TabsFieldProps {
   moment: TabsMoment;
   size?: 'md' | 'sm';
-  /** The control focus goes to outside the tabs in this recording, if any. */
+  /** The name the box outside the tabs carries at this moment, if the recording has one. */
   outside?: string | undefined;
+  /** Every name that box carries in the recording: it keeps the width of the longest. */
+  outsideNames?: readonly string[];
+  /** Set when focus leaves the page in this recording: the side it left by, from the key. */
+  awaySide?: 'before' | 'after' | undefined;
   /** True in a replay that is stepped through: its changes may move. */
   isLive?: boolean;
 }
@@ -60,7 +64,22 @@ function Panel({ moment }: { moment: TabsMoment }) {
  * tabs when focus goes there. Hidden from assistive technology; the same facts are always written
  * beside it.
  */
-export function TabsField({ moment, size = 'md', outside, isLive = false }: TabsFieldProps) {
+export function TabsField({
+  moment,
+  size = 'md',
+  outside,
+  outsideNames = [],
+  awaySide,
+  isLive = false,
+}: TabsFieldProps) {
+  // Not a place on the page, and not a loss: neutral, never the focus blue or the red. On a
+  // line of its own, above the tabs when focus left backwards and below the panel when it left
+  // forwards: the drawing keeps one height at every step.
+  const away = (
+    <span className={styles.away} data-target={moment.focus.kind === 'away' || undefined}>
+      Outside the page
+    </span>
+  );
   return (
     <div
       className={`${list.wrap} ${styles.wrap}`}
@@ -68,6 +87,7 @@ export function TabsField({ moment, size = 'md', outside, isLive = false }: Tabs
       data-live={isLive || undefined}
       aria-hidden="true"
     >
+      {awaySide === 'before' && away}
       <div className={styles.row}>
         <span className={styles.list}>
           {moment.tabs.map((tab) => (
@@ -80,17 +100,26 @@ export function TabsField({ moment, size = 'md', outside, isLive = false }: Tabs
       <div className={styles.row}>
         <Panel moment={moment} />
         {outside !== undefined && (
-          <span className={list.next} data-target={moment.focus.kind === 'outside' || undefined}>
-            {outside}
+          <span
+            className={`${list.next} ${styles.names}`}
+            data-target={moment.focus.kind === 'outside' || undefined}
+          >
+            {/* Every name in one cell, one seen: the box does not change width between steps. */}
+            {[...new Set([outside, ...outsideNames])].map((name) => (
+              <span key={name} data-unseen={name !== outside || undefined}>
+                {name}
+              </span>
+            ))}
           </span>
         )}
       </div>
+      {awaySide === 'after' && away}
     </div>
   );
 }
 
 /** What a tabs replay's signs mean, in words, above its schematics. */
-export function TabsLegend() {
+export function TabsLegend({ leavesPage = false }: { leavesPage?: boolean }) {
   return (
     <ul className={list.legend} aria-label="Legend">
       <li className={list.legendItem}>
@@ -111,6 +140,12 @@ export function TabsLegend() {
         </span>
         Said when focus lands
       </li>
+      {leavesPage && (
+        <li className={list.legendItem}>
+          <span className={styles.legendAway} aria-hidden="true" />
+          focus outside the page
+        </li>
+      )}
     </ul>
   );
 }

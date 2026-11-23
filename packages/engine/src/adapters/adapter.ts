@@ -7,8 +7,13 @@ export type SetupResult =
 
 export type ClickTarget = Extract<Action, { type: 'click' }>['target'];
 
+/**
+ * `atPoint`: the click goes to the centre of the element, whatever is drawn over it. For a field
+ * that a modal dialog's backdrop covers: a click on the element itself would wait for it forever.
+ */
 export type ResolveClickResult =
-  { ok: true; locator: Locator; target: ClickTarget } | { ok: false; reason: string };
+  | { ok: true; locator: Locator; target: ClickTarget; atPoint?: true }
+  | { ok: false; reason: string };
 
 /**
  * Target-specific glue (packages/engine/CLAUDE.md, Adapters): how to reach the component, put it in a known state
@@ -51,6 +56,16 @@ export interface Adapter<State, InteractionId extends string> {
    * focus is inside a shown panel.
    */
   panels?: { locate: (page: Page) => Locator; description: string };
+  /**
+   * Dialog only: the element with role dialog, open or not, wherever the system renders it, and
+   * the button that opens it. The engine records the dialog, its first heading and the opener
+   * around each step, and whether focus is inside the dialog.
+   */
+  dialog?: {
+    locate: (page: Page) => Locator;
+    opener: (page: Page) => Locator;
+    description: string;
+  };
   ready: (page: Page) => Promise<void>;
   setup: (page: Page, state: State) => Promise<SetupResult>;
   resolveClickTarget: (page: Page, id: InteractionId) => Promise<ResolveClickResult>;

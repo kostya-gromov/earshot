@@ -15,6 +15,8 @@ function closedParts({ focus }: MenuMoment): ContractPart[] {
         plain('menu closed, focus leaves to '),
         { text: quote(focus.name || focus.role || 'a control'), kind: 'focus' },
       ];
+    case 'away':
+      return [plain('menu closed, focus leaves the page')];
     case 'body':
       return [plain('menu closed, focus falls to the document')];
     case 'item':

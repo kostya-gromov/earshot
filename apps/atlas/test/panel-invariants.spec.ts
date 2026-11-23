@@ -71,6 +71,18 @@ const pages = [
     systemShift: 0,
     listShift: 0,
   },
+  {
+    id: 'dialog',
+    path: '/patterns/dialog/',
+    rule: /Closing returns focus to the button/,
+    // One line of text between systems. The words under the drawing are the recording, and
+    // they differ in length: MUI's button is "EDIT PROFILE" in the accessibility tree and the
+    // line that names it takes a line more than the reference's (the block is 108.6 px against
+    // 89.2 px), and React Aria's differs by a line the other way. Measured 2026-11-23: the list
+    // moved 19 px to MUI and 21 px to React Aria. The words are not cut to fit.
+    systemShift: 21,
+    listShift: 0,
+  },
 ] as const;
 const sizes = [
   { width: 1440, height: 900 },

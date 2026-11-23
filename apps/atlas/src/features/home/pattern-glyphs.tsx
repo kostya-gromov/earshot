@@ -86,11 +86,33 @@ function TabsGlyph() {
   );
 }
 
+function DialogGlyph() {
+  return (
+    <svg viewBox="0 0 320 170" aria-hidden="true" focusable="false">
+      {/* The page behind, fainter: the button that opened the dialog and lines of the page.
+          They run under the dialog and stop at its edge, because the dialog is filled. */}
+      <rect className={styles.behind} x="30" y="20" width="84" height="28" rx="8" />
+      <line className={styles.behind} x1="30" y1="76" x2="250" y2="76" />
+      <line className={styles.behind} x1="30" y1="104" x2="220" y2="104" />
+      <line className={styles.behind} x1="30" y1="132" x2="236" y2="132" />
+      {/* The dialog over it: a title, a field with focus, two buttons. */}
+      <g className={styles.popup}>
+        <rect className={styles.surface} x="100" y="58" width="196" height="102" rx="10" />
+        <line className={styles.stroke} x1="116" y1="78" x2="196" y2="78" />
+        <rect className={styles.focus} x="116" y="90" width="164" height="26" rx="6" />
+        <rect className={styles.stroke} x="180" y="126" width="46" height="22" rx="6" />
+        <rect className={styles.stroke} x="234" y="126" width="46" height="22" rx="6" />
+      </g>
+    </svg>
+  );
+}
+
 const glyphs: Readonly<Record<string, () => ReactNode>> = {
   'input-with-chips': ChipsGlyph,
   combobox: ComboboxGlyph,
   'menu-button': MenuButtonGlyph,
   tabs: TabsGlyph,
+  dialog: DialogGlyph,
 };
 
 export function PatternGlyph({ id }: { id: string }) {

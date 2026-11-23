@@ -56,9 +56,21 @@ const tabsScenarioLabels: Readonly<Record<string, string>> = {
   'home-end': 'End, then Home',
 };
 
+/** The dialog shares `escape` with the menu button; here it is Escape in the open dialog. */
+const dialogScenarioLabels: Readonly<Record<string, string>> = {
+  open: 'Enter on the button',
+  'tab-forward': 'Tab, six times, in the open dialog',
+  'tab-backward': 'Shift+Tab, six times, in the open dialog',
+  escape: 'Escape in the open dialog',
+  'escape-typing': 'Escape with text typed in the field',
+  cancel: 'A click on Cancel',
+  'outside-click': 'A click on the page behind the dialog',
+};
+
 const labelsByPattern: Readonly<Record<string, Readonly<Record<string, string>>>> = {
   'menu-button': menuScenarioLabels,
   tabs: tabsScenarioLabels,
+  dialog: dialogScenarioLabels,
 };
 
 /** The labels of one pattern's scenarios, for the scenario list beside a replay. */

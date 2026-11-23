@@ -11,4 +11,5 @@ export const playgroundSources: Readonly<Record<string, PlaygroundSource>> = {
   combobox: { entry: 'combobox', layout: 'beside' },
   'menu-button': { entry: 'menu-button', layout: 'beside' },
   tabs: { entry: 'tabs', layout: 'stacked' },
+  dialog: { entry: 'dialog', layout: 'stacked' },
 };

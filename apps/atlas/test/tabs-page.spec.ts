@@ -15,8 +15,8 @@ test('the page is one of the patterns, and nothing is left at the preview addres
     .locator('main p')
     .filter({ hasText: /^Pattern/ })
     .first();
-  await expect(kicker).toContainText('4 of 4');
-  await page.goto('/');
+  await expect(kicker).toContainText('4 of 5');
+  await page.goto('/patterns/');
   await expect(page.getByRole('main').locator('a[href="/patterns/tabs/"]').first()).toBeVisible();
   const old = await page.goto('/lab/patterns/tabs/');
   expect(old?.status()).toBe(404);
@@ -115,3 +115,183 @@ test('the spoken line of a tab reached by arrow says it is selected', async ({ p
   await page.keyboard.press('ArrowRight');
   await expect(page.getByText('Activity, tab, 2 of 4, selected').first()).toBeVisible();
 });
+
+// Engine 0.18.0 records when the document no longer has focus. In three systems the last
+// Shift+Tab of this scenario goes on past the page's first field: Tab carried focus out of the
+// page, which is not a loss, and the recording must not say or draw it as one (2026-11-22).
+for (const system of ['React Aria', 'Chakra UI', 'Fluent 2']) {
+  test(`${system}: Shift+Tab past the first field is focus that left the page, not a loss`, async ({
+    page,
+  }) => {
+    // Reduced motion holds a replay on its last step.
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.goto('/patterns/tabs/#rule-tab-in');
+    const panel = page.locator('[role="tabpanel"][id="rule-tab-in"]');
+    await panel
+      .getByRole('button', { name: new RegExp(system) })
+      .first()
+      .click();
+    for (const fold of await panel.getByRole('button', { name: /more scenarios?/ }).all()) {
+      if ((await fold.getAttribute('aria-expanded')) === 'false') await fold.click();
+    }
+    await panel
+      .getByRole('button', { name: /Shift\+Tab back into the tabs/ })
+      .first()
+      .click();
+    await expect(panel).toContainText('Focus left the page.');
+    await expect(panel).not.toContainText('Focus lost to the page');
+    // No spoken line for that step: the model reads the page's tree, and focus is not in it.
+    await expect(panel).toContainText('Not modelled: focus is outside the page');
+    await expect(panel).not.toContainText('Earshot harness, document');
+    // The sign and its legend line are there, in words as well as in the drawing.
+    await expect(panel.getByText('focus outside the page', { exact: true })).toBeVisible();
+  });
+}
+
+// Design review, 2026-11-22: at 390 the row of keys of this scenario (four Shift+Tab pairs and
+// Play) is wider than the page, and it stretched the whole recording, so the sign under it was
+// cut at the edge. The schematic keeps to the page now. The row of keys itself still overflows:
+// wrapping it breaks the panel's row-stays invariant (docs/follow-ups/dialog.md).
+test('at 390 wide, the sign for focus outside the page is inside the page', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/patterns/tabs/#rule-tab-in');
+  const panel = page.locator('[role="tabpanel"][id="rule-tab-in"]');
+  await panel
+    .getByRole('button', { name: /React Aria/ })
+    .first()
+    .click();
+  for (const fold of await panel.getByRole('button', { name: /more scenarios?/ }).all()) {
+    if ((await fold.getAttribute('aria-expanded')) === 'false') await fold.click();
+  }
+  await panel
+    .getByRole('button', { name: /Shift\+Tab back into the tabs/ })
+    .first()
+    .click();
+  await expect(panel).toContainText('Focus left the page.');
+  // Hidden from assistive technology, like the rest of the schematic: found by its text.
+  const box = (await panel.getByText('Outside the page', { exact: true }).first().boundingBox())!;
+  expect(box.x + box.width).toBeLessThanOrEqual(390);
+});
+
+// Design review, 2026-11-22: with the sign in the row, the box outside dropped to a new line for
+// the one step whose panel shows a link, and the recording grew 50 px and shrank again on a
+// loop. A drawing keeps one height from its first step to its last, at 320 as well: there the
+// step whose panel shows a link was 4 px taller, until the narrow panel left its role label out.
+for (const width of [1440, 390, 320]) {
+  test(`at ${width} wide, the drawing keeps one height while the recording plays`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/patterns/tabs/#rule-tab-in');
+    const panel = page.locator('[role="tabpanel"][id="rule-tab-in"]');
+    await panel
+      .getByRole('button', { name: /React Aria/ })
+      .first()
+      .click();
+    for (const fold of await panel.getByRole('button', { name: /more scenarios?/ }).all()) {
+      if ((await fold.getAttribute('aria-expanded')) === 'false') await fold.click();
+    }
+    await panel
+      .getByRole('button', { name: /Shift\+Tab back into the tabs/ })
+      .first()
+      .click();
+    // The schematic is hidden from assistive technology: found by a tab's name in it.
+    const drawing = panel
+      .locator('[aria-hidden="true"]')
+      .filter({ hasText: /overview/i })
+      .last();
+    const heights = new Set<number>();
+    const steps = new Set<string>();
+    // One loop of the replay and more, sampled often enough to meet every step.
+    for (let sample = 0; sample < 90; sample += 1) {
+      heights.add(Math.round((await drawing.boundingBox())!.height));
+      for (const words of ['link “Invite people”', 'Project name', 'Focus left the page']) {
+        if (await panel.getByText(words).first().isVisible()) steps.add(words);
+      }
+      await page.waitForTimeout(100);
+    }
+    expect(steps.size, 'every step was met while sampling').toBe(3);
+    expect([...heights]).toHaveLength(1);
+  });
+}
+
+// Seen on 2026-11-22: where the drawing is narrow the row of tabs was cut at its edge, and
+// "Settings" could not be read at 320. A drawing may not hide a word. The row stays on one line
+// (a second line breaks the panel's list-stays invariant): the tabs take less room instead.
+// MUI's names are in capitals in the tree and wider: they were cut at 1024 as well.
+for (const { width, system } of [
+  { width: 320, system: /React Aria/ },
+  { width: 390, system: /React Aria/ },
+  { width: 320, system: /MUI/ },
+  { width: 1024, system: /MUI/ },
+] as const) {
+  test(`at ${width} wide, no tab of the ${system.source} schematic is cut`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 844 });
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.goto('/patterns/tabs/#rule-tab-in');
+    const panel = page.locator('[role="tabpanel"][id="rule-tab-in"]');
+    await panel.getByRole('button', { name: system }).first().click();
+    // The schematic is hidden from assistive technology, so it is found by a tab's name in it.
+    const drawing = panel.locator('[aria-hidden="true"]').filter({ hasText: 'Overview' }).last();
+    // The list clips what runs past its edge: a tab is seen whole only when it ends inside it.
+    const cut = await drawing.evaluate((root) => {
+      const names = ['overview', 'activity', 'members', 'settings'];
+      const tabs = [...root.querySelectorAll('span')].filter((span) =>
+        names.includes((span.textContent ?? '').toLowerCase()),
+      );
+      if (tabs.length < 4) return ['the four tabs of the schematic were not found'];
+      return tabs.flatMap((tab) => {
+        const list = tab.parentElement!.getBoundingClientRect();
+        const box = tab.getBoundingClientRect();
+        return box.right > list.right + 0.5
+          ? [
+              `${tab.textContent}: ends at ${Math.round(box.right)}, the list at ${Math.round(list.right)}`,
+            ]
+          : [];
+      });
+    });
+    expect(cut).toEqual([]);
+  });
+}
+
+// Design review, 2026-11-22: once four presses of Shift+Tab were drawn as one key with a count,
+// a press showed only as a digit changing. The key now dips on each press of a run. Motion of
+// the Micro tier: none under reduced motion.
+for (const reducedMotion of ['no-preference', 'reduce'] as const) {
+  test(`a press inside a run of one key is ${reducedMotion === 'reduce' ? 'not animated under reduced motion' : 'seen as a press'}`, async ({
+    page,
+  }) => {
+    await page.emulateMedia({ reducedMotion });
+    await page.goto('/patterns/tabs/#rule-tab-in');
+    const panel = page.locator('[role="tabpanel"][id="rule-tab-in"]');
+    for (const fold of await panel.getByRole('button', { name: /more scenarios?/ }).all()) {
+      if ((await fold.getAttribute('aria-expanded')) === 'false') await fold.click();
+    }
+    // Counted on the page itself, from before the scenario starts to play.
+    await page.evaluate(() => {
+      const seen = window as unknown as { keyPresses: number };
+      seen.keyPresses = 0;
+      document.addEventListener('animationstart', (event) => {
+        if (event.animationName.includes('key-press')) seen.keyPresses += 1;
+      });
+    });
+    await panel
+      .getByRole('button', { name: /Shift\+Tab back into the tabs/ })
+      .first()
+      .click();
+    if (reducedMotion === 'reduce') {
+      await page.waitForTimeout(1500);
+      expect(
+        await page.evaluate(() => (window as unknown as { keyPresses: number }).keyPresses),
+      ).toBe(0);
+      return;
+    }
+    // Four presses in the run: at least three of them are met within one loop of the replay.
+    await expect
+      .poll(() => page.evaluate(() => (window as unknown as { keyPresses: number }).keyPresses), {
+        timeout: 12_000,
+      })
+      .toBeGreaterThanOrEqual(3);
+  });
+}

@@ -19,6 +19,8 @@ export interface FocusFacts {
   element: number;
   /** The aria-haspopup attribute as written; null when the element does not have it. */
   ariaHasPopup: string | null;
+  /** False when focus is in the browser's own controls and not in the page at all. */
+  pageHasFocus: boolean;
 }
 
 export interface QuietResult {

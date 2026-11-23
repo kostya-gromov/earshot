@@ -130,4 +130,38 @@ describe('synthesizeSpeech', () => {
       }),
     ).toEqual([]);
   });
+
+  // Tab went on past the page's last or first stop: the document no longer has focus. The model
+  // speaks what focus lands on in the page's tree, and there it has nothing to read; "…,
+  // document" would say that something was heard (engine 0.20.0).
+  it('says nothing about focus when focus left the page, and still says what was announced', () => {
+    const away = focus({ role: null, name: '', isBody: true, leftPage: true, path: undefined });
+    expect(
+      synthesizeSpeech({
+        documentTitle: 'Atlas',
+        focusBefore: focus({ path: '#first' }),
+        focusAfter: away,
+        announcements: [],
+      }),
+    ).toEqual([]);
+    expect(
+      synthesizeSpeech({
+        documentTitle: 'Atlas',
+        focusBefore: focus({ path: '#first' }),
+        focusAfter: away,
+        announcements: [announcement('Saved', 'polite')],
+      }),
+    ).toEqual(['Saved']);
+  });
+
+  it('still names the document when focus fell to it with the page keeping focus', () => {
+    expect(
+      synthesizeSpeech({
+        documentTitle: 'Atlas',
+        focusBefore: focus({ path: '#first' }),
+        focusAfter: focus({ role: null, name: '', isBody: true, path: undefined }),
+        announcements: [],
+      }),
+    ).toEqual(['Atlas, document']);
+  });
 });

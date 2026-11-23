@@ -8,7 +8,8 @@ import type { Pattern, Requirement, Source } from '@earshot/contracts';
  * the designer puts it on their own layer (checked in Figma's docs, 2026-11-17).
  */
 
-function sourceLine(source: Source): string {
+/** A source as a reader names it, with how it stands to the requirement when it is not its basis. */
+export function sourceName(source: Source): string {
   const name =
     source.kind === 'wcag'
       ? `WCAG ${source.sc} ${source.title.replace(/^Understanding SC [\d.]+:\s*/, '')}`
@@ -17,18 +18,22 @@ function sourceLine(source: Source): string {
         : source.title;
   // A page cited for what stands near the requirement is said to be that, as on the site.
   const relation = source.relation === undefined ? '' : ` (${source.relation})`;
-  return `${name}${relation}: ${source.url}`;
+  return `${name}${relation}`;
 }
 
+const sourceLine = (source: Source): string => `${sourceName(source)}: ${source.url}`;
+
 /** The requirement's title, with whose requirement it is when it is not WCAG's. */
-const heading = ({ title, level }: Requirement): string =>
+export const annotationHeading = ({ title, level }: Requirement): string =>
   level === 'guidance' ? `${title} (Atlas guidance, beyond WCAG)` : title;
 
 /** One requirement: its title, its reason, a line per source. */
 export function annotationText(requirement: Requirement): string {
-  return [heading(requirement), requirement.reason, ...requirement.sources.map(sourceLine)].join(
-    '\n',
-  );
+  return [
+    annotationHeading(requirement),
+    requirement.reason,
+    ...requirement.sources.map(sourceLine),
+  ].join('\n');
 }
 
 /** Every requirement of a pattern, under one line that says what they are. */

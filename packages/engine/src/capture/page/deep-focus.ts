@@ -93,6 +93,7 @@
       activeDescendantId: element.getAttribute('aria-activedescendant') || null,
       value: textValueOf(element),
       ariaHasPopup: element.getAttribute('aria-haspopup'),
+      pageHasFocus: document.hasFocus(),
     };
   };
 })();

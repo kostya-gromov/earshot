@@ -1,9 +1,9 @@
 import { expect, test, type Page } from '@playwright/test';
+import figmaFiles from '../src/data/figma-files.json' with { type: 'json' };
 
 const url = '/patterns/input-with-chips/';
 const lens = (page: Page) => page.locator('section[aria-labelledby="lens-title"]');
-const tipButton = (page: Page) =>
-  lens(page).getByRole('button', { name: 'About copying for Figma' });
+const tipButton = (page: Page) => lens(page).getByRole('button', { name: /^About copying/ });
 const tip = (page: Page) => lens(page).getByRole('tooltip');
 
 test.beforeEach(async ({ page, context }) => {
@@ -58,7 +58,7 @@ test('Copy all copies every requirement under one heading line', async ({ page }
 });
 
 test('the note is the description of its button, there before it is shown', async ({ page }) => {
-  await expect(tipButton(page)).toHaveAccessibleDescription(/Ready-made annotations are planned/);
+  await expect(tipButton(page)).toHaveAccessibleDescription(/The notes are ordinary layers/);
   await expect(tip(page)).toBeHidden();
 });
 
@@ -129,4 +129,50 @@ test('a requirement’s Copied keeps the edge its label sat on', async ({ page }
   await first.getByRole('button', { name: /^Copy for Figma/ }).click();
   await expect(first.getByRole('button', { name: /^Copied/ })).toBeVisible();
   expect(await shownEdge()).toBeCloseTo(before, 0);
+});
+
+test('a pattern with a recorded Figma file offers it as a download, and no other does', async ({
+  page,
+}) => {
+  const link = lens(page).getByRole('link', { name: 'Download Figma file' });
+  const record = (figmaFiles as Record<string, { file: string } | undefined>)['input-with-chips'];
+  if (!record) {
+    await expect(link).toHaveCount(0);
+    return;
+  }
+  await expect(link).toHaveAttribute('href', record.file);
+  await expect(link).toHaveAttribute('download', '');
+  expect((await page.request.get(record.file)).status()).toBe(200);
+});
+
+test('on a narrow phone no label in the row above the requirements wraps', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 700 });
+  const row = lens(page)
+    .getByRole('button', { name: /^Copy all/ })
+    .locator('..');
+  for (const control of await row.locator(':scope > button, :scope > a').all()) {
+    const box = (await control.boundingBox())!;
+    expect(box.height).toBe(28);
+    // The row wraps instead: no control runs past the page's edge.
+    expect(box.x + box.width).toBeLessThanOrEqual(320);
+  }
+});
+
+test('a pattern the Figma plugin draws says the plugin is in review, and at 900 px the controls stay on one line', async ({
+  page,
+}) => {
+  const note = (of: Page) => lens(of).getByText('Figma plugin', { exact: true }).locator('..');
+  await expect(note(page)).toHaveText(
+    'Figma pluginIn Figma’s reviewWill add this pattern to your own file, with its requirements as numbered notes.',
+  );
+  // The sentence takes a line of its own here, so the controls are not split over two.
+  await page.setViewportSize({ width: 900, height: 800 });
+  const tops = await Promise.all(
+    [/^Copy all/, /^About copying/].map(async (name) => {
+      const box = await lens(page).getByRole('button', { name }).boundingBox();
+      return Math.round((box?.y ?? 0) + (box?.height ?? 0) / 2);
+    }),
+  );
+  const link = await lens(page).getByRole('link', { name: 'Download Figma file' }).boundingBox();
+  expect(new Set([...tops, Math.round((link?.y ?? 0) + (link?.height ?? 0) / 2)]).size).toBe(1);
 });

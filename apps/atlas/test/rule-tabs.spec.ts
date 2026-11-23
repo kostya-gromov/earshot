@@ -27,3 +27,21 @@ test('at 1440 px the rules are a column moved with Up and Down', async ({ page }
   await page.keyboard.press('ArrowDown');
   await expect(tabs.getByRole('tab').nth(1)).toHaveAttribute('aria-selected', 'true');
 });
+
+// Design review, 2026-11-23: at 390 the strip of rule tabs lay 46 px over the shown rule, its
+// hairline through the rule's heading. The offset that keeps the list clear of the header when
+// it sticks beside the rule also moved it where it does not stick.
+for (const path of ['/patterns/input-with-chips/', '/patterns/tabs/', '/patterns/menu-button/']) {
+  test(`${path} at 390: the strip of rule tabs ends above the rule it shows`, async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.goto(path);
+    const tabs = page.locator('[role="tab"][aria-controls^="rule-"]');
+    await tabs.last().click();
+    const strip = (await tabs.first().locator('xpath=..').boundingBox())!;
+    const panel = (await page
+      .locator('[role="tabpanel"][id^="rule-"]:not([hidden])')
+      .boundingBox())!;
+    expect(strip.y + strip.height).toBeLessThanOrEqual(panel.y + 0.5);
+  });
+}

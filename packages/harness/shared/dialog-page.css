@@ -1,0 +1,18 @@
+/*
+ * The page around a dialog. The fields sit at the left edge, not in the centre: every measured
+ * dialog opens centred, and it must not lie over the field "Notes", which the engine clicks to
+ * see whether the page behind can be used (the engine refuses the click when it does).
+ */
+main {
+  display: grid;
+  gap: 8px;
+  max-width: 240px;
+  margin: 48px 24px;
+  font:
+    14px/1.4 system-ui,
+    sans-serif;
+}
+
+#component {
+  margin-block: 16px;
+}

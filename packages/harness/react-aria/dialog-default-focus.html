@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" data-auto-focus="false">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React Aria Modal, no autoFocus · Earshot harness</title>
+    <link rel="stylesheet" href="../shared/dialog-page.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Focusable fields before and after the button, as on the reference page (ADR 0005). -->
+      <label for="email">Email</label>
+      <input id="email" type="text" value="ada@example.com" />
+      <div id="component" data-earshot-root></div>
+      <label for="notes">Notes</label>
+      <input id="notes" type="text" />
+    </main>
+    <script type="module" src="./src/dialog.tsx"></script>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 import type { FocusInfo, Measurement, Step } from '@earshot/contracts';
 import { comboboxSteps, type ComboboxStep } from './combobox-replay';
 import { menuSteps, type MenuStep } from './menu-replay';
+import { dialogSteps, type DialogStep } from './dialog-replay';
 import { tabsSteps, type TabsStep } from './tabs-replay';
 import { basisWithReasons, type LaneVerdict } from './lane-verdict';
 
@@ -12,6 +13,7 @@ export type ReplayFocus =
   | { kind: 'chip'; index: number; count: number; role: string; name: string }
   | { kind: 'input'; name: string }
   | { kind: 'outside'; role: string | null; name: string }
+  | { kind: 'away' }
   | { kind: 'body' }
   | { kind: 'other'; role: string | null; name: string };
 
@@ -42,6 +44,8 @@ export interface ReplayStep {
   menu?: MenuStep;
   /** Present for tabs: every tab, the shown panel and where focus is. */
   tabs?: TabsStep;
+  /** Present for a dialog: whether it is open, by what name, and where focus is. */
+  dialog?: DialogStep;
 }
 
 const named = (nodes: readonly { role: string | null; name: string }[]) =>
@@ -59,6 +63,8 @@ function chipPlace(focus: FocusInfo): { index: number; count: number } | undefin
 const isTextEntry = ({ role }: FocusInfo) => role !== null && textEntryRoles.has(role);
 
 export function replayFocus(focus: FocusInfo): ReplayFocus {
+  // The document no longer has focus: carried out of the page, which is not a loss.
+  if (focus.leftPage) return { kind: 'away' };
   if (focus.isBody) return { kind: 'body' };
   if (!focus.isInsideComponent) return { kind: 'outside', role: focus.role, name: focus.name };
   if (isTextEntry(focus)) return { kind: 'input', name: focus.name };
@@ -101,7 +107,9 @@ export function replaySteps(steps: readonly Step[], people: readonly string[]): 
   // A menu button recording carries the page's last action; a combobox recording does not.
   const menu = menuSteps(steps);
   const tabs = tabsSteps(steps);
-  const popup = menu.length > 0 || tabs.length > 0 ? [] : comboboxSteps(steps);
+  const dialog = dialogSteps(steps);
+  const isOther = menu.length > 0 || tabs.length > 0 || dialog.length > 0;
+  const popup = isOther ? [] : comboboxSteps(steps);
   const hasPopup = popup.length === steps.length;
   return steps.map((step, index) => {
     const removed = removedBy(step, people, gone);
@@ -119,6 +127,7 @@ export function replaySteps(steps: readonly Step[], people: readonly string[]): 
       ...(hasPopup && popup[index] ? { combobox: popup[index] } : {}),
       ...(menu[index] ? { menu: menu[index] } : {}),
       ...(tabs[index] ? { tabs: tabs[index] } : {}),
+      ...(dialog[index] ? { dialog: dialog[index] } : {}),
     };
   });
 }
@@ -155,9 +164,30 @@ export function replayStateAt(steps: readonly ReplayStep[], index: number): Repl
   };
 }
 
+/**
+ * Said in place of a spoken line when a step ends with focus outside the page: the semantic
+ * model speaks what focus lands on in the page's tree, and there it has nothing to read.
+ */
+export const notModelledWords = 'Not modelled: focus is outside the page';
+
+/** True when the step ended with the document no longer holding focus (engine 0.18.0). */
+export const endsOutsidePage = (step: ReplayStep): boolean => step.to.kind === 'away';
+
+/**
+ * The lines to show as spoken for a step. For a step that ends outside the page, only what a
+ * live region announced: the recorded focus line names the document, which nobody hears there.
+ */
+export function spokenLines(step: ReplayStep): readonly string[] {
+  return endsOutsidePage(step)
+    ? step.speech.filter((line) => step.heard.includes(line))
+    : step.speech;
+}
+
 /** The focused node as recorded: `button “Remove Irene Oh”`, the input, or the page. */
 export function focusWords(focus: ReplayFocus): string {
   switch (focus.kind) {
+    case 'away':
+      return 'outside the page';
     case 'body':
       return 'the page';
     case 'input':

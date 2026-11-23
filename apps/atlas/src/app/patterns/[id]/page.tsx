@@ -46,7 +46,7 @@ export default async function PatternPage({ params }: Props) {
       <div className={styles.backdrop} aria-hidden="true" />
       <SiteHeader
         crumbs={[
-          { label: 'Patterns', href: '/#patterns' },
+          { label: 'Patterns', href: '/patterns/' },
           { label: pattern.name, href: `/patterns/${pattern.id}/` },
         ]}
       />

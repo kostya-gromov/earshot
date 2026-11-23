@@ -1,0 +1,250 @@
+/* The list of every pattern: rows on hairlines, dense enough to compare several on one screen. */
+.catalog {
+  display: grid;
+  margin: var(--space-7) 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-2);
+}
+
+/* A small drawing, what the pattern is, its facts. */
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr) 232px;
+  column-gap: var(--space-7);
+  align-items: stretch;
+  padding-block: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* The last row is the end of the page: the page's own padding is the room before the footer. */
+.row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.main {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  /* One measure for everything the row says. */
+  max-width: 30rem;
+}
+
+.name {
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: var(--tracking-heading);
+  font-weight: 560;
+}
+
+/* The link covers the row, so the whole row is one target and one Tab stop. */
+.name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.name a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.name a:focus-visible {
+  outline: none;
+}
+
+.name a:focus-visible::after {
+  inset: var(--space-2) calc(-1 * var(--space-3));
+  outline: 2px solid var(--focus);
+  border-radius: var(--radius-md);
+}
+
+.description {
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+/* The pattern's other names, its APG source and where it was measured. */
+.about {
+  display: grid;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+/* Above the link that covers the row, so a source can be opened from here. */
+.about a {
+  position: relative;
+  z-index: 1;
+  color: var(--ink-2);
+}
+
+/* The facts stand at the top of their column and the way in at its foot. */
+.side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-top: 4px;
+}
+
+.facts {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Every number in one track, every label in the next: "10" is wider than "9", and the labels
+   started at a different place in each row (design review 2026-11-23). */
+.facts li {
+  display: grid;
+  grid-template-columns: 2ch minmax(0, 1fr);
+  column-gap: var(--space-2);
+  align-items: baseline;
+}
+
+.facts b {
+  font-size: var(--text-base);
+  font-weight: 560;
+  color: var(--ink);
+}
+
+.facts .aside,
+.facts .aside b {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+/* The date is not a count: across both tracks, and apart from them. */
+.facts .when {
+  display: block;
+  margin-top: 6px;
+  color: var(--ink-3);
+}
+
+.open {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--ink-2);
+  transition: color var(--dur-micro) var(--ease-out);
+}
+
+.open span {
+  transition: transform var(--dur-micro) var(--ease-out);
+}
+
+/* Not while the pointer is on a source link inside the row: that link goes elsewhere, and the
+   row's own way in must not answer for it (design review 2026-11-23). */
+.row:hover:not(:has(.about a:hover)) .open {
+  color: var(--ink);
+}
+
+.row:hover:not(:has(.about a:hover)) .open span {
+  transform: translateX(3px);
+}
+
+/* A source link answers the pointer by itself, in neutral ink. */
+.about a {
+  transition: color var(--dur-micro) var(--ease-out);
+}
+
+.about a:hover {
+  color: var(--ink);
+}
+
+/* Between 1024 and 1199 the wide drawing left the text a column as narrow as itself: the
+   drawing takes the smaller size (design review 2026-11-23). */
+@media (max-width: 1199px) {
+  .row {
+    grid-template-columns: 240px minmax(0, 1fr) 232px;
+    column-gap: var(--space-6);
+  }
+}
+
+/* Two parts: the drawing with the facts under it, and the text beside both. The facts were a
+   run-on line under the text, and the column under the drawing stood empty. */
+@media (max-width: 1023px) {
+  .row {
+    grid-template-columns: 240px minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    row-gap: var(--space-4);
+  }
+
+  .main {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .side {
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+}
+
+/* One column: the drawing, the text, then the facts as one line. */
+@media (max-width: 700px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    padding-block: var(--space-5);
+  }
+
+  .main,
+  .side {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .side {
+    gap: var(--space-3);
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+
+  .facts li {
+    display: flex;
+    gap: 4px;
+  }
+
+  .facts .when {
+    margin-top: 0;
+  }
+
+  /* 24 px to aim at (WCAG 2.5.8): the link lies on a row that is itself a link. */
+  .about a {
+    padding-block: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .open,
+  .open span,
+  .about a {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .name a:focus-visible::after {
+    outline-color: Highlight;
+  }
+}

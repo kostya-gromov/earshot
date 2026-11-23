@@ -17,7 +17,9 @@ export function useArrival(
     const element = ref.current;
     if (!element || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
     if (element.dataset.state === 'seen') return undefined;
-    if (element.getBoundingClientRect().top < window.innerHeight * 0.85) return undefined;
+    // Any part on screen at load counts: a frame half in view that stayed empty until the
+    // reader scrolled read as a failed load (design review 2026-11-23).
+    if (element.getBoundingClientRect().top < window.innerHeight) return undefined;
     // Set on the element, not in React state: nothing re-renders, the styles do the rest.
     element.dataset.state = 'waiting';
     const observer = new IntersectionObserver(

@@ -18,6 +18,7 @@ export function buildStep(observation: StepObservation, documentTitle: string): 
     ...(observation.popup ? { popup: observation.popup } : {}),
     ...(observation.effect ? { effect: observation.effect } : {}),
     ...(observation.tabSet ? { tabSet: observation.tabSet } : {}),
+    ...(observation.dialog ? { dialog: observation.dialog } : {}),
     speech: synthesizeSpeech({
       documentTitle,
       focusBefore: observation.focusBefore,

@@ -39,6 +39,9 @@ function FooterNav() {
             {name} <span>In progress</span>
           </li>
         ))}
+        <li>
+          <a href="/patterns/">All patterns</a>
+        </li>
       </Column>
       <Column title="Standards">
         {standards.map(({ label, href }) => (

@@ -1,0 +1,266 @@
+/* The dialog replay: the button, the dialog and its controls, drawn from the recording. Blue is
+   focus only; red is focus lost to the page; everything else neutral. */
+.wrap {
+  max-width: 380px;
+  /* Room for the red ring round the whole drawing without moving anything. */
+  border-radius: var(--radius-md);
+}
+
+/* Focus fell to the document: the ring the chips' replay draws round the page, round this one,
+   as thin as the focus ring and set off from the drawing. */
+.wrap[data-loss] {
+  outline: 2px solid var(--loss);
+  outline-offset: 6px;
+}
+
+/* The page: the button that opens the dialog and, where the recording touches it, one control
+   of the page behind. */
+.page {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 0;
+}
+
+.opener {
+  flex: none;
+  display: grid;
+  place-items: center;
+  min-height: calc(var(--row-h) + 8px);
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  background: var(--well);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+  font-size: var(--row-font);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.opener[data-target],
+.dialog[data-target],
+.control[data-target] {
+  box-shadow:
+    0 0 0 2px var(--focus),
+    0 0 0 6px var(--focus-soft);
+}
+
+:global([data-size='sm']) .opener[data-target],
+:global([data-size='sm']) .dialog[data-target],
+:global([data-size='sm']) .control[data-target] {
+  box-shadow: 0 0 0 2px var(--focus);
+}
+
+/* The mark of a click made at a control's place: a neutral dot in a ring, never a colour that
+   means focus, speech or loss. */
+.click,
+.legendClick {
+  inline-size: 10px;
+  block-size: 10px;
+  border-radius: 50%;
+  background: var(--ink-2);
+  box-shadow:
+    0 0 0 2px var(--panel, var(--bg)),
+    0 0 0 3px var(--ink-2);
+}
+
+.click {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 6px;
+  translate: 0 -50%;
+}
+
+/* The control clicked at holds the mark; it keeps room for it so its name is never covered. */
+.page > :global(*):has(> .click) {
+  position: relative;
+  padding-inline-end: 26px;
+}
+
+/* The dialog's room, kept while it is closed: the drawing has one height at every step. */
+.slot {
+  min-height: calc(var(--row-h) * 2 + 46px);
+}
+
+.dialog {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  background: var(--panel, var(--well));
+  box-shadow:
+    inset 0 0 0 1px var(--line-strong),
+    0 6px 18px color-mix(in oklch, var(--ink) 12%, transparent);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.title {
+  font-size: var(--row-font);
+  font-weight: 600;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+/* No accessible name: said in words, lighter, as a fact about the tree and not a title. */
+.title[data-unnamed] {
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+.state {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+}
+
+.controls {
+  display: flex;
+  gap: 6px;
+  min-width: 0;
+}
+
+.control {
+  flex: 0 1 auto;
+  min-width: 28px;
+  display: grid;
+  place-items: center;
+  height: var(--row-h);
+  padding: 0 8px;
+  border-radius: var(--radius-sm);
+  background: var(--well);
+  box-shadow: inset 0 0 0 1px var(--line-2);
+  font-size: var(--row-font);
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+/* A text field is wider than a button, as on any form: the only thing its role changes here. */
+.control[data-role='textbox'] {
+  flex: 1 1 auto;
+  justify-items: start;
+}
+
+/* Known to be there, by the engine's count; never focused in this recording, so it has no
+   name here. Dashed, like every part that is known and not shown by the tree. */
+.control[data-unnamed] {
+  background: none;
+  box-shadow: none;
+  outline: 1px dashed var(--line-strong);
+  outline-offset: -1px;
+}
+
+/* Outside the page: neutral, on a line of its own (see the tabs replay). */
+.away {
+  justify-self: start;
+  display: grid;
+  place-items: center;
+  min-height: calc(var(--row-h) + 8px);
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--line-strong);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.away[data-target] {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px var(--ink-2);
+  color: var(--ink);
+}
+
+.legendUnnamed {
+  display: inline-block;
+  inline-size: 24px;
+  block-size: 14px;
+  margin-inline: 2px;
+  border-radius: var(--radius-sm);
+  outline: 1px dashed var(--line-strong);
+  outline-offset: -1px;
+}
+
+.legendFocus,
+.legendAway,
+.legendLoss {
+  display: inline-block;
+  inline-size: 24px;
+  block-size: 14px;
+  margin-inline: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.legendFocus {
+  box-shadow: 0 0 0 2px var(--focus);
+}
+
+.legendAway {
+  box-shadow: 0 0 0 2px var(--ink-2);
+}
+
+.legendLoss {
+  box-shadow: 0 0 0 2px var(--loss);
+}
+
+.legendClick {
+  display: inline-block;
+  margin-inline: 4px;
+}
+
+@media (forced-colors: active) {
+  .opener,
+  .control,
+  .dialog {
+    box-shadow: none;
+    outline: 1px solid CanvasText;
+    outline-offset: -1px;
+  }
+
+  .opener[data-target],
+  .dialog[data-target],
+  .control[data-target],
+  :global([data-size='sm']) .opener[data-target],
+  :global([data-size='sm']) .dialog[data-target],
+  :global([data-size='sm']) .control[data-target],
+  .legendFocus {
+    box-shadow: none;
+    outline: 2px solid Highlight;
+    outline-offset: 1px;
+  }
+
+  .away[data-target],
+  .legendAway {
+    box-shadow: none;
+    border-style: solid;
+    border-color: Canvas;
+    outline: 2px solid CanvasText;
+    outline-offset: 1px;
+  }
+
+  /* Loss has no colour of its own here: a doubled outline, and the words beside it. */
+  .wrap[data-loss],
+  .legendLoss {
+    box-shadow: none;
+    outline: 3px double CanvasText;
+    outline-offset: 6px;
+  }
+
+  .legendLoss {
+    outline-offset: 0;
+  }
+
+  .click,
+  .legendClick {
+    background: CanvasText;
+    box-shadow: none;
+    outline: 1px solid CanvasText;
+    outline-offset: 2px;
+  }
+}

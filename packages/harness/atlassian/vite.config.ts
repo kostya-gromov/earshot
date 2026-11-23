@@ -6,8 +6,12 @@ const { plugin, ...config } = harnessConfig({
   from: import.meta.url,
   system: 'atlassian',
   measuredPackage: '@atlaskit/select',
-  pages: ['index.html', 'combobox.html', 'menu-button.html', 'tabs.html'],
-  packageByPage: { 'menu-button.html': '@atlaskit/dropdown-menu', 'tabs.html': '@atlaskit/tabs' },
+  pages: ['index.html', 'combobox.html', 'menu-button.html', 'tabs.html', 'dialog.html'],
+  packageByPage: {
+    'menu-button.html': '@atlaskit/dropdown-menu',
+    'tabs.html': '@atlaskit/tabs',
+    'dialog.html': '@atlaskit/modal-dialog',
+  },
 });
 
 export default defineConfig({ ...config, plugins: [react(), plugin] });

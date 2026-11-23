@@ -96,6 +96,7 @@ export async function readFocus(cdp: CDPSession): Promise<FocusInfo> {
       isInsideComponent: facts.isInsideComponent,
       ...activeDescendantFields(activeDescendant, facts),
       ...(facts.value === null ? {} : { value: facts.value }),
+      ...(facts.pageHasFocus ? {} : { leftPage: true as const }),
       path: facts.path,
       element: facts.element,
     };

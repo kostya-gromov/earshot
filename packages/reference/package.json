@@ -1,6 +1,6 @@
 {
   "name": "@earshot/reference",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "private": true,
   "type": "module",
   "exports": {
@@ -10,7 +10,8 @@
     "./input-with-chips/*": "./input-with-chips/*",
     "./combobox/*": "./combobox/*",
     "./menu-button/*": "./menu-button/*",
-    "./tabs/*": "./tabs/*"
+    "./tabs/*": "./tabs/*",
+    "./dialog/*": "./dialog/*"
   },
   "scripts": {
     "dev": "node scripts/serve.ts",

@@ -19,6 +19,7 @@ One line per document: what it answers. Search here first, then open the one you
 - [input-with-chips](patterns/input-with-chips.md): rules, scenarios, reference, design requirements, trade-offs.
 - [combobox](patterns/combobox.md): in progress; rules, scenarios, and what is carried over from input with chips so the same mistakes are not made twice.
 - [tabs](patterns/tabs.md): on the site since 2026-11-19; scope, terms, one defect one rule, the engine addition, the reference.
+- [dialog](patterns/dialog.md): in progress since 2026-11-21; scope, terms, one defect one rule, how the Tab rules are read, the engine additions, the reference.
 - [menu-button](patterns/menu-button.md): in progress; the three terms, rules and where each is judged, one defect one rule, what every measured page holds.
 
 ## Proposals
@@ -34,6 +35,9 @@ One line per document: what it answers. Search here first, then open the one you
 - [engine-text-editing-model](proposals/engine-text-editing-model.md): what the engine lacks to measure token fields (caret, appended live regions), from the TokenField trial; proposed, not started.
 - [combobox](proposals/combobox.md): pattern 2; rules quoted from the APG snapshot, scenarios, engine gaps, candidate targets; approved 2026-11-14.
 - [tabs](proposals/tabs.md): pattern 4, approved 2026-11-19 with every decision as recommended, work alongside M5: nine draft rules quoted from the live APG pages, ten scenarios, two engine additions, candidate targets, nine decisions.
+- [figma-annotated-elements](proposals/figma-annotated-elements.md): a pattern's element with its requirements as annotations, downloadable for Figma; Figma's docs read 2026-11-21, four options, five decisions; opened by the owner on 2026-11-21 for the trial and one pattern, alongside M5.
+- [figma-plugin](proposals/figma-plugin.md): a published Atlas plugin that draws a pattern with its requirements in the designer's own file; opened by the owner on 2026-11-21; submitted to Figma's review from the owner's personal account on 2026-11-22; the link on the site (step 4) waits for the answer.
+- [dialog](proposals/dialog.md): pattern 5, modal dialog; opened by the owner on 2026-11-21 (work alongside M5), with amendments the same day: ten draft rules quoted from the live APG pages, seven scenarios, six engine additions, the native element and MUI's focus guards checked in the browser, candidate targets, nine decisions.
 
 
 

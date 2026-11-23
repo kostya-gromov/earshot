@@ -202,7 +202,12 @@ export function SystemEvidence({ ruleId, loaded, entry, model }: SystemEvidenceP
         ruleId={ruleId}
         entry={entry}
         model={model}
-        isUnpositioned={hasUnpositionedChip(scenarios.map(({ scenario }) => scenario))}
+        // A note about chips (ADR 0007): a dialog's fields and buttons are no set, and say so
+        // by having no position, which is not a finding.
+        isUnpositioned={
+          measurement.pattern === 'input-with-chips' &&
+          hasUnpositionedChip(scenarios.map(({ scenario }) => scenario))
+        }
         variants={loaded.variants ?? []}
       />
       <EvidenceProvenance measurement={measurement} />

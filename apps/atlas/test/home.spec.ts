@@ -16,20 +16,15 @@ for (const colorScheme of ['light', 'dark'] as const) {
 
 const catalogue = (page: Page) => page.getByRole('region', { name: /^Patterns\./ });
 
-test('lists the measured pattern with its counts and links to it', async ({ page }) => {
+test('lists a measured pattern with its counts and links to it', async ({ page }) => {
   await page.goto('/');
   const card = catalogue(page)
     .getByRole('listitem')
-    .filter({ has: page.getByRole('heading', { name: 'Input with chips' }) });
+    .filter({ has: page.getByRole('heading', { name: 'Menu button' }) });
   await expect(card).toContainText('Measured');
-  // Counted as on the pattern page: GitHub Primer (deprecated) and React Aria (its own
-  // component is not measured yet) are measured but not counted.
-  await expect(card).toContainText('Measured in Atlassian, Chakra UI, Fluent 2 and MUI.');
-  await expect(card).toContainText(
-    '8 rules, 4 systems counted. 2 more measured but not counted; 4 systems without this component: the reasons are on the pattern page.',
-  );
-  await card.getByRole('link', { name: 'Input with chips' }).click();
-  await expect(page).toHaveURL(/\/patterns\/input-with-chips\/$/);
+  await expect(card).toContainText('9 rules, 6 systems counted.');
+  await card.getByRole('link', { name: 'Menu button' }).click();
+  await expect(page).toHaveURL(/\/patterns\/menu-button\/$/);
 });
 
 test('the home page does not scroll sideways on a phone', async ({ page }) => {
@@ -41,17 +36,22 @@ test('the home page does not scroll sideways on a phone', async ({ page }) => {
   expect(overflow).toBe(0);
 });
 
-test('no pattern is listed as in progress: all three of phase 1 have a page', async ({ page }) => {
+// With five patterns the list was two to four screens long and grew with each one (design review
+// 2026-11-23, the owner's decision the same day): the home page shows the three added last,
+// newest first, and leads to all of them.
+test('the three patterns added last are listed, newest first, with the way to all', async ({
+  page,
+}) => {
   await page.goto('/');
-  await expect(catalogue(page).getByRole('listitem')).toHaveCount(4);
+  await expect(catalogue(page).getByRole('listitem').getByRole('heading')).toHaveText([
+    'Modal dialog',
+    'Tabs',
+    'Menu button',
+  ]);
   await expect(page.getByText('In progress')).toHaveCount(0);
-});
-
-test('every measured pattern is listed with a link to its page', async ({ page }) => {
-  await page.goto('/');
-  for (const id of ['input-with-chips', 'combobox', 'menu-button', 'tabs']) {
-    await expect(catalogue(page).locator(`a[href="/patterns/${id}/"]`).first()).toBeVisible();
-  }
+  await catalogue(page).getByRole('link', { name: 'View all 5 patterns' }).click();
+  await expect(page).toHaveURL(/\/patterns\/$/);
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Patterns');
 });
 
 test('the breadcrumb and brand lead home from any page', async ({ page }) => {
@@ -249,6 +249,6 @@ test('the example shows no controls around its fields to press', async ({ page }
 test('the totals name each pattern with its rules and the systems it counts', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('main')).toContainText(
-    'Totals for every pattern measured so far: Input with chips (8 rules, 4 systems counted), Combobox (10 rules, 6 systems counted), Menu button (9 rules, 6 systems counted), and Tabs (9 rules, 5 systems counted).',
+    'Totals for every pattern measured so far: Input with chips (8 rules, 4 systems counted), Combobox (10 rules, 6 systems counted), Menu button (9 rules, 6 systems counted), Tabs (9 rules, 5 systems counted), and Modal dialog (10 rules, 6 systems counted).',
   );
 });

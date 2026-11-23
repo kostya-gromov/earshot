@@ -1,0 +1,78 @@
+.dialog-demo {
+  --dialog-bg: var(--panel, #fff);
+  --dialog-border: var(--line-2, #858c98); /* 3:1 or more against the panel (WCAG 1.4.11) */
+  --dialog-focus: var(--key, #2f6bff);
+}
+
+.dialog-demo__button {
+  min-block-size: 40px;
+  padding: 8px 14px;
+  border: 1px solid var(--dialog-border);
+  border-radius: 8px;
+  background: var(--dialog-bg);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.dialog-demo__button:focus-visible,
+.dialog__field input:focus-visible {
+  outline: 2px solid var(--dialog-focus);
+  outline-offset: 2px;
+}
+
+.dialog {
+  inline-size: min(360px, 100% - 32px);
+  padding: 24px;
+  border: 1px solid var(--dialog-border);
+  border-radius: 12px;
+  background: var(--dialog-bg);
+  color: inherit;
+}
+
+/* The page behind is dimmed, so it is seen to be out of reach as well as being so. */
+.dialog::backdrop {
+  background: rgb(0 0 0 / 0.5);
+}
+
+.dialog__title {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.dialog__field {
+  display: grid;
+  gap: 6px;
+}
+
+.dialog__field label {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.dialog__field input {
+  padding: 8px;
+  border: 1px solid var(--dialog-border);
+  border-radius: 8px;
+  background: var(--dialog-bg);
+  color: inherit;
+  font: inherit;
+}
+
+.dialog__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-block-start: 20px;
+}
+
+@media (forced-colors: active) {
+  .dialog {
+    border-color: CanvasText;
+  }
+
+  .dialog-demo__button:focus-visible,
+  .dialog__field input:focus-visible {
+    outline-color: Highlight;
+  }
+}

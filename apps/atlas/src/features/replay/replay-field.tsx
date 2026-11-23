@@ -15,6 +15,9 @@ function targetKey(focus: ReplayFocus, present: readonly string[]): string {
       return 'field';
     case 'outside':
       return 'outside';
+    case 'away':
+      // No part of the drawing has it, and it is not a loss: no ring, and never the red one.
+      return 'away';
     case 'body':
       return 'page';
   }
@@ -184,7 +187,8 @@ export function ReplayField({
         </div>
       </div>
       {after && <Control {...after} />}
-      {ring && <RingMark ring={ring} isLoss={key === 'page'} />}
+      {/* Outside the page there is nothing here to ring, and the last place must not keep it. */}
+      {ring && key !== 'away' && <RingMark ring={ring} isLoss={key === 'page'} />}
     </div>
   );
 }

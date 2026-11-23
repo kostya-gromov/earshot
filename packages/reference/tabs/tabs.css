@@ -8,6 +8,10 @@
 
 .tabs__list {
   display: flex;
+  /* Four tabs side by side are wider than a 320 px page: there the last goes to a second row
+     (WCAG 1.4.10 Reflow). Not a row that scrolls inside itself: a scroller cuts the focus ring
+     of the tab at its edge, which is drawn outside the tab. */
+  flex-wrap: wrap;
   gap: 4px;
   border-block-end: 1px solid var(--tabs-border);
 }

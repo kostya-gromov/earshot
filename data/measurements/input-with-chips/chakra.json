@@ -14,10 +14,10 @@
   },
   "provenance": {
     "status": "measured",
-    "engineVersion": "0.17.0",
+    "engineVersion": "0.20.0",
     "browser": "chromium 156.0.8078.4",
     "os": "darwin",
-    "measuredAt": "2026-11-19T17:21:11.859Z",
+    "measuredAt": "2026-11-23T09:38:04.301Z",
     "runs": 3,
     "consistent": true
   },
@@ -131,7 +131,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 412,
                 "quiet": true
               },
               "speech": [
@@ -174,7 +174,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 408,
                 "quiet": true
               },
               "speech": [
@@ -265,7 +265,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 408,
                 "quiet": true
               },
               "speech": [
@@ -313,7 +313,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -356,7 +356,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 402,
+                "ms": 414,
                 "quiet": true
               },
               "speech": [
@@ -413,7 +413,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 410,
                 "quiet": true
               },
               "speech": [
@@ -461,7 +461,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 415,
                 "quiet": true
               },
               "speech": [
@@ -509,7 +509,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 402,
+                "ms": 413,
                 "quiet": true
               },
               "speech": [
@@ -566,7 +566,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 413,
                 "quiet": true
               },
               "speech": []
@@ -607,7 +607,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 407,
                 "quiet": true
               },
               "speech": [
@@ -655,7 +655,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 412,
                 "quiet": true
               },
               "speech": []
@@ -696,7 +696,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -744,7 +744,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 409,
                 "quiet": true
               },
               "speech": []
@@ -785,7 +785,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 406,
+                "ms": 409,
                 "quiet": true
               },
               "speech": [
@@ -845,7 +845,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 412,
                 "quiet": true
               },
               "speech": []
@@ -883,7 +883,7 @@
                 {
                   "text": "Tag Hiroshi Matsui deleted. Tag Greg Fisher selected. Press enter to edit, delete or backspace to remove.",
                   "politeness": "assertive",
-                  "at": 105,
+                  "at": 108,
                   "insertedLate": false
                 }
               ],
@@ -906,7 +906,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 507,
+                "ms": 512,
                 "quiet": true
               },
               "speech": [
@@ -954,7 +954,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 411,
                 "quiet": true
               },
               "speech": []
@@ -992,7 +992,7 @@
                 {
                   "text": "Tag Hiroshi Matsui deleted. Tag Greg Fisher selected. Press enter to edit, delete or backspace to remove.",
                   "politeness": "assertive",
-                  "at": 111,
+                  "at": 107,
                   "insertedLate": false
                 }
               ],
@@ -1063,7 +1063,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 412,
                 "quiet": true
               },
               "speech": []
@@ -1101,7 +1101,7 @@
                 {
                   "text": "Tag Hiroshi Matsui deleted. Tag Greg Fisher selected. Press enter to edit, delete or backspace to remove.",
                   "politeness": "assertive",
-                  "at": 104,
+                  "at": 106,
                   "insertedLate": false
                 }
               ],
@@ -1124,7 +1124,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 517,
+                "ms": 505,
                 "quiet": true
               },
               "speech": [
@@ -1181,7 +1181,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 413,
                 "quiet": true
               },
               "speech": []
@@ -1222,7 +1222,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 408,
                 "quiet": true
               },
               "speech": []
@@ -1263,7 +1263,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 407,
                 "quiet": true
               },
               "speech": []
@@ -1304,7 +1304,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 414,
                 "quiet": true
               },
               "speech": []
@@ -1350,7 +1350,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 413,
                 "quiet": true
               },
               "speech": []
@@ -1391,7 +1391,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 400,
                 "quiet": true
               },
               "speech": []
@@ -1432,7 +1432,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 417,
+                "ms": 414,
                 "quiet": true
               },
               "speech": []
@@ -1473,7 +1473,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 402,
                 "quiet": true
               },
               "speech": []
@@ -1519,7 +1519,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 414,
                 "quiet": true
               },
               "speech": []
@@ -1560,7 +1560,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 407,
                 "quiet": true
               },
               "speech": []
@@ -1601,7 +1601,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 411,
                 "quiet": true
               },
               "speech": []
@@ -1642,7 +1642,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 410,
                 "quiet": true
               },
               "speech": []
@@ -1699,7 +1699,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 413,
                 "quiet": true
               },
               "speech": []
@@ -1737,7 +1737,7 @@
                 {
                   "text": "Tag Hiroshi Matsui deleted",
                   "politeness": "assertive",
-                  "at": 108,
+                  "at": 106,
                   "insertedLate": false
                 }
               ],
@@ -1760,7 +1760,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 513,
+                "ms": 509,
                 "quiet": true
               },
               "speech": [
@@ -1808,7 +1808,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 414,
                 "quiet": true
               },
               "speech": []
@@ -1847,6 +1847,115 @@
                   "text": "Tag Hiroshi Matsui deleted",
                   "politeness": "assertive",
                   "at": 104,
+                  "insertedLate": false
+                }
+              ],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "button",
+                    "name": "Delete tag Hiroshi Matsui"
+                  },
+                  {
+                    "role": "image",
+                    "name": ""
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 506,
+                "quiet": true
+              },
+              "speech": [
+                "Tag Hiroshi Matsui deleted"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Delete"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "To",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
+                "element": 1
+              },
+              "announcements": [
+                {
+                  "text": "Tag Hiroshi Matsui deleted",
+                  "politeness": "assertive",
+                  "at": 106,
                   "insertedLate": false
                 }
               ],
@@ -1870,115 +1979,6 @@
               },
               "settle": {
                 "ms": 511,
-                "quiet": true
-              },
-              "speech": [
-                "Tag Hiroshi Matsui deleted"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "To",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "To",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 411,
-                "quiet": true
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Delete"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "To",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "To",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "main:nth-child(1) > div#component > div#tags-input:_r_0_ > div#tags-input:_r_0_:control > input#tags-input:_r_0_:input",
-                "element": 1
-              },
-              "announcements": [
-                {
-                  "text": "Tag Hiroshi Matsui deleted",
-                  "politeness": "assertive",
-                  "at": 104,
-                  "insertedLate": false
-                }
-              ],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "button",
-                    "name": "Delete tag Hiroshi Matsui"
-                  },
-                  {
-                    "role": "image",
-                    "name": ""
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 504,
                 "quiet": true
               },
               "speech": [
@@ -2037,7 +2037,7 @@
                 {
                   "text": "Tag Greg Fisher deleted",
                   "politeness": "assertive",
-                  "at": 172,
+                  "at": 170,
                   "insertedLate": false
                 }
               ],
@@ -2060,7 +2060,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 563,
+                "ms": 549,
                 "quiet": true
               },
               "speech": [
@@ -2108,7 +2108,7 @@
                 {
                   "text": "Tag Greg Fisher deleted",
                   "politeness": "assertive",
-                  "at": 169,
+                  "at": 170,
                   "insertedLate": false
                 }
               ],
@@ -2131,7 +2131,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 564,
+                "ms": 549,
                 "quiet": true
               },
               "speech": [
@@ -2179,7 +2179,7 @@
                 {
                   "text": "Tag Greg Fisher deleted",
                   "politeness": "assertive",
-                  "at": 172,
+                  "at": 171,
                   "insertedLate": false
                 }
               ],
@@ -2202,7 +2202,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 562,
+                "ms": 546,
                 "quiet": true
               },
               "speech": [

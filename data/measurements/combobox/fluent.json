@@ -14,10 +14,10 @@
   },
   "provenance": {
     "status": "measured",
-    "engineVersion": "0.17.0",
+    "engineVersion": "0.20.0",
     "browser": "chromium 156.0.8078.4",
     "os": "darwin",
-    "measuredAt": "2026-11-19T17:25:51.171Z",
+    "measuredAt": "2026-11-23T09:42:41.786Z",
     "runs": 3,
     "consistent": true
   },
@@ -71,7 +71,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 417,
+                "ms": 403,
                 "quiet": true
               },
               "popup": {
@@ -126,7 +126,122 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 402,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": []
+                },
+                "after": {
+                  "present": false,
+                  "options": []
+                }
+              },
+              "speech": [
+                "Fruit, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Open Fruit",
+                "states": {
+                  "expanded": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > span#combobox-chevron-_r_3_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 400,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": []
+                },
+                "after": {
+                  "present": false,
+                  "options": []
+                }
+              },
+              "speech": [
+                "Open Fruit, button, collapsed"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Open Fruit",
+                "states": {
+                  "expanded": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > span#combobox-chevron-_r_3_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
                 "quiet": true
               },
               "popup": {
@@ -241,122 +356,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": []
-                },
-                "after": {
-                  "present": false,
-                  "options": []
-                }
-              },
-              "speech": [
-                "Fruit, combobox, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Open Fruit",
-                "states": {
-                  "expanded": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > span#combobox-chevron-_r_3_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": []
-                },
-                "after": {
-                  "present": false,
-                  "options": []
-                }
-              },
-              "speech": [
-                "Open Fruit, button, collapsed"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Open Fruit",
-                "states": {
-                  "expanded": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > span#combobox-chevron-_r_3_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 402,
+                "ms": 400,
                 "quiet": true
               },
               "popup": {
@@ -498,419 +498,7 @@
                 ]
               },
               "settle": {
-                "ms": 417,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": []
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apple, option, 1 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 2,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 412,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apricot, option, 2 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 2,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Open Fruit",
-                "states": {
-                  "expanded": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > span#combobox-chevron-_r_3_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "option",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Avocado"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Avocado"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "value",
-                    "before": "a",
-                    "after": "Apricot"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Apricot"
-                    },
-                    "property": "name",
-                    "before": "a",
-                    "after": "Apricot"
-                  },
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Apricot"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": true
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Open Fruit, button, expanded"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "type",
-                "text": "a"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "a"
-                  },
-                  {
-                    "role": "listbox",
-                    "name": ""
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Avocado"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Avocado"
-                  }
-                ],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "expanded",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "value",
-                    "before": null,
-                    "after": "a"
-                  },
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Open Fruit"
-                    },
-                    "property": "expanded",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 417,
+                "ms": 415,
                 "quiet": true
               },
               "popup": {
@@ -1160,7 +748,7 @@
                 ]
               },
               "settle": {
-                "ms": 407,
+                "ms": 416,
                 "quiet": true
               },
               "popup": {
@@ -1322,7 +910,7 @@
                 ]
               },
               "settle": {
-                "ms": 414,
+                "ms": 407,
                 "quiet": true
               },
               "popup": {
@@ -1419,7 +1007,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 409,
                 "quiet": true
               },
               "popup": {
@@ -1572,7 +1160,419 @@
                 ]
               },
               "settle": {
-                "ms": 403,
+                "ms": 413,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": true
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Open Fruit, button, expanded"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "type",
+                "text": "a"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "a"
+                  },
+                  {
+                    "role": "listbox",
+                    "name": ""
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Avocado"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Avocado"
+                  }
+                ],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "value",
+                    "before": null,
+                    "after": "a"
+                  },
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Open Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": []
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apple, option, 1 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 2,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apricot, option, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 2,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Open Fruit",
+                "states": {
+                  "expanded": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > span#combobox-chevron-_r_3_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "option",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Avocado"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Avocado"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "value",
+                    "before": "a",
+                    "after": "Apricot"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Apricot"
+                    },
+                    "property": "name",
+                    "before": "a",
+                    "after": "Apricot"
+                  },
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Apricot"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 412,
                 "quiet": true
               },
               "popup": {
@@ -1756,7 +1756,7 @@
                 ]
               },
               "settle": {
-                "ms": 421,
+                "ms": 420,
                 "quiet": true
               },
               "popup": {
@@ -1942,7 +1942,7 @@
                 ]
               },
               "settle": {
-                "ms": 418,
+                "ms": 420,
                 "quiet": true
               },
               "popup": {
@@ -2128,7 +2128,7 @@
                 ]
               },
               "settle": {
-                "ms": 417,
+                "ms": 415,
                 "quiet": true
               },
               "popup": {
@@ -2318,7 +2318,7 @@
                 ]
               },
               "settle": {
-                "ms": 412,
+                "ms": 414,
                 "quiet": true
               },
               "popup": {
@@ -2415,7 +2415,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 407,
+                "ms": 408,
                 "quiet": true
               },
               "popup": {
@@ -2653,7 +2653,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 409,
                 "quiet": true
               },
               "popup": {
@@ -2829,7 +2829,7 @@
                 ]
               },
               "settle": {
-                "ms": 415,
+                "ms": 409,
                 "quiet": true
               },
               "popup": {
@@ -2926,7 +2926,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 415,
                 "quiet": true
               },
               "popup": {
@@ -3045,7 +3045,518 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 417,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Avocado, option, 3 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowUp"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Avocado",
+                  "posInSet": 3,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 2,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apricot, option, 2 of 3"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "type",
+                "text": "a"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "a"
+                  },
+                  {
+                    "role": "listbox",
+                    "name": ""
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Avocado"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Avocado"
+                  }
+                ],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "value",
+                    "before": null,
+                    "after": "a"
+                  },
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Open Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": []
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apple, option, 1 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 2,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apricot, option, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 2,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Avocado",
+                  "posInSet": 3,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
                 "quiet": true
               },
               "popup": {
@@ -3165,517 +3676,6 @@
               },
               "settle": {
                 "ms": 414,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apricot, option, 2 of 3"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "type",
-                "text": "a"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "a"
-                  },
-                  {
-                    "role": "listbox",
-                    "name": ""
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Avocado"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Avocado"
-                  }
-                ],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "expanded",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "value",
-                    "before": null,
-                    "after": "a"
-                  },
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Open Fruit"
-                    },
-                    "property": "expanded",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 411,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": []
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apple, option, 1 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 2,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 411,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apricot, option, 2 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 2,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Avocado",
-                  "posInSet": 3,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 413,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Avocado, option, 3 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowUp"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Avocado",
-                  "posInSet": 3,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 2,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 400,
                 "quiet": true
               },
               "popup": {
@@ -3861,7 +3861,7 @@
                 ]
               },
               "settle": {
-                "ms": 417,
+                "ms": 416,
                 "quiet": true
               },
               "popup": {
@@ -3958,7 +3958,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 417,
+                "ms": 409,
                 "quiet": true
               },
               "popup": {
@@ -4077,7 +4077,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 400,
+                "ms": 410,
                 "quiet": true
               },
               "popup": {
@@ -4196,7 +4196,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 409,
                 "quiet": true
               },
               "popup": {
@@ -4313,7 +4313,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 415,
                 "quiet": true
               },
               "popup": {
@@ -4430,7 +4430,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 410,
                 "quiet": true
               },
               "popup": {
@@ -4549,7 +4549,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 413,
                 "quiet": true
               },
               "popup": {
@@ -4668,7 +4668,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 416,
                 "quiet": true
               },
               "popup": {
@@ -4785,7 +4785,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 412,
                 "quiet": true
               },
               "popup": {
@@ -4959,7 +4959,7 @@
                 ]
               },
               "settle": {
-                "ms": 416,
+                "ms": 415,
                 "quiet": true
               },
               "popup": {
@@ -5056,7 +5056,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 415,
                 "quiet": true
               },
               "popup": {
@@ -5175,7 +5175,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 416,
                 "quiet": true
               },
               "popup": {
@@ -5395,478 +5395,6 @@
                   "role": "option",
                   "name": "Avocado",
                   "posInSet": 3,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 413,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowUp"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Avocado",
-                  "posInSet": 3,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 2,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apricot, option, 2 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowUp"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 2,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 401,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apple, option, 1 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowUp"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowUp"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
                   "setSize": 3,
                   "states": {
                     "selected": false
@@ -5941,6 +5469,478 @@
                 }
               },
               "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowUp"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Avocado",
+                  "posInSet": 3,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 2,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apricot, option, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowUp"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 2,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apple, option, 1 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowUp"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowUp"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": []
             }
           ]
         },
@@ -6057,7 +6057,7 @@
                 ]
               },
               "settle": {
-                "ms": 416,
+                "ms": 419,
                 "quiet": true
               },
               "popup": {
@@ -6154,7 +6154,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 410,
                 "quiet": true
               },
               "popup": {
@@ -6273,7 +6273,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 413,
                 "quiet": true
               },
               "popup": {
@@ -6392,7 +6392,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 414,
                 "quiet": true
               },
               "popup": {
@@ -6509,7 +6509,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 408,
+                "ms": 413,
                 "quiet": true
               },
               "popup": {
@@ -6626,7 +6626,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 412,
                 "quiet": true
               },
               "popup": {
@@ -6745,7 +6745,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 414,
                 "quiet": true
               },
               "popup": {
@@ -6864,7 +6864,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 414,
                 "quiet": true
               },
               "popup": {
@@ -6981,7 +6981,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 416,
                 "quiet": true
               },
               "popup": {
@@ -7165,7 +7165,7 @@
                 ]
               },
               "settle": {
-                "ms": 417,
+                "ms": 418,
                 "quiet": true
               },
               "popup": {
@@ -7262,7 +7262,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 413,
                 "quiet": true
               },
               "popup": {
@@ -7590,7 +7590,7 @@
                 ]
               },
               "settle": {
-                "ms": 420,
+                "ms": 416,
                 "quiet": true
               },
               "popup": {
@@ -7687,7 +7687,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 407,
                 "quiet": true
               },
               "popup": {
@@ -7863,7 +7863,7 @@
                 ]
               },
               "settle": {
-                "ms": 411,
+                "ms": 413,
                 "quiet": true
               },
               "popup": {
@@ -8112,7 +8112,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 402,
                 "quiet": true
               },
               "popup": {
@@ -8288,7 +8288,7 @@
                 ]
               },
               "settle": {
-                "ms": 413,
+                "ms": 412,
                 "quiet": true
               },
               "popup": {
@@ -8450,7 +8450,7 @@
                 ]
               },
               "settle": {
-                "ms": 418,
+                "ms": 419,
                 "quiet": true
               },
               "popup": {
@@ -8547,7 +8547,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 405,
                 "quiet": true
               },
               "popup": {
@@ -8703,6 +8703,310 @@
                     "after": false
                   }
                 ]
+              },
+              "settle": {
+                "ms": 411,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": false,
+                  "options": []
+                }
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Escape"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": []
+                },
+                "after": {
+                  "present": false,
+                  "options": []
+                }
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "type",
+                "text": "a"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "a"
+                  },
+                  {
+                    "role": "listbox",
+                    "name": ""
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Avocado"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Avocado"
+                  }
+                ],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "value",
+                    "before": null,
+                    "after": "a"
+                  },
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Open Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 417,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": []
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apple, option, 1 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 2,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
               },
               "settle": {
                 "ms": 413,
@@ -8736,6 +9040,164 @@
                   ]
                 },
                 "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apricot, option, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Escape"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 2,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "listbox",
+                    "name": ""
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Avocado"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Avocado"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "expanded",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Open Fruit"
+                    },
+                    "property": "expanded",
+                    "before": true,
+                    "after": false
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
                   "present": false,
                   "options": []
                 }
@@ -8782,7 +9244,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 409,
                 "quiet": true
               },
               "popup": {
@@ -8912,7 +9374,7 @@
                 ]
               },
               "settle": {
-                "ms": 420,
+                "ms": 417,
                 "quiet": true
               },
               "popup": {
@@ -9009,7 +9471,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 408,
                 "quiet": true
               },
               "popup": {
@@ -9167,7 +9629,7 @@
                 ]
               },
               "settle": {
-                "ms": 402,
+                "ms": 412,
                 "quiet": true
               },
               "popup": {
@@ -9244,469 +9706,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 407,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": []
-                },
-                "after": {
-                  "present": false,
-                  "options": []
-                }
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "type",
-                "text": "a"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "a"
-                  },
-                  {
-                    "role": "listbox",
-                    "name": ""
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Avocado"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Avocado"
-                  }
-                ],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "expanded",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "value",
-                    "before": null,
-                    "after": "a"
-                  },
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Open Fruit"
-                    },
-                    "property": "expanded",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": []
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apple, option, 1 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 2,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 411,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apricot, option, 2 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Escape"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 2,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "listbox",
-                    "name": ""
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Avocado"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Avocado"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "expanded",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Open Fruit"
-                    },
-                    "property": "expanded",
-                    "before": true,
-                    "after": false
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": false,
-                  "options": []
-                }
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Escape"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 402,
+                "ms": 405,
                 "quiet": true
               },
               "popup": {
@@ -9845,7 +9845,7 @@
                 ]
               },
               "settle": {
-                "ms": 418,
+                "ms": 414,
                 "quiet": true
               },
               "popup": {
@@ -9942,7 +9942,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 404,
                 "quiet": true
               },
               "popup": {
@@ -10118,7 +10118,7 @@
                 ]
               },
               "settle": {
-                "ms": 414,
+                "ms": 405,
                 "quiet": true
               },
               "popup": {
@@ -10236,7 +10236,627 @@
                 ]
               },
               "settle": {
-                "ms": 405,
+                "ms": 403,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": []
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": true
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apricot, option, 1 of 1, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 1,
+                  "setSize": 1,
+                  "states": {
+                    "selected": true
+                  }
+                },
+                "value": "Apricot",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 1,
+                  "setSize": 1,
+                  "states": {
+                    "selected": true
+                  }
+                },
+                "value": "Apricot",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": true
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": true
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "type",
+                "text": "a"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "StaticText",
+                    "name": "a"
+                  },
+                  {
+                    "role": "listbox",
+                    "name": ""
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Avocado"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Avocado"
+                  }
+                ],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "value",
+                    "before": null,
+                    "after": "a"
+                  },
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Open Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": []
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apple, option, 1 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apple",
+                  "posInSet": 1,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 2,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Apricot, option, 2 of 3"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 2,
+                  "setSize": 3,
+                  "states": {
+                    "selected": false
+                  }
+                },
+                "value": "a",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "value": "Apricot",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "listbox",
+                    "name": ""
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apple"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "option",
+                    "name": "Avocado"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Avocado"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "expanded",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "value",
+                    "before": "a",
+                    "after": "Apricot"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Apricot"
+                    },
+                    "property": "name",
+                    "before": "a",
+                    "after": "Apricot"
+                  },
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Open Fruit"
+                    },
+                    "property": "expanded",
+                    "before": true,
+                    "after": false
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Avocado",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ]
+                },
+                "after": {
+                  "present": false,
+                  "options": []
+                }
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "value": "Apricot",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "activeDescendant": {
+                  "role": "option",
+                  "name": "Apricot",
+                  "posInSet": 1,
+                  "setSize": 1,
+                  "states": {
+                    "selected": true
+                  }
+                },
+                "value": "Apricot",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "listbox",
+                    "name": ""
+                  },
+                  {
+                    "role": "option",
+                    "name": "Apricot"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Apricot"
+                  }
+                ],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "button",
+                      "name": "Open Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 415,
                 "quiet": true
               },
               "popup": {
@@ -10465,7 +11085,7 @@
                 ]
               },
               "settle": {
-                "ms": 415,
+                "ms": 413,
                 "quiet": true
               },
               "popup": {
@@ -10562,7 +11182,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 406,
                 "quiet": true
               },
               "popup": {
@@ -10738,627 +11358,7 @@
                 ]
               },
               "settle": {
-                "ms": 416,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": false,
-                  "options": []
-                }
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "value": "Apricot",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 1,
-                  "setSize": 1,
-                  "states": {
-                    "selected": true
-                  }
-                },
-                "value": "Apricot",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "listbox",
-                    "name": ""
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apricot"
-                  }
-                ],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "expanded",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Open Fruit"
-                    },
-                    "property": "expanded",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 401,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": []
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": true
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apricot, option, 1 of 1, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 1,
-                  "setSize": 1,
-                  "states": {
-                    "selected": true
-                  }
-                },
-                "value": "Apricot",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 1,
-                  "setSize": 1,
-                  "states": {
-                    "selected": true
-                  }
-                },
-                "value": "Apricot",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 402,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": true
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": true
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "type",
-                "text": "a"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "StaticText",
-                    "name": "a"
-                  },
-                  {
-                    "role": "listbox",
-                    "name": ""
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Avocado"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Avocado"
-                  }
-                ],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "expanded",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "value",
-                    "before": null,
-                    "after": "a"
-                  },
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Open Fruit"
-                    },
-                    "property": "expanded",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 417,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": false,
-                  "options": []
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apple, option, 1 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apple",
-                  "posInSet": 1,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 2,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 411,
-                "quiet": true
-              },
-              "popup": {
-                "before": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                },
-                "after": {
-                  "present": true,
-                  "options": [
-                    {
-                      "role": "option",
-                      "name": "Apple",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Apricot",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "option",
-                      "name": "Avocado",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Apricot, option, 2 of 3"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "activeDescendant": {
-                  "role": "option",
-                  "name": "Apricot",
-                  "posInSet": 2,
-                  "setSize": 3,
-                  "states": {
-                    "selected": false
-                  }
-                },
-                "value": "a",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "Fruit",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePopup": false,
-                "value": "Apricot",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "listbox",
-                    "name": ""
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apple"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Apricot"
-                  },
-                  {
-                    "role": "option",
-                    "name": "Avocado"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Avocado"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "expanded",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "combobox",
-                      "name": "Fruit"
-                    },
-                    "property": "value",
-                    "before": "a",
-                    "after": "Apricot"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Apricot"
-                    },
-                    "property": "name",
-                    "before": "a",
-                    "after": "Apricot"
-                  },
-                  {
-                    "node": {
-                      "role": "button",
-                      "name": "Open Fruit"
-                    },
-                    "property": "expanded",
-                    "before": true,
-                    "after": false
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 401,
+                "ms": 407,
                 "quiet": true
               },
               "popup": {
@@ -11559,7 +11559,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 402,
                 "quiet": true
               },
               "popup": {
@@ -11725,7 +11725,7 @@
                 ]
               },
               "settle": {
-                "ms": 418,
+                "ms": 416,
                 "quiet": true
               },
               "popup": {
@@ -11911,7 +11911,7 @@
                 ]
               },
               "settle": {
-                "ms": 419,
+                "ms": 416,
                 "quiet": true
               },
               "popup": {
@@ -12097,7 +12097,7 @@
                 ]
               },
               "settle": {
-                "ms": 418,
+                "ms": 417,
                 "quiet": true
               },
               "popup": {
@@ -12266,7 +12266,7 @@
                 ]
               },
               "settle": {
-                "ms": 417,
+                "ms": 414,
                 "quiet": true
               },
               "popup": {
@@ -12392,7 +12392,7 @@
                 ]
               },
               "settle": {
-                "ms": 417,
+                "ms": 418,
                 "quiet": true
               },
               "popup": {

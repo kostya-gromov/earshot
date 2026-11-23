@@ -44,6 +44,14 @@ const gridScenariosByPattern: Readonly<Record<string, readonly GridScenario[]>> 
     { id: 'tab-in', label: 'Tab into the tabs', ruleId: 'tab-in' },
     { id: 'ends', label: 'Arrows at both ends', ruleId: 'wrap' },
   ],
+  // Where the measured systems part: where focus lands, what a click behind does, what the
+  // tree says about being modal.
+  dialog: [
+    { id: 'open', label: 'Enter on the button', ruleId: 'modal' },
+    { id: 'outside-click', label: 'Click behind', ruleId: 'outside-inert' },
+    { id: 'tab-forward', label: 'Tab, six times', ruleId: 'wrap' },
+    { id: 'escape', label: 'Escape', ruleId: 'return-focus' },
+  ],
 };
 
 interface SystemsSectionProps {

@@ -169,6 +169,7 @@ export function usePlaygroundControls({ say, pressed, clear }: Transcript, patte
         tour?.light(key, root);
       },
       isCancelled: () => !run.isCurrent(current),
+      holdMs: live?.watchHoldMs,
     });
     if (run.finish(current) && stoppedAt) setNote(nextStepNote(stoppedAt));
   }

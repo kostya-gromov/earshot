@@ -6,7 +6,7 @@ const { plugin, ...config } = harnessConfig({
   from: import.meta.url,
   system: 'primer',
   measuredPackage: '@primer/react',
-  pages: ['index.html', 'combobox.html', 'menu-button.html'],
+  pages: ['index.html', 'combobox.html', 'menu-button.html', 'dialog.html'],
 });
 
 export default defineConfig({ ...config, plugins: [react(), plugin] });
