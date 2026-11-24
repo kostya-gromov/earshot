@@ -23,9 +23,13 @@ export function sourceName(source: Source): string {
 
 const sourceLine = (source: Source): string => `${sourceName(source)}: ${source.url}`;
 
-/** The requirement's title, with whose requirement it is when it is not WCAG's. */
-export const annotationHeading = ({ title, level }: Requirement): string =>
-  level === 'guidance' ? `${title} (Atlas guidance, beyond WCAG)` : title;
+/**
+ * The requirement's title, with whose requirement it is when it is not WCAG's. `by` is the name
+ * the advice goes under: the site's own by default; the Figma plugin passes the name it is
+ * published under.
+ */
+export const annotationHeading = ({ title, level }: Requirement, by = 'Earshot'): string =>
+  level === 'guidance' ? `${title} (${by} guidance, beyond WCAG)` : title;
 
 /** One requirement: its title, its reason, a line per source. */
 export function annotationText(requirement: Requirement): string {

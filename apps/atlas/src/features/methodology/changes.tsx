@@ -14,7 +14,7 @@ interface Change {
 const changes: readonly Change[] = [
   {
     date: '24 Nov 2026',
-    text: 'Earshot Atlas is now called Earshot. Rules that used to say “An Atlas recommendation” now say “An Earshot recommendation”; what they ask is the same. The sample text on the tabs pages changed with the name, so the reference went to 0.1.9, and every reference and every tabs system was measured again on engine 0.20.0. No verdict and no reason changed.',
+    text: 'Earshot Atlas is now called Earshot. Rules that used to say “An Atlas recommendation” now say “An Earshot recommendation”, and design requirements marked “Atlas guidance” now say “Earshot guidance”; what they ask is the same. The sample text on the tabs pages changed with the name, so the reference went to 0.1.9, and every reference and every tabs system was measured again on engine 0.20.0. No verdict and no reason changed.',
   },
   {
     date: '23 Nov 2026',

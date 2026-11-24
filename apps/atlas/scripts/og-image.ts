@@ -9,11 +9,16 @@
  *   node ../../packages/reference/scripts/serve.ts --port 4210 --root out --home / &
  *   node scripts/og-image.ts http://localhost:4210/
  */
+import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { chromium } from '@playwright/test';
+import { openingText } from './og-opening.ts';
 
 const url = process.argv[2] ?? 'http://localhost:4210/';
-const out = join(import.meta.dirname, '..', 'src', 'app', 'opengraph-image.png');
+const app = join(import.meta.dirname, '..', 'src', 'app');
+const out = join(app, 'opengraph-image.png');
+// The words the image shows, as its alt text; test/link-preview.spec.ts holds the page to them.
+const altOut = join(app, 'opengraph-image.alt.txt');
 
 /** Hides everything on the page but the brand, the question and the line under it. */
 function keepOpening(): void {
@@ -50,7 +55,10 @@ const page = await browser.newPage({
 });
 await page.goto(url);
 await page.evaluate(() => document.fonts.ready);
+const alt = await page.evaluate(openingText);
 await page.evaluate(keepOpening);
 await page.screenshot({ path: out });
 await browser.close();
-console.log(`Wrote ${out}`);
+// No newline at the end: Next puts the file into the attribute as it is.
+writeFileSync(altOut, alt);
+console.log(`Wrote ${out} and ${altOut}`);

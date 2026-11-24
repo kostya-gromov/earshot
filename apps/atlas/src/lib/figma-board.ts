@@ -47,6 +47,12 @@ function assertEveryPinIsUsed(pattern: Pattern, pins: Pins): void {
   if (orphan) throw new Error(`Pin "${orphan}" has no requirement in ${pattern.id}.`);
 }
 
+/*
+ * The plugin is in Figma's review as "Earshot Atlas", and the saved .fig was drawn under that
+ * name; its notes keep it until the plugin is renamed (docs/follow-ups/figma-plugin.md).
+ */
+const pluginName = 'Atlas';
+
 /** The board of a pattern: a numbered note per requirement, in the order of the page. */
 export function boardSpec(pattern: Pattern, pins: Pins): BoardSpec {
   assertEveryPinIsUsed(pattern, pins);
@@ -56,7 +62,7 @@ export function boardSpec(pattern: Pattern, pins: Pins): BoardSpec {
     path: `/patterns/${pattern.id}/#lens`,
     notes: pattern.requirements.map((requirement, index) => ({
       number: index + 1,
-      title: annotationHeading(requirement),
+      title: annotationHeading(requirement, pluginName),
       reason: requirement.reason,
       sources: requirement.sources.map((source) => ({
         name: sourceName(source),

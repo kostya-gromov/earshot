@@ -1,0 +1,1 @@
+Earshot. How should an interactive component behave? Earshot answers with evidence. Rules from WCAG and APG, a working reference, and recordings of what real design systems do for keyboard and screen reader users.

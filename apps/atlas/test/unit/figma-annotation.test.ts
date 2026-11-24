@@ -33,10 +33,10 @@ describe('annotationText', () => {
     );
   });
 
-  it('says when a requirement is Atlas guidance beyond WCAG', () => {
+  it('says when a requirement is Earshot guidance beyond WCAG', () => {
     const text = annotationText(requirement({ level: 'guidance' }));
     expect(text.split('\n')[0]).toBe(
-      'Remove buttons are at least 24 by 24 px (Atlas guidance, beyond WCAG)',
+      'Remove buttons are at least 24 by 24 px (Earshot guidance, beyond WCAG)',
     );
   });
 
