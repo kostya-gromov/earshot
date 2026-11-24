@@ -2,7 +2,7 @@ import type { Rule } from '../schema/index.ts';
 import { apg, wcag } from './combobox-sources.ts';
 
 /**
- * The rules and the Atlas recommendation for an editable combobox with a listbox popup and list
+ * The rules and the Earshot recommendation for an editable combobox with a listbox popup and list
  * autocomplete (docs/patterns/combobox.md). Two terms have one meaning in every rule:
  *
  * - **Active option**: the option the combobox names with aria-activedescendant; or the option
@@ -105,7 +105,7 @@ export const comboboxRules: Rule[] = [
     id: 'say-results',
     title: 'Say that the suggestions changed',
     description:
-      'When typing changes the suggestions, a live region says so. An Atlas recommendation: APG does not ask for it. It tells a screen reader user what their typing did before they walk the list. Judged on the first key after which the suggestions changed, by what is announced within the engine’s quiet window; what the message says is the next recommendation. A text counts as that announcement when it does not also appear, in the same form, after a key that left the suggestions as they were; a region that enters the page already holding its text is read the same way. Text that matches nothing is not judged: APG lets the popup simply close. A combobox that writes nothing but whose typed key makes the first match the active option is not judged either: that tells the change another way, a form of autocomplete APG names. One that does both follows.',
+      'When typing changes the suggestions, a live region says so. An Earshot recommendation: APG does not ask for it. It tells a screen reader user what their typing did before they walk the list. Judged on the first key after which the suggestions changed, by what is announced within the engine’s quiet window; what the message says is the next recommendation. A text counts as that announcement when it does not also appear, in the same form, after a key that left the suggestions as they were; a region that enters the page already holding its text is read the same way. Text that matches nothing is not judged: APG lets the popup simply close. A combobox that writes nothing but whose typed key makes the first match the active option is not judged either: that tells the change another way, a form of autocomplete APG names. One that does both follows.',
     keys: ['a'],
     level: 'recommendation',
     sources: [
@@ -120,7 +120,7 @@ export const comboboxRules: Rule[] = [
     id: 'say-count',
     title: 'Say how many suggestions there are',
     description:
-      'The message gives the number of suggestions, or says that there are none. An Atlas recommendation: APG does not ask for it. Judged only where something is announced, so a silent combobox is charged once, to “Say that the suggestions changed”. What a system says for text that matches nothing is recorded and not judged.',
+      'The message gives the number of suggestions, or says that there are none. An Earshot recommendation: APG does not ask for it. Judged only where something is announced, so a silent combobox is charged once, to “Say that the suggestions changed”. What a system says for text that matches nothing is recorded and not judged.',
     keys: ['a'],
     level: 'recommendation',
     sources: [

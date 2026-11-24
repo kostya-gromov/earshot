@@ -23,7 +23,7 @@ interface Step {
 }
 
 const copy = {
-  rule: 'Each rule links the WCAG criterion or APG practice it applies or relates to. Where Atlas goes further, the rule is marked as a recommendation and says why.',
+  rule: 'Each rule links the WCAG criterion or APG practice it applies or relates to. Where Earshot goes further, the rule is marked as a recommendation and says why.',
   recording:
     'The engine opens each component in Chromium, presses the keys and records focus, the accessibility tree and live region announcements after every step.',
   verdict:
@@ -88,7 +88,7 @@ function methodSteps(totals: MethodTotals): Step[] {
 }
 
 /**
- * How Atlas works, for every pattern at once, as three steps down the page: what the step is,
+ * How Earshot works, for every pattern at once, as three steps down the page: what the step is,
  * and what it has produced so far, counted from the measurement files. The first step sits on
  * the page's split; the recording and the verdicts run the full width, so the page is not one
  * split from top to bottom (design review 2026-11-14). The

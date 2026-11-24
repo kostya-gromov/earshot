@@ -2,7 +2,7 @@ import type { Rule } from '../schema/index.ts';
 import { apg, wcag } from './menu-button-sources.ts';
 
 /**
- * The rules and the Atlas recommendations for a button that opens a menu of actions
+ * The rules and the Earshot recommendations for a button that opens a menu of actions
  * (docs/patterns/menu-button.md; proposal approved 2026-11-16). Three terms have one meaning in
  * every rule:
  *
@@ -90,7 +90,7 @@ export const menuButtonRules: Rule[] = [
     id: 'focus-returns',
     title: 'Focus returns to the button after an action',
     description:
-      'After an item is activated and the menu closes, focus is on the button. An Atlas recommendation: the APG pattern says where focus goes after Escape and is silent after an action, while its own example sets focus on the menu button. Judged only where the item was activated and the menu closed. Differs when focus is anywhere else; when it falls to the document, a keyboard user has lost their place.',
+      'After an item is activated and the menu closes, focus is on the button. An Earshot recommendation: the APG pattern says where focus goes after Escape and is silent after an action, while its own example sets focus on the menu button. Judged only where the item was activated and the menu closed. Differs when focus is anywhere else; when it falls to the document, a keyboard user has lost their place.',
     keys: ['Enter'],
     level: 'recommendation',
     sources: [
@@ -106,7 +106,7 @@ export const menuButtonRules: Rule[] = [
     id: 'disabled',
     title: 'A disabled item can be reached and cannot be activated',
     description:
-      'The disabled item becomes the active item when the arrow keys reach its place, is exposed as disabled, and Enter on it does not activate it. An Atlas recommendation: APG states this as a note to the menu pattern and, in its practice on disabled controls, as a convention with a cost on each side. Differs when the arrows skip the item, when Enter runs its action, or when no item is exposed as disabled (APG: “When a menu item is disabled, aria-disabled is set to true”). Whether the menu closes on that Enter is recorded and not judged: APG says only that the item cannot be activated.',
+      'The disabled item becomes the active item when the arrow keys reach its place, is exposed as disabled, and Enter on it does not activate it. An Earshot recommendation: APG states this as a note to the menu pattern and, in its practice on disabled controls, as a convention with a cost on each side. Differs when the arrows skip the item, when Enter runs its action, or when no item is exposed as disabled (APG: “When a menu item is disabled, aria-disabled is set to true”). Whether the menu closes on that Enter is recorded and not judged: APG says only that the item cannot be activated.',
     keys: ['ArrowDown', 'Enter'],
     level: 'recommendation',
     sources: [apg.menuKeyboard, apg.menuRoles, apg.disabledControls],

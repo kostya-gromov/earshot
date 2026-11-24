@@ -2,7 +2,7 @@ import type { Rule } from '../schema/index.ts';
 import { apg, wcag } from './dialog-sources.ts';
 
 /**
- * The rules and the two Atlas recommendations for a modal dialog opened by a button
+ * The rules and the two Earshot recommendations for a modal dialog opened by a button
  * (docs/proposals/dialog.md, opened 2026-11-21; every decision answered by the owner that day).
  * Four terms have one meaning in every rule:
  *
@@ -37,7 +37,7 @@ export const dialogRules: Rule[] = [
     id: 'focus-not-on-dialog',
     title: 'Focus is not put on the dialog itself',
     description:
-      'On opening, focus is on an element inside the dialog and not on the dialog container. With the whole dialog focused, the focus indicator is as large as the dialog and a screen reader reads its label and content together, so where focus is becomes hard to tell. An Atlas recommendation: APG says it on its example page, about a dialog with a lot of text. Not judged when focus did not move into the dialog.',
+      'On opening, focus is on an element inside the dialog and not on the dialog container. With the whole dialog focused, the focus indicator is as large as the dialog and a screen reader reads its label and content together, so where focus is becomes hard to tell. An Earshot recommendation: APG says it on its example page, about a dialog with a lot of text. Not judged when focus did not move into the dialog.',
     keys: ['Enter'],
     level: 'recommendation',
     sources: [
@@ -106,7 +106,7 @@ export const dialogRules: Rule[] = [
     id: 'name-matches-title',
     title: 'The name is the visible title',
     description:
-      'The dialog’s accessible name is the same as its visible title. Otherwise a person hears one title and sees another. An Atlas recommendation: APG also allows a name given with aria-label, so this goes further than the page. Not judged when the dialog has no name, or no heading to compare it with.',
+      'The dialog’s accessible name is the same as its visible title. Otherwise a person hears one title and sees another. An Earshot recommendation: APG also allows a name given with aria-label, so this goes further than the page. Not judged when the dialog has no name, or no heading to compare it with.',
     keys: ['Enter'],
     level: 'recommendation',
     sources: [

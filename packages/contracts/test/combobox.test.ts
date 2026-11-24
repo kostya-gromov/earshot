@@ -7,7 +7,7 @@ describe('combobox pattern', () => {
     expect(patternsInProgress[combobox.id]).toBeUndefined();
   });
 
-  it('has the ten approved rules, two of them Atlas recommendations', () => {
+  it('has the ten approved rules, two of them Earshot recommendations', () => {
     expect(combobox.rules.map((rule) => rule.id)).toEqual([
       'tab',
       'expanded',
@@ -40,7 +40,7 @@ describe('combobox pattern', () => {
 
   it('says in the text of every recommendation that it is ours', () => {
     for (const rule of combobox.rules.filter((r) => r.level === 'recommendation')) {
-      expect(rule.description).toContain('An Atlas recommendation');
+      expect(rule.description).toContain('An Earshot recommendation');
     }
   });
 });

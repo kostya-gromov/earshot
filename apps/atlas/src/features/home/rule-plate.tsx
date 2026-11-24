@@ -9,7 +9,7 @@ type Rules = MethodTotals['rules'];
 
 const levels = [
   { key: 'fromStandards', label: 'From the standards' },
-  { key: 'recommendations', label: 'Atlas recommendations' },
+  { key: 'recommendations', label: 'Earshot recommendations' },
 ] as const;
 
 /**
@@ -27,8 +27,8 @@ function builtFrom({ total, fromStandards, recommendations, cited }: Rules): str
   if (recommendations === 0) return drawn;
   const others =
     recommendations === 1
-      ? 'The other 1 is an Atlas recommendation; it says why.'
-      : `The other ${recommendations} are Atlas recommendations; each says why.`;
+      ? 'The other 1 is an Earshot recommendation; it says why.'
+      : `The other ${recommendations} are Earshot recommendations; each says why.`;
   return `${drawn} ${others}`;
 }
 

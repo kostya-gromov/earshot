@@ -8,7 +8,7 @@ interface SuggestSystemProps {
 
 /**
  * The path that works in phase 1: a public design system is suggested in a public issue, and
- * Atlas measures it under the inclusion rule (ADR 0006). The site itself sends nothing.
+ * Earshot measures it under the inclusion rule (ADR 0006). The site itself sends nothing.
  */
 export function SuggestSystem({ patternId, scenarioCount }: SuggestSystemProps) {
   return (

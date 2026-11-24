@@ -167,7 +167,7 @@ test('Compare with: two systems to start, a third adds its recording, a fourth i
   await expect(lanes).toHaveCount(4);
 });
 
-test('what no cited standard asks for is labelled an Atlas recommendation', async ({ page }) => {
+test('what no cited standard asks for is labelled an Earshot recommendation', async ({ page }) => {
   await page.goto(url);
   await expect(
     matrix(page).getByRole('rowheader', { name: /^The chips are one Tab stop/ }),
@@ -184,7 +184,7 @@ test('what no cited standard asks for is labelled an Atlas recommendation', asyn
     /^Say how many/,
   ]) {
     await expect(matrix(page).getByRole('rowheader', { name: title })).toContainText(
-      'Atlas recommendation',
+      'Earshot recommendation',
     );
   }
   // A WCAG criterion cited only as related says what it does not ask.
@@ -263,11 +263,11 @@ test('the page does not scroll sideways on a phone', async ({ page }) => {
   expect(overflow).toBe(0);
 });
 
-test('the pattern page says what Atlas is not in one line, not the full statement', async ({
+test('the pattern page says what Earshot is not in one line, not the full statement', async ({
   page,
 }) => {
   await page.goto(url);
-  const note = page.getByRole('complementary', { name: 'How to read Atlas' });
+  const note = page.getByRole('complementary', { name: 'How to read Earshot' });
   await expect(note).toContainText('Guidance, not certification.');
   await expect(note.getByRole('link', { name: 'Read the methodology' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Guidance, not certification' })).toHaveCount(0);

@@ -3,7 +3,7 @@
 #
 # Inclusion (ADR 0006): a system is a target when its maintainers ship a component for the pattern,
 # or document it as a composition of their own published components. A composition carries a
-# `composition` line saying what it combines and what Atlas did to assemble it. Otherwise the
+# `composition` line saying what it combines and what Earshot did to assemble it. Otherwise the
 # system is not-applicable, with the evidence.
 #
 # status:
@@ -202,7 +202,7 @@ input-with-chips:
 
   - system: Adobe Spectrum
     status: not-applicable
-    reason: Tag field exists only as design guidance. Neither React Spectrum v3 nor Spectrum 2 ships a tag or token field, and the ComboBox of both picks a single option. Adobe’s React Aria ships TokenField for this; Atlas measures React Aria’s ComboBox with TagGroup above, not TokenField.
+    reason: Tag field exists only as design guidance. Neither React Spectrum v3 nor Spectrum 2 ships a tag or token field, and the ComboBox of both picks a single option. Adobe’s React Aria ships TokenField for this; Earshot measures React Aria’s ComboBox with TagGroup above, not TokenField.
     evidence:
       - https://spectrum.adobe.com/web/design-only/components/tag-field
       - https://react-spectrum.adobe.com/ComboBox
@@ -374,11 +374,11 @@ menu-button:
     observations:
       - source: recorded
         rules: [arrows, home-end]
-        date: 2026-11-23
+        date: 2026-11-24
         text: 'The arrow keys wrap at both ends, so APG does not ask for Home and End here. The reference has them all the same: Home makes the first item active and End the last.'
       - source: recorded
         rules: [open]
-        date: 2026-11-23
+        date: 2026-11-24
         text: 'Down Arrow on the button opens the menu on its first item and Up Arrow on its last; typing a letter in the menu moves to the next item that starts with it. APG marks all three optional.'
 
   # What is written below was checked on 2026-11-16: the docs page that loaded that day and the
@@ -601,7 +601,7 @@ tabs:
     observations:
       - source: recorded
         rules: [arrows, activate]
-        date: 2026-11-23
+        date: 2026-11-24
         text: 'The arrow keys activate the tab they move to, so APG does not ask Enter or Space to: the reference has every panel in the page, the case in which APG recommends automatic activation.'
 
   - system: React Aria
@@ -617,7 +617,7 @@ tabs:
     observations:
       - source: recorded
         rules: [panel-reachable]
-        date: 2026-11-23
+        date: 2026-11-24
         text: 'Tab from "Members" lands on the link its panel starts with, and from "Overview" on the panel itself: the panel is a Tab stop only where it holds nothing that takes focus.'
     notes:
       - "Exports checked 2026-11-19 in the installed package's types (react-aria-components 1.22.1, dist/types/exports/Tabs.d.ts): Tabs, TabList, Tab, TabPanels, TabPanel, TabsContext, TabListStateContext. A dedicated component."
@@ -637,7 +637,7 @@ tabs:
     observations:
       - source: recorded
         rules: [panel-reachable]
-        date: 2026-11-23
+        date: 2026-11-24
         text: 'Tab from "Members" lands on the link its panel starts with, and from "Overview" on the panel itself.'
     notes:
       - 'Exports checked 2026-11-19: components/tabs is in the installed @chakra-ui/react 3.38.0 (dist/types/components/tabs). A dedicated component.'
@@ -659,11 +659,11 @@ tabs:
     observations:
       - source: recorded
         rules: [panel-reachable]
-        date: 2026-11-23
+        date: 2026-11-24
         text: 'Tab from “Overview”, whose panel holds plain text, lands on the field after the tabs; from “Members” it lands on the link the panel starts with.'
       - source: recorded
         rules: [arrows, activate]
-        date: 2026-11-23
+        date: 2026-11-24
         text: 'The arrow keys move focus without activating the tab; Enter and Space activate the focused tab.'
     notes:
       - 'Exports checked 2026-11-19 in the installed @fluentui/react-components 9.75.2 (dist/index.d.ts): TabList, Tab, TabListProps; no TabPanel. In @fluentui/react-tabs 9.12.6 types: selectTabOnFocus, “When true, focusing a tab will select it. @default false”.'
@@ -685,10 +685,10 @@ tabs:
     observations:
       - source: recorded
         rules: [arrows, activate]
-        date: 2026-11-23
+        date: 2026-11-24
         text: 'The arrow keys move focus without activating the tab; Enter and Space activate the focused tab.'
       - source: recorded
-        date: 2026-11-23
+        date: 2026-11-24
         text: 'The tabs’ labels on the page are “Overview”, “Activity”, “Members”, “Settings”; their names in the accessibility tree are in capitals (“OVERVIEW”), and so are the panels’ names, which come from the tabs.'
     notes:
       - 'The demo read on 2026-11-19 at the tag v9.5.0 (docs/data/material/components/tabs/BasicTabs.tsx): its CustomTabPanel renders `role="tabpanel"`, `hidden={value !== index}`, `tabIndex={0}`, `id={`simple-tabpanel-${index}`}`, `aria-labelledby={`simple-tab-${index}`}`, as the measured page does.'
@@ -712,7 +712,7 @@ tabs:
         text: 'The code page describes useTab’s onKeyDown as “Allows navigation of tabs with automatic activation.”, and the usage page says “The tab key is used to navigate to the tab content, not to the next tab.”'
       - source: recorded
         rules: [panel-reachable]
-        date: 2026-11-23
+        date: 2026-11-24
         text: 'Tab from “Overview” and from “Members” lands on the panel itself, also where the panel starts with a link.'
     notes:
       - "Exports checked 2026-11-19 in the installed @atlaskit/tabs 21.3.1 (dist/types/index.d.ts): Tabs (default), TabPanel, Tab, TabList, useTab, useTabPanel. A dedicated component. Added to the harness on 2026-11-19 with the owner's approval (docs/proposals/tabs.md, decision 8); published on npm on 2026-11-10."
@@ -736,7 +736,7 @@ dialog:
     observations:
       - source: recorded
         rules: [outside-inert]
-        date: 2026-11-23
+        date: 2026-11-24
         text: 'A click at the point where the field “Notes” is, behind the dialog, leaves the dialog open and moves focus to the dialog element itself, which is what the browser does for its own modal dialog.'
 
   - system: React Aria

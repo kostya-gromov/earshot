@@ -1,5 +1,5 @@
 name: Suggest a correction
-description: A verdict, a recording or a rule on Earshot Atlas looks wrong.
+description: A verdict, a recording or a rule on Earshot looks wrong.
 title: 'Correction: '
 labels: ['correction']
 body:
@@ -37,7 +37,7 @@ body:
     id: what
     attributes:
       label: What is wrong
-      description: What Atlas says, and what you see instead.
+      description: What Earshot says, and what you see instead.
     validations:
       required: true
   - type: textarea

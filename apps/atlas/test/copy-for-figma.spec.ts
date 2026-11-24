@@ -30,7 +30,7 @@ test('Copy for Figma copies one requirement with the page it is from', async ({ 
   const copied = await page.evaluate(() => navigator.clipboard.readText());
   expect(copied.split('\n')[0]).toContain(title);
   expect(copied).toMatch(
-    /\n\nFrom Earshot Atlas: http:\/\/localhost:\d+\/patterns\/input-with-chips\/#lens$/,
+    /\n\nFrom Earshot: http:\/\/localhost:\d+\/patterns\/input-with-chips\/#lens$/,
   );
   // The button offers to copy again once it has said so.
   await expect(first.getByRole('button', { name: /^Copy for Figma/ })).toBeVisible({

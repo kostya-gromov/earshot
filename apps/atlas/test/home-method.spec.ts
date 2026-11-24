@@ -10,12 +10,12 @@ test.describe('step 1 of the method, the rules', () => {
     await expect(step(page)).toContainText('46 rules so far, in 5 patterns');
     await expect(step(page).locator('svg')).toHaveCount(1);
     await expect(step(page)).toContainText('From the standards32');
-    await expect(step(page)).toContainText('Atlas recommendations14');
+    await expect(step(page)).toContainText('Earshot recommendations14');
     // The drawing shows a rule built from the standards; it does not speak for the other fourteen.
     await expect(step(page).locator('figcaption')).toHaveText(
       // No rule applies a WCAG criterion directly, and the caption says so: the drawing joins
       // both standards to a rule.
-      'How 32 of 46 rules are built: each applies an APG page, and cites WCAG where a criterion relates. The other 14 are Atlas recommendations; each says why.',
+      'How 32 of 46 rules are built: each applies an APG page, and cites WCAG where a criterion relates. The other 14 are Earshot recommendations; each says why.',
     );
   });
 

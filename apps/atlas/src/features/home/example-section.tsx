@@ -14,7 +14,7 @@ interface ExampleSectionProps {
 /**
  * One real measurement, the scene of the home page's opening: Backspace, once, in each system.
  * One line says what it shows, the frame holds the recordings with where they come from, and
- * under it is why that matters and the longer account of what Atlas is.
+ * under it is why that matters and the longer account of what Earshot is.
  */
 export function ExampleSection({ systems, people, patternName }: ExampleSectionProps) {
   const lanes = systems.map((m) => ({
@@ -36,8 +36,8 @@ export function ExampleSection({ systems, people, patternName }: ExampleSectionP
             Accessibility checkers test markup, not what happens after a key press.
           </p>
           <p className={styles.note}>
-            Recorded by the Atlas engine in Chromium. Spoken lines are a semantic model, not screen
-            reader output.
+            Recorded by the Earshot engine in Chromium. Spoken lines are a semantic model, not
+            screen reader output.
           </p>
         </div>
         <p className={styles.lede}>

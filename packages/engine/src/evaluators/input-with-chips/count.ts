@@ -9,7 +9,7 @@ import { missingRemoval, removalStepIndex } from './removal-step.ts';
 const countAfterRemoval = 2;
 
 /**
- * An Atlas recommendation beyond WCAG (decided 2026-11-09): the removal announcement says how
+ * An Earshot recommendation beyond WCAG (decided 2026-11-09): the removal announcement says how
  * many values remain. Judged only when the removal was announced and named, so a removal nobody
  * hears is the "say" rule's difference and is not charged twice.
  */

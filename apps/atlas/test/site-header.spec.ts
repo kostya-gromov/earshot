@@ -121,3 +121,53 @@ test.describe('on a Mac', () => {
     expect(await searchBox(before)).toEqual(hydrated);
   });
 });
+
+// Design review 2026-11-24: after the rename to the longer "Earshot", the last crumb broke into
+// two lines between 561 and 582 px ("Input with / chips"), in a header meant to be one row.
+const headerPages = [
+  '/',
+  '/patterns/',
+  '/patterns/input-with-chips/',
+  '/patterns/combobox/',
+  '/patterns/menu-button/',
+  '/patterns/tabs/',
+  '/patterns/dialog/',
+  '/methodology/',
+];
+
+/** Every width near the breakpoints, one pixel apart; a coarser step elsewhere. */
+const headerWidths = [
+  ...Array.from({ length: 1440 - 320 + 1 }, (_, index) => 320 + index).filter(
+    (width) => (width >= 540 && width <= 720) || width % 40 === 0,
+  ),
+];
+
+const headerItemsOffOneLine = (page: Page): Promise<string[]> =>
+  page.getByRole('banner').evaluate((header) => {
+    const items = [...header.querySelectorAll('a, button, li')].filter(
+      (item) => item.getClientRects().length > 0,
+    );
+    const broken = items
+      .filter((item) => {
+        const lineHeight = Number.parseFloat(getComputedStyle(item).lineHeight) || 20;
+        return item.getBoundingClientRect().height > lineHeight * 1.5 && !item.querySelector('svg');
+      })
+      .map((item) => `"${item.textContent?.trim()}" wraps`);
+    const overflow = header.scrollWidth > header.clientWidth ? ['the header overflows'] : [];
+    return [...broken, ...overflow];
+  });
+
+test('every item of the header stays on one line at every width', async ({ page }) => {
+  test.setTimeout(240_000);
+  const problems: string[] = [];
+  for (const path of headerPages) {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto(path);
+    for (const width of headerWidths) {
+      await page.setViewportSize({ width, height: 900 });
+      const found = await headerItemsOffOneLine(page);
+      problems.push(...found.map((problem) => `${path} at ${width}: ${problem}`));
+    }
+  }
+  expect(problems).toEqual([]);
+});

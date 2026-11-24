@@ -9,10 +9,10 @@ import { isReference } from '@/lib/agreement';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Atlas: measured keyboard, focus and announcement behavior' },
+  title: { absolute: 'Earshot: measured keyboard, focus and announcement behavior' },
 };
 
-/** What Atlas is, shown with one real recording; how it works; the patterns; how to read it. */
+/** What Earshot is, shown with one real recording; how it works; the patterns; how to read it. */
 export default async function HomePage() {
   const entries = await loadPatternEntries();
   const chips = entries.find(({ pattern }) => pattern.id === 'input-with-chips');

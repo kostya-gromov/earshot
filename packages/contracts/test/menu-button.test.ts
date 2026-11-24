@@ -17,7 +17,7 @@ describe('menu button pattern', () => {
     ]);
   });
 
-  it('has nine rules, two of them Atlas recommendations', () => {
+  it('has nine rules, two of them Earshot recommendations', () => {
     expect(menuButton.rules).toHaveLength(9);
     expect(menuButton.rules.filter((rule) => rule.level === 'recommendation')).toHaveLength(2);
   });

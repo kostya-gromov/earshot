@@ -7,7 +7,7 @@ const languageOf = (file: string) => {
 };
 
 /**
- * Code is coloured by syntax. Elsewhere on Atlas colour carries four fixed meanings (blue focus,
+ * Code is coloured by syntax. Elsewhere on Earshot colour carries four fixed meanings (blue focus,
  * violet heard, red loss, green matches); inside a block of code it means syntax and nothing
  * else, which is what every reader of code expects there (apps/atlas/CLAUDE.md, Visual language,
  * exception decided by the owner on 2026-11-16). From 2026-11-13 to that day code was shown in three

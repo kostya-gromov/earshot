@@ -12,7 +12,7 @@ export const panelContent: Record<
   { link?: { href: string; text: string }; text: string }
 > = {
   Overview: {
-    text: 'Earshot Atlas measures how design systems behave for keyboard and screen reader users.',
+    text: 'Earshot measures how design systems behave for keyboard and screen reader users.',
   },
   Activity: { text: 'Recent changes to the project appear here.' },
   Members: {

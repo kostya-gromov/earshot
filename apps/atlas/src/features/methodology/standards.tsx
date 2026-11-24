@@ -99,14 +99,14 @@ function Levels({ patterns }: { patterns: readonly Pattern[] }) {
       <p>
         A rule is what a cited APG pattern, practice or example asks, in our words. A WCAG criterion
         cited beside it is marked as related or as rationale, and its note says how the criterion
-        bears on the rule. A recommendation is advice we add, or a note in APG that Atlas does not
-        hold as a rule, with the reason on the recommendation: it is labelled &ldquo;Atlas
-        recommendation&rdquo;. A recommendation is not a WCAG requirement, and Atlas does not judge
-        WCAG conformance.
+        bears on the rule. A recommendation is advice we add, or a note in APG that Earshot does not
+        hold as a rule, with the reason on the recommendation: it is labelled &ldquo;Earshot
+        recommendation&rdquo;. A recommendation is not a WCAG requirement, and Earshot does not
+        judge WCAG conformance.
       </p>
       <p>
         Across the {patterns.length} patterns there are {rules} rules from the standards and{' '}
-        {recommendations} Atlas recommendations. Every one links its sources on its pattern page.
+        {recommendations} Earshot recommendations. Every one links its sources on its pattern page.
       </p>
       <p>
         Agreement counts the systems a rule could be judged on. A system whose verdict is
@@ -131,7 +131,7 @@ function HowAPatternIsAdded() {
           the cited pages are checked for changes.
         </li>
         <li>
-          Atlas builds a reference implementation and measures it with the same engine. It differs
+          Earshot builds a reference implementation and measures it with the same engine. It differs
           on no rule of its pattern.
         </li>
         <li>
@@ -155,9 +155,9 @@ export function Standards({ patterns }: { patterns: readonly Pattern[] }) {
   return (
     <Part id="standards" title="What the rules rest on">
       <p>
-        Atlas rests on two W3C sources, and they answer different questions. WCAG 2.2 says what must
-        be true for the person using a page, whatever the component: its criterion 2.1.1 asks that
-        &ldquo;All functionality of the content is operable through a keyboard
+        Earshot rests on two W3C sources, and they answer different questions. WCAG 2.2 says what
+        must be true for the person using a page, whatever the component: its criterion 2.1.1 asks
+        that &ldquo;All functionality of the content is operable through a keyboard
         interface&hellip;&rdquo;. The ARIA Authoring Practices Guide (APG) describes how a component
         of a given kind is expected to work: its keys, its roles, its states. Its keyboard practice
         says that &ldquo;consistent application of the common GUI keyboard interface conventions
@@ -168,7 +168,7 @@ export function Standards({ patterns }: { patterns: readonly Pattern[] }) {
         {appliedLine(pages)} {wcagLine(pages)} These are all the pages the rules and recommendations
         cite today: &ldquo;applied by&rdquo; counts the rules from the standards that apply a page,
         and &ldquo;also cited by&rdquo; the rules that cite it as related or as rationale and the
-        Atlas recommendations that cite it.
+        Earshot recommendations that cite it.
       </p>
       <CitedPages pages={pages} />
       <Levels patterns={patterns} />

@@ -25,7 +25,7 @@ packages/reference: imports nothing from the repo (framework-free browser TypeSc
 
 Group what changes together. `evaluators/input-with-chips/` beats one `evaluators.ts` with every pattern in it. Avoid folders named `utils`, `helpers`, `common` or `misc`: name a module after what it does (`accessible-name.ts`, `settle.ts`).
 
-Atlas app layout (from M3):
+Earshot app layout (from M3):
 
 - `app/`: routes only. Thin: load data, compose features, no logic.
 - `features/<feature>/`: one folder per product feature (playground, evidence, command-palette), with its components, hooks and model.

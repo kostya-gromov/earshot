@@ -33,7 +33,7 @@ export function HowToRead() {
             Guidance, <span>not certification.</span>
           </h2>
           <p>
-            Atlas turns the accessibility standards into practical advice for one component at a
+            Earshot turns the accessibility standards into practical advice for one component at a
             time, and shows what real design systems do. It helps you decide; it does not audit you.{' '}
             <a href="/methodology/">Read the methodology</a>
           </p>

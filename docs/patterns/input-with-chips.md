@@ -12,18 +12,18 @@ reasons are in [ADR 0009](../decisions/0009-input-with-chips-rule-history.md).
 ## Rules
 
 Each rule has a level. **Rule**: what a cited WCAG criterion or APG practice asks; a criterion
-that does not itself ask for it is cited as related, with a note. **Recommendation**: advice Atlas
+that does not itself ask for it is cited as related, with a note. **Recommendation**: advice Earshot
 adds beyond them, labelled as ours on the site, with the reason in its description.
 
 | id | Level | Title | Expectation | Sources |
 | --- | --- | --- | --- | --- |
 | `chip-stop` | rule (APG) | The chips are one Tab stop | From a chip, Tab and Shift+Tab leave the chips (to the input or out), never to another chip or a control inside the chip. Measured from the last chip, which the engine focuses directly (`startOn: 'last-item'`); a chip that cannot take focus makes it inconclusive. Applies when arrow keys move between the chips; separate controls with no arrow keys are not applicable (APG allows them), and their extra stops count under `tab`. | APG roving tabindex, APG layout grid pill list; WCAG 2.1.1 related |
 | `chip-arrows` | recommendation | Arrows move between chips | From a chip, ← moves to the previous chip and → to the next. Measured from the last chip. Not judged when `chip-tab`/`chip-shift-tab` show each chip is its own Tab stop: that design is charged once, to `chip-stop` (suite `preconditions`). Not applicable to separate controls with no arrow keys. | APG roving tabindex related, APG layout grid pill list related; WCAG 2.4.3 related |
-| `tab` | recommendation | One stop for the whole field | The input and its chips share one Tab stop: Tab and Shift+Tab from the input leave the field, and so does Tab from a chip. Treating input and chips as one widget is Atlas's design, not APG's. | APG roving tabindex related |
+| `tab` | recommendation | One stop for the whole field | The input and its chips share one Tab stop: Tab and Shift+Tab from the input leave the field, and so does Tab from a chip. Treating input and chips as one widget is Earshot's design, not APG's. | APG roving tabindex related |
 | `arrows` | recommendation | Arrows join the input and the chips | From caret position 0, ← moves to the last chip; → past the last chip returns to the input. Movement between chips is `chip-arrows`; a failure there leaves this rule inconclusive. | APG roving tabindex related |
 | `bsp` | recommendation | Backspace twice to remove | In an empty input, first Backspace moves focus to the last chip; second removes it. If the first press moves focus nowhere the tree shows and the second removes a chip, the verdict is inconclusive (a visual-only mark, as in Chakra UI). | WCAG 3.3.4 as rationale |
 | `keep-focus` | recommendation | Keep focus in the field after a removal | After a removal by key or click, focus stays in the field, on a neighbouring chip or the input; never on body, never outside. | APG keyboard practice (persistence of focus) related; WCAG 2.4.3 related |
-| `say` | recommendation | Announce the removal | A removal is announced via a live region and names the removed value. Atlas reads a disappearing chip as a status message; WCAG 4.1.3 centres on messages added to the page. The semantic model does not claim the speaking order of announcement and focus. | WCAG 4.1.3 related |
+| `say` | recommendation | Announce the removal | A removal is announced via a live region and names the removed value. Earshot reads a disappearing chip as a status message; WCAG 4.1.3 centres on messages added to the page. The semantic model does not claim the speaking order of announcement and focus. | WCAG 4.1.3 related |
 | `count` | recommendation | Say how many remain | The removal announcement also gives the new count ("2 selected"). Judged only where the removal is announced, so a silent removal is charged to `say` once. | WCAG 4.1.3 related |
 
 Agreement on the site counts the systems a rule could be judged on (follows or differs);

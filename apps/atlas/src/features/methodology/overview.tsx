@@ -2,7 +2,7 @@ import { ContentsNav } from './contents-nav';
 import styles from './methodology.module.css';
 
 const inShort = [
-  'Rules come from the ARIA Authoring Practices; where a WCAG 2.2 criterion bears on one, it is cited as related. What Atlas adds, and APG notes it does not hold as rules, are labelled Atlas recommendations.',
+  'Rules come from the ARIA Authoring Practices; where a WCAG 2.2 criterion bears on one, it is cited as related. What Earshot adds, and APG notes it does not hold as rules, are labelled Earshot recommendations.',
   'The engine presses real keys in Chromium on each system’s published package, three times per scenario.',
   'It records where focus goes, how the accessibility tree changes, and what live regions announce.',
   'It does not look at the screen, use a pointer or touch, or run a real screen reader.',

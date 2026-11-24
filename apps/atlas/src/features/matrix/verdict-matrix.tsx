@@ -45,7 +45,7 @@ function RowView({ row, r, columns, hot, onHot, grid }: RowViewProps) {
       <th scope="row">
         {row.title}
         <span>
-          {row.isRecommendation ? 'Atlas recommendation' : 'From the standards'}
+          {row.isRecommendation ? 'Earshot recommendation' : 'From the standards'}
           {/* The reference is named only where it does not follow; the note below says the rest. */}
           {row.reference &&
             row.reference !== 'follows' &&

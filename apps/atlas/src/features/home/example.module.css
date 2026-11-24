@@ -199,7 +199,7 @@
   font-style: normal;
 }
 
-/* Under the frame: why it matters, on the left; what Atlas holds, at length, on the right. */
+/* Under the frame: why it matters, on the left; what Earshot holds, at length, on the right. */
 .after {
   display: grid;
   grid-template-columns: var(--split);

@@ -80,7 +80,7 @@ function judgeSilence(typed: ObservedStep): VerdictResult {
   };
 }
 
-/** Atlas recommendation: when typing changes the suggestions, a live region says so. */
+/** Earshot recommendation: when typing changes the suggestions, a live region says so. */
 export function evaluateSayResults(input: EvaluatorInput): VerdictResult {
   const typed = typingStep(input);
   if ('verdict' in typed) return typed;

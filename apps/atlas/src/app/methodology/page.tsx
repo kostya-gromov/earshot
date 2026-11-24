@@ -28,7 +28,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Methodology',
   description:
-    'Where the rules of Atlas come from, how it measures keyboard behavior and announcements in Chromium, how verdicts are reached, and what the measurements cannot tell you.',
+    'Where the rules of Earshot come from, how it measures keyboard behavior and announcements in Chromium, how verdicts are reached, and what the measurements cannot tell you.',
 };
 
 /**

@@ -67,6 +67,10 @@
   color: var(--ink-3);
 }
 
+.crumbs li {
+  white-space: nowrap;
+}
+
 .crumbs li + li::before {
   content: '/';
   margin-inline-end: 6px;
@@ -96,7 +100,12 @@
   .end {
     gap: 6px;
   }
+}
 
+/* A crumb never wraps, and the trail goes before it would collide: from 561 to 612 px
+   "Input with chips" broke into two lines next to the wordmark "Earshot" (design review
+   2026-11-24). site-header.spec.ts checks every width from 540 to 720. */
+@media (max-width: 600px) {
   .crumbs {
     display: none;
   }

@@ -7,7 +7,7 @@ import styles from './how-to-read.module.css';
  */
 export function HowToReadNote() {
   return (
-    <aside className={styles.note} aria-label="How to read Atlas">
+    <aside className={styles.note} aria-label="How to read Earshot">
       <p>
         <strong>Guidance, not certification.</strong> Following these rules does not make a product
         conform to WCAG, and differing from them does not make it fail. Spoken lines are a semantic

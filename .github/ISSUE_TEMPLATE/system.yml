@@ -1,5 +1,5 @@
 name: Suggest a system
-description: A public design system that Earshot Atlas should measure for a pattern.
+description: A public design system that Earshot should measure for a pattern.
 title: 'System for '
 labels: ['system']
 body:
@@ -18,7 +18,7 @@ body:
     id: pattern
     attributes:
       label: Pattern
-      description: The pattern's id on Atlas.
+      description: The pattern's id on Earshot.
       placeholder: combobox
     validations:
       required: true

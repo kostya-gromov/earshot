@@ -139,7 +139,7 @@ function TabList({ tabs, selected, onSelect }: TabListProps) {
           onKeyDown={(event) => onKeyDown(event, index)}
         >
           {tab.title}
-          <small>{tab.isRecommendation ? 'Atlas recommendation' : 'From the standards'}</small>
+          <small>{tab.isRecommendation ? 'Earshot recommendation' : 'From the standards'}</small>
         </button>
       ))}
     </div>

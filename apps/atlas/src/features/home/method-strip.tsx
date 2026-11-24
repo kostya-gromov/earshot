@@ -71,7 +71,7 @@ const verdictRows: readonly { verdict: Verdict; key: keyof MethodTotals['verdict
 ];
 
 /**
- * Which rules the differences are from: a difference from an Atlas recommendation is not a
+ * Which rules the differences are from: a difference from an Earshot recommendation is not a
  * difference from the standards, and the totals alone read as if it were (verdict audit
  * 2026-11-14).
  */
@@ -82,8 +82,8 @@ function DifferenceNote({ verdicts }: { verdicts: MethodTotals['verdicts'] }) {
   return (
     <p className={styles.finding}>
       {fromStandards === 0
-        ? `None of the ${all} is from a rule that WCAG or APG asks for: all are from Atlas recommendations.`
-        : `Of the ${all}, ${count(fromStandards)} ${fromStandards === 1 ? 'is' : 'are'} from a rule that WCAG or APG asks for; the rest are from Atlas recommendations.`}
+        ? `None of the ${all} is from a rule that WCAG or APG asks for: all are from Earshot recommendations.`
+        : `Of the ${all}, ${count(fromStandards)} ${fromStandards === 1 ? 'is' : 'are'} from a rule that WCAG or APG asks for; the rest are from Earshot recommendations.`}
     </p>
   );
 }

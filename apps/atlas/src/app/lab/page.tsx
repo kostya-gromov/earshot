@@ -33,7 +33,7 @@ export default async function LabPage() {
         <p className={styles.kicker}>Design lab</p>
         <h1 className={styles.title}>Tokens and primitives</h1>
         <p className={styles.lede}>
-          The values every Atlas page is built from, extracted from the approved D1a mockup.
+          The values every Earshot page is built from, extracted from the approved D1a mockup.
         </p>
       </header>
       <PrimitivesSection />

@@ -92,7 +92,7 @@ test('Escape closes without choosing and clears the query for next time', async 
 });
 
 /*
- * The combobox rules the palette is held to (docs/patterns/combobox.md, "Atlas's own command
+ * The combobox rules the palette is held to (docs/patterns/combobox.md, "Earshot's own command
  * palette"). It is a combobox inside a modal dialog whose list is always shown, so it is checked
  * here, by rule id, and not measured as a combobox target: `tab`, `escape` and the closed
  * starting state of the scenarios describe a popup that opens and closes beside a field.

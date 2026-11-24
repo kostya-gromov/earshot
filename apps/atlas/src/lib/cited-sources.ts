@@ -10,7 +10,7 @@ export interface CitedPage {
   /** Rules from the standards that cite it only as related or as rationale. */
   related: number;
   /**
-   * Atlas recommendations that cite it, however they cite it: a recommendation is advice beyond
+   * Earshot recommendations that cite it, however they cite it: a recommendation is advice beyond
    * the standards, so it never counts as applying one (verdict audit, 2026-11-18).
    */
   recommendations: number;
@@ -93,7 +93,7 @@ export function citedPages(patterns: readonly Pattern[]): CitedPage[] {
     );
 }
 
-/** How many of the patterns' rules come from the standards, and how many Atlas adds. */
+/** How many of the patterns' rules come from the standards, and how many Earshot adds. */
 export function ruleLevels(patterns: readonly Pattern[]): {
   rules: number;
   recommendations: number;

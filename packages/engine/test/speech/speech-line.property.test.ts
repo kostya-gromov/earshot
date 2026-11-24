@@ -25,7 +25,7 @@ it('keeps assertive and polite announcement order around focus speech', () => {
   fc.assert(
     fc.property(announcements, (items) => {
       const input = {
-        documentTitle: 'Atlas',
+        documentTitle: 'Earshot',
         focusBefore: focus({ path: '#before' }),
         focusAfter: focus({ path: '#after' }),
         announcements: items,

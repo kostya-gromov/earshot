@@ -1,8 +1,8 @@
 import styles from './brand-mark.module.css';
 
 /**
- * The Atlas mark: the Tab key. The arrow runs to its stop, and the stop is in the focus colour,
- * which on this site means one thing: focus landed here. What Atlas measures, in one sign: a key
+ * The Earshot mark: the Tab key. The arrow runs to its stop, and the stop is in the focus colour,
+ * which on this site means one thing: focus landed here. What Earshot measures, in one sign: a key
  * was pressed, and this is where focus went (chosen by the owner on 2026-11-17 from four drafts;
  * it replaces the keycap inside a focus ring). Decorative: the brand name always sits next to it.
  */

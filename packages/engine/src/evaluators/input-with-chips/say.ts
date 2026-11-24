@@ -11,7 +11,7 @@ import { removalAnnouncement } from './removal-announcement.ts';
 import { missingRemoval, removalStepIndex } from './removal-step.ts';
 
 /**
- * Announce the removal: an Atlas recommendation (decided 2026-11-09). Atlas reads a chip that
+ * Announce the removal: an Earshot recommendation (decided 2026-11-09). Earshot reads a chip that
  * disappears as a status message under WCAG 4.1.3; the criterion's text centres on messages
  * added to the page, so this is not presented as required. Where focus lands is "keep-focus".
  */

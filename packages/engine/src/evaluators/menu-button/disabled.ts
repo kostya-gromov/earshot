@@ -45,7 +45,7 @@ function skipped(down: ObservedStep, disabled: DisabledItem): VerdictResult | un
 }
 
 /**
- * Atlas recommendation, from an APG note: a disabled item is focusable and cannot be activated.
+ * Earshot recommendation, from an APG note: a disabled item is focusable and cannot be activated.
  * "Not activated" is read from the page; whether the menu closes on that Enter is recorded and
  * not judged, because APG does not say.
  */

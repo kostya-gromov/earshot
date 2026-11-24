@@ -153,12 +153,12 @@ recordings, Atlassian's Select included, so all six are counted; the dated line 
 `packages/reference/combobox/`, framework-free, manual selection. It must measure `follows` on
 every rule; if it does not, fix the reference, not the evaluator, unless the evaluator is wrong.
 
-## Atlas's own command palette
+## Earshot's own command palette
 
 Decided 2026-11-14 (the owner), replacing decision 7 of the proposal: the ⌘K palette is **not** a
 combobox target. It is a combobox inside a modal dialog whose list is always shown, the kind of
 component React Aria's docs give Autocomplete for ("command palettes, searchable menus"), which
-Atlas does not measure under this pattern either. Measuring ours would apply to Atlas a yardstick
+Earshot does not measure under this pattern either. Measuring ours would apply to Earshot a yardstick
 React Aria was spared.
 
 "The product passes its own contracts" (CLAUDE.md 2.4) is met by browser tests named by rule id,

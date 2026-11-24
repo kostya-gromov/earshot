@@ -11,8 +11,8 @@ export const Rule = z.strictObject({
   /** Key names as Playwright spells them, combined with "+", for example "Shift+Tab". */
   keys: z.array(NonEmpty).min(1),
   /**
-   * `rule`: what a cited WCAG criterion or APG practice asks, in Atlas's words (a WCAG criterion
-   * cited only as related is marked so, with a note that says why). `recommendation`: advice Atlas adds beyond them;
+   * `rule`: what a cited WCAG criterion or APG practice asks, in Earshot's words (a WCAG criterion
+   * cited only as related is marked so, with a note that says why). `recommendation`: advice Earshot adds beyond them;
    * its description says why, and the site labels it as ours. Decided 2026-11-09.
    */
   level: z.enum(['rule', 'recommendation']),

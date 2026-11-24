@@ -11,7 +11,7 @@ export interface LivePattern {
   rootSelector: string;
   /** Starts the reference from its own module, with the data the engine measures it with. */
   start: (module: unknown, root: HTMLElement) => Stop;
-  /** What Atlas adds around the running reference besides speech; the reference is unchanged. */
+  /** What Earshot adds around the running reference besides speech; the reference is unchanged. */
   attach: (root: HTMLElement) => Stop[];
   /** The key the empty playground invites: the first thing worth pressing in this pattern. */
   firstKey: string;

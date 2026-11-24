@@ -21,7 +21,7 @@ evals/results/*/raw/
 .env
 .env.*
 
-# Atlas build output and generated Next.js types
+# Earshot build output and generated Next.js types
 apps/atlas/out/
 apps/atlas/next-env.d.ts
 apps/atlas/test-results/

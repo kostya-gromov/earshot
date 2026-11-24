@@ -47,7 +47,7 @@ const pages: readonly PaletteItem[] = [
     id: 'page:methodology',
     label: 'Methodology',
     keywords: ['engine', 'semantic model', 'provenance', 'limitations'],
-    description: 'How Atlas measures, and what it cannot',
+    description: 'How Earshot measures, and what it cannot',
     href: '/methodology/',
     group: 'Pages',
   },

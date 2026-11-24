@@ -2,7 +2,7 @@ import type { Rule } from '../schema/index.ts';
 import { apg, wcag } from './tabs-sources.ts';
 
 /**
- * The rules and the Atlas recommendation for a horizontal tab list with one panel shown at a
+ * The rules and the Earshot recommendation for a horizontal tab list with one panel shown at a
  * time (docs/proposals/tabs.md, approved 2026-11-19). Three terms have one meaning in every rule:
  *
  * - **Focused tab**: the tab that holds DOM focus, or the tab a focused tab list names with
@@ -124,7 +124,7 @@ export const tabsRules: Rule[] = [
     id: 'vertical-keys-free',
     title: 'Up and Down Arrow are left to the page',
     description:
-      'In a horizontal tab list, Down Arrow and Up Arrow move neither focus nor selection. An Atlas recommendation: APG gives it as a note, so that “those keys can provide their normal browser scrolling functions even when focus is inside the tab list”. The engine judges what it can see, that focus and selection stay where they were; whether the page scrolled is not recorded.',
+      'In a horizontal tab list, Down Arrow and Up Arrow move neither focus nor selection. An Earshot recommendation: APG gives it as a note, so that “those keys can provide their normal browser scrolling functions even when focus is inside the tab list”. The engine judges what it can see, that focus and selection stay where they were; whether the page scrolled is not recorded.',
     keys: ['ArrowDown', 'ArrowUp'],
     level: 'recommendation',
     sources: [apg.keyboard],

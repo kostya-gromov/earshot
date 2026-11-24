@@ -4,7 +4,7 @@ import { differs, follows, isVerdict, notJudged, opening } from './facts.ts';
 
 const scenarios = new Set(['open']);
 
-/** An Atlas recommendation: a person should not hear one title and see another. */
+/** An Earshot recommendation: a person should not hear one title and see another. */
 export function evaluateNameMatchesTitle(input: EvaluatorInput): VerdictResult {
   const start = opening(input, scenarios);
   if (isVerdict(start)) return start;

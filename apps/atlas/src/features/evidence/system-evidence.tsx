@@ -116,7 +116,7 @@ function systemFacts(demo: Demo): Fact[] {
   if (demo.composition) {
     facts.push({
       label: 'Docs composition',
-      body: <InlineCode text={`Assembled by Atlas. ${demo.composition}`} />,
+      body: <InlineCode text={`Assembled by Earshot. ${demo.composition}`} />,
     });
   }
   if (demo.variant) facts.push({ label: 'Measured as', body: <InlineCode text={demo.variant} /> });

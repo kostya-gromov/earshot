@@ -16,7 +16,7 @@ const unannounced =
   'so there is no message whose count could be judged. Whether that differs is the business of "Say that the suggestions changed".';
 
 /**
- * Atlas recommendation: the message gives the number of suggestions, or says there are none.
+ * Earshot recommendation: the message gives the number of suggestions, or says there are none.
  * Judged only where the change was announced, so a silent combobox is charged once, to
  * say-results.
  */

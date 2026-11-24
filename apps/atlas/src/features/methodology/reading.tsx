@@ -8,7 +8,7 @@ const guards = [
   },
   {
     title: 'Follows is not “accessible”',
-    text: 'A rule covers one behavior of one pattern: keys, focus, announcements. A component that follows every rule here can still have barriers Atlas does not look at, such as contrast or touch.',
+    text: 'A rule covers one behavior of one pattern: keys, focus, announcements. A component that follows every rule here can still have barriers Earshot does not look at, such as contrast or touch.',
   },
   {
     title: 'Differs is not a defect',
@@ -46,15 +46,15 @@ export function HowToReadAResult() {
 
 const terms = [
   ['Pattern', 'A kind of interactive component, such as an input with chips or a combobox.'],
-  ['Rule', 'One behavior Atlas checks for a pattern.'],
+  ['Rule', 'One behavior Earshot checks for a pattern.'],
   [
     'Rule from the standards',
     'A rule whose requirement comes from WCAG or the APG, cited beside it.',
   ],
-  ['Atlas recommendation', 'A rule Atlas adds beyond the standards, with its reason.'],
+  ['Earshot recommendation', 'A rule Earshot adds beyond the standards, with its reason.'],
   [
     'Reference',
-    'Atlas’s own implementation of a pattern: the baseline the rules are written from.',
+    'Earshot’s own implementation of a pattern: the baseline the rules are written from.',
   ],
   ['System', 'A measured design system or component library.'],
   ['Scenario', 'A fixed sequence of keys or clicks from a known starting state.'],
@@ -68,7 +68,7 @@ const terms = [
   ['Semantic model', 'Spoken lines built from the accessibility tree in one fixed format.'],
 ] as const;
 
-/** The words Atlas uses with one fixed meaning each. */
+/** The words Earshot uses with one fixed meaning each. */
 export function Terms() {
   return (
     <Part id="terms" title="Terms">

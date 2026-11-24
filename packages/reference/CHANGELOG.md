@@ -4,6 +4,14 @@ One version for the package: both references are published together, and every m
 reference records this version in its provenance. A change that a reader of the site could
 notice gets an entry, with whether behavior or verdicts changed.
 
+## 0.1.9 (2026-11-24)
+
+- **tabs, the page around them:** the product is called Earshot now, not Earshot Atlas, so the
+  sample text on the page says "Earshot": the value of the field "Project name" and the first
+  sentence of the panel "Overview". The same text changed on every system's harness page for
+  tabs, so the field reads the same everywhere. Behaviour and verdicts are unchanged; every
+  reference and every system for tabs is measured again on this version.
+
 ## 0.1.8 (2026-11-23)
 
 - **tabs, fixed:** on a page 320 px wide the four tabs side by side were wider than the page, and

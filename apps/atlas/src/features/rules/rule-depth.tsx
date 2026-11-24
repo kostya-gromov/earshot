@@ -59,7 +59,7 @@ function RuleHead({ rule }: { rule: Pattern['rules'][number] }) {
       <h3>{rule.title}</h3>
       <p className={styles.level}>
         {rule.level === 'recommendation'
-          ? 'Atlas recommendation, beyond what WCAG asks'
+          ? 'Earshot recommendation, beyond what WCAG asks'
           : 'Rule from the standards'}
       </p>
       <p className={styles.description}>{rule.description}</p>

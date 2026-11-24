@@ -22,7 +22,7 @@ test("the footer's Suggest a correction leads to how corrections work, and a way
   ).toBeInViewport();
   await expect(page.getByRole('link', { name: 'open a correction' })).toHaveAttribute(
     'href',
-    'https://github.com/kostya-gromov/earshot-atlas/issues/new?template=correction.yml',
+    'https://github.com/kostya-gromov/earshot/issues/new?template=correction.yml',
   );
 });
 
@@ -37,7 +37,7 @@ test('the pattern page ends with how to read it and a link to the methodology', 
   page,
 }) => {
   await page.goto('/patterns/input-with-chips/');
-  const note = page.getByRole('complementary', { name: 'How to read Atlas' });
+  const note = page.getByRole('complementary', { name: 'How to read Earshot' });
   await expect(note).toContainText('Guidance, not certification.');
   await expect(note.getByRole('link', { name: 'Read the methodology' })).toHaveAttribute(
     'href',

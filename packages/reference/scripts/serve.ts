@@ -68,7 +68,7 @@ async function reply(url: string, { root, home }: Required<Omit<ServerOptions, '
   const queryAt = url.indexOf('?');
   const urlPath = queryAt === -1 ? url : url.slice(0, queryAt);
   const query = queryAt === -1 ? '' : url.slice(queryAt);
-  // A site whose home is the root itself (the Atlas export) serves its own index.html.
+  // A site whose home is the root itself (the Earshot export) serves its own index.html.
   if (urlPath === '/' && home !== '/') return { status: 302, headers: { location: home } };
   // Directory URLs need a trailing slash so relative links in index.html resolve.
   if (!extname(urlPath) && !urlPath.endsWith('/')) {

@@ -13,8 +13,8 @@ export function WhichSystems({ children }: { children?: ReactNode }) {
       </p>
       <p>
         A composition is built exactly as the docs write it, and the system&rsquo;s column says
-        &ldquo;Docs composition, assembled by Atlas&rdquo;, so you know we measured our assembly of
-        their example. Community packages and compositions we would design ourselves are not
+        &ldquo;Docs composition, assembled by Earshot&rdquo;, so you know we measured our assembly
+        of their example. Community packages and compositions we would design ourselves are not
         measured.
       </p>
       {children}

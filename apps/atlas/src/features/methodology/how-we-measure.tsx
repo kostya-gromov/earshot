@@ -66,7 +66,7 @@ export function WhatARunDoes() {
   return (
     <Part id="run" title="What one run does">
       <p>
-        For each system, Atlas builds a page that renders the system’s published npm package at an
+        For each system, Earshot builds a page that renders the system’s published npm package at an
         exact version, as the system’s own docs example does, with the same three people selected
         and a field before and after it. The engine opens that page in Chromium under fixed
         conditions and installs its recorders before the page loads.

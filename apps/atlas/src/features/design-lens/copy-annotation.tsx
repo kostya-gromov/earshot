@@ -60,7 +60,7 @@ export function CopyAnnotation({
     return () => clearTimeout(timer);
   }, [outcome]);
   async function copy() {
-    const from = `From Earshot Atlas: ${window.location.origin}${path}`;
+    const from = `From Earshot: ${window.location.origin}${path}`;
     try {
       await navigator.clipboard.writeText(`${text}\n\n${from}`);
       setOutcome('copied');

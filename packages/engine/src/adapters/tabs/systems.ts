@@ -22,7 +22,7 @@ export const createFluentTabsTarget = () =>
     id: 'fluent',
     system: 'Fluent 2',
     notes:
-      'Docs composition, assembled by Atlas: TabList with Tab, and panels as the With Panels story renders them (div role="tabpanel" with aria-labelledby, only the selected one rendered); selectTabOnFocus at its default, false.',
+      'Docs composition, assembled by Earshot: TabList with Tab, and panels as the With Panels story renders them (div role="tabpanel" with aria-labelledby, only the selected one rendered); selectTabOnFocus at its default, false.',
   });
 
 export const createMuiTabsTarget = () =>
@@ -30,7 +30,7 @@ export const createMuiTabsTarget = () =>
     id: 'mui',
     system: 'MUI',
     notes:
-      'Docs composition, assembled by Atlas: Tabs with Tab, and CustomTabPanel and a11yProps as the Basic tabs demo defines them; manual activation, the documented default (selectionFollowsFocus not set).',
+      'Docs composition, assembled by Earshot: Tabs with Tab, and CustomTabPanel and a11yProps as the Basic tabs demo defines them; manual activation, the documented default (selectionFollowsFocus not set).',
   });
 
 export const createAtlassianTabsTarget = () =>

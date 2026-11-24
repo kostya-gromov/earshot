@@ -106,14 +106,14 @@ test('every card says where its numbers come from and how to challenge them', as
     (await panel.getByRole('link', { name: 'Suggest a correction' }).getAttribute('href'))!,
   );
   expect(correction.origin + correction.pathname).toBe(
-    'https://github.com/kostya-gromov/earshot-atlas/issues/new',
+    'https://github.com/kostya-gromov/earshot/issues/new',
   );
   expect(correction.searchParams.get('template')).toBe('correction.yml');
   expect(correction.searchParams.get('title')).toMatch(
     /^Correction: MUI 9\.5\.0, input-with-chips \/ /,
   );
   expect(correction.searchParams.get('file')).toBe(
-    'https://github.com/kostya-gromov/earshot-atlas/blob/main/data/measurements/input-with-chips/mui.json',
+    'https://github.com/kostya-gromov/earshot/blob/main/data/measurements/input-with-chips/mui.json',
   );
 });
 

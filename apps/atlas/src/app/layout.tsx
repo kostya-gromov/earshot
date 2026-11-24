@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   // Link previews need absolute addresses; the image itself is app/opengraph-image.png, taken
   // from the home page by scripts/og-image.ts.
   metadataBase: new URL(siteOrigin),
-  title: { default: 'Atlas', template: '%s · Atlas' },
+  title: { default: 'Earshot', template: '%s · Earshot' },
   description:
     'Keyboard behavior, focus and announcements of interactive components, measured across design systems.',
-  openGraph: { siteName: 'Earshot Atlas', type: 'website' },
+  openGraph: { siteName: 'Earshot', type: 'website' },
   twitter: { card: 'summary_large_image' },
 };
 

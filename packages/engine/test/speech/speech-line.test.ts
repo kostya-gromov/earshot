@@ -5,7 +5,7 @@ import { announcement, focus } from './fixtures.ts';
 describe('synthesizeSpeech', () => {
   it('orders assertive announcements, focus and polite announcements', () => {
     const lines = synthesizeSpeech({
-      documentTitle: 'Atlas',
+      documentTitle: 'Earshot',
       focusBefore: focus(),
       focusAfter: focus({
         role: 'button',
@@ -32,7 +32,7 @@ describe('synthesizeSpeech', () => {
   it('uses path to detect focus changes between semantically identical elements', () => {
     expect(
       synthesizeSpeech({
-        documentTitle: 'Atlas',
+        documentTitle: 'Earshot',
         focusBefore: focus({ path: '#first' }),
         focusAfter: focus({ path: '#second' }),
         announcements: [],
@@ -43,7 +43,7 @@ describe('synthesizeSpeech', () => {
   it('falls back to body, role and name when paths are unavailable', () => {
     expect(
       synthesizeSpeech({
-        documentTitle: 'Atlas',
+        documentTitle: 'Earshot',
         focusBefore: focus({ path: undefined }),
         focusAfter: focus({ role: 'button', name: 'Remove Irene Oh', path: undefined }),
         announcements: [],
@@ -54,7 +54,7 @@ describe('synthesizeSpeech', () => {
   it('speaks a changed active descendant when DOM focus stays put', () => {
     expect(
       synthesizeSpeech({
-        documentTitle: 'Atlas',
+        documentTitle: 'Earshot',
         focusBefore: focus({
           activeDescendant: { role: 'option', name: 'One', states: { selected: true } },
         }),
@@ -75,7 +75,7 @@ describe('synthesizeSpeech', () => {
   it('says the element and then its active descendant when focus lands on it', () => {
     expect(
       synthesizeSpeech({
-        documentTitle: 'Atlas',
+        documentTitle: 'Earshot',
         focusBefore: focus(),
         focusAfter: focus({
           path: '#other',
@@ -89,7 +89,7 @@ describe('synthesizeSpeech', () => {
   it('describes focus lost to the document body', () => {
     expect(
       synthesizeSpeech({
-        documentTitle: 'Atlas',
+        documentTitle: 'Earshot',
         focusBefore: focus(),
         focusAfter: focus({
           role: null,
@@ -100,7 +100,7 @@ describe('synthesizeSpeech', () => {
         }),
         announcements: [],
       }),
-    ).toEqual(['Atlas, document']);
+    ).toEqual(['Earshot, document']);
   });
 
   it('uses document when the page title is empty', () => {
@@ -123,7 +123,7 @@ describe('synthesizeSpeech', () => {
   it('returns nothing when focus and active descendant are unchanged', () => {
     expect(
       synthesizeSpeech({
-        documentTitle: 'Atlas',
+        documentTitle: 'Earshot',
         focusBefore: focus(),
         focusAfter: focus(),
         announcements: [],
@@ -138,7 +138,7 @@ describe('synthesizeSpeech', () => {
     const away = focus({ role: null, name: '', isBody: true, leftPage: true, path: undefined });
     expect(
       synthesizeSpeech({
-        documentTitle: 'Atlas',
+        documentTitle: 'Earshot',
         focusBefore: focus({ path: '#first' }),
         focusAfter: away,
         announcements: [],
@@ -146,7 +146,7 @@ describe('synthesizeSpeech', () => {
     ).toEqual([]);
     expect(
       synthesizeSpeech({
-        documentTitle: 'Atlas',
+        documentTitle: 'Earshot',
         focusBefore: focus({ path: '#first' }),
         focusAfter: away,
         announcements: [announcement('Saved', 'polite')],
@@ -157,11 +157,11 @@ describe('synthesizeSpeech', () => {
   it('still names the document when focus fell to it with the page keeping focus', () => {
     expect(
       synthesizeSpeech({
-        documentTitle: 'Atlas',
+        documentTitle: 'Earshot',
         focusBefore: focus({ path: '#first' }),
         focusAfter: focus({ role: null, name: '', isBody: true, path: undefined }),
         announcements: [],
       }),
-    ).toEqual(['Atlas, document']);
+    ).toEqual(['Earshot, document']);
   });
 });

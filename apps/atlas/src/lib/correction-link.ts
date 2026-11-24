@@ -1,7 +1,7 @@
 import type { Measurement } from '@earshot/contracts';
 
 /** Where corrections are filed and where the raw files can be read. */
-export const publicRepository = 'https://github.com/kostya-gromov/earshot-atlas';
+export const publicRepository = 'https://github.com/kostya-gromov/earshot';
 
 /** The issue form in `.github/ISSUE_TEMPLATE/`. Its field ids are the query parameters below. */
 const template = 'correction.yml';

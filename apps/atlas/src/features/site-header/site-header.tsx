@@ -14,7 +14,7 @@ export function SiteHeader({ crumbs }: { crumbs: readonly Crumb[] }) {
     <header className={styles.header}>
       <a className={styles.brand} href="/" aria-current={crumbs.length === 0 ? 'page' : undefined}>
         <BrandMark />
-        Atlas
+        Earshot
       </a>
       {/* The home page is the root of the trail, so it has none. */}
       {crumbs.length > 0 && (

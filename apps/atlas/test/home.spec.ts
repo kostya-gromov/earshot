@@ -56,14 +56,14 @@ test('the three patterns added last are listed, newest first, with the way to al
 
 test('the breadcrumb and brand lead home from any page', async ({ page }) => {
   await page.goto('/methodology/');
-  await page.getByRole('link', { name: 'Atlas', exact: true }).click();
+  await page.getByRole('banner').getByRole('link', { name: 'Earshot', exact: true }).click();
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
     'How should an interactive component behave?',
   );
 });
 
 // Design review 2026-11-12: the opening's scene is a real recording, not a drawn schematic of a
-// pattern Atlas has not measured, and the page has one pause control, not three.
+// pattern Earshot has not measured, and the page has one pause control, not three.
 test('the opening shows the recorded example and no drawn schematic', async ({ page }) => {
   await page.goto('/');
   const opening = page.getByRole('region', { name: /^How should an interactive component/ });
@@ -77,13 +77,13 @@ test('under reduced motion the example shows every system’s result at once', a
   await page.goto('/');
   const scene = page.getByRole('region', { name: /These fields look the same/ });
   await scene.scrollIntoViewIfNeeded();
-  await expect(scene).toContainText('Recorded by the Atlas engine in Chromium');
+  await expect(scene).toContainText('Recorded by the Earshot engine in Chromium');
   await expect(scene.getByText('Waiting for Backspace').filter({ visible: true })).toHaveCount(0);
   // Five systems, five behaviours of one key: at least one removes a chip, one does not.
   await expect(scene).toContainText('Nothing changed in the accessibility tree');
 });
 
-test('says plainly that Atlas is guidance on the standards, not certification', async ({
+test('says plainly that Earshot is guidance on the standards, not certification', async ({
   page,
 }) => {
   await page.goto('/');
@@ -102,13 +102,13 @@ test('says plainly that Atlas is guidance on the standards, not certification', 
     'href',
     '/methodology/',
   );
-  // The method says where Atlas goes further than the standards.
+  // The method says where Earshot goes further than the standards.
   await expect(page.getByRole('region', { name: /^Rules, recordings, verdicts/ })).toContainText(
     'the rule is marked as a recommendation',
   );
 });
 
-test('the footer lists every pattern, the standards and how Atlas works', async ({ page }) => {
+test('the footer lists every pattern, the standards and how Earshot works', async ({ page }) => {
   await page.goto('/');
   const footer = page.getByRole('contentinfo');
   await expect(footer.getByRole('link', { name: 'Input with chips' })).toHaveAttribute(
@@ -157,7 +157,7 @@ test('the method is shown with totals counted from the measurements', async ({ p
     .filter({ has: page.getByRole('heading', { level: 3 }) });
   await expect(steps).toHaveCount(3);
   await expect(steps.nth(0)).toContainText(/\d+ rules/);
-  await expect(steps.nth(0)).toContainText('Atlas recommendations');
+  await expect(steps.nth(0)).toContainText('Earshot recommendations');
   // "Written from the standards" is shown as the pages themselves, linked to their source.
   await expect(steps.nth(0).getByRole('link', { name: 'Focus Order' })).toHaveAttribute(
     'href',

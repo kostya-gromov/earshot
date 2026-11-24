@@ -118,7 +118,7 @@ describe('citedPages and recommendations', () => {
 });
 
 describe('ruleLevels', () => {
-  it('counts rules from the standards apart from the recommendations Atlas adds', () => {
+  it('counts rules from the standards apart from the recommendations Earshot adds', () => {
     const levels = ruleLevels([
       pattern('input-with-chips', 'Input with chips', [
         rule('a', []),

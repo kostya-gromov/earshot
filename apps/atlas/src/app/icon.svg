@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <!-- The Atlas mark (ui/brand-mark): the Tab key, its stop in the focus colour. Token values of
+  <!-- The Earshot mark (ui/brand-mark): the Tab key, its stop in the focus colour. Token values of
        the light theme, and of the dark theme where the browser's own chrome is dark. -->
   <style>
     .key { fill: oklch(0.2 0.015 260); }

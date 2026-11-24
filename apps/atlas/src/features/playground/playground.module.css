@@ -274,7 +274,7 @@
 /*
  * The suggestions open over what is below the field, not in the flow: in the flow they pushed
  * "You would hear" and the whole page down by 157 px on the first letter typed and pulled it back
- * on Enter (design review 2026-11-13). Placed by Atlas; the reference's own code is unchanged.
+ * on Enter (design review 2026-11-13). Placed by Earshot; the reference's own code is unchanged.
  * The field is a grid and already a containing block (container-type above). Out of the flow,
  * the list is given the grid row right under the box (label, box, then this row), so it opens
  * there and not at the top of the field.
@@ -297,7 +297,7 @@
 }
 
 /*
- * On Atlas, blue means keyboard focus and nothing else (CLAUDE.md 11), so the reference's
+ * On Earshot, blue means keyboard focus and nothing else (CLAUDE.md 11), so the reference's
  * coloured avatars are shown neutral here. The inline colour needs !important to be overridden;
  * the reference code itself is unchanged.
  */
@@ -310,7 +310,7 @@
 /*
  * Combobox. Its list opens over room kept for it under the field: all six measured options fit,
  * so an open list never covers "You would hear" and never moves the page. The reference places
- * the list itself; Atlas only gives it the site's surface.
+ * the list itself; Earshot only gives it the site's surface.
  */
 .stage :global(.combobox) {
   /* The reference places its list at the bottom edge of this box, so the room goes under it. */

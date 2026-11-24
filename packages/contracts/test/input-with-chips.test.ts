@@ -16,7 +16,7 @@ describe('input-with-chips metadata', () => {
   });
 
   // Verdict audit 2026-11-09: only what a cited WCAG criterion or APG practice asks is a rule.
-  it('marks what no cited standard asks for as an Atlas recommendation', () => {
+  it('marks what no cited standard asks for as an Earshot recommendation', () => {
     const levels = Object.fromEntries(inputWithChips.rules.map((r) => [r.id, r.level]));
     expect(levels).toEqual({
       'chip-stop': 'rule',

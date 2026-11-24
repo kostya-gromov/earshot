@@ -13,8 +13,12 @@ interface Change {
 
 const changes: readonly Change[] = [
   {
+    date: '24 Nov 2026',
+    text: 'Earshot Atlas is now called Earshot. Rules that used to say “An Atlas recommendation” now say “An Earshot recommendation”; what they ask is the same. The sample text on the tabs pages changed with the name, so the reference went to 0.1.9, and every reference and every tabs system was measured again on engine 0.20.0. No verdict and no reason changed.',
+  },
+  {
     date: '23 Nov 2026',
-    text: 'Modal dialog, the fifth pattern, is on the site: ten rules, two of them Atlas recommendations, measured in six systems on engine 0.20.0 with reference 0.1.8. Five of the six follow all ten; one does not report its dialog as modal in the accessibility tree while it behaves as one. Two systems are measured as their documentation’s form example builds the dialog, with focus set on the first field, and the same dialog without that is shown beside them and not counted. A click on the page behind is recorded and drawn where it was made.',
+    text: 'Modal dialog, the fifth pattern, is on the site: ten rules, two of them Earshot recommendations, measured in six systems on engine 0.20.0 with reference 0.1.8. Five of the six follow all ten; one does not report its dialog as modal in the accessibility tree while it behaves as one. Two systems are measured as their documentation’s form example builds the dialog, with focus set on the first field, and the same dialog without that is shown beside them and not counted. A click on the page behind is recorded and drawn where it was made.',
   },
   {
     date: '23 Nov 2026',
@@ -46,7 +50,7 @@ const changes: readonly Change[] = [
   },
   {
     date: '17 Nov 2026',
-    text: 'Two rules of input with chips are Atlas recommendations now, not rules from the standards: “Arrows move between chips” and “Keep focus in the field after a removal”. For the first, APG’s keyboard practice says arrow keys move focus inside a composite and leaves the choice of keys to the author, and in APG’s pill list Left and Right Arrow move through a recipient and its remove icon. For the second, APG calls it essential that focus is not lost to the page body when an item is deleted, and WCAG 2.4.3 is about the order of focus; that focus stays in the field is what Atlas adds. All five citations are marked as related. No verdict changed.',
+    text: 'Two rules of input with chips are Earshot recommendations now, not rules from the standards: “Arrows move between chips” and “Keep focus in the field after a removal”. For the first, APG’s keyboard practice says arrow keys move focus inside a composite and leaves the choice of keys to the author, and in APG’s pill list Left and Right Arrow move through a recipient and its remove icon. For the second, APG calls it essential that focus is not lost to the page body when an item is deleted, and WCAG 2.4.3 is about the order of focus; that focus stays in the field is what Earshot adds. All five citations are marked as related. No verdict changed.',
   },
   {
     date: '16 Nov 2026',
@@ -87,15 +91,15 @@ const changes: readonly Change[] = [
   },
   {
     date: '10 Nov 2026',
-    text: 'Two rules added for the chips as one widget, with three scenarios that start on the last chip. “One stop for the whole field” became an Atlas recommendation: treating the input and its chips as one widget is Atlas’s design, not something the APG asks.',
+    text: 'Two rules added for the chips as one widget, with three scenarios that start on the last chip. “One stop for the whole field” became an Earshot recommendation: treating the input and its chips as one widget is Earshot’s design, not something the APG asks.',
   },
   {
     date: '9 Nov 2026',
-    text: 'Every rule got a level: rule from the standards, or Atlas recommendation. “Keep focus in the field after a removal” now accepts any place in the field, not only the input. “Say how many remain” is judged only where the removal is announced, so a silent removal counts once. Agreement is counted over the systems a rule could be judged on. MUI, React Aria and Chakra UI added.',
+    text: 'Every rule got a level: rule from the standards, or Earshot recommendation. “Keep focus in the field after a removal” now accepts any place in the field, not only the input. “Say how many remain” is judged only where the removal is announced, so a silent removal counts once. Agreement is counted over the systems a rule could be judged on. MUI, React Aria and Chakra UI added.',
   },
   {
     date: '8 Nov 2026',
-    text: 'Systems are measured from their published npm package on a page Atlas builds, no longer on docs demos. Differs is shown in neutral, never red. Components deprecated by their own maintainers are shown but not counted in agreement.',
+    text: 'Systems are measured from their published npm package on a page Earshot builds, no longer on docs demos. Differs is shown in neutral, never red. Components deprecated by their own maintainers are shown but not counted in agreement.',
   },
   {
     date: '6 Nov 2026',
@@ -109,7 +113,7 @@ export function Changes() {
     <Part id="changes" title="What changed, and when">
       <p>
         Rules, scenarios and counting change as we learn. Each change is dated here, newest first.
-        Atlas was first published on 19 Nov 2026; a verdict that changes after that is listed here
+        Earshot was first published on 19 Nov 2026; a verdict that changes after that is listed here
         with the versions and dates before and after.
       </p>
       <dl>

@@ -14,7 +14,7 @@ import {
 } from './facts.ts';
 
 /**
- * Atlas recommendation: after an action, focus is on the button. Judged only where the item was
+ * Earshot recommendation: after an action, focus is on the button. Judged only where the item was
  * activated and the menu closed, so a menu that does neither is charged once, to "activate".
  */
 export function evaluateFocusReturns(input: EvaluatorInput): VerdictResult {

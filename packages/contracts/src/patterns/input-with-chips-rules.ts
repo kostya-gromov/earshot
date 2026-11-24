@@ -1,7 +1,7 @@
 import type { Rule } from '../schema/index.ts';
 import { apg, wcag } from './input-with-chips-sources.ts';
 
-/** The rules and Atlas recommendations for input-with-chips (docs/patterns/input-with-chips.md). */
+/** The rules and Earshot recommendations for input-with-chips (docs/patterns/input-with-chips.md). */
 export const inputWithChipsRules: Rule[] = [
   {
     id: 'chip-stop',
@@ -24,7 +24,7 @@ export const inputWithChipsRules: Rule[] = [
     id: 'chip-arrows',
     title: 'Arrows move between chips',
     description:
-      'From a chip, Left Arrow moves focus to the previous chip and Right Arrow to the next. An Atlas recommendation: APG’s keyboard practice says that arrow keys, not Tab, move focus inside a composite widget, leaves the choice of keys to the author and strongly advises the keys of similar components; it names no keys for a row. In APG’s pill list Left and Right Arrow move through a recipient and its remove icon, not from chip to chip. Does not apply to chips that are separate controls in the tab sequence. Measured from the last chip, which the engine focuses directly.',
+      'From a chip, Left Arrow moves focus to the previous chip and Right Arrow to the next. An Earshot recommendation: APG’s keyboard practice says that arrow keys, not Tab, move focus inside a composite widget, leaves the choice of keys to the author and strongly advises the keys of similar components; it names no keys for a row. In APG’s pill list Left and Right Arrow move through a recipient and its remove icon, not from chip to chip. Does not apply to chips that are separate controls in the tab sequence. Measured from the last chip, which the engine focuses directly.',
     keys: ['ArrowLeft', 'ArrowRight'],
     level: 'recommendation',
     sources: [
@@ -49,14 +49,14 @@ export const inputWithChipsRules: Rule[] = [
     id: 'tab',
     title: 'One stop for the whole field',
     description:
-      'The input and its chips share one Tab stop: Tab and Shift+Tab from the input leave the field, and so does Tab from a chip. An Atlas recommendation: APG asks for one stop per composite widget, and treating the input and its chips as one widget is our design, so the whole field costs one Tab.',
+      'The input and its chips share one Tab stop: Tab and Shift+Tab from the input leave the field, and so does Tab from a chip. An Earshot recommendation: APG asks for one stop per composite widget, and treating the input and its chips as one widget is our design, so the whole field costs one Tab.',
     keys: ['Tab', 'Shift+Tab'],
     level: 'recommendation',
     sources: [
       {
         ...apg.rovingTabindex,
         relation: 'related',
-        note: 'Related: APG asks for one Tab stop per composite widget. That the input and the chips form one widget is Atlas’s design: APG’s own pill list keeps its input separate.',
+        note: 'Related: APG asks for one Tab stop per composite widget. That the input and the chips form one widget is Earshot’s design: APG’s own pill list keeps its input separate.',
       },
     ],
   },
@@ -64,7 +64,7 @@ export const inputWithChipsRules: Rule[] = [
     id: 'arrows',
     title: 'Arrows join the input and the chips',
     description:
-      'From caret position 0, Left Arrow moves focus to the last chip, and Right Arrow past the last chip returns to the input. An Atlas recommendation: it lets a keyboard user reach the chips without leaving the field; APG does not define this crossing. Moving between chips is the rule above.',
+      'From caret position 0, Left Arrow moves focus to the last chip, and Right Arrow past the last chip returns to the input. An Earshot recommendation: it lets a keyboard user reach the chips without leaving the field; APG does not define this crossing. Moving between chips is the rule above.',
     keys: ['ArrowLeft', 'ArrowRight'],
     level: 'recommendation',
     sources: [
@@ -79,7 +79,7 @@ export const inputWithChipsRules: Rule[] = [
     id: 'bsp',
     title: 'Backspace twice to remove',
     description:
-      'In an empty input, the first Backspace moves focus to the last chip. The second removes it. An Atlas recommendation: no standard asks for two presses; it makes a removal deliberate and lets a screen reader say which chip is about to go.',
+      'In an empty input, the first Backspace moves focus to the last chip. The second removes it. An Earshot recommendation: no standard asks for two presses; it makes a removal deliberate and lets a screen reader say which chip is about to go.',
     keys: ['Backspace'],
     level: 'recommendation',
     sources: [
@@ -98,7 +98,7 @@ export const inputWithChipsRules: Rule[] = [
     id: 'keep-focus',
     title: 'Keep focus in the field after a removal',
     description:
-      'After a removal, by key or by clicking a remove button, focus stays in the field: on a neighbouring chip or the input. It never falls to the page body or leaves the field. An Atlas recommendation: APG calls it essential that focus is not lost to the page body when an item is deleted; that focus stays in this field, on a neighbouring chip or the input, is what Atlas adds. The reference returns focus to the input after a click; a neighbouring chip is as good.',
+      'After a removal, by key or by clicking a remove button, focus stays in the field: on a neighbouring chip or the input. It never falls to the page body or leaves the field. An Earshot recommendation: APG calls it essential that focus is not lost to the page body when an item is deleted; that focus stays in this field, on a neighbouring chip or the input, is what Earshot adds. The reference returns focus to the input after a click; a neighbouring chip is as good.',
     keys: ['Backspace', 'Delete'],
     level: 'recommendation',
     sources: [
@@ -118,7 +118,7 @@ export const inputWithChipsRules: Rule[] = [
     id: 'say',
     title: 'Announce the removal',
     description:
-      'A removal is announced through a live region and names the removed value. A text counts as that announcement when it names the value and is not the same text the component puts in a live region in a step that removes nothing; a region that enters the page already holding its text is read the same way. An Atlas recommendation: Atlas reads a chip that disappears as a status message, while WCAG 4.1.3 centres on messages added to the page. In which order a screen reader speaks the announcement and the new focus varies, and the semantic model does not show it.',
+      'A removal is announced through a live region and names the removed value. A text counts as that announcement when it names the value and is not the same text the component puts in a live region in a step that removes nothing; a region that enters the page already holding its text is read the same way. An Earshot recommendation: Earshot reads a chip that disappears as a status message, while WCAG 4.1.3 centres on messages added to the page. In which order a screen reader speaks the announcement and the new focus varies, and the semantic model does not show it.',
     keys: ['Backspace', 'Delete'],
     level: 'recommendation',
     sources: [
@@ -133,7 +133,7 @@ export const inputWithChipsRules: Rule[] = [
     id: 'count',
     title: 'Say how many remain',
     description:
-      'The removal announcement also gives the new number of selected values, for example “2 selected”. An Atlas recommendation: a person who cannot see the field otherwise learns how many remain only by moving through every chip. Judged only where the removal is announced at all.',
+      'The removal announcement also gives the new number of selected values, for example “2 selected”. An Earshot recommendation: a person who cannot see the field otherwise learns how many remain only by moving through every chip. Judged only where the removal is announced at all.',
     keys: ['Backspace', 'Delete'],
     level: 'recommendation',
     sources: [

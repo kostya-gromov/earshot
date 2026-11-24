@@ -1,7 +1,7 @@
 /**
  * Turns a reference TypeScript module into the JavaScript the browser runs. Because the
  * reference uses erasable syntax only, this removes type annotations and rewrites `.ts`
- * import specifiers to `.js`, nothing else. The dev server, the engine and the Atlas
+ * import specifiers to `.js`, nothing else. The dev server, the engine and the Earshot
  * "Copy as JavaScript" action all use this one function, so they cannot drift apart.
  *
  * Two things to know:

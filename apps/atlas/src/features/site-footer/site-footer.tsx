@@ -24,7 +24,7 @@ function Column({ title, children }: { title: string; children: ReactNode }) {
   );
 }
 
-/** Where to go next: every pattern, the standards themselves, how Atlas works. */
+/** Where to go next: every pattern, the standards themselves, how Earshot works. */
 function FooterNav() {
   return (
     <nav className={styles.columns} aria-label="Footer">
@@ -62,7 +62,7 @@ function FooterNav() {
 }
 
 /**
- * The same on every page: what Atlas is and where to go. What it does not claim is said once per
+ * The same on every page: what Earshot is and where to go. What it does not claim is said once per
  * page, by the page (the honesty band or note), not repeated here (design review 2026-11-12).
  */
 export function SiteFooter() {
@@ -72,7 +72,7 @@ export function SiteFooter() {
         <div className={styles.brand}>
           <a href="/" className={styles.brandLink}>
             <BrandMark />
-            Earshot Atlas
+            Earshot
           </a>
           <p>
             How interactive components behave for keyboard and assistive technology: advice built on

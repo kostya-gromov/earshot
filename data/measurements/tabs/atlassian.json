@@ -17,7 +17,7 @@
     "engineVersion": "0.20.0",
     "browser": "chromium 156.0.8078.4",
     "os": "darwin",
-    "measuredAt": "2026-11-23T09:56:24.668Z",
+    "measuredAt": "2026-11-24T09:40:08.505Z",
     "runs": 3,
     "consistent": true
   },
@@ -48,7 +48,7 @@
                 "isBody": false,
                 "isInsideComponent": false,
                 "isInsidePanel": false,
-                "value": "Earshot Atlas",
+                "value": "Earshot",
                 "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
                 "element": 1
               },
@@ -77,7 +77,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 409,
                 "quiet": true
               },
               "tabSet": {
@@ -183,7 +183,7 @@
                 "isBody": false,
                 "isInsideComponent": false,
                 "isInsidePanel": false,
-                "value": "Earshot Atlas",
+                "value": "Earshot",
                 "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
                 "element": 1
               },
@@ -212,7 +212,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 406,
                 "quiet": true
               },
               "tabSet": {
@@ -318,7 +318,7 @@
                 "isBody": false,
                 "isInsideComponent": false,
                 "isInsidePanel": false,
-                "value": "Earshot Atlas",
+                "value": "Earshot",
                 "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
                 "element": 1
               },
@@ -347,7 +347,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 409,
                 "quiet": true
               },
               "tabSet": {
@@ -485,7 +485,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 405,
                 "quiet": true
               },
               "tabSet": {
@@ -604,7 +604,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 409,
                 "quiet": true
               },
               "tabSet": {
@@ -850,7 +850,7 @@
                 "isBody": false,
                 "isInsideComponent": false,
                 "isInsidePanel": false,
-                "value": "Earshot Atlas",
+                "value": "Earshot",
                 "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
                 "element": 5
               },
@@ -861,7 +861,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 411,
                 "quiet": true
               },
               "tabSet": {
@@ -988,7 +988,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 405,
                 "quiet": true
               },
               "tabSet": {
@@ -1107,7 +1107,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 407,
+                "ms": 412,
                 "quiet": true
               },
               "tabSet": {
@@ -1353,7 +1353,7 @@
                 "isBody": false,
                 "isInsideComponent": false,
                 "isInsidePanel": false,
-                "value": "Earshot Atlas",
+                "value": "Earshot",
                 "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
                 "element": 5
               },
@@ -1364,7 +1364,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 414,
                 "quiet": true
               },
               "tabSet": {
@@ -1491,7 +1491,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 401,
                 "quiet": true
               },
               "tabSet": {
@@ -1610,7 +1610,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 400,
                 "quiet": true
               },
               "tabSet": {
@@ -1856,7 +1856,7 @@
                 "isBody": false,
                 "isInsideComponent": false,
                 "isInsidePanel": false,
-                "value": "Earshot Atlas",
+                "value": "Earshot",
                 "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
                 "element": 5
               },
@@ -1867,7 +1867,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 411,
                 "quiet": true
               },
               "tabSet": {
@@ -2011,7 +2011,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 411,
                 "quiet": true
               },
               "tabSet": {
@@ -2143,7 +2143,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 413,
                 "quiet": true
               },
               "tabSet": {
@@ -2275,7 +2275,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 412,
                 "quiet": true
               },
               "tabSet": {
@@ -2419,7 +2419,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 408,
                 "quiet": true
               },
               "tabSet": {
@@ -2551,7 +2551,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 403,
                 "quiet": true
               },
               "tabSet": {
@@ -2865,7 +2865,546 @@
                       "name": "Recent changes to the project appear here."
                     },
                     "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
+                    "after": "Recent changes to the project appear here."
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 411,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Activity",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Activity, tab, 2 of 4, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Members",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-2",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "link",
+                    "name": "Invite people"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Invite people"
+                  }
+                ],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Activity"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Members"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "tabpanel",
+                      "name": "Members"
+                    },
+                    "property": "name",
+                    "before": "Activity",
+                    "after": "Members"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": " to review the measurements with you."
+                    },
+                    "property": "name",
+                    "before": "Recent changes to the project appear here.",
+                    "after": " to review the measurements with you."
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Activity",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Members, tab, 3 of 4, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Members",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-2",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "link",
+                    "name": "Invite people"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Invite people"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Activity"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Members"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "tabpanel",
+                      "name": "Activity"
+                    },
+                    "property": "name",
+                    "before": "Members",
+                    "after": "Activity"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Recent changes to the project appear here."
+                    },
+                    "property": "name",
+                    "before": " to review the measurements with you.",
+                    "after": "Recent changes to the project appear here."
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Activity",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Activity, tab, 2 of 4, selected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Overview"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Activity"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "tabpanel",
+                      "name": "Activity"
+                    },
+                    "property": "name",
+                    "before": "Overview",
+                    "after": "Activity"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Recent changes to the project appear here."
+                    },
+                    "property": "name",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
                     "after": "Recent changes to the project appear here."
                   }
                 ]
@@ -3052,7 +3591,7 @@
                 ]
               },
               "settle": {
-                "ms": 409,
+                "ms": 406,
                 "quiet": true
               },
               "tabSet": {
@@ -3404,13 +3943,13 @@
                       "name": "Recent changes to the project appear here."
                     },
                     "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
                     "after": "Recent changes to the project appear here."
                   }
                 ]
               },
               "settle": {
-                "ms": 416,
+                "ms": 413,
                 "quiet": true
               },
               "tabSet": {
@@ -3591,7 +4130,7 @@
                 ]
               },
               "settle": {
-                "ms": 415,
+                "ms": 410,
                 "quiet": true
               },
               "tabSet": {
@@ -3772,546 +4311,7 @@
                 ]
               },
               "settle": {
-                "ms": 409,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Activity",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Activity, tab, 2 of 4, selected"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Overview"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Activity"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "tabpanel",
-                      "name": "Activity"
-                    },
-                    "property": "name",
-                    "before": "Overview",
-                    "after": "Activity"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Recent changes to the project appear here."
-                    },
-                    "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
-                    "after": "Recent changes to the project appear here."
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 416,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Activity",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Activity, tab, 2 of 4, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Members",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-2",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "link",
-                    "name": "Invite people"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Invite people"
-                  }
-                ],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Activity"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Members"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "tabpanel",
-                      "name": "Members"
-                    },
-                    "property": "name",
-                    "before": "Activity",
-                    "after": "Members"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": " to review the measurements with you."
-                    },
-                    "property": "name",
-                    "before": "Recent changes to the project appear here.",
-                    "after": " to review the measurements with you."
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 412,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Activity",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Members, tab, 3 of 4, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Members",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-2",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "link",
-                    "name": "Invite people"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Invite people"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Activity"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Members"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "tabpanel",
-                      "name": "Activity"
-                    },
-                    "property": "name",
-                    "before": "Members",
-                    "after": "Activity"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Recent changes to the project appear here."
-                    },
-                    "property": "name",
-                    "before": " to review the measurements with you.",
-                    "after": "Recent changes to the project appear here."
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 406,
+                "ms": 408,
                 "quiet": true
               },
               "tabSet": {
@@ -4493,13 +4493,13 @@
                       "name": "Settings take effect on the next measurement."
                     },
                     "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
                     "after": "Settings take effect on the next measurement."
                   }
                 ]
               },
               "settle": {
-                "ms": 403,
+                "ms": 416,
                 "quiet": true
               },
               "tabSet": {
@@ -4662,16 +4662,16 @@
                   {
                     "node": {
                       "role": "StaticText",
-                      "name": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
+                      "name": "Earshot measures how design systems behave for keyboard and screen reader users."
                     },
                     "property": "name",
                     "before": "Settings take effect on the next measurement.",
-                    "after": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
+                    "after": "Earshot measures how design systems behave for keyboard and screen reader users."
                   }
                 ]
               },
               "settle": {
-                "ms": 414,
+                "ms": 404,
                 "quiet": true
               },
               "tabSet": {
@@ -4842,13 +4842,13 @@
                       "name": "Settings take effect on the next measurement."
                     },
                     "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
                     "after": "Settings take effect on the next measurement."
                   }
                 ]
               },
               "settle": {
-                "ms": 401,
+                "ms": 412,
                 "quiet": true
               },
               "tabSet": {
@@ -5011,16 +5011,16 @@
                   {
                     "node": {
                       "role": "StaticText",
-                      "name": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
+                      "name": "Earshot measures how design systems behave for keyboard and screen reader users."
                     },
                     "property": "name",
                     "before": "Settings take effect on the next measurement.",
-                    "after": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
+                    "after": "Earshot measures how design systems behave for keyboard and screen reader users."
                   }
                 ]
               },
               "settle": {
-                "ms": 412,
+                "ms": 413,
                 "quiet": true
               },
               "tabSet": {
@@ -5191,13 +5191,13 @@
                       "name": "Settings take effect on the next measurement."
                     },
                     "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
                     "after": "Settings take effect on the next measurement."
                   }
                 ]
               },
               "settle": {
-                "ms": 412,
+                "ms": 410,
                 "quiet": true
               },
               "tabSet": {
@@ -5360,16 +5360,16 @@
                   {
                     "node": {
                       "role": "StaticText",
-                      "name": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
+                      "name": "Earshot measures how design systems behave for keyboard and screen reader users."
                     },
                     "property": "name",
                     "before": "Settings take effect on the next measurement.",
-                    "after": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
+                    "after": "Earshot measures how design systems behave for keyboard and screen reader users."
                   }
                 ]
               },
               "settle": {
-                "ms": 406,
+                "ms": 408,
                 "quiet": true
               },
               "tabSet": {
@@ -5551,7 +5551,317 @@
                       "name": "Recent changes to the project appear here."
                     },
                     "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
+                    "after": "Recent changes to the project appear here."
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Activity",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Activity, tab, 2 of 4, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Activity",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Activity",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Overview"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Activity"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "tabpanel",
+                      "name": "Activity"
+                    },
+                    "property": "name",
+                    "before": "Overview",
+                    "after": "Activity"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Recent changes to the project appear here."
+                    },
+                    "property": "name",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
                     "after": "Recent changes to the project appear here."
                   }
                 ]
@@ -5861,13 +6171,13 @@
                       "name": "Recent changes to the project appear here."
                     },
                     "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
                     "after": "Recent changes to the project appear here."
                   }
                 ]
               },
               "settle": {
-                "ms": 412,
+                "ms": 401,
                 "quiet": true
               },
               "tabSet": {
@@ -6002,317 +6312,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Activity",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Activity",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Overview"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Activity"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "tabpanel",
-                      "name": "Activity"
-                    },
-                    "property": "name",
-                    "before": "Overview",
-                    "after": "Activity"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Recent changes to the project appear here."
-                    },
-                    "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
-                    "after": "Recent changes to the project appear here."
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 406,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Activity",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Activity, tab, 2 of 4, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 408,
+                "ms": 416,
                 "quiet": true
               },
               "tabSet": {
@@ -6492,13 +6492,13 @@
                       "name": "Recent changes to the project appear here."
                     },
                     "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
                     "after": "Recent changes to the project appear here."
                   }
                 ]
               },
               "settle": {
-                "ms": 411,
+                "ms": 401,
                 "quiet": true
               },
               "tabSet": {
@@ -6633,7 +6633,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 402,
                 "quiet": true
               },
               "tabSet": {
@@ -6802,317 +6802,7 @@
                       "name": "Recent changes to the project appear here."
                     },
                     "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
-                    "after": "Recent changes to the project appear here."
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Activity",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Activity, tab, 2 of 4, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Space"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 409,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Activity",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Activity",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Overview"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Activity"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "tabpanel",
-                      "name": "Activity"
-                    },
-                    "property": "name",
-                    "before": "Overview",
-                    "after": "Activity"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Recent changes to the project appear here."
-                    },
-                    "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
                     "after": "Recent changes to the project appear here."
                   }
                 ]
@@ -7253,7 +6943,317 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 411,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Activity",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Activity",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Overview"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Activity"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "tabpanel",
+                      "name": "Activity"
+                    },
+                    "property": "name",
+                    "before": "Overview",
+                    "after": "Activity"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Recent changes to the project appear here."
+                    },
+                    "property": "name",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
+                    "after": "Recent changes to the project appear here."
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Activity",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Activity, tab, 2 of 4, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Space"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-1",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
                 "quiet": true
               },
               "tabSet": {
@@ -7402,7 +7402,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 417,
                 "quiet": true
               },
               "tabSet": {
@@ -7535,7 +7535,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 402,
                 "quiet": true
               },
               "tabSet": {
@@ -7673,7 +7673,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 404,
                 "quiet": true
               },
               "tabSet": {
@@ -7806,7 +7806,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 400,
+                "ms": 413,
                 "quiet": true
               },
               "tabSet": {
@@ -7944,7 +7944,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 416,
                 "quiet": true
               },
               "tabSet": {
@@ -8077,7 +8077,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 411,
                 "quiet": true
               },
               "tabSet": {
@@ -8256,13 +8256,13 @@
                       "name": "Settings take effect on the next measurement."
                     },
                     "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
                     "after": "Settings take effect on the next measurement."
                   }
                 ]
               },
               "settle": {
-                "ms": 414,
+                "ms": 415,
                 "quiet": true
               },
               "tabSet": {
@@ -8425,537 +8425,11 @@
                   {
                     "node": {
                       "role": "StaticText",
-                      "name": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
+                      "name": "Earshot measures how design systems behave for keyboard and screen reader users."
                     },
                     "property": "name",
                     "before": "Settings take effect on the next measurement.",
-                    "after": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": true
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Settings",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Overview, tab, 1 of 4, selected"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "End"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Settings",
-                "posInSet": 4,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 4,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-3",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Overview"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Settings"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "tabpanel",
-                      "name": "Settings"
-                    },
-                    "property": "name",
-                    "before": "Overview",
-                    "after": "Settings"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Settings take effect on the next measurement."
-                    },
-                    "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
-                    "after": "Settings take effect on the next measurement."
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 412,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": true
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Settings",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Settings, tab, 4 of 4, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Home"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Settings",
-                "posInSet": 4,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 4,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-3",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Overview"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Settings"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "tabpanel",
-                      "name": "Overview"
-                    },
-                    "property": "name",
-                    "before": "Settings",
-                    "after": "Overview"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
-                    },
-                    "property": "name",
-                    "before": "Settings take effect on the next measurement.",
-                    "after": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 409,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": true
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Settings",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Overview, tab, 1 of 4, selected"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "End"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Settings",
-                "posInSet": 4,
-                "setSize": 4,
-                "states": {
-                  "selected": true
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 4,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-3",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Overview"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Settings"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "tabpanel",
-                      "name": "Settings"
-                    },
-                    "property": "name",
-                    "before": "Overview",
-                    "after": "Settings"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Settings take effect on the next measurement."
-                    },
-                    "property": "name",
-                    "before": "Earshot Atlas measures how design systems behave for keyboard and screen reader users.",
-                    "after": "Settings take effect on the next measurement."
+                    "after": "Earshot measures how design systems behave for keyboard and screen reader users."
                   }
                 ]
               },
@@ -8970,6 +8444,183 @@
                       "role": "tab",
                       "name": "Overview",
                       "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": true
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Settings",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Overview, tab, 1 of 4, selected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "End"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Settings",
+                "posInSet": 4,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 4,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-3",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Overview"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Settings"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "tabpanel",
+                      "name": "Settings"
+                    },
+                    "property": "name",
+                    "before": "Overview",
+                    "after": "Settings"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Settings take effect on the next measurement."
+                    },
+                    "property": "name",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
+                    "after": "Settings take effect on the next measurement."
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
                         "selected": true
                       }
                     },
@@ -9123,16 +8774,365 @@
                   {
                     "node": {
                       "role": "StaticText",
-                      "name": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
+                      "name": "Earshot measures how design systems behave for keyboard and screen reader users."
                     },
                     "property": "name",
                     "before": "Settings take effect on the next measurement.",
-                    "after": "Earshot Atlas measures how design systems behave for keyboard and screen reader users."
+                    "after": "Earshot measures how design systems behave for keyboard and screen reader users."
                   }
                 ]
               },
               "settle": {
-                "ms": 409,
+                "ms": 416,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": true
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Settings",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Overview, tab, 1 of 4, selected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "End"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Settings",
+                "posInSet": 4,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 4,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-3",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Overview"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Settings"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "tabpanel",
+                      "name": "Settings"
+                    },
+                    "property": "name",
+                    "before": "Overview",
+                    "after": "Settings"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Settings take effect on the next measurement."
+                    },
+                    "property": "name",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
+                    "after": "Settings take effect on the next measurement."
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 417,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": true
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Settings",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Settings, tab, 4 of 4, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Home"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Settings",
+                "posInSet": 4,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 4,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-3",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "main:nth-child(1) > div#component > div:nth-child(1) > div:nth-child(1) > div#project-0",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Overview"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Settings"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "tabpanel",
+                      "name": "Overview"
+                    },
+                    "property": "name",
+                    "before": "Settings",
+                    "after": "Overview"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Earshot measures how design systems behave for keyboard and screen reader users."
+                    },
+                    "property": "name",
+                    "before": "Settings take effect on the next measurement.",
+                    "after": "Earshot measures how design systems behave for keyboard and screen reader users."
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 415,
                 "quiet": true
               },
               "tabSet": {

@@ -7,7 +7,7 @@ describe('tabs pattern', () => {
     expect(patternsInProgress[tabs.id]).toBeUndefined();
   });
 
-  it('has the nine rules of the approved proposal, one of them an Atlas recommendation', () => {
+  it('has the nine rules of the approved proposal, one of them an Earshot recommendation', () => {
     expect(tabs.rules.map((rule) => rule.id)).toEqual([
       'tab-in',
       'tab-out',

@@ -7,7 +7,7 @@ describe('dialog pattern', () => {
     expect(patternsInProgress).toEqual({});
   });
 
-  it('has the ten rules of the opened proposal, two of them Atlas recommendations', () => {
+  it('has the ten rules of the opened proposal, two of them Earshot recommendations', () => {
     expect(dialog.rules.map((rule) => rule.id)).toEqual([
       'open-focus',
       'focus-not-on-dialog',

@@ -1,4 +1,4 @@
-# Earshot Atlas
+# Earshot
 
 A reference for complex UI patterns that answers three questions: how the pattern should behave, what real design systems actually do, and what accessibility asks of the design and the code. The answers come from measurement. An automated engine presses real keys in each system's published component, then records where focus goes, how the accessibility tree changes and what live regions announce. It judges every rule from that record.
 
@@ -66,7 +66,7 @@ Run one build and one browser suite at a time. In parallel, runs time out for no
 
 ## License
 
-The code is under the MIT License ([`LICENSE`](LICENSE)). The measurements and targets in `data/` and the documents in `docs/` are under Creative Commons Attribution 4.0 ([`LICENSE-CC-BY-4.0`](LICENSE-CC-BY-4.0)): use them, with credit to Earshot Atlas and a link to this repository. The design systems that are measured are not part of this repository. The harness installs their published packages, which keep their own licenses.
+The code is under the MIT License ([`LICENSE`](LICENSE)). The measurements and targets in `data/` and the documents in `docs/` are under Creative Commons Attribution 4.0 ([`LICENSE-CC-BY-4.0`](LICENSE-CC-BY-4.0)): use them, with credit to Earshot and a link to this repository. The design systems that are measured are not part of this repository. The harness installs their published packages, which keep their own licenses.
 
 ## Layout
 

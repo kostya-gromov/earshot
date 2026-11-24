@@ -8,7 +8,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Patterns',
   description:
-    'Every pattern Atlas has measured: its rules, a working reference, and recordings of how design systems behave for keyboard and screen reader users.',
+    'Every pattern Earshot has measured: its rules, a working reference, and recordings of how design systems behave for keyboard and screen reader users.',
 };
 
 const plural = (count: number, one: string, many: string) => `${count} ${count === 1 ? one : many}`;

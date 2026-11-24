@@ -13,6 +13,8 @@ One line per document: what it answers. Search here first, then open the one you
 - [0007](decisions/0007-chip-recognition.md): a chip is recognised by set position or the adapter's items.
 - [0009](decisions/0009-input-with-chips-rule-history.md): dated history of the input-with-chips rules and counting.
 - [0010](decisions/0010-home-motion-and-figures.md): home page motion: Illustration and Arrival tiers, figures inside the method.
+- [0011](decisions/0011-product-name.md): the product is called Earshot; internal names and dated records stay.
+- [Decision rights](decision-rights.md): who decides what, the owner or Claude; imported by CLAUDE.md.
 
 ## Patterns
 
@@ -36,7 +38,7 @@ One line per document: what it answers. Search here first, then open the one you
 - [combobox](proposals/combobox.md): pattern 2; rules quoted from the APG snapshot, scenarios, engine gaps, candidate targets; approved 2026-11-14.
 - [tabs](proposals/tabs.md): pattern 4, approved 2026-11-19 with every decision as recommended, work alongside M5: nine draft rules quoted from the live APG pages, ten scenarios, two engine additions, candidate targets, nine decisions.
 - [figma-annotated-elements](proposals/figma-annotated-elements.md): a pattern's element with its requirements as annotations, downloadable for Figma; Figma's docs read 2026-11-21, four options, five decisions; opened by the owner on 2026-11-21 for the trial and one pattern, alongside M5.
-- [figma-plugin](proposals/figma-plugin.md): a published Atlas plugin that draws a pattern with its requirements in the designer's own file; opened by the owner on 2026-11-21; submitted to Figma's review from the owner's personal account on 2026-11-22; the link on the site (step 4) waits for the answer.
+- [figma-plugin](proposals/figma-plugin.md): a published Earshot plugin that draws a pattern with its requirements in the designer's own file; opened by the owner on 2026-11-21; submitted to Figma's review from the owner's personal account on 2026-11-22; the link on the site (step 4) waits for the answer.
 - [dialog](proposals/dialog.md): pattern 5, modal dialog; opened by the owner on 2026-11-21 (work alongside M5), with amendments the same day: ten draft rules quoted from the live APG pages, seven scenarios, six engine additions, the native element and MUI's focus guards checked in the browser, candidate targets, nine decisions.
 
 

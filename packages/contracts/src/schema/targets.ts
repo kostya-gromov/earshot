@@ -55,12 +55,12 @@ const demo = {
   found: NonEmpty.optional(),
   'version-source': NonEmpty.optional(),
   robots: NonEmpty.optional(),
-  /** The owner's own deprecation notice; the Atlas card must link it. */
+  /** The owner's own deprecation notice; the Earshot card must link it. */
   deprecated: z.url().optional(),
   /**
    * Present when the measurement is shown but kept out of agreement counts for a reason other
    * than deprecation: the reason, as the words after "Not counted:" (lower case, no full stop).
-   * Used when the maintainers ship a dedicated component that Atlas cannot measure yet, so the
+   * Used when the maintainers ship a dedicated component that Earshot cannot measure yet, so the
    * verdicts describe a second way to build the pattern (packages/engine/CLAUDE.md, Targets).
    */
   'not-counted': NonEmpty.optional(),
@@ -68,13 +68,13 @@ const demo = {
   'docs-example': z.url().optional(),
   /**
    * Present when the maintainers document this pattern as a composition of several of their
-   * published components, not as one component (ADR 0006): what it combines and what Atlas did
+   * published components, not as one component (ADR 0006): what it combines and what Earshot did
    * to assemble it. Shown next to every verdict for the system.
    */
   composition: NonEmpty.optional(),
   /**
    * How the measured page was built, in one or two plain sentences: which example it follows and
-   * what Atlas set. For a reader who wants to repeat the measurement. Shown on the site.
+   * what Earshot set. For a reader who wants to repeat the measurement. Shown on the site.
    */
   setup: NonEmpty.optional(),
   /**

@@ -4,7 +4,7 @@
  * Built from an APG combobox (typing and suggestions) plus a list of remove buttons with
  * roving focus. Chips are not listbox options, because an option cannot contain a button.
  * Framework-free on purpose. The browser runs this exact code with the type annotations
- * removed (erasable TypeScript only), so what the Atlas page shows is what runs.
+ * removed (erasable TypeScript only), so what the Earshot page shows is what runs.
  *
  * This file only wires the parts together:
  *   selection.ts    the selected names (no DOM)
