@@ -62,4 +62,21 @@ describe('formatNodeSpeech', () => {
     };
     expect(formatNodeSpeech(button as never)).toBe('Actions, button, has popup menu, collapsed');
   });
+
+  it('says a combobox’s value after its role, so a select says what is chosen', () => {
+    expect(
+      formatNodeSpeech({
+        role: 'combobox',
+        name: 'Fruit',
+        treeValue: 'Banana',
+        states: { expanded: false },
+      }),
+    ).toBe('Fruit, combobox, Banana, collapsed');
+  });
+
+  it('says nothing for an empty value', () => {
+    expect(formatNodeSpeech({ role: 'combobox', name: 'To', treeValue: '', states: {} })).toBe(
+      'To, combobox',
+    );
+  });
 });

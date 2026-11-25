@@ -2,6 +2,7 @@ import type { Pattern } from '@earshot/contracts';
 import { citedPages, ruleLevels, type CitedPage } from '@/lib/cited-sources';
 import { Part } from './how-we-measure';
 import styles from './methodology.module.css';
+import { ExternalLink } from '@/ui';
 
 const counted = (n: number, word: string): string => `${n} ${word}${n === 1 ? '' : 's'}`;
 
@@ -43,7 +44,7 @@ function PageRow({ page }: { page: CitedPage }) {
   return (
     <tr role="row">
       <th scope="row" role="rowheader">
-        <a href={page.url}>{page.label}</a>
+        <ExternalLink href={page.url}>{page.label}</ExternalLink>
       </th>
       <td role="cell" data-label="Applied by">
         {count(page.applied)}

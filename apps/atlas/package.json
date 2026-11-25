@@ -7,7 +7,7 @@
     "dev": "NEXT_TELEMETRY_DISABLED=1 next dev --port 4200",
     "build": "NEXT_TELEMETRY_DISABLED=1 next build",
     "typecheck": "NEXT_TELEMETRY_DISABLED=1 next typegen && tsc -p tsconfig.json && tsc -p figma/tsconfig.json",
-    "test:e2e": "playwright test --project chromium",
+    "test:e2e": "playwright test --project chromium --project invariants",
     "test:visual": "playwright test --project visual",
     "budget": "node scripts/check-js-budget.ts"
   },

@@ -13,6 +13,7 @@ import { evaluateScenarioRuns } from '../model/run-results.ts';
 import { readEnvironment } from '../provenance.ts';
 import type { PatternSuite } from '../suites/types.ts';
 import { executeRun } from './execute-run.ts';
+import { notRunRuns } from './not-run.ts';
 
 export interface PatternRunOptions {
   targetId: string;
@@ -52,6 +53,11 @@ interface ScenarioRecording {
 async function recordScenario<State, InteractionId extends string>(
   options: RunScenarioOptions<State, InteractionId>,
 ): Promise<ScenarioRecording> {
+  const notRun = notRunRuns(options.adapter, options.definition.id, options.runOptions.runs);
+  if (notRun) {
+    const { id, rules } = options.definition;
+    return { id, rules, runs: notRun, description: 'Not run', statesAgree: true };
+  }
   const executions = [];
   for (let index = 0; index < options.runOptions.runs; index += 1) {
     if (options.adapter.pauseBetweenRunsMs) await setTimeout(options.adapter.pauseBetweenRunsMs);

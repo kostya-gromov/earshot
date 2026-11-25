@@ -6,6 +6,7 @@ import { SectionHead } from '@/ui';
 import { defaultCompared } from './compare-defaults';
 import { CompareView } from './compare-view';
 import styles from './matrix.module.css';
+import { BrowserNative } from './browser-native';
 import { matrixOf } from './matrix-data';
 import { NotApplicable } from './not-applicable';
 import { NotCounted } from './not-counted';
@@ -52,6 +53,15 @@ const gridScenariosByPattern: Readonly<Record<string, readonly GridScenario[]>> 
     { id: 'tab-forward', label: 'Tab, six times', ruleId: 'wrap' },
     { id: 'escape', label: 'Escape', ruleId: 'return-focus' },
   ],
+  // Where the measured systems part: which option is selected, where DOM focus goes, what the
+  // select is named, and the arrows at the end of the list.
+  select: [
+    { id: 'move', label: 'Arrows through the list', ruleId: 'selected' },
+    { id: 'open', label: 'Down Arrow', ruleId: 'focus-stays' },
+    { id: 'tab-in', label: 'Tab to the select', ruleId: 'name-and-value' },
+    { id: 'enter', label: 'Down twice, Enter', ruleId: 'enter' },
+    { id: 'escape', label: 'Down twice, Escape', ruleId: 'escape-keeps-value' },
+  ],
 };
 
 interface SystemsSectionProps {
@@ -75,6 +85,16 @@ function countsOf(measured: readonly LoadedMeasurement[]): string {
 }
 
 /** Every rule against every system at a glance, then the picked systems replayed side by side. */
+/**
+ * "4 design systems counted and 2 shown, not counted": the same numbers as the summary at the top
+ * of the page, which said 4 where this said 6 (first-visit review, 2026-11-25).
+ */
+function systemsWords(columns: number, setAside: number): string {
+  const counted = columns - setAside;
+  const systems = `${counted} design ${counted === 1 ? 'system' : 'systems'}`;
+  return setAside > 0 ? `${systems} counted and ${setAside} shown, not counted` : systems;
+}
+
 export function SystemsSection({ pattern, measurements, targets, people }: SystemsSectionProps) {
   // Only status "measured" reaches the comparison (apps/atlas/CLAUDE.md).
   const measured = measurements.filter(
@@ -93,12 +113,14 @@ export function SystemsSection({ pattern, measurements, targets, people }: Syste
         quiet="Then pick a few and watch the same keys."
         isSplit
       >
-        {columns.length} design systems and component libraries, measured in their published
-        packages. Each verdict comes{countsOf(measured)}.
+        {systemsWords(columns.length, columns.filter(({ id }) => notCounted.has(id)).length)},
+        measured in their published packages. Each verdict comes{countsOf(measured)}.
         {rows.every(({ reference }) => reference === 'follows') &&
           ' The reference implementation follows every rule.'}
       </SectionHead>
       <VerdictMatrix rows={rows} columns={columns} />
+      {/* Next to the columns it explains, not under the comparison (design review 2026-11-24). */}
+      <BrowserNative entries={targets} />
       <CompareView
         options={options}
         fallback={defaultCompared(pattern, { measured, targets })}

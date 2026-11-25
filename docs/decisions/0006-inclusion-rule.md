@@ -34,7 +34,7 @@ Not counted: community packages, third-party wrappers, or compositions we design
 
 ## Amendment (2026-11-15): one test for "a component for the pattern", applied to every system
 
-Decided by the owner on 2026-11-15, after the audit of the combobox measurements found that Atlassian's Select had been taken on a different ground than the other five systems.
+Decided on 2026-11-15, after the audit of the combobox measurements found that Atlassian's Select had been taken on a different ground than the other five systems.
 
 - **What happened.** Five systems were chosen by what their docs call the component. Atlassian's docs call theirs a select, so it was first taken on the element's role and then set aside as "shown, not counted", without the same question being put to the others.
 - **Decision.** Whether a system "ships a component for the pattern" is decided by what the component is, not by its name: for combobox, by default or in the documented example it is a text input with the combobox role whose list narrows as the user types. A select-only control (a button or a non-editable element that opens a list) and a list in a dialog are outside this pattern. The test is put to every select-like export of every candidate, each with a dated line in `data/targets.yaml`. A component that passes is counted.

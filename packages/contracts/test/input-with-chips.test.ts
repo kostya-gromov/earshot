@@ -38,11 +38,16 @@ describe('input-with-chips metadata', () => {
     expect(new Set(perRule)).toEqual(new Set(ruleIds));
   });
 
-  it('keeps trade-offs as drafts until they are reviewed: the two models are, since 2026-11-15', () => {
+  // The models since 2026-11-15; the alternatives naming Atlassian or MUI since 2026-11-25,
+  // reviewed by Claude as asked. The rest stay drafts until reviewed.
+  it('keeps trade-offs as drafts until they are reviewed', () => {
     const status = (kind: string) =>
       new Set(inputWithChips.tradeOffs.flatMap((t) => (t.kind === kind ? [t.status] : [])));
     expect(status('model')).toEqual(new Set(['reviewed']));
-    expect(status('alternative')).toEqual(new Set(['draft']));
+    const reviewed = inputWithChips.tradeOffs.flatMap((t) =>
+      t.kind === 'alternative' && t.status === 'reviewed' ? [t.ruleId] : [],
+    );
+    expect(reviewed.toSorted()).toEqual(['bsp', 'count', 'say', 'tab']);
   });
 
   it('links WCAG sources to the 2.2 Understanding page of the cited criterion', () => {

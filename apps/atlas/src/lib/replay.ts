@@ -2,6 +2,8 @@ import type { FocusInfo, Measurement, Step } from '@earshot/contracts';
 import { comboboxSteps, type ComboboxStep } from './combobox-replay';
 import { menuSteps, type MenuStep } from './menu-replay';
 import { dialogSteps, type DialogStep } from './dialog-replay';
+import { selectSteps } from './select-replay';
+import { stepKey } from './step-key';
 import { tabsSteps, type TabsStep } from './tabs-replay';
 import { basisWithReasons, type LaneVerdict } from './lane-verdict';
 
@@ -88,20 +90,12 @@ function removedBy(step: Step, people: readonly string[], gone: ReadonlySet<stri
   );
 }
 
-const keyOf = ({ action }: Step): string => {
-  switch (action.type) {
-    case 'press':
-      return action.key;
-    case 'click':
-      return 'Click';
-    case 'type':
-      // One typed character is shown as its key; longer text as the act of typing.
-      return action.text.length === 1 ? action.text : 'Type';
-  }
-};
-
 /** One run's steps as a replay. Run 1 is shown; runs are consistent or the verdict says so. */
-export function replaySteps(steps: readonly Step[], people: readonly string[]): ReplayStep[] {
+export function replaySteps(
+  steps: readonly Step[],
+  people: readonly string[],
+  pattern?: string,
+): ReplayStep[] {
   const gone = new Set<string>();
   // The popup's side is read over the whole run: the field's text is carried from step to step.
   // A menu button recording carries the page's last action; a combobox recording does not.
@@ -109,13 +103,13 @@ export function replaySteps(steps: readonly Step[], people: readonly string[]): 
   const tabs = tabsSteps(steps);
   const dialog = dialogSteps(steps);
   const isOther = menu.length > 0 || tabs.length > 0 || dialog.length > 0;
-  const popup = isOther ? [] : comboboxSteps(steps);
+  const popup = isOther ? [] : (pattern === 'select' ? selectSteps : comboboxSteps)(steps);
   const hasPopup = popup.length === steps.length;
   return steps.map((step, index) => {
     const removed = removedBy(step, people, gone);
     removed.forEach((person) => gone.add(person));
     return {
-      key: keyOf(step),
+      key: stepKey(step),
       from: replayFocus(step.focusBefore),
       to: replayFocus(step.focusAfter),
       removed,
@@ -139,7 +133,7 @@ export function scenarioReplay(
 ): ReplayStep[] {
   const run = measurement.scenarios.find(({ id }) => id === scenarioId)?.runs[0];
   // A run whose setup failed has no steps to replay.
-  return run?.status === 'completed' ? replaySteps(run.steps, people) : [];
+  return run?.status === 'completed' ? replaySteps(run.steps, people, measurement.pattern) : [];
 }
 
 export interface ReplayState {

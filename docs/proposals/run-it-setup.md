@@ -1,6 +1,6 @@
 # Proposal: how "Run it on your component" reaches the starting state
 
-Status: accepted by the owner on 2026-11-08 (raised in his review the same day).
+Status: accepted on 2026-11-08 (raised in review the same day).
 
 ## Problem
 

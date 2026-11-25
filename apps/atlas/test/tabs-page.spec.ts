@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
 // The tabs page. It was built and reviewed on a preview route and moved to the patterns on
-// 2026-11-19, on the owner's word after his VoiceOver check.
+// 2026-11-19, after the VoiceOver check.
 test.beforeEach(async ({ page }) => {
   await page.goto('/patterns/tabs/');
 });
@@ -15,7 +15,7 @@ test('the page is one of the patterns, and nothing is left at the preview addres
     .locator('main p')
     .filter({ hasText: /^Pattern/ })
     .first();
-  await expect(kicker).toContainText('4 of 5');
+  await expect(kicker).toContainText('4 of 6');
   await page.goto('/patterns/');
   await expect(page.getByRole('main').locator('a[href="/patterns/tabs/"]').first()).toBeVisible();
   const old = await page.goto('/lab/patterns/tabs/');

@@ -7,6 +7,8 @@ import { scenariosForRule } from '@/lib/verdict-reasons';
 import { EvidenceLinks, EvidenceProvenance, VariantProvenance } from './evidence-provenance';
 import { InlineCode } from './inline-code';
 import styles from './evidence.module.css';
+import { ExternalLink } from '@/ui';
+import { observedAs } from '@/lib/observed-as';
 
 /** A recorded step as the playground replays it; one typed character is replayed as typed. */
 function playgroundKey(action: Action): string | undefined {
@@ -31,14 +33,13 @@ export function playgroundKeys(scenario: Scenario): string[] | undefined {
 type Demo = Extract<TargetEntry, { status: 'measured' }>;
 
 /** Where a note comes from, as the reader sees it. One label per note, never one for the block. */
-const observedAs: Readonly<Record<Observation['source'], string>> = {
-  recorded: 'Recorded by the engine',
-  seen: 'Seen by hand on the measured page',
-  screenshots: 'Seen in screenshots of the measured page, before and after each key',
-  script: 'Seen with a script on the measured page, outside the engine',
-  'package-source': 'Read in the package source',
-  docs: 'Read in the system’s docs',
-};
+
+/** "chakra-ui/chakra-ui discussion #11097", from the page's address. */
+function discussionName(url: string): string {
+  const [owner, repo, kind, number] = new URL(url).pathname.split('/').filter(Boolean);
+  if (!owner || !repo || !number) return url;
+  return `${owner}/${repo} ${kind === 'discussions' ? 'discussion' : 'issue'} #${number}`;
+}
 
 /**
  * What a reader should know about the component beside this rule: behavior the verdicts do not
@@ -77,6 +78,14 @@ function Observations({ ruleId, demo, variants }: ObservationsProps) {
                 {cited
                   ? `${observedAs[source]} on another page of this system, not counted`
                   : `${observedAs[source]}, ${measuredOn(date)}`}
+                {observation.url && (
+                  <>
+                    {': '}
+                    <ExternalLink href={observation.url}>
+                      {discussionName(observation.url)}
+                    </ExternalLink>
+                  </>
+                )}
               </span>
               {cited && <VariantProvenance {...cited} />}
             </li>

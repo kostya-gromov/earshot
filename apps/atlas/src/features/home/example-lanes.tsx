@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, type ReactNode } from 'react';
 import { ReplayField } from '@/features/replay';
 import { backspaceOutcome } from '@/lib/backspace-summary';
 import {
@@ -11,6 +11,7 @@ import {
   spokenLines,
   type ReplayStep,
 } from '@/lib/replay';
+import type { SeenNote } from '@/lib/observed-as';
 import { Keycap, SpeechLine } from '@/ui';
 import { useExamplePress } from './use-example-press';
 import styles from './example.module.css';
@@ -20,24 +21,31 @@ export interface ExampleLane {
   system: string;
   version: string;
   steps: readonly ReplayStep[];
+  /**
+   * A change seen on screen where the tree shows nothing: a hand-made note from targets.yaml,
+   * shown under the recording with its own caption, never as part of it (2026-11-25).
+   */
+  onScreen?: SeenNote | undefined;
 }
 
 function Result({ step }: { step: ReplayStep }) {
   const line = step.heard[0] ?? spokenLines(step).at(-1);
+  const hasChanged = step.removed.length > 0 || step.to.kind === 'chip';
   return (
     <>
-      <span>
-        {step.removed.length > 0 || step.to.kind === 'chip'
-          ? describeStep(step)
-          : 'Nothing changed in the accessibility tree'}
-      </span>
+      {/* Where nothing changed, the row's label already says so ("Changed nothing in the
+          accessibility tree"); said twice it read as two findings. */}
+      {hasChanged && <span>{describeStep(step)}</span>}
       {line ? (
-        <SpeechLine source={step.heard.length > 0 ? 'announcement' : 'focus'} size="sm">
-          {line}
-        </SpeechLine>
+        <span className={styles.spoken}>
+          <span className={styles.modelled}>Modelled speech</span>
+          <SpeechLine source={step.heard.length > 0 ? 'announcement' : 'focus'} size="sm">
+            {line}
+          </SpeechLine>
+        </span>
       ) : (
         <span className={styles.silent}>
-          {endsOutsidePage(step) ? notModelledWords : 'Nothing said'}
+          {endsOutsidePage(step) ? notModelledWords : 'No modelled speech'}
         </span>
       )}
     </>
@@ -72,19 +80,17 @@ function Outcome({
 
 /**
  * "Removed a chip": one aligned phrase per row, so the results compare at a glance. The recorded
- * phrase is always there, unseen until the press, so the row keeps one height.
+ * phrase is always there, unseen until the press, so the row keeps one height. Where a change
+ * was seen on screen that the tree does not show, the row points to it; what was seen is told
+ * under the recording, apart from it.
  */
-function OutcomeLabel({
-  recorded,
-  isShown,
-}: {
-  recorded: ReplayStep | undefined;
-  isShown: boolean;
-}) {
-  const outcome = backspaceOutcome(recorded);
+function OutcomeLabel({ lane, isShown }: { lane: ExampleLane; isShown: boolean }) {
+  const outcome = backspaceOutcome(lane.steps[0]);
+  const hasSeen = outcome === 'changed nothing in the accessibility tree' && lane.onScreen;
   return (
     <p className={styles.label} data-shown={isShown || undefined}>
       {outcome.charAt(0).toUpperCase() + outcome.slice(1)}
+      {hasSeen && <span className={styles.seenAs}> · a change on screen, seen by hand, below</span>}
     </p>
   );
 }
@@ -108,7 +114,7 @@ function Lane({ lane, people, index }: LaneProps) {
         <ReplayField state={state} people={people} size="sm" hasControls={false} />
       </div>
       <div className={styles.result}>
-        <OutcomeLabel recorded={lane.steps[0]} isShown={state.step !== undefined} />
+        <OutcomeLabel lane={lane} isShown={state.step !== undefined} />
         <Outcome recorded={lane.steps[0]} step={state.step} />
       </div>
     </div>
@@ -119,6 +125,8 @@ interface ExampleLanesProps {
   lanes: readonly ExampleLane[];
   people: readonly string[];
   patternName: string;
+  /** The finding, as the frame's heading, above its line of provenance. */
+  head?: ReactNode;
 }
 
 /**
@@ -126,11 +134,12 @@ interface ExampleLanesProps {
  * then every system's recording of that key, played together. A hairline, not a raised surface
  * and not a drawn window: everything in it is recorded.
  */
-export function ExampleLanes({ lanes, people, patternName }: ExampleLanesProps) {
+export function ExampleLanes({ lanes, people, patternName, head }: ExampleLanesProps) {
   const root = useRef<HTMLDivElement>(null);
   const { isPressed, hasPlayed, message, press, onKeyDown } = useExamplePress(lanes, root);
   return (
     <div className={styles.frame}>
+      {head}
       <div className={styles.bar}>
         <ul className={styles.facts}>
           <li>{patternName}</li>

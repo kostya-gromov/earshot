@@ -21,7 +21,7 @@ test('a different model is said on the React Aria verdicts it explains, and only
   );
 });
 
-// Found 2026-11-13 by the owner: the model link is "#ev-<rule>-model-<systems>", and the player read
+// Found 2026-11-13 in review: the model link is "#ev-<rule>-model-<systems>", and the player read
 // everything after "ev-<rule>-" as a system. It chose a system that does not exist, so the
 // recording disappeared and only the list of verdicts was left.
 test('the link to a model’s trade-off keeps the recording and goes to the note', async ({

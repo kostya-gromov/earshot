@@ -1,16 +1,16 @@
 # Proposal: annotated elements for Figma
 
-Status: opened by the owner on 2026-11-21 (decision 1: the trial and one pattern, alongside M5).
+Status: opened on 2026-11-21 (decision 1: the trial and one pattern, alongside M5).
 Decisions 2, 4 and 5 are settled below; input-with-chips has its file and its download.
 
 Scope note: CLAUDE.md section 3 lists "Figma plugin, annotations, Code Connect" as out of scope
-until the owner says so. This proposal is the way in that the same section asks for.
+until decided otherwise. This proposal is the way in that the same section asks for.
 
 ## Problem
 
 "For design" lists a pattern's requirements, and "Copy for Figma" copies each as plain text. The
 designer still draws the element and creates every annotation by hand, one paste at a time. The
-owner wants the designer to get the element itself, or several, in Figma with the annotations
+aim is for the designer to get the element itself, or several, in Figma with the annotations
 already on the right layers.
 
 ## What Figma's documentation says (read 2026-11-21)
@@ -42,8 +42,8 @@ Not stated by the docs, to be found out by trial:
 
 ## Trial, 2026-11-21 (first part)
 
-Run through Figma's MCP server (Plugin API) in a new draft on the owner's personal team: Starter
-plan, View seat. The owner's other plan is an employer's organization with a Dev seat; it was
+Run through Figma's MCP server (Plugin API) in a new draft on a personal team: Starter
+plan, View seat. The other plan available is an employer's organization with a Dev seat; it was
 not used.
 
 - **Layers: yes.** A grey wireframe of the element (label, field, three chips: rest, focused,
@@ -56,8 +56,8 @@ not used.
 - **Notes as ordinary layers: yes.** Seven numbered pins on the layers and a notes column with
   each requirement's title, reason and linked sources, on the same board. This works on any plan.
 
-- **The `.fig` round trip: yes, on the owner's screenshots.** He saved a local copy and imported
-  the `.fig` into the same free account ("Imported just now"). Both boards came back with the
+- **The `.fig` round trip: yes, on screenshots.** A local copy was saved and the `.fig`
+  imported into the same free account ("Imported just now"). Both boards came back with the
   wireframe, the seven pins in place and the notes with the same wrapping. Not confirmed yet:
   that the source links still open in the imported file (the underlines are there; the links
   themselves were counted only in the original, nine of them), and an import into another
@@ -70,9 +70,9 @@ What this changes: decision 4 is no longer a fallback. Notes as layers are the b
 designer gets; native annotations are an addition for paid plans, if a seat is found to build
 and test them with.
 
-## Owner's answers and the next step, 2026-11-21
+## Answers and the next step, 2026-11-21
 
-The owner clicked a source link in the imported file (it opens) and accepted the look: a grey
+A source link in the imported file was clicked (it opens) and the look was accepted: a grey
 wireframe, numbered pins, a column of notes. So decisions 2 and 4 are settled as recommended, and
 decision 5 for now: the personal team, notes as layers, no paid seat.
 
@@ -84,7 +84,7 @@ Built the same day:
 - The board in the trial file was read back and its seven notes and nine links carry the text
   and addresses of that data; a line "From Earshot Atlas" with the page's address was added.
 
-Later the same day, with the owner's approval of `@figma/plugin-typings` 1.143.0 (types only, a
+Later the same day, with the approval of `@figma/plugin-typings` 1.143.0 (types only, a
 dev dependency of the site):
 
 - **The drawing is code in the repository**: `apps/atlas/figma/` (shapes, the element, notes,
@@ -102,7 +102,7 @@ dev dependency of the site):
 
 Late the same day:
 
-- **The file is saved and recorded.** The owner saved a local copy of the trial file with the one
+- **The file is saved and recorded.** A local copy of the trial file was saved with the one
   board the repository's code drew. Before it went to `public/figma/` its data was decoded far
   enough to check: one board, 1034 by 849, the "From Earshot Atlas" line and the link ending in
   `#lens`. Two earlier saves had the old board and were not recorded.
@@ -110,12 +110,12 @@ Late the same day:
   input-with-chips, the only pattern with a record, and the info tip's text for that case
   (`design-lens.tsx`, tests in `test/copy-for-figma.spec.ts`).
 
-After the design review the owner took both recommendations for the row: "Download Figma file"
+After the design review both recommendations for the row were taken: "Download Figma file"
 is a link without a box beside the boxed "Copy all 7 for Figma", and the intro on a page with a
 file ends "Each copies as text for an annotation in Figma; the file has them all as notes on a
 drawing." What the review left open: `docs/follow-ups/figma-download.md`.
 
-The owner then asked for the published plugin (option 3) as its own proposal:
+The published plugin (option 3) was then asked for as its own proposal:
 `figma-plugin.md`.
 
 Open: native annotations on a paid seat, an import into another person's account, and running
@@ -146,7 +146,7 @@ layers beside the element, which every plan shows.
 
 "Copy for Figma" stays: it serves a designer who already has their own component.
 
-## Decisions for the owner
+## Decisions
 
 1. **Open this scope now, alongside M5?** Recommended: yes for the trial and one pattern; M5 is
    where designers can tell us whether they use it.

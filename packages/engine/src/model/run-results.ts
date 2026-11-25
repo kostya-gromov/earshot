@@ -111,7 +111,30 @@ function sameSetupFailure(runs: readonly Run[]): string | undefined {
   return first;
 }
 
+/** Every run is "not run" with one reason: the adapter declared the scenario out of its reach. */
+function sameNotRun(runs: readonly Run[]): string | undefined {
+  const [first] = runs;
+  if (first?.status !== 'not-run') return undefined;
+  return runs.every((run) => run.status === 'not-run' && run.reason === first.reason)
+    ? first.reason
+    : undefined;
+}
+
+/** Every rule inconclusive with the reason; nought steps judged, given: the site folds by it. */
+function notRunEvaluation(ruleIds: readonly string[], reason: string): ScenarioEvaluation {
+  const verdicts = inconclusive(ruleIds, { summary: 'Not run', reason });
+  return {
+    consistent: true,
+    verdicts: Object.fromEntries(
+      Object.entries(verdicts).map(([ruleId, verdict]) => [ruleId, { ...verdict, judgedSteps: 0 }]),
+    ),
+    fatalErrors: [],
+  };
+}
+
 export function evaluateScenarioRuns(options: ScenarioEvaluationOptions): ScenarioEvaluation {
+  const notRun = sameNotRun(options.runs);
+  if (notRun !== undefined) return notRunEvaluation(options.ruleIds, notRun);
   const completed = options.runs.filter(
     (run): run is Extract<Run, { status: 'completed' }> => run.status === 'completed',
   );

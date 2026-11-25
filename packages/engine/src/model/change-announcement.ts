@@ -1,7 +1,7 @@
 import type { Action, Step } from '@earshot/contracts';
 
 /*
- * One rule for every pattern (decided by the owner 2026-11-15, ADR 0003): the text a live region
+ * One rule for every pattern (decided 2026-11-15, ADR 0003): the text a live region
  * holds counts as the announcement of a change only if it names that change and does not appear
  * in the same form in a step without it. Text written into a region and a region that enters the
  * page already holding text are read the same way; the reason says which it was.

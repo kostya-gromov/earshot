@@ -3,7 +3,6 @@ import { measuredOn } from '@/lib/measured-on';
 import { methodTotals, type MethodSource, type MethodTotals } from '@/lib/method-totals';
 import { Arrival, SectionHead } from '@/ui';
 import { RecordingLead, RecordingPlate, VerdictLead, VerdictPlate } from './method-strip';
-import { RuleAside, RuleLead, RuleSources } from './rule-plate';
 import styles from './method.module.css';
 
 interface Step {
@@ -11,23 +10,15 @@ interface Step {
   title: string;
   text: string;
   show: ReactNode;
-  /** A wide step's count, shown large beside its title. */
-  lead?: ReactNode;
-  /**
-   * Under the title, in the same column, which then stays in view while the step's output
-   * scrolls beside it: the step's count, drawing and meters.
-   */
-  aside?: ReactNode;
-  /** The step's output runs the full width under its text, not beside it. */
-  isWide?: boolean;
+  /** The step's count, shown large beside its title. */
+  lead: ReactNode;
 }
 
 const copy = {
-  rule: 'Each rule links the WCAG criterion or APG practice it applies or relates to. Where Earshot goes further, the rule is marked as a recommendation and says why.',
   recording:
     'The engine opens each component in Chromium, presses the keys and records focus, the accessibility tree and live region announcements after every step.',
   verdict:
-    'Every scenario runs three times. A verdict is inconclusive when the engine cannot judge: the start state could not be reached, there was nothing to judge, or the runs disagreed. A system that differs gets the trade-off explained, not a red mark.',
+    'Every scenario runs three times. A verdict is inconclusive when the engine cannot judge: the start state could not be reached, there was nothing to judge, or the runs disagreed. A difference gets no red mark, and where a trade-off is written, the rule shows it.',
 };
 
 const systems = (count: number) => `${count} design ${count === 1 ? 'system' : 'systems'}`;
@@ -47,54 +38,55 @@ function Source({ totals }: { totals: MethodTotals }) {
       Totals for every pattern measured so far: {listed(totals.patterns.map(countedIn))}. The
       reference implementation and the measurements a pattern sets aside are left out;{' '}
       {systems(totals.systems)} are counted in all. Latest measurement {measuredOn(totals.latest)}.{' '}
-      <a href="/methodology/">How the engine measures</a>
+      <a href="/methodology/">How the engine measures, and every page the rules cite</a>
     </p>
   );
 }
 
-/** The three steps, each with what it has produced so far; nothing until something is measured. */
+/** The two steps, each with what it has produced so far; nothing until something is measured. */
 function methodSteps(totals: MethodTotals): Step[] {
-  const isMeasured = totals.systems > 0;
+  if (totals.systems === 0) return [];
   return [
-    {
-      label: 'Rule',
-      title: 'Starts from the standards',
-      text: copy.rule,
-      lead: isMeasured && <RuleLead rules={totals.rules} patterns={totals.patterns.length} />,
-      aside: isMeasured && <RuleAside rules={totals.rules} />,
-      show: isMeasured && <RuleSources rules={totals.rules} />,
-    },
     {
       label: 'Recording',
       title: 'Real keys in a real browser',
       text: copy.recording,
-      lead: isMeasured && <RecordingLead totals={totals} />,
-      show: isMeasured && <RecordingPlate totals={totals} />,
-      isWide: true,
+      lead: <RecordingLead totals={totals} />,
+      show: <RecordingPlate totals={totals} />,
     },
     {
       label: 'Verdict',
       title: 'Judged three times, and explained',
       text: copy.verdict,
-      lead: isMeasured && <VerdictLead verdicts={totals.verdicts} />,
-      show: isMeasured && (
+      lead: <VerdictLead verdicts={totals.verdicts} />,
+      show: (
         <Arrival className={styles.show}>
           <VerdictPlate verdicts={totals.verdicts} />
         </Arrival>
       ),
-      isWide: true,
     },
   ];
 }
 
+/** What the numbers below are for, and the rules counted in one line. */
+function Lede({ totals }: { totals: MethodTotals }) {
+  const { total, fromStandards, recommendations } = totals.rules;
+  return (
+    <>
+      Every verdict on this site, the findings above among them, is judged from these recordings,
+      and each links to its steps and raw data. {total} rules so far, in {totals.patterns.length}{' '}
+      patterns: {fromStandards} from the standards, {recommendations} Earshot recommendations.
+    </>
+  );
+}
+
 /**
- * How Earshot works, for every pattern at once, as three steps down the page: what the step is,
- * and what it has produced so far, counted from the measurement files. The first step sits on
- * the page's split; the recording and the verdicts run the full width, so the page is not one
- * split from top to bottom (design review 2026-11-14). The
- * drawings in the recording step each carry a measured count (design review 2026-11-13:
- * schematics alone went from showing to telling), so nothing is shown until something is
- * measured.
+ * How it is measured, on the home page after the findings: the recording and the verdicts, each
+ * with what it has produced so far, counted from the measurement files, as the evidence the
+ * findings stand on (2026-11-25). The rule step and its list of every cited page are gone:
+ * thirty links to w3.org read as part of the site (external feedback, 2026-11-24), and
+ * /methodology lists every cited page in "What the rules rest on". The drawings carry a measured
+ * count each (design review 2026-11-13), so nothing is shown until something is measured.
  */
 export function HowSection({ sources }: { sources: readonly MethodSource[] }) {
   const totals = methodTotals(sources);
@@ -102,22 +94,16 @@ export function HowSection({ sources }: { sources: readonly MethodSource[] }) {
     <section id="how" aria-labelledby="how-title">
       <SectionHead
         id="how-title"
-        title="Rules, recordings, verdicts."
-        quiet="The same method for every pattern."
+        title="How it is measured."
+        quiet="Recordings, then verdicts."
         isSplit
       >
-        The same engine measures the reference implementation and every design system, so results
-        compare fairly and can be repeated.
+        <Lede totals={totals} />
       </SectionHead>
       <ol className={styles.steps}>
-        {methodSteps(totals).map(({ label, title, text, lead, aside, show, isWide }, index) => (
-          <li
-            key={label}
-            className={styles.step}
-            data-wide={isWide || undefined}
-            data-beside={Boolean(aside) || undefined}
-          >
-            <div className={styles.side} data-sticky={Boolean(aside) || undefined}>
+        {methodSteps(totals).map(({ label, title, text, lead, show }, index) => (
+          <li key={label} className={styles.step} data-wide>
+            <div className={styles.side}>
               <div className={styles.say}>
                 <p className={styles.stepLabel}>
                   <span aria-hidden="true">{index + 1}</span> {label}
@@ -125,7 +111,6 @@ export function HowSection({ sources }: { sources: readonly MethodSource[] }) {
                 <h3>{title}</h3>
                 <p className={styles.text}>{text}</p>
               </div>
-              {aside}
             </div>
             {lead}
             {show}

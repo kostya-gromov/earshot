@@ -1,0 +1,1383 @@
+{
+  "schemaVersion": 1,
+  "pattern": "select",
+  "target": {
+    "system": "Reference",
+    "systemVersion": {
+      "version": "0.1.11",
+      "source": "packages/reference/package.json"
+    },
+    "url": "packages/reference/select/native.html",
+    "adapter": "native-select",
+    "adapterVersion": 1,
+    "itemsFoundBy": "The option elements of the select \"Fruit\", while its list is shown."
+  },
+  "provenance": {
+    "status": "measured",
+    "engineVersion": "0.23.0",
+    "browser": "chromium 156.0.8078.4",
+    "os": "darwin",
+    "measuredAt": "2026-11-25T09:05:57.395Z",
+    "runs": 3,
+    "consistent": true
+  },
+  "scenarios": [
+    {
+      "id": "tab-in",
+      "rules": [
+        "tab",
+        "name-and-value",
+        "name-is-label"
+      ],
+      "initialState": "Value Banana, list closed, focus on the field before the select",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Email",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePopup": false,
+                "value": "sam@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(2) > input#email",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "label": {
+                "before": "Fruit",
+                "after": "Fruit"
+              },
+              "speech": [
+                "Fruit, combobox, Banana, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Email",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePopup": false,
+                "value": "sam@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(2) > input#email",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "label": {
+                "before": "Fruit",
+                "after": "Fruit"
+              },
+              "speech": [
+                "Fruit, combobox, Banana, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Email",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePopup": false,
+                "value": "sam@example.com",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(2) > input#email",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "label": {
+                "before": "Fruit",
+                "after": "Fruit"
+              },
+              "speech": [
+                "Fruit, combobox, Banana, collapsed"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "open",
+      "rules": [
+        "expanded",
+        "down",
+        "focus-stays"
+      ],
+      "initialState": "Not run",
+      "runs": [
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        }
+      ]
+    },
+    {
+      "id": "move",
+      "rules": [
+        "expanded",
+        "focus-stays",
+        "arrows",
+        "selected"
+      ],
+      "initialState": "Not run",
+      "runs": [
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        }
+      ]
+    },
+    {
+      "id": "enter",
+      "rules": [
+        "expanded",
+        "enter",
+        "name-and-value"
+      ],
+      "initialState": "Not run",
+      "runs": [
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        }
+      ]
+    },
+    {
+      "id": "escape",
+      "rules": [
+        "expanded",
+        "escape",
+        "escape-keeps-value"
+      ],
+      "initialState": "Not run",
+      "runs": [
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        }
+      ]
+    },
+    {
+      "id": "tab-open",
+      "rules": [
+        "expanded",
+        "tab"
+      ],
+      "initialState": "Not run",
+      "runs": [
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        }
+      ]
+    },
+    {
+      "id": "optional-keys",
+      "rules": [
+        "expanded"
+      ],
+      "initialState": "Not run",
+      "runs": [
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        }
+      ]
+    },
+    {
+      "id": "typeahead",
+      "rules": [
+        "expanded"
+      ],
+      "initialState": "Not run",
+      "runs": [
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        },
+        {
+          "status": "not-run",
+          "reason": "Not run: the engine cannot drive the browser's own list."
+        }
+      ]
+    },
+    {
+      "id": "space",
+      "rules": [
+        "expanded"
+      ],
+      "initialState": "Value Banana, list closed, focus on the select",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Space"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Banana",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Cherry",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Date",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "label": {
+                "before": "Fruit",
+                "after": "Fruit"
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Space"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Banana",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Cherry",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Date",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "label": {
+                "before": "Fruit",
+                "after": "Fruit"
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Space"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "expanded",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": true,
+                  "options": [
+                    {
+                      "role": "option",
+                      "name": "Apple",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Apricot",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Banana",
+                      "states": {
+                        "selected": true
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Cherry",
+                      "states": {
+                        "selected": false
+                      }
+                    },
+                    {
+                      "role": "option",
+                      "name": "Date",
+                      "states": {
+                        "selected": false
+                      }
+                    }
+                  ],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": true,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "label": {
+                "before": "Fruit",
+                "after": "Fruit"
+              },
+              "speech": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type-closed",
+      "rules": [
+        "expanded"
+      ],
+      "initialState": "Value Banana, list closed, focus on the select",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "type",
+                "text": "c"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Cherry",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "value",
+                    "before": "Banana",
+                    "after": "Cherry"
+                  },
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Banana"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Cherry"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Cherry",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "label": {
+                "before": "Fruit",
+                "after": "Fruit"
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "type",
+                "text": "c"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Cherry",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "value",
+                    "before": "Banana",
+                    "after": "Cherry"
+                  },
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Banana"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Cherry"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Cherry",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "label": {
+                "before": "Fruit",
+                "after": "Fruit"
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "type",
+                "text": "c"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Banana",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "Fruit",
+                "treeValue": "Cherry",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePopup": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div:nth-child(3) > select#fruit",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "combobox",
+                      "name": "Fruit"
+                    },
+                    "property": "value",
+                    "before": "Banana",
+                    "after": "Cherry"
+                  },
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Banana"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Cherry"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "popup": {
+                "before": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Banana",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "present": false,
+                  "options": [],
+                  "opener": {
+                    "role": "combobox",
+                    "name": "Fruit",
+                    "treeValue": "Cherry",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "label": {
+                "before": "Fruit",
+                "after": "Fruit"
+              },
+              "speech": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "verdicts": {
+    "tab": {
+      "verdict": "follows",
+      "summary": "One Tab stop",
+      "reason": "[tab-in] Tab from the field before put focus on the select. Not judged: [tab-open] Not run: the engine cannot drive the browser's own list.",
+      "basis": [
+        {
+          "scenario": "tab-in",
+          "verdict": "follows",
+          "summary": "One Tab stop"
+        },
+        {
+          "scenario": "tab-open",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        }
+      ]
+    },
+    "name-and-value": {
+      "verdict": "follows",
+      "summary": "A name, and the value apart from it",
+      "reason": "[tab-in] The focused combobox was named \"Fruit\" and had the value \"Banana\". Not judged: [enter] Not run: the engine cannot drive the browser's own list.",
+      "basis": [
+        {
+          "scenario": "tab-in",
+          "verdict": "follows",
+          "summary": "A name, and the value apart from it"
+        },
+        {
+          "scenario": "enter",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        }
+      ]
+    },
+    "name-is-label": {
+      "verdict": "follows",
+      "summary": "The name is the visible label",
+      "reason": "[tab-in] The select was named \"Fruit\", and its visible label read \"Fruit\".",
+      "basis": [
+        {
+          "scenario": "tab-in",
+          "verdict": "follows",
+          "summary": "The name is the visible label"
+        }
+      ]
+    },
+    "down": {
+      "verdict": "inconclusive",
+      "summary": "Not run",
+      "reason": "[open] Not run: the engine cannot drive the browser's own list.",
+      "basis": [
+        {
+          "scenario": "open",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        }
+      ]
+    },
+    "expanded": {
+      "verdict": "follows",
+      "summary": "Expanded matches the list",
+      "reason": "[space] The expanded state matched whether options were in the tree after the one step judged (0 not judged). [type-closed] The select was exposed as collapsed with no option in the tree after the one step judged (0 not judged); in no judged step was the list shown. Not judged: [open] Not run: the engine cannot drive the browser's own list. [move] Not run: the engine cannot drive the browser's own list. [enter] Not run: the engine cannot drive the browser's own list. [escape] Not run: the engine cannot drive the browser's own list. [tab-open] Not run: the engine cannot drive the browser's own list. [optional-keys] Not run: the engine cannot drive the browser's own list. [typeahead] Not run: the engine cannot drive the browser's own list.",
+      "basis": [
+        {
+          "scenario": "open",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        },
+        {
+          "scenario": "move",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        },
+        {
+          "scenario": "enter",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        },
+        {
+          "scenario": "escape",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        },
+        {
+          "scenario": "tab-open",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        },
+        {
+          "scenario": "optional-keys",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        },
+        {
+          "scenario": "typeahead",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        },
+        {
+          "scenario": "space",
+          "verdict": "follows",
+          "summary": "Expanded matches the list",
+          "judgedSteps": 1
+        },
+        {
+          "scenario": "type-closed",
+          "verdict": "follows",
+          "summary": "Collapsed matches; the list shown was not judged",
+          "judgedSteps": 1
+        }
+      ]
+    },
+    "focus-stays": {
+      "verdict": "inconclusive",
+      "summary": "Not run",
+      "reason": "[open] Not run: the engine cannot drive the browser's own list. [move] Not run: the engine cannot drive the browser's own list.",
+      "basis": [
+        {
+          "scenario": "open",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        },
+        {
+          "scenario": "move",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        }
+      ]
+    },
+    "arrows": {
+      "verdict": "inconclusive",
+      "summary": "Not run",
+      "reason": "[move] Not run: the engine cannot drive the browser's own list.",
+      "basis": [
+        {
+          "scenario": "move",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        }
+      ]
+    },
+    "selected": {
+      "verdict": "inconclusive",
+      "summary": "Not run",
+      "reason": "[move] Not run: the engine cannot drive the browser's own list.",
+      "basis": [
+        {
+          "scenario": "move",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        }
+      ]
+    },
+    "enter": {
+      "verdict": "inconclusive",
+      "summary": "Not run",
+      "reason": "[enter] Not run: the engine cannot drive the browser's own list.",
+      "basis": [
+        {
+          "scenario": "enter",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        }
+      ]
+    },
+    "escape": {
+      "verdict": "inconclusive",
+      "summary": "Not run",
+      "reason": "[escape] Not run: the engine cannot drive the browser's own list.",
+      "basis": [
+        {
+          "scenario": "escape",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        }
+      ]
+    },
+    "escape-keeps-value": {
+      "verdict": "inconclusive",
+      "summary": "Not run",
+      "reason": "[escape] Not run: the engine cannot drive the browser's own list.",
+      "basis": [
+        {
+          "scenario": "escape",
+          "verdict": "inconclusive",
+          "summary": "Not run",
+          "judgedSteps": 0
+        }
+      ]
+    }
+  }
+}

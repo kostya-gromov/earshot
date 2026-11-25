@@ -39,6 +39,10 @@ export const countedSystems = ({ measurements, notCounted }: PatternEntry): stri
     )
     .map((m) => m.target.system);
 
+/** The systems measured but kept out of agreement counts, by name. */
+export const setAsideNames = ({ measurements, notCounted }: PatternEntry): string[] =>
+  measurements.filter((m) => notCounted.has(m.target.adapter)).map((m) => m.target.system);
+
 /** Measured systems kept out of agreement counts: shown, never counted. */
 export const setAsideIn = ({ measurements, notCounted }: PatternEntry): number =>
   measurements.filter((m) => notCounted.has(m.target.adapter)).length;

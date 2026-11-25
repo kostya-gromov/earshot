@@ -1,6 +1,6 @@
 # Proposal: two findings of the first verdict-auditor run (2026-11-11)
 
-- Status: accepted by the owner 2026-11-11. B1 with one change: "one widget" is read from
+- Status: accepted 2026-11-11. B1 with one change: "one widget" is read from
   behaviour (arrow keys between the chips), not from ARIA roles, which would have dropped the
   rule for the reference itself. M1 as recommended. Recorded in ADR 0009. Quotes were checked
   against `docs/sources/` snapshots.

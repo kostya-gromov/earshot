@@ -8,7 +8,7 @@ versions, the steps taken, and what was heard at each step.
 
 ## Pending
 
-### M2 spot-check (deferred by the owner on 2026-11-07)
+### M2 spot-check (deferred on 2026-11-07)
 
 M2 was accepted with this check deferred. **It must be done before any measured finding is
 published (the post after M2, or the M3 release).**
@@ -35,7 +35,7 @@ Current expected values, from the measurement files of the harness recordings:
 How the list came about, for the record (the values to check against are the current ones above;
 those below include the docs-demo values the first pass used):
 
-- 2026-11-19: The owner checked the reference implementations in the playground with VoiceOver
+- 2026-11-19: The reference implementations were checked in the playground with VoiceOver
   (`2026-11-19-reference-playground-voiceover.md`), then the third-party items below.
   Harness pages for them: from `packages/harness`, `node ../reference/scripts/serve.ts --port 4240
   --root dist --home /`, then `http://localhost:4240/<system>/index.html`.

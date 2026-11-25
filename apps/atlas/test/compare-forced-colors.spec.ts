@@ -38,3 +38,36 @@ for (const path of pages) {
     await context.close();
   });
 }
+
+/*
+ * In forced colours the Play/Pause button keeps an edge, as the keycaps beside it do: its edge
+ * was a box-shadow, which forced colours take away (design review, 2026-11-24). Judged on pixels:
+ * a strip on the button's leading edge must not look like the page just outside it.
+ */
+for (const where of ['rule panel', 'compare grid'] as const) {
+  test(`in forced colours the Play/Pause button of the ${where} has an edge`, async ({
+    browser,
+  }) => {
+    const context = await browser.newContext({
+      viewport: { width: 1440, height: 900 },
+      forcedColors: 'active',
+      reducedMotion: 'reduce',
+    });
+    const page = await context.newPage();
+    await page.goto('/patterns/combobox/');
+    const scope =
+      where === 'compare grid'
+        ? page.getByRole('group', { name: 'Keys to replay' }).locator('xpath=..')
+        : page.locator('[role="tabpanel"]').first();
+    const button = scope.getByRole('button', { name: /^(Play|Pause)$/ }).first();
+    await button.scrollIntoViewIfNeeded();
+    const box = await button.boundingBox();
+    if (!box) throw new Error('no Play/Pause button');
+    const strip = (x: number) =>
+      page.screenshot({ clip: { x, y: box.y + 6, width: 2, height: box.height - 12 } });
+    const edge = (await strip(box.x)).toString('base64');
+    const outside = (await strip(box.x - 4)).toString('base64');
+    expect(edge, 'edge and the page beside it').not.toBe(outside);
+    await context.close();
+  });
+}

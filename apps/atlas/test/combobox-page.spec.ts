@@ -22,7 +22,7 @@ test('the page is in the list of patterns and counts only the patterns that have
     .locator('main p')
     .filter({ hasText: /^Pattern/ })
     .first();
-  await expect(kicker).toContainText('2 of 5');
+  await expect(kicker).toContainText('2 of 6');
   await expect(kicker).not.toContainText('in progress');
   await expect(page.getByRole('link', { name: 'Patterns', exact: true })).toHaveAttribute(
     'href',
@@ -212,7 +212,7 @@ test('"Run it on your component" speaks about this pattern', async ({ page }) =>
   await page.goto(url);
   const section = page.getByRole('region', { name: 'Run it on your component' });
   await expect(section).toContainText(
-    'Every scenario starts from one state: empty combobox focused, popup closed.',
+    'Each starts from a state it names, such as “empty combobox focused, popup closed”.',
   );
   await expect(section).not.toContainText('three values');
   await expect(section.getByLabel('Storybook story URL')).toHaveAttribute(

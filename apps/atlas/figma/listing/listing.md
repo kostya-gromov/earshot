@@ -1,6 +1,6 @@
 # The plugin's Community listing
 
-Approved by the owner on 2026-11-21 as drafted. The fields are the ones Figma's publishing page asks for
+Approved on 2026-11-21 as drafted. The fields are the ones Figma's publishing page asks for
 (help.figma.com, article 360042293394). Pictures: `icon.png` and `thumbnail.png` in this folder,
 made by `node scripts/figma-listing.ts`.
 
@@ -51,8 +51,8 @@ closest one for design tools, and say which was chosen.
 ## Support contact
 
 If the form takes a link: the site's public repository, where corrections already go,
-https://github.com/kostya-gromov/earshot-atlas/issues. If it takes only an email address, the
-owner types his own in the form; it is not kept in this file.
+https://github.com/kostya-gromov/earshot-atlas/issues. If it takes only an email address, one
+is typed in the form; it is not kept in this file.
 
 ## Network access shown on the listing
 

@@ -40,9 +40,12 @@ describe('the sources of every rule', () => {
     }
   });
 
-  // Twenty-two since 2026-11-21: the dialog cites its example page and the roles section as
-  // rationale for its two recommendations, and 2.4.3 as related to the Tab wrap.
-  it('mark twenty-two citations as not applied directly', () => {
-    expect(sources.filter(({ relation }) => relation !== undefined)).toHaveLength(22);
+  // Twenty-nine since 2026-11-24: the select cites 4.1.2 as related to three rules, the roles
+  // section as rationale and 2.5.3 as related for name-is-label, and the about section and its
+  // example as rationale for escape-keeps-value, a recommendation since the answer of that day.
+  // Thirty since the same day: name-and-value cites APG's names and descriptions page as related,
+  // for its trade-off's words on a value given only as a description.
+  it('mark thirty citations as not applied directly', () => {
+    expect(sources.filter(({ relation }) => relation !== undefined)).toHaveLength(30);
   });
 });

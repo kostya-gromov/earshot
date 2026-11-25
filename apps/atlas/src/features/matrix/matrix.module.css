@@ -129,7 +129,8 @@
   color: var(--ink-3);
 }
 
-.absent a {
+.absent a,
+.nativeSystems {
   color: var(--ink-2);
 }
 

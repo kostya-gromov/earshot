@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { patterns } from '@earshot/contracts';
 import { plannedPatterns } from '@/lib/planned-patterns';
 import { ThemeSwitch } from '@/features/theme';
-import { BrandMark } from '@/ui';
+import { BrandMark, ExternalLink } from '@/ui';
 import styles from './site-footer.module.css';
 
 const standards = [
@@ -46,7 +46,7 @@ function FooterNav() {
       <Column title="Standards">
         {standards.map(({ label, href }) => (
           <li key={href}>
-            <a href={href}>{label}</a>
+            <ExternalLink href={href}>{label}</ExternalLink>
           </li>
         ))}
       </Column>

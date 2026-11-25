@@ -32,13 +32,25 @@ export function MatrixKey({ columns }: { columns: readonly MatrixColumn[] }) {
       {cells.some(({ share }) => share) && (
         <li>
           <i className={styles.keyDot} aria-hidden="true" />
-          Judged on part of its scenarios
+          {/* One span: the item is a flex row, and its gap put a space before the colon. */}
+          <span>
+            Judged on part of its scenarios
+            <span className={styles.keyNote}>
+              : the rule’s other scenarios could not be judged for this system
+            </span>
+          </span>
         </li>
       )}
       {cells.some(({ isModel }) => isModel) && (
         <li>
           <i className={styles.keyFrame} aria-hidden="true" />
-          Explained by a different model
+          {/* One span: the item is a flex row, and its gap put a space before the colon. */}
+          <span>
+            Explained by a different model
+            <span className={styles.keyNote}>
+              : a written trade-off describes the system’s different model; the rule shows it
+            </span>
+          </span>
         </li>
       )}
     </ul>

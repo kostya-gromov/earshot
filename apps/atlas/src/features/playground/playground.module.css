@@ -312,7 +312,8 @@
  * so an open list never covers "You would hear" and never moves the page. The reference places
  * the list itself; Earshot only gives it the site's surface.
  */
-.stage :global(.combobox) {
+.stage :global(.combobox),
+.stage :global(.select) {
   /* The reference places its list at the bottom edge of this box, so the room goes under it. */
   margin-block-end: var(--list-room, 0px);
 }
@@ -387,7 +388,19 @@
   background: var(--well);
 }
 
-.stage :global(.combobox__popup) {
+.stage :global(.select__label) {
+  color: var(--ink-2);
+}
+
+.stage :global(.select__field) {
+  min-block-size: 48px;
+  padding-inline: 12px;
+  border-radius: 12px;
+  background: var(--well);
+}
+
+.stage :global(.combobox__popup),
+.stage :global(.select__popup) {
   z-index: 3;
   background: var(--panel);
   box-shadow: 0 12px 32px -12px var(--shadow-color);

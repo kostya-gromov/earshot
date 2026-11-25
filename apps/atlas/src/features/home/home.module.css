@@ -1,18 +1,25 @@
 /*
- * The opening: the statement across the page, one sentence with the buttons at its side, then
- * the recorded scene in its frame, all within the first view of a laptop screen.
+ * The opening, as few layers as the benchmark (Linear, 2026-11-25): a quiet line, the statement,
+ * one line under it, then room, then the scene. The systems and the ways in come after the scene.
  */
 .intro {
   display: grid;
-  gap: var(--space-5);
-  /* Tight above and below the statement, so the recording, which is the proof, starts high in
-     the first view (design review 2026-11-14: it began two thirds of the way down). */
-  padding-top: var(--space-6);
+  padding-top: clamp(var(--space-7), 8vw, 112px);
 }
 
+.statement {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.kicker {
+  font-size: var(--text-md);
+  color: var(--ink-3);
+}
+
+/* Two lines on a laptop, large and tight, like the benchmark's statement. */
 .title {
-  max-width: 20ch;
-  font-size: clamp(40px, 5.6vw, 68px);
+  font-size: clamp(34px, 5.2vw, 72px);
   line-height: 1.02;
   letter-spacing: var(--tracking-display);
   font-weight: 560;
@@ -20,86 +27,90 @@
   color: var(--ink);
 }
 
-.quiet {
-  color: var(--ink-3);
-}
-
-/* The buttons sit beside the text they act on, at its last line: under it they pushed the
-   recording out of the first view (design review 2026-11-14). */
-.row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: end;
-  gap: var(--space-4) var(--space-6);
-}
-
 .lede {
-  max-width: 62ch;
+  margin-top: var(--space-2);
+  max-width: 72ch;
   font-size: var(--text-md);
   line-height: 1.55;
   color: var(--ink-2);
   text-wrap: pretty;
 }
 
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-}
-
-.primary,
-.secondary {
-  display: inline-flex;
-  align-items: center;
-  min-height: 42px;
-  padding: 0 18px;
-  border-radius: 999px;
-  font: 500 var(--text-base) / 1 var(--font-sans);
-  text-decoration: none;
-  transition:
-    transform var(--dur-micro) var(--ease-out),
-    background-color var(--dur-micro) var(--ease-out);
-}
-
-.primary {
-  background: var(--ink);
-  color: var(--canvas);
-}
-
-.secondary {
-  color: var(--ink);
-  box-shadow: inset 0 0 0 1px var(--line-strong);
-}
-
-.secondary:hover {
-  background: var(--panel-2);
-}
-
-.primary:active,
-.secondary:active {
-  transform: scale(0.98);
-}
-
+/* Room before the scene, as the benchmark leaves before its product. */
 .sceneWrap {
-  margin-top: 0;
+  margin-top: clamp(var(--space-6), 5vw, 72px);
 }
 
-/* Load (apps/atlas/CLAUDE.md, Motion): the opening comes in once as one block, the statement
-   first, then the scene. Off under reduced motion. */
+/* After the scene: the systems by name, then a way in for each reader, as plain links. */
+.waysIn {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-7);
+}
+
+.systems {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.systems a {
+  color: var(--ink-2);
+  text-underline-offset: 3px;
+}
+
+.routes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4) var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.routes li {
+  display: grid;
+  gap: 2px;
+  align-content: start;
+}
+
+/* Interface sans, not mono: mono is for keys, code and tokens (apps/atlas/CLAUDE.md). */
+.who {
+  font: 500 var(--text-sm) / 1.5 var(--font-sans);
+  color: var(--ink-3);
+}
+
+.routes a {
+  /* As wide as its words, so its focus ring hugs them and clears the label above. */
+  justify-self: start;
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--ink);
+  text-underline-offset: 3px;
+  outline-offset: 3px;
+}
+
+/* Load (apps/atlas/CLAUDE.md, Motion): the opening comes in once as one sequence, the statement,
+   then its line, then the scene rising like a product shot; 1.26 s in all, 12 px at most. Off
+   under reduced motion. */
 @media (prefers-reduced-motion: no-preference) {
+  .kicker,
   .title,
-  .row,
+  .lede,
   .sceneWrap {
     animation: rise 800ms var(--ease-out) both;
   }
 
-  .row {
-    animation-delay: 120ms;
+  .title {
+    animation-delay: 60ms;
+  }
+
+  .lede {
+    animation-delay: 160ms;
   }
 
   .sceneWrap {
-    animation-duration: 1000ms;
-    animation-delay: 260ms;
+    animation-duration: 960ms;
+    animation-delay: 300ms;
   }
 }
 
@@ -111,23 +122,20 @@
 }
 
 @media (forced-colors: active) {
-  .primary,
-  .secondary {
-    border: 1px solid LinkText;
+  .routes a,
+  .systems a {
+    color: LinkText;
   }
 }
 
-/* On a phone the opening keeps one sentence, so the recording starts sooner; the recording's own
-   note says it was measured in Chromium. */
-@media (max-width: 860px) {
-  .row {
+@media (max-width: 760px) {
+  .routes {
     grid-template-columns: minmax(0, 1fr);
-    justify-items: start;
   }
 }
 
 @media (max-width: 560px) {
-  /* One sentence, then the buttons under it; the scene follows at once. */
+  .kicker,
   .lede {
     font-size: var(--text-base);
   }

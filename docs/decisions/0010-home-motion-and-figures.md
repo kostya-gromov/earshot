@@ -11,7 +11,7 @@ design review of that day made the pattern drawing still ("it played a sequence 
 shows") and replaced the method section's schematic plates with a real measurement ("showing,
 not telling"). The motion rule had three tiers: Signature, Functional, Micro.
 
-On 2026-11-13 and 14 the owner asked for a home page at the level of Linear with motion that is
+On 2026-11-13 and 14 a home page was asked for at the level of Linear with motion that is
 interesting, for the method section to speak for every pattern and not one key of one, and for
 figures that react to the pointer. A first pass added a separate section of three isometric
 figures and slide-in arrivals on three sections. The design review of 2026-11-14 found that the
@@ -31,7 +31,7 @@ page was four three-column rows in a row, and that the new motion fitted no tier
    - _Load_: a page's opening (its statement and its scene) may come in once on load as one
      sequence (the statement, then the scene), 1.3 s at most in all, rising at most 12 px. It is the one place text may start
      hidden. The home page had this before the tiers were written; the third review of
-     2026-11-14 found it fitted none, and the owner chose to name it over removing it.
+     2026-11-14 found it fitted none, and it was chosen to name it over removing it.
      All three are off under `prefers-reduced-motion`.
 2. **Figures live inside the method section**, in its recording step, each over its count from the
    measurement files (steps where focus moved, the accessibility tree changed, a live region
@@ -52,12 +52,12 @@ page was four three-column rows in a row, and that the new motion fitted no tier
   not an Illustration.
 - One point of the 2026-11-14 review was not taken: redrawing the figures flat. They keep their
   isometric view; what quoted Linear (the "Fig." labels, the vertical hairlines, the standalone
-  three-up block) is gone. Open for the owner to overrule.
+  three-up block) is gone. Open to be overruled.
 - New figures elsewhere must meet the Illustration rule or stay still.
 
 ## Amendment (2026-11-15): step 1 of the method has a figure and meters too
 
-Asked for by the owner. Step 1, "Rule", was a list of cited pages beside an empty column, while step
+Asked for in review. Step 1, "Rule", was a list of cited pages beside an empty column, while step
 2 had a large count, three figures and counted rows.
 
 - **One series.** Each of the three steps now has a large count, something drawn, and counted

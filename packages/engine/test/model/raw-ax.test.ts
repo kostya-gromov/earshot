@@ -40,4 +40,29 @@ describe('toAccessibleNode', () => {
     const { role: _, ...noRole } = axNode('button');
     expect(toAccessibleNode(noRole).role).toBeNull();
   });
+
+  it('keeps the value the tree gives a combobox: a select’s chosen option', () => {
+    const select = axNode('combobox', {
+      ...named('Fruit'),
+      value: { type: 'string', value: 'Banana' },
+    });
+    expect(toAccessibleNode(select)).toEqual({
+      role: 'combobox',
+      name: 'Fruit',
+      treeValue: 'Banana',
+      states: {},
+    });
+  });
+
+  it('keeps an empty combobox value, which says nothing is chosen', () => {
+    const empty = axNode('combobox', { value: { type: 'string', value: '' } });
+    expect(toAccessibleNode(empty).treeValue).toBe('');
+  });
+
+  it('reads no value for other roles, so their records do not change', () => {
+    const field = axNode('textbox', { value: { type: 'string', value: 'Ada' } });
+    const button = axNode('button', named('Fruit Banana'));
+    expect(toAccessibleNode(field)).not.toHaveProperty('treeValue');
+    expect(toAccessibleNode(button)).not.toHaveProperty('treeValue');
+  });
 });

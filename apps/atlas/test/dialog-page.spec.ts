@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
 // The modal dialog, the fifth pattern. It was built and reviewed on a preview route and moved to
-// the patterns on 2026-11-23, after the owner's VoiceOver check
+// the patterns on 2026-11-23, after the VoiceOver check
 // (docs/a11y-checks/2026-11-23-dialog-voiceover.md).
 test.beforeEach(async ({ page }) => {
   await page.goto('/patterns/dialog/');
@@ -16,7 +16,7 @@ test('the page is one of the patterns, and nothing is left at the preview addres
     .locator('main p')
     .filter({ hasText: /^Pattern/ })
     .first();
-  await expect(kicker).toContainText('5 of 5');
+  await expect(kicker).toContainText('5 of 6');
   await page.goto('/patterns/');
   await expect(page.getByRole('main').locator('a[href="/patterns/dialog/"]').first()).toBeVisible();
   const old = await page.goto('/lab/patterns/dialog/');
@@ -140,8 +140,8 @@ test('"Watch it" opens the dialog, goes round it once and closes it, slowly enou
   await expect(heard).toContainText('Cancel, button');
   await expect(heard).toContainText('Save, button');
   await expect(dialog.getByRole('button', { name: 'Save' })).toBeFocused();
-  // Started with the pointer, it still shows focus on a button, as a key would (the owner,
-  // 2026-11-23: no ring on the buttons).
+  // Started with the pointer, it still shows focus on a button, as a key would
+  // (2026-11-23: no ring on the buttons).
   await expect(dialog.getByRole('button', { name: 'Save' })).toHaveCSS('outline-style', 'solid');
   await expect(heard).toContainText('Name, textbox');
   await expect(dialog.getByRole('textbox', { name: 'Name' })).toBeFocused();

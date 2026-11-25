@@ -33,8 +33,9 @@ test('every pattern is listed in the order it was added, each under the page tit
     'Menu button',
     'Tabs',
     'Modal dialog',
+    'Select',
   ]);
-  await expect(page.getByRole('main')).toContainText('5 patterns, 46 rules');
+  await expect(page.getByRole('main')).toContainText('6 patterns, 57 rules');
 });
 
 test('a row gives the counts the pattern page counts from, and leads to it', async ({ page }) => {
@@ -51,6 +52,9 @@ test('a row gives the counts the pattern page counts from, and leads to it', asy
     '4 systems without this component',
     /^Measured \d+ \w+ 2026$/,
   ]);
+  // Who is left out, by name, beside the description (first-visit review, 2026-11-25).
+  await expect(chips).toContainText('Measured, not counted: GitHub Primer and React Aria.');
+  await expect(chips).toContainText('Without this component: IBM Carbon,');
   await expect(row(page, 'Combobox').getByRole('list').getByRole('listitem')).toHaveText([
     '10 rules',
     '6 systems counted',

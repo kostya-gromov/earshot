@@ -125,6 +125,13 @@
   }
 }
 
+/* Select: the chosen option, drawn as the active one is, still: the list opens on it. */
+.chosen {
+  fill: var(--line);
+  stroke: var(--ink-3);
+  stroke-width: 1.2;
+}
+
 /* Menu button: focus moves into the menu, down its items, and back to the button on Escape. */
 .buttonRing {
   animation: button-ring 6s var(--ease-out) infinite;

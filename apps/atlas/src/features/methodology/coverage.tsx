@@ -1,6 +1,7 @@
 import type { Measurement, TargetEntry } from '@earshot/contracts';
 import { measuredOn } from '@/lib/measured-on';
 import styles from './methodology.module.css';
+import { ExternalLink } from '@/ui';
 
 interface CoverageProps {
   /** The pattern's name, for the table's caption. */
@@ -109,7 +110,9 @@ function LeftOut({ targets }: { targets: readonly TargetEntry[] }) {
             {absent.map((entry) => (
               <li key={entry.system}>
                 <b>{entry.system}.</b> {entry.reason}{' '}
-                <a href={firstUrl(entry.evidence)}>Where {entry.system}’s docs show it</a>
+                <ExternalLink href={firstUrl(entry.evidence)}>
+                  Where {entry.system}’s docs show it
+                </ExternalLink>
               </li>
             ))}
           </ul>

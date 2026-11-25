@@ -86,7 +86,7 @@ describe('evaluateSay', () => {
     );
 
     expect(wrongChip.verdict).toBe('differs');
-    // Decided 2026-11-09 (the owner's review): the new count is the separate "count" rule.
+    // Decided 2026-11-09 (in review): the new count is the separate "count" rule.
     expect(wrongCount.verdict).toBe('follows');
   });
 

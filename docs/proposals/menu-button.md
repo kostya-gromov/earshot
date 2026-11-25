@@ -1,6 +1,6 @@
 # Proposal: pattern 3, menu button (a button that opens a menu of actions)
 
-- Opened: 2026-11-15. Status: **approved by the owner, 2026-11-16**, all eight decisions, with one
+- Opened: 2026-11-15. Status: **approved 2026-11-16**, all eight decisions, with one
   amendment to decision 4. The rule table below is the proposal as first written, kept for the
   record; the current rules live in contracts and in
   [docs/patterns/menu-button.md](../patterns/menu-button.md).
@@ -197,7 +197,7 @@ What went wrong before and is settled before any code here:
 - **The page is built on a preview route** from the first measurement, and is published only
   after the manual screen reader check.
 
-## Decisions for the owner
+## Decisions
 
 1. **Scope**: an action menu button with one disabled item; submenus, checkable items, links
    and context menus out. Recommended.

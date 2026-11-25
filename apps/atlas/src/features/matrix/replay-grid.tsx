@@ -38,7 +38,7 @@ function Said({ step }: { step: ReplayStep }) {
         </SpeechLine>
       ) : (
         <span className={styles.silent}>
-          {endsOutsidePage(step) ? notModelledWords : 'Nothing said'}
+          {endsOutsidePage(step) ? notModelledWords : 'No modelled speech'}
         </span>
       )}
     </>

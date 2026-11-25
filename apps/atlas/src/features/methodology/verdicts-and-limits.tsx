@@ -4,6 +4,7 @@ import { VerdictBadge } from '@/features/evidence';
 import { measuredOn } from '@/lib/measured-on';
 import { Part } from './how-we-measure';
 import styles from './methodology.module.css';
+import { ExternalLink } from '@/ui';
 
 /** The word with the mark it carries on the pattern page, so the two can be matched. */
 function Term({ verdict, children }: { verdict: Verdict; children: string }) {
@@ -185,7 +186,10 @@ export function Corrections() {
         system&rsquo;s card opens one whose title names the system, its version and the rule; add
         what you expected and how to see it: the page or package, the browser, the keys you pressed.
         For anything else,{' '}
-        <a href={`${publicRepository}/issues/new?template=correction.yml`}>open a correction</a>.
+        <ExternalLink href={`${publicRepository}/issues/new?template=correction.yml`}>
+          open a correction
+        </ExternalLink>
+        .
       </p>
       <p>
         A verdict is never edited by hand. If the recording was wrong, the engine, the adapter or

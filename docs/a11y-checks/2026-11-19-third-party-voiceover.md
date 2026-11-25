@@ -1,6 +1,6 @@
 # 2026-11-19: measured third-party systems and the reference, VoiceOver
 
-- **Who:** the owner, by hand.
+- **How:** by hand.
 - **Screen reader:** VoiceOver on macOS 27.2 (read from the machine afterwards, the same day).
 - **Browser:** not recorded; Safari 27.2 is installed on the machine.
 - **Target:** the harness pages of the measured systems (`packages/harness/dist`, served locally as `README.md` describes) and the reference in the Atlas playground.
@@ -19,7 +19,7 @@ These are the M2 spot-check items from `README.md`, as that file listed them on 
 
 ## Outcome
 
-The owner reported that what VoiceOver said matched the recordings on every item, with no differences. The report covers all items together; nothing was written down per item.
+What VoiceOver said matched the recordings on every item, with no differences. The result covers all items together; nothing was written down per item.
 
 ## What the verdict audit found the same day
 

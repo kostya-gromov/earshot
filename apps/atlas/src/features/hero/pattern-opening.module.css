@@ -1,0 +1,141 @@
+/*
+ * What the measurements show: a band on hairlines between the description and the reference.
+ * Figures first, then the rules where systems differ, each with every system's mark, as the
+ * matrix below draws them. Neutral ink only, except the matrix's own marks.
+ */
+.opening {
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr);
+  gap: var(--space-4) var(--space-6);
+  align-items: start;
+  padding-block: var(--space-5);
+  margin-bottom: var(--space-5);
+  border-block: 1px solid var(--line);
+}
+
+.title {
+  font: 500 var(--text-sm) / 1.5 var(--font-sans);
+  color: var(--ink-3);
+}
+
+.body {
+  display: grid;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+/* What was measured, as a sentence; why most rules are Earshot's own, quieter, under it. */
+.composition {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.lead {
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.why {
+  max-width: 88ch;
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.rest a {
+  color: var(--ink);
+  text-underline-offset: 3px;
+}
+
+/* Rules as rows on hairlines: title and kind, the systems' marks, the count on the right. */
+.ruleRows {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.ruleRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'head score'
+    'marks score';
+  gap: var(--space-1) var(--space-5);
+  align-items: center;
+  padding-block: var(--space-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.ruleHead {
+  grid-area: head;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-3);
+}
+
+.ruleHead a {
+  color: var(--ink);
+  /* No word left alone on a line at 390 (design review 2026-11-25-select). */
+  text-wrap: balance;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.ruleHead a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.level {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.ruleRow > ul {
+  grid-area: marks;
+}
+
+.score {
+  grid-area: score;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.score b {
+  margin-right: 4px;
+  font-size: var(--text-md);
+  font-weight: 560;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+/* Directly under the rows, the same quiet line as the not-counted note. */
+.rest,
+.all {
+  margin-top: calc(-1 * var(--space-2));
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.quiet {
+  max-width: 88ch;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+@media (max-width: 900px) {
+  .opening {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (forced-colors: active) {
+  .ruleHead a {
+    color: LinkText;
+  }
+}

@@ -6,7 +6,14 @@ const { plugin, ...config } = harnessConfig({
   from: import.meta.url,
   system: 'atlassian',
   measuredPackage: '@atlaskit/select',
-  pages: ['index.html', 'combobox.html', 'menu-button.html', 'tabs.html', 'dialog.html'],
+  pages: [
+    'index.html',
+    'combobox.html',
+    'menu-button.html',
+    'tabs.html',
+    'dialog.html',
+    'select.html',
+  ],
   packageByPage: {
     'menu-button.html': '@atlaskit/dropdown-menu',
     'tabs.html': '@atlaskit/tabs',

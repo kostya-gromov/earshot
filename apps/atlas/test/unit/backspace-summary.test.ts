@@ -16,7 +16,7 @@ describe('summarizeBackspace', () => {
         undefined,
       ]),
     ).toBe(
-      'Backspace pressed in 5 systems: 1 removed a chip, 2 moved focus to a chip, 2 showed no change.',
+      'Backspace pressed in 5 systems: 1 removed a chip, 2 moved focus to a chip, 2 changed nothing in the accessibility tree.',
     );
   });
 

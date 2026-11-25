@@ -2,8 +2,11 @@ import type { TradeOff } from '../schema/index.ts';
 
 /**
  * Hand-written trade-offs for input-with-chips (docs/patterns/input-with-chips.md). Drafts until
- * The owner reviews them; the site labels them "Draft, pending review". The two models (Chakra UI's
- * highlight, React Aria's separate grid) were reviewed on 2026-11-15; the alternatives are drafts.
+ * they are reviewed; the site labels them "Draft, pending review". The two models (Chakra UI's
+ * highlight, React Aria's separate grid) were reviewed on 2026-11-15. The four alternatives that
+ * name Atlassian or MUI (tab, bsp, say, count) were reviewed on 2026-11-25 by Claude as
+ * asked ("do as you think right"): each claim checked against the recordings of that
+ * day, and count's cost rewritten to what they show. The other alternatives are drafts.
  *
  * Edited 2026-11-13 after an editorial pass checked against the measurements of 2026-11-11 and two
  * verdict-auditor rounds (docs/proposals/trade-off-editorial-pass.md). After the
@@ -21,10 +24,11 @@ export const inputWithChipsTradeOffs: TradeOff[] = [
     ruleId: 'tab',
     seenIn: ['atlassian'],
     alternative: 'A Tab stop on every remove button',
-    gain: 'Tab alone reaches every remove button; nobody has to know another key.',
+    // "Every" was inferred for the third chip: two consecutive stops are recorded (verdict audit).
+    gain: 'Tab alone reaches the remove buttons; nobody has to know another key.',
     cost: 'One more Tab stop for every selected value on the way past the field.',
     reasonableWhen: 'The field rarely holds more than two or three values.',
-    status: 'draft',
+    status: 'reviewed',
   },
   {
     kind: 'alternative',
@@ -56,7 +60,7 @@ export const inputWithChipsTradeOffs: TradeOff[] = [
     gain: 'One key removes the last value.',
     cost: 'A Backspace meant for text removes a value as soon as the input is empty, with no step in between.',
     reasonableWhen: 'The removal is announced, and the value is easy to add back.',
-    status: 'draft',
+    status: 'reviewed',
   },
   {
     kind: 'alternative',
@@ -106,12 +110,16 @@ export const inputWithChipsTradeOffs: TradeOff[] = [
     ruleId: 'say',
     seenIn: ['fluent', 'mui', 'react-aria', 'primer'],
     alternative: 'No announcement on removal',
-    gain: 'No extra speech. Where focus moves to a neighbouring chip, that chip is announced by name.',
+    // Reviewed 2026-11-25: "announced by name" and "spoken" were claims about a screen reader;
+    // the recordings show the name on the element that takes focus.
+    gain: 'No extra announcement. Where focus moves to a neighbouring chip, the chip that takes focus carries its name.',
     // Not "silent": where focus stays in the input, its description changes ("3 selected" to
     // "2 selected" in MUI), and whether a screen reader speaks that is not measured.
-    cost: 'Nothing names the value that was removed.',
-    reasonableWhen: 'Every removal moves focus to a neighbouring chip whose name is spoken.',
-    status: 'draft',
+    // Reviewed 2026-11-25: "nothing names the value" was false for Primer, whose first Backspace
+    // puts the removed name back as the input's value (its own entry above; verdict audit).
+    cost: 'No announcement names the value that was removed; in GitHub Primer the name comes back only as the text of the input.',
+    reasonableWhen: 'Every removal moves focus to a neighbouring chip that carries its name.',
+    status: 'reviewed',
   },
   {
     kind: 'alternative',
@@ -119,9 +127,13 @@ export const inputWithChipsTradeOffs: TradeOff[] = [
     seenIn: ['atlassian', 'chakra'],
     alternative: 'Name the removed value without the count',
     gain: 'A shorter message on every removal.',
-    cost: 'A person who cannot see the field learns how many values remain only by moving through every chip.',
-    reasonableWhen: 'The field holds one or two values, or the count can be heard another way.',
-    status: 'draft',
+    // Was "a person who cannot see the field learns how many values remain only by moving through
+    // every chip": a claim about screen reader use, which these texts do not make. What the
+    // recordings show instead: in both systems nothing after a removal says how many remain,
+    // neither the announcement nor the input's description (MUI's says "2 selected").
+    cost: 'Nothing recorded after a removal says how many values remain: not the announcement, and not the description of the input.',
+    reasonableWhen: 'The field holds one or two values, or the count is exposed another way.',
+    status: 'reviewed',
   },
   {
     // Chakra UI differs on arrows, and since 2026-11-13 on bsp (ADR 0009: one principle for a

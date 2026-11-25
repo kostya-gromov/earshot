@@ -9,6 +9,7 @@
     "menu-button",
     "tabs",
     "dialog",
+    "select",
     "scripts",
     "test",
     "playwright.config.ts"

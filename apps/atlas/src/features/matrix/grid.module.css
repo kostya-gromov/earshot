@@ -176,6 +176,12 @@
      system's selection colour on its leading edge says it there, as the rule panel's chosen row
      does; not an outline, which is the focus ring's (design review 2026-11-19). The buttons keep
      a border so they read as buttons at all. */
+  /* Play/Pause's edge is a box-shadow, which forced colours take away (design review,
+     2026-11-24). */
+  .pause {
+    border: 1px solid ButtonText;
+  }
+
   .scenarios button {
     position: relative;
     border: 1px solid ButtonText;

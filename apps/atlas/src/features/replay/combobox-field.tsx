@@ -46,7 +46,7 @@ function List({ moment, isExpected }: { moment: ComboboxMoment; isExpected: bool
   const focused = moment.focus.kind === 'option' ? moment.focus.index - 1 : -1;
   const active = moment.options.findIndex(({ isActive }) => isActive);
   return (
-    <ul className={styles.list}>
+    <ul className={styles.list} data-focus={moment.focus.kind === 'list' || undefined}>
       {/* Mounted only while an option is active: it arrives on its row and leaves at once, so it
           never slides across rows the step does not name (design review 2026-11-15). */}
       {active >= 0 && <ActiveBar index={active} />}
@@ -72,10 +72,36 @@ interface ComboboxFieldProps {
 }
 
 /**
+ * A select's field: the value its tree gives it, and a chevron that says a list opens from it.
+ * No caret: nothing is typed into it. No value exposed, nothing written. Dashed while the select
+ * is not in the tree, as everything drawn without being recorded is.
+ */
+function SelectField({ moment }: { moment: ComboboxMoment }) {
+  return (
+    <div
+      className={styles.field}
+      data-focus={moment.focus.kind}
+      data-select=""
+      data-absent={moment.isOutOfTree || undefined}
+    >
+      {moment.value === undefined && !moment.isOutOfTree ? (
+        // A mark of absence, not placeholder text: it cannot be read as an option (design review
+        // 2026-11-24). The drawing is hidden from assistive technology; the words under it say it.
+        <span className={styles.noValue}>—</span>
+      ) : (
+        <span className={styles.value}>{moment.value}</span>
+      )}
+      <span className={styles.chevron} />
+    </div>
+  );
+}
+
+/**
  * The field, with the control of the combobox that takes focus in this recording, if any, at its
  * right end: a stub, since the engine knows its name and that it is inside, not what it shows.
  */
 function Field({ moment, inside }: { moment: ComboboxMoment; inside: string | undefined }) {
+  if (moment.isSelect) return <SelectField moment={moment} />;
   return (
     <div className={styles.field} data-focus={moment.focus.kind}>
       <span className={styles.value}>{moment.value}</span>

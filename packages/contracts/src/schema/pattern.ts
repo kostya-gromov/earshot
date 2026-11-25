@@ -30,7 +30,7 @@ export const Requirement = z.strictObject({
 });
 export type Requirement = z.infer<typeof Requirement>;
 
-/** Published only after the owner's review (`status: 'reviewed'`). */
+/** Published only after review (`status: 'reviewed'`). */
 const ReviewStatus = z.enum(['draft', 'reviewed']);
 
 export const TradeOff = z.discriminatedUnion('kind', [

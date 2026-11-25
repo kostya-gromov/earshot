@@ -154,8 +154,8 @@ test('what to know about a component is shown open, each note with its source an
   // Atlassian has notes of both kinds; each says which it is.
   await whose.getByRole('button', { name: /Atlassian/ }).click();
   const recorded = panel.getByRole('listitem').filter({ hasText: 'describes its own arrow keys' });
-  // Measured again on engine 0.20.0 on 23 Nov 2026, the recording unchanged; the note moved with it.
-  await expect(recorded).toContainText('Recorded by the engine, 23 Nov 2026');
+  // Measured again on engine 0.23.0 on 25 Nov 2026, the recording unchanged; the note moved with it.
+  await expect(recorded).toContainText('Recorded by the engine, 25 Nov 2026');
   await expect(recorded).not.toContainText('Seen by hand');
   const byHand = panel.getByRole('listitem').filter({ hasText: 'Nothing on screen shows' });
   await expect(byHand).toContainText(

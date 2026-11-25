@@ -28,9 +28,11 @@
 }
 
 .bandHead h2 {
-  font-size: var(--text-xl);
-  line-height: 1.12;
-  letter-spacing: var(--tracking-heading);
+  /* The size of the other sections' heads on the home page, not of the h3s inside them
+     (design review 2026-11-25b). */
+  font-size: var(--text-display-sm);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display);
   font-weight: 620;
   text-wrap: balance;
 }

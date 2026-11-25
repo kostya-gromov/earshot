@@ -10,6 +10,8 @@ export interface AdapterStates {
   popup?: PopupState;
   /** What the page says the last action was. */
   effect?: string;
+  /** The visible label's rendered text. */
+  label?: string;
   tabSet?: TabSetState;
   dialog?: DialogState;
 }
@@ -19,7 +21,7 @@ export async function statesNow<State, InteractionId extends string>(
   session: Session,
   adapter: Adapter<State, InteractionId>,
 ): Promise<AdapterStates> {
-  const { popup, effect, panels, dialog, items } = adapter;
+  const { popup, effect, label, panels, dialog, items } = adapter;
   const { page } = session;
   return {
     ...(popup
@@ -32,6 +34,7 @@ export async function statesNow<State, InteractionId extends string>(
         }
       : {}),
     ...(effect ? { effect: (await effect.locate(page).allTextContents()).join(' ').trim() } : {}),
+    ...(label ? { label: (await label.locate(page).allInnerTexts()).join(' ').trim() } : {}),
     ...(panels
       ? { tabSet: await readTabSet(session, { tabs: items.locate, panels: panels.locate }) }
       : {}),
@@ -50,5 +53,11 @@ export function pairStates(before: AdapterStates, after: AdapterStates): Pairs {
     const [was, is] = [before[key], after[key]];
     return was === undefined || is === undefined ? {} : { [key]: { before: was, after: is } };
   };
-  return { ...pair('popup'), ...pair('effect'), ...pair('tabSet'), ...pair('dialog') };
+  return {
+    ...pair('popup'),
+    ...pair('effect'),
+    ...pair('label'),
+    ...pair('tabSet'),
+    ...pair('dialog'),
+  };
 }

@@ -13,6 +13,14 @@ interface Change {
 
 const changes: readonly Change[] = [
   {
+    date: '25 Nov 2026',
+    text: 'Select, the sixth pattern, is on the site: eleven rules, two of them Earshot recommendations, measured in five systems on engine 0.23.0 with reference 0.1.11. All five differ on one rule, “The active option is the selected one”; a written trade-off describes the alternative they take. The browser’s own select is measured beside the reference as evidence for a design requirement, and is not counted.',
+  },
+  {
+    date: '25 Nov 2026',
+    text: 'Engine 0.23.0 and reference 0.1.11. Every system and every reference measured again. No verdict, no reason and no recording changed, step for step, apart from timings. The engine now reads a combobox’s value from the accessibility tree and says it after the role, as in “Fruit, combobox, Banana, collapsed”; no spoken line on the published patterns changed with it. A scenario that a target cannot run is written into its file as not run, with the reason, so that a missing recording is never read as behavior.',
+  },
+  {
     date: '24 Nov 2026',
     text: 'Earshot Atlas is now called Earshot. Rules that used to say “An Atlas recommendation” now say “An Earshot recommendation”, and design requirements marked “Atlas guidance” now say “Earshot guidance”; what they ask is the same. The sample text on the tabs pages changed with the name, so the reference went to 0.1.9, and every reference and every tabs system was measured again on engine 0.20.0. No verdict and no reason changed.',
   },

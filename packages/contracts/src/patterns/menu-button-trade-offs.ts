@@ -1,7 +1,7 @@
 import type { TradeOff } from '../schema/index.ts';
 
 /**
- * Trade-offs for the menu button, hand-written; each is a draft until the owner reviews it. Reviewed
+ * Trade-offs for the menu button, hand-written; each is a draft until it is reviewed. Reviewed
  * on 2026-11-16: skipped disabled items, the modal open menu, Tab that does nothing. Written
  * before the measurements where a system's own documentation already says what it does, and
  * given `seenIn` only once a recording shows it.
@@ -19,7 +19,7 @@ export const menuButtonTradeOffs: TradeOff[] = [
     // primary methods of discovery"; "When users can reasonably infer the presence of a disabled
     // element from nearby focusable elements, it is removed from the keyboard focus order".
     // The cost keeps to APG's own measure, "far less likely to discover": in Chakra UI and
-    // Atlassian the skipped item stays in the tree as disabled (verdict audit; the owner, 2026-11-16).
+    // Atlassian the skipped item stays in the tree as disabled (verdict audit, 2026-11-16).
     // Recorded on 2026-11-16 for the four systems in `seenIn`: Down Arrow from "Duplicate" made
     // "Delete" active. Fluent 2, GitHub Primer and the reference reach the disabled item.
     kind: 'alternative',
@@ -33,7 +33,7 @@ export const menuButtonTradeOffs: TradeOff[] = [
     status: 'reviewed',
   },
   {
-    // Checked on 2026-11-16 at the owner's request: is "the button leaves the tree while the menu
+    // Checked on 2026-11-16, as asked: is "the button leaves the tree while the menu
     // is shown" (React Aria, MUI) the same design as "Tab does nothing in the menu" (React Aria,
     // Chakra UI)? No: three mechanisms. React Aria and MUI hide the page; of those two only
     // React Aria keeps Tab in the menu; Chakra UI holds Tab without hiding anything, which is the

@@ -135,7 +135,7 @@ CLAUDE.md 7 was updated accordingly.
 
 ## Amendment (2026-11-13): the quiet window is 400 ms
 
-Accepted by the owner on 2026-11-13. Engine 0.11.0.
+Accepted on 2026-11-13. Engine 0.11.0.
 
 - **What happened.** Chakra UI 3.38.0 brings `@zag-js/live-region` 1.47.0, which waits at least 100 ms before it writes an announcement (`MIN_DELAY = 100`; 1.43.3 wrote it at once). The engine's quiet window was also 100 ms, so the click-removal step closed a few milliseconds before the text arrived. Three runs agreed on "Removal is not announced", which is false: a separate script saw "Tag Greg Fisher deleted" 104 ms after the click. Agreement between runs does not catch an error that every run makes.
 - **Decision.** 400 ms: four times the delay seen. The cap stays at 1000 ms.
@@ -147,7 +147,7 @@ Accepted by the owner on 2026-11-13. Engine 0.11.0.
 
 ## Amendment (2026-11-14): the field's value and an unresolved active descendant
 
-Approved by the owner on 2026-11-14 with the combobox proposal. Engine 0.12.0.
+Approved on 2026-11-14 with the combobox proposal. Engine 0.12.0.
 
 - **What is added to focus.** `value`: the text in the focused text field, read from the DOM (`input` of a text type, `textarea`); absent for anything else, and never read from a password field. `activeDescendantUnresolved: true`: `aria-activedescendant` is set but names no element in the accessibility tree.
 - **Why.** Combobox rules judge what Enter puts in the field and whether the active option exists. On 2026-11-13 a measured system's `aria-activedescendant` named an id no element had; the engine recorded nothing, and only a separate script saw it.
@@ -155,7 +155,7 @@ Approved by the owner on 2026-11-14 with the combobox proposal. Engine 0.12.0.
 
 ## Amendment (2026-11-14): a pattern's popup is recorded where it is rendered
 
-Approved by the owner on 2026-11-14. Engine 0.12.0, same version as the amendment above; nothing was measured between them.
+Approved on 2026-11-14. Engine 0.12.0, same version as the amendment above; nothing was measured between them.
 
 - **What happened.** The tree diff covers the adapter's component root. Component libraries usually render a combobox popup at the end of the page, outside that root, so the engine would have recorded "nothing changed in the tree" when a list opened, and `expanded` and `selected` could not be judged for any real system.
 - **Options.** (1) The adapter says where the popup is and the engine records it. (2) Each harness page forces the popup inside the root with a library prop. The second measures a configuration teams do not ship and needs a justified prop per system.
@@ -166,7 +166,7 @@ Approved by the owner on 2026-11-14. Engine 0.12.0, same version as the amendmen
 
 ## Amendment (2026-11-14): a live region that arrives with its text is recorded, apart from announcements
 
-Approved by the owner on 2026-11-14 as a follow-up to the first combobox measurements. Engine 0.12.4.
+Approved on 2026-11-14 as a follow-up to the first combobox measurements. Engine 0.12.4.
 
 - **What happened.** When no option matches, MUI's Autocomplete puts a `role="status"` region with "No options" into the page. The recorder counts text written into a live region that is already there, so the step read "nothing announced", and the only trace of the region was a note written by hand.
 - **Decision.** A step now carries `insertedRegions`: each live region that entered the page during the step already holding text, with that text and its politeness. It is kept apart from `announcements`, because screen readers often do not speak a region inserted together with its text; the engine does not claim it was heard or that it was not.
@@ -184,7 +184,7 @@ Engine 0.13.0. Closes the limit left by the amendment above.
 
 ## Amendment (2026-11-15): one rule for when a live region's text announces a change
 
-Decided by the owner on 2026-11-15 after the verdict audit of the input-with-chips re-measurement. Engine 0.14.0. Replaces "How it is used" in the amendment of 2026-11-14 on regions that arrive with their text.
+Decided on 2026-11-15 after the verdict audit of the input-with-chips re-measurement. Engine 0.14.0. Replaces "How it is used" in the amendment of 2026-11-14 on regions that arrive with their text.
 
 - **What happened.** React Aria's removal by click brings in a polite region holding "Irene OhGreg FisherHiroshi Matsui". The chips evaluator read only `announcements` and said "The removal was not announced" without a word about the region. The combobox evaluators did the opposite with the same kind of step: they did not judge it and quoted the text. Two patterns, two policies.
 - **Decision.** One rule for every pattern (`model/change-announcement.ts`). The text a live region holds in the judged step counts as the announcement of the change **only if it names the change and does not appear in the same form in a step without it**, anywhere in the recording.
@@ -200,7 +200,7 @@ Decided by the owner on 2026-11-15 after the verdict audit of the input-with-chi
 
 ## Amendment (2026-11-16): what a menu needs, the opener, focus in the popup, and what an action did
 
-Approved by the owner on 2026-11-16 with the menu button proposal and its amendment. Engine 0.15.0.
+Approved on 2026-11-16 with the menu button proposal and its amendment. Engine 0.15.0.
 
 - **Focus in the popup.** A step's focus carries `isInsidePopup` for adapters that declare a popup. A menu is usually rendered at the end of the page, outside the component root, so `isInsideComponent` alone read DOM focus on a menu item as focus that left the component. Combobox did not need it: its focus never leaves the input.
 - **The opener.** `popup.before` and `popup.after` carry `opener`, the element that opens the popup as the tree exposes it, for adapters that say where it is. A menu button's expanded state is read there: once focus is in the menu, the focused element says nothing about the button.
@@ -210,7 +210,7 @@ Approved by the owner on 2026-11-16 with the menu button proposal and its amendm
 
 ## Amendment (2026-11-16): `expanded` for a menu button, and speech when focus lands on an active descendant
 
-Approved by the owner on 2026-11-16. Engine 0.15.2.
+Approved on 2026-11-16. Engine 0.15.2.
 
 - **The opener, three cases.** Not in the accessibility tree after a step: nothing was said, the step is not judged. In the tree with no expanded state: the rule differs (APG: "When the menu is hidden, aria-expanded is set to false"; no state is not false). In the tree with a state: compared with whether the menu is shown.
 - **Both states or inconclusive.** The rule follows only when the button was read at least once with the menu shown and once with it hidden, anywhere in the measurement. A system that hides the button while its menu is shown can only be read in one state, and one state does not show that the button tells the two apart.
@@ -218,7 +218,7 @@ Approved by the owner on 2026-11-16. Engine 0.15.2.
 
 ## Amendment (2026-11-16): the popup an element says it has
 
-Decided by the owner on 2026-11-16, after the design review of the menu button page. Engine 0.16.0.
+Decided on 2026-11-16, after the design review of the menu button page. Engine 0.16.0.
 
 - **Why.** A menu button's focus line read "Actions, button, collapsed": nothing in it said that the button opens a menu, on a page about menu buttons. Screen readers do say it.
 - **What is recorded.** `states.hasPopup` on the focused element: `menu`, `listbox`, `tree`, `grid` or `dialog`, read from the element's own `aria-haspopup` attribute ("true" is a menu; "false", an empty value and unknown tokens are none). It is read from the DOM attribute and not from the accessibility tree, because the tree gives some roles an implicit value the author never wrote: a combobox that does not write the attribute records none.
@@ -227,7 +227,7 @@ Decided by the owner on 2026-11-16, after the design review of the menu button p
 
 ## Amendment (2026-11-16): engine 0.16.1, three corrections in one measurement
 
-Engine 0.16.1, measured once for all three patterns. The first was found by the verdict audit of 2026-11-16; the other two were decided by the owner that day.
+Engine 0.16.1, measured once for all three patterns. The first was found by the verdict audit of 2026-11-16; the other two were decided that day.
 
 ### Which element has focus is not read from its path
 
@@ -252,7 +252,7 @@ Wording only, in the two `expanded` evaluators: "after the 1 step judged" became
 
 ## Amendment (2026-11-21): engine 0.18.0, what a modal dialog needs
 
-Decided by the owner with the dialog proposal (`docs/proposals/dialog.md`, decision 8). One engine version; the four published patterns are measured again on it.
+Decided with the dialog proposal (`docs/proposals/dialog.md`, decision 8). One engine version; the four published patterns are measured again on it.
 
 - **The dialog at each step** (`Step.dialog`, for adapters that declare one): the dialog's node as the tree exposes it, absent when none is in the tree; the name of the first heading inside it, its visible title; and the button that opens it, absent when the tree leaves it out, as it does for the page behind the browser's own modal dialog.
 - **`states.modal`**, from the tree's own property. Chromium reports it for `aria-modal="true"` and for a native `<dialog>` opened with `showModal()`, which has no such attribute (checked by hand on 2026-11-21 before it was built, then by `test/capture/dialog.test.ts`).
@@ -288,3 +288,81 @@ again on it, so that all data is on one engine version.
 - **A click at a point records the point**, in whole CSS pixels of the viewport (`action.point`).
   The point is read once and is the point clicked. Drawings stay schematic.
 
+
+### Engine 0.21.0 (2026-11-24): the value the tree gives a combobox
+
+- **`treeValue` on every node with role combobox**, from CDP's `value` for that node: for a
+  select, the chosen option's text. Read wherever a node is read (focus, the popup's opener), so
+  the select's `escape-keeps-value` is judged even when focus left the select. Read for no other
+  role, so the records of the five measured patterns change only on their comboboxes. Named
+  apart from `FocusInfo.value`, the text of a focused text field read from the page.
+- Checked by hand on 2026-11-24 (`docs/proposals/select.md`): Chromium 156 gives a value to a
+  native select and to a `div` with role combobox built as the APG example; a button with
+  `aria-haspopup="listbox"` has none.
+- **The speech line says a combobox's value**, after its role: "Fruit, combobox, Banana,
+  collapsed". Without it a select reads "Fruit, combobox" and hides what is chosen. An empty
+  value says nothing. It changes the lines of the editable comboboxes too (input with chips,
+  combobox) once a value is in the field; they are measured again on this version.
+- **The visible label** (`label` on a step, for adapters that declare one): the rendered text of
+  the element the adapter locates, before and after each step, read from the page and not the
+  tree, so `name-is-label` compares the name with what a person sees.
+
+### Engine 0.21.1 (2026-11-24): every shortfall in one reason
+
+No change to capture or speech. The select's `name-and-value` named only the first way a select
+fell short; React Aria's said "exposed as button, not as a combobox", while `enter` and
+`escape-keeps-value` left it unjudged for "no value, charged to name-and-value" (verdict audit,
+2026-11-24). The reason now names every shortfall: the role, an empty name, no value, a name that
+holds the value. Only the select is on 0.21.x; it was measured again on this version.
+
+The semantic model does not say a node's description (`aria-describedby`): it never has, and
+the methodology now says so. Atlassian's select, which names no value and gives the chosen option
+as its description, is said "Fruit, combobox, collapsed"; the site's words under its drawing give
+the description.
+
+### Engine 0.21.2 (2026-11-24): what `expanded` could judge
+
+No change to capture. The select's `expanded` judged a step only with focus on the select, so a
+select whose DOM focus leaves for the list (MUI, React Aria, Chakra UI) was judged on closed-list
+steps alone and followed as a select judged open did (second verdict audit, 2026-11-24). The
+verdict is the same; where no judged step had the list shown, the summary says "Collapsed
+matches; the list shown was not judged" and the reason says so. The select was measured again.
+
+### Engine 0.22.0 (2026-11-24): two select rules, as answered
+
+No change to capture. Two verdicts can change, so the minor version moves.
+
+- **`arrows`**: at an end of the list, moving on to the other end follows, as on the combobox:
+  APG's pattern, one text for both, names doing nothing and returning, and does not rule out
+  moving on. Which of the three a system takes is recorded in the reason. Landing anywhere else
+  still differs.
+- **`name-is-label`**: not judged only where the shortfall is about the name (no combobox role,
+  an empty name, a name holding the value). A select with no value whose name is its label is
+  judged; the missing value is `name-and-value`'s alone.
+
+The select was measured again on this version.
+
+### Engine 0.22.1 (2026-11-24): two edge cases of the select (third verdict audit)
+
+No change to capture; no measured verdict changed. `arrows`: a key at an end that leaves no
+option active returned to the select only where focus is on it; focus elsewhere differs.
+`name-is-label`: a select with no value whose name is more than its label is not judged, since
+`name-and-value` already charges the missing value. Both tested on synthetic cases; the select
+was measured again so its files carry one version.
+
+### Engine 0.23.0 (2026-11-25): scenarios a target does not run
+
+- **`not-run`**, a run status with a reason. An adapter may declare scenarios it does not run
+  (`notRun`), and the file says "not run" in their place with that reason; a rule that rests on
+  them only is inconclusive with it ("Not run"), never judged on what was not run. First used for
+  the browser's own select (`native-select`, a variant of the reference, never counted): once the
+  browser draws its list, the engine's keys do not reach it (measured 2026-11-24, Chromium on
+  macOS), so every scenario that opens the list and presses more keys is not run.
+- **`type-closed`**, a recorded-only select scenario: one letter typed on the closed select. Last
+  in the list, since the first scenario that decides a rule gives its summary and this one judges
+  no list shown. Every select target measured again; no verdict changed.
+
+Every pattern was measured again on 0.23.0 with reference 0.1.11 on 2026-11-25, so that all data
+is on one engine version. Compared with the files of 0.20.0, step by step with timings set aside:
+no verdict, no reason, no recording and no spoken line changed in the five published patterns.
+The recorded notes in `data/targets.yaml` that cite those files moved to the new date unchanged.

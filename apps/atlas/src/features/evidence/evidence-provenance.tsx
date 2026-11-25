@@ -2,6 +2,7 @@ import type { Measurement, TargetEntry } from '@earshot/contracts';
 import { correctionLink } from '@/lib/correction-link';
 import { measuredOn } from '@/lib/measured-on';
 import styles from './evidence.module.css';
+import { ExternalLink } from '@/ui';
 
 const versionOf = ({ systemVersion }: Measurement['target']): string =>
   'reason' in systemVersion ? 'version unknown' : systemVersion.version;
@@ -77,14 +78,16 @@ export function EvidenceLinks({ measurement, file, entry, ruleId }: EvidenceLink
   return (
     <>
       <a href={`/${file}`}>Raw JSON</a>
-      {entry?.docs && <a href={entry.docs}>Docs</a>}
+      {entry?.docs && <ExternalLink href={entry.docs}>Docs</ExternalLink>}
       {/* Local pages (reference, harness) are repository paths, not public addresses. */}
-      {url.startsWith('https://') && <a href={url}>Example page</a>}
+      {url.startsWith('https://') && <ExternalLink href={url}>Example page</ExternalLink>}
       {entry?.status === 'measured' && entry['docs-example'] && (
-        <a href={entry['docs-example']}>Docs example</a>
+        <ExternalLink href={entry['docs-example']}>Docs example</ExternalLink>
       )}
       {/* A new issue, filled in with this card: the system, version, rule, verdict and file. */}
-      <a href={correctionLink({ measurement, file, ruleId })}>Suggest a correction</a>
+      <ExternalLink href={correctionLink({ measurement, file, ruleId })}>
+        Suggest a correction for {measurement.target.system}
+      </ExternalLink>
     </>
   );
 }

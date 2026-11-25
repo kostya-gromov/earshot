@@ -3,7 +3,7 @@ import { apg, wcag } from './dialog-sources.ts';
 
 /**
  * What accessibility asks of the design of a modal dialog, proposed on 2026-11-23 and approved
- * by the owner that day with the levels below. Each reason follows the cited page as it stands
+ * that day with the levels below. Each reason follows the cited page as it stands
  * in docs/sources/: `wcag` only where the page states the requirement itself.
  * - APG roles: the dialog's name is "A value set for the aria-labelledby property that refers to
  *   a visible dialog title", or a value for aria-label.

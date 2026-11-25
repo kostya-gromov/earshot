@@ -26,7 +26,7 @@ export const measure = (text: string) => <span className={styles.measure}>{text}
  * Drawings for the combobox requirements, by requirement id. The active option is drawn as the
  * reference draws it: an outline as well as a tint, in the colour of keyboard focus.
  */
-export const comboboxVisuals: Readonly<Record<string, () => ReactNode>> = {
+export const comboboxVisuals = {
   'active-option-drawn': () => (
     <span className={styles.options}>
       <Option name="Apple" />
@@ -65,4 +65,4 @@ export const comboboxVisuals: Readonly<Record<string, () => ReactNode>> = {
       {measure('3:1')}
     </>
   ),
-};
+} satisfies Record<string, () => ReactNode>;

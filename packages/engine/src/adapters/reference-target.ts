@@ -10,12 +10,17 @@ function closeServer(server: Server): Promise<void> {
   });
 }
 
-/** The local reference of a pattern, served on a free port for the length of one measurement. */
+/**
+ * The local reference of a pattern, served on a free port for the length of one measurement. `id`
+ * names another page of the reference package (the browser's own select, a variant of the
+ * reference); it defaults to the reference itself.
+ */
 export function createReferenceTarget<State, InteractionId extends string>(
   createAdapter: (baseUrl: string) => Adapter<State, InteractionId>,
+  id = 'reference',
 ): TargetFactory<State, InteractionId> {
   return {
-    id: 'reference',
+    id,
     async open() {
       const server = await startServer({ port: 0 });
       const port = (server.address() as AddressInfo).port;

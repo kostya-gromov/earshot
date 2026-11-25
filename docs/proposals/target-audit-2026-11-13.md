@@ -1,6 +1,6 @@
 # Target audit: is each system measured on the right component?
 
-- Date: 2026-11-13. Status: **for the owner's decision**. Nothing is re-measured or changed in
+- Date: 2026-11-13. Status: **for decision**. Nothing is re-measured or changed in
   `data/` by this audit (two earlier notes on React Aria in `data/targets.yaml` are from the same
   day and are listed in `react-aria-token-field.md`).
 - Why: React Aria turned out to ship a component for this pattern (TokenField) in the very version
@@ -194,7 +194,7 @@ Not done, and why:
   appended live regions) as a proposal, then measure; (c) publish the trial as is. I recommend
   (a) now and (b) as a proposal: (c) would print verdicts the engine cannot stand behind.
 
-## Decisions, 2026-11-13 (the owner: "yes, go")
+## Decisions, 2026-11-13 ("yes, go")
 
 - **Quiet window 400 ms.** ADR 0003 amended, engine 0.11.0. Chakra UI moved to 3.38.0 and every
   system measured again. Against the committed files no verdict changed; one reason did
@@ -207,7 +207,7 @@ Not done, and why:
   `engine-text-editing-model.md`. The trial page and adapter stay in the tree, unregistered.
 
 
-## Later the same day: three more decisions (the owner: "fix these too, the way you think is right")
+## Later the same day: three more decisions ("fix these too, the way you think is right")
 
 - **React Aria is shown, not counted.** New field `not-counted` in `data/targets.yaml` carries
   the reason; the site prints it beside the system wherever "deprecated" was printed for Primer

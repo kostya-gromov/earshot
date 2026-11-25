@@ -13,6 +13,7 @@ const { plugin, ...config } = harnessConfig({
     'tabs.html',
     'dialog.html',
     'dialog-default-focus.html',
+    'select.html',
   ],
 });
 

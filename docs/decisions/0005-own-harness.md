@@ -49,7 +49,7 @@ URL stays in `data/targets.yaml` as `docs-example` and on the evidence card.
 
 ## Amendment (2026-11-16): variants of a system, and a file behind every recorded note
 
-Decided by the owner on 2026-11-16, after the verdict audit of the menu button.
+Decided on 2026-11-16, after the verdict audit of the menu button.
 
 - **What went wrong.** Fluent 2's menu button was first measured as the Default story of Menu, with a plain Button, and then as MenuButton, its own component for this. The first recording was worth keeping: it is the first example a reader of the Menu docs sees. It was kept as a note labelled "recorded" whose measurement file no longer existed, so the site would have printed "Recorded by the engine" beside a statement no reader could check.
 - **`variant-of`** on a measured entry of `data/targets.yaml`: the adapter of the counted entry of the same system. A variant has its own harness page, its own adapter and its own measurement file, written by the engine like any other. It is never a column of the matrix and never counted: the site attaches it to the system it belongs to. It must say why in `not-counted`.

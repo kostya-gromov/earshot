@@ -1,0 +1,28 @@
+/* A row of systems with their marks: quiet names, the mark carries the verdict's shape and tone. */
+.marks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.marks li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+/* What follows is said in full ink; the rest stays a step quieter, so the eye finds the ticks. */
+.marks li[data-verdict='follows'] {
+  color: var(--ink);
+}
+
+.marks li[data-verdict='inconclusive'],
+.marks li[data-verdict='not-applicable'] {
+  color: var(--ink-3);
+}

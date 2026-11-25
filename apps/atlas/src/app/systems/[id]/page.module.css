@@ -1,0 +1,30 @@
+.wrap {
+  max-width: calc(var(--page) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding-block: var(--space-7) var(--space-9);
+}
+
+/* The same opening as the methodology page: a display title and one paragraph. */
+.head {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.head h1 {
+  font-size: var(--text-display);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-display);
+  font-weight: 650;
+}
+
+.head p {
+  max-width: var(--measure);
+  font-size: var(--text-md);
+  color: var(--ink-2);
+}

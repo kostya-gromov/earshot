@@ -30,9 +30,10 @@ export function RunItSection({ patternId, scenarioCount, startingState }: RunItS
           status="Coming later"
           size="display"
         >
-          Earshot will open your public Storybook story in Chromium and run the same {scenarioCount}{' '}
-          scenarios. Every scenario starts from one state: {startingState}. Your story reaches it
-          with a play function, so the setup is yours, not our guess. Nothing runs yet.
+          Nothing runs yet. Earshot will open your public Storybook story in Chromium and run the
+          same {scenarioCount} scenarios. Each starts from a state it names, such as “
+          {startingState}”. Your story reaches them with a play function, so the setup is yours, not
+          our guess.
         </SectionHead>
         <ol className={styles.steps}>
           {steps.map((step, index) => (

@@ -2,8 +2,8 @@ import type { Requirement } from '../schema/index.ts';
 import { apg, wcag } from './menu-button-sources.ts';
 
 /**
- * What accessibility asks of the design of a menu button, written on 2026-11-16 and reviewed by
- * The owner that day. Each reason follows the cited page as it stands in docs/sources/: `wcag` is
+ * What accessibility asks of the design of a menu button, written on 2026-11-16 and reviewed
+ * that day. Each reason follows the cited page as it stands in docs/sources/: `wcag` is
  * used only where the page states the requirement itself.
  * - Focus Visible: "Any keyboard operable user interface has a mode of operation where the
  *   keyboard focus indicator is visible."

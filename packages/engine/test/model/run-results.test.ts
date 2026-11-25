@@ -13,6 +13,32 @@ const follows: Evaluator = () => ({
 });
 
 describe('evaluateScenarioRuns', () => {
+  it('leaves every rule of a scenario that was not run inconclusive, with the reason (2026-11-25)', () => {
+    const notRun: Run = {
+      status: 'not-run',
+      reason: "Not run: the engine cannot drive the browser's own list.",
+    };
+    expect(
+      evaluateScenarioRuns({
+        scenarioId: 'move',
+        ruleIds: ['arrows', 'selected'],
+        runs: [notRun, notRun],
+        evaluators: { arrows: follows, selected: follows },
+      }),
+    ).toMatchObject({
+      consistent: true,
+      verdicts: {
+        arrows: {
+          verdict: 'inconclusive',
+          summary: 'Not run',
+          reason: "Not run: the engine cannot drive the browser's own list.",
+          // Nought, given: the site folds scenarios by their counts.
+          judgedSteps: 0,
+        },
+      },
+    });
+  });
+
   it('treats timing and focus paths as nondeterministic fields', () => {
     const first = step({
       focusAfter: focus({ path: '#first' }),

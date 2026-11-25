@@ -6,7 +6,7 @@ import styles from './design-lens.module.css';
  * Drawings for the menu button requirements, by requirement id. An item is drawn as the list
  * rows of the combobox drawings are: the focused one with an outline as well as a tint.
  */
-export const menuVisuals: Readonly<Record<string, () => ReactNode>> = {
+export const menuVisuals = {
   'item-focus-visible': () => (
     <>
       <Option name="Duplicate" isActive subject="indicator" />
@@ -48,4 +48,4 @@ export const menuVisuals: Readonly<Record<string, () => ReactNode>> = {
       {measure('in view')}
     </>
   ),
-};
+} satisfies Record<string, () => ReactNode>;

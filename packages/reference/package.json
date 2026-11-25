@@ -1,6 +1,6 @@
 {
   "name": "@earshot/reference",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "private": true,
   "type": "module",
   "exports": {
@@ -11,7 +11,8 @@
     "./combobox/*": "./combobox/*",
     "./menu-button/*": "./menu-button/*",
     "./tabs/*": "./tabs/*",
-    "./dialog/*": "./dialog/*"
+    "./dialog/*": "./dialog/*",
+    "./select/*": "./select/*"
   },
   "scripts": {
     "dev": "node scripts/serve.ts",

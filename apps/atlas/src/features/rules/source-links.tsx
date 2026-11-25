@@ -1,4 +1,5 @@
 import type { Source } from '@earshot/contracts';
+import { ExternalMark } from '@/ui';
 import styles from './rules.module.css';
 
 const prefix = (source: Source): string => {
@@ -51,6 +52,7 @@ export function SourceLinks({ sources, isCompact = false }: SourceLinksProps) {
                 <span className={hideTitle ? 'visually-hidden' : styles.sourceTitle}>
                   {shortTitle(source)}
                 </span>
+                <ExternalMark />
               </a>
             </li>
           );

@@ -1,8 +1,9 @@
 import type { Pattern } from '@earshot/contracts';
 import type { PatternEntry } from '@/data/pattern-entries';
 import { measuredOn } from '@/lib/measured-on';
-import { Glyph, countedSystems, setAsideIn } from './pattern-card';
+import { Glyph, countedSystems, setAsideIn, setAsideNames } from './pattern-card';
 import styles from './catalog.module.css';
+import { ExternalLink } from '@/ui';
 
 const names = new Intl.ListFormat('en-GB', { type: 'conjunction' });
 
@@ -16,7 +17,7 @@ function SourceLink({ url, title }: { url: string; title: string }) {
   const [page, ...section] = title.split(': ');
   return (
     <>
-      <a href={url}>{page}</a>
+      <ExternalLink href={url}>{page}</ExternalLink>
       {section.length > 0 && ` (${section.join(': ')})`}
     </>
   );
@@ -27,7 +28,7 @@ function Apg({ apg }: Pick<Pattern, 'apg'>) {
   if (apg.dedicated) {
     return (
       <>
-        APG pattern: <a href={apg.pattern.url}>{apg.pattern.title}</a>.
+        APG pattern: <ExternalLink href={apg.pattern.url}>{apg.pattern.title}</ExternalLink>.
       </>
     );
   }
@@ -88,9 +89,35 @@ function Facts(entry: PatternEntry) {
           isAside
         />
       )}
+      {entry.summary.notMeasuredYet.length > 0 && (
+        <Fact
+          count={entry.summary.notMeasuredYet.length}
+          one="system not measured yet"
+          many="systems not measured yet"
+          isAside
+        />
+      )}
       {lastMeasuredAt && <li className={styles.when}>Measured {measuredOn(lastMeasuredAt)}</li>}
     </ul>
   );
+}
+
+/**
+ * Where it was measured, then who is left out, by name, in one paragraph: measured and not
+ * counted, without the component, not measured yet. Named for a maintainer looking for their
+ * system (first-visit review, 2026-11-25); one paragraph, so two rows still fit a 900 px screen.
+ */
+function MeasuredIn({ entry }: { entry: PatternEntry }) {
+  const counted = countedSystems(entry);
+  const setAside = setAsideNames(entry);
+  const { notApplicableNames, notMeasuredYet } = entry.summary;
+  const parts = [
+    counted.length > 0 && `Measured in ${names.format(counted)}.`,
+    setAside.length > 0 && `Measured, not counted: ${names.format(setAside)}.`,
+    notApplicableNames.length > 0 && `Without this component: ${names.format(notApplicableNames)}.`,
+    notMeasuredYet.length > 0 && `Not measured yet: ${names.format(notMeasuredYet)}.`,
+  ].filter(Boolean);
+  return parts.length > 0 ? <p>{parts.join(' ')}</p> : null;
 }
 
 /**
@@ -101,7 +128,6 @@ function Facts(entry: PatternEntry) {
  */
 function PatternRow(entry: PatternEntry) {
   const { pattern } = entry;
-  const counted = countedSystems(entry);
   return (
     <li className={styles.row}>
       <Glyph id={pattern.id} form="compact" />
@@ -117,7 +143,9 @@ function PatternRow(entry: PatternEntry) {
           <p>
             <Apg apg={pattern.apg} />
           </p>
-          {counted.length > 0 && <p>Measured in {names.format(counted)}.</p>}
+          {/* Who is left out, by name, in the wide column: in the narrow column of figures the
+              names made the row twice as tall (design review, 2026-11-25). */}
+          <MeasuredIn entry={entry} />
         </div>
       </div>
       <div className={styles.side}>

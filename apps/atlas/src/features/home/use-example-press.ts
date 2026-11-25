@@ -25,6 +25,8 @@ export function useExamplePress(
   const [isAnnounced, setIsAnnounced] = useState(false);
   const [hasPlayed, setHasPlayed] = useState(false);
   const hasActed = useRef(false);
+  // A quarter in view: at half it never played in the first view at 1440, and the fold ended on
+  // rows waiting for a key (design review 2026-11-25b); the opening now leaves two rows in it.
   const isSeen = useIsSeen(root, 0.25);
 
   useEffect(() => {

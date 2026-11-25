@@ -2,7 +2,10 @@ import type { TradeOff } from '../schema/index.ts';
 
 /**
  * Hand-written trade-offs for combobox (docs/patterns/combobox.md), from the measurements of
- * 2026-11-14 (engine 0.12.8). The owner read all four that day and they are reviewed. Rules for
+ * 2026-11-14 (engine 0.12.8). All four were read that day and are reviewed. On
+ * 2026-11-25 the model below gained the sentence of APG's roles section it rests on, quoted from
+ * docs/sources/ARIA--apg--patterns--combobox.md (line 272), as the reviewed select trade-off does;
+ * made by Claude as asked ("do as you think right"), after a verdict audit. Rules for
  * these texts, as for input with chips: say what the recordings show, never a system's intent;
  * no claim about a screen reader; a "reasonable when" is a condition, not a statement that the
  * listed systems meet it.
@@ -19,7 +22,9 @@ export const comboboxTradeOffs: TradeOff[] = [
       'that value is the selected option, and in MUI, React Aria and Atlassian it stays ' +
       'selected when the arrow keys move on to another option. The APG ' +
       'pattern asks for aria-selected on the active option (“Selection follows focus in the ' +
-      'listbox”, Listbox Popup Keyboard Interaction), and its list example does the same.',
+      'listbox”, Listbox Popup Keyboard Interaction), and its list example does the same. One ' +
+      'sentence of its roles section allows the other reading: aria-selected goes on the option ' +
+      '“visually indicated as the currently selected value”.',
     gain: 'Selected means one thing, the value that was chosen.',
     cost:
       'Which option is current is carried by aria-activedescendant alone. Whatever reads the ' +

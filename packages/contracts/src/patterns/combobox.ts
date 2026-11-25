@@ -6,7 +6,7 @@ import { comboboxTradeOffs } from './combobox-trade-offs.ts';
 
 /**
  * Pattern 2 (proposal approved 2026-11-14, docs/proposals/combobox.md). In `patterns` since
- * 2026-11-15, on the owner's word. The manual screen reader check is still to come and still gates
+ * 2026-11-15, as decided that day. The manual screen reader check is still to come and still gates
  * the first release of the site (CLAUDE.md 7), as it does for input with chips.
  */
 export const combobox = Pattern.parse({

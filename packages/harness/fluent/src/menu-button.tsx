@@ -5,7 +5,7 @@
  * on 2026-11-16). MenuButton is the package's own component for this ("A menu button is a button
  * with a chevron icon after the text typically used to trigger a menu", MenuButtonDescription.md;
  * the Menu docs say "See also MenuButton"), and a dedicated component wins over a composition
- * (packages/engine/CLAUDE.md; the owner, 2026-11-16). Props we set, and why:
+ * (packages/engine/CLAUDE.md; 2026-11-16). Props we set, and why:
  * - Menu, MenuTrigger with disableButtonEnhancement around a MenuButton, MenuPopover, MenuList
  *   and MenuItem: as the story has them, word for word.
  * - Button text "Actions" instead of "Example", and the four items every menu button target

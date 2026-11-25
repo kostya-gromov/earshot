@@ -1,9 +1,9 @@
 # Proposal: editorial pass over the input-with-chips trade-offs
 
-- Opened: 2026-11-13. Status: **recommendations accepted by the owner on 2026-11-13 and applied** to
+- Opened: 2026-11-13. Status: **recommendations accepted on 2026-11-13 and applied** to
   `input-with-chips-trade-offs.ts` the same day, with the three round-2 majors of part 4 (Primer
   out of the `bsp` entry, no "silent", the model narrowed to what is recorded: option 1.6 b).
-  Every entry is still `status: 'draft'`: the final read and `reviewed` are the owner's.
+  Every entry is still `status: 'draft'`: the final read and `reviewed` come in review.
 - Scope: `packages/contracts/src/patterns/input-with-chips-trade-offs.ts` (10 entries, all
   `status: 'draft'`, shown on the site under "Why systems differ" with "Draft, pending review").
 - Goal: bring the block to an editorially ready state before the public launch. A trade-off is
@@ -252,7 +252,7 @@ moves from the input into a grid of tags"; the cost now names the two keys only.
 2. If 1.4 (a): add the one line under "Why systems differ" in
    `apps/atlas/src/features/evidence/rule-trade-offs.tsx`.
 3. Run the `verdict-auditor` agent, at most two rounds (CLAUDE.md 8).
-4. The owner sets `status: 'reviewed'` per entry.
+4. Review sets `status: 'reviewed'` per entry.
 
 ## 4. Left after two audit rounds (2026-11-13)
 

@@ -76,9 +76,25 @@ function popupOf(element: Element): string {
   return kind && !isDefault ? `has popup ${kind}` : '';
 }
 
-/** "Remove Greg Fisher, button, 2 of 2": name, role, popup, position, state, in the engine's order. */
+/**
+ * A select's value: the text of a combobox that is not a text field, which the tree gives it as
+ * its value. The engine says it after the role (engine 0.21.0, speech/format-node.ts).
+ */
+const valueOf = (element: Element): string =>
+  roleOf(element) === 'combobox' && element.localName !== 'input'
+    ? (element.textContent?.trim() ?? '')
+    : '';
+
+/** "Fruit, combobox, Banana, collapsed": name, role, value, popup, position, state, as the engine. */
 export function focusLine(element: Element): string {
-  return [nameOf(element), roleOf(element), popupOf(element), positionOf(element), stateOf(element)]
+  return [
+    nameOf(element),
+    roleOf(element),
+    valueOf(element),
+    popupOf(element),
+    positionOf(element),
+    stateOf(element),
+  ]
     .filter(Boolean)
     .join(', ');
 }

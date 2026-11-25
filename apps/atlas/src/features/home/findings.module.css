@@ -1,0 +1,150 @@
+.section {
+  scroll-margin-top: var(--space-6);
+}
+
+/* Rows on hairlines, like the rules on a pattern page: the pattern, the finding, the count. */
+.rows {
+  display: grid;
+  margin: var(--space-7) 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-2);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 112px;
+  column-gap: var(--space-6);
+  align-items: start;
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--line);
+  transition: background-color var(--dur-micro) var(--ease-out);
+}
+
+.pattern {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.name {
+  font-size: var(--text-md);
+  font-weight: 560;
+  letter-spacing: var(--tracking-heading);
+}
+
+.name a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.name a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.counts {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.finding {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+/* The rule as the row's statement; its kind beside it, quiet. */
+.rule {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-3);
+  font-size: var(--text-md);
+  line-height: 1.35;
+}
+
+.rule a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.rule a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.level {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.why {
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.why a {
+  color: var(--ink-2);
+  text-underline-offset: 3px;
+}
+
+/* The count, right-aligned at the rule's line; no larger than the rule's name, so it reads as a
+   count, not a grade (2026-11-25). */
+.score {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  text-align: right;
+}
+
+.score b {
+  font-size: var(--text-md);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: var(--tracking-heading);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.score span {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.row[data-planned] .name {
+  color: var(--ink-3);
+}
+
+.split {
+  margin-top: var(--space-5);
+  max-width: 70ch;
+  font-size: var(--text-base);
+  color: var(--ink-2);
+}
+
+@media (max-width: 860px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: var(--space-3);
+  }
+
+  .finding {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .score {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+@media (forced-colors: active) {
+  .rule a,
+  .name a,
+  .why a {
+    color: LinkText;
+  }
+}

@@ -70,7 +70,10 @@ export const comboboxRules: Rule[] = [
     id: 'selected',
     title: 'The active option is the selected one',
     description:
-      'The active option is exposed as selected, and no other option is. Judged only where an option became active.',
+      // Decided 2026-11-25 (O3), as for select on 2026-11-24 (docs/proposals/select.md): the text
+      // names the roles sentence that can be read the other way, quoted from the snapshot
+      // docs/sources/ARIA--apg--patterns--combobox.md (lines 140 and 272).
+      'The active option is exposed as selected, and no other option is: APG’s keyboard section says “Selection follows focus in the listbox”. One sentence of its roles section can be read as allowing a second model: it puts aria-selected on the option “visually indicated as the currently selected value”. A list that keeps the chosen value selected while the active option is shown apart matches that sentence; it differs here, and the difference is a choice between two readings of APG, not an error. Judged only where an option became active.',
     keys: ['ArrowDown', 'ArrowUp'],
     level: 'rule',
     sources: [

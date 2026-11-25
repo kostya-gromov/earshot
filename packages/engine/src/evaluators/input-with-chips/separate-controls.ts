@@ -38,7 +38,7 @@ function arrowsMoveBetweenChips(scenarios: readonly EvaluatorInput[]): boolean |
 
 /**
  * Chips that are separate controls in the tab sequence, with no arrow keys between them: what
- * APG allows outside a composite widget (verdict audit 2026-11-11, B1; the owner chose to read
+ * APG allows outside a composite widget (verdict audit 2026-11-11, B1; decided to read
  * "one widget" from behaviour, since the reference's own chips carry no composite role).
  */
 export function separateControls(

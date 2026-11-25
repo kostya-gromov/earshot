@@ -4,6 +4,26 @@ One version for the package: both references are published together, and every m
 reference records this version in its provenance. A change that a reader of the site could
 notice gets an entry, with whether behavior or verdicts changed.
 
+## 0.1.11 (2026-11-25)
+
+- **select, added:** `select/native.html`, the browser's own `<select>` with the same five
+  fruit, the value Banana and the same fields around it, and no script. Measured as evidence for
+  the design requirement on choosing the browser's select, never counted: in Chromium on macOS a
+  letter typed on it changes the value and leaves the list closed. The reference select itself is
+  unchanged; no behavior or verdict changed.
+
+## 0.1.10 (2026-11-24)
+
+- **select, added:** the sixth reference, a select with one chosen value and no text input
+  (`select/`), built as APG's select-only combobox example: a focusable element with role
+  `combobox` named by its visible label, its text the chosen option, which the tree exposes as
+  its value; a listbox it points at with `aria-activedescendant`. Down Arrow opens the list on
+  the chosen option; arrows stop at either end; Enter, Space and Tab choose; Escape closes and
+  keeps the value; typing a letter goes to an option. Not the browser's own `<select>`: the
+  engine cannot drive its list (`docs/proposals/select.md`). Only the active option is marked
+  selected, so the chosen value has no check mark of its own. The other references are
+  unchanged; they are measured again on this version with the engine at the end of the stage.
+
 ## 0.1.9 (2026-11-24)
 
 - **tabs, the page around them:** the product is called Earshot now, not Earshot Atlas, so the

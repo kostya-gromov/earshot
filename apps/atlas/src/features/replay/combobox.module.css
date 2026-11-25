@@ -38,7 +38,8 @@
 }
 
 /* Keyboard focus is in the field: the same ring the chips replay draws. */
-.field[data-focus='combobox'] {
+.field[data-focus='combobox'],
+.field[data-focus='select'] {
   box-shadow:
     0 0 0 2px var(--focus),
     0 0 0 6px var(--focus-soft);
@@ -46,7 +47,8 @@
 
 /* In a strip of steps the ring is on every frame: without its halo it stops outweighing what
    changes from one frame to the next (design review 2026-11-14). */
-.wrap[data-size='sm'] .field[data-focus='combobox'] {
+.wrap[data-size='sm'] .field[data-focus='combobox'],
+.wrap[data-size='sm'] .field[data-focus='select'] {
   box-shadow: 0 0 0 2px var(--focus);
 }
 
@@ -160,6 +162,41 @@
   background: var(--focus-soft);
   transform: translateY(calc(var(--active) * var(--row-h)));
   transition: transform 150ms var(--ease-out);
+}
+
+/* A select: the chevron that says a list opens from the field (two strokes, no glyph font). */
+.chevron {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin: -3px 2px 0 auto;
+  border-right: 1.5px solid var(--ink-3);
+  border-bottom: 1.5px solid var(--ink-3);
+  transform: rotate(45deg);
+}
+
+/* A select whose tree gave no value: a dash, as a table marks absence; the words say "No value". */
+.noValue {
+  color: var(--ink-3);
+}
+
+/* A select that was not in the tree at this moment: drawn dashed, with nothing in it. */
+.field[data-absent] {
+  background: transparent;
+  box-shadow: none;
+  outline: 1px dashed var(--line-strong);
+  outline-offset: -1px;
+}
+
+/* DOM focus on the list itself, which names its active option (a select, Chakra UI). */
+.list[data-focus] {
+  box-shadow:
+    0 0 0 2px var(--focus),
+    0 0 0 5px var(--focus-soft);
+}
+
+.wrap[data-size='sm'] .list[data-focus] {
+  box-shadow: 0 0 0 2px var(--focus);
 }
 
 /* DOM focus on the option itself, where a system moves it there. */
@@ -341,6 +378,10 @@
   .wrap[data-size='sm'] .next[data-target],
   .field[data-focus='combobox'],
   .wrap[data-size='sm'] .field[data-focus='combobox'],
+  .field[data-focus='select'],
+  .wrap[data-size='sm'] .field[data-focus='select'],
+  .list[data-focus],
+  .wrap[data-size='sm'] .list[data-focus],
   .option[data-focus] {
     box-shadow: none;
     outline: 2px solid Highlight;
@@ -357,6 +398,14 @@
 
   .caret {
     background: CanvasText;
+  }
+
+  .chevron {
+    border-color: CanvasText;
+  }
+
+  .field[data-absent] {
+    outline-style: dashed;
   }
 
   .legendSpeech {

@@ -52,7 +52,8 @@ function pointerGesture(root: HTMLElement, say: Say) {
  */
 export function attachSpeech(root: HTMLElement, say: Say): () => void {
   const status = root.querySelector('[role="status"]');
-  const input = root.querySelector('input');
+  // The element that names the active option: the text field, or a select, which is no input.
+  const input = root.querySelector('input') ?? root.querySelector('[role="combobox"]');
   const pointer = pointerGesture(root, say);
   const onFocus = (event: FocusEvent) => {
     const { target } = event;

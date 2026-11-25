@@ -20,28 +20,23 @@ const out = join(app, 'opengraph-image.png');
 // The words the image shows, as its alt text; test/link-preview.spec.ts holds the page to them.
 const altOut = join(app, 'opengraph-image.alt.txt');
 
-/** Hides everything on the page but the brand, the question and the line under it. */
+/**
+ * Hides everything on the page but the brand and the opening's three lines: the question, the
+ * statement and the line under it (the block around the heading). The scene, the ways in and
+ * the sections after it are left out: a 630 px picture would cut through them.
+ */
 function keepOpening(): void {
   const heading = document.querySelector('main h1');
-  // The largest block around an element that does not hold the question: the whole of it goes.
-  const blockOf = (element: Element): Element => {
-    let block = element;
-    while (block.parentElement && heading && !block.parentElement.contains(heading)) {
-      block = block.parentElement;
-    }
-    return block;
-  };
+  const statement = heading?.parentElement;
   const remove = (element: Element | null | undefined) => {
     if (element instanceof HTMLElement) element.style.display = 'none';
   };
   document.querySelector('header')?.querySelectorAll('nav, button').forEach(remove);
   remove(document.querySelector('body footer'));
-  const label = [...document.querySelectorAll('main *')]
-    .filter((element) => element.textContent?.trim().startsWith('These fields look the same.'))
-    .at(-1);
-  if (label) remove(blockOf(label));
-  document.querySelectorAll('main a').forEach((link) => remove(link));
-  // The sections after the opening, which a 630 px picture would cut through.
+  // Every sibling of the statement in the opening, and every section after the opening.
+  [...(statement?.parentElement?.children ?? [])]
+    .filter((block) => block !== statement)
+    .forEach(remove);
   [...(document.querySelector('main')?.children ?? [])]
     .filter((section) => heading && !section.contains(heading))
     .forEach(remove);

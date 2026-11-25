@@ -9,7 +9,7 @@
  * - DialogTitle, DialogContent and DialogActions with two Buttons whose onClick closes the
  *   dialog, as the demo's Cancel does.
  * - TextField with autoFocus, margin "dense", an id, a label, fullWidth and variant "standard",
- *   as in the demo. autoFocus by the owner's rule of 2026-11-21 (docs/patterns/dialog.md): where
+ *   as in the demo. autoFocus by the rule of 2026-11-21 (docs/patterns/dialog.md): where
  *   the docs' form example sets it, so does the page. The same dialog without it is measured as
  *   a variant, dialog-default-focus.html.
  * - The title "Edit profile", one field "Name" and the buttons Cancel and Save that every

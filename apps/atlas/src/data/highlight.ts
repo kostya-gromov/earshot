@@ -10,7 +10,7 @@ const languageOf = (file: string) => {
  * Code is coloured by syntax. Elsewhere on Earshot colour carries four fixed meanings (blue focus,
  * violet heard, red loss, green matches); inside a block of code it means syntax and nothing
  * else, which is what every reader of code expects there (apps/atlas/CLAUDE.md, Visual language,
- * exception decided by the owner on 2026-11-16). From 2026-11-13 to that day code was shown in three
+ * exception decided on 2026-11-16). From 2026-11-13 to that day code was shown in three
  * greys instead, and read worse for it.
  *
  * github-light-default colours that fall under 4.5:1 on the code well or a marked line, swapped

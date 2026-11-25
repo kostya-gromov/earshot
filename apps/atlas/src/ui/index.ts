@@ -12,3 +12,4 @@ export { SectionHead } from './section-head/section-head';
 export { SpeechLine, type SpeechSize, type SpeechSource } from './speech-line/speech-line';
 export { Tabs, type TabItem } from './tabs/tabs';
 export { nextTabIndex } from './tabs/tab-navigation';
+export { ExternalLink, ExternalMark, domainOf } from './external-link/external-link';

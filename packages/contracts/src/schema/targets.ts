@@ -24,10 +24,35 @@ export const Observation = z
     /**
      * `script`: keys pressed and the page watched by a script of ours, outside the engine.
      * `screenshots`: the measured page captured before and after each key, and compared by eye.
+     * `discussion`: said in a public discussion with the system's people; `url` links it, so the
+     * reader can read who said what (added 2026-11-25 for chakra-ui/chakra-ui discussion #11097).
      * The method belongs here, in the label the site prints, not in the note's text.
      */
-    source: z.enum(['recorded', 'seen', 'screenshots', 'script', 'package-source', 'docs']),
+    source: z.enum([
+      'recorded',
+      'seen',
+      'screenshots',
+      'script',
+      'package-source',
+      'docs',
+      'discussion',
+    ]),
     date: z.iso.date(),
+    /** For `discussion` only, and required there: the public page the note reports. */
+    url: z.url().optional(),
+    /**
+     * What was seen, in a few words, for a place with room for one line: the home page's
+     * recording shows it beside the recorded outcome, with this note's source, so a change on
+     * screen that the accessibility tree does not show is not read as no change
+     * (2026-11-25: Chakra UI highlights the last tag; the tree does not change). What was seen,
+     * never why.
+     */
+    summary: NonEmpty.optional(),
+    /**
+     * The system's version the note was made on, where a place shows the note apart from the
+     * measurement's provenance (the home page's "Seen by hand · 3.38.0 · 13 Nov 2026").
+     */
+    version: NonEmpty.optional(),
     /**
      * For `recorded` only: the adapter whose measurement file the note was read from. Left out, it
      * is the system's own measurement; named, it is a variant of the system (`variant-of`). Either
@@ -46,6 +71,10 @@ export const Observation = z
   .refine(({ source, measurement }) => source === 'recorded' || measurement === undefined, {
     message: 'Only a recorded observation names a measurement.',
     path: ['measurement'],
+  })
+  .refine(({ source, url }) => (source === 'discussion') === (url !== undefined), {
+    message: 'A discussion observation links its page, and only a discussion has a url.',
+    path: ['url'],
   });
 export type Observation = z.infer<typeof Observation>;
 
@@ -88,7 +117,7 @@ const demo = {
    * Behavior of the component a reader should know on every rule. Each note has one source and
    * its date, and the site prints both beside it: what the engine recorded, what was seen by
    * hand on the measured page, and what was read in the package's source or the system's docs
-   * are never mixed under one label (CLAUDE.md 2.1; the owner, 2026-11-15). A fact with two sources
+   * are never mixed under one label (CLAUDE.md 2.1; 2026-11-15). A fact with two sources
    * is two notes. For `recorded` the date is the measurement it was read from: check the note
    * again when the system is measured again. Never a verdict, and never a repeat of one.
    */
@@ -115,7 +144,30 @@ export const TargetEntry = z.discriminatedUnion('status', [
     ...shared,
     ...demo,
   }),
-  z.strictObject({ status: z.literal('planned'), ...shared, ...demo }),
+  z.strictObject({
+    status: z.literal('planned'),
+    /**
+     * Why it is not measured yet, in words the site shows beside the system's name: "missing,
+     * with no reason" read as a gap (first-visit review, 2026-11-25). `notes` stay internal.
+     */
+    reason: NonEmpty.optional(),
+    ...shared,
+    ...demo,
+  }),
+  /**
+   * The system's component for the pattern renders the browser's own element, whose list the
+   * browser draws and the engine cannot drive (select, docs/proposals/select.md, 2026-11-24). It
+   * is the system's choice, not a missing component: never counted as measured, never as absent.
+   * Beside a measured entry of the same system, it says the system ships a native one too.
+   */
+  z.strictObject({
+    ...shared,
+    status: z.literal('browser-native'),
+    component: NonEmpty,
+    /** Where the installed package renders the native element: file and what was read there. */
+    renders: NonEmpty,
+    checked: z.iso.date(),
+  }),
   z.strictObject({
     status: z.literal('not-applicable'),
     reason: NonEmpty,

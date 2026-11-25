@@ -1,6 +1,6 @@
 # Proposal: measure React Aria on TokenField
 
-- Opened: 2026-11-13. Status: **for the owner's decision**. Nothing is re-measured by this file.
+- Opened: 2026-11-13. Status: **for decision**. Nothing is re-measured by this file.
 - Why now: a review note said React Aria ships a component for this pattern, so measuring a
   composition of ComboBox and TagGroup may not be what its maintainers would call their chips
   input. Checked the same day; the facts below are from the installed packages and the live docs.

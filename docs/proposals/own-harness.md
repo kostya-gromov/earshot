@@ -1,6 +1,6 @@
 # Proposal: measure components in our own harness, not in documentation demos
 
-Status: accepted by the owner on 2026-11-08 (raised in his review the same day).
+Status: accepted on 2026-11-08 (raised in review the same day).
 
 ## Problem
 

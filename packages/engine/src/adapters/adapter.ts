@@ -66,6 +66,12 @@ export interface Adapter<State, InteractionId extends string> {
     opener: (page: Page) => Locator;
     description: string;
   };
+  /**
+   * Select only: the element that shows the select's visible label. Its rendered text is recorded
+   * around every step, so a verdict on the name quotes what the page showed, not the harness's
+   * configuration.
+   */
+  label?: { locate: (page: Page) => Locator; description: string };
   ready: (page: Page) => Promise<void>;
   setup: (page: Page, state: State) => Promise<SetupResult>;
   resolveClickTarget: (page: Page, id: InteractionId) => Promise<ResolveClickResult>;
@@ -73,4 +79,10 @@ export interface Adapter<State, InteractionId extends string> {
   /** Public targets are visited at a polite rate (packages/engine/CLAUDE.md, Targets and conduct); local targets omit it. */
   pauseBetweenRunsMs?: number;
   notes?: string;
+  /**
+   * Scenarios this target does not run, and the reason written into the file in their place
+   * (engine 0.23.0): the browser's own select, whose list the engine cannot drive. A rule that
+   * rests on them only is inconclusive with that reason, never judged on what was not run.
+   */
+  notRun?: { scenarios: readonly string[]; reason: string };
 }

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { patterns } from '@earshot/contracts';
 import { loadMeasurements } from '@/data/measurements';
 import { loadTargets } from '@/data/targets';
+import { PatternOpening } from '@/features/hero';
 import { HowToReadNote } from '@/features/honesty';
 import { SystemsSection } from '@/features/matrix';
 import { PlaygroundLinkProvider, peopleOf } from '@/features/playground';
@@ -52,7 +53,12 @@ export default async function PatternPage({ params }: Props) {
       />
       <main className={styles.page}>
         <PlaygroundLinkProvider>
-          <OpeningScene pattern={pattern} position={position} next={plannedPatterns[0]?.name} />
+          <OpeningScene
+            pattern={pattern}
+            position={position}
+            next={plannedPatterns[0]?.name}
+            findings={<PatternOpening {...{ pattern, measurements, targets }} />}
+          />
           <SystemsSection
             pattern={pattern}
             measurements={measurements}

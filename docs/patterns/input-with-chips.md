@@ -62,7 +62,7 @@ remove target at least 24×24 (2.5.8); chip text at least 4.5:1 in every theme (
 chips explained in text, not colour only (1.4.1, 3.3.1); visible label and keyboard hint (3.3.2);
 max height then scroll (2.4.11); prefer read-only over disabled (guidance).
 
-## Trade-offs (hand-written, the owner reviews)
+## Trade-offs (hand-written, reviewed)
 
 An alternative may name the measured systems that take it (`seenIn`); a difference no alternative
 describes is listed as "Other measured differences", never filed under a behavior the system

@@ -1,10 +1,10 @@
 import type { TradeOff } from '../schema/index.ts';
 
 /**
- * Trade-offs for the modal dialog, hand-written; each is a draft until the owner reviews it.
- * Reviewed on 2026-11-23: both. For `wrap` the owner took "to the browser's own controls" out of
+ * Trade-offs for the modal dialog, hand-written; each is a draft until it is reviewed.
+ * Reviewed on 2026-11-23: both. For `wrap`, "to the browser's own controls" was taken out of
  * the alternative: the engine records that the document lost focus, not where focus went.
- * The same day he took out its last sentence, "No measured system does this yet.": the site
+ * The same day its last sentence, "No measured system does this yet.", was taken out: the site
  * derives that from the data ("Not seen in the measured systems"), and a sentence written by
  * hand would be wrong the day a system differs on `wrap`.
  */

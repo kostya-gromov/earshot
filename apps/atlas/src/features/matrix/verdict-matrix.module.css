@@ -295,3 +295,8 @@
     outline: 1px solid Highlight;
   }
 }
+
+/* What a mark means, in one clause after its name (first-visit review, 2026-11-25). */
+.keyNote {
+  color: var(--ink-3);
+}

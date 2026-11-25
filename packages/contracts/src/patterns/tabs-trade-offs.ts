@@ -1,7 +1,7 @@
 import type { TradeOff } from '../schema/index.ts';
 
 /**
- * Trade-offs for tabs, hand-written; each is a draft until the owner reviews it. Reviewed on
+ * Trade-offs for tabs, hand-written; each is a draft until it is reviewed. Reviewed on
  * 2026-11-19: the panel that is not a Tab stop.
  */
 export const tabsTradeOffs: TradeOff[] = [

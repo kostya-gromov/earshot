@@ -14,13 +14,15 @@
   grid-template-columns: 320px minmax(0, 1fr) 232px;
   column-gap: var(--space-7);
   align-items: stretch;
-  padding-block: 28px;
+  /* 24, not 28: with the names of who is left out, two whole rows still fit a 900 px screen
+     (design review 2026-11-23, kept on 2026-11-25). */
+  padding-block: var(--space-5);
   border-bottom: 1px solid var(--line);
 }
 
-/* The last row is the end of the page: the page's own padding is the room before the footer. */
+/* The last row is the end of the list: no hairline under it. It keeps its padding, so its
+   focus ring stays around its text (design review 2026-11-25-select). */
 .row:last-child {
-  padding-bottom: 0;
   border-bottom: 0;
 }
 

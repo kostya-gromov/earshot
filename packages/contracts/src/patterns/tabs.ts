@@ -6,7 +6,7 @@ import { tabsTradeOffs } from './tabs-trade-offs.ts';
 
 /**
  * Pattern 4 (proposal approved 2026-11-19, docs/proposals/tabs.md). On the site since 2026-11-19,
- * on the owner's word after his VoiceOver check: the reference and five systems measured, one
+ * after the VoiceOver check: the reference and five systems measured, one
  * trade-off and four design requirements approved (docs/follow-ups/tabs.md).
  */
 export const tabs = Pattern.parse({

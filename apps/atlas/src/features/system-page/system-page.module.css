@@ -1,0 +1,163 @@
+/* A system's page: one band per pattern on hairlines, its rules as rows under it. */
+.patterns {
+  display: grid;
+  margin-top: var(--space-7);
+  border-top: 1px solid var(--line-2);
+}
+
+.pattern {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  align-items: start;
+  column-gap: var(--space-7);
+  row-gap: var(--space-4);
+  padding-block: var(--space-6);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Name, what was measured and the count, together at the top, staying in view beside a long
+   list of rules. */
+.side {
+  position: sticky;
+  top: var(--space-8);
+  display: grid;
+  gap: var(--space-1);
+}
+
+.patternName {
+  font-size: var(--text-lg);
+  font-weight: 560;
+  letter-spacing: var(--tracking-heading);
+}
+
+.patternName a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.patternName a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.meta {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.counted {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+.rules {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rule {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: baseline;
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+
+/* The verdict's badge keeps its own width, not the column's. */
+.rule > :first-child {
+  justify-self: start;
+}
+
+.rule:first-child {
+  padding-top: 0;
+}
+
+.rule:last-child {
+  border-bottom: 0;
+}
+
+.ruleHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-3);
+}
+
+.ruleHead a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.ruleHead a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.level {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.summary {
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+.why {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+/* What follows recedes a step, so the differences lead the eye. */
+.rule[data-verdict='follows'] .summary {
+  color: var(--ink-3);
+}
+
+.correction {
+  margin-top: var(--space-6);
+  max-width: var(--measure);
+  font-size: var(--text-sm);
+  color: var(--ink-2);
+}
+
+@media (max-width: 860px) {
+  .pattern {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .side {
+    position: static;
+  }
+
+  .rules {
+    margin-top: var(--space-4);
+  }
+
+  .rule {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-1);
+  }
+}
+
+@media (forced-colors: active) {
+  .patternName a,
+  .ruleHead a {
+    color: LinkText;
+  }
+}
+
+/* Shown, not counted: the verdicts keep their words and shapes, drawn as outlines, so they do
+   not weigh like counted ones (design review 2026-11-25; principle 5, fair to the systems). */
+.pattern[data-not-counted] [data-tone] {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--line-2);
+}
+
+.pattern[data-not-counted] .ruleHead a {
+  color: var(--ink-2);
+}

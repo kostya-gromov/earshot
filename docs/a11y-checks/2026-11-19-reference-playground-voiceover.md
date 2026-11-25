@@ -1,13 +1,13 @@
 # 2026-11-19: Atlas playground (reference implementations), VoiceOver
 
-- **Who:** the owner, by hand.
+- **How:** by hand.
 - **Screen reader:** VoiceOver on macOS. Version not recorded.
 - **Browser:** not recorded.
 - **Target:** the playground on the Atlas pattern pages, running the reference implementations, on a local build.
 
 ## What was done
 
-The owner used the playground with VoiceOver and compared what was heard with the "You would hear" transcript, the semantic model.
+The playground was used with VoiceOver, and what was heard was compared with the "You would hear" transcript, the semantic model.
 
 ## What was heard
 

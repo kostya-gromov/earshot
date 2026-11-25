@@ -38,7 +38,7 @@ Result: 0 follows, 2 differs, 6 inconclusive.
 4. **Rule wording.** "Arrows move between chips" and "Backspace focuses the last chip first" speak
    of focus. Decide whether a caret on a token that is named aloud meets the rule, is a named
    alternative with a trade-off, or is not applicable. This is the real question, and it is
-   The owner's: it changes what the rules mean, with APG and WCAG quoted from `docs/sources/`.
+   decided separately: it changes what the rules mean, with APG and WCAG quoted from `docs/sources/`.
 5. **A remove-click equivalent or none**: a scenario cannot be judged where the control does not
    exist; aggregation (ADR 0004) should then rest on the scenarios that apply.
 

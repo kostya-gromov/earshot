@@ -16,7 +16,7 @@ export interface LivePattern {
   /** The key the empty playground invites: the first thing worth pressing in this pattern. */
   firstKey: string;
   /** Where that key is pressed, as the invitation says it: “Press Enter on the button”. */
-  firstKeyPlace: 'in the field' | 'on the button' | 'on a tab';
+  firstKeyPlace: 'in the field' | 'on the button' | 'on a tab' | 'on the select';
   /** False when the reference has no live region: nothing is ever heard but focus landing. */
   announces: boolean;
   /** "Watch it": the keys a person would press. One character is typed text. */
@@ -38,6 +38,10 @@ interface ComboboxModule {
 
 interface DialogModule {
   createDialog: (root: HTMLElement) => Stop;
+}
+
+interface SelectModule {
+  createSelect: (root: HTMLElement, options: { options: readonly string[]; value: string }) => Stop;
 }
 
 interface TabsModule {
@@ -83,6 +87,9 @@ function startMenuButton(module: unknown, root: HTMLElement): Stop {
     line.remove();
   };
 }
+
+/** The five options and the value every select target is measured with (docs/proposals/select.md). */
+const selectFruit = ['Apple', 'Apricot', 'Banana', 'Cherry', 'Date'] as const;
 
 /** The six options every combobox target is measured with (docs/patterns/combobox.md). */
 const fruit = ['Apple', 'Apricot', 'Avocado', 'Cherry', 'Kiwi', 'Plum'] as const;
@@ -139,10 +146,22 @@ export const livePatterns: Readonly<Record<string, LivePattern>> = {
     // Opens it, goes round it once and closes it: every step of the tour is seen. Tab can be
     // shown here and nowhere else (replay.ts): the third Tab is on the last button, where the
     // reference's own handler wraps it to the field. It never stops with the dialog open, which
-    // would leave the page behind unusable (owner, 2026-11-23).
+    // would leave the page behind unusable (2026-11-23).
     watchSequence: ['Enter', 'Tab', 'Tab', 'Tab', 'Escape'],
     // Long enough to see where focus went and read what was said, before the next key: at the
-    // usual beat the dialog was gone in 0.7 s (owner, 2026-11-23).
+    // usual beat the dialog was gone in 0.7 s (2026-11-23).
     watchHoldMs: 1700,
+  },
+  select: {
+    rootSelector: '[data-select]',
+    start: (module, root) =>
+      (module as SelectModule).createSelect(root, { options: selectFruit, value: 'Banana' }),
+    // The list has its own reserved room under the select (playground.module.css).
+    attach: () => [],
+    firstKey: 'ArrowDown',
+    firstKeyPlace: 'on the select',
+    announces: false,
+    // Opens on the value, moves down and back, then chooses: every step but Escape is seen.
+    watchSequence: ['ArrowDown', 'ArrowDown', 'ArrowUp', 'ArrowDown', 'Enter'],
   },
 };

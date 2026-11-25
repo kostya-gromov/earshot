@@ -1,4 +1,6 @@
 .wrap {
+  position: relative;
+  isolation: isolate;
   max-width: calc(var(--page) + 2 * var(--gutter));
   margin: 0 auto;
   padding-inline: var(--gutter);
@@ -27,4 +29,24 @@
   margin-top: var(--space-8);
   padding-top: 0;
   border-top: 0;
+}
+
+/* A lit stage in the dark theme, as on a pattern page (D1a): one soft light from above and a
+   masked dot grid behind the opening. */
+.backdrop {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1100px;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 28rem at 50% -8%, var(--glow-sky), transparent 70%),
+    radial-gradient(var(--grid-dot) 1px, transparent 1px) 0 0 / 22px 22px;
+  mask-image: radial-gradient(68rem 40rem at 50% 24%, black, transparent 75%);
+  pointer-events: none;
+}
+
+@media (forced-colors: active) {
+  .backdrop {
+    display: none;
+  }
 }

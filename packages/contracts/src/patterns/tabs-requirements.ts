@@ -2,8 +2,8 @@ import type { Requirement } from '../schema/index.ts';
 import { apg, wcag } from './tabs-sources.ts';
 
 /**
- * What accessibility asks of the design of tabs, proposed on 2026-11-19 and approved by the
- * owner that day with the levels below. Each reason follows the cited page as it stands in
+ * What accessibility asks of the design of tabs, proposed on 2026-11-19 and approved
+ * that day with the levels below. Each reason follows the cited page as it stands in
  * docs/sources/: `wcag` only where the page states the requirement itself.
  * - Use of Color: "Color is not used as the only visual means of conveying information".
  * - Non-text Contrast: "any visual information necessary to indicate state, such as whether a
@@ -25,7 +25,7 @@ export const tabsRequirements: Requirement[] = [
     // The 3:1 is the marker against what is next to it, not one state against another. 1.4.11:
     // "This success criterion does not require that changes in color that differentiate between
     // states of an individual component meet the 3:1 contrast ratio when they do not appear next
-    // to each other." (Owner's note, 2026-11-19: the old title could be read as 3:1 between the
+    // to each other." (Review note, 2026-11-19: the old title could be read as 3:1 between the
     // selected and an unselected tab.)
     title:
       'The selected tab’s marker reaches 3:1 against what is next to it, and is not colour alone',

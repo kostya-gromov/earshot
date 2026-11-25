@@ -37,7 +37,7 @@ Activation mode (whether the arrow keys activate) is recorded and never judged.
 | No tab, or two tabs, selected | `selected` | `panel` (any of them may name the panel), `tab-in`, `activate` (not judged) |
 | Down Arrow moves to the next tab | `vertical-keys-free` | `arrows` |
 
-One exception, decided by the owner on 2026-11-19: where every tab is a Tab stop, `tab-in` and `tab-out`
+One exception, decided on 2026-11-19: where every tab is a Tab stop, `tab-in` and `tab-out`
 both differ. APG asks for the two separately and a system can fail one without the other.
 
 ## Engine

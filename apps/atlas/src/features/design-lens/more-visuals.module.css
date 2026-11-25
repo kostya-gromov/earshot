@@ -1,0 +1,238 @@
+/*
+ * Drawings for the tabs and modal dialog requirements, in the language of the chip and list
+ * drawings: neutral greys, the focus blue only for keyboard focus (apps/atlas/CLAUDE.md), sizes
+ * from the reference implementations.
+ */
+
+/* One drawing with its caption under it, as every drawing in this lens (design review
+   2026-11-25b: captions beside some and under others read as two families). */
+.drawing {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+}
+
+/* Tabs: the selected one with a 3 px bar and a heavier weight; focus a 2 px ring 2 px outside. */
+.tabs {
+  display: inline-flex;
+  gap: 4px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid var(--line-2);
+  font-size: var(--text-xs);
+}
+
+.tab {
+  padding: 3px 7px 4px;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  border-radius: 4px 4px 0 0;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.tab[data-selected] {
+  border-bottom-color: var(--ink);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.tab[data-focus] {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Forced colours, drawn: the page's own colours give way to two system colours, black and
+   white, with the ring in the highlight colour; only the bar and the ring mark the tabs. */
+.tabs[data-forced] {
+  padding: 4px 6px 1px;
+  border-radius: 4px;
+  background: #000;
+  border-bottom-color: #fff;
+  /* An edge of its own, or black on the dark theme's near-black disappeared. */
+  outline: 1px solid var(--line-2);
+  outline-offset: 1px;
+}
+
+.tabs[data-forced] .tab {
+  color: #fff;
+}
+
+.tabs[data-forced] .tab[data-selected] {
+  border-bottom-color: #fff;
+}
+
+.tabs[data-forced] .tab[data-focus] {
+  outline-color: #1aebff;
+}
+
+/* The dialog: a small window with a title, a field and two buttons. */
+.dialog {
+  display: inline-grid;
+  gap: 6px;
+  /* One width for every dialog drawing, so their left edges and captions line up. */
+  width: 176px;
+  padding: 8px 9px;
+  border: 1px solid var(--line-2);
+  border-radius: 7px;
+  background: var(--panel);
+  font-size: var(--text-xs);
+}
+
+.dialogTitle {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.field {
+  padding: 3px 6px;
+  border: 1px solid var(--line-2);
+  border-radius: 5px;
+  color: var(--ink-3);
+}
+
+.field[data-focus] {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.button {
+  display: inline-grid;
+  place-items: center;
+  min-height: 18px;
+  padding: 0 7px;
+  border: 1px solid var(--line-2);
+  border-radius: 5px;
+  color: var(--ink-2);
+}
+
+/* What the drawing is about, marked with a dashed outline, as the 24 px target is: a solid ring
+   read as a second focus (design review 2026-11-25b). Solid rings are focus only, in blue. The
+   title's mark keeps a little room around the words; the negative margin keeps the title still. */
+.dialogTitle[data-subject],
+.button[data-subject] {
+  border-radius: 4px;
+  outline: 1px dashed var(--ink-2);
+  outline-offset: 1px;
+}
+
+.dialogTitle[data-subject] {
+  justify-self: start;
+  padding: 1px 5px;
+  margin: -1px -5px;
+}
+
+/* The opening drawn as a move: the button, an arrow down, the dialog with focus in its field. */
+.opens {
+  display: inline-grid;
+  justify-items: center;
+  gap: 4px;
+  /* The opener at the size of the dialog's own buttons. */
+  font-size: var(--text-xs);
+}
+
+.arrow {
+  width: 12px;
+  height: 20px;
+  fill: none;
+  stroke: var(--ink-3);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* The target, 24 px as the requirement says, as the chip drawing marks it: a dashed box. */
+.button[data-target] {
+  min-height: 24px;
+  outline: 1px dashed var(--ink-2);
+  outline-offset: 1px;
+}
+
+/* The page behind: lines of text under a dim layer, the dialog over both. */
+.page {
+  position: relative;
+  box-sizing: border-box;
+  width: 176px;
+  display: inline-grid;
+  place-items: center;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: repeating-linear-gradient(
+    to bottom,
+    color-mix(in oklch, var(--ink) 14%, transparent) 0 3px,
+    transparent 3px 9px
+  );
+}
+
+.dim {
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  background: rgb(0 0 0 / 0.5);
+}
+
+.page .dialog {
+  position: relative;
+  width: auto;
+}
+
+/* The select's field: its value and a chevron, the value pushed to the start. */
+.selectField {
+  justify-content: space-between;
+  gap: 6px;
+  color: var(--ink);
+}
+
+.chevron {
+  flex: none;
+  width: 9px;
+  height: 6px;
+  fill: none;
+  stroke: var(--ink-3);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* A select drawn with no boundary: its value and chevron alone, as text. */
+.selectField[data-bare] {
+  box-shadow: none;
+  padding-inline: 0;
+  inline-size: 64px;
+}
+
+/* Drawings side by side, each with its tag to the right, as every other drawing's. */
+.pairs {
+  display: grid;
+  gap: 8px;
+}
+
+.pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (forced-colors: active) {
+  .selectField[data-bare] {
+    border: 0;
+  }
+
+  .chevron {
+    stroke: CanvasText;
+  }
+
+  .tab[data-focus],
+  .field[data-focus] {
+    outline-color: Highlight;
+  }
+
+  .tab[data-selected] {
+    border-bottom-color: CanvasText;
+  }
+}

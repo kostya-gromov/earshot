@@ -20,7 +20,7 @@ import { apg, wcag } from './tabs-sources.ts';
  * `wrap`; focus that falls to the document belongs to `tab-out`, not `panel-reachable`. One
  * exception, on purpose: a tab list where every tab is a Tab stop differs on `tab-in` and on
  * `tab-out`, because APG asks for the two separately and a system can fail one without the other
- * (verdict audit 2026-11-19, second round; decided by the owner the same day).
+ * (verdict audit 2026-11-19, second round; decided the same day).
  *
  * Whether the arrow keys also activate the tab they move to is recorded, not judged: APG makes
  * it optional ("Optionally, activates the newly focused tab"), and its advice turns on how fast

@@ -1,0 +1,26 @@
+<div class="select" data-select>
+  <!-- A div, not a label: a label element names only form controls, and the select is a div. -->
+  <div id="fruit-label" class="select__label">Fruit</div>
+
+  <!-- Its text is the chosen option, which the tree exposes as its value; its name comes from
+       the label alone, so name and value stay apart (APG combobox, about this pattern). -->
+  <div
+    id="fruit-select"
+    class="select__field"
+    role="combobox"
+    tabindex="0"
+    aria-labelledby="fruit-label"
+    aria-controls="fruit-listbox"
+    aria-expanded="false"
+  ></div>
+
+  <!-- Hidden while closed, so it is out of the accessibility tree. Filled by select.js -->
+  <ul
+    id="fruit-listbox"
+    class="select__popup"
+    role="listbox"
+    aria-labelledby="fruit-label"
+    tabindex="-1"
+    hidden
+  ></ul>
+</div>

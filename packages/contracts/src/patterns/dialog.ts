@@ -5,8 +5,8 @@ import { apg } from './dialog-sources.ts';
 import { dialogTradeOffs } from './dialog-trade-offs.ts';
 
 /**
- * Pattern 5 (docs/proposals/dialog.md, opened by the owner on 2026-11-21). In progress: six
- * systems measured, six design requirements approved by the owner on 2026-11-23, two draft
+ * Pattern 5 (docs/proposals/dialog.md, opened on 2026-11-21). In progress: six
+ * systems measured, six design requirements approved on 2026-11-23, two draft
  * trade-offs (`wrap`, ahead of the systems, decision 6; `modal`, from React Aria), and no page
  * among the patterns until the manual screen reader check.
  */

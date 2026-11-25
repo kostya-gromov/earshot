@@ -14,10 +14,10 @@
   },
   "provenance": {
     "status": "measured",
-    "engineVersion": "0.20.0",
+    "engineVersion": "0.23.0",
     "browser": "chromium 156.0.8078.4",
     "os": "darwin",
-    "measuredAt": "2026-11-23T09:29:02.283Z",
+    "measuredAt": "2026-11-25T10:17:50.180Z",
     "runs": 3,
     "consistent": true
   },
@@ -51,7 +51,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria2329055328-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria9491398756-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -68,7 +68,92 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria2329055328-_r_0_ > div:nth-child(2) > input#react-aria2329055328-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9491398756-_r_0_ > div:nth-child(2) > input#react-aria9491398756-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Edit profile"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Edit profile"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "Edit profile",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Edit profile",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria3467922377-_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3467922377-_r_0_ > div:nth-child(2) > input#react-aria3467922377-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -136,7 +221,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria1287317424-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria629567621-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -153,92 +238,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1287317424-_r_0_ > div:nth-child(2) > input#react-aria1287317424-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "Edit profile"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Edit profile"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "Edit profile",
-                    "states": {
-                      "expanded": false,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Edit profile",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria3707195328-_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3707195328-_r_0_ > div:nth-child(2) > input#react-aria3707195328-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria629567621-_r_0_ > div:nth-child(2) > input#react-aria629567621-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -316,7 +316,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria7570889410-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria7355800981-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -333,7 +333,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(2) > input#react-aria7570889410-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(2) > input#react-aria7355800981-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -349,374 +349,6 @@
                     "name": "Edit profile"
                   }
                 ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "Edit profile",
-                    "states": {
-                      "expanded": false,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(2) > input#react-aria7570889410-_r_6_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Cancel",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(3) > button#react-aria7570889410-_r_b_",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 412,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Cancel, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Cancel",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(3) > button#react-aria7570889410-_r_b_",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(3) > button#react-aria7570889410-_r_d_",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 403,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Save, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(3) > button#react-aria7570889410-_r_d_",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(2) > input#react-aria7570889410-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 417,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(2) > input#react-aria7570889410-_r_6_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Cancel",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(3) > button#react-aria7570889410-_r_b_",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 402,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Cancel, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Cancel",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(3) > button#react-aria7570889410-_r_b_",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(3) > button#react-aria7570889410-_r_d_",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
                 "changed": []
               },
               "settle": {
@@ -725,165 +357,6 @@
               },
               "dialog": {
                 "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Save, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(3) > button#react-aria7570889410-_r_d_",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7570889410-_r_0_ > div:nth-child(2) > input#react-aria7570889410-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 403,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Edit profile",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria7155568209-_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(2) > input#react-aria7155568209-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "Edit profile"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Edit profile"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
                   "opener": {
                     "role": "button",
                     "name": "Edit profile",
@@ -927,7 +400,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(2) > input#react-aria7155568209-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(2) > input#react-aria7355800981-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -943,7 +416,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(3) > button#react-aria7155568209-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(3) > button#react-aria7355800981-_r_b_",
                 "element": 3
               },
               "announcements": [],
@@ -953,7 +426,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 403,
                 "quiet": true
               },
               "dialog": {
@@ -1000,7 +473,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(3) > button#react-aria7155568209-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(3) > button#react-aria7355800981-_r_b_",
                 "element": 3
               },
               "focusAfter": {
@@ -1016,393 +489,13 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(3) > button#react-aria7155568209-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(3) > button#react-aria7355800981-_r_d_",
                 "element": 4
               },
               "announcements": [],
               "axDiff": {
                 "added": [],
                 "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 410,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Save, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(3) > button#react-aria7155568209-_r_d_",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(2) > input#react-aria7155568209-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(2) > input#react-aria7155568209-_r_6_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Cancel",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(3) > button#react-aria7155568209-_r_b_",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 400,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Cancel, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Cancel",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(3) > button#react-aria7155568209-_r_b_",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(3) > button#react-aria7155568209-_r_d_",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 417,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Save, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(3) > button#react-aria7155568209-_r_d_",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7155568209-_r_0_ > div:nth-child(2) > input#react-aria7155568209-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 402,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Edit profile",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria9370338299-_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(2) > input#react-aria9370338299-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "Edit profile"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Edit profile"
-                  }
-                ],
                 "changed": []
               },
               "settle": {
@@ -1411,14 +504,88 @@
               },
               "dialog": {
                 "before": {
-                  "opener": {
-                    "role": "button",
+                  "dialog": {
+                    "role": "dialog",
                     "name": "Edit profile",
                     "states": {
-                      "expanded": false,
-                      "invalid": false
+                      "modal": false
                     }
-                  }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Save, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(3) > button#react-aria7355800981-_r_d_",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(2) > input#react-aria7355800981-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
                 },
                 "after": {
                   "dialog": {
@@ -1454,7 +621,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(2) > input#react-aria9370338299-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(2) > input#react-aria7355800981-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -1470,7 +637,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(3) > button#react-aria9370338299-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(3) > button#react-aria7355800981-_r_b_",
                 "element": 3
               },
               "announcements": [],
@@ -1480,7 +647,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 413,
                 "quiet": true
               },
               "dialog": {
@@ -1527,7 +694,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(3) > button#react-aria9370338299-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(3) > button#react-aria7355800981-_r_b_",
                 "element": 3
               },
               "focusAfter": {
@@ -1543,82 +710,8 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(3) > button#react-aria9370338299-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(3) > button#react-aria7355800981-_r_d_",
                 "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 403,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Save, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(3) > button#react-aria9370338299-_r_d_",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(2) > input#react-aria9370338299-_r_6_",
-                "element": 2
               },
               "announcements": [],
               "axDiff": {
@@ -1653,6 +746,165 @@
                 }
               },
               "speech": [
+                "Save, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(3) > button#react-aria7355800981-_r_d_",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7355800981-_r_0_ > div:nth-child(2) > input#react-aria7355800981-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Edit profile",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria849769179-_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(2) > input#react-aria849769179-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Edit profile"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Edit profile"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "Edit profile",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
                 "Name, textbox"
               ]
             },
@@ -1675,7 +927,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(2) > input#react-aria9370338299-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(2) > input#react-aria849769179-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -1691,7 +943,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(3) > button#react-aria9370338299-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(3) > button#react-aria849769179-_r_b_",
                 "element": 3
               },
               "announcements": [],
@@ -1701,7 +953,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 402,
                 "quiet": true
               },
               "dialog": {
@@ -1748,7 +1000,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(3) > button#react-aria9370338299-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(3) > button#react-aria849769179-_r_b_",
                 "element": 3
               },
               "focusAfter": {
@@ -1764,7 +1016,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(3) > button#react-aria9370338299-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(3) > button#react-aria849769179-_r_d_",
                 "element": 4
               },
               "announcements": [],
@@ -1774,7 +1026,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 417,
+                "ms": 413,
                 "quiet": true
               },
               "dialog": {
@@ -1821,7 +1073,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(3) > button#react-aria9370338299-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(3) > button#react-aria849769179-_r_d_",
                 "element": 4
               },
               "focusAfter": {
@@ -1838,7 +1090,755 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9370338299-_r_0_ > div:nth-child(2) > input#react-aria9370338299-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(2) > input#react-aria849769179-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(2) > input#react-aria849769179-_r_6_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Cancel",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(3) > button#react-aria849769179-_r_b_",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Cancel, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Cancel",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(3) > button#react-aria849769179-_r_b_",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(3) > button#react-aria849769179-_r_d_",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 402,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Save, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(3) > button#react-aria849769179-_r_d_",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria849769179-_r_0_ > div:nth-child(2) > input#react-aria849769179-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Edit profile",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria3662774100-_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(2) > input#react-aria3662774100-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Edit profile"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Edit profile"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 417,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "Edit profile",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(2) > input#react-aria3662774100-_r_6_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Cancel",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(3) > button#react-aria3662774100-_r_b_",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Cancel, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Cancel",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(3) > button#react-aria3662774100-_r_b_",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(3) > button#react-aria3662774100-_r_d_",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Save, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(3) > button#react-aria3662774100-_r_d_",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(2) > input#react-aria3662774100-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(2) > input#react-aria3662774100-_r_6_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Cancel",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(3) > button#react-aria3662774100-_r_b_",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Cancel, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Cancel",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(3) > button#react-aria3662774100-_r_b_",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(3) > button#react-aria3662774100-_r_d_",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Save, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(3) > button#react-aria3662774100-_r_d_",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3662774100-_r_0_ > div:nth-child(2) > input#react-aria3662774100-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -1907,7 +1907,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria8421867478-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria5338460241-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -1924,534 +1924,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(2) > input#react-aria8421867478-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "Edit profile"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Edit profile"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "Edit profile",
-                    "states": {
-                      "expanded": false,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(2) > input#react-aria8421867478-_r_6_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(3) > button#react-aria8421867478-_r_d_",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Save, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(3) > button#react-aria8421867478-_r_d_",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Cancel",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(3) > button#react-aria8421867478-_r_b_",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Cancel, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Cancel",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(3) > button#react-aria8421867478-_r_b_",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(2) > input#react-aria8421867478-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 403,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(2) > input#react-aria8421867478-_r_6_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(3) > button#react-aria8421867478-_r_d_",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 403,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Save, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Save",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(3) > button#react-aria8421867478-_r_d_",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Cancel",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(3) > button#react-aria8421867478-_r_b_",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Cancel, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Cancel",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(3) > button#react-aria8421867478-_r_b_",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria8421867478-_r_0_ > div:nth-child(2) > input#react-aria8421867478-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 406,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Edit profile",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria1810371961-_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(2) > input#react-aria1810371961-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(2) > input#react-aria5338460241-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -2518,7 +1991,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(2) > input#react-aria1810371961-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(2) > input#react-aria5338460241-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -2534,7 +2007,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(3) > button#react-aria1810371961-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(3) > button#react-aria5338460241-_r_d_",
                 "element": 3
               },
               "announcements": [],
@@ -2544,7 +2017,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 408,
                 "quiet": true
               },
               "dialog": {
@@ -2591,7 +2064,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(3) > button#react-aria1810371961-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(3) > button#react-aria5338460241-_r_d_",
                 "element": 3
               },
               "focusAfter": {
@@ -2607,7 +2080,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(3) > button#react-aria1810371961-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(3) > button#react-aria5338460241-_r_b_",
                 "element": 4
               },
               "announcements": [],
@@ -2617,7 +2090,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 411,
                 "quiet": true
               },
               "dialog": {
@@ -2664,7 +2137,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(3) > button#react-aria1810371961-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(3) > button#react-aria5338460241-_r_b_",
                 "element": 4
               },
               "focusAfter": {
@@ -2681,7 +2154,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(2) > input#react-aria1810371961-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(2) > input#react-aria5338460241-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -2691,7 +2164,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 411,
                 "quiet": true
               },
               "dialog": {
@@ -2739,7 +2212,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(2) > input#react-aria1810371961-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(2) > input#react-aria5338460241-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -2755,7 +2228,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(3) > button#react-aria1810371961-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(3) > button#react-aria5338460241-_r_d_",
                 "element": 3
               },
               "announcements": [],
@@ -2765,7 +2238,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 407,
                 "quiet": true
               },
               "dialog": {
@@ -2812,7 +2285,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(3) > button#react-aria1810371961-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(3) > button#react-aria5338460241-_r_d_",
                 "element": 3
               },
               "focusAfter": {
@@ -2828,7 +2301,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(3) > button#react-aria1810371961-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(3) > button#react-aria5338460241-_r_b_",
                 "element": 4
               },
               "announcements": [],
@@ -2885,7 +2358,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(3) > button#react-aria1810371961-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(3) > button#react-aria5338460241-_r_b_",
                 "element": 4
               },
               "focusAfter": {
@@ -2902,7 +2375,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1810371961-_r_0_ > div:nth-child(2) > input#react-aria1810371961-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5338460241-_r_0_ > div:nth-child(2) > input#react-aria5338460241-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -2912,7 +2385,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 404,
                 "quiet": true
               },
               "dialog": {
@@ -2961,7 +2434,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria9770243039-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria6125112490-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -2978,7 +2451,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(2) > input#react-aria9770243039-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(2) > input#react-aria6125112490-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -2997,7 +2470,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 408,
                 "quiet": true
               },
               "dialog": {
@@ -3045,7 +2518,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(2) > input#react-aria9770243039-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(2) > input#react-aria6125112490-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -3061,7 +2534,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(3) > button#react-aria9770243039-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(3) > button#react-aria6125112490-_r_d_",
                 "element": 3
               },
               "announcements": [],
@@ -3071,7 +2544,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 411,
                 "quiet": true
               },
               "dialog": {
@@ -3118,7 +2591,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(3) > button#react-aria9770243039-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(3) > button#react-aria6125112490-_r_d_",
                 "element": 3
               },
               "focusAfter": {
@@ -3134,7 +2607,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(3) > button#react-aria9770243039-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(3) > button#react-aria6125112490-_r_b_",
                 "element": 4
               },
               "announcements": [],
@@ -3144,7 +2617,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 414,
                 "quiet": true
               },
               "dialog": {
@@ -3191,7 +2664,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(3) > button#react-aria9770243039-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(3) > button#react-aria6125112490-_r_b_",
                 "element": 4
               },
               "focusAfter": {
@@ -3208,7 +2681,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(2) > input#react-aria9770243039-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(2) > input#react-aria6125112490-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -3218,7 +2691,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 415,
                 "quiet": true
               },
               "dialog": {
@@ -3266,7 +2739,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(2) > input#react-aria9770243039-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(2) > input#react-aria6125112490-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -3282,7 +2755,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(3) > button#react-aria9770243039-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(3) > button#react-aria6125112490-_r_d_",
                 "element": 3
               },
               "announcements": [],
@@ -3292,7 +2765,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 402,
+                "ms": 400,
                 "quiet": true
               },
               "dialog": {
@@ -3339,7 +2812,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(3) > button#react-aria9770243039-_r_d_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(3) > button#react-aria6125112490-_r_d_",
                 "element": 3
               },
               "focusAfter": {
@@ -3355,7 +2828,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(3) > button#react-aria9770243039-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(3) > button#react-aria6125112490-_r_b_",
                 "element": 4
               },
               "announcements": [],
@@ -3365,7 +2838,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 411,
                 "quiet": true
               },
               "dialog": {
@@ -3412,7 +2885,7 @@
                   "count": 3
                 },
                 "isInsideDialog": true,
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(3) > button#react-aria9770243039-_r_b_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(3) > button#react-aria6125112490-_r_b_",
                 "element": 4
               },
               "focusAfter": {
@@ -3429,7 +2902,313 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9770243039-_r_0_ > div:nth-child(2) > input#react-aria9770243039-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria6125112490-_r_0_ > div:nth-child(2) > input#react-aria6125112490-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 411,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Edit profile",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria3326383260-_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(2) > input#react-aria3326383260-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Edit profile"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Edit profile"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "Edit profile",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(2) > input#react-aria3326383260-_r_6_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(3) > button#react-aria3326383260-_r_d_",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Save, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(3) > button#react-aria3326383260-_r_d_",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Cancel",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(3) > button#react-aria3326383260-_r_b_",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Cancel, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Cancel",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(3) > button#react-aria3326383260-_r_b_",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(2) > input#react-aria3326383260-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -3440,6 +3219,227 @@
               },
               "settle": {
                 "ms": 416,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(2) > input#react-aria3326383260-_r_6_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(3) > button#react-aria3326383260-_r_d_",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Save, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Save",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(3) > button#react-aria3326383260-_r_d_",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Cancel",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(3) > button#react-aria3326383260-_r_b_",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Cancel, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Cancel",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(3) > button#react-aria3326383260-_r_b_",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3326383260-_r_0_ > div:nth-child(2) > input#react-aria3326383260-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
                 "quiet": true
               },
               "dialog": {
@@ -3498,7 +3498,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria9764923174-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria974876873-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -3515,7 +3515,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9764923174-_r_0_ > div:nth-child(2) > input#react-aria9764923174-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria974876873-_r_0_ > div:nth-child(2) > input#react-aria974876873-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -3582,7 +3582,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9764923174-_r_0_ > div:nth-child(2) > input#react-aria9764923174-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria974876873-_r_0_ > div:nth-child(2) > input#react-aria974876873-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -3595,7 +3595,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria9764923174-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria974876873-_r_1_",
                 "element": 1
               },
               "announcements": [],
@@ -3614,7 +3614,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 409,
                 "quiet": true
               },
               "dialog": {
@@ -3663,7 +3663,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria5357291063-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria7207173715-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -3680,7 +3680,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5357291063-_r_0_ > div:nth-child(2) > input#react-aria5357291063-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7207173715-_r_0_ > div:nth-child(2) > input#react-aria7207173715-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -3747,7 +3747,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5357291063-_r_0_ > div:nth-child(2) > input#react-aria5357291063-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7207173715-_r_0_ > div:nth-child(2) > input#react-aria7207173715-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -3760,7 +3760,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria5357291063-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria7207173715-_r_1_",
                 "element": 1
               },
               "announcements": [],
@@ -3779,7 +3779,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 417,
                 "quiet": true
               },
               "dialog": {
@@ -3828,7 +3828,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria5292760477-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria3755826312-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -3845,7 +3845,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5292760477-_r_0_ > div:nth-child(2) > input#react-aria5292760477-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3755826312-_r_0_ > div:nth-child(2) > input#react-aria3755826312-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -3864,7 +3864,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 415,
                 "quiet": true
               },
               "dialog": {
@@ -3912,7 +3912,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5292760477-_r_0_ > div:nth-child(2) > input#react-aria5292760477-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3755826312-_r_0_ > div:nth-child(2) > input#react-aria3755826312-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -3925,7 +3925,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria5292760477-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria3755826312-_r_1_",
                 "element": 1
               },
               "announcements": [],
@@ -3944,7 +3944,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 409,
                 "quiet": true
               },
               "dialog": {
@@ -4003,7 +4003,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria5012223942-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria3677147434-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -4020,7 +4020,321 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5012223942-_r_0_ > div:nth-child(2) > input#react-aria5012223942-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3677147434-_r_0_ > div:nth-child(2) > input#react-aria3677147434-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "Edit profile"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Edit profile"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "Edit profile",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "textbox",
+                  "name": "Name"
+                }
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3677147434-_r_0_ > div:nth-child(2) > input#react-aria3677147434-_r_6_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3677147434-_r_0_ > div:nth-child(2) > input#react-aria3677147434-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "type",
+                "text": "Ada"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3677147434-_r_0_ > div:nth-child(2) > input#react-aria3677147434-_r_6_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "Ada",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3677147434-_r_0_ > div:nth-child(2) > input#react-aria3677147434-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Escape"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "Ada",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3677147434-_r_0_ > div:nth-child(2) > input#react-aria3677147434-_r_6_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "Edit profile",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria3677147434-_r_1_",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "button",
+                    "name": "Edit profile"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Edit profile"
+                  }
+                ],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "opener": {
+                    "role": "button",
+                    "name": "Edit profile",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "speech": [
+                "Edit profile, button, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "Edit profile",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria7739337641-_r_1_",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7739337641-_r_0_ > div:nth-child(2) > input#react-aria7739337641-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -4090,7 +4404,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5012223942-_r_0_ > div:nth-child(2) > input#react-aria5012223942-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7739337641-_r_0_ > div:nth-child(2) > input#react-aria7739337641-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -4107,7 +4421,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5012223942-_r_0_ > div:nth-child(2) > input#react-aria5012223942-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7739337641-_r_0_ > div:nth-child(2) > input#react-aria7739337641-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -4117,7 +4431,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 408,
                 "quiet": true
               },
               "dialog": {
@@ -4163,7 +4477,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5012223942-_r_0_ > div:nth-child(2) > input#react-aria5012223942-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7739337641-_r_0_ > div:nth-child(2) > input#react-aria7739337641-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -4180,7 +4494,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "Ada",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5012223942-_r_0_ > div:nth-child(2) > input#react-aria5012223942-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7739337641-_r_0_ > div:nth-child(2) > input#react-aria7739337641-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -4190,7 +4504,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 400,
+                "ms": 416,
                 "quiet": true
               },
               "dialog": {
@@ -4236,7 +4550,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "Ada",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5012223942-_r_0_ > div:nth-child(2) > input#react-aria5012223942-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7739337641-_r_0_ > div:nth-child(2) > input#react-aria7739337641-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -4249,7 +4563,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria5012223942-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria7739337641-_r_1_",
                 "element": 1
               },
               "announcements": [],
@@ -4268,7 +4582,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 403,
+                "ms": 411,
                 "quiet": true
               },
               "dialog": {
@@ -4317,7 +4631,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria4456796321-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria4404532115-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -4334,7 +4648,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4456796321-_r_0_ > div:nth-child(2) > input#react-aria4456796321-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4404532115-_r_0_ > div:nth-child(2) > input#react-aria4404532115-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -4350,398 +4664,6 @@
                     "name": "Edit profile"
                   }
                 ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 417,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "Edit profile",
-                    "states": {
-                      "expanded": false,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "click",
-                "target": {
-                  "role": "textbox",
-                  "name": "Name"
-                }
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4456796321-_r_0_ > div:nth-child(2) > input#react-aria4456796321-_r_6_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4456796321-_r_0_ > div:nth-child(2) > input#react-aria4456796321-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 405,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "type",
-                "text": "Ada"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4456796321-_r_0_ > div:nth-child(2) > input#react-aria4456796321-_r_6_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "Ada",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4456796321-_r_0_ > div:nth-child(2) > input#react-aria4456796321-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 407,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Escape"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "Ada",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4456796321-_r_0_ > div:nth-child(2) > input#react-aria4456796321-_r_6_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "Edit profile",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria4456796321-_r_1_",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "button",
-                    "name": "Edit profile"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Edit profile"
-                  }
-                ],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 405,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "opener": {
-                    "role": "button",
-                    "name": "Edit profile",
-                    "states": {
-                      "expanded": false,
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "speech": [
-                "Edit profile, button, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "Edit profile",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria1081757192-_r_1_",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1081757192-_r_0_ > div:nth-child(2) > input#react-aria1081757192-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "Edit profile"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Edit profile"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 401,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "Edit profile",
-                    "states": {
-                      "expanded": false,
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": false
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "click",
-                "target": {
-                  "role": "textbox",
-                  "name": "Name"
-                }
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1081757192-_r_0_ > div:nth-child(2) > input#react-aria1081757192-_r_6_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1081757192-_r_0_ > div:nth-child(2) > input#react-aria1081757192-_r_6_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
                 "changed": []
               },
               "settle": {
@@ -4750,6 +4672,84 @@
               },
               "dialog": {
                 "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "Edit profile",
+                    "states": {
+                      "expanded": false,
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": false
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "textbox",
+                  "name": "Name"
+                }
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4404532115-_r_0_ > div:nth-child(2) > input#react-aria4404532115-_r_6_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4404532115-_r_0_ > div:nth-child(2) > input#react-aria4404532115-_r_6_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
                   "dialog": {
                     "role": "dialog",
                     "name": "Edit profile",
@@ -4791,7 +4791,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1081757192-_r_0_ > div:nth-child(2) > input#react-aria1081757192-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4404532115-_r_0_ > div:nth-child(2) > input#react-aria4404532115-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -4808,7 +4808,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "Ada",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1081757192-_r_0_ > div:nth-child(2) > input#react-aria1081757192-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4404532115-_r_0_ > div:nth-child(2) > input#react-aria4404532115-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -4864,7 +4864,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "Ada",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria1081757192-_r_0_ > div:nth-child(2) > input#react-aria1081757192-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4404532115-_r_0_ > div:nth-child(2) > input#react-aria4404532115-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -4877,7 +4877,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria1081757192-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria4404532115-_r_1_",
                 "element": 1
               },
               "announcements": [],
@@ -4896,7 +4896,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 409,
                 "quiet": true
               },
               "dialog": {
@@ -4954,7 +4954,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria9845562451-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria7665653075-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -4971,7 +4971,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9845562451-_r_0_ > div:nth-child(2) > input#react-aria9845562451-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7665653075-_r_0_ > div:nth-child(2) > input#react-aria7665653075-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -4990,7 +4990,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 414,
                 "quiet": true
               },
               "dialog": {
@@ -5041,7 +5041,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9845562451-_r_0_ > div:nth-child(2) > input#react-aria9845562451-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7665653075-_r_0_ > div:nth-child(2) > input#react-aria7665653075-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -5054,7 +5054,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria9845562451-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria7665653075-_r_1_",
                 "element": 1
               },
               "announcements": [],
@@ -5073,7 +5073,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 447,
+                "ms": 449,
                 "quiet": true
               },
               "dialog": {
@@ -5122,7 +5122,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria3265701030-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria7716077176-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -5139,7 +5139,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3265701030-_r_0_ > div:nth-child(2) > input#react-aria3265701030-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7716077176-_r_0_ > div:nth-child(2) > input#react-aria7716077176-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -5209,7 +5209,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3265701030-_r_0_ > div:nth-child(2) > input#react-aria3265701030-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria7716077176-_r_0_ > div:nth-child(2) > input#react-aria7716077176-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -5222,7 +5222,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria3265701030-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria7716077176-_r_1_",
                 "element": 1
               },
               "announcements": [],
@@ -5241,7 +5241,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 440,
+                "ms": 442,
                 "quiet": true
               },
               "dialog": {
@@ -5290,7 +5290,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria4535975503-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria5656525328-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -5307,7 +5307,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4535975503-_r_0_ > div:nth-child(2) > input#react-aria4535975503-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5656525328-_r_0_ > div:nth-child(2) > input#react-aria5656525328-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -5326,7 +5326,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 402,
                 "quiet": true
               },
               "dialog": {
@@ -5377,7 +5377,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4535975503-_r_0_ > div:nth-child(2) > input#react-aria4535975503-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria5656525328-_r_0_ > div:nth-child(2) > input#react-aria5656525328-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -5390,7 +5390,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria4535975503-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria5656525328-_r_1_",
                 "element": 1
               },
               "announcements": [],
@@ -5409,7 +5409,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 447,
+                "ms": 446,
                 "quiet": true
               },
               "dialog": {
@@ -5467,7 +5467,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria2890920168-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria9491284060-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -5484,7 +5484,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria2890920168-_r_0_ > div:nth-child(2) > input#react-aria2890920168-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9491284060-_r_0_ > div:nth-child(2) > input#react-aria9491284060-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -5559,7 +5559,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria2890920168-_r_0_ > div:nth-child(2) > input#react-aria2890920168-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9491284060-_r_0_ > div:nth-child(2) > input#react-aria9491284060-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -5576,7 +5576,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria2890920168-_r_0_ > div:nth-child(2) > input#react-aria2890920168-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9491284060-_r_0_ > div:nth-child(2) > input#react-aria9491284060-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -5586,7 +5586,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 407,
+                "ms": 400,
                 "quiet": true
               },
               "dialog": {
@@ -5633,7 +5633,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria4315577462-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria4991515247-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -5650,7 +5650,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4315577462-_r_0_ > div:nth-child(2) > input#react-aria4315577462-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4991515247-_r_0_ > div:nth-child(2) > input#react-aria4991515247-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -5669,7 +5669,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 408,
+                "ms": 414,
                 "quiet": true
               },
               "dialog": {
@@ -5725,7 +5725,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4315577462-_r_0_ > div:nth-child(2) > input#react-aria4315577462-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4991515247-_r_0_ > div:nth-child(2) > input#react-aria4991515247-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -5742,7 +5742,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4315577462-_r_0_ > div:nth-child(2) > input#react-aria4315577462-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria4991515247-_r_0_ > div:nth-child(2) > input#react-aria4991515247-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -5752,7 +5752,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 406,
                 "quiet": true
               },
               "dialog": {
@@ -5799,7 +5799,7 @@
                 "isBody": false,
                 "isInsideComponent": true,
                 "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria9429597334-_r_1_",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button#react-aria3963443340-_r_1_",
                 "element": 1
               },
               "focusAfter": {
@@ -5816,7 +5816,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9429597334-_r_0_ > div:nth-child(2) > input#react-aria9429597334-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3963443340-_r_0_ > div:nth-child(2) > input#react-aria3963443340-_r_6_",
                 "element": 2
               },
               "announcements": [],
@@ -5835,7 +5835,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 411,
                 "quiet": true
               },
               "dialog": {
@@ -5891,7 +5891,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9429597334-_r_0_ > div:nth-child(2) > input#react-aria9429597334-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3963443340-_r_0_ > div:nth-child(2) > input#react-aria3963443340-_r_6_",
                 "element": 2
               },
               "focusAfter": {
@@ -5908,7 +5908,7 @@
                 },
                 "isInsideDialog": true,
                 "value": "",
-                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria9429597334-_r_0_ > div:nth-child(2) > input#react-aria9429597334-_r_6_",
+                "path": "div:nth-child(3) > div:nth-child(1) > section#react-aria3963443340-_r_0_ > div:nth-child(2) > input#react-aria3963443340-_r_6_",
                 "element": 2
               },
               "announcements": [],

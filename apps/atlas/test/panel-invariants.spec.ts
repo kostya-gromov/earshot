@@ -83,6 +83,18 @@ const pages = [
     systemShift: 21,
     listShift: 0,
   },
+  {
+    // On the patterns since 2026-11-25. One line of text between systems, as on the dialog: the words under the drawing are the recording, and
+    // React Aria's open step adds "The select is not in the tree. Focus on option 3, “Banana”.",
+    // which the reference's never needs: its button leaves the tree while the list is open and
+    // DOM focus is on the option (20 to 21 px, measured 2026-11-24). Held here so it cannot grow;
+    // the trade is decided separately (O7), as on the dialog.
+    id: 'select',
+    path: '/patterns/select/',
+    rule: /Focus stays on the select/,
+    systemShift: 21,
+    listShift: 0,
+  },
 ] as const;
 const sizes = [
   { width: 1440, height: 900 },
@@ -230,4 +242,29 @@ for (const { id, path, rule } of pages) {
     }
     await context.close();
   });
+}
+
+/*
+ * "systems-row": on a phone and a tablet the systems are one scrolling row of short cards, and
+ * that row holds the system buttons only. A hint put inside it became a column of one word a
+ * line and stretched every card to 163 px (design review 2026-11-25b).
+ */
+for (const { id, path, rule } of pages) {
+  for (const size of sizes.filter(({ width }) => width <= 768)) {
+    test(`${id}: at ${size.width} the systems row holds short system cards only`, async ({
+      page,
+    }) => {
+      await page.setViewportSize(size);
+      await openRule(page, path, rule);
+      const group = panel(page).getByRole('group', { name: 'Whose recording' });
+      const children = await group.evaluate((element) =>
+        [...element.children].map((child) => child.tagName),
+      );
+      expect(new Set(children)).toEqual(new Set(['BUTTON']));
+      for (const button of await group.getByRole('button').all()) {
+        const box = await button.boundingBox();
+        expect(box?.height ?? 0).toBeLessThanOrEqual(56);
+      }
+    });
+  }
 }

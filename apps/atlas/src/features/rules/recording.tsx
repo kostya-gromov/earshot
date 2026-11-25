@@ -18,7 +18,7 @@ import styles from './depth.module.css';
 function Spoken({ step }: { step: ReplayStep }) {
   const lines = spokenLines(step);
   // Upright and grey, like "Nothing said": a statement about the model, not something heard.
-  const unspoken = endsOutsidePage(step) ? notModelledWords : 'Nothing said';
+  const unspoken = endsOutsidePage(step) ? notModelledWords : 'No modelled speech';
   if (lines.length === 0) return <p className={styles.silent}>{unspoken}</p>;
   return lines.map((line) => (
     <SpeechLine key={line} source={step.heard.includes(line) ? 'announcement' : 'focus'} size="sm">

@@ -13,13 +13,16 @@ function stateWords({ states }: AccessibleNode): string[] {
 }
 
 /**
- * Name, role, the popup it says it has, position, states: one order and one wording for every
- * system. "has popup menu" is said only for an aria-haspopup the element itself carries.
+ * Name, role, value, the popup it says it has, position, states: one order and one wording for
+ * every system. "has popup menu" is said only for an aria-haspopup the element itself carries.
+ * The value is a combobox's (engine 0.21.0): a select that said only "Fruit, combobox" would hide
+ * what is chosen.
  */
 export function formatNodeSpeech(node: AccessibleNode): string {
   const parts: string[] = [];
   if (node.name) parts.push(node.name);
   if (node.role) parts.push(node.role);
+  if (node.treeValue) parts.push(node.treeValue);
   if (node.states.hasPopup) parts.push(`has popup ${node.states.hasPopup}`);
   if (node.posInSet !== undefined && node.setSize !== undefined) {
     parts.push(`${node.posInSet} of ${node.setSize}`);

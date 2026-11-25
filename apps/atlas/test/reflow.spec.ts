@@ -4,7 +4,14 @@ import { expect, test, type Page } from '@playwright/test';
 // recording draws its keys in one row, and a long scenario's row was wider than a phone: the
 // whole page scrolled sideways once it was chosen (design review, 2026-11-22). Every scenario of
 // every rule of every pattern is chosen here, at 320 and at 390.
-const patterns = ['input-with-chips', 'combobox', 'menu-button', 'tabs', 'dialog'] as const;
+const patterns = [
+  'input-with-chips',
+  'combobox',
+  'menu-button',
+  'tabs',
+  'dialog',
+  'select',
+] as const;
 const widths = [320, 390] as const;
 
 // What is known to be too wide and is not a recording's doing. Each entry is a defect on record

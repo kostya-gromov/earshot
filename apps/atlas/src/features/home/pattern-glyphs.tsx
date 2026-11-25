@@ -26,17 +26,19 @@ function ChipsGlyph() {
   );
 }
 
+/** Typing filters the list: two letters and the caret in the field, a short list under it. */
 function ComboboxGlyph() {
   return (
     <svg viewBox="0 0 320 170" aria-hidden="true" focusable="false">
       <rect className={styles.focus} x="60" y="28" width="200" height="34" rx="8" />
+      <line className={styles.selectedBar} x1="76" y1="45" x2="94" y2="45" />
+      <line className={styles.stroke} x1="100" y1="37" x2="100" y2="53" />
       <path className={styles.stroke} d="M240 42 l6 6 l6 -6" />
       <g className={styles.popup}>
-        <rect className={styles.stroke} x="60" y="70" width="200" height="82" rx="8" />
+        <rect className={styles.stroke} x="60" y="70" width="200" height="58" rx="8" />
         <rect className={styles.active} x="68" y="78" width="184" height="20" rx="4" />
         <line className={styles.stroke} x1="78" y1="88" x2="200" y2="88" />
-        <line className={styles.stroke} x1="78" y1="111" x2="190" y2="111" />
-        <line className={styles.stroke} x1="78" y1="134" x2="160" y2="134" />
+        <line className={styles.stroke} x1="78" y1="111" x2="170" y2="111" />
       </g>
     </svg>
   );
@@ -107,12 +109,41 @@ function DialogGlyph() {
   );
 }
 
+/** The select apart from the combobox: its field holds a value, not typing, and the list opens
+ * on the chosen option, the third of five, checked and active, while focus stays on the field. */
+function SelectGlyph() {
+  // Each option as a line: its y and where its text ends.
+  const rows = [
+    [84, 190],
+    [101, 170],
+    [118, 150],
+    [135, 200],
+    [152, 160],
+  ] as const;
+  return (
+    <svg viewBox="0 0 320 170" aria-hidden="true" focusable="false">
+      <rect className={styles.focus} x="60" y="22" width="200" height="34" rx="8" />
+      <line className={styles.selectedBar} x1="76" y1="39" x2="132" y2="39" />
+      <path className={styles.stroke} d="M240 36 l6 6 l6 -6" />
+      <g className={styles.popup}>
+        <rect className={styles.stroke} x="60" y="64" width="200" height="100" rx="8" />
+        <rect className={styles.chosen} x="68" y="109" width="184" height="18" rx="4" />
+        <path className={styles.stroke} d="M78 118 l3 3 l6 -6" />
+        {rows.map(([y, end]) => (
+          <line key={y} className={styles.stroke} x1="96" y1={y} x2={end} y2={y} />
+        ))}
+      </g>
+    </svg>
+  );
+}
+
 const glyphs: Readonly<Record<string, () => ReactNode>> = {
   'input-with-chips': ChipsGlyph,
   combobox: ComboboxGlyph,
   'menu-button': MenuButtonGlyph,
   tabs: TabsGlyph,
   dialog: DialogGlyph,
+  select: SelectGlyph,
 };
 
 export function PatternGlyph({ id }: { id: string }) {

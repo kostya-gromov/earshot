@@ -1,6 +1,6 @@
 # Proposal: measure the libraries people actually use
 
-- Status: draft, for the owner's decision
+- Status: draft, for decision
 - Date: 2026-11-08
 - Scope: input-with-chips; research only, no code and no new dependencies yet
 

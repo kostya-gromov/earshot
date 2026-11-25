@@ -172,8 +172,32 @@
     height: auto;
   }
 
+  /*
+   * The code stays under the header while the notes scroll beneath it, so a chosen note and the
+   * lines it explains are on screen together (2026-11-25): scrolling the page to the lines
+   * took the focused note off the screen. At most 16 lines and at most 40% of the screen, in
+   * whole lines, so its edge never cuts one (design review, 2026-11-25). The height is a property
+   * of the tabs, so what scrolls under the panel can keep clear of it (code-lens.module.css).
+   */
+  .tabs[data-variant='files'] {
+    --code-line: calc(1.7 * var(--text-xs));
+    /* The top padding, whole lines, and the 1 px hairline under them (the box counts its border). */
+    --code-height: calc(
+      15px + min(16 * var(--code-line), round(down, 40vh - 15px, var(--code-line)))
+    );
+  }
+
+  /* Its own side edges: its fill would paint over the well's inset hairline. */
   .tabs[data-variant='files'] > .body > .panel {
-    height: calc(14px + 19 * 1.7 * var(--text-xs));
+    position: sticky;
+    top: var(--header-cover);
+    z-index: 1;
+    height: var(--code-height);
+    background: var(--well);
+    border-bottom: 1px solid var(--line);
+    box-shadow:
+      inset 1px 0 0 var(--line),
+      inset -1px 0 0 var(--line);
   }
 }
 

@@ -50,7 +50,7 @@ interface SceneProps {
  * rule: the others lie under it, still, unseen and out of reach, only to keep that room. From
  * the first frame, so the list below never moves when another scenario is chosen. It replaces a
  * height that was held as it grew, which left the first choices to jump (design review
- * 2026-11-16; the owner the same day).
+ * 2026-11-16; decided the same day).
  *
  * Not for a scenario that shows no list at all: its recording takes only the room it needs.
  * Kept as tall as a recording with a list, it stood over a large empty space (* 2026-11-17). The price is known: between such a scenario and one with a list the rows below

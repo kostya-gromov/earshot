@@ -71,24 +71,6 @@ const verdictRows: readonly { verdict: Verdict; key: keyof MethodTotals['verdict
 ];
 
 /**
- * Which rules the differences are from: a difference from an Earshot recommendation is not a
- * difference from the standards, and the totals alone read as if it were (verdict audit
- * 2026-11-14).
- */
-function DifferenceNote({ verdicts }: { verdicts: MethodTotals['verdicts'] }) {
-  const { differs, differsFromStandards: fromStandards } = verdicts;
-  if (differs === 0) return null;
-  const all = plural(differs, 'difference', 'differences');
-  return (
-    <p className={styles.finding}>
-      {fromStandards === 0
-        ? `None of the ${all} is from a rule that WCAG or APG asks for: all are from Earshot recommendations.`
-        : `Of the ${all}, ${count(fromStandards)} ${fromStandards === 1 ? 'is' : 'are'} from a rule that WCAG or APG asks for; the rest are from Earshot recommendations.`}
-    </p>
-  );
-}
-
-/**
  * Step 3: every verdict of the counted design systems, as one bar divided by outcome with the
  * counts under it. Only a match has a colour: differing is not failing, so it stays neutral.
  */
@@ -113,7 +95,6 @@ export function VerdictPlate({ verdicts }: { verdicts: MethodTotals['verdicts'] 
           </div>
         ))}
       </dl>
-      <DifferenceNote verdicts={verdicts} />
     </div>
   );
 }

@@ -93,10 +93,11 @@ export async function replayKeys({ root, keys, onKey, isCancelled, holdMs }: Rep
   // would jump there first.
   // Where every recording starts: the field's input, the button of a menu button, the button
   // that opens a dialog (it comes before the dialog's own field in the markup), or the selected
-  // tab, the one Tab stop of a tab list. Without a start the keys reach the body and do nothing.
+  // tab, the one Tab stop of a tab list, or a select, which is no input. Without a start the keys
+  // reach the body and do nothing.
   root
     .querySelector<HTMLElement>(
-      '[data-dialog-open], input, [aria-haspopup="menu"], [role="tab"][aria-selected="true"]',
+      '[data-dialog-open], input, [role="combobox"], [aria-haspopup="menu"], [role="tab"][aria-selected="true"]',
     )
     ?.focus(asAfterAKey);
   const beat = reducedMotion() ? 350 : 700;

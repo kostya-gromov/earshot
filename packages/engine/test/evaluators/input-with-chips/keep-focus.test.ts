@@ -19,7 +19,7 @@ const click = (focusAfter: ReturnType<typeof focus>) =>
     }),
   ]);
 
-// Decided 2026-11-09 (the owner's review of the verdict audit): where focus lands is a rule under
+// Decided 2026-11-09 (review of the verdict audit): where focus lands is a rule under
 // WCAG 2.4.3; whether the removal is announced is the separate "say" recommendation.
 describe('evaluateKeepFocus', () => {
   it('follows when a click removal returns focus to the input, announced or not', () => {

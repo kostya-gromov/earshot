@@ -26,8 +26,8 @@ export function boards(): BoardSpec[] {
   return Object.keys(boardPins).flatMap((id) => specOf(id) ?? []);
 }
 
-/* The id Figma assigned when the owner published from his personal account, 2026-11-22. A first
-   submission from his work account (id 1706093283242416989) was unpublished. */
+/* The id Figma assigned when the plugin was published from a personal account, 2026-11-22. A
+   first submission from a work account (id 1706093283242416989) was unpublished. */
 const manifest = {
   name: 'Earshot Atlas',
   id: '1706232314661494735',

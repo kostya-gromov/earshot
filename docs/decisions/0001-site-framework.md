@@ -5,7 +5,7 @@
 
 ## Context
 
-Atlas must look and feel top tier (Linear level), with motion that explains behavior: focus travelling between elements, chips leaving, keycaps reacting to real key presses. It must also stay static, fast (Lighthouse ≥ 95) and exemplary for accessibility. The owner prefers React over Vue for this project. The future paid product (PR review app) will be a real application, not a content site.
+Atlas must look and feel top tier (Linear level), with motion that explains behavior: focus travelling between elements, chips leaving, keycaps reacting to real key presses. It must also stay static, fast (Lighthouse ≥ 95) and exemplary for accessibility. React is preferred over Vue for this project. The future paid product (PR review app) will be a real application, not a content site.
 
 ## Options
 

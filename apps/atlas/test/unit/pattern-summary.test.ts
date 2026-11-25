@@ -28,7 +28,9 @@ describe('patternSummary', () => {
     expect(summary).toEqual({
       measuredSystems: 2,
       notApplicable: 2,
+      notApplicableNames: ['Carbon', 'GOV.UK'],
       planned: 1,
+      notMeasuredYet: [],
       lastMeasuredAt: '2026-11-07T00:00:00.000Z',
     });
   });

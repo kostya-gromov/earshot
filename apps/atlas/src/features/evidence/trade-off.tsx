@@ -9,9 +9,10 @@ export interface MeasuredDifference {
   summary: string;
 }
 
-// A key keeps its capital after "Alternative:": "tab on the last element" is not the key Tab.
+// A key keeps its capital after "Alternative:": "tab on the last element" is not the key Tab. So
+// does an initialism: "dOM focus" is no word (select, 2026-11-24).
 const startsWithKey =
-  /^(Tab|Shift|Enter|Escape|Space|Home|End|Backspace|Delete|Up Arrow|Down Arrow|Left Arrow|Right Arrow)\b/;
+  /^([A-Z]{2,}|Tab|Shift|Enter|Escape|Space|Home|End|Backspace|Delete|Up Arrow|Down Arrow|Left Arrow|Right Arrow)\b/;
 
 const lowerFirst = (text: string) =>
   startsWithKey.test(text) ? text : text.charAt(0).toLowerCase() + text.slice(1);

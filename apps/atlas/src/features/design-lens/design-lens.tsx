@@ -18,7 +18,7 @@ function Requirements({ pattern }: { pattern: Pattern }) {
       {pattern.requirements.map((requirement) => (
         <li key={requirement.id} className={styles.requirement}>
           <div className={styles.visual} aria-hidden="true">
-            <RequirementVisual id={requirement.id} />
+            <RequirementVisual id={requirement.id} patternId={pattern.id} />
           </div>
           <div>
             <h4>

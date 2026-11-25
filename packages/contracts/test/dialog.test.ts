@@ -2,9 +2,9 @@ import { describe, expect, it } from 'vitest';
 import { dialog, patterns, patternsInProgress } from '../src/index.ts';
 
 describe('dialog pattern', () => {
-  it('is one of the patterns since 2026-11-23, and none is in progress', () => {
+  it('is one of the patterns since 2026-11-23, and no longer in progress', () => {
     expect(patterns[dialog.id]).toBe(dialog);
-    expect(patternsInProgress).toEqual({});
+    expect(patternsInProgress[dialog.id]).toBeUndefined();
   });
 
   it('has the ten rules of the opened proposal, two of them Earshot recommendations', () => {
@@ -50,7 +50,7 @@ describe('dialog pattern', () => {
     expect(contained.description).toContain('or let it fall to the document');
   });
 
-  it('holds two trade-offs the owner reviewed; the one for wrap names no system', () => {
+  it('holds two reviewed trade-offs; the one for wrap names no system', () => {
     expect(dialog.tradeOffs.map((tradeOff) => tradeOff.status)).toEqual(['reviewed', 'reviewed']);
     // No gain on record for leaving the modal property out, so it is a note, not an alternative.
     expect(dialog.tradeOffs[1]).toMatchObject({ kind: 'none', ruleId: 'modal' });
@@ -62,7 +62,7 @@ describe('dialog pattern', () => {
     expect(dialog.tradeOffs[0]).not.toHaveProperty('seenIn');
   });
 
-  it('has the six design requirements the owner approved, two of them from WCAG itself', () => {
+  it('has the six approved design requirements, two of them from WCAG itself', () => {
     expect(dialog.requirements.map(({ id }) => id)).toEqual([
       'visible-title',
       'visible-close',

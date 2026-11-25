@@ -81,6 +81,13 @@ function Counts({ follows, judged, modelShares }: CountsProps) {
           <a href={href}>{count === 1 ? 'another' : 'one other'} model</a>
         </span>
       ))}
+      {/* A model explains a verdict; it does not turn a difference into a match. A maintainer
+          asked whether "another model" still counts as Differs (first-visit review, 2026-11-25). */}
+      {modelShares.length > 0 && (
+        <span className={styles.agreeNote}>
+          The model explains the verdict; the verdict stands.
+        </span>
+      )}
     </>
   );
 }

@@ -14,6 +14,7 @@ describe('menu button pattern', () => {
       'menu-button',
       'tabs',
       'dialog',
+      'select',
     ]);
   });
 

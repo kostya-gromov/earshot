@@ -65,7 +65,7 @@ test('at 390 px the home example plays without moving the page', async ({ page }
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
-  const scene = page.getByRole('region', { name: /These fields look the same/ });
+  const scene = page.getByRole('region', { name: /^Backspace in an empty field/ });
   const shift = await shiftDuring(page, async () => {
     await scene.scrollIntoViewIfNeeded();
     await page.mouse.wheel(0, 400);

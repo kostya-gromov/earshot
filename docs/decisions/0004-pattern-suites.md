@@ -108,14 +108,14 @@ The runner aggregates results in two stages:
    only when every covering scenario is not applicable. Every rule verdict records each covering
    scenario's own result as its `basis`, so a page shows which recording decided it.
 
-   *Amendment, 2026-11-07 (the owner).* The first version let any `inconclusive` outrank `differs`.
+   *Amendment, 2026-11-07.* The first version let any `inconclusive` outrank `differs`.
    Measuring Atlassian showed the cost: Shift+Tab stopped on a remove button in all three runs, but
    `tab-out` could not judge (the demo page has nothing focusable after the component), so the
    stable difference disappeared from the verdict and its reason. A reproduced difference stands on
    its own. Unreliable runs still outrank it, which also keeps the contracts invariant that a
    `consistent: false` measurement has at least one `inconclusive` verdict.
 
-   *Amendment, 2026-11-11 (the owner).* "Follows" no longer needs every scenario to agree; it needs
+   *Amendment, 2026-11-11.* "Follows" no longer needs every scenario to agree; it needs
    one scenario that follows and none that differs. React Aria showed the cost of the old rule: its
    click removal kept focus in the field, but Backspace and Delete from the input removed nothing,
    so "Keep focus in the field" read "Nothing removed to judge" while the page replayed the click
@@ -328,7 +328,7 @@ scenario, adapter, runner or CLI modules.
 
 ## Amendment (2026-11-16): what a reference must measure
 
-Decided by the owner with the menu button's `home-end` rule.
+Decided with the menu button's `home-end` rule.
 
 - **The invariant.** A reference differs on no rule of its pattern. For an unconditional rule that means `follows`. For a conditional rule it means `follows` or `not-applicable`: the reference may simply not meet the condition. It is never `differs` and never `inconclusive`. Until now the wording was "follows on every rule", which no conditional rule could satisfy for every sound reference.
 - **Why it came up.** APG asks for Home and End in a menu only "if arrow key wrapping is not supported". The menu button reference wraps and has both keys, as the APG example does. Judging the two keys there would have made a menu that does more than the source asks `follow`, while one that does exactly what it asks dropped out of the count as not applicable. Optional behavior is recorded and shown as an observation, not judged; the same holds for Down Arrow and Up Arrow on the button.
@@ -336,7 +336,7 @@ Decided by the owner with the menu button's `home-end` rule.
 
 ## Amendment (2026-11-17): a rule's own words when every scenario follows
 
-Approved by the owner after a verdict audit of the scenario rows.
+Approved after a verdict audit of the scenario rows.
 
 - **The rule.** The summary of a rule that follows or differs is the summary of its first deciding scenario (one that no scenario could judge joins what each says). A suite may give a rule a phrase of its own (`summaries` in the suite), used only when the rule follows and every scenario that covers it follows. The verdict, the reason and each scenario's own result are untouched.
 - **Why it came up.** `chip-stop` has two scenarios, one key each. Each now says what its key did ("Tab leaves the chips"), so that a row never claims the whole rule; taken as the rule's summary, that described a rule about Tab and Shift+Tab by one of them.

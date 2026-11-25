@@ -1,4 +1,5 @@
 import type { FocusInfo, Measurement, PopupState, Step } from '@earshot/contracts';
+import { selectChange, selectStateWords } from './select-words';
 
 /**
  * A combobox recording in the terms a replay draws: the text in the field, whether it says it is
@@ -7,6 +8,9 @@ import type { FocusInfo, Measurement, PopupState, Step } from '@earshot/contract
  */
 export type ComboboxFocus =
   | { kind: 'combobox'; name: string }
+  /** A select (lib/select-replay.ts): the field that shows the value, and its list itself. */
+  | { kind: 'select' }
+  | { kind: 'list' }
   | { kind: 'option'; index: number; name: string }
   | { kind: 'outside'; role: string | null; name: string }
   | { kind: 'other'; role: string | null; name: string }
@@ -23,8 +27,17 @@ export interface ComboboxOption {
 
 export interface ComboboxMoment {
   focus: ComboboxFocus;
-  /** The text in the field; undefined while focus is not on a text field. */
+  /**
+   * The text in the field; undefined while focus is not on a text field. For a select, the value
+   * the tree gives it, undefined where it exposes none.
+   */
   value: string | undefined;
+  /** A select: a field that shows its value and holds no caret. */
+  isSelect?: true;
+  /** A select that was not in the accessibility tree at this moment (MUI, list open). */
+  isOutOfTree?: true;
+  /** A select's description, read where it gives no value (Atlassian). */
+  description?: string;
   /** The focused element's expanded state; undefined when it exposes none. */
   isExpanded: boolean | undefined;
   /** False when no popup is in the accessibility tree. */
@@ -68,14 +81,14 @@ function activeName(focus: FocusInfo, popup: PopupState): string | undefined {
   return focus.item ? popup.options[focus.item.index - 1]?.name : undefined;
 }
 
-interface MomentParts {
+export interface MomentParts {
   focus: FocusInfo;
   popup: PopupState;
   /** The text in the combobox, known from focus on it or carried from an earlier step. */
   value: string | undefined;
 }
 
-function moment({ focus, popup, value }: MomentParts): ComboboxMoment {
+export function moment({ focus, popup, value }: MomentParts): ComboboxMoment {
   const active = activeName(focus, popup);
   return {
     focus: comboboxFocus(focus, popup),
@@ -111,7 +124,7 @@ function valueAfter(step: Step, before: string | undefined): string | undefined 
   return typeof change.after === 'string' ? change.after : '';
 }
 
-const keyOf = ({ action }: Step): string => {
+export const keyOf = ({ action }: Step): string => {
   switch (action.type) {
     case 'press':
       return action.key;
@@ -149,22 +162,22 @@ export function comboboxScenario(measurement: Measurement, scenarioId: string): 
   return run?.status === 'completed' ? comboboxSteps(run.steps) : [];
 }
 
+const fixedFocusWords = {
+  combobox: 'Focus in the combobox',
+  select: 'Focus on the select',
+  list: 'Focus on the list itself',
+  away: 'Focus left the page',
+  body: 'Focus lost to the page',
+} as const;
+
 function focusWords(focus: ComboboxFocus): string {
-  switch (focus.kind) {
-    case 'combobox':
-      return 'Focus in the combobox';
-    case 'option':
-      return `Focus on option ${focus.index}, “${focus.name}”`;
-    case 'outside':
-      // Where it went is the point of the Tab rule, so it is named.
-      return `Focus left the field: ${focus.name || focus.role || 'an unnamed control'}`;
-    case 'away':
-      return 'Focus left the page';
-    case 'body':
-      return 'Focus lost to the page';
-    case 'other':
-      return `Focus on ${focus.role ?? 'an element'} “${focus.name}”`;
+  if (focus.kind === 'option') return `Focus on option ${focus.index}, “${focus.name}”`;
+  // Where it went is the point of the Tab rule, so it is named.
+  if (focus.kind === 'outside') {
+    return `Focus left the field: ${focus.name || focus.role || 'an unnamed control'}`;
   }
+  if (focus.kind === 'other') return `Focus on ${focus.role ?? 'an element'} “${focus.name}”`;
+  return fixedFocusWords[focus.kind];
 }
 
 const quoted = (names: readonly string[]) => names.map((name) => `“${name}”`).join(', ');
@@ -187,7 +200,8 @@ export function describeComboboxStep({ after }: ComboboxStep): string {
   const nowhere = after.pointsNowhere
     ? '. The combobox points at an element that is not there'
     : '';
-  return `${listWords(after)}. ${focusWords(after.focus)}${nowhere}`;
+  const value = after.isSelect ? `${selectStateWords(after)}. ` : '';
+  return `${value}${listWords(after)}. ${focusWords(after.focus)}${nowhere}`;
 }
 
 const activeOf = ({ options }: ComboboxMoment) => options.findIndex(({ isActive }) => isActive);
@@ -216,6 +230,7 @@ function activeChange(before: ComboboxMoment, after: ComboboxMoment): string[] {
 }
 
 function fieldChange(before: ComboboxMoment, after: ComboboxMoment): string[] {
+  if (after.isSelect) return selectChange(before, after);
   if (after.value === undefined || after.value === before.value) return [];
   return [after.value === '' ? 'The field is empty.' : `“${after.value}” in the field.`];
 }
@@ -241,19 +256,4 @@ export function describeComboboxChange({ before, after }: ComboboxStep): string 
   return changes.length > 0 ? changes.join(' ') : 'Nothing changes.';
 }
 
-/**
- * The places focus goes to in a recording besides the combobox and its options, by the names
- * the recording gives them: a control of the combobox itself (the button that opens the list),
- * and the next control on the page. A replay keeps room for them from its first frame.
- */
-export interface ComboboxPlaces {
-  inside: string | undefined;
-  outside: string | undefined;
-}
-
-export function comboboxPlaces(steps: readonly ComboboxStep[]): ComboboxPlaces {
-  const reached = steps.flatMap(({ before, after }) => [before.focus, after.focus]);
-  const nameOf = (kind: 'other' | 'outside') =>
-    reached.flatMap((focus) => (focus.kind === kind ? [focus.name || focus.role || ''] : []))[0];
-  return { inside: nameOf('other'), outside: nameOf('outside') };
-}
+export { comboboxPlaces, type ComboboxPlaces } from './combobox-places';

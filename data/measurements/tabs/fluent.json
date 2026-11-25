@@ -14,10 +14,10 @@
   },
   "provenance": {
     "status": "measured",
-    "engineVersion": "0.20.0",
+    "engineVersion": "0.23.0",
     "browser": "chromium 156.0.8078.4",
     "os": "darwin",
-    "measuredAt": "2026-11-24T09:38:44.707Z",
+    "measuredAt": "2026-11-25T10:15:06.352Z",
     "runs": 3,
     "consistent": true
   },
@@ -78,151 +78,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Members, tab, 3 of 4, selected"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Project name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsidePanel": false,
-                "value": "Earshot",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Members",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 420,
+                "ms": 424,
                 "quiet": true
               },
               "tabSet": {
@@ -462,6 +318,150 @@
               ]
             }
           ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Project name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePanel": false,
+                "value": "Earshot",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Members",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 424,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Members, tab, 3 of 4, selected"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -512,7 +512,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 420,
+                "ms": 419,
                 "quiet": true
               },
               "tabSet": {
@@ -648,7 +648,1085 @@
                 "changed": []
               },
               "settle": {
-                "ms": 409,
+                "ms": 411,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Members, tab, 3 of 4, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Members",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Project name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePanel": false,
+                "value": "Earshot",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Project name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Project name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePanel": false,
+                "value": "Earshot",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "none",
+                "name": "",
+                "states": {},
+                "isBody": true,
+                "isInsideComponent": false,
+                "isInsidePanel": false,
+                "leftPage": true,
+                "path": "html:nth-child(1) > body:nth-child(2)",
+                "element": 5
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Notes",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePanel": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#notes",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "link",
+                "name": "Invite people",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePanel": true,
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > a:nth-child(1)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 422,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Invite people, link"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "link",
+                "name": "Invite people",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePanel": true,
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > a:nth-child(1)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Members",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Members, tab, 3 of 4, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Members",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Project name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePanel": false,
+                "value": "Earshot",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Project name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Project name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePanel": false,
+                "value": "Earshot",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "none",
+                "name": "",
+                "states": {},
+                "isBody": true,
+                "isInsideComponent": false,
+                "isInsidePanel": false,
+                "leftPage": true,
+                "path": "html:nth-child(1) > body:nth-child(2)",
+                "element": 5
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Notes",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsidePanel": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#notes",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "link",
+                "name": "Invite people",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePanel": true,
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > a:nth-child(1)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 415,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Members",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Invite people, link"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "link",
+                "name": "Invite people",
+                "states": {},
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsidePanel": true,
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > a:nth-child(1)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Members",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
                 "quiet": true
               },
               "tabSet": {
@@ -918,1085 +1996,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Notes",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsidePanel": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#notes",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "link",
-                "name": "Invite people",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePanel": true,
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > a:nth-child(1)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 420,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Invite people, link"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "link",
-                "name": "Invite people",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePanel": true,
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > a:nth-child(1)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Members",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 414,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Members, tab, 3 of 4, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Members",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Project name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsidePanel": false,
-                "value": "Earshot",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 405,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Project name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Project name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsidePanel": false,
-                "value": "Earshot",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "none",
-                "name": "",
-                "states": {},
-                "isBody": true,
-                "isInsideComponent": false,
-                "isInsidePanel": false,
-                "leftPage": true,
-                "path": "html:nth-child(1) > body:nth-child(2)",
-                "element": 5
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Notes",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsidePanel": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#notes",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "link",
-                "name": "Invite people",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePanel": true,
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > a:nth-child(1)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 422,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Invite people, link"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "link",
-                "name": "Invite people",
-                "states": {},
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsidePanel": true,
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > a:nth-child(1)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Members",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 407,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Members, tab, 3 of 4, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Members",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Project name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsidePanel": false,
-                "value": "Earshot",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Members",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Project name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Project name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsidePanel": false,
-                "value": "Earshot",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#project-name",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "none",
-                "name": "",
-                "states": {},
-                "isBody": true,
-                "isInsideComponent": false,
-                "isInsidePanel": false,
-                "leftPage": true,
-                "path": "html:nth-child(1) > body:nth-child(2)",
-                "element": 5
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 416,
+                "ms": 413,
                 "quiet": true
               },
               "tabSet": {
@@ -2150,7 +2150,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 477,
+                "ms": 479,
                 "quiet": true
               },
               "tabSet": {
@@ -2294,7 +2294,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 481,
+                "ms": 485,
                 "quiet": true
               },
               "tabSet": {
@@ -2438,7 +2438,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 482,
+                "ms": 483,
                 "quiet": true
               },
               "tabSet": {
@@ -2873,7 +2873,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 416,
+                "ms": 422,
                 "quiet": true
               },
               "tabSet": {
@@ -3034,7 +3034,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 479,
+                "ms": 482,
                 "quiet": true
               },
               "tabSet": {
@@ -3179,7 +3179,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 412,
+                "ms": 409,
                 "quiet": true
               },
               "tabSet": {
@@ -3324,447 +3324,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 417,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Activity, tab, 2 of 4"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 481,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Activity, tab, 2 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Members",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "selected": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 411,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Members, tab, 3 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Members",
-                "posInSet": 3,
-                "setSize": 4,
-                "states": {
-                  "selected": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 403,
+                "ms": 410,
                 "quiet": true
               },
               "tabSet": {
@@ -4059,7 +3619,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 410,
                 "quiet": true
               },
               "tabSet": {
@@ -4204,7 +3764,447 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 408,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Activity, tab, 2 of 4"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 482,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Activity, tab, 2 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Members",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "selected": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Members, tab, 3 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Members",
+                "posInSet": 3,
+                "setSize": 4,
+                "states": {
+                  "selected": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Members",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 404,
                 "quiet": true
               },
               "tabSet": {
@@ -4365,7 +4365,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 482,
+                "ms": 484,
                 "quiet": true
               },
               "tabSet": {
@@ -4660,7 +4660,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 479,
+                "ms": 464,
                 "quiet": true
               },
               "tabSet": {
@@ -4805,7 +4805,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 413,
+                "ms": 402,
                 "quiet": true
               },
               "tabSet": {
@@ -4955,7 +4955,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 481,
+                "ms": 482,
                 "quiet": true
               },
               "tabSet": {
@@ -5100,7 +5100,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 415,
+                "ms": 407,
                 "quiet": true
               },
               "tabSet": {
@@ -5443,7 +5443,7 @@
                 ]
               },
               "settle": {
-                "ms": 405,
+                "ms": 413,
                 "quiet": true
               },
               "tabSet": {
@@ -5591,7 +5591,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 482,
+                "ms": 486,
                 "quiet": true
               },
               "tabSet": {
@@ -5773,7 +5773,678 @@
                 ]
               },
               "settle": {
-                "ms": 404,
+                "ms": 403,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Activity",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 483,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Activity, tab, 2 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Overview"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Activity"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "tabpanel",
+                      "name": "Activity"
+                    },
+                    "property": "name",
+                    "before": "Overview",
+                    "after": "Activity"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Recent changes to the project appear here."
+                    },
+                    "property": "name",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
+                    "after": "Recent changes to the project appear here."
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Activity",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "activate-space",
+      "rules": [
+        "activate",
+        "selected",
+        "panel"
+      ],
+      "initialState": "Overview active, focus on it",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 480,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": [
+                "Activity, tab, 2 of 4"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Space"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Activity",
+                "posInSet": 2,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Overview"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "tab",
+                      "name": "Activity"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "tabpanel",
+                      "name": "Activity"
+                    },
+                    "property": "name",
+                    "before": "Overview",
+                    "after": "Activity"
+                  },
+                  {
+                    "node": {
+                      "role": "StaticText",
+                      "name": "Recent changes to the project appear here."
+                    },
+                    "property": "name",
+                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
+                    "after": "Recent changes to the project appear here."
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 408,
                 "quiet": true
               },
               "tabSet": {
@@ -6019,347 +6690,6 @@
             {
               "action": {
                 "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Overview"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Activity"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "tabpanel",
-                      "name": "Activity"
-                    },
-                    "property": "name",
-                    "before": "Overview",
-                    "after": "Activity"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Recent changes to the project appear here."
-                    },
-                    "property": "name",
-                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
-                    "after": "Recent changes to the project appear here."
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 411,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Activity",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "activate-space",
-      "rules": [
-        "activate",
-        "selected",
-        "panel"
-      ],
-      "initialState": "Overview active, focus on it",
-      "runs": [
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 484,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Activity, tab, 2 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
                 "key": "Space"
               },
               "focusBefore": {
@@ -6592,336 +6922,6 @@
                 "changed": []
               },
               "settle": {
-                "ms": 480,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": [
-                "Activity, tab, 2 of 4"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Space"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Overview"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "tab",
-                      "name": "Activity"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "tabpanel",
-                      "name": "Activity"
-                    },
-                    "property": "name",
-                    "before": "Overview",
-                    "after": "Activity"
-                  },
-                  {
-                    "node": {
-                      "role": "StaticText",
-                      "name": "Recent changes to the project appear here."
-                    },
-                    "property": "name",
-                    "before": "Earshot measures how design systems behave for keyboard and screen reader users.",
-                    "after": "Recent changes to the project appear here."
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 406,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Activity",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Activity",
-                "posInSet": 2,
-                "setSize": 4,
-                "states": {
-                  "selected": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Activity",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
                 "ms": 482,
                 "quiet": true
               },
@@ -7104,7 +7104,7 @@
                 ]
               },
               "settle": {
-                "ms": 407,
+                "ms": 423,
                 "quiet": true
               },
               "tabSet": {
@@ -7263,589 +7263,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 483,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowUp"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 413,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 484,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowUp"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 410,
-                "quiet": true
-              },
-              "tabSet": {
-                "before": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                },
-                "after": {
-                  "tabs": [
-                    {
-                      "role": "tab",
-                      "name": "Overview",
-                      "states": {
-                        "selected": true,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Activity",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Members",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    },
-                    {
-                      "role": "tab",
-                      "name": "Settings",
-                      "states": {
-                        "selected": false,
-                        "invalid": false
-                      }
-                    }
-                  ],
-                  "panels": [
-                    {
-                      "role": "tabpanel",
-                      "name": "Overview",
-                      "states": {}
-                    }
-                  ]
-                }
-              },
-              "speech": []
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowDown"
-              },
-              "focusBefore": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "tab",
-                "name": "Overview",
-                "posInSet": 1,
-                "setSize": 4,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 1,
-                  "count": 4
-                },
-                "isInsidePanel": false,
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 483,
+                "ms": 473,
                 "quiet": true
               },
               "tabSet": {
@@ -8082,6 +7500,588 @@
               "speech": []
             }
           ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 481,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowUp"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowDown"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 483,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowUp"
+              },
+              "focusBefore": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "tab",
+                "name": "Overview",
+                "posInSet": 1,
+                "setSize": 4,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 1,
+                  "count": 4
+                },
+                "isInsidePanel": false,
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button#Overview",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "tabSet": {
+                "before": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                },
+                "after": {
+                  "tabs": [
+                    {
+                      "role": "tab",
+                      "name": "Overview",
+                      "states": {
+                        "selected": true,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Activity",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Members",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    },
+                    {
+                      "role": "tab",
+                      "name": "Settings",
+                      "states": {
+                        "selected": false,
+                        "invalid": false
+                      }
+                    }
+                  ],
+                  "panels": [
+                    {
+                      "role": "tabpanel",
+                      "name": "Overview",
+                      "states": {}
+                    }
+                  ]
+                }
+              },
+              "speech": []
+            }
+          ]
         }
       ]
     },
@@ -8146,7 +8146,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 482,
+                "ms": 479,
                 "quiet": true
               },
               "tabSet": {
@@ -8291,7 +8291,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 410,
                 "quiet": true
               },
               "tabSet": {
@@ -8586,7 +8586,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 410,
                 "quiet": true
               },
               "tabSet": {
@@ -8881,7 +8881,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
+                "ms": 402,
                 "quiet": true
               },
               "tabSet": {

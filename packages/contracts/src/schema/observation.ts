@@ -34,6 +34,12 @@ export const AccessibleNode = z.strictObject({
   /** From aria-posinset/aria-setsize, or derived from siblings (ADR 0003, "Position in set"). */
   posInSet: z.int().positive().optional(),
   setSize: z.int().positive().optional(),
+  /**
+   * The value the tree gives an element with role combobox, read for no other role (engine
+   * 0.21.0): for a select, the chosen option's text. Named apart from FocusInfo's `value`, which
+   * is the text of a focused text field read from the page, not from the tree.
+   */
+  treeValue: z.string().optional(),
   states: AccessibleStates,
 });
 export type AccessibleNode = z.infer<typeof AccessibleNode>;
@@ -216,6 +222,12 @@ export const Step = z.strictObject({
    * an item that was activated from a menu that merely closed.
    */
   effect: z.strictObject({ before: z.string(), after: z.string() }).optional(),
+  /**
+   * For adapters that declare a visible label (select, engine 0.21.0): the label's rendered text
+   * before and after the step, empty when it is not on the page. Read from what the page shows,
+   * not from the tree, so `name-is-label` compares the name with what a person sees.
+   */
+  label: z.strictObject({ before: z.string(), after: z.string() }).optional(),
   /** Semantic model lines, not real screen reader output (packages/engine/CLAUDE.md, Capture). */
   speech: z.array(NonEmpty),
 });
@@ -225,6 +237,12 @@ export const Run = z.discriminatedUnion('status', [
   z.strictObject({ status: z.literal('completed'), steps: z.array(Step).min(1) }),
   z.strictObject({ status: z.literal('setup-failed'), reason: NonEmpty }),
   z.strictObject({ status: z.literal('errored'), reason: NonEmpty, steps: z.array(Step) }),
+  /**
+   * The adapter declares that this scenario is not run on its target, and why (engine 0.23.0):
+   * the browser's own select, whose list the engine cannot drive. Said in the file, so a missing
+   * recording is never read as behavior.
+   */
+  z.strictObject({ status: z.literal('not-run'), reason: NonEmpty }),
 ]);
 export type Run = z.infer<typeof Run>;
 

@@ -56,6 +56,12 @@
 }
 
 /* A newly shown rule rises in, so the change reads as a step, not a flash. */
+/* A link to a rule lands with its heading clear of the sticky header (design review
+   2026-11-25: the key icon sat under it). */
+.panel {
+  scroll-margin-top: calc(var(--header-cover) + var(--space-4));
+}
+
 .panel:not([hidden]) {
   animation: panel-in 220ms var(--ease-out);
 }
@@ -70,6 +76,12 @@
 @media (prefers-reduced-motion: reduce) {
   .indicator {
     transition: none;
+  }
+
+  /* A link to a rule lands with its heading clear of the sticky header (design review
+   2026-11-25: the key icon sat under it). */
+  .panel {
+    scroll-margin-top: calc(var(--header-cover) + var(--space-4));
   }
 
   .panel:not([hidden]) {
@@ -371,18 +383,26 @@
 
 .keys {
   display: flex;
-  align-items: center;
+  /* Play/Pause stays level with the first line of keys when they wrap: centred, it read as one
+     more key in the sequence (design review 2026-11-25-select). */
+  align-items: flex-start;
   gap: var(--space-3);
 }
 
+/* The keys wrap: folding repeated presses (reflow test, 2026-11-22) does not shorten a scenario
+   of different keys, and the select's optional keys were 464 px in one row at 320 (2026-11-25). */
 .keys > span {
   display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
   gap: 6px;
+  min-width: 0;
 }
 
 /* As tall as the keycaps beside it, so the row reads as one line; never under 24 px, the
    minimum target size (WCAG 2.5.8). */
 .pause {
+  flex: none;
   height: calc(1.9 * var(--text-xs));
   min-height: 24px;
   padding: 0 10px;
@@ -592,6 +612,13 @@
 /* Forced colours replace backgrounds, which would leave the selected rule unmarked: the bar keeps
    the system's selection colour. */
 @media (forced-colors: active) {
+  /* Its edge is a box-shadow, which forced colours take away; the keycaps beside it keep theirs
+     (design review, 2026-11-24). */
+  /* The same system colour as the scenario buttons beside it (design review, 2026-11-25). */
+  .pause {
+    border: 1px solid ButtonText;
+  }
+
   .indicator {
     forced-color-adjust: none;
     background: Highlight;
@@ -617,5 +644,33 @@
     border-radius: 2px;
     forced-color-adjust: none;
     background: Highlight;
+  }
+}
+
+/* Shown, not counted: the mark drawn as an outline, like on a system's page. */
+.verdicts button[data-uncounted] [data-tone] {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--line-2);
+}
+
+/* Over the list of systems, not in it: on a phone the list is one scrolling row. */
+.verdictsHint {
+  padding: var(--space-5) 0 0 calc(var(--space-5) + var(--space-3));
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.verdictsHint + .verdicts {
+  padding-top: var(--space-2);
+}
+
+@media (max-width: 900px) {
+  .verdictsHint {
+    padding: var(--space-3) 0 0;
+  }
+
+  .verdictsHint + .verdicts {
+    padding-top: var(--space-2);
+    align-items: center;
   }
 }

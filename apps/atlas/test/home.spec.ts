@@ -14,15 +14,16 @@ for (const colorScheme of ['light', 'dark'] as const) {
   });
 }
 
-const catalogue = (page: Page) => page.getByRole('region', { name: /^Patterns\./ });
+// Since 2026-11-25 every pattern is a row with its finding (after external feedback).
+const catalogue = (page: Page) => page.getByRole('region', { name: /^Where systems differ\./ });
 
 test('lists a measured pattern with its counts and links to it', async ({ page }) => {
   await page.goto('/');
   const card = catalogue(page)
     .getByRole('listitem')
     .filter({ has: page.getByRole('heading', { name: 'Menu button' }) });
-  await expect(card).toContainText('Measured');
-  await expect(card).toContainText('9 rules, 6 systems counted.');
+  await expect(card).toContainText('9 rules · 6 systems counted');
+  await expect(card).toContainText(/\d+ of \d+/);
   await card.getByRole('link', { name: 'Menu button' }).click();
   await expect(page).toHaveURL(/\/patterns\/menu-button\/$/);
 });
@@ -36,29 +37,32 @@ test('the home page does not scroll sideways on a phone', async ({ page }) => {
   expect(overflow).toBe(0);
 });
 
-// With five patterns the list was two to four screens long and grew with each one (design review
-// 2026-11-23, the owner's decision the same day): the home page shows the three added last,
-// newest first, and leads to all of them.
-test('the three patterns added last are listed, newest first, with the way to all', async ({
-  page,
-}) => {
+// Since 2026-11-25: every pattern, in the order added, with the rule the most systems
+// differ from, its count, and every counted system's mark; under them, the split of differences.
+test('every pattern is a row with its finding, in the order added', async ({ page }) => {
   await page.goto('/');
-  await expect(catalogue(page).getByRole('listitem').getByRole('heading')).toHaveText([
-    'Modal dialog',
-    'Tabs',
+  const rows = catalogue(page)
+    .getByRole('listitem')
+    .filter({ has: page.getByRole('heading') });
+  await expect(rows.getByRole('heading')).toHaveText([
+    'Input with chips',
+    'Combobox',
     'Menu button',
+    'Tabs',
+    'Modal dialog',
+    'Select',
   ]);
-  await expect(page.getByText('In progress')).toHaveCount(0);
-  await catalogue(page).getByRole('link', { name: 'View all 5 patterns' }).click();
-  await expect(page).toHaveURL(/\/patterns\/$/);
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Patterns');
+  for (const row of await rows.all()) await expect(row).toContainText(/\d+ of \d+/);
+  await expect(catalogue(page)).toContainText(
+    /Across all patterns, not only the rules above: of the \d+ differences, \d+ are on rules from the standards and \d+ on Earshot recommendations\./,
+  );
 });
 
 test('the breadcrumb and brand lead home from any page', async ({ page }) => {
   await page.goto('/methodology/');
   await page.getByRole('banner').getByRole('link', { name: 'Earshot', exact: true }).click();
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
-    'How should an interactive component behave?',
+    'Earshot measures what components expose to assistive technology.',
   );
 });
 
@@ -66,8 +70,8 @@ test('the breadcrumb and brand lead home from any page', async ({ page }) => {
 // pattern Earshot has not measured, and the page has one pause control, not three.
 test('the opening shows the recorded example and no drawn schematic', async ({ page }) => {
   await page.goto('/');
-  const opening = page.getByRole('region', { name: /^How should an interactive component/ });
-  await expect(opening.getByRole('region', { name: /These fields look the same/ })).toBeVisible();
+  const opening = page.getByRole('region', { name: /^Earshot measures what components expose/ });
+  await expect(opening.getByRole('region', { name: /^Backspace in an empty field/ })).toBeVisible();
   await expect(page.getByText('A schematic, not recorded data.')).toHaveCount(0);
   await expect(page.getByRole('button', { name: /^(Pause|Play)/ })).toHaveCount(0);
 });
@@ -75,25 +79,27 @@ test('the opening shows the recorded example and no drawn schematic', async ({ p
 test('under reduced motion the example shows every system’s result at once', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
-  const scene = page.getByRole('region', { name: /These fields look the same/ });
+  const scene = page.getByRole('region', { name: /^Backspace in an empty field/ });
   await scene.scrollIntoViewIfNeeded();
   await expect(scene).toContainText('Recorded by the Earshot engine in Chromium');
   await expect(scene.getByText('Waiting for Backspace').filter({ visible: true })).toHaveCount(0);
-  // Five systems, five behaviours of one key: at least one removes a chip, one does not.
-  await expect(scene).toContainText('Nothing changed in the accessibility tree');
+  // Every outcome at once: at least one removes a chip, and one changes nothing in the tree.
+  await expect(scene).toContainText('Removed a chip');
+  await expect(scene).toContainText('Changed nothing in the accessibility tree');
 });
 
 test('says plainly that Earshot is guidance on the standards, not certification', async ({
   page,
 }) => {
   await page.goto('/');
-  const guidance = page.getByRole('region', { name: 'Guidance, not certification.' });
+  const guidance = page.getByRole('region', { name: /Guidance, not certification\.$/ });
   await expect(guidance.getByRole('heading', { level: 2 })).toHaveText(
-    'Guidance, not certification.',
+    'How to read it. Guidance, not certification.',
   );
   for (const point of [
     'Advice, not a conformance claim',
-    'A semantic model, not a screen reader',
+    'Modelled speech, not a screen reader',
+    'Counted, or shown and set aside',
     'Open to correction',
   ]) {
     await expect(guidance.getByRole('heading', { level: 3, name: point })).toBeVisible();
@@ -102,9 +108,9 @@ test('says plainly that Earshot is guidance on the standards, not certification'
     'href',
     '/methodology/',
   );
-  // The method says where Earshot goes further than the standards.
-  await expect(page.getByRole('region', { name: /^Rules, recordings, verdicts/ })).toContainText(
-    'the rule is marked as a recommendation',
+  // The method counts which rules are Earshot's own.
+  await expect(page.getByRole('region', { name: /^How it is measured/ })).toContainText(
+    'Earshot recommendations',
   );
 });
 
@@ -131,10 +137,10 @@ test('what plays by itself ends by itself, except the measured scene', async ({ 
   // Since 2026-11-13 the pattern drawing is still: it played a sequence no recording shows.
   // Since 2026-11-14 the three recording figures each play one short run when first seen
   // (apps/atlas/CLAUDE.md, Motion: Illustration), in turn, and then rest.
-  const method = page.getByRole('region', { name: /^Rules, recordings, verdicts/ });
+  const method = page.getByRole('region', { name: /^How it is measured/ });
   await method.getByText(/steps recorded/).scrollIntoViewIfNeeded();
   await expect(method.locator('[data-play]').first()).toBeVisible();
-  await page.getByRole('region', { name: /^Patterns\./ }).scrollIntoViewIfNeeded();
+  await page.getByRole('region', { name: /^How to read it/ }).scrollIntoViewIfNeeded();
   await expect(method.locator('[data-play]')).toHaveCount(0, { timeout: 5000 });
   const running = await page.evaluate(
     () =>
@@ -151,38 +157,30 @@ test('what plays by itself ends by itself, except the measured scene', async ({ 
 // produced so far, counted from the measurement files, not one key of one pattern.
 test('the method is shown with totals counted from the measurements', async ({ page }) => {
   await page.goto('/');
-  const method = page.getByRole('region', { name: /^Rules, recordings, verdicts/ });
+  const method = page.getByRole('region', { name: /^How it is measured/ });
   const steps = method
     .getByRole('listitem')
     .filter({ has: page.getByRole('heading', { level: 3 }) });
-  await expect(steps).toHaveCount(3);
-  await expect(steps.nth(0)).toContainText(/\d+ rules/);
-  await expect(steps.nth(0)).toContainText('Earshot recommendations');
-  // "Written from the standards" is shown as the pages themselves, linked to their source.
-  await expect(steps.nth(0).getByRole('link', { name: 'Focus Order' })).toHaveAttribute(
-    'href',
-    'https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html',
-  );
-  await expect(steps.nth(1)).toContainText(/\d+ steps recorded/);
-  await expect(steps.nth(1)).toContainText('Focus moved');
-  await expect(steps.nth(2)).toContainText(/\d+ verdicts/);
-  await expect(steps.nth(2)).toContainText('Follows');
+  await expect(steps).toHaveCount(2);
+  await expect(steps.nth(0)).toContainText(/\d+ steps recorded/);
+  await expect(steps.nth(0)).toContainText('Focus moved');
+  await expect(steps.nth(1)).toContainText(/\d+ verdicts/);
+  await expect(steps.nth(1)).toContainText('Follows');
   // The verdicts by outcome add up to the number the step leads with.
-  const figures = await steps.nth(2).getByRole('definition').allInnerTexts();
-  const total = Number((await steps.nth(2).locator('strong').innerText()).replace(/,/g, ''));
+  const figures = await steps.nth(1).getByRole('definition').allInnerTexts();
+  const total = Number((await steps.nth(1).locator('strong').innerText()).replace(/,/g, ''));
   expect(figures.reduce((sum, text) => sum + Number(text.replace(/,/g, '')), 0)).toBe(total);
   await expect(method).toContainText('Input with chips');
-  await expect(method.getByRole('link', { name: 'How the engine measures' })).toHaveAttribute(
-    'href',
-    '/methodology/',
-  );
+  await expect(
+    method.getByRole('link', { name: 'How the engine measures, and every page the rules cite' }),
+  ).toHaveAttribute('href', '/methodology/');
 });
 
 // The steps arrive once when first seen; a reader who asked for less motion sees them at rest.
 test('the method is fully visible at once under reduced motion', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
-  const method = page.getByRole('region', { name: /^Rules, recordings, verdicts/ });
+  const method = page.getByRole('region', { name: /^How it is measured/ });
   await expect(method.locator('[data-state], [data-play]')).toHaveCount(0);
   await expect(method.getByText(/\d+ steps recorded/)).toBeVisible();
 });
@@ -195,7 +193,7 @@ test('the page has no pause control, because nothing loops', async ({ page }) =>
 // Found 2026-11-11: pressing Backspace changed five lanes and said nothing to a screen reader.
 // Found 2026-11-12: the example looped by itself, so a press looked like it did nothing. It now
 // plays once when first seen (the opening's scene), keeps the result, and waits for the reader.
-const example = (page: Page) => page.getByRole('region', { name: /These fields look the same/ });
+const example = (page: Page) => page.getByRole('region', { name: /^Backspace in an empty field/ });
 // "Waiting for Backspace" and each result share a cell; only the shown one counts.
 const waiting = (page: Page) =>
   example(page).getByText('Waiting for Backspace').filter({ visible: true });
@@ -249,6 +247,6 @@ test('the example shows no controls around its fields to press', async ({ page }
 test('the totals name each pattern with its rules and the systems it counts', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('main')).toContainText(
-    'Totals for every pattern measured so far: Input with chips (8 rules, 4 systems counted), Combobox (10 rules, 6 systems counted), Menu button (9 rules, 6 systems counted), Tabs (9 rules, 5 systems counted), and Modal dialog (10 rules, 6 systems counted).',
+    'Totals for every pattern measured so far: Input with chips (8 rules, 4 systems counted), Combobox (10 rules, 6 systems counted), Menu button (9 rules, 6 systems counted), Tabs (9 rules, 5 systems counted), Modal dialog (10 rules, 6 systems counted), and Select (11 rules, 5 systems counted).',
   );
 });

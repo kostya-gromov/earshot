@@ -81,7 +81,7 @@ const hasTreeChanged = ({ axDiff }: Step) =>
 
 const recordedSteps = (measurement: Measurement): Step[] =>
   measurement.scenarios.flatMap((scenario) =>
-    scenario.runs.flatMap((run) => (run.status === 'setup-failed' ? [] : run.steps)),
+    scenario.runs.flatMap((run) => ('steps' in run ? run.steps : [])),
   );
 
 const sourceLabels = { apg: 'APG', other: '' } as const;

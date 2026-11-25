@@ -33,6 +33,8 @@ export interface StepObservation {
   popup?: { before: PopupState; after: PopupState };
   /** Only for adapters that declare an effect element. */
   effect?: { before: string; after: string };
+  /** Only for adapters that declare a visible label (select). */
+  label?: { before: string; after: string };
   /** Only for adapters that declare panels (tabs). */
   tabSet?: { before: TabSetState; after: TabSetState };
   /** Only for adapters that declare a dialog. */

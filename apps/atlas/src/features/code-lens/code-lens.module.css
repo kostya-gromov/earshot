@@ -3,7 +3,9 @@
   border-radius: var(--radius-lg);
   background: var(--well);
   box-shadow: inset 0 0 0 1px var(--line);
-  overflow: hidden;
+  /* Clip, not hidden: hidden makes the well a scroll container, and the code inside could then
+     not stay under the header on a narrow screen (tabs.module.css). */
+  overflow: clip;
 }
 
 .actions {
@@ -49,6 +51,15 @@
  */
 .code :global(pre) {
   color: light-dark(var(--shiki-light), var(--shiki-dark));
+}
+
+/*
+ * One grid row per line: the newline between two lines then renders nothing. As inline blocks in
+ * running text the lines were 22.25 px apart for 21.25 px of line, and a height in whole lines
+ * still cut one, here and in the wide well (second design review, 2026-11-25).
+ */
+.code :global(pre) > :global(code) {
+  display: grid;
 }
 
 .code :global(.line) {
@@ -186,6 +197,15 @@
   .notes {
     border-inline-start: 0;
     border-top: 1px solid var(--line);
+  }
+
+  /* A note reached by keyboard comes to rest below the stuck code panel, never under it: the
+     browser scrolls only to the viewport's edge, not to a sticky element's (WCAG 2.4.11; design
+     review, 2026-11-25). The page's own scroll padding keeps the header clear as well. */
+  /* Room for the focus ring at both ends, and for the chosen note's border under the panel. */
+  .notes button {
+    scroll-margin-top: calc(var(--code-height, 0px) + 12px);
+    scroll-margin-bottom: 8px;
   }
 }
 

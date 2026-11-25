@@ -26,7 +26,7 @@ const serverChoice = (): ThemeChoice => 'system';
 /**
  * Three toggle buttons in a group named by its visible label; the pressed one is the active
  * theme. In the menu and the footer, not the header: a setting chosen once did not need the
- * header's room (design review 2026-11-18, the owner's decision 2026-11-19).
+ * header's room (design review 2026-11-18, decided 2026-11-19).
  */
 export function ThemeSwitch({ size = 'regular' }: { size?: 'regular' | 'compact' }) {
   const labelId = useId();

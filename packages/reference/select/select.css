@@ -1,0 +1,83 @@
+.select {
+  --sl-bg: var(--panel, #fff);
+  --sl-border: var(--line-2, #858c98); /* 3:1 or more against the panel (WCAG 1.4.11) */
+  --sl-focus: var(--key, #2f6bff);
+  position: relative;
+  display: grid;
+  gap: 6px;
+}
+
+.select__label {
+  font-weight: 500;
+  font-size: 13px;
+  cursor: default;
+}
+
+.select__field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-block-size: 40px;
+  padding: 8px;
+  border: 1px solid var(--sl-border);
+  border-radius: 8px;
+  background: var(--sl-bg);
+  cursor: pointer;
+}
+/* The chevron says the field opens a list; drawn in CSS so it is not read as text. */
+.select__field::after {
+  content: '';
+  inline-size: 8px;
+  block-size: 8px;
+  margin-inline-end: 4px;
+  border-inline-end: 2px solid currentColor;
+  border-block-end: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+.select__field:focus-visible {
+  outline: 2px solid var(--sl-focus);
+  outline-offset: 1px;
+}
+
+.select__popup {
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline: 0;
+  z-index: 1;
+  max-block-size: 220px;
+  overflow-y: auto;
+  margin: 4px 0 0;
+  padding: 4px;
+  border: 1px solid var(--sl-border);
+  border-radius: 8px;
+  background: var(--sl-bg);
+  list-style: none;
+}
+.select__popup[hidden] {
+  display: none;
+}
+.select__popup [role='option'] {
+  min-block-size: 24px; /* WCAG 2.5.8 */
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* The active option is shown without colour alone: an outline as well as a tint. */
+.select__popup [role='option'][aria-selected='true'] {
+  background: color-mix(in srgb, var(--sl-focus) 14%, transparent);
+  outline: 2px solid var(--sl-focus);
+  outline-offset: -2px;
+}
+
+@media (forced-colors: active) {
+  .select__field::after {
+    border-color: CanvasText;
+  }
+  .select__popup [role='option'][aria-selected='true'] {
+    forced-color-adjust: none;
+    background: Highlight;
+    color: HighlightText;
+    outline-color: HighlightText;
+  }
+}

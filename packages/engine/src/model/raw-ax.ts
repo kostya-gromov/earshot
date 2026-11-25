@@ -66,6 +66,15 @@ function statesOf(node: RawAxNode): AccessibleStates {
   });
 }
 
+/**
+ * Only a combobox: a select's value is the chosen option, which the select rules read even when
+ * focus has left it. Other roles keep their records as they were before engine 0.21.0.
+ */
+function treeValueOf(node: RawAxNode): { treeValue?: string } {
+  if (roleOf(node) !== 'combobox') return {};
+  return typeof node.value?.value === 'string' ? { treeValue: node.value.value } : {};
+}
+
 /** Maps a CDP node to the contract's AccessibleNode, without position (see set-position.ts). */
 export function toAccessibleNode(node: RawAxNode): AccessibleNode {
   const description = typeof node.description?.value === 'string' ? node.description.value : '';
@@ -73,6 +82,7 @@ export function toAccessibleNode(node: RawAxNode): AccessibleNode {
     role: roleOf(node),
     name: nameOf(node),
     ...(description ? { description } : {}),
+    ...treeValueOf(node),
     states: statesOf(node),
   };
 }

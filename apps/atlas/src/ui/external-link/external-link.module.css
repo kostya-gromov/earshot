@@ -1,0 +1,30 @@
+/* Neutral greys only: leaving the site is not one of the four colour meanings. */
+.link {
+  text-decoration-skip-ink: auto;
+}
+
+.domain {
+  margin-inline-start: 0.35em;
+  font: 0.86em var(--font-mono);
+  color: var(--ink-3);
+  /* The domain is a label, not part of the words being linked. */
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.mark {
+  display: inline-block;
+  white-space: nowrap;
+  margin-inline-start: 0.3em;
+  vertical-align: 0.05em;
+  color: var(--ink-3);
+  flex: none;
+}
+
+@media (forced-colors: active) {
+  .domain,
+  .mark {
+    color: LinkText;
+  }
+}

@@ -10,6 +10,7 @@ const pages = [
   { name: 'menu-button', path: '/patterns/menu-button/' },
   { name: 'tabs', path: '/patterns/tabs/' },
   { name: 'dialog', path: '/patterns/dialog/' },
+  { name: 'select', path: '/patterns/select/' },
   { name: 'methodology', path: '/methodology/' },
   { name: 'patterns', path: '/patterns/' },
 ] as const;

@@ -152,3 +152,8 @@
 .apgNote a {
   color: var(--ink-2);
 }
+
+.agreeNote {
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}

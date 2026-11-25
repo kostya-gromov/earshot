@@ -1,7 +1,7 @@
 # Modal dialog
 
 The fifth pattern, on the site at `/patterns/dialog/` since 2026-11-23
-([docs/proposals/dialog.md](../proposals/dialog.md); the owner's VoiceOver check that day,
+([docs/proposals/dialog.md](../proposals/dialog.md); the VoiceOver check that day,
 `docs/a11y-checks/2026-11-23-dialog-voiceover.md`). The rules live in
 `packages/contracts/src/patterns/dialog-rules.ts`; this brief says how they are judged.
 
@@ -12,7 +12,7 @@ buttons Cancel and Save, small enough to need no scrolling. A text field before 
 one after it. Each system is measured as it ships by default; a close button it adds stays.
 
 **Where the docs' form example sets `autoFocus` on the first field, the harness sets it too**
-(owner, 2026-11-21): MUI's "Form dialogs" demo and the first example on React Aria's Modal page
+(2026-11-21): MUI's "Form dialogs" demo and the first example on React Aria's Modal page
 both do. The prop is listed in the page file's header with that reason. The same dialog without
 it is measured as a variant (`variant-of`): its own page, adapter and file, shown and never
 counted. A system whose form example sets no initial focus is measured without one, and has no

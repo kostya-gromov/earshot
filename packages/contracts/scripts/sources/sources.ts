@@ -23,6 +23,8 @@ const PAUSE_MS = 1000;
 const fileName = (page: string) =>
   `${page
     .replace('https://www.w3.org/WAI/', '')
+    // A page outside the W3C (MDN, a browser's blog, 2026-11-25): its host, not its protocol.
+    .replace(/^https?:\/\//, '')
     .replace(/\.html$|\/$/g, '')
     .replace(/[/#]+/g, '--')}.md`;
 

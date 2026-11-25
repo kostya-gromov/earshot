@@ -14,7 +14,6 @@ One line per document: what it answers. Search here first, then open the one you
 - [0009](decisions/0009-input-with-chips-rule-history.md): dated history of the input-with-chips rules and counting.
 - [0010](decisions/0010-home-motion-and-figures.md): home page motion: Illustration and Arrival tiers, figures inside the method.
 - [0011](decisions/0011-product-name.md): the product is called Earshot; internal names and dated records stay.
-- [Decision rights](decision-rights.md): who decides what, the owner or Claude; imported by CLAUDE.md.
 
 ## Patterns
 
@@ -24,22 +23,24 @@ One line per document: what it answers. Search here first, then open the one you
 - [dialog](patterns/dialog.md): in progress since 2026-11-21; scope, terms, one defect one rule, how the Tab rules are read, the engine additions, the reference.
 - [menu-button](patterns/menu-button.md): in progress; the three terms, rules and where each is judged, one defect one rule, what every measured page holds.
 
-## Proposals
+## Proposals (need or had approval)
 
 - [menu-button](proposals/menu-button.md): pattern 3, approved 2026-11-16 with one amendment (activation is measured, not inferred from the menu closing): nine draft rules quoted from the live APG pages, twelve scenarios, one engine addition, candidate targets, eight decisions.
 - [more-systems](proposals/more-systems.md): MUI, React Aria, Chakra UI, shadcn/ui.
 - [own-harness](proposals/own-harness.md): the harness behind ADR 0005.
 - [verdict-audit-2026-11-11](proposals/verdict-audit-2026-11-11.md): two findings of the first verdict-auditor run, for decision.
 - [run-it-setup](proposals/run-it-setup.md): how "Run it on your component" reaches the starting state.
-- [trade-off-editorial-pass](proposals/trade-off-editorial-pass.md): the ten input-with-chips trade-offs, current and proposed text, checked against the measurements; four decisions for the owner.
+- [trade-off-editorial-pass](proposals/trade-off-editorial-pass.md): the ten input-with-chips trade-offs, current and proposed text, checked against the measurements; four decisions for review.
 - [react-aria-token-field](proposals/react-aria-token-field.md): React Aria ships TokenField in the measured version; verified facts and the plan to measure it.
 - [target-audit-2026-11-13](proposals/target-audit-2026-11-13.md): is each of the eleven systems measured on the right component; six findings, six decisions and their outcome.
 - [engine-text-editing-model](proposals/engine-text-editing-model.md): what the engine lacks to measure token fields (caret, appended live regions), from the TokenField trial; proposed, not started.
 - [combobox](proposals/combobox.md): pattern 2; rules quoted from the APG snapshot, scenarios, engine gaps, candidate targets; approved 2026-11-14.
 - [tabs](proposals/tabs.md): pattern 4, approved 2026-11-19 with every decision as recommended, work alongside M5: nine draft rules quoted from the live APG pages, ten scenarios, two engine additions, candidate targets, nine decisions.
-- [figma-annotated-elements](proposals/figma-annotated-elements.md): a pattern's element with its requirements as annotations, downloadable for Figma; Figma's docs read 2026-11-21, four options, five decisions; opened by the owner on 2026-11-21 for the trial and one pattern, alongside M5.
-- [figma-plugin](proposals/figma-plugin.md): a published Earshot plugin that draws a pattern with its requirements in the designer's own file; opened by the owner on 2026-11-21; submitted to Figma's review from the owner's personal account on 2026-11-22; the link on the site (step 4) waits for the answer.
-- [dialog](proposals/dialog.md): pattern 5, modal dialog; opened by the owner on 2026-11-21 (work alongside M5), with amendments the same day: ten draft rules quoted from the live APG pages, seven scenarios, six engine additions, the native element and MUI's focus guards checked in the browser, candidate targets, nine decisions.
+- [figma-annotated-elements](proposals/figma-annotated-elements.md): a pattern's element with its requirements as annotations, downloadable for Figma; Figma's docs read 2026-11-21, four options, five decisions; opened on 2026-11-21 for the trial and one pattern, alongside M5.
+- [figma-plugin](proposals/figma-plugin.md): a published Earshot plugin that draws a pattern with its requirements in the designer's own file; opened on 2026-11-21; submitted to Figma's review from a personal account on 2026-11-22; the link on the site (step 4) waits for the answer.
+- [dialog](proposals/dialog.md): pattern 5, modal dialog; opened on 2026-11-21 (work alongside M5), with amendments the same day: ten draft rules quoted from the live APG pages, seven scenarios, six engine additions, the native element and MUI's focus guards checked in the browser, candidate targets, nine decisions.
+
+- [select](proposals/select.md): pattern 6, the select-only combobox; opened and approved on 2026-11-24 with three amendments: eleven draft rules quoted from the APG combobox page and its select-only example (`name-and-value` split, `name-is-label` a recommendation), nine scenarios, one engine addition (the select's value), the browser's own `<select>` not drivable in headless Chromium and shown on the page as the system's choice (`browser-native`), a candidate requirement on the native select.
 
 
 

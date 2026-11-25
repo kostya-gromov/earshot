@@ -14,10 +14,10 @@
   },
   "provenance": {
     "status": "measured",
-    "engineVersion": "0.20.0",
+    "engineVersion": "0.23.0",
     "browser": "chromium 156.0.8078.4",
     "os": "darwin",
-    "measuredAt": "2026-11-23T09:35:53.105Z",
+    "measuredAt": "2026-11-25T09:55:47.616Z",
     "runs": 3,
     "consistent": true
   },
@@ -85,7 +85,7 @@
                 ]
               },
               "settle": {
-                "ms": 474,
+                "ms": 469,
                 "quiet": true
               },
               "speech": [
@@ -150,7 +150,7 @@
                 ]
               },
               "settle": {
-                "ms": 473,
+                "ms": 471,
                 "quiet": true
               },
               "speech": [
@@ -215,7 +215,7 @@
                 ]
               },
               "settle": {
-                "ms": 474,
+                "ms": 468,
                 "quiet": true
               },
               "speech": [
@@ -288,7 +288,7 @@
                 ]
               },
               "settle": {
-                "ms": 478,
+                "ms": 471,
                 "quiet": true
               },
               "speech": [
@@ -352,7 +352,7 @@
                 ]
               },
               "settle": {
-                "ms": 477,
+                "ms": 470,
                 "quiet": true
               },
               "speech": [
@@ -416,7 +416,7 @@
                 ]
               },
               "settle": {
-                "ms": 478,
+                "ms": 469,
                 "quiet": true
               },
               "speech": [
@@ -504,7 +504,7 @@
                 ]
               },
               "settle": {
-                "ms": 478,
+                "ms": 485,
                 "quiet": true
               },
               "speech": [
@@ -578,7 +578,7 @@
                 ]
               },
               "settle": {
-                "ms": 408,
+                "ms": 400,
                 "quiet": true
               },
               "speech": [
@@ -657,7 +657,7 @@
                 ]
               },
               "settle": {
-                "ms": 475,
+                "ms": 482,
                 "quiet": true
               },
               "speech": [
@@ -731,7 +731,7 @@
                 ]
               },
               "settle": {
-                "ms": 410,
+                "ms": 414,
                 "quiet": true
               },
               "speech": [
@@ -810,7 +810,7 @@
                 ]
               },
               "settle": {
-                "ms": 476,
+                "ms": 485,
                 "quiet": true
               },
               "speech": [
@@ -884,7 +884,7 @@
                 ]
               },
               "settle": {
-                "ms": 410,
+                "ms": 401,
                 "quiet": true
               },
               "speech": [
@@ -942,7 +942,100 @@
                 "changed": []
               },
               "settle": {
-                "ms": 481,
+                "ms": 483,
+                "quiet": true
+              },
+              "speech": [
+                "Subject, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 414,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Subject",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "value": "",
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 487,
                 "quiet": true
               },
               "speech": [
@@ -1035,7 +1128,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 476,
+                "ms": 479,
                 "quiet": true
               },
               "speech": [
@@ -1079,100 +1172,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
-                "quiet": true
-              },
-              "speech": [
-                "To, combobox, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Subject",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 480,
-                "quiet": true
-              },
-              "speech": [
-                "Subject, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Subject",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "value": "",
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > input#subject",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 414,
+                "ms": 404,
                 "quiet": true
               },
               "speech": [
@@ -1246,7 +1246,7 @@
                 ]
               },
               "settle": {
-                "ms": 478,
+                "ms": 472,
                 "quiet": true
               },
               "speech": [
@@ -1311,7 +1311,7 @@
                 ]
               },
               "settle": {
-                "ms": 481,
+                "ms": 469,
                 "quiet": true
               },
               "speech": [
@@ -1376,7 +1376,7 @@
                 ]
               },
               "settle": {
-                "ms": 480,
+                "ms": 479,
                 "quiet": true
               },
               "speech": [
@@ -1450,7 +1450,7 @@
                 ]
               },
               "settle": {
-                "ms": 479,
+                "ms": 472,
                 "quiet": true
               },
               "speech": [
@@ -1461,6 +1461,967 @@
               "action": {
                 "type": "press",
                 "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Hiroshi Matsui"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 413,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Hiroshi Matsui"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 472,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, option, 3 of 3, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Hiroshi Matsui"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 406,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Hiroshi Matsui"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 488,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, option, 3 of 3, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "combobox",
+                "name": "To",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Hiroshi Matsui"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 401,
+                "quiet": true
+              },
+              "speech": [
+                "To, combobox, collapsed"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backspace-twice",
+      "rules": [
+        "bsp",
+        "keep-focus",
+        "say",
+        "count"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Hiroshi Matsui"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 480,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, option, 3 of 3, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "option",
+                "name": "Greg Fisher",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_6_",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "option",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Greg Fisher"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 404,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, option, 2 of 2, selected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Hiroshi Matsui"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 481,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, option, 3 of 3, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "option",
+                "name": "Greg Fisher",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_6_",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "option",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Greg Fisher"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, option, 2 of 2, selected"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Hiroshi Matsui"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 478,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, option, 3 of 3, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Backspace"
+              },
+              "focusBefore": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "option",
+                "name": "Greg Fisher",
+                "posInSet": 2,
+                "setSize": 2,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 2
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_6_",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "option",
+                    "name": "Hiroshi Matsui"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "Hiroshi Matsui"
+                  }
+                ],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Greg Fisher"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, option, 2 of 2, selected"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arrows",
+      "rules": [
+        "arrows"
+      ],
+      "initialState": "3 tags, empty input focused, menu closed",
+      "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "combobox",
+                "name": "To",
+                "states": {
+                  "expanded": false,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "value": "",
+                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Hiroshi Matsui"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 478,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, option, 3 of 3, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowLeft"
+              },
+              "focusBefore": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "option",
+                "name": "Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_6_",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Greg Fisher"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  },
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Hiroshi Matsui"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": [
+                "Greg Fisher, option, 2 of 3, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
+              },
+              "focusBefore": {
+                "role": "option",
+                "name": "Greg Fisher",
+                "posInSet": 2,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_6_",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "option",
+                "name": "Hiroshi Matsui",
+                "posInSet": 3,
+                "setSize": 3,
+                "states": {
+                  "selected": true,
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": [
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Greg Fisher"
+                    },
+                    "property": "selected",
+                    "before": true,
+                    "after": false
+                  },
+                  {
+                    "node": {
+                      "role": "option",
+                      "name": "Hiroshi Matsui"
+                    },
+                    "property": "selected",
+                    "before": false,
+                    "after": true
+                  }
+                ]
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "speech": [
+                "Hiroshi Matsui, option, 3 of 3, selected"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "ArrowRight"
               },
               "focusBefore": {
                 "role": "option",
@@ -1575,968 +2536,7 @@
                 ]
               },
               "settle": {
-                "ms": 479,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui, option, 3 of 3, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Hiroshi Matsui"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 407,
-                "quiet": true
-              },
-              "speech": [
-                "To, combobox, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Hiroshi Matsui"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 480,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui, option, 3 of 3, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Hiroshi Matsui"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 406,
-                "quiet": true
-              },
-              "speech": [
-                "To, combobox, collapsed"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "backspace-twice",
-      "rules": [
-        "bsp",
-        "keep-focus",
-        "say",
-        "count"
-      ],
-      "initialState": "3 tags, empty input focused, menu closed",
-      "runs": [
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Backspace"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Hiroshi Matsui"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 469,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui, option, 3 of 3, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Backspace"
-              },
-              "focusBefore": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "option",
-                "name": "Greg Fisher",
-                "posInSet": 2,
-                "setSize": 2,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 2
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_6_",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "option",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Greg Fisher"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 408,
-                "quiet": true
-              },
-              "speech": [
-                "Greg Fisher, option, 2 of 2, selected"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Backspace"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Hiroshi Matsui"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 476,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui, option, 3 of 3, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Backspace"
-              },
-              "focusBefore": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "option",
-                "name": "Greg Fisher",
-                "posInSet": 2,
-                "setSize": 2,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 2
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_6_",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "option",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Greg Fisher"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 410,
-                "quiet": true
-              },
-              "speech": [
-                "Greg Fisher, option, 2 of 2, selected"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Backspace"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Hiroshi Matsui"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 480,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui, option, 3 of 3, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Backspace"
-              },
-              "focusBefore": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "option",
-                "name": "Greg Fisher",
-                "posInSet": 2,
-                "setSize": 2,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 2
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_6_",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "option",
-                    "name": "Hiroshi Matsui"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "Hiroshi Matsui"
-                  }
-                ],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Greg Fisher"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 408,
-                "quiet": true
-              },
-              "speech": [
-                "Greg Fisher, option, 2 of 2, selected"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "arrows",
-      "rules": [
-        "arrows"
-      ],
-      "initialState": "3 tags, empty input focused, menu closed",
-      "runs": [
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Hiroshi Matsui"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 481,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui, option, 3 of 3, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "option",
-                "name": "Greg Fisher",
-                "posInSet": 2,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_6_",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Greg Fisher"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  },
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Hiroshi Matsui"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 406,
-                "quiet": true
-              },
-              "speech": [
-                "Greg Fisher, option, 2 of 3, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "option",
-                "name": "Greg Fisher",
-                "posInSet": 2,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_6_",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Greg Fisher"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  },
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Hiroshi Matsui"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 402,
-                "quiet": true
-              },
-              "speech": [
-                "Hiroshi Matsui, option, 3 of 3, selected"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowRight"
-              },
-              "focusBefore": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "combobox",
-                "name": "To",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Hiroshi Matsui"
-                    },
-                    "property": "selected",
-                    "before": true,
-                    "after": false
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "speech": [
-                "To, combobox, collapsed"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "ArrowLeft"
-              },
-              "focusBefore": {
-                "role": "combobox",
-                "name": "To",
-                "states": {
-                  "expanded": false,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "value": "",
-                "path": "div#component > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input#field-_r_1___control",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "option",
-                "name": "Hiroshi Matsui",
-                "posInSet": 3,
-                "setSize": 3,
-                "states": {
-                  "selected": true,
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "path": "div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button#fui-Tag_r_8_",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": [
-                  {
-                    "node": {
-                      "role": "option",
-                      "name": "Hiroshi Matsui"
-                    },
-                    "property": "selected",
-                    "before": false,
-                    "after": true
-                  }
-                ]
-              },
-              "settle": {
-                "ms": 479,
+                "ms": 477,
                 "quiet": true
               },
               "speech": [
@@ -2684,7 +2684,7 @@
                 ]
               },
               "settle": {
-                "ms": 412,
+                "ms": 413,
                 "quiet": true
               },
               "speech": [
@@ -2744,7 +2744,7 @@
                 ]
               },
               "settle": {
-                "ms": 410,
+                "ms": 411,
                 "quiet": true
               },
               "speech": [
@@ -2809,7 +2809,7 @@
                 ]
               },
               "settle": {
-                "ms": 478,
+                "ms": 479,
                 "quiet": true
               },
               "speech": [
@@ -2883,7 +2883,7 @@
                 ]
               },
               "settle": {
-                "ms": 408,
+                "ms": 407,
                 "quiet": true
               },
               "speech": [
@@ -2957,7 +2957,7 @@
                 ]
               },
               "settle": {
-                "ms": 415,
+                "ms": 413,
                 "quiet": true
               },
               "speech": [
@@ -3017,7 +3017,7 @@
                 ]
               },
               "settle": {
-                "ms": 416,
+                "ms": 407,
                 "quiet": true
               },
               "speech": [
@@ -3093,7 +3093,7 @@
                 ]
               },
               "settle": {
-                "ms": 480,
+                "ms": 476,
                 "quiet": true
               },
               "speech": [
@@ -3232,7 +3232,7 @@
                 ]
               },
               "settle": {
-                "ms": 481,
+                "ms": 478,
                 "quiet": true
               },
               "speech": [
@@ -3306,7 +3306,7 @@
                 ]
               },
               "settle": {
-                "ms": 406,
+                "ms": 407,
                 "quiet": true
               },
               "speech": [
@@ -3371,7 +3371,7 @@
                 ]
               },
               "settle": {
-                "ms": 484,
+                "ms": 477,
                 "quiet": true
               },
               "speech": [
@@ -3445,7 +3445,7 @@
                 ]
               },
               "settle": {
-                "ms": 402,
+                "ms": 407,
                 "quiet": true
               },
               "speech": [
@@ -3533,7 +3533,7 @@
                 ]
               },
               "settle": {
-                "ms": 441,
+                "ms": 458,
                 "quiet": true
               },
               "speech": [
@@ -3610,7 +3610,7 @@
                 ]
               },
               "settle": {
-                "ms": 443,
+                "ms": 459,
                 "quiet": true
               },
               "speech": [
@@ -3687,7 +3687,7 @@
                 ]
               },
               "settle": {
-                "ms": 460,
+                "ms": 459,
                 "quiet": true
               },
               "speech": [

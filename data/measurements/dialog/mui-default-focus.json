@@ -14,10 +14,10 @@
   },
   "provenance": {
     "status": "measured",
-    "engineVersion": "0.20.0",
+    "engineVersion": "0.23.0",
     "browser": "chromium 156.0.8078.4",
     "os": "darwin",
-    "measuredAt": "2026-11-23T09:32:49.293Z",
+    "measuredAt": "2026-11-25T10:21:38.137Z",
     "runs": 3,
     "consistent": true
   },
@@ -81,7 +81,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 408,
                 "quiet": true
               },
               "dialog": {
@@ -159,7 +159,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 406,
+                "ms": 409,
                 "quiet": true
               },
               "dialog": {
@@ -325,154 +325,154 @@
                 "changed": []
               },
               "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Edit profile, dialog"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 516,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "CANCEL",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
                 "ms": 406,
                 "quiet": true
               },
               "dialog": {
                 "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Edit profile, dialog"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 513,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "CANCEL",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 415,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
                   "dialog": {
                     "role": "dialog",
                     "name": "Edit profile",
@@ -541,7 +541,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 431,
+                "ms": 411,
                 "quiet": true
               },
               "dialog": {
@@ -615,302 +615,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 488,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "CANCEL",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 425,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "CANCEL, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "CANCEL",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "SAVE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
-                "element": 5
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 410,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "SAVE, button"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 409,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Edit profile, dialog"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 509,
+                "ms": 519,
                 "quiet": true
               },
               "dialog": {
@@ -1057,7 +762,302 @@
                 "changed": []
               },
               "settle": {
+                "ms": 408,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "SAVE, button"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 407,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Edit profile, dialog"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 512,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "CANCEL",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
                 "ms": 405,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "CANCEL, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "CANCEL",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "SAVE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
+                "element": 5
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 417,
                 "quiet": true
               },
               "dialog": {
@@ -1131,7 +1131,302 @@
                 "changed": []
               },
               "settle": {
-                "ms": 521,
+                "ms": 501,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "CANCEL",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 423,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "CANCEL, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "CANCEL",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "SAVE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
+                "element": 5
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "SAVE, button"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 410,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Edit profile, dialog"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Tab"
+              },
+              "focusBefore": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 520,
                 "quiet": true
               },
               "dialog": {
@@ -1278,302 +1573,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "SAVE, button"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 406,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Edit profile, dialog"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 519,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "CANCEL",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "CANCEL, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "CANCEL",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "SAVE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
-                "element": 5
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 402,
+                "ms": 416,
                 "quiet": true
               },
               "dialog": {
@@ -1647,7 +1647,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 520,
+                "ms": 505,
                 "quiet": true
               },
               "dialog": {
@@ -1721,7 +1721,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 407,
+                "ms": 425,
                 "quiet": true
               },
               "dialog": {
@@ -1794,7 +1794,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 404,
+                "ms": 409,
                 "quiet": true
               },
               "dialog": {
@@ -1883,7 +1883,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 406,
+                "ms": 409,
                 "quiet": true
               },
               "dialog": {
@@ -1951,7 +1951,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 510,
+                "ms": 516,
                 "quiet": true
               },
               "dialog": {
@@ -2024,7 +2024,522 @@
                 "changed": []
               },
               "settle": {
-                "ms": 424,
+                "ms": 421,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "CANCEL, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "CANCEL",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 5
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 508,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 5
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "SAVE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "SAVE, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "SAVE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "CANCEL",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 417,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "CANCEL, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "CANCEL",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
+                "element": 4
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 5
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 500,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 409,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Edit profile, dialog"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "SAVE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 513,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "SAVE, button"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Shift+Tab"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "SAVE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 3,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "CANCEL",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 2,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
+                "element": 4
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 426,
                 "quiet": true
               },
               "dialog": {
@@ -2172,7 +2687,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 422,
+                "ms": 411,
                 "quiet": true
               },
               "dialog": {
@@ -2245,7 +2760,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 405,
+                "ms": 408,
                 "quiet": true
               },
               "dialog": {
@@ -2319,522 +2834,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 518,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 406,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Edit profile, dialog"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "SAVE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 511,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "SAVE, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "SAVE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "CANCEL",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 422,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "CANCEL, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "CANCEL",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 5
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 497,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 5
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "SAVE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 427,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "SAVE, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "SAVE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 3,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(2)",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "CANCEL",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
-                "element": 4
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 402,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "CANCEL, button"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Shift+Tab"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "CANCEL",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 2,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "path": "div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)",
-                "element": 4
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 5
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 522,
+                "ms": 507,
                 "quiet": true
               },
               "dialog": {
@@ -2981,7 +2981,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 524,
+                "ms": 526,
                 "quiet": true
               },
               "dialog": {
@@ -3054,7 +3054,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 426,
+                "ms": 431,
                 "quiet": true
               },
               "dialog": {
@@ -3128,7 +3128,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 502,
+                "ms": 489,
                 "quiet": true
               },
               "dialog": {
@@ -3202,7 +3202,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 425,
+                "ms": 429,
                 "quiet": true
               },
               "dialog": {
@@ -3275,7 +3275,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 414,
+                "ms": 407,
                 "quiet": true
               },
               "dialog": {
@@ -3349,7 +3349,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 503,
+                "ms": 518,
                 "quiet": true
               },
               "dialog": {
@@ -3390,6 +3390,157 @@
       ],
       "initialState": "Dialog closed, focus on the button that opens it",
       "runs": [
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Edit profile, dialog"
+              ]
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Escape"
+              },
+              "focusBefore": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 608,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "speech": [
+                "EDIT PROFILE, button"
+              ]
+            }
+          ]
+        },
         {
           "status": "completed",
           "steps": [
@@ -3589,158 +3740,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 408,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Edit profile, dialog"
-              ]
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Escape"
-              },
-              "focusBefore": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 610,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "speech": [
-                "EDIT PROFILE, button"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 410,
+                "ms": 405,
                 "quiet": true
               },
               "dialog": {
@@ -3901,7 +3901,309 @@
                 "changed": []
               },
               "settle": {
-                "ms": 410,
+                "ms": 408,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Edit profile, dialog"
+              ]
+            },
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "textbox",
+                  "name": "Name"
+                }
+              },
+              "focusBefore": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 488,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Name, textbox"
+              ]
+            },
+            {
+              "action": {
+                "type": "type",
+                "text": "Ada"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "Ada",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 3
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 412,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": []
+            },
+            {
+              "action": {
+                "type": "press",
+                "key": "Escape"
+              },
+              "focusBefore": {
+                "role": "textbox",
+                "name": "Name",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "item": {
+                  "index": 1,
+                  "count": 3
+                },
+                "isInsideDialog": true,
+                "value": "Ada",
+                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
+                "element": 3
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 617,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "speech": [
+                "EDIT PROFILE, button"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 406,
                 "quiet": true
               },
               "dialog": {
@@ -4125,7 +4427,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 602,
+                "ms": 606,
                 "quiet": true
               },
               "dialog": {
@@ -4203,7 +4505,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 402,
+                "ms": 408,
                 "quiet": true
               },
               "dialog": {
@@ -4275,7 +4577,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 485,
+                "ms": 490,
                 "quiet": true
               },
               "dialog": {
@@ -4350,7 +4652,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 411,
+                "ms": 413,
                 "quiet": true
               },
               "dialog": {
@@ -4427,309 +4729,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 617,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "speech": [
-                "EDIT PROFILE, button"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 402,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Edit profile, dialog"
-              ]
-            },
-            {
-              "action": {
-                "type": "click",
-                "target": {
-                  "role": "textbox",
-                  "name": "Name"
-                }
-              },
-              "focusBefore": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 484,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Name, textbox"
-              ]
-            },
-            {
-              "action": {
-                "type": "type",
-                "text": "Ada"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "Ada",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 3
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 412,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": []
-            },
-            {
-              "action": {
-                "type": "press",
-                "key": "Escape"
-              },
-              "focusBefore": {
-                "role": "textbox",
-                "name": "Name",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "item": {
-                  "index": 1,
-                  "count": 3
-                },
-                "isInsideDialog": true,
-                "value": "Ada",
-                "path": "div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > input#name",
-                "element": 3
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 607,
+                "ms": 605,
                 "quiet": true
               },
               "dialog": {
@@ -4816,6 +4816,314 @@
                 "changed": []
               },
               "settle": {
+                "ms": 403,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Edit profile, dialog"
+              ]
+            },
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "CANCEL"
+                }
+              },
+              "focusBefore": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 603,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "speech": [
+                "EDIT PROFILE, button"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 416,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Edit profile, dialog"
+              ]
+            },
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "button",
+                  "name": "CANCEL"
+                }
+              },
+              "focusBefore": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 602,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "speech": [
+                "EDIT PROFILE, button"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
                 "ms": 402,
                 "quiet": true
               },
@@ -4892,315 +5200,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 601,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "speech": [
-                "EDIT PROFILE, button"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 408,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Edit profile, dialog"
-              ]
-            },
-            {
-              "action": {
-                "type": "click",
-                "target": {
-                  "role": "button",
-                  "name": "CANCEL"
-                }
-              },
-              "focusBefore": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 602,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "speech": [
-                "EDIT PROFILE, button"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 404,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Edit profile, dialog"
-              ]
-            },
-            {
-              "action": {
-                "type": "click",
-                "target": {
-                  "role": "button",
-                  "name": "CANCEL"
-                }
-              },
-              "focusBefore": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 602,
+                "ms": 603,
                 "quiet": true
               },
               "dialog": {
@@ -5287,7 +5287,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 401,
+                "ms": 406,
                 "quiet": true
               },
               "dialog": {
@@ -5368,7 +5368,166 @@
                 "changed": []
               },
               "settle": {
-                "ms": 613,
+                "ms": 610,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                },
+                "after": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                }
+              },
+              "speech": [
+                "EDIT PROFILE, button"
+              ]
+            }
+          ]
+        },
+        {
+          "status": "completed",
+          "steps": [
+            {
+              "action": {
+                "type": "press",
+                "key": "Enter"
+              },
+              "focusBefore": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "focusAfter": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [],
+                "removed": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "changed": []
+              },
+              "settle": {
+                "ms": 405,
+                "quiet": true
+              },
+              "dialog": {
+                "before": {
+                  "opener": {
+                    "role": "button",
+                    "name": "EDIT PROFILE",
+                    "states": {
+                      "invalid": false
+                    }
+                  }
+                },
+                "after": {
+                  "dialog": {
+                    "role": "dialog",
+                    "name": "Edit profile",
+                    "states": {
+                      "modal": true
+                    }
+                  },
+                  "heading": "Edit profile"
+                }
+              },
+              "speech": [
+                "Edit profile, dialog"
+              ]
+            },
+            {
+              "action": {
+                "type": "click",
+                "target": {
+                  "role": "textbox",
+                  "name": "Notes"
+                },
+                "at": "point",
+                "point": {
+                  "x": 152,
+                  "y": 219
+                }
+              },
+              "focusBefore": {
+                "role": "dialog",
+                "name": "Edit profile",
+                "states": {
+                  "modal": true
+                },
+                "isBody": false,
+                "isInsideComponent": false,
+                "isInsideDialog": true,
+                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
+                "element": 2
+              },
+              "focusAfter": {
+                "role": "button",
+                "name": "EDIT PROFILE",
+                "states": {
+                  "invalid": false
+                },
+                "isBody": false,
+                "isInsideComponent": true,
+                "isInsideDialog": false,
+                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
+                "element": 1
+              },
+              "announcements": [],
+              "axDiff": {
+                "added": [
+                  {
+                    "role": "button",
+                    "name": "EDIT PROFILE"
+                  },
+                  {
+                    "role": "StaticText",
+                    "name": "EDIT PROFILE"
+                  }
+                ],
+                "removed": [],
+                "changed": []
+              },
+              "settle": {
+                "ms": 614,
                 "quiet": true
               },
               "dialog": {
@@ -5527,166 +5686,7 @@
                 "changed": []
               },
               "settle": {
-                "ms": 599,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                },
-                "after": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                }
-              },
-              "speech": [
-                "EDIT PROFILE, button"
-              ]
-            }
-          ]
-        },
-        {
-          "status": "completed",
-          "steps": [
-            {
-              "action": {
-                "type": "press",
-                "key": "Enter"
-              },
-              "focusBefore": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "focusAfter": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [],
-                "removed": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "changed": []
-              },
-              "settle": {
-                "ms": 409,
-                "quiet": true
-              },
-              "dialog": {
-                "before": {
-                  "opener": {
-                    "role": "button",
-                    "name": "EDIT PROFILE",
-                    "states": {
-                      "invalid": false
-                    }
-                  }
-                },
-                "after": {
-                  "dialog": {
-                    "role": "dialog",
-                    "name": "Edit profile",
-                    "states": {
-                      "modal": true
-                    }
-                  },
-                  "heading": "Edit profile"
-                }
-              },
-              "speech": [
-                "Edit profile, dialog"
-              ]
-            },
-            {
-              "action": {
-                "type": "click",
-                "target": {
-                  "role": "textbox",
-                  "name": "Notes"
-                },
-                "at": "point",
-                "point": {
-                  "x": 152,
-                  "y": 219
-                }
-              },
-              "focusBefore": {
-                "role": "dialog",
-                "name": "Edit profile",
-                "states": {
-                  "modal": true
-                },
-                "isBody": false,
-                "isInsideComponent": false,
-                "isInsideDialog": true,
-                "path": "html:nth-child(1) > body:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)",
-                "element": 2
-              },
-              "focusAfter": {
-                "role": "button",
-                "name": "EDIT PROFILE",
-                "states": {
-                  "invalid": false
-                },
-                "isBody": false,
-                "isInsideComponent": true,
-                "isInsideDialog": false,
-                "path": "html:nth-child(1) > body:nth-child(2) > main:nth-child(1) > div#component > button:nth-child(1)",
-                "element": 1
-              },
-              "announcements": [],
-              "axDiff": {
-                "added": [
-                  {
-                    "role": "button",
-                    "name": "EDIT PROFILE"
-                  },
-                  {
-                    "role": "StaticText",
-                    "name": "EDIT PROFILE"
-                  }
-                ],
-                "removed": [],
-                "changed": []
-              },
-              "settle": {
-                "ms": 611,
+                "ms": 583,
                 "quiet": true
               },
               "dialog": {

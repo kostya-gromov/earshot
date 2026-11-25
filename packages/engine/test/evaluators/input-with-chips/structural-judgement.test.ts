@@ -124,7 +124,7 @@ describe('chips that expose no role or set position', () => {
     });
   });
 
-  // Decided 2026-11-08 (the owner's review): Tab from a chip uses the same chip test as the arrows
+  // Decided 2026-11-08 (in review): Tab from a chip uses the same chip test as the arrows
   // rule. An item with no set position cannot be read as a chip, so neither rule judges it.
   it('does not test Tab from an item that cannot be read as a chip', () => {
     const outside = focus({ role: 'textbox', name: 'Subject', isInsideComponent: false });
@@ -162,7 +162,7 @@ describe('chips that expose no role or set position', () => {
   });
 });
 
-// Decided 2026-11-09 (the owner's review): no rule text asks for "n of m". A chip without a set
+// Decided 2026-11-09 (in review): no rule text asks for "n of m". A chip without a set
 // position is still a chip when it is one of the items the adapter locates; its position is
 // its place among them, and the missing set position is shown as a separate observation.
 describe('chips the adapter locates but the accessibility tree gives no position', () => {

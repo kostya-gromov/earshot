@@ -15,7 +15,7 @@ function StepKey({ step }: { step: ComboboxStep }) {
 
 /** The semantic model's lines for a step, as ordinary text: announcements in violet. */
 function Spoken({ step }: { step: ComboboxStep }) {
-  if (step.speech.length === 0) return <p className={styles.silent}>Nothing said</p>;
+  if (step.speech.length === 0) return <p className={styles.silent}>No modelled speech</p>;
   return step.speech.map((line) => (
     <SpeechLine
       key={line}

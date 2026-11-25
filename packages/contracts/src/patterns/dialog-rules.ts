@@ -3,7 +3,7 @@ import { apg, wcag } from './dialog-sources.ts';
 
 /**
  * The rules and the two Earshot recommendations for a modal dialog opened by a button
- * (docs/proposals/dialog.md, opened 2026-11-21; every decision answered by the owner that day).
+ * (docs/proposals/dialog.md, opened 2026-11-21; every decision answered that day).
  * Four terms have one meaning in every rule:
  *
  * - **The dialog**: the element with role dialog in the accessibility tree, wherever on the page
@@ -124,7 +124,14 @@ export const dialogRules: Rule[] = [
       'The open dialog is exposed as modal in the accessibility tree. Judged from the tree, so the browser’s own dialog element opened as modal counts as much as one with aria-modal="true".',
     keys: ['Enter'],
     level: 'rule',
-    sources: [apg.roles],
+    sources: [
+      {
+        ...apg.roles,
+        // Quoted from the snapshot docs/sources/ARIA--apg--patterns--dialog-modal.md (2026-11-25):
+        // the reader saw a bare link and could not tell what APG asks (first-visit review).
+        note: 'APG lists among the roles, states and properties: “The dialog container element has aria-modal set to true.” It also says to mark a dialog modal only when it behaves as one.',
+      },
+    ],
   },
   {
     id: 'outside-inert',

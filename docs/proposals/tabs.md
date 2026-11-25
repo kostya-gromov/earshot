@@ -1,6 +1,6 @@
 # Proposal: pattern 4, tabs (a horizontal tab list with one panel shown at a time)
 
-- Opened: 2026-11-19. Status: **approved by the owner, 2026-11-19**, all nine decisions as
+- Opened: 2026-11-19. Status: **approved 2026-11-19**, all nine decisions as
   recommended. Decision 1: the work starts now, alongside M5. Decision 8: `@atlaskit/tabs` may be
   added. The rule table below is the proposal as first written, kept for the record; once the
   contracts exist, the current rules live there and in `docs/patterns/tabs.md`.
@@ -179,7 +179,7 @@ the docs show more than one way, which the harness follows.
 - The page is built on a preview route and is published only after the manual screen reader
   check.
 
-## Decisions for the owner
+## Decisions
 
 1. **Open a fourth pattern now.** `CLAUDE.md` 3 lists three patterns and 7 has M5 as current.
    Recommended: approve the proposal now and name when the work starts (alongside M5 or after

@@ -23,6 +23,11 @@ export function CodePane({ html, mark }: { html: string; mark: LineMark | undefi
     if (!first || !scroller) return;
     const offset = first.getBoundingClientRect().top - scroller.getBoundingClientRect().top;
     scroller.scrollTop += offset - 48;
+    // Below 860 px the code sits above the notes, so the page has to come to the lines as well
+    // (design review, 2026-11-24): the least scroll that shows them, below the sticky header
+    // (html's scroll-padding-top). Where they are already on screen, nothing moves.
+    const isReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    first.scrollIntoView({ block: 'nearest', behavior: isReduced ? 'instant' : 'smooth' });
   }, [mark]);
   return <div ref={ref} className={styles.code} dangerouslySetInnerHTML={{ __html: html }} />;
 }

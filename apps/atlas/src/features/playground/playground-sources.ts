@@ -12,4 +12,5 @@ export const playgroundSources: Readonly<Record<string, PlaygroundSource>> = {
   'menu-button': { entry: 'menu-button', layout: 'beside' },
   tabs: { entry: 'tabs', layout: 'stacked' },
   dialog: { entry: 'dialog', layout: 'stacked' },
+  select: { entry: 'select', layout: 'beside' },
 };

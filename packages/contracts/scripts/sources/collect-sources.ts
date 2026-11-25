@@ -13,7 +13,10 @@ export interface CitedSource {
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null;
 
-/** Every object with a w3.org `url` anywhere under `value`, with the path that led to it. */
+/**
+ * Every object with a w3.org `url` anywhere under `value`, and every source of kind `other` (MDN,
+ * a browser's blog: 2026-11-25), with the path that led to it.
+ */
 function findSources(
   value: unknown,
   path: string[],
@@ -22,7 +25,7 @@ function findSources(
   if (!isRecord(value)) return [];
   const url = value['url'];
   const here =
-    typeof url === 'string' && url.startsWith('https://www.w3.org/')
+    typeof url === 'string' && (url.startsWith('https://www.w3.org/') || value['kind'] === 'other')
       ? [{ url, title: typeof value['title'] === 'string' ? value['title'] : url, path }]
       : [];
   const label = typeof value['id'] === 'string' ? value['id'] : undefined;

@@ -1,12 +1,12 @@
 # Proposal: pattern 2, combobox (editable, list autocomplete)
 
-- Opened: 2026-11-14. Status: **approved by the owner, 2026-11-14**, all seven decisions as
+- Opened: 2026-11-14. Status: **approved 2026-11-14**, all seven decisions as
   recommended: one variant with both autocomplete forms; `up-opens` is not a rule (its scenario
   stays as recorded evidence); `say-results` is an Atlas recommendation; the engine gains the
   value after a step and an unresolved active descendant; the wiring rule comes later; Fluent 2,
   MUI, React Aria and Chakra UI first; the command palette is a target, shown apart. The current
   rules live in contracts and in [docs/patterns/combobox.md](../patterns/combobox.md). After two
-  `verdict-auditor` rounds the same day the owner also approved: wrapping at the ends and an empty
+  `verdict-auditor` rounds the same day these were also approved: wrapping at the ends and an empty
   field after Enter follow; "active option" has a third form (the one selected option);
   `expanded` judges less; `say-results` is split into `say-results` and `say-count`. The rule
   table below is the proposal as first written, kept for the record. Decision 7 was reversed the same day:
@@ -113,7 +113,7 @@ To check before any harness work, under ADR 0006 (a shipped component or a docum
 composition): Adobe Spectrum 2, IBM Carbon, Material Web, GOV.UK, shadcn/ui (still waiting on the
 dependencies in `docs/proposals/more-systems.md`).
 
-## Decisions for the owner
+## Decisions
 
 1. **Scope**: one variant as above, with both autocomplete forms accepted. Recommended.
 2. **A third level, "APG optional"**, for `up-opens`, or drop the rule. The schema has `rule` and

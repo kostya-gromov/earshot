@@ -1,15 +1,15 @@
 # Proposal: pattern 5, modal dialog (a window over the page, opened by a button)
 
 - Opened: 2026-11-21. **On the site since 2026-11-23**: six systems measured, the page at
-  `/patterns/dialog/` after the owner's VoiceOver check. Before that: **opened by the owner on 2026-11-21** (decision 1: the work
-  starts now, alongside M5). Decisions 2 to 8 were answered by the owner the same day, each as
+  `/patterns/dialog/` after the VoiceOver check. Before that: **opened on 2026-11-21** (decision 1: the work
+  starts now, alongside M5). Decisions 2 to 8 were answered the same day, each as
   recommended, with `@atlaskit/modal-dialog` approved in decision 7; decision 9 is deferred.
   Three more answers that day, each as recommended: the harness follows the docs' form example
   where it sets `autoFocus`, with the bare default measured as a variant; `contained` and `wrap`
   say when they are not judged; the trade-off for `wrap` is drafted before any system is
   measured. The rule table below is the proposal as amended that day, kept for the record; once
   the contracts exist, the current rules live there and in `docs/patterns/dialog.md`.
-- Amended by the owner on 2026-11-21, before approval: `named-dialog` asked for more than APG
+- Amended on 2026-11-21, before approval: `named-dialog` asked for more than APG
   does and is split into `named-dialog` and the recommendation `name-matches-title`; focus
   guards are checked on one system before any evaluator (done, MUI, below); decision 9 waits
   for the preview page.
@@ -199,8 +199,8 @@ measurement.
 
 ### Checked on one system, 2026-11-21: focus guards (MUI)
 
-Many systems keep focus in with invisible tabbable elements at the dialog's edges. Asked by the
-owner before any evaluator: does the engine read focus after it has come to rest, and is a guard
+Many systems keep focus in with invisible tabbable elements at the dialog's edges. Asked before
+any evaluator: does the engine read focus after it has come to rest, and is a guard
 counted neither as leaving the dialog nor as an element inside it?
 
 A throwaway page (not a harness page: MUI's `Dialog` from `@mui/material` 9.5.0 with its
@@ -275,7 +275,7 @@ the harness follows.
 - The page is built on a preview route and is published only after the manual screen reader
   check.
 
-## Decisions for the owner
+## Decisions
 
 1. **Open a fifth pattern now.** `CLAUDE.md` 3 lists four patterns and 7 has M5 as current.
    Recommended: approve the proposal and start alongside M5, as for tabs; I then add the dialog
@@ -305,7 +305,7 @@ the harness follows.
    engine version, with the four measured patterns measured again on it. Recommended.
 9. **The home page's list** is about 2000 px tall at 1440 with four patterns (the design
    reviewer's number, `docs/follow-ups/tabs.md`). A fifth makes it longer. A layout question for
-   when the preview page is ready, not for this approval. **Deferred by the owner, 2026-11-21.**
+   when the preview page is ready, not for this approval. **Deferred, 2026-11-21.**
 
 ## Order of work once approved
 

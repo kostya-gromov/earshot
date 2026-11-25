@@ -18,7 +18,7 @@
     "design": "node packages/reference/scripts/serve.ts --port 4174 --root . --home /docs/design/d0/",
     "check": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test && pnpm validate",
     "build:atlas": "pnpm --filter @earshot/atlas build",
-    "check:panel": "pnpm build:atlas && pnpm --filter @earshot/atlas exec playwright test --project=chromium panel-invariants",
+    "check:panel": "pnpm build:atlas && pnpm --filter @earshot/atlas exec playwright test --project=invariants",
     "sources:snapshot": "node packages/contracts/scripts/sources/sources.ts snapshot",
     "sources:check": "node packages/contracts/scripts/sources/sources.ts check"
   },

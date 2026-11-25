@@ -157,7 +157,7 @@ describe('chipArrowsPrecondition', () => {
   });
 });
 
-// Verdict audit 2026-11-11 (B1), as the owner chose: chips are one widget when arrow keys move between
+// Verdict audit 2026-11-11 (B1), as decided: chips are one widget when arrow keys move between
 // them. Separate controls in the tab sequence with no arrow keys are what APG allows outside a
 // composite widget, so chip-stop and chip-arrows do not apply; tab judges the extra stops.
 describe('separate controls (not one composite widget)', () => {

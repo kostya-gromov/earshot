@@ -1,12 +1,14 @@
 import type { ReactNode } from 'react';
 import { publicRepository } from '@/lib/correction-link';
-import { SpeechLine } from '@/ui';
+import { ExternalLink, SpeechLine } from '@/ui';
 import styles from './methodology.module.css';
 
 /** One part of the methodology: a heading and its prose, with an anchor others can link to. */
 /**
  * What was checked by hand against a real screen reader, no further than the notes support: a
- * first spot check of input with chips, to be repeated item by item (verdict audit, 2026-11-19).
+ * first spot check of input with chips, to be repeated item by item (verdict audit, 2026-11-19),
+ * and the whole-page passes before tabs, the dialog and select were published (verdict audit,
+ * 2026-11-25).
  */
 function ManualCheck() {
   return (
@@ -16,8 +18,12 @@ function ManualCheck() {
       Shift+Tab from the empty field, a chip removed in Fluent 2, Primer, MUI and React Aria, and
       &ldquo;3 of 3&rdquo; on the reference. Its results were not written down item by item, so it
       is being repeated against the published recordings before anything is said about the match.
-      Not checked yet: combobox, menu button, and NVDA.{' '}
-      <a href={`${publicRepository}/tree/main/docs/a11y-checks`}>The notes of each check</a>
+      The pages for tabs (19 Nov), the modal dialog (23 Nov) and select (25 Nov) were each gone
+      through as a whole with VoiceOver before they were published; those passes were not written
+      down item by item either. Not checked yet: combobox, menu button, and NVDA.{' '}
+      <ExternalLink href={`${publicRepository}/tree/main/docs/a11y-checks`}>
+        The notes of each check
+      </ExternalLink>
     </p>
   );
 }
@@ -136,9 +142,9 @@ export function SemanticModel() {
     <Part id="semantic-model" title="The semantic model">
       <p>
         What the page shows in serif italic is a deterministic model of what a screen reader would
-        say, built from the recorded data in one fixed format: name, role, the popup the element
-        says it has, position, then states. Assertive announcements come first, then the focus line,
-        then polite announcements. A focus line looks like this:
+        say, built from the recorded data in one fixed format: name, role, a combobox’s value, the
+        popup the element says it has, position, then states. Assertive announcements come first,
+        then the focus line, then polite announcements. A focus line looks like this:
       </p>
       <SpeechLine source="focus" size="md">
         Remove Greg Fisher, button, 2 of 2
@@ -151,6 +157,10 @@ export function SemanticModel() {
       <p>Simplifications we know of:</p>
       <ul>
         <li>The full text of a live region is used; aria-atomic and aria-relevant are ignored.</li>
+        <li>
+          A description (aria-describedby) is recorded but not said. Where a system gives something
+          only as a description, the words under the recording say so.
+        </li>
         <li>
           A popup is said as “has popup menu” (or listbox, tree, grid, dialog), in these words for
           every system, when the focused element carries aria-haspopup with a value that is not the

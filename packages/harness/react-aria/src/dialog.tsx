@@ -8,7 +8,7 @@
  *   Modal, so isDismissable (false) and isKeyboardDismissDisabled (false) stay at their
  *   documented defaults, and Dialog's role stays 'dialog'.
  * - Heading slot="title", as in the example: it names the dialog.
- * - TextField autoFocus, as in the example ("<TextField autoFocus label="Name" …"). The owner's
+ * - TextField autoFocus, as in the example ("<TextField autoFocus label="Name" …"). The
  *   rule of 2026-11-21 (docs/patterns/dialog.md): where the docs' form example sets it, so does
  *   the page. The same dialog without it is measured as a variant, dialog-default-focus.html.
  * - Button slot="close" for Cancel and Save, as in the example.

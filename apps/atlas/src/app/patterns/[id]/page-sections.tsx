@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { Measurement, Pattern } from '@earshot/contracts';
 import { CodeLens } from '@/features/code-lens';
 import { DesignLens } from '@/features/design-lens';
@@ -12,13 +13,19 @@ interface OpeningSceneProps {
   pattern: Pattern;
   position: string;
   next: string | undefined;
+  /** What the measurements show, between the description and the reference (2026-11-24). */
+  findings?: ReactNode;
 }
 
-/** Hero, playground and the rule set read as one opening scene, so no section gap between them. */
-export function OpeningScene({ pattern, position, next }: OpeningSceneProps) {
+/**
+ * Hero, what the measurements show, playground and the rule set read as one opening scene, so no
+ * section gap between them.
+ */
+export function OpeningScene({ pattern, position, next, findings }: OpeningSceneProps) {
   return (
     <div>
       <PatternIntro pattern={pattern} position={position} next={next} />
+      {findings}
       <TourProvider patternId={pattern.id}>
         <Playground patternId={pattern.id} />
         <RuleSet titles={Object.fromEntries(pattern.rules.map(({ id, title }) => [id, title]))} />
